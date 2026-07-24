@@ -1089,41 +1089,47 @@
 
         // ===== LOAD DỮ LIỆU TỪ 3 FILE JSON RIÊNG =====
         async function loadData() {
-            try {
-                document.getElementById('loading').style.display = 'block';
-                
-                const [hsk1Res, hsk2Res, hsk3Res] = await Promise.all([
-                    fetch('data/hsk1.json'),
-                    fetch('data/hsk2.json'),
-                    fetch('data/hsk3.json')
-                ]);
-                
-                const hsk1Data = await hsk1Res.json();
-                const hsk2Data = await hsk2Res.json();
-                const hsk3Data = await hsk3Res.json();
-                
-                hskData = {
-                    hsk1: hsk1Data.hsk1,
-                    hsk2: hsk2Data.hsk2,
-                    hsk3: hsk3Data.hsk3
-                };
-                
-                document.getElementById('loading').style.display = 'none';
-                
-                renderAll();
-                loadProgress();
-            } catch (error) {
-                console.error('Lỗi tải dữ liệu:', error);
-                document.getElementById('loading').innerHTML = `
-                    <p style="color:red;font-size:18px;">❌ Không thể tải dữ liệu!</p>
-                    <p style="color:#666;">Vui lòng kiểm tra các file trong thư mục <b>data/</b></p>
-                    <p style="color:#666;font-size:13px;margin-top:10px;">
-                        Cần có: <b>hsk1.json</b>, <b>hsk2.json</b>, <b>hsk3.json</b>
-                    </p>
-                `;
-            }
+    try {
+        document.getElementById('loading').style.display = 'block';
+        
+        const [hsk1Res, hsk2Res, hsk3Res] = await Promise.all([
+            fetch('data/hsk1.json'),
+            fetch('data/hsk2.json'),
+            fetch('data/hsk3.json')
+        ]);
+        
+        const hsk1Data = await hsk1Res.json();
+        const hsk2Data = await hsk2Res.json();
+        const hsk3Data = await hsk3Res.json();
+        
+        hskData = {
+            hsk1: hsk1Data.hsk1,
+            hsk2: hsk2Data.hsk2,
+            hsk3: hsk3Data.hsk3
+        };
+        
+        document.getElementById('loading').style.display = 'none';
+        
+        // 1. Vẽ giao diện bài học
+        renderAll();
+        loadProgress();
+
+        // 2. Tải xong dữ liệu rồi mới dựng khung Yêu thích (Thêm dòng này vào)
+        if (typeof setupFavoritesUI === 'function') {
+            setupFavoritesUI();
         }
 
+    } catch (error) {
+        console.error('Lỗi tải dữ liệu:', error);
+        document.getElementById('loading').innerHTML = `
+            <p style="color:red;font-size:18px;">❌ Không thể tải dữ liệu!</p>
+            <p style="color:#666;">Vui lòng kiểm tra các file trong thư mục <b>data/</b></p>
+            <p style="color:#666;font-size:13px;margin-top:10px;">
+                Cần có: <b>hsk1.json</b>, <b>hsk2.json</b>, <b>hsk3.json</b>
+            </p>
+        `;
+    }
+}
         // ===== RENDER TOÀN BỘ =====
         function renderAll() {
             const app = document.getElementById('app');
