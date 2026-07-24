@@ -1073,13 +1073,7 @@
                 <p style="margin-top:10px;color:#666;">Đang tải dữ liệu...</p>
             </div>
         </div>
-
-        <!-- ===== NÚT XUẤT PDF ===== -->
-        <div style="max-width:850px;margin:0 auto;padding:0 20px;">
-            <button class="export-pdf-btn" onclick="exportPDF()">📄 Xuất PDF</button>
-        </div>
-
-        <!-- ===== VÙNG GHI CHÚ ===== -->
+            <!-- ===== VÙNG GHI CHÚ ===== -->
         <div class="note-area" id="noteArea" style="max-width:850px;margin:0 auto;padding:15px;">
             <label style="font-weight:600;color:#5d4037;display:block;margin-bottom:5px;">📝 Ghi chú của bạn:</label>
             <textarea id="noteContent" placeholder="Viết ghi chú cho bài học này..."></textarea>
@@ -1610,78 +1604,7 @@
             alert('🗑 Đã xóa ghi chú!');
         }
 
-        // ===== XUẤT PDF =====
-    function exportPDF() {
-    const activeLesson = document.querySelector('.lesson.active');
-    if (!activeLesson) {
-        alert('⚠️ Vui lòng mở một bài học!');
-        return;
-    }
-
-    const activeTab = activeLesson.querySelector('.tab-pane.active');
-    if (!activeTab) {
-        alert('⚠️ Không tìm thấy nội dung!');
-        return;
-    }
-
-    const tabBtn = activeLesson.querySelector('.tab-btn.active');
-    const title = tabBtn ? tabBtn.textContent.trim() : `${currentLevel.toUpperCase()} - Bài ${currentLesson}`;
-
-    // Lấy nội dung
-    const contentHTML = activeTab.innerHTML;
-
-    // Tạo container
-    const container = document.createElement('div');
-    container.style.cssText = 'padding: 30px; font-family: "Noto Sans SC", sans-serif; background: white; max-width: 800px; margin: 0 auto;';
-    container.innerHTML = `
-        <h2 style="color: #2e7d32; border-bottom: 3px solid #4caf50; padding-bottom: 10px;">📚 ${title}</h2>
-        <div style="margin-top: 20px; line-height: 1.8; font-size: 14px;">${contentHTML}</div>
-        <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 10px; text-align: center; color: #999; font-size: 12px;">HSK123 3.0</div>
-    `;
-
-    document.body.appendChild(container);
-
-    const btn = document.querySelector('.export-pdf-btn');
-    const originalText = btn.textContent;
-    btn.textContent = '⏳ Đang tạo...';
-    btn.disabled = true;
-
-    // Dùng html2pdf
-    const opt = {
-        margin: 10,
-        filename: `${currentLevel.toUpperCase()}_Bai_${currentLesson}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { 
-            scale: 2, 
-            useCORS: true,
-            logging: false,
-            backgroundColor: '#ffffff'
-        },
-        jsPDF: { 
-            unit: 'mm', 
-            format: 'a4', 
-            orientation: 'portrait' 
-        }
-    };
-
-    html2pdf()
-        .set(opt)
-        .from(container)
-        .save()
-        .then(() => {
-            document.body.removeChild(container);
-            btn.textContent = originalText;
-            btn.disabled = false;
-        })
-        .catch(err => {
-            console.error('Lỗi:', err);
-            document.body.removeChild(container);
-            btn.textContent = originalText;
-            btn.disabled = false;
-            alert('❌ Xuất PDF thất bại! Lỗi: ' + err.message);
-        });
-}
-        // ===== SEARCH =====
+            // ===== SEARCH =====
         function universalSearch() {
             let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
             let dropdown = document.getElementById('searchDropdown');
