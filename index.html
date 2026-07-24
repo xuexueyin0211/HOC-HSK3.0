@@ -1771,29 +1771,80 @@
         });
 
         // ===== SUBMENU CLICK =====
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.submenu a').forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const onclickAttr = this.getAttribute('onclick');
-                    if (onclickAttr) {
-                        const match = onclickAttr.match(/switchTab\('([^']+)',(\d+),(\d+)\)/);
-                        if (match) {
-                            const level = match[1];
-                            const lessonId = parseInt(match[2]);
-                            const tabIndex = parseInt(match[3]);
-                            const activeWrapper = document.querySelector('.hsk-wrapper.active');
-                            if (activeWrapper) {
-                                const lesson = activeWrapper.querySelector('#lesson-' + level + '-' + lessonId);
-                                if (lesson && !lesson.classList.contains('active')) {
-                                    showLesson(level, lessonId);
-                                }
-                                switchTab(level, lessonId, tabIndex);
-                            }
-                        }
-                    }
-                });
-            });
+        document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        // 1. Chờ dữ liệu bài học tải xong hoàn toàn
+        await loadData();
+
+        // 2. Tải xong mới khởi tạo các thành phần giao diện
+        setupFavoritesUI();
+        
+    } catch (error) {
+        console.error("Lỗi tải dữ liệu:", error);
+    }
+});
+
+// Hàm khởi tạo riêng cho tính năng Yêu thích
+function setupFavoritesUI() {
+    const sidebarTitle = document.querySelector('.sidebar-title');
+    const menu = document.querySelector('.menu');
+
+    if (sidebarTitle && menu) {
+        // Tạo nút Lưu bài học (nếu chưa có)
+        if (!document.getElementById('favBtn')) {
+            const favContainer = document.createElement('div');
+            favContainer.style.cssText = 'padding:10px 15px; display:flex; align-items:center; gap:8px; border-bottom:1px solid #eee; background:#fff8e1; border-radius:6px; margin:8px 0;';
+            favContainer.innerHTML = `
+                <button onclick="toggleFavorite()" id="favBtn" style="font-size:20px; background:none; border:none; cursor:pointer;">☆</button>
+                <span style="font-size:13px; font-weight:600; color:#5d4037;">Lưu bài học này</span>
+            `;
+            sidebarTitle.parentNode.insertBefore(favContainer, sidebarTitle.nextSibling);
+        }
+
+        // Tạo khung Danh sách bài học đã lưu (nếu chưa có)
+        if (!document.getElementById('favoritesList')) {
+            const favTitle = document.createElement('div');
+            favTitle.className = 'sidebar-title';
+            favTitle.style.cssText = 'padding-top:12px; margin-top:10px; border-top:1px dashed #ccc; color:#f59e0b; font-weight:bold;';
+            favTitle.textContent = '⭐ Bài học đã lưu';
+
+            const favList = document.createElement('div');
+            favList.id = 'favoritesList';
+
+            menu.parentNode.insertBefore(favTitle, menu);
+            menu.parentNode.insertBefore(favList, menu);
+        }
+
+        // Cập nhật lại trạng thái ngôi sao và danh sách yêu thích
+        updateFavoriteButton();
+        renderFavorites();
+    }
+}
+
+// Cập nhật lại hiển thị danh sách yêu thích
+function renderFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    const container = document.getElementById('favoritesList');
+    
+    if (!container) return;
+    
+    if (favorites.length === 0) {
+        container.innerHTML = '<div style="padding:8px; font-size:12px; color:#888; text-align:center;">Chưa có bài viết nào được lưu</div>';
+        return;
+    }
+    
+    container.innerHTML = favorites.map(key => {
+        const [level, lesson] = key.split('-');
+        const lessonData = hskData[level]?.lessons?.[parseInt(lesson) - 1];
+        const title = lessonData?.title || `Bài ${lesson}`;
+        return `
+            <div onclick="showLesson('${level}', ${lesson})" style="display:flex; justify-content:space-between; align-items:center; padding:6px 10px; margin-bottom:4px; background:#fff; border-radius:4px; border:1px solid #ddd; cursor:pointer; font-size:12px;">
+                <span>📌 ${level.toUpperCase()} - ${title}</span>
+                <span onclick="event.stopPropagation(); removeFavorite('${key}')" style="color:#f44336; font-weight:bold; padding:0 4px;">✕</span>
+            </div>
+        `;
+    }).join('');
+}
 
             document.addEventListener('keydown', function(e) {
                 if ((e.ctrlKey || e.metaKey) && ['1', '2', '3'].includes(e.key)) {
