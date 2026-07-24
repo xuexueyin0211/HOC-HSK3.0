@@ -422,26 +422,59 @@
         }
 
         function nextTab(hskLevel, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIdx = Array.from(tabs).findIndex(t => t.classList.contains('active'));
-            if (activeIdx < tabs.length - 1) {
-                switchTab(hskLevel, lessonNum, activeIdx + 2);
-            } else if (document.getElementById(`lesson-${hskLevel}-${lessonNum + 1}`)) {
-                showLesson(hskLevel, lessonNum + 1, 1);
-            }
+    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIdx = Array.from(tabs).findIndex(t => t.classList.contains('active'));
+    
+    // 1. Chuyển sang Tab tiếp theo trong cùng bài
+    if (activeIdx < tabs.length - 1) {
+        switchTab(hskLevel, lessonNum, activeIdx + 2);
+    } 
+    // 2. Chuyển sang Bài tiếp theo trong cùng Cấp độ HSK
+    else if (document.getElementById(`lesson-${hskLevel}-${lessonNum + 1}`)) {
+        showLesson(hskLevel, lessonNum + 1, 1);
+    } 
+    // 3. Liên kết chuyển sang Bậc HSK tiếp theo (ví dụ: Bài cuối HSK1 -> Bài 1 HSK2)
+    else {
+        const currentLvlIdx = hskLevels.indexOf(hskLevel);
+        if (currentLvlIdx !== -1 && currentLvlIdx < hskLevels.length - 1) {
+            const nextLevel = hskLevels[currentLvlIdx + 1];
+            showLesson(nextLevel, 1, 1);
         }
+    }
+}
 
         function prevTab(hskLevel, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIdx = Array.from(tabs).findIndex(t => t.classList.contains('active'));
-            if (activeIdx > 0) {
-                switchTab(hskLevel, lessonNum, activeIdx);
-            } else if (lessonNum > 1) {
-                showLesson(hskLevel, lessonNum - 1, 1);
+    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIdx = Array.from(tabs).findIndex(t => t.classList.contains('active'));
+    
+    // 1. Lùi về Tab trước trong cùng bài
+    if (activeIdx > 0) {
+        switchTab(hskLevel, lessonNum, activeIdx);
+    } 
+    // 2. Lùi về Bài trước trong cùng cấp HSK
+    else if (lessonNum > 1) {
+        const prevLessonId = lessonNum - 1;
+        // Mặc định nhảy tới tab cuối của bài trước
+        const prevLessonTabs = document.getElementById(`lesson-${hskLevel}-${prevLessonId}`)?.querySelectorAll('.tab-btn') || [];
+        showLesson(hskLevel, prevLessonId, prevLessonTabs.length || 1);
+    } 
+    // 3. Lùi về Bài cuối cùng của cấp HSK trước đó (Ví dụ: Bài 1 HSK2 -> Bài cuối HSK1)
+    else {
+        const currentLvlIdx = hskLevels.indexOf(hskLevel);
+        if (currentLvlIdx > 0) {
+            const prevLevel = hskLevels[currentLvlIdx - 1];
+            const prevLevelLessons = hskData[prevLevel]?.lessons || [];
+            if (prevLevelLessons.length > 0) {
+                const lastLesson = prevLevelLessons[prevLevelLessons.length - 1];
+                const lastLessonTabs = lastLesson.tabs || [];
+                showLesson(prevLevel, lastLesson.id, lastLessonTabs.length || 1);
             }
         }
+    }
+}
+
 
         function setupFavoritesUI() {
             const aside = document.querySelector('aside');
@@ -524,32 +557,42 @@
         }
 
         function universalSearch() {
-            let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
-            let dropdown = document.getElementById('searchDropdown');
-            if (!dropdown) {
-                dropdown = document.createElement('div');
-                dropdown.id = 'searchDropdown';
-                dropdown.className = 'search-results-dropdown';
-                document.querySelector('.global-search-box').appendChild(dropdown);
-            }
-            if (!query) { dropdown.style.display = 'none'; return; }
-            dropdown.innerHTML = '';
-            
-            hskLevels.forEach(lvl => {
-                (hskData[lvl]?.lessons || []).forEach(les => {
-                    (les.tabs || []).forEach(tab => {
-                        if (JSON.stringify(tab).toLowerCase().includes(query)) {
-                            const item = document.createElement('div');
-                            item.className = 'search-item-result';
-                            item.innerHTML = `<b>[${lvl.toUpperCase()}] ${les.title}</b> - ${tab.title}`;
-                            item.onclick = () => { showLesson(lvl, les.id, tab.id); dropdown.style.display = 'none'; };
-                            dropdown.appendChild(item);
-                        }
-                    });
-                });
+    let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
+    let dropdown = document.getElementById('searchDropdown');
+    if (!dropdown) {
+        dropdown = document.createElement('div');
+        dropdown.id = 'searchDropdown';
+        dropdown.className = 'search-results-dropdown';
+        document.querySelector('.global-search-box').appendChild(dropdown);
+    }
+    if (!query) { dropdown.style.display = 'none'; return; }
+    dropdown.innerHTML = '';
+    
+    // Bảng màu chuẩn theo từng cấp HSK
+    const levelColors = {
+        hsk1: { bg: '#e8f5e9', color: '#2e7d32' },
+        hsk2: { bg: '#fef3c7', color: '#d97706' },
+        hsk3: { bg: '#ffe4e6', color: '#e11d48' }
+    };
+    
+    hskLevels.forEach(lvl => {
+        (hskData[lvl]?.lessons || []).forEach(les => {
+            (les.tabs || []).forEach(tab => {
+                if (JSON.stringify(tab).toLowerCase().includes(query)) {
+                    const item = document.createElement('div');
+                    item.className = 'search-item-result';
+                    
+                    const badgeStyle = `background: ${levelColors[lvl].bg}; color: ${levelColors[lvl].color}; padding: 2px 8px; border-radius: 6px; font-weight: bold; font-size: 11px; margin-right: 6px;`;
+                    
+                    item.innerHTML = `<span style="${badgeStyle}">${lvl.toUpperCase()}</span> <b>${les.title}</b> - <span style="color:#555;">${tab.title}</span>`;
+                    item.onclick = () => { showLesson(lvl, les.id, tab.id); dropdown.style.display = 'none'; };
+                    dropdown.appendChild(item);
+                }
             });
-            dropdown.style.display = dropdown.children.length > 0 ? 'block' : 'none';
-        }
+        });
+    });
+    dropdown.style.display = dropdown.children.length > 0 ? 'block' : 'none';
+}
 
         function playAudio(text) {
             if ('speechSynthesis' in window) {
