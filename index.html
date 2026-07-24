@@ -81,7 +81,7 @@
      .user-info {
     position: fixed;
     top: 60px;
-    right: 120px; /* Tăng lên 120px để tránh bị che */
+    right: 150px; /* Tăng lên 120px để tránh bị che */
     z-index: 999;
     font-size: 13px;
     color: #333;
@@ -1611,27 +1611,50 @@
         }
 
         // ===== XUẤT PDF =====
-        function exportPDF() {
-            const element = document.querySelector('.lesson.active .tab-content');
-            if (!element) {
-                alert('Không có nội dung để xuất!');
-                return;
-            }
-            
-            const opt = {
-                margin: 10,
-                filename: `${currentLevel.toUpperCase()}_Bai_${currentLesson}.pdf`,
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-            
-            if (typeof html2pdf !== 'undefined') {
-                html2pdf().set(opt).from(element).save();
-            } else {
-                alert('❌ Thư viện html2pdf chưa được tải! Vui lòng kiểm tra kết nối mạng.');
-            }
-        }
+       function exportPDF() {
+    // Lấy nội dung bài học hiện tại
+    const lessonContent = document.querySelector('.lesson.active .tab-content .tab-pane.active');
+    if (!lessonContent) {
+        alert('Không có nội dung để xuất! Vui lòng mở một bài học trước.');
+        return;
+    }
+    
+    // Tạo một bản clone để không ảnh hưởng đến trang
+    const content = lessonContent.cloneNode(true);
+    
+    // Tạo container tạm để xuất PDF
+    const container = document.createElement('div');
+    container.style.padding = '20px';
+    container.style.fontFamily = '"Noto Sans SC", sans-serif';
+    container.style.maxWidth = '800px';
+    container.style.margin = '0 auto';
+    
+    // Thêm tiêu đề bài học
+    const title = document.createElement('h2');
+    const lessonTitle = document.querySelector('.lesson.active .tab-btn.active');
+    if (lessonTitle) {
+        title.textContent = lessonTitle.textContent;
+    } else {
+        title.textContent = `${currentLevel.toUpperCase()} - Bài ${currentLesson}`;
+    }
+    title.style.color = '#2e7d32';
+    title.style.marginBottom = '15px';
+    container.appendChild(title);
+    
+    // Thêm nội dung
+    container.appendChild(content);
+    
+    // Xuất PDF
+    const opt = {
+        margin: 10,
+        filename: `${currentLevel.toUpperCase()}_Bai_${currentLesson}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+    
+    html2pdf().set(opt).from(container).save();
+}
 
         // ===== SEARCH =====
         function universalSearch() {
