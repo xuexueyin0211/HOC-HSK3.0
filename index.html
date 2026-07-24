@@ -118,6 +118,69 @@
         .hsk-wrapper.active { display: block !important; }
 
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+                /* ===== RESPONSIVE CSS (Dành cho iPad & Điện thoại) ===== */
+
+        /* 1. Màn hình Tablet / iPad (Dưới 1024px) */
+        @media screen and (max-width: 1024px) {
+            .top-banner { padding: 30px 30px; }
+            .top-banner h1 { font-size: 30px; }
+            
+            aside { width: 240px; } /* Thu nhỏ thanh menu bên trái */
+            main { padding: 25px; }
+            
+            .level-selector { padding: 10px 20px; }
+            .global-search-box { width: 220px; }
+        }
+
+        /* 2. Màn hình Điện thoại (Dưới 768px) */
+        @media screen and (max-width: 768px) {
+            /* Thanh chọn cấp độ HSK & Tìm kiếm */
+            .level-selector {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 15px;
+            }
+            .level-btns { width: 100%; justify-content: center; }
+            .global-search-box { width: 100%; }
+            .search-results-dropdown { width: 100%; }
+
+            /* Banner đầu trang */
+            .top-banner { padding: 20px 15px; text-align: center; }
+            .top-banner h1 { font-size: 24px; }
+            .top-banner .subtitle { font-size: 15px; }
+
+            /* Đưa Menu dọc thành dạng xếp chồng ngang/dọc dễ cuộn */
+            .content-wrapper { flex-direction: column; }
+            
+            aside {
+                width: 100%;
+                max-height: 200px; /* Giới hạn chiều cao menu trên điện thoại */
+                border-right: none;
+                border-bottom: 2px solid #eef2f5;
+                position: relative;
+            }
+            
+            main { padding: 15px; }
+            .card { padding: 18px; }
+
+            /* Điều chỉnh các nút bấm và tab */
+            .tab-nav { padding: 5px; gap: 3px; }
+            .tab-btn { padding: 8px 12px; font-size: 13px; flex: 1; text-align: center; }
+            
+            .example-with-audio {
+                flex-direction: row;
+                gap: 10px;
+            }
+            .example-with-audio .cn { font-size: 18px; }
+
+            /* Điều chỉnh nút Đăng xuất / User Info */
+            .user-info { top: 10px; right: 10px; font-size: 11px; }
+            .logout-btn { top: 35px; right: 10px; font-size: 11px; }
+            
+            /* Điều chỉnh khung Ghi chú */
+            .note-area { margin: 10px; }
+        }
+
     </style>
 </head>
 <body>
