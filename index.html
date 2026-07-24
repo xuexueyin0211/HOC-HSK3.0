@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HSK 3.0 - Ngữ Pháp 语法复习</title>
+    <title>HSK123 3.0 - Ngữ Pháp 语法复习</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Quicksand:wght@500;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
@@ -192,6 +192,23 @@
         }
         .note-actions .delete-note:hover {
             background: #d32f2f;
+        }
+
+        /* ===== NÚT XUẤT PDF ===== */
+        .export-pdf-btn {
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .export-pdf-btn:hover {
+            background: #b71c1c;
+            transform: scale(1.02);
         }
 
         /* ===== CÁC CSS CŨ CỦA BẠN ===== */
@@ -1089,47 +1106,41 @@
 
         // ===== LOAD DỮ LIỆU TỪ 3 FILE JSON RIÊNG =====
         async function loadData() {
-    try {
-        document.getElementById('loading').style.display = 'block';
-        
-        const [hsk1Res, hsk2Res, hsk3Res] = await Promise.all([
-            fetch('data/hsk1.json'),
-            fetch('data/hsk2.json'),
-            fetch('data/hsk3.json')
-        ]);
-        
-        const hsk1Data = await hsk1Res.json();
-        const hsk2Data = await hsk2Res.json();
-        const hsk3Data = await hsk3Res.json();
-        
-        hskData = {
-            hsk1: hsk1Data.hsk1,
-            hsk2: hsk2Data.hsk2,
-            hsk3: hsk3Data.hsk3
-        };
-        
-        document.getElementById('loading').style.display = 'none';
-        
-        // 1. Vẽ giao diện bài học
-        renderAll();
-        loadProgress();
-
-        // 2. Tải xong dữ liệu rồi mới dựng khung Yêu thích (Thêm dòng này vào)
-        if (typeof setupFavoritesUI === 'function') {
-            setupFavoritesUI();
+            try {
+                document.getElementById('loading').style.display = 'block';
+                
+                const [hsk1Res, hsk2Res, hsk3Res] = await Promise.all([
+                    fetch('data/hsk1.json'),
+                    fetch('data/hsk2.json'),
+                    fetch('data/hsk3.json')
+                ]);
+                
+                const hsk1Data = await hsk1Res.json();
+                const hsk2Data = await hsk2Res.json();
+                const hsk3Data = await hsk3Res.json();
+                
+                hskData = {
+                    hsk1: hsk1Data.hsk1,
+                    hsk2: hsk2Data.hsk2,
+                    hsk3: hsk3Data.hsk3
+                };
+                
+                document.getElementById('loading').style.display = 'none';
+                
+                renderAll();
+                loadProgress();
+            } catch (error) {
+                console.error('Lỗi tải dữ liệu:', error);
+                document.getElementById('loading').innerHTML = `
+                    <p style="color:red;font-size:18px;">❌ Không thể tải dữ liệu!</p>
+                    <p style="color:#666;">Vui lòng kiểm tra các file trong thư mục <b>data/</b></p>
+                    <p style="color:#666;font-size:13px;margin-top:10px;">
+                        Cần có: <b>hsk1.json</b>, <b>hsk2.json</b>, <b>hsk3.json</b>
+                    </p>
+                `;
+            }
         }
 
-    } catch (error) {
-        console.error('Lỗi tải dữ liệu:', error);
-        document.getElementById('loading').innerHTML = `
-            <p style="color:red;font-size:18px;">❌ Không thể tải dữ liệu!</p>
-            <p style="color:#666;">Vui lòng kiểm tra các file trong thư mục <b>data/</b></p>
-            <p style="color:#666;font-size:13px;margin-top:10px;">
-                Cần có: <b>hsk1.json</b>, <b>hsk2.json</b>, <b>hsk3.json</b>
-            </p>
-        `;
-    }
-}
         // ===== RENDER TOÀN BỘ =====
         function renderAll() {
             const app = document.getElementById('app');
@@ -1522,28 +1533,17 @@
         }
 
         function renderFavorites() {
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    const container = document.getElementById('favoritesList');
-    
-    if (!container) return;
-    
-    if (favorites.length === 0) {
-        container.innerHTML = '<div style="padding:10px; font-size:12px; color:#888; text-align:center;">Chưa có bài viết nào được lưu</div>';
-        return;
-    }
-    
-    container.innerHTML = favorites.map(key => {
-        const [level, lesson] = key.split('-');
-        const lessonData = hskData[level]?.lessons?.[parseInt(lesson) - 1];
-        const title = lessonData?.title || `Bài ${lesson}`;
-        return `
-            <div class="item" onclick="showLesson('${level}', ${lesson})" style="display:flex; justify-between; align-items:center; padding:8px; margin-bottom:4px; background:#fff; border-radius:6px; border:1px solid #eee;">
-                <span style="font-size:12px; font-weight:600;">📌 ${level.toUpperCase()} - ${title}</span>
-                <span onclick="event.stopPropagation(); removeFavorite('${key}')" style="cursor:pointer; color:#f44336; padding:0 4px; font-weight:bold;">✕</span>
-            </div>
-        `;
-    }).join('');
-}
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const container = document.getElementById('favoritesList');
+            
+            if (!container) return;
+            
+            if (favorites.length === 0) {
+                container.innerHTML = '<div style="padding:10px;color:#888;text-align:center;">Chưa có bài yêu thích</div>';
+                container.style.display = 'none';
+                return;
+            }
+            
             container.style.display = 'block';
             container.innerHTML = favorites.map(key => {
                 const [level, lesson] = key.split('-');
@@ -1777,80 +1777,29 @@
         });
 
         // ===== SUBMENU CLICK =====
-        document.addEventListener('DOMContentLoaded', async function() {
-    try {
-        // 1. Chờ dữ liệu bài học tải xong hoàn toàn
-        await loadData();
-
-        // 2. Tải xong mới khởi tạo các thành phần giao diện
-        setupFavoritesUI();
-        
-    } catch (error) {
-        console.error("Lỗi tải dữ liệu:", error);
-    }
-});
-
-// Hàm khởi tạo riêng cho tính năng Yêu thích
-function setupFavoritesUI() {
-    const sidebarTitle = document.querySelector('.sidebar-title');
-    const menu = document.querySelector('.menu');
-
-    if (sidebarTitle && menu) {
-        // Tạo nút Lưu bài học (nếu chưa có)
-        if (!document.getElementById('favBtn')) {
-            const favContainer = document.createElement('div');
-            favContainer.style.cssText = 'padding:10px 15px; display:flex; align-items:center; gap:8px; border-bottom:1px solid #eee; background:#fff8e1; border-radius:6px; margin:8px 0;';
-            favContainer.innerHTML = `
-                <button onclick="toggleFavorite()" id="favBtn" style="font-size:20px; background:none; border:none; cursor:pointer;">☆</button>
-                <span style="font-size:13px; font-weight:600; color:#5d4037;">Lưu bài học này</span>
-            `;
-            sidebarTitle.parentNode.insertBefore(favContainer, sidebarTitle.nextSibling);
-        }
-
-        // Tạo khung Danh sách bài học đã lưu (nếu chưa có)
-        if (!document.getElementById('favoritesList')) {
-            const favTitle = document.createElement('div');
-            favTitle.className = 'sidebar-title';
-            favTitle.style.cssText = 'padding-top:12px; margin-top:10px; border-top:1px dashed #ccc; color:#f59e0b; font-weight:bold;';
-            favTitle.textContent = '⭐ Bài học đã lưu';
-
-            const favList = document.createElement('div');
-            favList.id = 'favoritesList';
-
-            menu.parentNode.insertBefore(favTitle, menu);
-            menu.parentNode.insertBefore(favList, menu);
-        }
-
-        // Cập nhật lại trạng thái ngôi sao và danh sách yêu thích
-        updateFavoriteButton();
-        renderFavorites();
-    }
-}
-
-// Cập nhật lại hiển thị danh sách yêu thích
-function renderFavorites() {
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    const container = document.getElementById('favoritesList');
-    
-    if (!container) return;
-    
-    if (favorites.length === 0) {
-        container.innerHTML = '<div style="padding:8px; font-size:12px; color:#888; text-align:center;">Chưa có bài viết nào được lưu</div>';
-        return;
-    }
-    
-    container.innerHTML = favorites.map(key => {
-        const [level, lesson] = key.split('-');
-        const lessonData = hskData[level]?.lessons?.[parseInt(lesson) - 1];
-        const title = lessonData?.title || `Bài ${lesson}`;
-        return `
-            <div onclick="showLesson('${level}', ${lesson})" style="display:flex; justify-content:space-between; align-items:center; padding:6px 10px; margin-bottom:4px; background:#fff; border-radius:4px; border:1px solid #ddd; cursor:pointer; font-size:12px;">
-                <span>📌 ${level.toUpperCase()} - ${title}</span>
-                <span onclick="event.stopPropagation(); removeFavorite('${key}')" style="color:#f44336; font-weight:bold; padding:0 4px;">✕</span>
-            </div>
-        `;
-    }).join('');
-}
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.submenu a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const onclickAttr = this.getAttribute('onclick');
+                    if (onclickAttr) {
+                        const match = onclickAttr.match(/switchTab\('([^']+)',(\d+),(\d+)\)/);
+                        if (match) {
+                            const level = match[1];
+                            const lessonId = parseInt(match[2]);
+                            const tabIndex = parseInt(match[3]);
+                            const activeWrapper = document.querySelector('.hsk-wrapper.active');
+                            if (activeWrapper) {
+                                const lesson = activeWrapper.querySelector('#lesson-' + level + '-' + lessonId);
+                                if (lesson && !lesson.classList.contains('active')) {
+                                    showLesson(level, lessonId);
+                                }
+                                switchTab(level, lessonId, tabIndex);
+                            }
+                        }
+                    }
+                });
+            });
 
             document.addEventListener('keydown', function(e) {
                 if ((e.ctrlKey || e.metaKey) && ['1', '2', '3'].includes(e.key)) {
@@ -1863,48 +1812,34 @@ function renderFavorites() {
                 }
             });
 
-            document.addEventListener('DOMContentLoaded', function() {
-    // 1. Tải dữ liệu trước
-    loadData();
-
-    // 2. Chèn ngay giao diện Yêu thích vào Sidebar khi ứng dụng sẵn sàng
-    const checkSidebarInterval = setInterval(() => {
-        const sidebarTitle = document.querySelector('.sidebar-title');
-        const menu = document.querySelector('.menu');
-
-        if (sidebarTitle && menu) {
-            clearInterval(checkSidebarInterval);
-
-            // Nút bấm đánh dấu yêu thích
-            if (!document.getElementById('favBtn')) {
-                const favContainer = document.createElement('div');
-                favContainer.style.cssText = 'padding:12px 20px; display:flex; align-items:center; gap:10px; border-bottom:1px solid #e0e0e0; background:#fff8e1; border-radius:8px; margin:10px;';
-                favContainer.innerHTML = `
-                    <button onclick="toggleFavorite()" class="favorite-btn" id="favBtn" style="font-size:22px; cursor:pointer;">☆</button>
-                    <span style="font-size:13px; font-weight:600; color:#5d4037;">Lưu bài học này</span>
-                `;
-                sidebarTitle.parentNode.insertBefore(favContainer, sidebarTitle.nextSibling);
-            }
-
-            // Danh sách các bài đã yêu thích
-            if (!document.getElementById('favoritesList')) {
-                const favTitle = document.createElement('div');
-                favTitle.className = 'sidebar-title';
-                favTitle.style.cssText = 'padding-top:15px; border-top:1px dashed #ccc; color:#f59e0b;';
-                favTitle.textContent = '⭐ Bài học đã lưu';
-
-                const favList = document.createElement('div');
-                favList.id = 'favoritesList';
-                favList.className = 'favorites-list';
-
-                menu.parentNode.insertBefore(favTitle, menu);
-                menu.parentNode.insertBefore(favList, menu);
-            }
-
-            renderFavorites();
-        }
-    }, 100);
-});
+            // Tạo nút yêu thích trong sidebar sau khi render
+            setTimeout(() => {
+                const sidebarTitle = document.querySelector('.sidebar-title');
+                if (sidebarTitle) {
+                    const favContainer = document.createElement('div');
+                    favContainer.style.cssText = 'padding:10px 25px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0f0;';
+                    favContainer.innerHTML = `
+                        <button onclick="toggleFavorite()" class="favorite-btn" id="favBtn">☆</button>
+                        <span style="font-size:13px;color:#888;">Đánh dấu bài học</span>
+                    `;
+                    sidebarTitle.parentNode.insertBefore(favContainer, sidebarTitle.nextSibling);
+                }
+                
+                // Tạo danh sách yêu thích
+                const menu = document.querySelector('.menu');
+                if (menu) {
+                    const favList = document.createElement('div');
+                    favList.id = 'favoritesList';
+                    favList.className = 'favorites-list';
+                    favList.style.cssText = 'margin:10px;display:none;';
+                    favList.innerHTML = '<div style="padding:10px;color:#888;text-align:center;">Chưa có bài yêu thích</div>';
+                    menu.parentNode.insertBefore(favList, menu);
+                }
+                
+                renderFavorites();
+                loadData();
+            }, 100);
+        });
     </script>
 
     <!-- ===== FIREBASE (Đặt ở cuối body) ===== -->
