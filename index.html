@@ -78,47 +78,32 @@
             background: #d32f2f;
             transform: scale(1.05);
         }
-        .user-info {
-            position: fixed;
-            top: 60px;
-            right: 110px;
-            z-index: 999;
-            font-size: 13px;
-            color: #333;
-            background: rgba(255,255,255,0.9);
-            padding: 4px 12px;
-            border-radius: 12px;
-        }
-
-        /* ===== THANH TIẾN TRÌNH ===== */
-        .progress-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: #e0e0e0;
-            z-index: 9999;
-        }
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #4caf50, #8bc34a);
-            width: 0%;
-            transition: width 0.3s ease;
-            border-radius: 0 3px 3px 0;
-        }
-        .progress-text {
-            position: fixed;
-            top: 10px;
-            right: 20px;
-            font-size: 12px;
-            color: #666;
-            z-index: 9999;
-            background: rgba(255,255,255,0.9);
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-weight: 600;
-        }
+     .user-info {
+    position: fixed;
+    top: 60px;
+    right: 120px; /* Tăng lên 120px để tránh bị che */
+    z-index: 999;
+    font-size: 13px;
+    color: #333;
+    background: rgba(255,255,255,0.9);
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+.logout-btn {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 999;
+    padding: 6px 16px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
 
         /* ===== NÚT YÊU THÍCH ===== */
         .favorite-btn {
@@ -1049,12 +1034,11 @@
     </style>
 </head>
 <body>
-
     <!-- ===== MÀN HÌNH ĐĂNG NHẬP ===== -->
     <div id="login-overlay" style="display:flex;">
         <div class="login-box">
-            <h2>📚 Học ngữ pháp HSK 3.0</h2>
-            <p>Đăng nhập để học</p>
+            <h2>📚 HSK123</h2>
+            <p>Đăng nhập để học ngữ pháp HSK</p>
             <button class="google-btn" onclick="loginWithGoogle()">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/>
@@ -1069,12 +1053,6 @@
 
     <!-- ===== CONTAINER CHÍNH ===== -->
     <div id="app-container">
-
-        <!-- ===== THANH TIẾN TRÌNH ===== -->
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
-        <div class="progress-text" id="progressText">0%</div>
 
         <!-- ===== LEVEL SELECTOR ===== -->
         <div class="level-selector">
@@ -1365,18 +1343,6 @@
             return wrapper;
         }
 
-        // ===== CẬP NHẬT TIẾN TRÌNH =====
-        function updateProgress() {
-            const totalLessons = hskData[currentLevel]?.lessons?.length || 1;
-            const current = currentLesson || 1;
-            const progress = Math.round((current / totalLessons) * 100);
-            
-            const bar = document.getElementById('progressBar');
-            const text = document.getElementById('progressText');
-            if (bar) bar.style.width = progress + '%';
-            if (text) text.textContent = progress + '%';
-        }
-
         // ===== CÁC HÀM CHÍNH =====
         function switchLevel(levelId, button) {
             document.querySelectorAll('.hsk-wrapper').forEach(el => {
@@ -1393,7 +1359,6 @@
             currentLevel = levelId;
             window.scrollTo({ top: 0, behavior: 'smooth' });
             saveProgress();
-            updateProgress();
         }
 
         function showLesson(hskLevel, lessonNum, defaultTab = 1) {
@@ -1423,7 +1388,6 @@
                 currentLesson = lessonNum;
                 currentTab = defaultTab;
                 saveProgress();
-                updateProgress();
                 checkFavorite();
                 loadNote();
             } else {
