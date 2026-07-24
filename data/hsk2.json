@@ -1,0 +1,1488 @@
+{
+  "hsk2": {
+    "title": "TỔNG HỢP NGỮ PHÁP HSK2",
+    "subtitle": "HỌC TIẾNG TRUNG CÙNG CÔ TUYẾT NGÂN",
+    "badge": "🌟 CHUẨN HSK 3.0",
+    "color": "hsk2",
+    "lessons": [
+      {
+        "id": 1,
+        "title": "第1课 Bài 1",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Trợ từ ngữ khí 吧 (2)",
+            "subcards": [
+              {
+                "label": "Giải thích:",
+                "text": "吧 đặt cuối câu nghi vấn để hỏi, biểu thị bản thân đã có sự suy đoán hoặc phỏng đoán nhưng hỏi để xác nhận lại, mang ý nghĩa \"...nhỉ?\""
+              }
+            ],
+            "examples": [
+              {
+                "cn": "他今天会来吧？",
+                "py": "Tā jīntiān huì lái ba?",
+                "vi": "Hôm nay anh ấy sẽ đến nhỉ?"
+              },
+              {
+                "cn": "你已经吃饭了吧？",
+                "py": "Nǐ yǐjīng chīfàn le ba?",
+                "vi": "Bạn ăn cơm rồi nhỉ?"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Cấu trúc nhấn mạnh 是...的",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "（是）+ thành phần muốn nhấn mạnh + 的"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "(1) Câu khẳng định có thể lược bỏ 是, câu phủ định không thể lược bỏ 是.\n(2) Chỉ có thể dùng cho hành động đã xảy ra, đã hoàn thành.\n(3) 的 có thể nằm trước tân ngữ.\n<span style='color:#e11d48;'><b>THẦN CHÚ: Muốn nhấn mạnh cái gì, ta đặt 是 trước cái đó, 的 đặt cuối câu.</b></span>"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我<span class='hl-h2'>是</span>去年去<span class='hl-h2'>的</span>北京。",
+                "py": "Wǒ shì qùnián qù de Běijīng.",
+                "vi": "Tôi đi Bắc Kinh vào năm ngoái."
+              },
+              {
+                "cn": "你<span class='hl-h2'>是</span>在越南学汉语<span class='hl-h2'>的</span>吗？",
+                "py": "Nǐ shì zài Yuènán xué Hànyǔ de ma?",
+                "vi": "Bạn học tiếng Trung ở Việt Nam phải không?"
+              },
+              {
+                "cn": "我<span class='hl-h2'>不是</span>坐飞机来<span class='hl-h2'>的</span>。",
+                "py": "Wǒ bú shì zuò fēijī lái de.",
+                "vi": "Tôi không đến bằng máy bay."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Câu kiêm ngữ",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "S + 请/让/叫 + O1 (S2) + V2"
+              },
+              {
+                "label": "Giải thích:",
+                "text": "Câu kiêm ngữ dùng để yêu cầu, sai khiến, trong đó tân ngữ 1 vừa là tân ngữ của động từ 请/让/叫 vừa là chủ ngữ của động từ 2."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "老师让我们回答问题。",
+                "py": "Lǎoshī ràng wǒmen huídá wèntí.",
+                "vi": "Giáo viên bảo chúng tôi trả lời câu hỏi."
+              },
+              {
+                "cn": "妈妈叫我买水果。",
+                "py": "Māma jiào wǒ mǎi shuǐguǒ.",
+                "vi": "Mẹ bảo tôi đi mua hoa quả."
+              },
+              {
+                "cn": "经理请大家开会。",
+                "py": "Jīnglǐ qǐng dàjiā kāihuì.",
+                "vi": "Giám đốc mời mọi người họp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "第2课 Bài 2",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Cấu trúc đề xuất 还是...吧",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "还是 + ý kiến muốn đề xuất + 吧"
+              },
+              {
+                "label": "Ý nghĩa:",
+                "text": "还是...吧 dùng để đưa ra lựa chọn sau khi cân nhắc, mang nghĩa \"hay là/vẫn nên là... thì hơn\"."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "外面下雨了，我们<span class='hl-h2'>还是</span>坐车<span class='hl-h2'>吧</span>。",
+                "py": "Wàimiàn xiàyǔ le, wǒmen háishi zuòchē ba.",
+                "vi": "Trời mưa rồi, chúng ta đi xe thì hơn."
+              },
+              {
+                "cn": "时间不早了，<span class='hl-h2'>还是</span>回家<span class='hl-h2'>吧</span>。",
+                "py": "Shíjiān bù zǎo le, háishi huí jiā ba.",
+                "vi": "Thời gian không còn sớm nữa, về nhà thôi."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Số ước lượng với 多",
+            "subcards": [
+              {
+                "label": "Giải thích:",
+                "text": "多 đặt sau số lượng để chỉ \"hơn\", \"trên\" một con số nào đó."
+              },
+              {
+                "label": "Cách dùng:",
+                "text": "Nếu số đó chia hết cho 10: số + 多 + lượng + (danh)\nNếu không chia hết cho 10: số + lượng + 多 + (danh)"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我学两个月多了。",
+                "py": "Wǒ xué liǎng gè duō yuè le.",
+                "vi": "Tôi học hơn 2 tháng rồi."
+              },
+              {
+                "cn": "教室里有三十多个人。",
+                "py": "Jiàoshì lǐ yǒu sānshí duō gè rén.",
+                "vi": "Trong lớp có hơn 30 người."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Cụm động từ làm định ngữ",
+            "subcards": [
+              {
+                "label": "Lưu ý:",
+                "text": "Khi động từ hoặc cụm động từ làm định ngữ, giữa định ngữ và trung tâm ngữ phải có 的.\nPhải dịch trung tâm ngữ (phần sau 的) trước, dịch định ngữ sau."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "这是<span class='hl-h2'>学习汉语的书</span>。",
+                "py": "Zhè shì xuéxí Hànyǔ de shū.",
+                "vi": "Đây là sách học tiếng Trung."
+              },
+              {
+                "cn": "这是<span class='hl-h2'>昨天开的会</span>。",
+                "py": "Zhè shì zuótiān kāi de huì.",
+                "vi": "Đây là cuộc họp được tổ chức hôm qua."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "第3课 Bài 3",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Bổ ngữ kết quả",
+            "subcards": [
+              {
+                "label": "Giải thích：",
+                "text": "Bổ ngữ kết quả đứng ngay sau động từ để biểu thị kết quả, trạng thái hoặc mục đích đạt được sau khi hành động hoàn thành."
+              },
+              {
+                "label": "Cấu trúc câu khẳng định：",
+                "text": "S + V + BNKQ + (了)"
+              },
+              {
+                "label": "Cấu trúc câu phủ định：",
+                "text": "S + 没/没有 + V + BNKQ\nKhi phủ định dùng 没/没有 thì không kèm trợ từ 了 ở cuối câu."
+              },
+              {
+                "label": "Cấu trúc câu nghi vấn：",
+                "text": "Công thức 1: S + V + BNKQ + 了吗/了没有/没有？\nCông thức 2: S + V + 没 + V + BNKQ？"
+              },
+              {
+                "label": "Vị trí của Tân ngữ：",
+                "text": "Trường hợp thông thường: V + BNKQ + O\nTrường hợp tân ngữ phức tạp (cụm danh từ): O + S + V + BNKQ"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我已经<span class='hl-h2'>写完</span>作业了。",
+                "py": "Wǒ yǐjīng xiěwán zuòyè le.",
+                "vi": "Tôi đã làm xong bài tập rồi."
+              },
+              {
+                "cn": "他<span class='hl-h2'>买到</span>火车票了。",
+                "py": "Tā mǎidào huǒchēpiào le.",
+                "vi": "Anh ấy đã mua được vé tàu."
+              },
+              {
+                "cn": "我<span class='hl-h2'>没听见</span>。",
+                "py": "Wǒ méi tīngjiàn.",
+                "vi": "Tôi không nghe thấy."
+              },
+              {
+                "cn": "这篇课文你<span class='hl-h2'>看懂了吗</span>？",
+                "py": "Zhè piān kèwén nǐ kàndǒng le ma?",
+                "vi": "Bạn đã đọc hiểu bài khóa này chưa?"
+              },
+              {
+                "cn": "这篇课文你<span class='hl-h2'>看没看懂</span>？",
+                "py": "Zhè piān kèwén nǐ kàn méi kàndǒng?",
+                "vi": "Bạn đã đọc hiểu bài khóa này chưa?"
+              },
+              {
+                "cn": "我洗好<span class='hl-h2'>衣服</span>了。",
+                "py": "Wǒ xǐ hǎo yīfu le.",
+                "vi": "Tôi giặt sạch quần áo rồi."
+              },
+              {
+                "cn": "<span class='hl-h2'>你的衣服</span>我洗好了。",
+                "py": "Nǐ de yīfu wǒ xǐ hǎo le.",
+                "vi": "Quần áo của bạn tôi giặt sạch rồi."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Lặp lại động từ",
+            "subcards": [
+              {
+                "label": "Giải thích：",
+                "text": "Động từ có thể lặp lại để diễn tả làm thử, làm một chút (thời gian ngắn), mang ngữ khí nhẹ nhàng."
+              },
+              {
+                "label": "Hình thức lặp lại:",
+                "text": "Động từ đơn âm tiết: A（一）A → 看看、看一看\nĐộng từ song âm tiết: ABAB → 学习学习、休息休息\nĐộng từ ly hợp: AAB → 聊聊天、散散步\nĐơn âm tiết + đã hoàn thành: A了A → 看了看、听了听\nSong âm tiết + đã hoàn thành: AB了一下 → 学习了一下\nĐộng từ ly hợp + đã hoàn thành: A了AB → 聊了聊天、散了散步"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我想<span class='hl-h2'>看看</span>这本书。",
+                "py": "Wǒ xiǎng kànkan zhè běn shū.",
+                "vi": "Tôi muốn xem thử quyển sách này."
+              },
+              {
+                "cn": "老师让我们<span class='hl-h2'>读一读</span>课文。",
+                "py": "Lǎoshī ràng wǒmen dú yi dú kèwén.",
+                "vi": "Giáo viên bảo chúng tôi đọc thử bài khóa."
+              },
+              {
+                "cn": "我们<span class='hl-h2'>休息休息</span>吧。",
+                "py": "Wǒmen xiūxi xiūxi ba.",
+                "vi": "Chúng ta nghỉ một chút nhé."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "第4课 Bài 4",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Trợ từ động thái 过",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "(+) S + V + 过 + O\n(-) S + 没（有）+ V + 过 + O\n(?) S + V + 过 + O + 吗？"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "过 dùng để biểu thị người nói đã từng có trải nghiệm hoặc kinh nghiệm thực hiện một hành động trong quá khứ.\nChỉ nhấn mạnh <b>đã từng</b>, không nhấn mạnh thời điểm xảy ra."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我<span class='hl-h2'>去过</span>中国。",
+                "py": "Wǒ qùguo Zhōngguó.",
+                "vi": "Tôi đã từng đến Trung Quốc."
+              },
+              {
+                "cn": "你<span class='hl-h2'>吃过</span>北京烤鸭吗？",
+                "py": "Nǐ chīguo Běijīng kǎoyā ma?",
+                "vi": "Bạn đã từng ăn vịt quay Bắc Kinh chưa?"
+              },
+              {
+                "cn": "我<span class='hl-h2'>没有看过</span>这部电影。",
+                "py": "Wǒ méiyǒu kànguo zhè bù diànyǐng.",
+                "vi": "Tôi chưa từng xem bộ phim này."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Cấu trúc nguyên nhân - kết quả",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "Biểu thị mối quan hệ nguyên nhân - kết quả.\nCó thể dùng đầy đủ 因为...所以..., hoặc chỉ dùng 因为 hay 所以 tùy ngữ cảnh."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "因为今天下雨，所以我们不出去。",
+                "py": "Yīnwèi jīntiān xiàyǔ, suǒyǐ wǒmen bù chūqù.",
+                "vi": "Vì hôm nay trời mưa nên chúng tôi không ra ngoài."
+              },
+              {
+                "cn": "因为他生病了，所以没来上课。",
+                "py": "Yīnwèi tā shēngbìng le, suǒyǐ méi lái shàngkè.",
+                "vi": "Vì anh ấy bị ốm nên không đến lớp."
+              },
+              {
+                "cn": "我很喜欢汉语，所以每天学习。",
+                "py": "Wǒ hěn xǐhuan Hànyǔ, suǒyǐ měitiān xuéxí.",
+                "vi": "Tôi rất thích tiếng Trung nên ngày nào cũng học."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Cụm danh từ rút gọn với 的",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "Trong ngữ cảnh người nói và người nghe đều biết đang đề cập đến đối tượng nào, thì danh từ chính đứng sau 的 có thể lược bỏ nhằm tránh lặp lại."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "红色的比较漂亮。",
+                "py": "Hóngsè de bǐjiào piàoliang.",
+                "vi": "Cái màu đỏ đẹp hơn."
+              },
+              {
+                "cn": "我喜欢大的。",
+                "py": "Wǒ xǐhuan dà de.",
+                "vi": "Tôi thích cái lớn."
+              },
+              {
+                "cn": "这是新的，那是旧的。",
+                "py": "Zhè shì xīn de, nà shì jiù de.",
+                "vi": "Đây là cái mới, kia là cái cũ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "第5课 Bài 5",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Bổ ngữ xu hướng đơn",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "Động từ + 来/去"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Bổ ngữ xu hướng đơn dùng để biểu thị hướng di chuyển của hành động.\n来 biểu thị động tác hướng về phía người nói.\n去 biểu thị động tác rời xa người nói."
+              },
+              {
+                "label": "Lưu ý 1：",
+                "text": "Nếu tân ngữ là nơi chốn thì đặt trước 来/去.\nV + O nơi chốn + 来/去\nNếu là tân ngữ khác thì có thể đặt trước hoặc sau 来/去.\nV + (O khác) + 来/去 + (O khác)"
+              },
+              {
+                "label": "Lưu ý 2：",
+                "text": "\"起来 qǐlái\" có nghĩa là \"thức dậy\" (như 起床); hoặc biểu thị hành động có hướng di chuyển từ thấp lên cao, từ dưới lên trên."
+              },
+              {
+                "label": "Các động từ có thể dùng BNXH thường gặp:",
+                "text": "上 shàng, 下 xià, 进 jìn, 出 chū, 回 huí, 过 guò, 起 qǐ, 开 kāi, 拿 ná, 买 mǎi, 送 sòng, 请 qǐng, 找 zhǎo, 走 zǒu"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "老师<span class='hl-h2'>进</span>教室<span class='hl-h2'>来</span>了。",
+                "py": "Lǎoshī jìn jiàoshì lái le.",
+                "vi": "Giáo viên đi vào lớp."
+              },
+              {
+                "cn": "他<span class='hl-h2'>回</span>家<span class='hl-h2'>去</span>了。",
+                "py": "Tā huí jiā qù le.",
+                "vi": "Anh ấy về nhà rồi."
+              },
+              {
+                "cn": "请<span class='hl-h2'>拿</span>一本书<span class='hl-h2'>来</span>。",
+                "py": "Qǐng ná yì běn shū lái.",
+                "vi": "Hãy mang một quyển sách đến đây."
+              },
+              {
+                "cn": "我买<span class='hl-h2'>回来</span>很多水果。",
+                "py": "Wǒ mǎi huílai hěn duō shuǐguǒ.",
+                "vi": "Tôi mua rất nhiều hoa quả mang về."
+              },
+              {
+                "cn": "他走<span class='hl-h2'>过去</span>跟老师说话。",
+                "py": "Tā zǒu guòqu gēn lǎoshī shuōhuà.",
+                "vi": "Anh ấy đi tới nói chuyện với giáo viên."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Cấu trúc 都...了",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "都 + thời gian/số lượng/ tuổi/... + 了"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Biểu thị một sự việc đã đạt đến mức độ nào đó, thường mang ý nhấn mạnh, thúc giục hoặc phàn nàn."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "都八点了，你还不起床！",
+                "py": "Dōu bā diǎn le, nǐ hái bù qǐchuáng!",
+                "vi": "Đã 8 giờ rồi mà bạn vẫn chưa dậy!"
+              },
+              {
+                "cn": "都晚上十点了，他还在工作。",
+                "py": "Dōu wǎnshang shí diǎn le, tā hái zài gōngzuò.",
+                "vi": "Đã 10 giờ tối rồi mà anh ấy vẫn còn làm việc."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "第6课 Bài 6",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Lặp lại tính từ",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "Tính từ đơn âm tiết: AA\nTính từ song âm tiết: AABB"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Cách lặp này dùng để nhấn mạnh mức độ cao, thường dùng trong khẩu ngữ."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "天蓝蓝的，很漂亮。",
+                "py": "Tiān lánlán de, hěn piàoliang.",
+                "vi": "Bầu trời rất xanh, rất đẹp."
+              },
+              {
+                "cn": "孩子高高兴兴地回家了。",
+                "py": "Háizi gāogāoxìngxìng de huí jiā le.",
+                "vi": "Đứa trẻ rất vui vẻ trở về nhà."
+              },
+              {
+                "cn": "房间干干净净的。",
+                "py": "Fángjiān gāngānjìngjìng de.",
+                "vi": "Căn phòng rất sạch sẽ."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② ...什么的 biểu thị vân vân",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "\"什么的\" đặt sau danh từ hoặc cụm danh từ để biểu thị \"vân vân\", \"các loại\", \"và những thứ tương tự\"."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我喜欢看电影、听音乐什么的。",
+                "py": "Wǒ xǐhuan kàn diànyǐng, tīng yīnyuè shénmede.",
+                "vi": "Tôi thích xem phim, nghe nhạc và những hoạt động tương tự."
+              },
+              {
+                "cn": "桌子上有电脑、杯子、书和画笔什么的。",
+                "py": "Zhuōzi shang yǒu diànnǎo, bēizi, shū hé huàbǐ shénmede.",
+                "vi": "Trên bàn có máy tính, cái ly, sách và bút vẽ v.v...."
+              },
+              {
+                "cn": "周末我们去爬山、游泳什么的。",
+                "py": "Zhōumò wǒmen qù páshān, yóuyǒng shénmede.",
+                "vi": "Cuối tuần chúng tôi đi leo núi, bơi lội các kiểu."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Trợ từ kết cấu \"地\"",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "Trạng ngữ (thường là Adj) + 地 + V"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "\"地\" đứng giữa tính từ (hoặc cụm tính từ) và động từ, biểu thị cách thức hoặc trạng thái thực hiện hành động.\nTiếng Việt thường dịch là \"làm gì đó một cách như thế nào\"."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "他认真地学习汉语。",
+                "py": "Tā rènzhēn de xuéxí Hànyǔ.",
+                "vi": "Anh ấy học tiếng Trung một cách chăm chỉ."
+              },
+              {
+                "cn": "孩子高兴地笑了。",
+                "py": "Háizi gāoxìng de xiào le.",
+                "vi": "Đứa trẻ cười một cách vui vẻ."
+              },
+              {
+                "cn": "老师慢慢地说。",
+                "py": "Lǎoshī mànmàn de shuō.",
+                "vi": "Giáo viên nói một cách chậm rãi."
+              },
+              {
+                "cn": "她轻轻地关上门。",
+                "py": "Tā qīngqīng de guānshàng mén.",
+                "vi": "Cô ấy nhẹ nhàng đóng cửa."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "第7课 Bài 7",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Cấu trúc \"一......就......\"",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "Nếu 2 vế cùng chủ ngữ: S + 一 + V1 + 就 + V2\nNếu 2 vế khác chủ ngữ: S1 + 一 + V1, S2 + 就 + V2"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Cấu trúc 一......就...... diễn tả hành động phía sau xảy ra ngay sau hành động phía trước, mang nghĩa <b>\"vừa... thì...\"</b>.\nNgoài ra, hành động trước cũng có thể là điều kiện hoặc nguyên nhân dẫn đến kết quả phía sau, mang nghĩa <b>\"cứ... là...\"</b>."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我一下课就回家。",
+                "py": "Wǒ yí xiàkè jiù huí jiā.",
+                "vi": "Vừa tan học tôi liền về nhà."
+              },
+              {
+                "cn": "他一到家就给妈妈打电话。",
+                "py": "Tā yí dào jiā jiù gěi māma dǎ diànhuà.",
+                "vi": "Vừa về đến nhà anh ấy liền gọi điện cho mẹ."
+              },
+              {
+                "cn": "老师一进教室，同学们就安静了。",
+                "py": "Lǎoshī yí jìn jiàoshì, tóngxuémen jiù ānjìng le.",
+                "vi": "Giáo viên vừa bước vào lớp thì học sinh lập tức yên lặng."
+              },
+              {
+                "cn": "天气一冷，我就想喝热茶。",
+                "py": "Tiānqì yì lěng, wǒ jiù xiǎng hē rè chá.",
+                "vi": "Trời cứ lạnh là tôi muốn uống trà nóng."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Bổ ngữ trạng thái",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "Bổ ngữ trạng thái đứng sau 得, dùng để miêu tả mức độ, trạng thái hoặc đánh giá mức độ thực hiện hành động."
+              },
+              {
+                "label": "Cấu trúc：",
+                "text": "(+) S + V + 得 + (Adv mức độ) + Adj\n(-) S + V + 得 + 不 + Adj\n(?) S + V + 得 + Adj + 吗？\n(?) S + V + 得 + Adj + 不 + Adj？\n(?) S + V + 得 + 怎么样？"
+              },
+              {
+                "label": "Lưu ý：",
+                "text": "Nếu là động từ ly hợp, cần lặp lại phần động từ.\nNếu động từ có tân ngữ thì có hai cách:\nCách 1: Đưa tân ngữ lên trước: 汉字写得很漂亮。\nCách 2: Lặp lại động từ: 写汉字写得很漂亮。"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "他说得很快。",
+                "py": "Tā shuō de hěn kuài.",
+                "vi": "Anh ấy nói rất nhanh."
+              },
+              {
+                "cn": "她唱歌唱得很好。",
+                "py": "Tā chànggē chàng de hěn hǎo.",
+                "vi": "Cô ấy hát rất hay."
+              },
+              {
+                "cn": "你的汉字写得很漂亮。",
+                "py": "Nǐ de Hànzì xiě de hěn piàoliang.",
+                "vi": "Bạn viết chữ Hán rất đẹp."
+              },
+              {
+                "cn": "他跑得不快。",
+                "py": "Tā pǎo de bú kuài.",
+                "vi": "Anh ấy chạy không nhanh."
+              },
+              {
+                "cn": "你汉语说得怎么样？",
+                "py": "Nǐ Hànyǔ shuō de zěnmeyàng?",
+                "vi": "Bạn nói tiếng Trung thế nào?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "第8课 Bài 8",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu so sánh với 比",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 比 B + Adj"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Giới từ 比 dùng để so sánh sự khác biệt về tính chất hoặc trạng thái giữa hai người, hai sự vật hoặc hai hiện tượng.\nTiếng Việt thường dịch là \"A... hơn B\"."
+              },
+              {
+                "label": "Lưu ý：",
+                "text": "Sau 比 không dùng các phó từ chỉ mức độ như 很、非常.\nCó thể dùng 更 hoặc 还 để nhấn mạnh mức độ so sánh."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我也觉得左边的比右边的好看。",
+                "py": "Wǒ yě juéde zuǒbiān de bǐ yòubiān de hǎokàn.",
+                "vi": "Tôi cũng cảm thấy bên trái đẹp hơn bên phải."
+              },
+              {
+                "cn": "今天比昨天冷。",
+                "py": "Jīntiān bǐ zuótiān lěng.",
+                "vi": "Hôm nay lạnh hơn hôm qua."
+              },
+              {
+                "cn": "他觉得踢足球比打篮球有意思。",
+                "py": "Tā juéde tī zúqiú bǐ dǎ lánqiú yǒuyìsi.",
+                "vi": "Anh ấy cảm thấy đá bóng thú vị hơn chơi bóng rổ."
+              },
+              {
+                "cn": "我哥哥比我高。",
+                "py": "Wǒ gēge bǐ wǒ gāo.",
+                "vi": "Anh trai tôi cao hơn tôi."
+              },
+              {
+                "cn": "这本书比那本书更有意思。",
+                "py": "Zhè běn shū bǐ nà běn shū gèng yǒuyìsi.",
+                "vi": "Quyển sách này thú vị hơn quyển sách kia."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Cặp liên từ nối \"虽然......但是......\"",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "Cấu trúc biểu thị quan hệ tương phản, chuyển ý giữa hai mệnh đề, nghĩa là \"mặc dù... nhưng...\".\nTrong khẩu ngữ có thể lược bỏ 虽然 hoặc 但是."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "虽然今天很忙，但是我还是来了。",
+                "py": "Suīrán jīntiān hěn máng, dànshì wǒ háishi lái le.",
+                "vi": "Mặc dù hôm nay rất bận nhưng tôi vẫn đến."
+              },
+              {
+                "cn": "虽然他很年轻，但是工作经验很多。",
+                "py": "Suīrán tā hěn niánqīng, dànshì gōngzuò jīngyàn hěn duō.",
+                "vi": "Mặc dù anh ấy còn trẻ nhưng có nhiều kinh nghiệm làm việc."
+              },
+              {
+                "cn": "虽然下雨了，我们还是去上课。",
+                "py": "Suīrán xiàyǔ le, wǒmen háishi qù shàngkè.",
+                "vi": "Mặc dù trời mưa nhưng chúng tôi vẫn đi học."
+              },
+              {
+                "cn": "他很累，但是还在学习。",
+                "py": "Tā hěn lèi, dànshì hái zài xuéxí.",
+                "vi": "Anh ấy rất mệt nhưng vẫn đang học."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "第9课 Bài 9",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu so sánh với 没有",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 没有 B + Adj"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Cấu trúc 没有 dùng để so sánh, biểu thị A không bằng B về một phương diện nào đó.\nTiếng Việt thường dịch là \"A không... bằng... B\"."
+              },
+              {
+                "label": "Lưu ý：",
+                "text": "Trước Adj có thể thêm 这么/那么, biểu thị mức độ của B cao hơn nhiều."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "儿子的个子没有他那么高。",
+                "py": "Érzi de gèzi méiyǒu tā nàme gāo.",
+                "vi": "Con trai không cao bằng anh ấy."
+              },
+              {
+                "cn": "昨天没有今天这么冷。",
+                "py": "Zuótiān méiyǒu jīntiān zhème lěng.",
+                "vi": "Hôm qua không lạnh bằng hôm nay."
+              },
+              {
+                "cn": "这块手表没有那块好看。",
+                "py": "Zhè kuài shǒubiǎo méiyǒu nà kuài hǎokàn.",
+                "vi": "Chiếc đồng hồ này không đẹp bằng chiếc kia."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Câu so sánh với 有",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 有 B + Adj + 吗？"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Dùng để hỏi hai người hoặc hai sự vật có đạt cùng mức độ hay không.\nTiếng Việt thường dịch là \"A có... bằng... B không?\""
+              }
+            ],
+            "examples": [
+              {
+                "cn": "妹妹有姐姐高吗？",
+                "py": "Mèimei yǒu jiějie gāo ma?",
+                "vi": "Em gái có cao bằng chị gái không?"
+              },
+              {
+                "cn": "那件衣服有这件好看吗？",
+                "py": "Nà jiàn yīfu yǒu zhè jiàn hǎokàn ma?",
+                "vi": "Bộ quần áo kia có đẹp bằng bộ này không?"
+              },
+              {
+                "cn": "你的汉语有老师好吗？",
+                "py": "Nǐ de Hànyǔ yǒu lǎoshī hǎo ma?",
+                "vi": "Tiếng Trung của bạn có tốt bằng giáo viên không?"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Động từ 离",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 离 B + khoảng cách/thời gian"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Động từ 离 dùng để biểu thị khoảng cách về không gian hoặc thời gian giữa hai địa điểm hay hai mốc thời gian."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "咖啡店离这儿有点儿远。",
+                "py": "Kāfēidiàn lí zhèr yǒudiǎnr yuǎn.",
+                "vi": "Quán cà phê cách đây hơi xa."
+              },
+              {
+                "cn": "学校离医院不远。",
+                "py": "Xuéxiào lí yīyuàn bù yuǎn.",
+                "vi": "Trường học không xa bệnh viện."
+              },
+              {
+                "cn": "现在离我的生日还有三天。",
+                "py": "Xiànzài lí wǒ de shēngrì hái yǒu sān tiān.",
+                "vi": "Còn ba ngày nữa là đến sinh nhật tôi."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "④ Bổ ngữ thời lượng",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "Bổ ngữ thời lượng biểu thị khoảng thời gian hành động hoặc trạng thái kéo dài."
+              },
+              {
+                "label": "Không có tân ngữ:",
+                "text": "S + V + BNTL"
+              },
+              {
+                "label": "Tân ngữ là danh từ chỉ vật:",
+                "text": "S + V + BNTL + O"
+              },
+              {
+                "label": "Tân ngữ là tên người/đại từ:",
+                "text": "S + V + O + BNTL"
+              },
+              {
+                "label": "Tân ngữ là danh từ chỉ người/vật:",
+                "text": "S + V + O + V + BNTL"
+              },
+              {
+                "label": "Động từ ly hợp:",
+                "text": "S + V ly hợp + V chính + BNTL"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "走半个多小时就到了。",
+                "py": "Zǒu bàn gè duō xiǎoshí jiù dào le.",
+                "vi": "Đi hơn nửa tiếng là đến."
+              },
+              {
+                "cn": "我每天学习两个小时汉语。",
+                "py": "Wǒ měitiān xuéxí liǎng gè xiǎoshí Hànyǔ.",
+                "vi": "Mỗi ngày tôi học tiếng Trung hai tiếng."
+              },
+              {
+                "cn": "他们陪了我两年。",
+                "py": "Tāmen péi le wǒ liǎng nián.",
+                "vi": "Họ đã đồng hành cùng tôi hai năm."
+              },
+              {
+                "cn": "我等朋友等了半个小时。",
+                "py": "Wǒ děng péngyou děng le bàn gè xiǎoshí.",
+                "vi": "Tôi đợi bạn nửa tiếng."
+              },
+              {
+                "cn": "我睡觉睡了八个小时。",
+                "py": "Wǒ shuìjiào shuì le bā gè xiǎoshí.",
+                "vi": "Tôi ngủ tám tiếng."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "第10课 Bài 10",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu vị ngữ chủ vị",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "Trong loại câu này, vị ngữ không phải là một động từ hay tính từ đơn lẻ mà là một <b>cụm chủ vị</b>. Cụm chủ vị này dùng để miêu tả hoặc giải thích thêm cho chủ ngữ của toàn câu."
+              },
+              {
+                "label": "Lưu ý：",
+                "text": "Chủ ngữ phía trước thường là đối tượng được giới thiệu (tân ngữ)."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我的书包你看见了吗？",
+                "py": "Wǒ de shūbāo nǐ kànjiàn le ma?",
+                "vi": "Cặp sách của tôi, bạn nhìn thấy chưa?"
+              },
+              {
+                "cn": "这件事他知道。",
+                "py": "Zhè jiàn shì tā zhīdào.",
+                "vi": "Chuyện này anh ấy biết."
+              },
+              {
+                "cn": "这本书我看过。",
+                "py": "Zhè běn shū wǒ kàn guo.",
+                "vi": "Quyển sách này tôi đã đọc rồi."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Câu hỏi lựa chọn với 还是",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "（是）A 还是 B？"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Liên từ 还是 được dùng trong câu nghi vấn để yêu cầu người nghe lựa chọn giữa hai hoặc nhiều phương án."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "妈妈，是您准备考试还是我准备考试？",
+                "py": "Māma, shì nín zhǔnbèi kǎoshì háishi wǒ zhǔnbèi kǎoshì?",
+                "vi": "Mẹ ơi, mẹ ôn thi hay con ôn thi?"
+              },
+              {
+                "cn": "你更喜欢打篮球、踢足球还是游泳？",
+                "py": "Nǐ gèng xǐhuān dǎ lánqiú, tī zúqiú háishi yóuyǒng?",
+                "vi": "Bạn thích chơi bóng rổ, đá bóng hay bơi lội hơn?"
+              },
+              {
+                "cn": "我们什么时候去看电影？今天还是明天？",
+                "py": "Wǒmen shénme shíhou qù kàn diànyǐng? Jīntiān háishi míngtiān?",
+                "vi": "Khi nào chúng ta đi xem phim? Hôm nay hay ngày mai?"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Cấu trúc \"要/快/快要/就要......了\"",
+            "subcards": [
+              {
+                "label": "Ý nghĩa：",
+                "text": "Các cấu trúc này diễn tả một sự việc sắp xảy ra trong tương lai gần, mang nghĩa \"sắp... rồi\"."
+              },
+              {
+                "label": "Lưu ý：",
+                "text": "Nếu trong câu có trạng ngữ thời gian xác định thì thường dùng 就要......了."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "饭菜快要做好了。",
+                "py": "Fàncài kuàiyào zuò hǎo le.",
+                "vi": "Cơm và thức ăn sắp nấu xong rồi."
+              },
+              {
+                "cn": "火车快开了。",
+                "py": "Huǒchē kuài kāi le.",
+                "vi": "Tàu sắp khởi hành rồi."
+              },
+              {
+                "cn": "我们下星期就要考试了。",
+                "py": "Wǒmen xià xīngqī jiù yào kǎoshì le.",
+                "vi": "Tuần sau chúng tôi sắp thi rồi."
+              },
+              {
+                "cn": "电影要开始了。",
+                "py": "Diànyǐng yào kāishǐ le.",
+                "vi": "Bộ phim sắp bắt đầu rồi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "第11课 Bài 11",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Trợ từ động thái 着",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "(+) V + 着 + O\n(-) 没（有）+ V + 着 + O\n(?) V + 着 + O + 吗？\n    V + 着 + O + 没有？\n    V + 没 + V + 着 + O？"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "着 đứng sau động từ để biểu thị hành động hoặc trạng thái đang được duy trì, kéo dài.\n着 nhấn mạnh trạng thái/kết quả đang tồn tại, thường dùng để miêu tả."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "那你在这儿坐着。",
+                "py": "Nà nǐ zài zhèr zuòzhe.",
+                "vi": "Vậy bạn cứ ngồi ở đây nhé."
+              },
+              {
+                "cn": "教室的门开着。",
+                "py": "Jiàoshì de mén kāizhe.",
+                "vi": "Cửa lớp đang mở."
+              },
+              {
+                "cn": "教室的门没开着。",
+                "py": "Jiàoshì de mén méi kāizhe.",
+                "vi": "Cửa lớp không mở."
+              },
+              {
+                "cn": "她穿着白色的裤子。",
+                "py": "Tā chuānzhe báisè de kùzi.",
+                "vi": "Cô ấy đang mặc quần màu trắng."
+              },
+              {
+                "cn": "陈天中没拿着咖啡。",
+                "py": "Chén Tiānzhōng méi názhe kāfēi.",
+                "vi": "Trần Thiên Trung không cầm cà phê."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Phó từ mức độ 最",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "最 + Adj/V tâm lý"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "最 đứng trước tính từ hoặc động từ chỉ tâm lý để biểu thị mức độ cao nhất trong một nhóm người hoặc sự vật."
+              },
+              {
+                "label": "Lưu ý：",
+                "text": "Thường dùng khi phạm vi so sánh đã được xác định, ví dụ: 我们班、世界上、家里......"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你最喜欢吃中国菜。",
+                "py": "Nǐ zuì xǐhuān chī Zhōngguó cài.",
+                "vi": "Bạn thích ăn món Trung Quốc nhất."
+              },
+              {
+                "cn": "在我们家，爸爸最高。",
+                "py": "Zài wǒmen jiā, bàba zuì gāo.",
+                "vi": "Trong gia đình tôi, bố cao nhất."
+              },
+              {
+                "cn": "你们班谁说中文说得最好？",
+                "py": "Nǐmen bān shéi shuō Zhōngwén shuō de zuì hǎo?",
+                "vi": "Trong lớp các bạn, ai nói tiếng Trung tốt nhất?"
+              },
+              {
+                "cn": "我最喜欢星期六。",
+                "py": "Wǒ zuì xǐhuān Xīngqīliù.",
+                "vi": "Tôi thích thứ Bảy nhất."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "第12课 Bài 12",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① So sánh với 多了/得多",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 比 B + Adj + 多了 / 得多"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Trong câu so sánh với 比, 多了 hoặc 得多 đứng sau tính từ để nhấn mạnh sự chênh lệch rất lớn giữa hai đối tượng."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我这里比北京冷多了。",
+                "py": "Wǒ zhèlǐ bǐ Běijīng lěng duō le.",
+                "vi": "Chỗ tôi lạnh hơn Bắc Kinh nhiều."
+              },
+              {
+                "cn": "坐飞机比坐火车快得多。",
+                "py": "Zuò fēijī bǐ zuò huǒchē kuài de duō.",
+                "vi": "Đi máy bay nhanh hơn tàu hỏa rất nhiều."
+              },
+              {
+                "cn": "他觉得红茶比绿茶好喝得多。",
+                "py": "Tā juéde hóngchá bǐ lǜchá hǎohē de duō.",
+                "vi": "Anh ấy thấy trà đen ngon hơn trà xanh rất nhiều."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② So sánh với bổ ngữ trạng thái",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 比 B + V + 得 + Adj\nhoặc\nA + V + 得 + 比 B + Adj"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "昨天比今天下得大。",
+                "py": "Zuótiān bǐ jīntiān xià de dà.",
+                "vi": "Hôm qua mưa to hơn hôm nay."
+              },
+              {
+                "cn": "李文跑得比白家月快。",
+                "py": "Lǐ Wén pǎo de bǐ Bái Jiāyuè kuài.",
+                "vi": "Lý Văn chạy nhanh hơn Bạch Gia Nguyệt."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ So sánh khi động từ có tân ngữ và bổ ngữ trạng thái",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 比 B + (V) + O + V + 得 + Adj\nhoặc\nA + (V) + O + V + 得 + 比 B + Adj"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "他比我踢足球踢得好。",
+                "py": "Tā bǐ wǒ tī zúqiú tī de hǎo.",
+                "vi": "Anh ấy đá bóng giỏi hơn tôi."
+              },
+              {
+                "cn": "白家月写汉字写得比陈天中好。",
+                "py": "Bái Jiāyuè Hànzì xiě de bǐ Chén Tiānzhōng hǎo.",
+                "vi": "Bạch Gia Nguyệt viết chữ Hán đẹp hơn Trần Thiên Trung."
+              },
+              {
+                "cn": "你跑步跑得比我快。",
+                "py": "Nǐ pǎobù pǎo de bǐ wǒ kuài.",
+                "vi": "Bạn chạy bộ nhanh hơn tôi."
+              },
+              {
+                "cn": "我汉字写得比以前漂亮。",
+                "py": "Wǒ Hànzì xiě de bǐ yǐqián piàoliang.",
+                "vi": "Chữ Hán của tôi đẹp hơn trước."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "第13课 Bài 13",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu hai tân ngữ",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "S + V + O1 (người/nơi chốn/tổ chức) + O2 (vật)"
+              },
+              {
+                "label": "Động từ thường gặp：",
+                "text": "给、送、拿、卖、还、借、告诉、介绍、教......"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "王老师喜欢花，就送给她花吧。",
+                "py": "Wáng lǎoshī xǐhuān huā, jiù sòng gěi tā huā ba.",
+                "vi": "Cô Vương thích hoa, vậy hãy tặng cô ấy hoa đi."
+              },
+              {
+                "cn": "她拿给我一杯水。",
+                "py": "Tā ná gěi wǒ yì bēi shuǐ.",
+                "vi": "Cô ấy mang cho tôi một cốc nước."
+              },
+              {
+                "cn": "他卖给我一本中文书。",
+                "py": "Tā mài gěi wǒ yì běn Zhōngwén shū.",
+                "vi": "Anh ấy bán cho tôi một quyển sách tiếng Trung."
+              },
+              {
+                "cn": "老师教我们汉语。",
+                "py": "Lǎoshī jiāo wǒmen Hànyǔ.",
+                "vi": "Giáo viên dạy chúng tôi tiếng Trung."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② So sánh với số lượng cụ thể",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 比 B + Adj + số lượng"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Sau tính từ có thể thêm <b>cụm số lượng</b> để diễn tả mức chênh lệch cụ thể giữa hai đối tượng."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "今天的词比昨天多了十个。",
+                "py": "Jīntiān de cí bǐ zuótiān duō le shí gè.",
+                "vi": "Từ mới hôm nay nhiều hơn hôm qua 10 từ."
+              },
+              {
+                "cn": "姐姐比我大三岁。",
+                "py": "Jiějie bǐ wǒ dà sān suì.",
+                "vi": "Chị gái lớn hơn tôi 3 tuổi."
+              },
+              {
+                "cn": "坐飞机比坐火车快五个多小时。",
+                "py": "Zuò fēijī bǐ zuò huǒchē kuài wǔ gè duō xiǎoshí.",
+                "vi": "Đi máy bay nhanh hơn đi tàu hơn 5 tiếng."
+              },
+              {
+                "cn": "今天比昨天冷两度。",
+                "py": "Jīntiān bǐ zuótiān lěng liǎng dù.",
+                "vi": "Hôm nay lạnh hơn hôm qua 2 độ."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ So sánh với 一点儿/一些",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "A 比 B + Adj + 一点儿/一些"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "一点儿 hoặc 一些 được đặt sau tính từ để biểu thị sự khác biệt không lớn giữa hai đối tượng."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "姐姐比我高一点儿。",
+                "py": "Jiějie bǐ wǒ gāo yìdiǎnr.",
+                "vi": "Chị gái cao hơn tôi một chút."
+              },
+              {
+                "cn": "那间教室比这间大一些。",
+                "py": "Nà jiān jiàoshì bǐ zhè jiān dà yìxiē.",
+                "vi": "Phòng học kia lớn hơn phòng này một chút."
+              },
+              {
+                "cn": "今天比昨天热一点儿。",
+                "py": "Jīntiān bǐ zuótiān rè yìdiǎnr.",
+                "vi": "Hôm nay nóng hơn hôm qua một chút."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "第14课 Bài 14",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu tồn hiện",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "Nơi chốn + V + bổ ngữ/trợ từ + N người/vật"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "Câu tồn hiện diễn tả tại một địa điểm nào đó đang tồn tại người hoặc sự vật.\nThành phần danh từ ở sau thường là người hoặc sự vật chưa xác định.\nTrợ từ thường được dùng là 着."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你家楼下站着一个人。",
+                "py": "Nǐ jiā lóuxià zhànzhe yí gè rén.",
+                "vi": "Dưới lầu nhà bạn đang có một người đứng."
+              },
+              {
+                "cn": "爸爸手里拿着一杯咖啡。",
+                "py": "Bàba shǒu lǐ názhe yì bēi kāfēi.",
+                "vi": "Bố đang cầm một cốc cà phê trên tay."
+              },
+              {
+                "cn": "那间教室里坐着不少学生。",
+                "py": "Nà jiān jiàoshì lǐ zuòzhe bù shǎo xuéshēng.",
+                "vi": "Trong phòng học đó có khá nhiều học sinh đang ngồi."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Phó từ mức độ \"多\"",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "多 + Adj + 啊（！）"
+              },
+              {
+                "label": "Giải thích：",
+                "text": "多 dùng trong câu cảm thán để nhấn mạnh mức độ rất cao, mang nghĩa: \"biết bao\", \"quá...\", \"thật là...\"."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你一个人在这儿多没意思啊！",
+                "py": "Nǐ yí gè rén zài zhèr duō méi yìsi a!",
+                "vi": "Một mình ở đây chán biết bao!"
+              },
+              {
+                "cn": "我们一起去多好啊！",
+                "py": "Wǒmen yìqǐ qù duō hǎo a!",
+                "vi": "Chúng ta cùng đi thì tốt biết bao!"
+              },
+              {
+                "cn": "多好看啊！买这件吧。",
+                "py": "Duō hǎokàn a! Mǎi zhè jiàn ba.",
+                "vi": "Đẹp quá! Mua cái này đi."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Bổ ngữ xu hướng kép",
+            "subcards": [
+              {
+                "label": "Khái niệm:",
+                "text": "Là bổ ngữ do động từ xu hướng đơn (上/下/进/出/回/过/起) kết hợp với \"来\" hoặc \"去\" tạo thành, đứng sau động từ chính để biểu thị hướng của hành động một cách cụ thể và phức tạp hơn."
+              },
+              {
+                "label": "Cấu trúc cơ bản:",
+                "text": "V + V xu hướng đơn + 来/去"
+              },
+              {
+                "label": "Bảng tổng hợp:",
+                "text": "上 + 来 = 上来 (Lên đây), 上 + 去 = 上去 (Lên kia)\n下 + 来 = 下来 (Xuống đây), 下 + 去 = 下去 (Xuống kia)\n进 + 来 = 进来 (Vào đây), 进 + 去 = 进去 (Vào kia)\n出 + 来 = 出来 (Ra đây), 出 + 去 = 出去 (Ra kia)\n回 + 来 = 回来 (Về đây), 回 + 去 = 回去 (Về kia)\n过 + 来 = 过来 (Qua đây), 过 + 去 = 过去 (Qua kia)\n起 + 来 = 起来 (Dậy/Lên đây), 起 + 去 = (không tồn tại)"
+              },
+              {
+                "label": "Vị trí của tân ngữ - Trường hợp 1:",
+                "text": "Tân ngữ là từ chỉ nơi chốn: V + V xu hướng đơn + O + 来/去"
+              },
+              {
+                "label": "Vị trí của tân ngữ - Trường hợp 2:",
+                "text": "Tân ngữ là từ chỉ vật/người:\nCách 1: V + V xu hướng đơn + O + 来/去\nCách 2: V + V xu hướng đơn + 来/去 + O"
+              },
+              {
+                "label": "Lưu ý：",
+                "text": "起来 có thể biểu thị động tác từ trạng thái thấp chuyển sang cao hoặc bắt đầu một hành động."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "他们跑回北京去了。",
+                "py": "Tāmen pǎo huí Běijīng qù le.",
+                "vi": "Họ chạy về Bắc Kinh rồi."
+              },
+              {
+                "cn": "他带回一本书来。",
+                "py": "Tā dài huí yì běn shū lái.",
+                "vi": "Anh ấy mang về một quyển sách."
+              },
+              {
+                "cn": "他带回来一本书。",
+                "py": "Tā dài huílai yì běn shū.",
+                "vi": "Anh ấy mang về một quyển sách."
+              },
+              {
+                "cn": "她经常跑上来找我玩。",
+                "py": "Tā jīngcháng pǎo shànglái zhǎo wǒ wán.",
+                "vi": "Cô ấy thường chạy lên tìm tôi chơi."
+              },
+              {
+                "cn": "楼不高，我们走上去吧。",
+                "py": "Lóu bù gāo, wǒmen zǒu shàngqù ba.",
+                "vi": "Lầu không cao, chúng ta đi bộ lên nhé."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "第15课 Bài 15",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Bổ ngữ động lượng",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "S + V + số từ + 次 (+ O)"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "<b>số từ＋次</b> đứng sau động từ để biểu thị số lần thực hiện một hành động."
+              },
+              {
+                "label": "Vị trí của tân ngữ:",
+                "text": "Tân ngữ là tên người hoặc địa danh: S + V + (O tên người/địa danh) + số từ + 次 + (O tên người/địa danh)\nTân ngữ là danh từ chỉ sự vật: S + V + số từ + 次 + O sự vật\nTân ngữ là đại từ: S + V + O đại từ + số từ + 次"
+              },
+              {
+                "label": "Các lượng từ thường gặp：",
+                "text": "次, 遍, 回, 趟 (HSK2 chủ yếu sử dụng 次)"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "安妮去过一次北京。",
+                "py": "Ānnī qùguo yí cì Běijīng.",
+                "vi": "Annie đã từng đến Bắc Kinh một lần."
+              },
+              {
+                "cn": "安妮去过北京一次。",
+                "py": "Ānnī qùguo Běijīng yí cì.",
+                "vi": "Annie đã từng đến Bắc Kinh một lần."
+              },
+              {
+                "cn": "我想看一次这部电影。",
+                "py": "Wǒ xiǎng kàn yí cì zhè bù diànyǐng.",
+                "vi": "Tôi muốn xem bộ phim này một lần."
+              },
+              {
+                "cn": "我想找他一次。",
+                "py": "Wǒ xiǎng zhǎo tā yí cì.",
+                "vi": "Tôi muốn gặp anh ấy một lần."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Câu chữ 有 (2)",
+            "subcards": [
+              {
+                "label": "Cấu trúc：",
+                "text": "有 + cụm số lượng"
+              },
+              {
+                "label": "Ý nghĩa：",
+                "text": "有 + cụm số lượng dùng để biểu thị đã đạt đến một khoảng thời gian hoặc số lượng nhất định.\nThường gặp trong các cách nói về: tuổi tác, khoảng thời gian, thời gian chưa thực hiện một hành động."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你有一年没回国了吧？",
+                "py": "Nǐ yǒu yì nián méi huíguó le ba?",
+                "vi": "Bạn đã một năm chưa về nước rồi phải không?"
+              },
+              {
+                "cn": "你女儿今年有十岁了吗？",
+                "py": "Nǐ nǚ'ér jīnnián yǒu shí suì le ma?",
+                "vi": "Con gái bạn năm nay đã 10 tuổi chưa?"
+              },
+              {
+                "cn": "我有一个月没给家里打电话了。",
+                "py": "Wǒ yǒu yí gè yuè méi gěi jiālǐ dǎ diànhuà le.",
+                "vi": "Tôi đã một tháng không gọi điện về nhà."
+              },
+              {
+                "cn": "我们有三个月没见面了。",
+                "py": "Wǒmen yǒu sān gè yuè méi jiànmiàn le.",
+                "vi": "Chúng tôi đã ba tháng không gặp nhau."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

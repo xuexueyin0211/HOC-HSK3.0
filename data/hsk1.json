@@ -1,0 +1,1284 @@
+{
+  "hsk1": {
+    "title": "TỔNG HỢP NGỮ PHÁP HSK1",
+    "subtitle": "HỌC TIẾNG TRUNG CÙNG CÔ TUYẾT NGÂN",
+    "badge": "🌟 CHUẨN HSK 3.0",
+    "color": "hsk1",
+    "lessons": [
+      {
+        "id": 1,
+        "title": "第1课 Bài 1",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Mẫu câu chào hỏi",
+            "subcards": [
+              {
+                "label": "Cách dùng:",
+                "text": "Muốn chào ai, ta lấy \"người đó + 好\"."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "\"你好\" (nǐ hǎo) là cách chào thông dụng nhất. \"您好\" (nín hǎo) là cách chào lịch sự, trang trọng dùng với người lớn tuổi, cấp trên hoặc người mới quen."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你好！",
+                "py": "Nǐ hǎo!",
+                "vi": "Chào bạn!"
+              },
+              {
+                "cn": "你们好！",
+                "py": "Nǐmen hǎo!",
+                "vi": "Chào các bạn!"
+              },
+              {
+                "cn": "老师好！",
+                "py": "Lǎoshī hǎo!",
+                "vi": "Chào thầy/cô!"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Mẫu câu cảm ơn",
+            "subcards": [],
+            "examples": [
+              {
+                "cn": "谢谢！",
+                "py": "Xièxie!",
+                "vi": "Cảm ơn!"
+              },
+              {
+                "cn": "不客气。",
+                "py": "Bú kèqi.",
+                "vi": "Đừng khách sáo."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Mẫu câu tạm biệt",
+            "subcards": [],
+            "examples": [
+              {
+                "cn": "再见！",
+                "py": "Zàijiàn!",
+                "vi": "Tạm biệt!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "第2课 Bài 2",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Trật tự câu cơ bản",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "Chủ ngữ + Động Từ + Tân ngữ"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Đây là trật tự cơ bản, còn gọi là câu vị ngữ động từ, tiếng Trung còn có câu vị ngữ danh từ/tính từ.\nTrạng ngữ chỉ thời gian, địa điểm, đối tượng luôn đứng trước động từ.\n<span style='color:#e11d48;'><b>MẸO GHI NHỚ: làm gì thì hành động luôn nằm cuối câu.</b></span>"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我叫陈天中。",
+                "py": "Wǒ jiào Chén Tiānzhōng.",
+                "vi": "Tôi tên là Trần Thiên Trung."
+              },
+              {
+                "cn": "我是学生。",
+                "py": "Wǒ shì xuésheng.",
+                "vi": "Tôi là học sinh."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Đại từ nghi vấn 什么",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "Động từ + 什么 + Danh từ"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你叫什么名字？",
+                "py": "Nǐ jiào shénme míngzi?",
+                "vi": "Bạn tên là gì?"
+              },
+              {
+                "cn": "这是什么？",
+                "py": "Zhè shì shénme?",
+                "vi": "Đây là cái gì?"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Mẫu câu xin lỗi",
+            "subcards": [],
+            "examples": [
+              {
+                "cn": "对不起。",
+                "py": "Duìbuqǐ.",
+                "vi": "Xin lỗi."
+              },
+              {
+                "cn": "没关系。",
+                "py": "Méi guānxi.",
+                "vi": "Không sao đâu."
+              },
+              {
+                "cn": "没事。",
+                "py": "Méi shì.",
+                "vi": "Không có gì."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "第3课 Bài 3",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu chữ 是",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Diễn tả sự đồng nhất (A là B) hoặc phân loại (A thuộc loại B)."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Khẳng định: A + 是 + B\nPhủ định: A + 不是 + B"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "A và B trong cấu trúc thường là danh từ, đại từ."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我是越南人。",
+                "py": "Wǒ shì Yuènán rén.",
+                "vi": "Tôi là người Việt Nam."
+              },
+              {
+                "cn": "她不是法国人。",
+                "py": "Tā búshì Fǎguó rén.",
+                "vi": "Cô ấy không phải là người Pháp."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Trợ từ kết cấu 的",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Đặt giữa định ngữ (từ chỉ người/vật sở hữu) và trung tâm ngữ (danh từ chính) để biểu thị quan hệ sở hữu hoặc thuộc về."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Người/vật sở hữu + 的 + Vật bị sở hữu"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Khi người sở hữu là đại từ nhân xưng (我、你、他...) và vật bị sở hữu là danh từ chỉ người (mẹ, bố, thầy giáo...) hoặc danh từ chỉ nơi chốn quen thuộc (trường học, nhà...), có thể lược bỏ 的."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我的中文老师",
+                "py": "Wǒ de Zhōngwén lǎoshī",
+                "vi": "Giáo viên tiếng Trung của tôi"
+              },
+              {
+                "cn": "我妈妈",
+                "py": "Wǒ māma",
+                "vi": "Mẹ tôi"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Trợ từ nghi vấn 吗",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Đặt cuối câu trần thuật để đặt câu hỏi mang tính khẳng định/phủ định (Yes/No question).\nCâu trả lời khẳng định thì dùng lại động từ hoặc dùng 是 (shì).\nCâu trả lời phủ định dùng \"不 + V/Adj\"."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你是学生吗？-- 不是。",
+                "py": "Nǐ shì xuésheng ma? -- Bú shì.",
+                "vi": "Bạn là học sinh phải không? -- Không phải."
+              },
+              {
+                "cn": "你也很忙吗？-- 是，我很忙。",
+                "py": "Nǐ yě hěn máng ma? -- Shì, wǒ hěn máng.",
+                "vi": "Bạn cũng rất bận à? -- Đúng vậy, tôi rất bận."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "第4课 Bài 4",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu chữ 有 (1)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Diễn tả ai đó có hoặc sở hữu cái gì."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Khẳng định: Chủ ngữ + 有 + Tân ngữ\nPhủ định: Chủ ngữ + 没有 + Tân ngữ"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "她有二十个学生。",
+                "py": "Tā yǒu èrshí ge xuésheng.",
+                "vi": "Cô ấy có hai mươi học sinh."
+              },
+              {
+                "cn": "我没有哥哥。",
+                "py": "Wǒ méiyǒu gēge.",
+                "vi": "Tôi không có anh trai."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Cách biểu đạt số đếm từ 0-99",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "11-19: 十 + Số đơn vị\n20-99: Số hàng chục + 十 + Số hàng đơn vị"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "十七",
+                "py": "Shíqī",
+                "vi": "17"
+              },
+              {
+                "cn": "四十八",
+                "py": "Sìshí bā",
+                "vi": "48"
+              },
+              {
+                "cn": "二十二",
+                "py": "Èrshí'èr",
+                "vi": "22"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Trợ từ ngữ khí 呢 (1)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Đặt ở cuối câu để hỏi về tình huống tương tự của đối tượng khác (câu hỏi giản lược)."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Mệnh đề về A ，B 呢？"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Thường dịch là \"còn B thì sao?\". Không thể dùng để hỏi thông tin hoàn toàn mới."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我有两个哥哥，<span class='hl-h1'>你呢</span>？",
+                "py": "Wǒ yǒu liǎng ge gēge, nǐ ne?",
+                "vi": "Tôi có hai anh trai, còn bạn thì sao?"
+              },
+              {
+                "cn": "我叫白家月，<span class='hl-h1'>你呢</span>？",
+                "py": "Wǒ jiào Bái Jiāyuè, nǐ ne?",
+                "vi": "Tôi tên là Bạch Gia Nguyệt, còn bạn?"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "④ Lượng từ",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Lượng từ là đơn vị của người hoặc vật.\nKhi biểu thị số lượng trong tiếng Trung, số từ thường phải đi kèm với lượng từ."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Số từ + Lượng từ + (Danh từ)"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "\"个\" (gè) là lượng từ phổ biến nhất, dùng được cho cả người và vật.\nLượng từ \"口\" (kǒu) được dùng khi nói về số người trong gia đình."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "两<span class='hl-h1'>个</span>哥哥",
+                "py": "Liǎng ge gēge",
+                "vi": "Hai người anh trai"
+              },
+              {
+                "cn": "四<span class='hl-h1'>口</span>人",
+                "py": "Sì kǒu rén",
+                "vi": "Bốn người trong gia đình"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "第5课 Bài 5",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Biểu đạt thời gian (1)",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "Năm + 年 + Tháng + 月 + Ngày + 号/日 + 星期 + Thứ"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "(1) Thời gian xếp theo trật tự từ từ \"lớn về nhỏ\".\n(2) Cả \"号\" và \"日\" đều dùng để chỉ ngày trong tháng, nhưng \"号\" thông dụng hơn trong khẩu ngữ.\n(3) Số năm đọc lẻ từng chữ số (2016 - hai không một sáu, 1998 - một chín chín tám,...); số tháng và số ngày đọc như số đếm bình thường (11 - mười một, 31 - ba mươi mốt,...)."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "今天9月8号。",
+                "py": "Jīntiān jiǔ yuè bā hào.",
+                "vi": "Hôm nay là ngày 8 tháng 9."
+              },
+              {
+                "cn": "明天是2024年8月18号，星期天。",
+                "py": "Míngtiān shì 2024 nián bā yuè shíbā hào, xīngqītiān.",
+                "vi": "Ngày mai là Chủ nhật, ngày 18 tháng 8 năm 2024."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Câu vị ngữ danh từ",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Câu mà vị ngữ là một danh từ hoặc cụm danh từ. Thường dùng để biểu thị thời gian, tuổi tác,..."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "今天<span class='hl-h1'>5月1号</span>。",
+                "py": "Jīntiān wǔ yuè yī hào.",
+                "vi": "Hôm nay là ngày 1 tháng 5."
+              },
+              {
+                "cn": "我妹妹<span class='hl-h1'>12岁</span>。",
+                "py": "Wǒ mèimei shí'èr suì.",
+                "vi": "Em gái tôi 12 tuổi."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Động từ năng nguyện 会",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng trước động từ để chỉ khả năng có được thông qua học tập hoặc rèn luyện."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你会做饭吗？",
+                "py": "Nǐ huì zuòfàn ma?",
+                "vi": "Bạn có biết nấu ăn không?"
+              },
+              {
+                "cn": "我会做面条儿。",
+                "py": "Wǒ huì zuò miàntiáor.",
+                "vi": "Tôi biết làm mì."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "第6课 Bài 6",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Động từ năng nguyện 想",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng trước động từ để biểu thị mong muốn, ý định hoặc dự định làm gì."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "想 khi là động từ có nghĩa là \"nghĩ, suy nghĩ; nhớ nhung\", nhưng khi là trợ động từ (đứng trước động từ khác) thì mang nghĩa \"muốn\"."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我想去超市。",
+                "py": "Wǒ xiǎng qù chāoshì.",
+                "vi": "Tôi muốn đi siêu thị."
+              },
+              {
+                "cn": "你想买什么？",
+                "py": "Nǐ xiǎng mǎi shénme?",
+                "vi": "Bạn muốn mua gì?"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Câu liên động (1)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Câu có vị ngữ là hai hoặc nhiều cụm động từ liên tiếp nhau được gọi là câu liên động.\nCó 02 ý nghĩa chính: (1) Thể hiện mục đích của hành động; (2) Thể hiện phương thức của hành động."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Động từ nói về cách thức/phương thức là ưu tiên số 1 (nằm đầu tiên), động từ nói về nơi chốn là ưu tiên số 2, động từ hành động luôn nằm sau cùng."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我想<span class='hl-h1'>去超市</span><span class='hl-h1'>买东西</span>。",
+                "py": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+                "vi": "Tôi muốn đi siêu thị mua đồ."
+              },
+              {
+                "cn": "我们<span class='hl-h1'>坐出租车</span><span class='hl-h1'>去西安饭店</span>。",
+                "py": "Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn.",
+                "vi": "Chúng tôi đi taxi đến nhà hàng Tây An."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Đại từ nghi vấn 怎么",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng trước động từ để hỏi về phương thức hoặc cách thức thực hiện một hành động, dịch là \"(làm) thế nào/(làm) bằng cách nào\"."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我们怎么去？",
+                "py": "Wǒmen zěnme qù?",
+                "vi": "Chúng ta đi bằng cách nào?"
+              },
+              {
+                "cn": "你怎么去学校？",
+                "py": "Nǐ zěnme qù xuéxiào?",
+                "vi": "Bạn đến trường bằng cách nào?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "第7课 Bài 7",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Biểu đạt thời gian (2)",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "Buổi + Số giờ + 点 + Số phút + 分"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "(1) 2 giờ đọc là 两点 <span class='py'>liǎng diǎn</span>.\n(2) Từ 分 <span class='py'>fēn</span> có thể lược bỏ (trừ khi là 十分 <span class='py'>shí fēn</span>).\n(3) Với số phút dưới 10, phải đọc thêm 零 <span class='py'>líng</span> trước số phút."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "现在八点四十。",
+                "py": "Xiànzài bā diǎn sìshí.",
+                "vi": "Bây giờ là 8 giờ 40."
+              },
+              {
+                "cn": "现在九点零二分。",
+                "py": "Xiànzài jiǔ diǎn líng'èr fēn.",
+                "vi": "Bây giờ là 9 giờ 2 phút."
+              },
+              {
+                "cn": "上午十点十分有课。",
+                "py": "Shàngwǔ shí diǎn shí fēn yǒu kè.",
+                "vi": "Có tiết lúc 10 giờ 10 sáng."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Trợ từ ngữ khí 吧 (1)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Đặt ở cuối câu để biểu thị sự đề nghị, thương lượng, khuyên nhủ hoặc yêu cầu một cách nhẹ nhàng.\nTiếng Việt dịch là: đi, nha, nhé."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我们下午三点见吧。",
+                "py": "Wǒmen xiàwǔ sān diǎn jiàn ba.",
+                "vi": "Chúng ta gặp nhau lúc 3 giờ chiều nhé."
+              },
+              {
+                "cn": "你去超市买吧。",
+                "py": "Nǐ qù chāoshì mǎi ba.",
+                "vi": "Bạn đi siêu thị mua đi."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Thứ tự của trạng ngữ thời gian và phó từ",
+            "subcards": [
+              {
+                "label": "Lưu ý:",
+                "text": "(1) Trong tiếng Trung, thành phần đứng trước động từ hoặc tính từ (trừ chủ ngữ) được gọi là trạng ngữ.\n(2) Trạng ngữ có thể do phó từ, từ chỉ thời gian đảm nhiệm.\n(3) Nếu cùng xuất hiện, từ chỉ thời gian thường sẽ đứng trước phó từ."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我<span class='hl-h1'>不</span>想去。",
+                "py": "Wǒ bù xiǎng qù.",
+                "vi": "Tôi không muốn đi."
+              },
+              {
+                "cn": "妹妹<span class='hl-h1'>今天</span><span class='hl-h1'>很</span>高兴。",
+                "py": "Mèimei jīntiān hěn gāoxìng.",
+                "vi": "Em gái hôm nay rất vui."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "④ Trợ từ ngữ khí 呢 (2)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Đặt ở cuối câu để khẳng định một sự thật, một trạng thái đang diễn ra hoặc một thông tin đã biết."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "呢 thường mang lại cảm giác người nói đang cung cấp thông tin mà có thể người nghe chưa biết, hoặc nhấn mạnh rằng thông tin đó là đúng."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我明天下午两点还上课呢。",
+                "py": "Wǒ míngtiān xiàwǔ liǎng diǎn hái shàngkè ne.",
+                "vi": "Tôi còn có tiết vào 2 giờ chiều mai cơ."
+              },
+              {
+                "cn": "妹妹会做两个菜呢。",
+                "py": "Mèimei huì zuò liǎng ge cài ne.",
+                "vi": "Em gái còn biết làm hai món ăn cơ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "第8课 Bài 8",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Phương vị từ",
+            "subcards": [
+              {
+                "label": "Giải thích:",
+                "text": "Là những danh từ chỉ vị trí hoặc phương hướng của sự vật so với một điểm mốc."
+              },
+              {
+                "label": "Các phương vị từ cơ bản:",
+                "text": "<span class='badge'>上（边）</span> <span class='py'>shàng (bian)</span> (bên) trên\n<span class='badge'>下（边）</span> <span class='py'>xià (bian)</span> (bên) dưới\n<span class='badge'>里（边）</span> <span class='py'>lǐ (bian)</span> (bên) trong\n<span class='badge'>外（边）</span> <span class='py'>wài (bian)</span> (bên) ngoài\n<span class='badge'>前（边）</span> <span class='py'>qián (bian)</span> (phía) trước\n<span class='badge'>后（边）</span> <span class='py'>hòu (bian)</span> (phía) sau"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Vì bản chất là danh từ, nên khi phương vị từ kết hợp với danh từ khác tạo cụm danh từ thì phải dịch ngược cụm đó lại.\nVí dụ: Tiếng Việt: trên bàn, Tiếng Trung: 桌子上 <span class='py'>zhuōzi shang</span>."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "<span class='hl-h1'>房间里</span>有一只小猫。",
+                "py": "Fángjiān li yǒu yī zhī xiǎo māo.",
+                "vi": "Trong phòng có một con mèo nhỏ."
+              },
+              {
+                "cn": "<span class='hl-h1'>学校外边</span>有很多人。",
+                "py": "Xuéxiào wàibian yǒu hěn duō rén.",
+                "vi": "Bên ngoài trường học có rất nhiều người."
+              },
+              {
+                "cn": "小猫在<span class='hl-h1'>桌子下</span>。",
+                "py": "Xiǎo māo zài zhuōzi xià.",
+                "vi": "Con mèo ở dưới bàn."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Giới từ 在",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng để giới thiệu địa điểm hoặc vị trí mà hành động diễn ra."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "S + 在 + Địa điểm + V + O"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "在 ở đây là giới từ chỉ địa điểm, vai trò ngữ pháp khác với động từ 在.\nCụm 在 + Địa điểm phải nằm trước hành động."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我<span class='hl-h1'>在学校</span>吃午饭。",
+                "py": "Wǒ zài xuéxiào chī wǔfàn.",
+                "vi": "Tôi ăn trưa ở trường."
+              },
+              {
+                "cn": "他爸爸<span class='hl-h1'>在医院</span>工作。",
+                "py": "Tā bàba zài yīyuàn gōngzuò.",
+                "vi": "Bố anh ấy làm việc ở bệnh viện."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Động từ năng nguyện 能",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng trước động từ để chỉ khả năng, điều kiện làm một việc gì đó."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "会 thường chỉ kỹ năng có được qua học tập, còn 能 chỉ khả năng về mặt điều kiện (thời gian, tiền bạc, thể chất,...)."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "下午两点你能到吗？",
+                "py": "Xiàwǔ liǎng diǎn nǐ néng dào ma?",
+                "vi": "2 giờ chiều bạn có thể đến được không?"
+              },
+              {
+                "cn": "我不能去学校吃午饭。",
+                "py": "Wǒ bù néng qù xuéxiào chī wǔfàn.",
+                "vi": "Tôi không thể đến trường ăn trưa."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "第9课 Bài 9",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu tồn hiện (1)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Diễn tả sự tồn tại của người hoặc vật ở một nơi nào đó."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Địa điểm + 有 / 是 + Người/Vật"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "有 chỉ sự tồn tại nói chung, mang tính mơ hồ; 是 thường nhấn mạnh danh tính hoặc sự xác định, chỉ rõ đối tượng là ai, là cái gì.\nKhi phủ định, dùng 没有 và không dùng lượng từ trước tân ngữ."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "学校前边有一家电影院。",
+                "py": "Xuéxiào qiánbian yǒu yī jiā diànyǐngyuàn.",
+                "vi": "Phía trước trường có một rạp chiếu phim."
+              },
+              {
+                "cn": "学校前边是我家的电影院。",
+                "py": "Xuéxiào qiánbian shì wǒ jiā de diànyǐngyuàn.",
+                "vi": "Phía trước trường là rạp chiếu phim của nhà tôi."
+              },
+              {
+                "cn": "桌子上没有小猫。",
+                "py": "Zhuōzi shàng méiyǒu xiǎo māo.",
+                "vi": "Trên bàn không có mèo."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Thứ tự của trạng ngữ thời gian và địa điểm",
+            "subcards": [
+              {
+                "label": "Lưu ý:",
+                "text": "Khi cả trạng ngữ thời gian và trạng ngữ địa điểm cùng xuất hiện, trạng ngữ thời gian đứng trước trạng ngữ địa điểm.\nNếu đồng thời xuất hiện nhiều loại trạng ngữ, trật tự thường là <span style='color:#e11d48;'><b>trạng ngữ thời gian - phó từ - trạng ngữ nơi chốn</b></span>."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我们<span class='hl-h1'>七点</span><span class='hl-h1'>在电影院外边</span>见。",
+                "py": "Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn.",
+                "vi": "Chúng ta gặp nhau ở bên ngoài rạp chiếu phim lúc 7 giờ."
+              },
+              {
+                "cn": "我们<span class='hl-h1'>明天</span><span class='hl-h1'>都</span><span class='hl-h1'>在学校</span>学习。",
+                "py": "Wǒmen míngtiān dōu zài xuéxiào xuéxí.",
+                "vi": "Chúng tôi ngày mai đều học ở trường."
+              },
+              {
+                "cn": "安妮<span class='hl-h1'>下午</span><span class='hl-h1'>在家里</span>学中文。",
+                "py": "Ānnī xiàwǔ zài jiāli xué Zhōngwén.",
+                "vi": "Annie học tiếng Trung ở nhà vào buổi chiều."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Biểu thị số thứ tự với 第",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "第 + Số từ (+ Lượng từ) (+ Danh từ/Động từ)"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "第一，第二，第三",
+                "py": "Dì-yī, dì-èr, dì-sān",
+                "vi": "Thứ nhất, thứ hai, thứ ba"
+              },
+              {
+                "cn": "这是我的<span class='hl-h1'>第二本中文书</span>。",
+                "py": "Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+                "vi": "Đây là cuốn sách tiếng Trung thứ hai của tôi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "第10课 Bài 10",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Cách biểu đạt số tiền",
+            "subcards": [
+              {
+                "label": "Cấu trúc:",
+                "text": "Số tiền tệ + 元 <span class='py'>yuán</span>/块 <span class='py'>kuài</span> + Số tiền hào + 角 <span class='py'>jiǎo</span>/毛 <span class='py'>máo</span> + Số tiền xu + 分 <span class='py'>fēn</span>"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "2 tệ đọc là 两块 <span class='py'>liǎng kuài</span>/两元 <span class='py'>liǎng yuán</span>.\nTrong khẩu ngữ thường dùng 块 và 毛."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "五块三毛一个。",
+                "py": "Wǔ kuài sān máo yí ge.",
+                "vi": "5 tệ 3 một cái."
+              },
+              {
+                "cn": "三块五一斤。",
+                "py": "Sān kuài wǔ yì jīn.",
+                "vi": "3 tệ 5 một cân."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Câu vị ngữ tính từ",
+            "subcards": [
+              {
+                "label": "Giải thích:",
+                "text": "Là câu có thành phần vị ngữ do tính từ đảm nhiệm."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Chủ ngữ + (Phó từ chỉ mức độ/phủ định) + Tính từ"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Trước tính từ thường có phó từ chỉ mức độ như 很 <span class='py'>hěn</span>, 真 <span class='py'>zhēn</span>, 非常 <span class='py'>fēicháng</span> đi kèm."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "这儿的水果<span class='hl-h1'>真不少</span>！",
+                "py": "Zhèr de shuǐguǒ zhēn bù shǎo!",
+                "vi": "Hoa quả ở đây thật không ít!"
+              },
+              {
+                "cn": "那个苹果<span class='hl-h1'>好吃</span>。",
+                "py": "Nàge píngguǒ hǎochī.",
+                "vi": "Quả táo đó ngon."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Đại từ nghi vấn 怎么样",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng để hỏi về ý kiến, đánh giá hoặc tình trạng của sự vật, sự việc.\nTiếng Việt dịch là \"thế nào/như thế nào\"."
+              },
+              {
+                "label": "So sánh 怎么 & 怎么样:",
+                "text": "<b>怎么</b> <span class='py'>(zěnme)</span>: Hỏi về cách thức thực hiện hành động, đứng trước Động từ (怎么 + V)\n<b>怎么样</b> <span class='py'>(zěnmeyàng)</span>: Hỏi về đánh giá, ý kiến hoặc tình trạng, đứng cuối câu (... 怎么样？)"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "这件衣服怎么样？",
+                "py": "Zhè jiàn yīfu zěnmeyàng?",
+                "vi": "Chiếc áo này thế nào?"
+              },
+              {
+                "cn": "今天天气怎么样？",
+                "py": "Jīntiān tiānqì zěnmeyàng?",
+                "vi": "Hôm nay thời tiết thế nào?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "第11课 Bài 11",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu hỏi chính phản",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Là câu hỏi đặt dạng khẳng định và phủ định nằm cạnh nhau.\nDùng để hỏi Có/Không, Đúng/Sai như câu hỏi đuôi 吗."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "V/Adj + 不 + V/Adj\nV + 没 + V (dùng hỏi hành động trong quá khứ)"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "它<span class='hl-h1'>是不是</span>在超市后边？",
+                "py": "Tā shì bú shì zài chāoshì hòubian?",
+                "vi": "Nó có phải ở sau siêu thị không?"
+              },
+              {
+                "cn": "你昨天<span class='hl-h1'>去没去</span>学校？",
+                "py": "Nǐ zuótiān qù méi qù xuéxiào?",
+                "vi": "Hôm qua bạn có đến trường không?"
+              },
+              {
+                "cn": "这件衣服<span class='hl-h1'>好看不好看</span>？",
+                "py": "Zhè jiàn yīfu hǎokàn bù hǎokàn?",
+                "vi": "Chiếc áo này đẹp không?"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Phó từ thời gian 在/正在",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng trước động từ để chỉ một hành động đang diễn ra tại thời điểm nói."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "(1) 在/正在 + V\n(2) 在/正在 + V + 呢\n(3) V + 呢"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "正在 nhấn mạnh hơn 在. Có thể dùng 呢 ở cuối câu để nhấn mạnh thêm tính tiếp diễn."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "学生们正在上课呢。",
+                "py": "Xuéshēngmen zhèngzài shàngkè ne.",
+                "vi": "Các học sinh đang lên lớp."
+              },
+              {
+                "cn": "我们读书呢。",
+                "py": "Wǒmen dúshū ne.",
+                "vi": "Chúng tôi đang đọc sách."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Động từ năng nguyện 要",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng trước động từ để biểu thị mong muốn, ý định hoặc sự cần thiết phải làm gì."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "要 có thể mang nghĩa muốn (tương tự 想) hoặc cần phải (bắt buộc). Mức độ mạnh hơn 想."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "他今天要和小朋友玩。",
+                "py": "Tā jīntiān yào hé xiǎopéngyǒu wán.",
+                "vi": "Hôm nay anh ấy muốn chơi với các bạn nhỏ."
+              },
+              {
+                "cn": "我要睡觉了。",
+                "py": "Wǒ yào shuìjiào le.",
+                "vi": "Tôi muốn/cần đi ngủ rồi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "第12课 Bài 12",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu không chủ vị",
+            "subcards": [
+              {
+                "label": "Giải thích:",
+                "text": "Câu chỉ gồm một từ hoặc một cụm từ, không phân định rõ chủ ngữ và vị ngữ. Thường dùng trong khẩu ngữ để thông báo một sự việc mới hoặc dùng cảm thán."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "下雨了。",
+                "py": "Xià yǔ le.",
+                "vi": "Trời mưa rồi."
+              },
+              {
+                "cn": "真漂亮！",
+                "py": "Zhēn piàoliang!",
+                "vi": "Đẹp quá!"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Trợ từ ngữ khí 了 (了1)",
+            "subcards": [
+              {
+                "label": "Giải thích:",
+                "text": "Đặt ở cuối câu để biểu thị một sự thay đổi hoặc một tình huống mới vừa xảy ra."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Khi phủ định, dùng 没 trước động từ và bỏ 了."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "下雨了。",
+                "py": "Xià yǔ le.",
+                "vi": "Trời mưa rồi."
+              },
+              {
+                "cn": "十二点了，吃午饭吧。",
+                "py": "Shí'èr diǎn le, chī wǔfàn ba.",
+                "vi": "12 giờ rồi, ăn trưa đi."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Mẫu câu cảm thán 太......了",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng để diễn tả một cảm xúc mạnh mẽ, sự ngạc nhiên hoặc mức độ cao của một tính chất."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "太 + Adj/V tâm lý + 了"
+              }
+            ],
+            "examples": [
+              {
+                "cn": "太冷了！",
+                "py": "Tài lěng le!",
+                "vi": "Lạnh quá!"
+              },
+              {
+                "cn": "我们今天太高兴了！",
+                "py": "Wǒmen jīntiān tài gāoxìng le!",
+                "vi": "Hôm nay chúng tôi vui quá!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "第13课 Bài 13",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Động từ năng nguyện 可以",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng trước động từ để biểu thị sự cho phép hoặc cho lời khuyên."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "可以 thường được dùng trong câu hỏi xin phép hoặc câu nói mang tính cho phép/không cho phép, nhấn mạnh người làm và người quyết định là 2 người khác nhau; ngoài ra cũng dùng khi đưa ra lời khuyên cho người khác.\n能 thiên về nói tới bản thân có điều kiện/khả năng, không do người khác quyết."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我可以再问您一个问题吗？",
+                "py": "Wǒ kěyǐ zài wèn nín yí ge wèntí ma?",
+                "vi": "Tôi có thể hỏi thêm cô một câu được không?"
+              },
+              {
+                "cn": "如果不懂，你可以问王老师。",
+                "py": "Rúguǒ bù dǒng, nǐ kěyǐ wèn Wáng lǎoshī.",
+                "vi": "Nếu không hiểu, bạn có thể hỏi cô Vương."
+              },
+              {
+                "cn": "我可以坐吗？- 可以，请坐！",
+                "py": "Wǒ kěyǐ zuò ma? - Kěyǐ, qǐng zuò!",
+                "vi": "Tôi có thể ngồi không? - Có thể, mời ngồi!"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Cấu trúc V + 一下",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Biểu thị một hành động được thực hiện một lần, đơn giản không mất sức hoặc để thử xem thế nào."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "你可以打电话<span class='hl-h1'>问一下</span>。",
+                "py": "Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+                "vi": "Bạn có thể gọi điện hỏi thử một chút."
+              },
+              {
+                "cn": "你<span class='hl-h1'>看一下</span>吧。",
+                "py": "Nǐ kàn yíxià ba.",
+                "vi": "Bạn xem thử đi."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Câu hai tân ngữ (1)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Một số động từ có thể mang hai tân ngữ: một tân ngữ chỉ người và một tân ngữ chỉ vật."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "HSK1 học 02 động từ thường gặp: 给 (đưa, cho) và 问 (hỏi)."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "请给<span class='hl-h1'>我</span><span class='hl-h1'>一杯牛奶</span>。",
+                "py": "Qǐng gěi wǒ yì bēi niúnǎi.",
+                "vi": "Xin hãy cho tôi một cốc sữa."
+              },
+              {
+                "cn": "我问<span class='hl-h1'>老师</span><span class='hl-h1'>两个问题</span>。",
+                "py": "Wǒ wèn lǎoshī liǎng ge wèntí.",
+                "vi": "Tôi hỏi giáo viên hai câu hỏi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "第14课 Bài 14",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Trợ từ động thái 了 (了2)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Đặt sau động từ để biểu thị một hành động đã xảy ra hoặc đã hoàn thành."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Trước tân ngữ thường phải có số lượng hoặc miêu tả cụ thể.\nKhi phủ định, dùng 没 trước động từ và bỏ 了."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我看了一个电影。",
+                "py": "Wǒ kàn le yí ge diànyǐng.",
+                "vi": "Tôi đã xem một bộ phim."
+              },
+              {
+                "cn": "我吃了很多水果。",
+                "py": "Wǒ chī le hěn duō shuǐguǒ.",
+                "vi": "Tôi đã ăn rất nhiều trái cây."
+              },
+              {
+                "cn": "我昨天没去商店买东西。",
+                "py": "Wǒ zuótiān méi qù shāngdiàn mǎi dōngxi.",
+                "vi": "Hôm qua tôi không đi cửa hàng mua đồ."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "② Động từ ly hợp (1)",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Một số động từ có cấu trúc đặc biệt, có thể tách rời hoặc kết hợp. Khi kết hợp thì là một động từ, khi tách rời biến thành 1 động từ và 1 tân ngữ, có thể chèn các thành phần khác vào giữa."
+              },
+              {
+                "label": "Các động từ ly hợp thường gặp:",
+                "text": "<span class='badge'>上课</span> <span class='py'>shàng kè</span>\n<span class='badge'>下课</span> <span class='py'>xià kè</span>\n<span class='badge'>上班</span> <span class='py'>shàng bān</span>\n<span class='badge'>下班</span> <span class='py'>xià bān</span>\n<span class='badge'>说话</span> <span class='py'>shuō huà</span>\n<span class='badge'>读书</span> <span class='py'>dú shū</span>\n<span class='badge'>睡觉</span> <span class='py'>shuì jiào</span>\n<span class='badge'>看病</span> <span class='py'>kàn bìng</span>"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "Khi tách rời, loại thành phần có thể chèn vào giữa có sự hạn chế, thường là trợ từ động thái, bổ ngữ thời lượng, lượng từ."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "睡觉 → <span class='hl-h1'>睡</span>了一<span class='hl-h1'>觉</span>",
+                "py": "Shuìjiào -- shuì le yī jiào",
+                "vi": "Ngủ -- đã ngủ một giấc"
+              },
+              {
+                "cn": "上课 → <span class='hl-h1'>上</span>中文<span class='hl-h1'>课</span>",
+                "py": "Shàngkè -- shàng Zhōngwén kè",
+                "vi": "Lên lớp -- học tiết tiếng Trung"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "③ Phó từ phạm vi 都",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Dùng để khẳng định rằng tất cả các đối tượng được nhắc đến đều có chung một đặc điểm hoặc thực hiện cùng một hành động."
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "都 đứng sau chủ ngữ và trước động từ/tính từ.\nTrong câu phủ định, 不/没 thường đứng sau 都."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我们都会写了。",
+                "py": "Wǒmen dōu huì xiě le.",
+                "vi": "Tất cả chúng tôi đều biết viết rồi."
+              },
+              {
+                "cn": "同学们都没听见。",
+                "py": "Tóngxuémen dōu méi tīngjiàn.",
+                "vi": "Các bạn học sinh đều không nghe thấy."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "第15课 Bài 15",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "① Câu ghép liên hợp ......，还/也......",
+            "subcards": [
+              {
+                "label": "Công dụng:",
+                "text": "Nối hai mệnh đề có cấu trúc tương tự để thêm thông tin bổ sung."
+              },
+              {
+                "label": "Cấu trúc:",
+                "text": "Mệnh đề 1 + ，还/也 + Mệnh đề 2"
+              },
+              {
+                "label": "Lưu ý:",
+                "text": "还 thường dùng để thêm thông tin khác biệt.\n也 thường dùng để thêm thông tin tương tự."
+              }
+            ],
+            "examples": [
+              {
+                "cn": "我喜欢这个，也喜欢那个。",
+                "py": "Wǒ xǐhuān zhège, yě xǐhuān nàge.",
+                "vi": "Tôi thích cái này, cũng thích cái kia."
+              },
+              {
+                "cn": "我喜欢喝中国茶，还喜欢吃中国菜。",
+                "py": "Wǒ xǐhuān hē Zhōngguó chá, hái xǐhuān chī Zhōngguó cài.",
+                "vi": "Tôi thích uống trà Trung Quốc, còn thích ăn đồ ăn Trung Quốc nữa."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
