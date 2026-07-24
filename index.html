@@ -1464,13 +1464,12 @@ async function loadData() {
             } catch (e) {}
         }
 
-        // ===== SEARCH =====
 // ===== SEARCH =====
 function universalSearch() {
     let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
     let dropdown = document.getElementById('searchDropdown');
 
-    // Tạo dropdown chứa kết quả nếu chưa có
+    // Tạo dropdown nếu chưa có
     if (!dropdown) {
         dropdown = document.createElement('div');
         dropdown.id = 'searchDropdown';
@@ -1534,7 +1533,7 @@ function universalSearch() {
     }
 }
 
-// Hàm cắt một đoạn ngắn văn bản chứa từ khóa để hiển thị xem trước (Snippet)
+// Hàm cắt đoạn văn bản ngắn để hiển thị (CHỈ GIỮ 1 LẦN DUY NHẤT)
 function getSnippet(fullText, query) {
     let index = fullText.toLowerCase().indexOf(query.toLowerCase());
     if (index === -1) return fullText.substring(0, 50);
@@ -1544,7 +1543,7 @@ function getSnippet(fullText, query) {
     return fullText.substring(start, end).replace(/\n/g, ' ');
 }
 
-// Tự đóng popup tìm kiếm khi click ra ngoài
+// Tự đóng popup tìm kiếm khi click ra ngoài (CHỈ GIỮ 1 LẦN DUY NHẤT)
 document.addEventListener('click', function(e) {
     let searchBox = document.querySelector('.global-search-box');
     let dropdown = document.getElementById('searchDropdown');
@@ -1552,72 +1551,7 @@ document.addEventListener('click', function(e) {
         dropdown.style.display = 'none';
     }
 });
-            const query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
-            let dropdown = document.getElementById('searchDropdown');
-
-            if (!dropdown) {
-                dropdown = document.createElement('div');
-                dropdown.id = 'searchDropdown';
-                dropdown.className = 'search-results-dropdown';
-                document.querySelector('.global-search-box').appendChild(dropdown);
-            }
-
-            if (query === '') {
-                dropdown.style.display = 'none';
-                return;
-            }
-
-            dropdown.innerHTML = '';
-            let resultsMap = new Set();
-
-            hskLevels.forEach(levelId => {
-                const levelData = hskData[levelId];
-                if (!levelData) return;
-
-                levelData.lessons.forEach((lesson, lessonIdx) => {
-                    lesson.tabs.forEach((tab, tabIdx) => {
-                        let content = JSON.stringify(tab).toLowerCase();
-                        if (content.includes(query)) {
-                            const key = `${levelId}-${lesson.id}-${tab.id}`;
-                            if (!resultsMap.has(key)) {
-                                resultsMap.add(key);
-                                const item = document.createElement('div');
-                                item.className = 'search-item-result';
-                                const snippet = tab.examples && tab.examples.length > 0
-                                    ? tab.examples[0].cn : '';
-
-                                item.innerHTML = `
-                                    <div>
-                                        <span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span>
-                                        <span class="title">${lesson.title} - ${tab.title}</span>
-                                    </div>
-                                    <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>
-                                `;
-
-                                item.onclick = function() {
-                                    const btn = document.querySelector(`.level-btn.${levelId}`);
-                                    if (btn) switchLevel(levelId, btn);
-                                    showLesson(levelId, lesson.id, tab.id);
-                                    dropdown.style.display = 'none';
-                                    document.getElementById('globalGrammarSearch').value = '';
-                                };
-
-                                dropdown.appendChild(item);
-                            }
-                        }
-                    });
-                });
-            });
-
-            if (resultsMap.size > 0) {
-                dropdown.style.display = 'block';
-            } else {
-                dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
-                dropdown.style.display = 'block';
-            }
-        }
-
-        // ===== AUDIO =====
+                // ===== AUDIO =====
         let availableVoices = [];
 
         function loadVoices() {
