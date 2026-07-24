@@ -81,7 +81,7 @@
      .user-info {
     position: fixed;
     top: 60px;
-    right: 150px; /* Tăng lên 120px để tránh bị che */
+    right: 200px; 
     z-index: 999;
     font-size: 13px;
     color: #333;
@@ -94,11 +94,11 @@
     top: 60px;
     right: 20px;
     z-index: 999;
-    padding: 6px 16px;
-    background: #f44336;
-    color: white;
+    padding: 4px 12px;
+    background: rgba(255,255,255,0.9);
+    color: #333;
     border: none;
-    border-radius: 20px;
+    border-radius: 12px;
     cursor: pointer;
     font-weight: 600;
     font-size: 13px;
@@ -1955,7 +1955,7 @@
                 if (!logoutBtn) {
                     logoutBtn = document.createElement('button');
                     logoutBtn.className = 'logout-btn';
-                    logoutBtn.textContent = '🚪 Đăng xuất';
+                    logoutBtn.textContent = 'Đăng xuất';
                     logoutBtn.onclick = () => signOut(auth);
                     document.body.appendChild(logoutBtn);
                 }
