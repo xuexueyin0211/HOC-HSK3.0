@@ -1611,92 +1611,74 @@
         }
 
         // ===== XUẤT PDF =====
-      // ===== XUẤT PDF (BẢN SỬA LỖI) =====
-function exportPDF() {
-    // Lấy nội dung bài học hiện tại
+    function exportPDF() {
     const activeLesson = document.querySelector('.lesson.active');
     if (!activeLesson) {
-        alert('⚠️ Vui lòng mở một bài học trước khi xuất PDF!');
+        alert('⚠️ Vui lòng mở một bài học!');
         return;
     }
 
-    // Tìm tab đang active
     const activeTab = activeLesson.querySelector('.tab-pane.active');
     if (!activeTab) {
-        alert('⚠️ Không tìm thấy nội dung bài học!');
+        alert('⚠️ Không tìm thấy nội dung!');
         return;
     }
 
-    // Clone nội dung để không ảnh hưởng trang
-    const contentClone = activeTab.cloneNode(true);
-    
-    // Tạo container để in PDF
-    const container = document.createElement('div');
-    container.style.cssText = 'padding: 30px 40px; font-family: "Noto Sans SC", "Be Vietnam Pro", sans-serif; max-width: 800px; margin: 0 auto; background: white;';
-    
-    // Lấy tiêu đề
     const tabBtn = activeLesson.querySelector('.tab-btn.active');
-    let title = 'Bài học';
-    if (tabBtn) {
-        title = tabBtn.textContent.trim();
-    } else {
-        title = `${currentLevel.toUpperCase()} - Bài ${currentLesson}`;
-    }
-    
-    // Xây dựng HTML cho PDF
-    let html = `
-        <h1 style="color: #2e7d32; border-bottom: 3px solid #4caf50; padding-bottom: 10px; font-size: 24px;">
-            📚 ${title}
-        </h1>
-        <div style="margin-top: 20px; color: #555; font-size: 14px;">
-            ${contentClone.innerHTML}
-        </div>
-        <div style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 15px; text-align: center; color: #999; font-size: 12px;">
-            HSK123 3.0 - Học tiếng Trung cùng Cô Tuyết Ngân
-        </div>
+    const title = tabBtn ? tabBtn.textContent.trim() : `${currentLevel.toUpperCase()} - Bài ${currentLesson}`;
+
+    // Lấy nội dung
+    const contentHTML = activeTab.innerHTML;
+
+    // Tạo container
+    const container = document.createElement('div');
+    container.style.cssText = 'padding: 30px; font-family: "Noto Sans SC", sans-serif; background: white; max-width: 800px; margin: 0 auto;';
+    container.innerHTML = `
+        <h2 style="color: #2e7d32; border-bottom: 3px solid #4caf50; padding-bottom: 10px;">📚 ${title}</h2>
+        <div style="margin-top: 20px; line-height: 1.8; font-size: 14px;">${contentHTML}</div>
+        <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 10px; text-align: center; color: #999; font-size: 12px;">HSK123 3.0</div>
     `;
-    
-    container.innerHTML = html;
-    
-    // Tùy chọn xuất PDF
+
+    document.body.appendChild(container);
+
+    const btn = document.querySelector('.export-pdf-btn');
+    const originalText = btn.textContent;
+    btn.textContent = '⏳ Đang tạo...';
+    btn.disabled = true;
+
+    // Dùng html2pdf
     const opt = {
         margin: 10,
-        filename: `${currentLevel.toUpperCase()}_Bai_${currentLesson}_${title.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 30)}.pdf`,
+        filename: `${currentLevel.toUpperCase()}_Bai_${currentLesson}.pdf`,
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { 
             scale: 2, 
             useCORS: true,
             logging: false,
-            allowTaint: true
+            backgroundColor: '#ffffff'
         },
         jsPDF: { 
             unit: 'mm', 
             format: 'a4', 
             orientation: 'portrait' 
-        },
-        pagebreak: { mode: 'avoid-all' }
+        }
     };
-    
-    // Thông báo đang xử lý
-    const btn = document.querySelector('.export-pdf-btn');
-    const originalText = btn.textContent;
-    btn.textContent = '⏳ Đang tạo PDF...';
-    btn.disabled = true;
-    
-    // Xuất PDF
+
     html2pdf()
         .set(opt)
         .from(container)
         .save()
         .then(() => {
+            document.body.removeChild(container);
             btn.textContent = originalText;
             btn.disabled = false;
         })
-        .catch((err) => {
-            console.error('Lỗi xuất PDF:', err);
+        .catch(err => {
+            console.error('Lỗi:', err);
+            document.body.removeChild(container);
             btn.textContent = originalText;
             btn.disabled = false;
-            alert('❌ Có lỗi xảy ra khi xuất PDF! Vui lòng thử lại.');
+            alert('❌ Xuất PDF thất bại! Lỗi: ' + err.message);
         });
 }
         // ===== SEARCH =====
