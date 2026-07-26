@@ -203,96 +203,7 @@
     transition: all 0.3s ease;
 }
 
-        /* ===== NÚT YÊU THÍCH ===== */
-        .favorite-btn {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 5px;
-        }
-        .favorite-btn:hover {
-            transform: scale(1.2);
-        }
-        .favorite-btn.active {
-            color: #f44336;
-            text-shadow: 0 0 10px rgba(244, 67, 54, 0.3);
-        }
-
-        /* ===== DANH SÁCH YÊU THÍCH ===== */
-        .favorites-list {
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            border: 1px solid #e0e0e0;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        .favorites-list .item {
-            padding: 8px 12px;
-            border-bottom: 1px solid #f0f0f0;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .favorites-list .item:hover {
-            background: #f5f5f5;
-        }
-
-        /* ===== VÙNG GHI CHÚ ===== */
-        .note-area {
-            margin-top: 20px;
-            background: #fff8e1;
-            border-radius: 10px;
-            padding: 15px;
-            border: 1px solid #ffe0b2;
-        }
-        .note-area textarea {
-            width: 100%;
-            min-height: 130px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 10px;
-            font-size: 14px;
-            resize: vertical;
-            font-family: inherit;
-        }
-        .note-area textarea:focus {
-            outline: none;
-            border-color: #4caf50;
-        }
-        .note-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .note-actions button {
-            padding: 6px 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-        }
-        .note-actions .save-note {
-            background: #4caf50;
-            color: white;
-        }
-        .note-actions .save-note:hover {
-            background: #388e3c;
-        }
-        .note-actions .delete-note {
-            background: #f44336;
-            color: white;
-        }
-        .note-actions .delete-note:hover {
-            background: #d32f2f;
-        }
-
-        /* ===== CÁC CSS CŨ CỦA BẠN ===== */
+                      /* ===== CÁC CSS CŨ CỦA BẠN ===== */
         .search-box {
             padding: 0 15px 15px 15px;
         }
@@ -1119,11 +1030,7 @@
             font-size: 11px;
             color: #388e3c;
         }
-        .note {
-            font-weight: 600;
-            color: #5d4037;
-        }
-        @media screen and (max-width: 1024px) {
+           @media screen and (max-width: 1024px) {
             aside { width: 240px; }
             main { padding: 25px; }
             .level-selector { padding: 10px 20px; }
@@ -1290,15 +1197,7 @@
             </div>
         </div>
 
-        <!-- ===== VÙNG GHI CHÚ ===== -->
-        <div class="note-area" id="noteArea" style="max-width:850px;margin:0 auto;padding:15px;">
-            <label style="font-weight:600;color:#5d4037;display:block;margin-bottom:5px;">📝 Ghi chú của bạn:</label>
-            <textarea id="noteContent" placeholder="Viết ghi chú cho bài học này..."></textarea>
-            <div class="note-actions">
-                <button class="save-note" onclick="saveNote()">💾 Lưu ghi chú</button>
-                <button class="delete-note" onclick="deleteNote()">🗑 Xóa</button>
-            </div>
-        </div>
+               </div>
 
     </div>
 
@@ -1648,9 +1547,7 @@
                 currentLesson = lessonNum;
                 currentTab = defaultTab;
                 saveProgress();
-                checkFavorite();
-                loadNote();
-            } else {
+                } else {
                 alert("Chưa có dữ liệu bài học này!");
                 return;
             }
@@ -1713,14 +1610,27 @@
                 const nextLessonNum = lessonNum + 1;
                 if (document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`)) {
                     showLesson(hskLevel, nextLessonNum, 1);
-                } else {
-                    const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                    if (currentLevelIdx !== -1 && currentLevelIdx < hskLevels.length - 1) {
-                        showLesson(hskLevels[currentLevelIdx + 1], 1, 1);
-                    } else alert("🎉 Bạn đã học xong toàn bộ chương trình!");
-                }
-            }
+          } else {
+    const currentLevelIdx = hskLevels.indexOf(hskLevel);
+    if (currentLevelIdx !== -1 && currentLevelIdx < hskLevels.length - 1) {
+        // Chuyển sang cấp độ tiếp theo
+        const nextLevel = hskLevels[currentLevelIdx + 1];
+        // Tìm bài đầu tiên của cấp độ tiếp theo
+        const nextLevelData = hskData[nextLevel];
+        if (nextLevelData && nextLevelData.lessons && nextLevelData.lessons.length > 0) {
+            const firstLessonId = nextLevelData.lessons[0].id;
+            // Chuyển tab và cập nhật giao diện
+            showLesson(nextLevel, firstLessonId, 1);
+            // Cập nhật nút level
+            const nextBtn = document.querySelector(`.level-btn.${nextLevel}`);
+            if (nextBtn) switchLevel(nextLevel, nextBtn);
+        } else {
+            alert("🎉 Bạn đã học xong toàn bộ chương trình!");
         }
+    } else {
+        alert("🎉 Bạn đã học xong toàn bộ chương trình!");
+    }
+}
 
         function prevTab(hskLevel, lessonNum) {
             const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
@@ -1745,19 +1655,31 @@
                     const totalTabs = prevLessonEl.querySelectorAll('.tab-btn').length;
                     showLesson(hskLevel, prevLesson, totalTabs);
                 }
-            } else {
-                const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                if (currentLevelIdx > 0) {
-                    let lastLessonNum = 1;
-                    while (document.getElementById(`lesson-${hskLevels[currentLevelIdx - 1]}-${lastLessonNum + 1}`)) lastLessonNum++;
-                    const lastLessonEl = document.getElementById(`lesson-${hskLevels[currentLevelIdx - 1]}-${lastLessonNum}`);
-                    if (lastLessonEl) {
-                        const totalTabs = lastLessonEl.querySelectorAll('.tab-btn').length;
-                        showLesson(hskLevels[currentLevelIdx - 1], lastLessonNum, totalTabs);
-                    }
-                }
+     } else {
+    const currentLevelIdx = hskLevels.indexOf(hskLevel);
+    if (currentLevelIdx > 0) {
+        // Chuyển về cấp độ trước
+        const prevLevel = hskLevels[currentLevelIdx - 1];
+        const prevLevelData = hskData[prevLevel];
+        if (prevLevelData && prevLevelData.lessons && prevLevelData.lessons.length > 0) {
+            // Tìm bài cuối cùng của cấp độ trước
+            const lastLesson = prevLevelData.lessons[prevLevelData.lessons.length - 1];
+            const lastLessonId = lastLesson.id;
+            // Tìm số tab của bài cuối cùng
+            const lastLessonEl = document.getElementById(`lesson-${prevLevel}-${lastLessonId}`);
+            let totalTabs = 1;
+            if (lastLessonEl) {
+                const tabs = lastLessonEl.querySelectorAll('.tab-btn');
+                totalTabs = tabs.length;
             }
+            // Chuyển tab và cập nhật giao diện
+            showLesson(prevLevel, lastLessonId, totalTabs);
+            // Cập nhật nút level
+            const prevBtn = document.querySelector(`.level-btn.${prevLevel}`);
+            if (prevBtn) switchLevel(prevLevel, prevBtn);
         }
+    }
+}
 
         function saveProgress() {
             try { localStorage.setItem('hskProgress', JSON.stringify({ level: currentLevel, lesson: currentLesson, tab: currentTab })); } catch (e) {}
@@ -1777,79 +1699,7 @@
             } catch (e) {}
         }
 
-        // ===== YÊU THÍCH =====
-        function toggleFavorite() {
-            const key = `${currentLevel}-${currentLesson}`;
-            let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-            const index = favorites.indexOf(key);
-            const btn = document.getElementById('favBtn');
-            if (index > -1) { favorites.splice(index, 1); if (btn) { btn.textContent = '☆'; btn.classList.remove('active'); } } 
-            else { favorites.push(key); if (btn) { btn.textContent = '⭐'; btn.classList.add('active'); } }
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-            renderFavorites();
-        }
-
-        function renderFavorites() {
-            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-            const container = document.getElementById('favoritesList');
-            if (!container) return;
-            if (favorites.length === 0) {
-                container.innerHTML = '<div style="padding:10px;color:#888;text-align:center;">Chưa có bài yêu thích</div>';
-                container.style.display = 'none';
-                return;
-            }
-            container.style.display = 'block';
-            container.innerHTML = favorites.map(key => {
-                const [level, lesson] = key.split('-');
-                const lessonData = hskData[level]?.lessons?.[parseInt(lesson) - 1];
-                return `<div class="item" onclick="showLesson('${level}', ${lesson})">
-                    <span>${level.toUpperCase()} - ${lessonData?.title || 'Bài ' + lesson}</span>
-                    <span onclick="event.stopPropagation(); removeFavorite('${key}')" style="cursor:pointer;color:#f44336;">✕</span>
-                </div>`;
-            }).join('');
-        }
-
-        function removeFavorite(key) {
-            let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-            favorites = favorites.filter(f => f !== key);
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-            renderFavorites();
-        }
-
-        function checkFavorite() {
-            const key = `${currentLevel}-${currentLesson}`;
-            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-            const btn = document.getElementById('favBtn');
-            if (favorites.includes(key)) { if (btn) { btn.textContent = '⭐'; btn.classList.add('active'); } } 
-            else { if (btn) { btn.textContent = '☆'; btn.classList.remove('active'); } }
-        }
-
-        // ===== GHI CHÚ =====
-        function saveNote() {
-            const note = document.getElementById('noteContent')?.value || '';
-            const key = `${currentLevel}-${currentLesson}`;
-            let notes = JSON.parse(localStorage.getItem('studyNotes') || '{}');
-            notes[key] = note;
-            localStorage.setItem('studyNotes', JSON.stringify(notes));
-            alert('✅ Đã lưu ghi chú!');
-        }
-
-        function loadNote() {
-            const key = `${currentLevel}-${currentLesson}`;
-            const notes = JSON.parse(localStorage.getItem('studyNotes') || '{}');
-            const textarea = document.getElementById('noteContent');
-            if (textarea) textarea.value = notes[key] || '';
-        }
-
-        function deleteNote() {
-            const key = `${currentLevel}-${currentLesson}`;
-            let notes = JSON.parse(localStorage.getItem('studyNotes') || '{}');
-            delete notes[key];
-            localStorage.setItem('studyNotes', JSON.stringify(notes));
-            document.getElementById('noteContent').value = '';
-            alert('🗑 Đã xóa ghi chú!');
-        }
-
+               
         // ===== SEARCH =====
         function universalSearch() {
             let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
@@ -2319,29 +2169,9 @@
             });
 
             setTimeout(() => {
-                const sidebarTitle = document.querySelector('.sidebar-title');
-                if (sidebarTitle) {
-                    const favContainer = document.createElement('div');
-                    favContainer.style.cssText = 'padding:10px 25px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0f0;';
-                    favContainer.innerHTML = `
-                        <button onclick="toggleFavorite()" class="favorite-btn" id="favBtn">☆</button>
-                        <span style="font-size:13px;color:#888;">Đánh dấu bài học</span>
-                    `;
-                    sidebarTitle.parentNode.insertBefore(favContainer, sidebarTitle.nextSibling);
-                }
-                const menu = document.querySelector('.menu');
-                if (menu) {
-                    const favList = document.createElement('div');
-                    favList.id = 'favoritesList';
-                    favList.className = 'favorites-list';
-                    favList.style.cssText = 'margin:10px;display:none;';
-                    favList.innerHTML = '<div style="padding:10px;color:#888;text-align:center;">Chưa có bài yêu thích</div>';
-                    menu.parentNode.insertBefore(favList, menu);
-                }
-                renderFavorites();
-                loadData();
-                loadHighlights();
-            }, 100);
+    loadData();
+    loadHighlights();
+}, 100);
         });
     </script>
 
