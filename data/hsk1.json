@@ -1,4 +1,5 @@
-  {"hsk1":{
+{
+  "hsk1": {
     "title": "TỔNG HỢP NGỮ PHÁP HSK1",
     "subtitle": "HỌC TIẾNG TRUNG CÙNG CÔ TUYẾT NGÂN",
     "badge": "🌟 CHUẨN HSK 3.0",
@@ -67,6 +68,58 @@
                 "vi": "Tạm biệt!"
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Cách chào hỏi thông dụng nhất trong tiếng Trung là gì?",
+            "options": ["你好", "您好", "你们好", "老师好"],
+            "answer": 0
+          },
+          {
+            "question": "\"Cảm ơn\" trong tiếng Trung là gì?",
+            "options": ["对不起", "谢谢", "再见", "不客气"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch sang tiếng Trung: \"Chào các bạn!\"",
+            "options": ["你好", "您好", "你们好", "大家好"],
+            "answer": 2
+          },
+          {
+            "question": "\"再见\" có nghĩa là gì?",
+            "options": ["Xin chào", "Cảm ơn", "Tạm biệt", "Xin lỗi"],
+            "answer": 2
+          },
+          {
+            "question": "Khi nói chuyện với người lớn tuổi hoặc cấp trên, ta nên dùng cách chào nào?",
+            "options": ["你好", "您好", "你们好", "你好吗"],
+            "answer": 1
+          },
+          {
+            "question": "Khi ai đó nói \"谢谢你\", bạn nên đáp lại như thế nào?",
+            "options": ["再见", "不客气", "你好", "对不起"],
+            "answer": 1
+          },
+          {
+            "question": "Cách chào thầy/cô giáo bằng tiếng Trung là gì?",
+            "options": ["学生好", "老师好", "你好", "您好"],
+            "answer": 1
+          },
+          {
+            "question": "Phiên âm pinyin của từ \"再见\" là gì?",
+            "options": ["Zàijiàn", "Xièxie", "Nǐhǎo", "Bú kèqi"],
+            "answer": 0
+          },
+          {
+            "question": "Để chào nhóm người (các bạn), công thức chào chuẩn là:",
+            "options": ["Tên/Đại từ + 好", "好 + Đại từ", "谢谢 + Đại từ", "再见 + Đại từ"],
+            "answer": 0
+          },
+          {
+            "question": "Từ nào sau đây mang nghĩa là \"Đừng khách sáo / Không có gì\"?",
+            "options": ["不客气", "没关系", "再见", "谢谢"],
+            "answer": 0
           }
         ]
       },
@@ -143,6 +196,58 @@
                 "vi": "Không có gì."
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Trật tự câu cơ bản trong tiếng Trung là gì?",
+            "options": ["Chủ ngữ + Tân ngữ + Động từ", "Chủ ngữ + Động từ + Tân ngữ", "Động từ + Chủ ngữ + Tân ngữ", "Tân ngữ + Chủ ngữ + Động từ"],
+            "answer": 1
+          },
+          {
+            "question": "Câu \"Tôi tên là Lý Văn\" viết bằng tiếng Trung là gì?",
+            "options": ["我是李文", "我叫李文", "我的名字李文", "李文叫我"],
+            "answer": 1
+          },
+          {
+            "question": "Đại từ nghi vấn \"什么\" có nghĩa là gì?",
+            "options": ["Ai", "Ở đâu", "Cái gì / Giờ gì", "Tại sao"],
+            "answer": 2
+          },
+          {
+            "question": "Để hỏi \"Bạn tên là gì?\", ta nói câu nào dưới đây?",
+            "options": ["你是谁？", "你叫什么名字？", "这是什么？", "你好吗？"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Đây là cái gì?\"",
+            "options": ["那是什么？", "这是什么？", "你是什么？", "你叫什么？"],
+            "answer": 1
+          },
+          {
+            "question": "Khi lỡ làm phiền hoặc có lỗi với ai đó, ta nói câu nào?",
+            "options": ["谢谢", "对不起", "不客气", "再见"],
+            "answer": 1
+          },
+          {
+            "question": "Khi ai đó nói \"对不起\", cách đáp lại lịch sự là:",
+            "options": ["不客气", "没关系", "谢谢", "再见"],
+            "answer": 1
+          },
+          {
+            "question": "Từ \"学生\" có nghĩa là gì?",
+            "options": ["Thầy giáo", "Học sinh / Sinh viên", "Bác sĩ", "Bạn bè"],
+            "answer": 1
+          },
+          {
+            "question": "Điền từ vào chỗ trống: 我___学生 (Tôi là học sinh).",
+            "options": ["叫", "是", "好", "不"],
+            "answer": 1
+          },
+          {
+            "question": "Ngoài \"没关系\", câu nào dưới đây cũng mang nghĩa \"Không có gì / Không sao đâu\"?",
+            "options": ["没事", "不叫", "不是", "不好"],
+            "answer": 0
           }
         ]
       },
@@ -231,6 +336,58 @@
                 "vi": "Bạn cũng rất bận à? -- Đúng vậy, tôi rất bận."
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Dịch câu: \"Tôi là người Trung Quốc.\"",
+            "options": ["我是中国人", "我叫中国人", "我有中国人", "我中国人"],
+            "answer": 0
+          },
+          {
+            "question": "Dạng phủ định của câu chữ \"是\" là gì?",
+            "options": ["没是", "不叫", "不是", "没有"],
+            "answer": 2
+          },
+          {
+            "question": "Điền từ vào chỗ trống: 他___法国人 (Anh ấy không phải người Pháp).",
+            "options": ["没", "不", "不是", "没有"],
+            "answer": 2
+          },
+          {
+            "question": "Cụm từ \"Sách của tôi\" dịch sang tiếng Trung là gì?",
+            "options": ["我的书", "我书", "书的我", "是我的书"],
+            "answer": 0
+          },
+          {
+            "question": "Trong trường hợp nào có thể LƯỢC BỎ trợ từ \"的\"?",
+            "options": ["Người sở hữu + danh từ chỉ quan hệ thân thiết/gia đình (VD: 我妈妈)", "Khi chỉ đồ vật thuộc sở hữu cá nhân", "Trong mọi trường hợp", "Không bao giờ được bỏ"],
+            "answer": 0
+          },
+          {
+            "question": "Trợ từ nghi vấn \"吗\" đứng ở vị trí nào trong câu hỏi?",
+            "options": ["Đầu câu", "Giữa câu", "Cuối câu", "Đứng trước động từ"],
+            "answer": 2
+          },
+          {
+            "question": "Dịch câu hỏi: \"Bạn là giáo viên phải không?\"",
+            "options": ["你是老师吗？", "你叫老师吗？", "这叫老师吗？", "你是老师什么？"],
+            "answer": 0
+          },
+          {
+            "question": "Khi đối phương hỏi \"你是学生吗？\", nếu KHÔNG PHẢI, bạn trả lời:",
+            "options": ["不", "不是", "没有", "不叫"],
+            "answer": 1
+          },
+          {
+            "question": "Cụm từ \"Giáo viên tiếng Trung của tôi\" là:",
+            "options": ["我中文老师的", "我的中文老师", "中文老师的我", "我老师的中文"],
+            "answer": 1
+          },
+          {
+            "question": "Từ \"越南人\" có nghĩa là gì?",
+            "options": ["Người Trung Quốc", "Người Pháp", "Người Việt Nam", "Người Mỹ"],
+            "answer": 2
           }
         ]
       },
@@ -351,6 +508,58 @@
               }
             ]
           }
+        ],
+        "exercises": [
+          {
+            "question": "Dạng phủ định của động từ \"有\" (có) là gì?",
+            "options": ["不有", "没有", "不是", "不叫"],
+            "answer": 1
+          },
+          {
+            "question": "Khi kết hợp với lượng từ để nói số lượng \"2\", người ta dùng chữ nào?",
+            "options": ["二 (èr)", "两 (liǎng)", "双 (shuāng)", "十 (shí)"],
+            "answer": 1
+          },
+          {
+            "question": "Số 35 biểu thị trong tiếng Trung là:",
+            "options": ["五十三", "三十五", "十三五", "三五"],
+            "answer": 1
+          },
+          {
+            "question": "Lượng từ nào chuyên dùng để nói về số nhân khẩu (thành viên) trong gia đình?",
+            "options": ["个", "口", "位", "只"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Gia đình tôi có 4 người.\"",
+            "options": ["我家有四个人", "我家有四口人", "我是四口人", "我有四个家"],
+            "answer": 1
+          },
+          {
+            "question": "Câu \"Tôi không có anh trai\" dịch sang tiếng Trung là gì?",
+            "options": ["我不有哥哥", "我没有哥哥", "我不是哥哥", "我没哥哥有"],
+            "answer": 1
+          },
+          {
+            "question": "Trợ từ \"呢\" trong câu \"我是学生，你呢？\" có tác dụng gì?",
+            "options": ["Rủ rê đi chơi", "Hỏi lại tình huống tương tự của đối tượng khác", "Bắt buộc trả lời Có/Không", "Nhấn mạnh sự việc diễn ra"],
+            "answer": 1
+          },
+          {
+            "question": "Điền từ thích hợp vào chỗ trống: 我有三___哥哥。",
+            "options": ["口", "个", "人", "岁"],
+            "answer": 1
+          },
+          {
+            "question": "Phiên âm pinyin của số \"48\" là gì?",
+            "options": ["Sìshí bā", "Shíbā sì", "Bāshí sì", "Sì bā"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Tôi có hai đứa con.\"",
+            "options": ["我有二个孩子", "我有两个孩子", "我是两个孩子", "我有双孩子"],
+            "answer": 1
+          }
         ]
       },
       {
@@ -426,6 +635,58 @@
                 "vi": "Tôi biết làm mì."
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Trật tự sắp xếp thời gian trong tiếng Trung chuẩn là gì?",
+            "options": ["Nhỏ trước lớn sau (Thứ - Ngày - Tháng - Năm)", "Lớn trước nhỏ sau (Năm - Tháng - Ngày - Thứ)", "Tháng - Ngày - Năm - Thứ", "Tùy ý thích đặt đâu cũng được"],
+            "answer": 1
+          },
+          {
+            "question": "Năm \"2024\" được đọc từng chữ số như thế nào?",
+            "options": ["两千二十四 (Liǎng qiān èrshí sì)", "二零二四 (Èr líng èr sì)", "二十二十四 (Èrshí èrshí sì)", "二千二四 (Èr qiān èr sì)"],
+            "answer": 1
+          },
+          {
+            "question": "Trong giao tiếp khẩu ngữ hàng ngày, từ nào được dùng phổ biến để chỉ \"ngày (trong tháng)\"?",
+            "options": ["日", "号", "月", "年"],
+            "answer": 1
+          },
+          {
+            "question": "Động từ năng nguyện \"会\" biểu thị khả năng như thế nào?",
+            "options": ["Khả năng bẩm sinh khi sinh ra đã có", "Khả năng có được nhờ học tập và rèn luyện", "Cho phép / xin phép làm gì", "Mong muốn chủ quan"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Bạn biết nấu ăn không?\"",
+            "options": ["你会做饭吗？", "你想做饭吗？", "你是做饭吗？", "你有做饭吗？"],
+            "answer": 0
+          },
+          {
+            "question": "Ví dụ nào sau đây là \"Câu vị ngữ danh từ\"?",
+            "options": ["我是学生。", "今天5月1号。", "我吃面条。", "他去超市。"],
+            "answer": 1
+          },
+          {
+            "question": "\"Chủ nhật\" trong tiếng Trung viết là:",
+            "options": ["星期七", "星期日 / 星期天", "星期六", "星期八"],
+            "answer": 1
+          },
+          {
+            "question": "Thứ 2 trong tiếng Trung biểu thị là gì?",
+            "options": ["星期一", "星期二", "星期天", "星期日"],
+            "answer": 0
+          },
+          {
+            "question": "Dạng phủ định của \"会\" là gì?",
+            "options": ["没会", "不会", "不学会", "没学会"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Hôm nay tôi nghỉ ngơi.\"",
+            "options": ["今天我休息", "今天我工作", "今天我上课", "今天我开会"],
+            "answer": 0
           }
         ]
       },
@@ -506,6 +767,58 @@
                 "vi": "Bạn đến trường bằng cách nào?"
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Khi đứng trước một động từ khác, trợ động từ \"想\" biểu thị điều gì?",
+            "options": ["Suy nghĩ, đắn đo", "Nhớ nhung ai đó", "Mong muốn / Ý định làm gì", "Bắt buộc phải làm"],
+            "answer": 2
+          },
+          {
+            "question": "Dịch câu: \"Tôi muốn đi siêu thị mua đồ.\"",
+            "options": ["我想去超市买东西", "我去超市想买东西", "买东西我想去超市", "超市我想去买东西"],
+            "answer": 0
+          },
+          {
+            "question": "Đại từ nghi vấn \"怎么\" đứng trước động từ dùng để hỏi về điều gì?",
+            "options": ["Thời gian diễn ra hành động", "Phương thức / Cách thức thực hiện hành động", "Địa điểm diễn ra hành động", "Lý do / Nguyên nhân"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu hỏi: \"Chúng ta đi đến đó bằng cách nào?\"",
+            "options": ["我们什么去？", "我们怎么去？", "我们谁去？", "我们去哪儿？"],
+            "answer": 1
+          },
+          {
+            "question": "Trong câu liên động thể hiện phương thức + địa điểm + hành động, thứ tự chuẩn là gì?",
+            "options": ["Động từ hành động -> Phương thức -> Nơi chốn", "Phương thức -> Nơi chốn -> Động từ hành động", "Nơi chốn -> Phương thức -> Động từ hành động", "Tùy ý sắp xếp"],
+            "answer": 1
+          },
+          {
+            "question": "Điền từ vào chỗ trống: 你的手机号码是___？(Số điện thoại của bạn là bao nhiêu?)",
+            "options": ["什么", "多少", "怎么", "几"],
+            "answer": 1
+          },
+          {
+            "question": "Để hỏi giá tiền hoặc số lượng lớn (thường trên 10) hoặc hỏi thông tin như SĐT, ta dùng đại từ nghi vấn nào?",
+            "options": ["几", "多少", "什么", "怎么"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Chúng tôi đi taxi đến khách sạn.\"",
+            "options": ["我们坐出租车去饭店", "我们去饭店坐出租车", "出租车坐去我们饭店", "我们饭店坐出租车去"],
+            "answer": 0
+          },
+          {
+            "question": "Từ \"坐\" trong cụm \"坐出租车\" có nghĩa là gì?",
+            "options": ["Lái (xe)", "Ngồi / Đi (phương tiện)", "Mua (xe)", "Gọi (xe)"],
+            "answer": 1
+          },
+          {
+            "question": "Phủ định của \"想\" khi từ chối ý định làm gì thường dùng từ nào?",
+            "options": ["不想", "没想", "不想要", "没想去"],
+            "answer": 0
           }
         ]
       },
@@ -614,6 +927,58 @@
               }
             ]
           }
+        ],
+        "exercises": [
+          {
+            "question": "Cách nói \"2 giờ (đúng)\" trong tiếng Trung là gì?",
+            "options": ["二点", "两点", "双点", "二点钟"],
+            "answer": 1
+          },
+          {
+            "question": "Khi số phút lẻ dưới 10 (ví dụ 9 giờ 05 phút), ta cần chèn thêm từ nào trước số phút?",
+            "options": ["零 (líng)", "一 (yī)", "不 (bù)", "有 (yǒu)"],
+            "answer": 0
+          },
+          {
+            "question": "Trợ từ ngữ khí \"吧\" đặt ở đâu và biểu thị điều gì?",
+            "options": ["Đầu câu, hỏi nguyên nhân", "Cuối câu, biểu thị sự thương lượng, đề nghị nhẹ nhàng (nhé, đi)", "Giữa câu, biểu thị quan hệ sở hữu", "Cuối câu, biểu thị sự phủ định"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Chúng ta gặp nhau lúc 3 giờ chiều nhé.\"",
+            "options": ["我们下午三点见吧", "我们三点下午见吧", "下午三点我们见吗", "我们吧下午三点见"],
+            "answer": 0
+          },
+          {
+            "question": "Nếu từ chỉ thời gian và phó từ (như 很, 不, 想...) cùng xuất hiện làm trạng ngữ, thứ tự nào chuẩn?",
+            "options": ["Phó từ -> Từ chỉ thời gian", "Từ chỉ thời gian -> Phó từ", "Đứng ở đâu cũng được", "Xếp sau động từ"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Em gái hôm nay rất vui.\"",
+            "options": ["妹妹很高兴今天", "妹妹今天很高兴", "高兴妹妹今天很", "今天很高兴妹妹"],
+            "answer": 1
+          },
+          {
+            "question": "Trợ từ ngữ khí \"呢\" ở cuối câu \"我明天还上课呢\" mang nét nghĩa gì?",
+            "options": ["Hỏi ý kiến người khác", "Khẳng định/Nhấn mạnh một thông tin, sự thật", "Yêu cầu ra lệnh", "Biểu thị sự nghi vấn"],
+            "answer": 1
+          },
+          {
+            "question": "\"6 giờ rưỡi\" nói bằng tiếng Trung là gì?",
+            "options": ["六点半", "六点五", "六点三十五", "六半点"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Tôi tan làm lúc 6 giờ 30 tối.\"",
+            "options": ["我晚上六点半下班", "我六点半晚上下班", "六点半我晚上下班", "下班我晚上六点半"],
+            "answer": 0
+          },
+          {
+            "question": "Từ \"下班\" có nghĩa là gì?",
+            "options": ["Đi làm", "Tan làm / Xuất viện", "Thượng lớp / Vào học", "Đi ngủ"],
+            "answer": 1
+          }
         ]
       },
       {
@@ -711,6 +1076,58 @@
               }
             ]
           }
+        ],
+        "exercises": [
+          {
+            "question": "Cụm từ \"ở trên bàn\" dịch sang tiếng Trung chuẩn là gì?",
+            "options": ["在桌子上", "在上桌子", "桌子在上", "在桌子中"],
+            "answer": 0
+          },
+          {
+            "question": "Trật tự câu chỉ địa điểm diễn ra hành động trong tiếng Trung là gì?",
+            "options": ["S + V + 在 + Địa điểm", "S + 在 + Địa điểm + V", "在 + S + V + Địa điểm", "S + V + 地点 + 在"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Bố tôi cũng làm việc ở bệnh viện.\"",
+            "options": ["我爸爸也工作在医院", "我爸爸也在医院工作", "在医院我爸爸也工作", "我爸爸工作也在医院"],
+            "answer": 1
+          },
+          {
+            "question": "Khác biệt chính giữa động từ năng nguyện \"会\" và \"能\" là gì?",
+            "options": ["会 dùng cho thời gian, 能 dùng cho địa điểm", "会 chỉ kỹ năng qua học tập, 能 chỉ điều kiện/khả năng thực hiện", "Hai từ này hoàn toàn giống nhau", "能 chỉ kỹ năng rèn luyện, 会 chỉ điều kiện"],
+            "answer": 1
+          },
+          {
+            "question": "Phương vị từ nào có nghĩa là \"bên trong\"?",
+            "options": ["外边", "里边", "前边", "后边"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Chiều nay 2 giờ bạn có thể đến không?\"",
+            "options": ["下午两点你可以到吗？", "下午两点你能到吗？", "下午两点你会到吗？", "下午两点你要到吗？"],
+            "answer": 1
+          },
+          {
+            "question": "Điền phương vị từ thích hợp: 房间___有一只小猫 (Trong phòng có một con mèo).",
+            "options": ["里", "外", "下", "前"],
+            "answer": 0
+          },
+          {
+            "question": "Phủ định của động từ năng nguyện \"能\" là gì?",
+            "options": ["没能", "不能", "不会能", "没有能"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Tôi ăn trưa ở trường.\"",
+            "options": ["吃午饭我在学校", "我在学校吃午饭", "我吃午饭在学校", "学校我在吃午饭"],
+            "answer": 1
+          },
+          {
+            "question": "Phương vị từ \"后边\" có nghĩa là gì?",
+            "options": ["Bên trên", "Phía trước", "Phía sau", "Bên ngoài"],
+            "answer": 2
+          }
         ]
       },
       {
@@ -801,6 +1218,58 @@
               }
             ]
           }
+        ],
+        "exercises": [
+          {
+            "question": "Sự khác biệt giữa \"有\" và \"是\" trong câu tồn hiện biểu thị địa điểm là gì?",
+            "options": ["有 dùng cho người, 是 dùng cho vật", "有 biểu thị sự tồn tại chung chung, 是 xác định rõ danh tính đối tượng", "有 đứng đầu câu, 是 đứng cuối câu", "Hai từ hoàn toàn giống hệt nhau"],
+            "answer": 1
+          },
+          {
+            "question": "Trật tự đúng khi câu có cả Trạng ngữ thời gian, Phó từ và Trạng ngữ nơi chốn là:",
+            "options": ["Nơi chốn -> Thời gian -> Phó từ", "Thời gian -> Phó từ -> Nơi chốn", "Phó từ -> Nơi chốn -> Thời gian", "Nơi chốn -> Phó từ -> Thời gian"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Chúng tôi ngày mai đều học ở trường.\"",
+            "options": ["我们明天都在学校学习", "我们在学校明天都学习", "我们都明天在学校学习", "明天在学校我们都学习"],
+            "answer": 0
+          },
+          {
+            "question": "Để biểu thị số thứ tự (ví dụ: Thứ nhất, thứ hai), người ta thêm từ nào vào trước số đếm?",
+            "options": ["个", "第", "初", "号"],
+            "answer": 1
+          },
+          {
+            "question": "Cụm \"Cuốn sách tiếng Trung thứ hai\" dịch là gì?",
+            "options": ["第二本中文书", "二本中文书第", "中文书第二本", "第二中文书本"],
+            "answer": 0
+          },
+          {
+            "question": "Dạng phủ định của câu tồn hiện \"桌子上有一只猫\" là:",
+            "options": ["桌子上不有一只猫", "桌子上没有猫", "桌子上不是一只猫", "桌子上没是一只猫"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Phía trước trường học có một rạp chiếu phim.\"",
+            "options": ["学校前边有一家电影院", "有一家电影院学校前边", "学校前边是电影院一家", "一家电影院在学校前边"],
+            "answer": 0
+          },
+          {
+            "question": "Điền từ vào chỗ trống: 这是我___一次去中国 (Đây là lần đầu tiên tôi đi Trung Quốc).",
+            "options": ["个", "第", "号", "位"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Gặp nhau ở bên ngoài rạp chiếu phim lúc 7 giờ nhé.\"",
+            "options": ["七点在电影院外边见吧", "在电影院外边七点见吧", "七点见在电影院外边吧", "吧七点在电影院外边见"],
+            "answer": 0
+          },
+          {
+            "question": "Từ \"电影院\" có nghĩa là gì?",
+            "options": ["Bệnh viện", "Trường học", "Rạp chiếu phim", "Siêu thị"],
+            "answer": 2
+          }
         ]
       },
       {
@@ -888,6 +1357,58 @@
                 "vi": "Hôm nay thời tiết thế nào?"
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Trong khẩu ngữ giao tiếp hàng ngày, đơn vị tiền tệ \"Tệ\" và \"Hào\" thường dùng từ nào?",
+            "options": ["元 và 角", "块 và 毛", "块 và 分", "元 và 毛"],
+            "answer": 1
+          },
+          {
+            "question": "Cách biểu đạt \"2 tệ 5 hào\" trong khẩu ngữ là gì?",
+            "options": ["二块五毛", "两块五毛", "二元五角", "两二五"],
+            "answer": 1
+          },
+          {
+            "question": "Sự khác biệt vị trí ngữ pháp giữa \"怎么\" và \"怎么样\" là gì?",
+            "options": ["怎么 đứng cuối câu, 怎么样 đứng trước động từ", "怎么 đứng trước động từ, 怎么样 đứng ở cuối câu", "Cả hai đều bắt buộc đứng đầu câu", "Không có khác biệt gì"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu hỏi: \"Hôm nay thời tiết thế nào?\"",
+            "options": ["今天天气怎么？", "今天天气怎么样？", "今天天气什么？", "今天天气多少？"],
+            "answer": 1
+          },
+          {
+            "question": "Trong câu vị ngữ tính từ khẳng định, trước tính từ thường thêm phó từ mức độ nào?",
+            "options": ["不", "很 / 真", "没", "是"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Táo ở đây thật rẻ!\"",
+            "options": ["这儿的苹果真便宜！", "这儿的苹果很贵！", "便宜这儿 look 苹果！", "苹果这儿真便宜！"],
+            "answer": 0
+          },
+          {
+            "question": "Từ \"便宜\" trong tiêu đề bài có nghĩa là gì?",
+            "options": ["Đắt", "Rẻ", "Ngon", "Tươi"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Bộ quần áo này thế nào?\"",
+            "options": ["这件衣服怎么？", "这件衣服怎么样？", "这件衣服什么？", "这件衣服多少？"],
+            "answer": 1
+          },
+          {
+            "question": "Đơn vị trọng lượng \"一斤\" (1 cân Trung Quốc) bằng bao nhiêu gam?",
+            "options": ["1000g (1kg)", "500g (0.5kg)", "200g", "100g"],
+            "answer": 1
+          },
+          {
+            "question": "Phủ định của câu vị ngữ tính từ (ví dụ: Không đắt) dùng từ nào?",
+            "options": ["没 (不贵 -> 没贵)", "不 (不贵)", "没有 (没有贵)", "别 (别贵)"],
+            "answer": 1
           }
         ]
       },
@@ -982,6 +1503,58 @@
               }
             ]
           }
+        ],
+        "exercises": [
+          {
+            "question": "Đặc điểm nhận biết của \"Câu hỏi chính phản\" là gì?",
+            "options": ["Cuối câu bắt buộc phải có trợ từ 吗", "Kết hợp dạng Khẳng định + Phủ định của V/Adj", "Đứng đầu câu là đại từ 什么", "Không bao giờ dùng trong giao tiếp"],
+            "answer": 1
+          },
+          {
+            "question": "Lưu ý quan trọng khi đã sử dụng \"Câu hỏi chính phản\" là gì?",
+            "options": ["Phải thêm 吗 ở cuối câu", "KHÔNG được dùng trợ từ 吗 ở cuối câu nữa", "Phải thêm 呢 ở cuối câu", "Động từ phải lặp lại 3 lần"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu hỏi chính phản: \"Bộ quần áo này đẹp hay không đẹp?\"",
+            "options": ["这件衣服好看吗？", "这件衣服好看不好看？", "这件衣服好看吗不好看？", "这件衣服是不是好看吗？"],
+            "answer": 1
+          },
+          {
+            "question": "Để biểu thị một hành động đang diễn ra tại thời điểm nói, ta dùng cấu trúc nào?",
+            "options": ["在 / 正在 + V (+ 呢)", "要 + V + 了", "会 + V", "想 + V"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Học sinh đang lên lớp.\"",
+            "options": ["学生们正在上课呢", "学生们要上课了", "学生们会上课", "学生们想上课"],
+            "answer": 0
+          },
+          {
+            "question": "So với \"想\" (muốn), động từ năng nguyện \"要\" (muốn/cần) biểu thị ý định như thế nào?",
+            "options": ["Yếu hơn, chỉ suy nghĩ mơ hồ", "Mạnh mẽ và quyết tâm hơn", "Giống hệt nhau không khác gì", "Chỉ dùng cho quá khứ"],
+            "answer": 1
+          },
+          {
+            "question": "Khi đặt câu hỏi chính phản về hành động đã xảy ra trong quá khứ, ta dùng từ phủ định nào?",
+            "options": ["不 (VD: 去不去)", "没 (VD: 去没去)", "别 (VD: 去别去)", "非 (VD: 去非去)"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Tôi học đại học.\"",
+            "options": ["我读大学呢", "我是大学", "我有大学", "我去大学呢"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Hôm nay anh ấy muốn chơi cùng các bạn nhỏ.\"",
+            "options": ["他今天要和小朋友玩", "他今天想和小朋友玩", "他今天会和小朋友玩", "他今天能跟小朋友玩"],
+            "answer": 0
+          },
+          {
+            "question": "Phủ định của hành động đang diễn ra (Không phải đang làm gì) dùng cấu trúc nào?",
+            "options": ["没在 + V", "不在 + V", "不是在 + V", "Không có dạng phủ định"],
+            "answer": 0
+          }
         ]
       },
       {
@@ -1061,6 +1634,58 @@
                 "vi": "Hôm nay chúng tôi vui quá!"
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Trợ từ ngữ khí \"了\" đứng ở cuối câu biểu thị điều gì?",
+            "options": ["Hỏi nguyên nhân", "Sự thay đổi trạng thái hoặc một tình huống mới xuất hiện", "Hành động chắc chắn xảy ra ở tương lai xa", "Sự sở hữu"],
+            "answer": 1
+          },
+          {
+            "question": "Mẫu câu cảm thán biểu thị mức độ cao \"...quá / ...rất\" có cấu trúc là gì?",
+            "options": ["很 + Adj + 了", "太 + Adj + 了", "真 + Adj + 吧", "非常 + Adj + 呢"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Lạnh quá!\"",
+            "options": ["太冷了！", "很冷！", "真冷！", "冷吧！"],
+            "answer": 0
+          },
+          {
+            "question": "Dạng phủ định của câu có trợ từ ngữ khí \"了\" (diễn tả việc chưa xảy ra/chưa thay đổi) là:",
+            "options": ["Dùng 不 + V + 了", "Dùng 没 + V (bỏ 了 ở cuối)", "Dùng 不是 + V + 了", "Dùng 没 + V + 了"],
+            "answer": 1
+          },
+          {
+            "question": "Câu \"下雨了\" (Trời mưa rồi) thuộc loại câu ngữ pháp nào?",
+            "options": ["Câu vị ngữ tính từ", "Câu không chủ vị", "Câu liên động", "Câu tồn hiện"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Hôm qua trời đổ tuyết rồi.\"",
+            "options": ["昨天下雪了", "昨天下雨了", "今天下雪了", "明天下雪了"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"12 giờ rồi, ăn trưa thôi!\"",
+            "options": ["十二点了，吃午饭吧", "十二点，吃午饭", "十二点呢，吃午饭", "十二点了，吃朝饭吧"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Hôm nay chúng tôi vui quá!\"",
+            "options": ["我们今天太高兴了！", "我们今天很高兴！", "我们今天真高兴！", "我们今天高兴了！"],
+            "answer": 0
+          },
+          {
+            "question": "Từ \"下雪\" trong tiếng Trung có nghĩa là gì?",
+            "options": ["Trời mưa", "Tuyết rơi", "Nổi gió", "Trời nắng"],
+            "answer": 1
+          },
+          {
+            "question": "Khi chuyển câu \"下雨了\" sang dạng phủ định (Trời chưa mưa), ta nói như thế nào?",
+            "options": ["不下雨了", "没下雨", "没下雨了", "不下雨"],
+            "answer": 1
           }
         ]
       },
@@ -1146,6 +1771,58 @@
                 "vi": "Tôi hỏi giáo viên hai câu hỏi."
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Động từ năng nguyện \"可以\" chủ yếu dùng để biểu thị điều gì?",
+            "options": ["Thói quen cá nhân", "Sự cho phép hoặc lời khuyên", "Kỹ năng học tập", "Sự thay đổi thời tiết"],
+            "answer": 1
+          },
+          {
+            "question": "Cấu trúc \"V + 一下\" dùng để diễn tả điều gì?",
+            "options": ["Hành động lặp đi lặp lại nhiều lần", "Hành động thực hiện ngắn, thử nghiệm hoặc lịch sự", "Hành động kéo dài trong thời gian dài", "Hành động bắt buộc phải thực hiện ngay"],
+            "answer": 1
+          },
+          {
+            "question": "Trong câu hai tân ngữ (Double Object Sentence), thứ tự chuẩn của hai tân ngữ là gì?",
+            "options": ["Tân ngữ chỉ vật + Tân ngữ chỉ người", "Tân ngữ chỉ người + Tân ngữ chỉ vật", "Không có thứ tự cố định", "Động từ + Tân ngữ chỉ vật + 给 + Tân ngữ chỉ người"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Tôi có thể ngồi không? - Có thể, mời ngồi!\"",
+            "options": ["我会坐吗？- 会，请坐！", "我可以坐吗？- 可以，请坐！", "我要坐吗？- 要，请坐！", "我能坐吗？- 能，坐吧！"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Xin hãy cho tôi một cốc trà.\"",
+            "options": ["请给我一杯茶。", "请买我一杯茶。", "请问我一杯茶。", "请喝我一杯茶。"],
+            "answer": 0
+          },
+          {
+            "question": "Điền từ vào chỗ trống: 你可以打电话问___ (Bạn có thể gọi điện hỏi thử một chút).",
+            "options": ["一下", "一些", "一点", "一次"],
+            "answer": 0
+          },
+          {
+            "question": "Hai động từ mang hai tân ngữ phổ biến nhất trong HSK1 là:",
+            "options": ["吃 và 喝", "给 và 问", "看 và 听", "去 và 来"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Tôi hỏi thầy giáo hai câu hỏi.\"",
+            "options": ["我问老师两个问题。", "我是老师两个问题。", "我给老师两个问题。", "我找老师两个问题。"],
+            "answer": 0
+          },
+          {
+            "question": "Khác biệt cơ bản giữa \"可以\" và \"能\" khi xin phép là gì?",
+            "options": ["可以 do người khác quyết định/cho phép, 能 thiên về bản thân có điều kiện", "可以 chỉ dùng cho quá khứ, 能 dùng cho tương lai", "Hai từ hoàn toàn giống nhau không khác biệt", "能 chỉ dùng trong câu khẳng định"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Bạn xem thử đi.\"",
+            "options": ["你看吧。", "你看一下吧。", "你看一点吧。", "你看一次吧。"],
+            "answer": 1
           }
         ]
       },
@@ -1240,6 +1917,58 @@
               }
             ]
           }
+        ],
+        "exercises": [
+          {
+            "question": "Vị trí của trợ từ động thái \"了\" (biểu thị hoàn thành) đứng ở đâu trong câu?",
+            "options": ["Đầu câu", "Trực tiếp ngay sau động từ", "Sau tân ngữ", "Cuối câu câu hỏi"],
+            "answer": 1
+          },
+          {
+            "question": "Khi phủ định câu có trợ từ động thái \"了\" (hành động chưa/không xảy ra), ta dùng cấu trúc nào?",
+            "options": ["不 + V + 了", "没 + V (bỏ 了)", "不 + V (bỏ 了)", "没 + V + 了"],
+            "answer": 1
+          },
+          {
+            "question": "Đặc điểm cơ bản của \"Động từ ly hợp\" (như 睡觉, 上课) là gì?",
+            "options": ["Không thể đi với tân ngữ khác và có thể tách ra chèn thành phần vào giữa", "Bắt buộc đi kèm với 2 tân ngữ", "Chỉ dùng trong câu cảm thán", "Không bao giờ đứng một mình"],
+            "answer": 0
+          },
+          {
+            "question": "Cách tách động từ ly hợp \"睡觉\" (Ngủ) nào sau đây là đúng?",
+            "options": ["睡觉了一", "睡了一觉", "觉睡了一", "睡觉了一觉"],
+            "answer": 1
+          },
+          {
+            "question": "Vị trí của phó từ phạm vi \"都\" trong câu là gì?",
+            "options": ["Đứng trước chủ ngữ", "Đứng sau chủ ngữ, trước động từ/tính từ", "Đứng ở cuối câu", "Đứng sau động từ"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Tôi đã xem một bộ phim.\"",
+            "options": ["我看了一个电影。", "我看了电影一个。", "我一个 movie 看。", "我看电影了。"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Hôm qua tôi không đi cửa hàng mua đồ.\"",
+            "options": ["我昨天不去商店买东西了。", "我昨天没去商店买东西。", "我昨天没去商店买东西了。", "昨天我不去商店买东西。"],
+            "answer": 1
+          },
+          {
+            "question": "Từ nào sau đây KHÔNG phải là động từ ly hợp?",
+            "options": ["上课", "说话", "看病", "学习"],
+            "answer": 3
+          },
+          {
+            "question": "Dịch câu: \"Các bạn học sinh đều không nghe thấy.\"",
+            "options": ["同学们都没听见。", "同学们没都听见。", "同学们不都听见。", "同学们都听不见了。"],
+            "answer": 0
+          },
+          {
+            "question": "Điền từ thích hợp: 我吃了好___水果 (Tôi đã ăn rất nhiều trái cây).",
+            "options": ["多", "少", "大", "小"],
+            "answer": 0
+          }
         ]
       },
       {
@@ -1275,6 +2004,58 @@
                 "vi": "Tôi thích uống trà Trung Quốc, còn thích ăn đồ ăn Trung Quốc nữa."
               }
             ]
+          }
+        ],
+        "exercises": [
+          {
+            "question": "Sự khác biệt về cách dùng giữa phó từ \"也\" và \"还\" trong câu ghép bổ sung là gì?",
+            "options": ["也 biểu thị thông tin tương tự, 还 biểu thị thông tin bổ sung/khác biệt", "也 đứng đầu câu, 还 đứng cuối câu", "还 dùng cho câu hỏi, 也 dùng cho câu khẳng định", "Không có sự khác biệt nào"],
+            "answer": 0
+          },
+          {
+            "question": "Dịch câu: \"Tôi thích cái này, cũng thích cái kia.\"",
+            "options": ["我喜欢这个，还喜欢那个。", "我喜欢这个，也喜欢那个。", "我喜欢这个，都喜欢那个。", "我喜欢这个，就喜欢那个。"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch câu: \"Tôi thích uống trà Trung Quốc, còn thích ăn món ăn Trung Quốc nữa.\"",
+            "options": ["我喜欢喝中国茶，还喜欢吃中国菜。", "我喜欢喝中国茶，也喜欢吃中国菜。", "我喜欢喝中国茶，都喜欢吃中国菜。", "我 thích 喝中国茶，太 thích 吃中国菜。"],
+            "answer": 0
+          },
+          {
+            "question": "Vị trí của \"还\" và \"也\" trong mệnh đề thứ hai là ở đâu?",
+            "options": ["Đứng trước chủ ngữ", "Đứng sau chủ ngữ, trước động từ/tính từ", "Đứng ở cuối mệnh đề", "Đứng ngay sau động từ"],
+            "answer": 1
+          },
+          {
+            "question": "Từ \"机场\" trong tiêu đề bài học có nghĩa là gì?",
+            "options": ["Bến xe", "Sân bay", "Rạp chiếu phim", "Bệnh viện"],
+            "answer": 1
+          },
+          {
+            "question": "Dịch tiêu đề bài: \"大兴机场见\"",
+            "options": ["Gặp nhau ở rạp chiếu phim Đại Hưng", "Gặp nhau ở sân bay Đại Hưng", "Hẹn gặp ở bệnh viện Đại Hưng", "Đi đến sân bay Đại Hưng"],
+            "answer": 1
+          },
+          {
+            "question": "Điền từ thích hợp: 他会说汉语，___会说英语 (Anh ấy biết nói tiếng Trung, còn biết nói tiếng Anh nữa).",
+            "options": ["还", "就", "太", "很"],
+            "answer": 0
+          },
+          {
+            "question": "Khi liên kết hai ý có cùng tính chất hoặc hành động giống hệt nhau của cùng một chủ ngữ, ta ưu tiên dùng từ nào?",
+            "options": ["也", "还", "不", "没"],
+            "answer": 0
+          },
+          {
+            "question": "Cấu trúc câu ghép liên hợp bổ sung thông tin thường nối hai mệnh đề bằng dấu gì?",
+            "options": ["Dấu chấm (。)", "Dấu phẩy (，)", "Dấu chấm hỏi (？)", "Dấu hai chấm (：)"],
+            "answer": 1
+          },
+          {
+            "question": "Chọn câu đúng ngữ pháp:",
+            "options": ["他去中国，也去日本。", "他去中国，去也日本。", "去中国他，也去日本。", "他去中国，去日本也。"],
+            "answer": 0
           }
         ]
       }
