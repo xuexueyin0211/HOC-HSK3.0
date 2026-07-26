@@ -1917,7 +1917,7 @@
                 const exerciseBtn = document.createElement('button');
                 exerciseBtn.className = 'tab-btn';
                 exerciseBtn.textContent = '📝 Bài tập';
-                exerciseBtn.onclick = () => switchTab(levelId, lesson.id, 'exercise');
+                exerciseBtn.onclick = () => switchTab(levelId, lesson.id, '999');
                 tabNav.appendChild(exerciseBtn);
 
                 lessonDiv.appendChild(tabNav);
@@ -1992,7 +1992,7 @@
 
                 // TẠO PANE BÀI TẬP
                 const exercisePane = document.createElement('div');
-                exercisePane.id = `tab-${levelId}-${lesson.id}-exercise`;
+                exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
                 exercisePane.className = 'tab-pane';
 
                 const exerciseCard = document.createElement('div');
@@ -2162,7 +2162,7 @@ function showLesson(hskLevel, lessonNum, defaultTab = '1') {
     
     // Nếu không tìm thấy, thử tìm theo index
     if (targetIndex === -1) {
-        if (tabNumStr === 'exercise') {
+if (tabNum === '999' || tabNum === 999) {
             targetIndex = tabs.length - 1;
         } else {
             targetIndex = parseInt(tabNumStr) - 1;
