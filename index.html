@@ -2066,90 +2066,105 @@
                     tabContent.appendChild(pane);
                 });
 
-                // TẠO PANE BÀI TẬP
-                const exercisePane = document.createElement('div');
-                exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
-                exercisePane.className = 'tab-pane';
+    // ===== TẠO PANE BÀI TẬP =====
 
-                const exerciseCard = document.createElement('div');
-                exerciseCard.className = 'card';
+// 1. Đếm số lượng pane hiện tại để lấy index tiếp theo
+const currentTabCount = tabContent.querySelectorAll('.tab-pane').length;
+const exerciseTabIndex = currentTabCount + 1; // ID động: 4, 5,... tùy theo bài
 
-                const exerciseHtml = document.createElement('div');
-                exerciseHtml.className = 'grammar';
+// 2. Tạo nút Tab Bài Tập (NẾU BẠN CHƯA TẠO Ở ĐOẠN TRÊN)
+/* 
+const exBtn = document.createElement('button');
+exBtn.className = 'tab-btn';
+exBtn.textContent = 'Bài tập';
+exBtn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, ${exerciseTabIndex})`);
+tabMenu.appendChild(exBtn); 
+*/
 
-                const exTitle = document.createElement('h3');
-                exTitle.textContent = '📝 Bài tập';
-                exerciseHtml.appendChild(exTitle);
+// 3. Tạo Pane chứa nội dung Bài tập
+const exercisePane = document.createElement('div');
+exercisePane.id = `tab-${levelId}-${lesson.id}-${exerciseTabIndex}`; // Dùng ID động chuẩn
+exercisePane.className = 'tab-pane';
 
-                const exContainer = document.createElement('div');
-                exContainer.id = `exercise-${levelId}-${lesson.id}`;
-                exContainer.className = 'exercise-container';
+const exerciseCard = document.createElement('div');
+exerciseCard.className = 'card';
 
-                if (lesson.exercises && lesson.exercises.length > 0) {
-                    lesson.exercises.forEach((ex, idx) => {
-                        const exDiv = document.createElement('div');
-                        exDiv.className = 'exercise-item';
-                        exDiv.style.cssText = 'margin-bottom:20px;padding:15px;background:#f8f9fa;border-radius:10px;border-left:4px solid #4caf50;';
+const exerciseHtml = document.createElement('div');
+exerciseHtml.className = 'grammar';
 
-                        const qDiv = document.createElement('div');
-                        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-                        qDiv.textContent = `${idx + 1}. ${ex.question}`;
-                        exDiv.appendChild(qDiv);
+const exTitle = document.createElement('h3');
+exTitle.textContent = 'Bài tập';
+exerciseHtml.appendChild(exTitle);
 
-                        const optionsDiv = document.createElement('div');
-                        optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
+const exContainer = document.createElement('div');
+exContainer.id = `exercise-${levelId}-${lesson.id}`;
+exContainer.className = 'exercise-container';
 
-                        ex.options.forEach((opt, optIdx) => {
-                            const label = document.createElement('label');
-                            label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
-                            label.onmouseover = function () { this.style.background = '#e8f5e9'; };
-                            label.onmouseout = function () { this.style.background = 'transparent'; };
+if (lesson.exercises && lesson.exercises.length > 0) {
+    lesson.exercises.forEach((ex, idx) => {
+        const exDiv = document.createElement('div');
+        exDiv.className = 'exercise-item';
+        exDiv.style.cssText = 'margin-bottom:20px;padding:15px;background:#f8f9fa;border-radius:10px;border-left:4px solid #4caf50;';
 
-                            const radio = document.createElement('input');
-                            radio.type = 'radio';
-                            radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
-                            radio.value = optIdx;
-                            radio.onchange = function () {
-                                const parent = this.closest('.exercise-item');
-                                const resultDiv = parent.querySelector('.exercise-result');
-                                const isCorrect = parseInt(this.value) === ex.answer;
-                                if (isCorrect) {
-                                    resultDiv.textContent = '✅ Đúng!';
-                                    resultDiv.style.color = '#4caf50';
-                                } else {
-                                    resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
-                                    resultDiv.style.color = '#f44336';
-                                }
-                            };
+        const qDiv = document.createElement('div');
+        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+        qDiv.textContent = `${idx + 1}. ${ex.question}`;
+        exDiv.appendChild(qDiv);
 
-                            const textSpan = document.createElement('span');
-                            textSpan.textContent = opt;
+        const optionsDiv = document.createElement('div');
+        optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
 
-                            label.appendChild(radio);
-                            label.appendChild(textSpan);
-                            optionsDiv.appendChild(label);
-                        });
+        ex.options.forEach((opt, optIdx) => {
+            const label = document.createElement('label');
+            label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
+            label.onmouseover = function () { this.style.background = '#e8f5e9'; };
+            label.onmouseout = function () { this.style.background = 'transparent'; };
 
-                        exDiv.appendChild(optionsDiv);
-
-                        const resultDiv = document.createElement('div');
-                        resultDiv.className = 'exercise-result';
-                        resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:#fff;';
-                        exDiv.appendChild(resultDiv);
-
-                        exContainer.appendChild(exDiv);
-                    });
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
+            radio.value = optIdx;
+            radio.onchange = function () {
+                const parent = this.closest('.exercise-item');
+                const resultDiv = parent.querySelector('.exercise-result');
+                const isCorrect = parseInt(this.value) === ex.answer;
+                if (isCorrect) {
+                    resultDiv.textContent = '✅ Đúng!';
+                    resultDiv.style.color = '#4caf50';
                 } else {
-                    const noEx = document.createElement('p');
-                    noEx.textContent = 'Chưa có bài tập cho bài học này.';
-                    noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
-                    exContainer.appendChild(noEx);
+                    resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
+                    resultDiv.style.color = '#f44336';
                 }
+            };
 
-                exerciseHtml.appendChild(exContainer);
-                exerciseCard.appendChild(exerciseHtml);
-                exercisePane.appendChild(exerciseCard);
-                tabContent.appendChild(exercisePane);
+            const textSpan = document.createElement('span');
+            textSpan.textContent = opt;
+
+            label.appendChild(radio);
+            label.appendChild(textSpan);
+            optionsDiv.appendChild(label);
+        });
+
+        exDiv.appendChild(optionsDiv);
+
+        const resultDiv = document.createElement('div');
+        resultDiv.className = 'exercise-result';
+        resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:#fff;';
+        exDiv.appendChild(resultDiv);
+
+        exContainer.appendChild(exDiv);
+    });
+} else {
+    const noEx = document.createElement('p');
+    noEx.textContent = 'Chưa có bài tập cho bài học này.';
+    noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
+    exContainer.appendChild(noEx);
+}
+
+exerciseHtml.appendChild(exContainer);
+exerciseCard.appendChild(exerciseHtml);
+exercisePane.appendChild(exerciseCard);
+tabContent.appendChild(exercisePane);
 
                 lessonDiv.appendChild(tabContent);
 
