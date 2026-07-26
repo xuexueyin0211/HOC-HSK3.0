@@ -1788,8 +1788,6 @@
     <div class="highlight-toolbar" id="highlightToolbar">
         <div
             style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;">
-            <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
-
             <button onclick="toggleHighlightMode()" id="highlightToggle"
                 style="padding:4px 10px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;">Highlight</button>
             <button onclick="clearAllHighlights()"
@@ -2266,6 +2264,7 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
 
         const onclickAttr = nextTabBtn.getAttribute('onclick');
         if (onclickAttr) {
+            // Lấy tabId từ onclick
             const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
             if (match && match[1]) {
                 tabId = match[1].trim();
@@ -2276,8 +2275,12 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     } else {
+        // Lấy danh sách bài học
+        const lessons = hskData[hskLevel].lessons;
+        const totalLessons = lessons.length;
         const nextLessonNum = lessonNum + 1;
-        if (nextLessonNum <= hskData[hskLevel].lessons.length) {
+        
+        if (nextLessonNum <= totalLessons) {
             const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
             if (nextLessonEl) {
                 const firstTab = nextLessonEl.querySelector('.tab-btn');
@@ -2307,7 +2310,7 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         }
     }
 }
-        function prevTab(hskLevel, lessonNum) {
+       function prevTab(hskLevel, lessonNum) {
     const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
     if (!lessonEl) return;
 
