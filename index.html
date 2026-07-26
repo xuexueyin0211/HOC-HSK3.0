@@ -49,7 +49,7 @@
             margin-bottom: 20px;
         }
 
-        /* ===== TOOLBAR 2 HÀNG ===== */
+        /* ===== TOOLBAR HIGHLIGHT ===== */
         .highlight-toolbar {
             position: fixed;
             bottom: 100px;
@@ -111,10 +111,6 @@
 
         .highlight-toolbar button:hover {
             transform: scale(1.05);
-        }
-
-        #eraserToggle.active {
-            background: #f44336 !important;
         }
 
         #toggleToolbarBtn {
@@ -1718,11 +1714,10 @@
     <!-- ===== NÚT MỞ TOOLBAR ===== -->
     <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
 
-    <!-- ===== TOOLBAR 2 HÀNG ===== -->
+    <!-- ===== TOOLBAR HIGHLIGHT ===== -->
     <div class="highlight-toolbar" id="highlightToolbar">
-        <!-- HÀNG 1: HIGHLIGHT -->
         <div
-            style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;padding-bottom:6px;border-bottom:1px solid #eee;">
+            style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;">
             <span style="font-weight:600;color:#555;font-size:11px;">✏️ Highlight:</span>
             <button class="color-btn" style="background:#ffeb3b;" onclick="setHighlightColor('#ffeb3b')"
                 title="Vàng"></button>
@@ -1746,48 +1741,7 @@
                 style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">🗑
                 Xóa tất cả</button>
         </div>
-
-        <!-- HÀNG 2: BÚT VẼ -->
-        <div
-            style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;padding-top:6px;">
-            <span style="font-weight:600;color:#555;font-size:11px;">🎨 Bút:</span>
-            <button class="color-btn" style="background:#ff0000;" onclick="setDrawColor('#ff0000')" title="Đỏ"></button>
-            <button class="color-btn" style="background:#2196f3;" onclick="setDrawColor('#2196f3')"
-                title="Xanh dương"></button>
-            <button class="color-btn" style="background:#4caf50;" onclick="setDrawColor('#4caf50')"
-                title="Xanh lá"></button>
-            <button class="color-btn" style="background:#ff9800;" onclick="setDrawColor('#ff9800')"
-                title="Cam"></button>
-            <button class="color-btn" style="background:#9c27b0;" onclick="setDrawColor('#9c27b0')"
-                title="Tím"></button>
-            <button class="color-btn" style="background:#000000;" onclick="setDrawColor('#000000')"
-                title="Đen"></button>
-
-            <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
-
-            <select id="eraserSizeSelect" onchange="setEraserSize(this.value)"
-                style="padding:2px 4px;border-radius:4px;border:1px solid #ddd;font-size:10px;">
-                <option value="10">Tẩy nhỏ</option>
-                <option value="20" selected>Tẩy vừa</option>
-                <option value="40">Tẩy lớn</option>
-                <option value="60">Tẩy rất lớn</option>
-            </select>
-
-            <button onclick="toggleEraserMode()" id="eraserToggle"
-                style="padding:4px 10px;border:none;border-radius:12px;background:#795548;color:white;font-size:11px;font-weight:600;cursor:pointer;">🧹
-                Tẩy</button>
-            <button onclick="toggleDrawMode()" id="drawToggle"
-                style="padding:4px 10px;border:none;border-radius:12px;background:#2196f3;color:white;font-size:11px;font-weight:600;cursor:pointer;">✏️
-                Vẽ</button>
-            <button onclick="clearDrawings()"
-                style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">🗑
-                Xóa tất cả</button>
-        </div>
     </div>
-
-    <!-- ===== CANVAS CHO BÚT VẼ ===== -->
-    <canvas id="drawCanvas"
-        style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;display:none;"></canvas>
 
     <!-- ===== CONTAINER CHÍNH ===== -->
     <div id="app-container">
@@ -1813,8 +1767,6 @@
                 <p style="margin-top:10px;color:#666;">Đang tải dữ liệu...</p>
             </div>
         </div>
-
-    </div>
 
     </div>
 
@@ -2219,7 +2171,6 @@
             tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
 
             if (activeIndex !== -1 && activeIndex < tabs.length - 1) {
-                // Lấy tabNum từ tab kế tiếp
                 const nextTabBtn = tabs[activeIndex + 1];
                 const onclickAttr = nextTabBtn.getAttribute('onclick');
                 const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
@@ -2235,15 +2186,11 @@
                 } else {
                     const currentLevelIdx = hskLevels.indexOf(hskLevel);
                     if (currentLevelIdx !== -1 && currentLevelIdx < hskLevels.length - 1) {
-                        // Chuyển sang cấp độ tiếp theo
                         const nextLevel = hskLevels[currentLevelIdx + 1];
-                        // Tìm bài đầu tiên của cấp độ tiếp theo
                         const nextLevelData = hskData[nextLevel];
                         if (nextLevelData && nextLevelData.lessons && nextLevelData.lessons.length > 0) {
                             const firstLessonId = nextLevelData.lessons[0].id;
-                            // Chuyển tab và cập nhật giao diện
                             showLesson(nextLevel, firstLessonId, 1);
-                            // Cập nhật nút level
                             const nextBtn = document.querySelector(`.level-btn.${nextLevel}`);
                             if (nextBtn) switchLevel(nextLevel, nextBtn);
                         } else {
@@ -2254,8 +2201,9 @@
                     }
                 }
             }
-        }           
-                        function prevTab(hskLevel, lessonNum) {
+        }
+
+        function prevTab(hskLevel, lessonNum) {
             const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
             if (!lessonEl) return;
             const tabs = lessonEl.querySelectorAll('.tab-btn');
@@ -2298,7 +2246,7 @@
                     }
                 }
             }
-        }  // ← Đóng hàm prevTab
+        }
 
         function saveProgress() {
             try { localStorage.setItem('hskProgress', JSON.stringify({ level: currentLevel, lesson: currentLesson, tab: currentTab })); } catch (e) { }
@@ -2317,553 +2265,362 @@
                 }
             } catch (e) { }
         }
-                    function saveProgress() {
-                        try { localStorage.setItem('hskProgress', JSON.stringify({ level: currentLevel, lesson: currentLesson, tab: currentTab })); } catch (e) { }
-                    }
 
-                    function loadProgress() {
-                        try {
-                            const saved = localStorage.getItem('hskProgress');
-                            if (saved) {
-                                const { level, lesson, tab } = JSON.parse(saved);
-                                setTimeout(() => {
-                                    const btn = document.querySelector(`.level-btn.${level}`);
-                                    if (btn) switchLevel(level, btn);
-                                    showLesson(level, lesson, tab);
-                                }, 200);
-                            }
-                        } catch (e) { }
-                    }
-                                    // ===== SEARCH =====
-                    function universalSearch() {
-                        let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
-                        let dropdown = document.getElementById('searchDropdown');
-                        if (!dropdown) {
-                            dropdown = document.createElement('div');
-                            dropdown.id = 'searchDropdown';
-                            dropdown.className = 'search-results-dropdown';
-                            document.querySelector('.global-search-box').appendChild(dropdown);
-                        }
-                        if (query === '') { dropdown.style.display = 'none'; return; }
-                        dropdown.innerHTML = '';
-                        let resultsMap = new Set();
-                        hskLevels.forEach(levelId => {
-                            const levelData = hskData[levelId];
-                            if (!levelData) return;
-                            levelData.lessons.forEach((lesson) => {
-                                lesson.tabs.forEach((tab) => {
-                                    let content = JSON.stringify(tab).toLowerCase();
-                                    if (content.includes(query)) {
-                                        const key = `${levelId}-${lesson.id}-${tab.id}`;
-                                        if (!resultsMap.has(key)) {
-                                            resultsMap.add(key);
-                                            const item = document.createElement('div');
-                                            item.className = 'search-item-result';
-                                            const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
-                                            item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
+        // ===== SEARCH =====
+        function universalSearch() {
+            let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
+            let dropdown = document.getElementById('searchDropdown');
+            if (!dropdown) {
+                dropdown = document.createElement('div');
+                dropdown.id = 'searchDropdown';
+                dropdown.className = 'search-results-dropdown';
+                document.querySelector('.global-search-box').appendChild(dropdown);
+            }
+            if (query === '') { dropdown.style.display = 'none'; return; }
+            dropdown.innerHTML = '';
+            let resultsMap = new Set();
+            hskLevels.forEach(levelId => {
+                const levelData = hskData[levelId];
+                if (!levelData) return;
+                levelData.lessons.forEach((lesson) => {
+                    lesson.tabs.forEach((tab) => {
+                        let content = JSON.stringify(tab).toLowerCase();
+                        if (content.includes(query)) {
+                            const key = `${levelId}-${lesson.id}-${tab.id}`;
+                            if (!resultsMap.has(key)) {
+                                resultsMap.add(key);
+                                const item = document.createElement('div');
+                                item.className = 'search-item-result';
+                                const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
+                                item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
                                     <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>`;
-                                            item.onclick = function () {
-                                                const btn = document.querySelector(`.level-btn.${levelId}`);
-                                                if (btn) switchLevel(levelId, btn);
-                                                showLesson(levelId, lesson.id, tab.id);
-                                                dropdown.style.display = 'none';
-                                                document.getElementById('globalGrammarSearch').value = '';
-                                            };
-                                            dropdown.appendChild(item);
-                                        }
-                                    }
-                                });
-                            });
-                        });
-                        dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
-                        if (resultsMap.size === 0) dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
-                    }
-
-                    // ===== AUDIO =====
-                    function playAudio(text, event) {
-                        if ('speechSynthesis' in window) {
-                            window.speechSynthesis.cancel();
-                            const utterance = new SpeechSynthesisUtterance(text);
-                            utterance.lang = 'zh-CN';
-                            window.speechSynthesis.speak(utterance);
-                        }
-                    }
-
-                    // ===== TỰ ĐÓNG POPUP SEARCH =====
-                    document.addEventListener('click', function (e) {
-                        const searchBox = document.querySelector('.global-search-box');
-                        const dropdown = document.getElementById('searchDropdown');
-                        if (dropdown && searchBox && !searchBox.contains(e.target)) dropdown.style.display = 'none';
-                    });
-
-                    // ===== MỞ/ĐÓNG TOOLBAR =====
-                    let toolbarVisible = false;
-                    function toggleToolbar() {
-                        const toolbar = document.getElementById('highlightToolbar');
-                        const btn = document.getElementById('toggleToolbarBtn');
-                        toolbarVisible = !toolbarVisible;
-                        if (toolbarVisible) {
-                            toolbar.style.display = 'flex';
-                            btn.textContent = '✖';
-                            btn.style.background = '#f44336';
-                            btn.style.transform = 'rotate(90deg)';
-                        } else {
-                            toolbar.style.display = 'none';
-                            btn.textContent = '✏️';
-                            btn.style.background = '#4caf50';
-                            btn.style.transform = 'rotate(0deg)';
-                        }
-                    }
-
-                    // ===== BẤM NÚT "PHIÊN ÂM" =====
-                    function togglePinyinForThis(event) {
-                        event.stopPropagation();
-                        const container = event.currentTarget.closest('.text-group');
-                        const pyElement = container.querySelector('.py');
-                        const btn = event.currentTarget;
-                        if (pyElement.style.display === 'none' || pyElement.style.display === '') {
-                            pyElement.style.display = 'block';
-                            btn.textContent = '📖 Ẩn phiên âm';
-                            btn.style.background = '#f44336';
-                        } else {
-                            pyElement.style.display = 'none';
-                            btn.textContent = '📖 Phiên âm';
-                            btn.style.background = '#4caf50';
-                        }
-                    }
-
-                    // ===== BẤM NÚT "NGHĨA" =====
-                    function toggleNghiaForThis(event) {
-                        event.stopPropagation();
-                        const container = event.currentTarget.closest('.text-group');
-                        const viElement = container.querySelector('.vi');
-                        const btn = event.currentTarget;
-                        if (viElement.style.display === 'none' || viElement.style.display === '') {
-                            viElement.style.display = 'block';
-                            btn.textContent = '🌟 Ẩn nghĩa';
-                            btn.style.background = '#f44336';
-                        } else {
-                            viElement.style.display = 'none';
-                            btn.textContent = '🌟 Nghĩa';
-                            btn.style.background = '#ff9800';
-                        }
-                    }
-
-                    // ==============================================
-                    // CỤC TẨY - XÓA TỪNG PHẦN VẼ
-                    // ==============================================
-
-                    let eraserMode = false;
-                    let eraserSize = 20;
-                    let isEraser = false;
-
-                    function setEraserSize(size) {
-                        eraserSize = parseInt(size);
-                    }
-
-                    function toggleEraserMode() {
-                        eraserMode = !eraserMode;
-                        const btn = document.getElementById('eraserToggle');
-
-                        if (drawMode) {
-                            toggleDrawMode();
-                        }
-
-                        if (eraserMode) {
-                            btn.textContent = '🧹 Đang tẩy';
-                            btn.style.background = '#f44336';
-                            btn.classList.add('active');
-                            document.body.style.cursor = 'cell';
-                            canvas.style.display = 'block';
-                            canvas.style.pointerEvents = 'auto';
-                            loadDrawings();
-                        } else {
-                            btn.textContent = '🧹 Tẩy';
-                            btn.style.background = '#795548';
-                            btn.classList.remove('active');
-                            document.body.style.cursor = 'default';
-                            canvas.style.display = 'none';
-                            canvas.style.pointerEvents = 'none';
-                        }
-                    }
-
-                    // ==============================================
-                    // HIGHLIGHT
-                    // ==============================================
-                    let highlightColor = '#ffeb3b';
-                    let highlightMode = false;
-
-                    function toggleHighlightMode() {
-                        highlightMode = !highlightMode;
-                        const btn = document.getElementById('highlightToggle');
-                        if (highlightMode) {
-                            btn.textContent = '🛑 Tắt';
-                            btn.style.background = '#f44336';
-                            document.body.style.cursor = 'text';
-                            alert('🖍 Chọn văn bản để highlight!');
-                        } else {
-                            btn.textContent = '🖍 Bật';
-                            btn.style.background = '#4caf50';
-                            document.body.style.cursor = 'default';
-                        }
-                    }
-
-                    function setHighlightColor(color) {
-                        highlightColor = color;
-                        document.querySelectorAll('.color-btn').forEach(btn => {
-                            btn.classList.remove('active');
-                            if (btn.style.backgroundColor === color || btn.style.background === color) btn.classList.add('active');
-                        });
-                    }
-
-                    document.addEventListener('mouseup', function (e) {
-                        if (!highlightMode) return;
-
-                        const selection = window.getSelection();
-                        if (!selection || selection.isCollapsed) return;
-
-                        const selectedText = selection.toString().trim();
-                        if (selectedText.length === 0) return;
-
-                        const range = selection.getRangeAt(0);
-                        const container = range.commonAncestorContainer;
-                        const mainContent = document.querySelector('main');
-
-                        if (!mainContent || !mainContent.contains(container)) return;
-
-                        const audioBtn = container.closest?.('.audio-btn');
-                        if (audioBtn) {
-                            selection.removeAllRanges();
-                            return;
-                        }
-
-                        try {
-                            let parentElement = container.nodeType === 3 ? container.parentElement : container;
-                            const parentStyle = window.getComputedStyle(parentElement);
-
-                            const span = document.createElement('span');
-                            span.className = 'highlighted';
-                            span.style.backgroundColor = highlightColor;
-                            span.style.fontFamily = parentStyle.fontFamily || 'inherit';
-                            span.style.fontSize = parentStyle.fontSize || 'inherit';
-                            span.style.fontWeight = parentStyle.fontWeight || 'inherit';
-                            span.style.color = parentStyle.color || 'inherit';
-                            span.style.lineHeight = parentStyle.lineHeight || 'inherit';
-                            span.style.letterSpacing = parentStyle.letterSpacing || 'inherit';
-
-                            span.textContent = selectedText;
-                            range.deleteContents();
-                            range.insertNode(span);
-
-                            saveHighlights();
-                        } catch (error) {
-                            console.log('Lỗi highlight:', error);
-                        }
-
-                        selection.removeAllRanges();
-                    });
-
-                    function clearAllHighlights() {
-                        if (confirm('Xóa tất cả highlight?')) {
-                            document.querySelectorAll('.highlighted').forEach(el => {
-                                const text = el.textContent;
-                                const parent = el.parentNode;
-                                const textNode = document.createTextNode(text);
-                                parent.replaceChild(textNode, el);
-                                parent.normalize();
-                            });
-                            localStorage.removeItem('highlights');
-                        }
-                    }
-
-                    function saveHighlights() {
-                        const highlights = [];
-                        document.querySelectorAll('.highlighted').forEach(el => {
-                            highlights.push({ text: el.textContent, color: el.style.backgroundColor });
-                        });
-                        localStorage.setItem('highlights', JSON.stringify(highlights));
-                    }
-
-                    function loadHighlights() {
-                        const saved = localStorage.getItem('highlights');
-                        if (!saved) return;
-                        try {
-                            const highlights = JSON.parse(saved);
-                            setTimeout(() => {
-                                highlights.forEach(h => {
-                                    const walker = document.createTreeWalker(
-                                        document.querySelector('main'),
-                                        NodeFilter.SHOW_TEXT, null, false
-                                    );
-                                    let nodes = [];
-                                    let node;
-                                    while (node = walker.nextNode()) {
-                                        if (node.textContent.includes(h.text)) nodes.push(node);
-                                    }
-                                    nodes.forEach(textNode => {
-                                        const parent = textNode.parentNode;
-                                        if (parent && !parent.classList.contains('highlighted')) {
-                                            const text = textNode.textContent;
-                                            const index = text.indexOf(h.text);
-                                            if (index !== -1) {
-                                                const range = document.createRange();
-                                                range.setStart(textNode, index);
-                                                range.setEnd(textNode, index + h.text.length);
-
-                                                const span = document.createElement('span');
-                                                span.className = 'highlighted';
-                                                span.style.backgroundColor = h.color || '#ffeb3b';
-
-                                                const ps = window.getComputedStyle(parent);
-                                                span.style.fontFamily = ps.fontFamily || 'inherit';
-                                                span.style.fontSize = ps.fontSize || 'inherit';
-                                                span.style.fontWeight = ps.fontWeight || 'inherit';
-                                                span.style.color = ps.color || 'inherit';
-
-                                                span.textContent = h.text;
-                                                range.deleteContents();
-                                                range.insertNode(span);
-                                            }
-                                        }
-                                    });
-                                });
-                            }, 500);
-                        } catch (e) { console.log('Lỗi load highlight:', e); }
-                    }
-
-                    // ==============================================
-                    // BÚT VẼ
-                    // ==============================================
-                    let drawMode = false;
-                    let isDrawing = false;
-                    let lastX = 0, lastY = 0;
-                    const canvas = document.getElementById('drawCanvas');
-                    const ctx = canvas.getContext('2d');
-
-                    function toggleDrawMode() {
-                        drawMode = !drawMode;
-                        const btn = document.getElementById('drawToggle');
-
-                        if (eraserMode) {
-                            toggleEraserMode();
-                        }
-
-                        if (drawMode) {
-                            btn.textContent = '🛑 Tắt';
-                            btn.style.background = '#f44336';
-                            canvas.style.display = 'block';
-                            canvas.style.pointerEvents = 'auto';
-                            document.body.style.cursor = 'crosshair';
-                            canvas.width = window.innerWidth;
-                            canvas.height = window.innerHeight;
-                            ctx.strokeStyle = '#ff0000';
-                            ctx.lineWidth = 3;
-                            ctx.lineCap = 'round';
-                            ctx.lineJoin = 'round';
-                            loadDrawings();
-                        } else {
-                            btn.textContent = '✏️ Vẽ';
-                            btn.style.background = '#2196f3';
-                            canvas.style.display = 'none';
-                            canvas.style.pointerEvents = 'none';
-                            document.body.style.cursor = 'default';
-                        }
-                    }
-
-                    // Sự kiện canvas - HỖ TRỢ CẢ VẼ VÀ TẨY
-                    canvas.addEventListener('mousedown', function (e) {
-                        const rect = canvas.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
-
-                        if (eraserMode) {
-                            isEraser = true;
-                            ctx.globalCompositeOperation = 'destination-out';
-                            ctx.beginPath();
-                            ctx.arc(x, y, eraserSize, 0, Math.PI * 2);
-                            ctx.fill();
-                            ctx.globalCompositeOperation = 'source-over';
-                            saveDrawings();
-                            return;
-                        }
-
-                        if (!drawMode) return;
-                        isDrawing = true;
-                        lastX = x;
-                        lastY = y;
-                    });
-
-                    canvas.addEventListener('mousemove', function (e) {
-                        const rect = canvas.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
-
-                        if (eraserMode && isEraser) {
-                            ctx.globalCompositeOperation = 'destination-out';
-                            ctx.beginPath();
-                            ctx.arc(x, y, eraserSize, 0, Math.PI * 2);
-                            ctx.fill();
-                            ctx.globalCompositeOperation = 'source-over';
-                            saveDrawings();
-                            return;
-                        }
-
-                        if (!isDrawing || !drawMode) return;
-
-                        ctx.beginPath();
-                        ctx.moveTo(lastX, lastY);
-                        ctx.lineTo(x, y);
-                        ctx.stroke();
-
-                        lastX = x;
-                        lastY = y;
-                    });
-
-                    canvas.addEventListener('mouseup', function () {
-                        if (eraserMode && isEraser) {
-                            isEraser = false;
-                            return;
-                        }
-                        if (isDrawing) {
-                            isDrawing = false;
-                            saveDrawings();
+                                item.onclick = function () {
+                                    const btn = document.querySelector(`.level-btn.${levelId}`);
+                                    if (btn) switchLevel(levelId, btn);
+                                    showLesson(levelId, lesson.id, tab.id);
+                                    dropdown.style.display = 'none';
+                                    document.getElementById('globalGrammarSearch').value = '';
+                                };
+                                dropdown.appendChild(item);
+                            }
                         }
                     });
+                });
+            });
+            dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
+            if (resultsMap.size === 0) dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
+        }
 
-                    canvas.addEventListener('mouseleave', function () {
-                        if (eraserMode && isEraser) {
-                            isEraser = false;
-                            return;
+        // ===== AUDIO =====
+        function playAudio(text, event) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'zh-CN';
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // ===== TỰ ĐÓNG POPUP SEARCH =====
+        document.addEventListener('click', function (e) {
+            const searchBox = document.querySelector('.global-search-box');
+            const dropdown = document.getElementById('searchDropdown');
+            if (dropdown && searchBox && !searchBox.contains(e.target)) dropdown.style.display = 'none';
+        });
+
+        // ===== MỞ/ĐÓNG TOOLBAR =====
+        let toolbarVisible = false;
+
+        function toggleToolbar() {
+            const toolbar = document.getElementById('highlightToolbar');
+            const btn = document.getElementById('toggleToolbarBtn');
+            toolbarVisible = !toolbarVisible;
+            if (toolbarVisible) {
+                toolbar.style.display = 'flex';
+                btn.textContent = '✖';
+                btn.style.background = '#f44336';
+                btn.style.transform = 'rotate(90deg)';
+            } else {
+                toolbar.style.display = 'none';
+                btn.textContent = '✏️';
+                btn.style.background = '#4caf50';
+                btn.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // ===== BẤM NÚT "PHIÊN ÂM" =====
+        function togglePinyinForThis(event) {
+            event.stopPropagation();
+            const container = event.currentTarget.closest('.text-group');
+            const pyElement = container.querySelector('.py');
+            const btn = event.currentTarget;
+            if (pyElement.style.display === 'none' || pyElement.style.display === '') {
+                pyElement.style.display = 'block';
+                btn.textContent = '📖 Ẩn phiên âm';
+                btn.style.background = '#f44336';
+            } else {
+                pyElement.style.display = 'none';
+                btn.textContent = '📖 Phiên âm';
+                btn.style.background = '#4caf50';
+            }
+        }
+
+        // ===== BẤM NÚT "NGHĨA" =====
+        function toggleNghiaForThis(event) {
+            event.stopPropagation();
+            const container = event.currentTarget.closest('.text-group');
+            const viElement = container.querySelector('.vi');
+            const btn = event.currentTarget;
+            if (viElement.style.display === 'none' || viElement.style.display === '') {
+                viElement.style.display = 'block';
+                btn.textContent = '🌟 Ẩn nghĩa';
+                btn.style.background = '#f44336';
+            } else {
+                viElement.style.display = 'none';
+                btn.textContent = '🌟 Nghĩa';
+                btn.style.background = '#ff9800';
+            }
+        }
+
+        // ==============================================
+        // HIGHLIGHT
+        // ==============================================
+        let highlightColor = '#ffeb3b';
+        let highlightMode = false;
+
+        function toggleHighlightMode() {
+            highlightMode = !highlightMode;
+            const btn = document.getElementById('highlightToggle');
+            if (highlightMode) {
+                btn.textContent = '🛑 Tắt';
+                btn.style.background = '#f44336';
+                document.body.style.cursor = 'text';
+                alert('🖍 Chọn văn bản để highlight!');
+            } else {
+                btn.textContent = '🖍 Bật';
+                btn.style.background = '#4caf50';
+                document.body.style.cursor = 'default';
+            }
+        }
+
+        function setHighlightColor(color) {
+            highlightColor = color;
+            document.querySelectorAll('.color-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.style.backgroundColor === color || btn.style.background === color) btn.classList.add('active');
+            });
+        }
+
+        document.addEventListener('mouseup', function (e) {
+            if (!highlightMode) return;
+
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed) return;
+
+            const selectedText = selection.toString().trim();
+            if (selectedText.length === 0) return;
+
+            const range = selection.getRangeAt(0);
+            const container = range.commonAncestorContainer;
+            const mainContent = document.querySelector('main');
+
+            if (!mainContent || !mainContent.contains(container)) return;
+
+            const audioBtn = container.closest?.('.audio-btn');
+            if (audioBtn) {
+                selection.removeAllRanges();
+                return;
+            }
+
+            try {
+                let parentElement = container.nodeType === 3 ? container.parentElement : container;
+                const parentStyle = window.getComputedStyle(parentElement);
+
+                const span = document.createElement('span');
+                span.className = 'highlighted';
+                span.style.backgroundColor = highlightColor;
+                span.style.fontFamily = parentStyle.fontFamily || 'inherit';
+                span.style.fontSize = parentStyle.fontSize || 'inherit';
+                span.style.fontWeight = parentStyle.fontWeight || 'inherit';
+                span.style.color = parentStyle.color || 'inherit';
+                span.style.lineHeight = parentStyle.lineHeight || 'inherit';
+                span.style.letterSpacing = parentStyle.letterSpacing || 'inherit';
+
+                span.textContent = selectedText;
+                range.deleteContents();
+                range.insertNode(span);
+
+                saveHighlights();
+            } catch (error) {
+                console.log('Lỗi highlight:', error);
+            }
+
+            selection.removeAllRanges();
+        });
+
+        function clearAllHighlights() {
+            if (confirm('Xóa tất cả highlight?')) {
+                document.querySelectorAll('.highlighted').forEach(el => {
+                    const text = el.textContent;
+                    const parent = el.parentNode;
+                    const textNode = document.createTextNode(text);
+                    parent.replaceChild(textNode, el);
+                    parent.normalize();
+                });
+                localStorage.removeItem('highlights');
+            }
+        }
+
+        function saveHighlights() {
+            const highlights = [];
+            document.querySelectorAll('.highlighted').forEach(el => {
+                highlights.push({ text: el.textContent, color: el.style.backgroundColor });
+            });
+            localStorage.setItem('highlights', JSON.stringify(highlights));
+        }
+
+        function loadHighlights() {
+            const saved = localStorage.getItem('highlights');
+            if (!saved) return;
+            try {
+                const highlights = JSON.parse(saved);
+                setTimeout(() => {
+                    highlights.forEach(h => {
+                        const walker = document.createTreeWalker(
+                            document.querySelector('main'),
+                            NodeFilter.SHOW_TEXT, null, false
+                        );
+                        let nodes = [];
+                        let node;
+                        while (node = walker.nextNode()) {
+                            if (node.textContent.includes(h.text)) nodes.push(node);
                         }
-                        if (isDrawing) {
-                            isDrawing = false;
-                            saveDrawings();
-                        }
-                    });
+                        nodes.forEach(textNode => {
+                            const parent = textNode.parentNode;
+                            if (parent && !parent.classList.contains('highlighted')) {
+                                const text = textNode.textContent;
+                                const index = text.indexOf(h.text);
+                                if (index !== -1) {
+                                    const range = document.createRange();
+                                    range.setStart(textNode, index);
+                                    range.setEnd(textNode, index + h.text.length);
 
-                    function setDrawColor(color) { ctx.strokeStyle = color; }
+                                    const span = document.createElement('span');
+                                    span.className = 'highlighted';
+                                    span.style.backgroundColor = h.color || '#ffeb3b';
 
-                    function clearDrawings() {
-                        if (confirm('Xóa tất cả bản vẽ?')) {
-                            ctx.clearRect(0, 0, canvas.width, canvas.height);
-                            localStorage.removeItem('drawings');
-                        }
-                    }
+                                    const ps = window.getComputedStyle(parent);
+                                    span.style.fontFamily = ps.fontFamily || 'inherit';
+                                    span.style.fontSize = ps.fontSize || 'inherit';
+                                    span.style.fontWeight = ps.fontWeight || 'inherit';
+                                    span.style.color = ps.color || 'inherit';
 
-                    function saveDrawings() { localStorage.setItem('drawings', canvas.toDataURL()); }
-
-                    function loadDrawings() {
-                        const saved = localStorage.getItem('drawings');
-                        if (saved) {
-                            const img = new Image();
-                            img.onload = function () { ctx.drawImage(img, 0, 0); };
-                            img.src = saved;
-                        }
-                    }
-
-                    window.addEventListener('resize', function () {
-                        if (drawMode || eraserMode) {
-                            const tempData = canvas.toDataURL();
-                            canvas.width = window.innerWidth;
-                            canvas.height = window.innerHeight;
-                            const img = new Image();
-                            img.onload = function () { ctx.drawImage(img, 0, 0); };
-                            img.src = tempData;
-                        }
-                    });
-                    // ===== DOM READY =====
-                    document.addEventListener('DOMContentLoaded', function () {
-                        document.querySelectorAll('.submenu a').forEach(link => {
-                            link.addEventListener('click', function (e) {
-                                e.preventDefault();
-                                const onclickAttr = this.getAttribute('onclick');
-                                if (onclickAttr) {
-                                    const match = onclickAttr.match(/switchTab\('([^']+)',(\d+),(\d+)\)/);
-                                    if (match) {
-                                        const level = match[1], lessonId = parseInt(match[2]), tabIndex = parseInt(match[3]);
-                                        const activeWrapper = document.querySelector('.hsk-wrapper.active');
-                                        if (activeWrapper) {
-                                            const lesson = activeWrapper.querySelector('#lesson-' + level + '-' + lessonId);
-                                            if (lesson && !lesson.classList.contains('active')) showLesson(level, lessonId);
-                                            switchTab(level, lessonId, tabIndex);
-                                        }
-                                    }
+                                    span.textContent = h.text;
+                                    range.deleteContents();
+                                    range.insertNode(span);
                                 }
-                            });
-                        });
-
-                        document.addEventListener('keydown', function (e) {
-                            if ((e.ctrlKey || e.metaKey) && ['1', '2', '3'].includes(e.key)) {
-                                e.preventDefault();
-                                const level = 'hsk' + e.key;
-                                const btn = document.querySelector('.level-btn.' + level);
-                                if (btn) switchLevel(level, btn);
                             }
                         });
-
-                        setTimeout(() => {
-                            loadData();
-                            loadHighlights();
-                        }, 100);
                     });
+                }, 500);
+            } catch (e) { console.log('Lỗi load highlight:', e); }
+        }
+
+        // ===== DOM READY =====
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.submenu a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const onclickAttr = this.getAttribute('onclick');
+                    if (onclickAttr) {
+                        const match = onclickAttr.match(/switchTab\('([^']+)',(\d+),(\d+)\)/);
+                        if (match) {
+                            const level = match[1], lessonId = parseInt(match[2]), tabIndex = parseInt(match[3]);
+                            const activeWrapper = document.querySelector('.hsk-wrapper.active');
+                            if (activeWrapper) {
+                                const lesson = activeWrapper.querySelector('#lesson-' + level + '-' + lessonId);
+                                if (lesson && !lesson.classList.contains('active')) showLesson(level, lessonId);
+                                switchTab(level, lessonId, tabIndex);
+                            }
+                        }
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if ((e.ctrlKey || e.metaKey) && ['1', '2', '3'].includes(e.key)) {
+                    e.preventDefault();
+                    const level = 'hsk' + e.key;
+                    const btn = document.querySelector('.level-btn.' + level);
+                    if (btn) switchLevel(level, btn);
+                }
+            });
+
+            setTimeout(() => {
+                loadData();
+                loadHighlights();
+            }, 100);
+        });
     </script>
+
     <!-- ===== FIREBASE ===== -->
     <script type="module">
-                    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-                    import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-                    const firebaseConfig = {
-                        apiKey: "AIzaSyDCdhn_V1bHA3xLESUEtfihjOPii_Vf7ow",
-                        authDomain: "hsk-grammar-9362c.firebaseapp.com",
-                        projectId: "hsk-grammar-9362c",
-                        storageBucket: "hsk-grammar-9362c.firebasestorage.app",
-                        messagingSenderId: "461876969087",
-                        appId: "1:461876969087:web:b439e3edcea4a74a63c94a"
-                    };
+        const firebaseConfig = {
+            apiKey: "AIzaSyDCdhn_V1bHA3xLESUEtfihjOPii_Vf7ow",
+            authDomain: "hsk-grammar-9362c.firebaseapp.com",
+            projectId: "hsk-grammar-9362c",
+            storageBucket: "hsk-grammar-9362c.firebasestorage.app",
+            messagingSenderId: "461876969087",
+            appId: "1:461876969087:web:b439e3edcea4a74a63c94a"
+        };
 
-                    const app = initializeApp(firebaseConfig);
-                    const auth = getAuth(app);
-                    const provider = new GoogleAuthProvider();
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
 
-                    window.loginWithGoogle = () => {
-                        signInWithPopup(auth, provider).then(result => {
-                            console.log("✅ Đã đăng nhập:", result.user.displayName);
-                        }).catch(error => {
-                            console.error("❌ Lỗi đăng nhập:", error);
-                            alert("Đăng nhập thất bại! Vui lòng thử lại.");
-                        });
-                    };
+        window.loginWithGoogle = () => {
+            signInWithPopup(auth, provider).then(result => {
+                console.log("✅ Đã đăng nhập:", result.user.displayName);
+            }).catch(error => {
+                console.error("❌ Lỗi đăng nhập:", error);
+                alert("Đăng nhập thất bại! Vui lòng thử lại.");
+            });
+        };
 
-                    window.logout = () => signOut(auth);
+        window.logout = () => signOut(auth);
 
-                    onAuthStateChanged(auth, (user) => {
-                        const mainApp = document.getElementById('app-container');
-                        const loginOverlay = document.getElementById('login-overlay');
-                        if (user) {
-                            if (mainApp) mainApp.style.display = 'block';
-                            if (loginOverlay) loginOverlay.style.display = 'none';
-                            let userInfo = document.querySelector('.user-info');
-                            let logoutBtn = document.querySelector('.logout-btn');
-                            if (!userInfo) {
-                                userInfo = document.createElement('div');
-                                userInfo.className = 'user-info';
-                                document.body.appendChild(userInfo);
-                            }
-                            userInfo.textContent = '👤 ' + (user.displayName || user.email);
-                            if (!logoutBtn) {
-                                logoutBtn = document.createElement('button');
-                                logoutBtn.className = 'logout-btn';
-                                logoutBtn.textContent = 'Đăng xuất';
-                                logoutBtn.onclick = () => signOut(auth);
-                                document.body.appendChild(logoutBtn);
-                            }
-                        } else {
-                            if (mainApp) mainApp.style.display = 'none';
-                            if (loginOverlay) loginOverlay.style.display = 'flex';
-                            document.querySelector('.user-info')?.remove();
-                            document.querySelector('.logout-btn')?.remove();
-                        }
-                    });
+        onAuthStateChanged(auth, (user) => {
+            const mainApp = document.getElementById('app-container');
+            const loginOverlay = document.getElementById('login-overlay');
+            if (user) {
+                if (mainApp) mainApp.style.display = 'block';
+                if (loginOverlay) loginOverlay.style.display = 'none';
+                let userInfo = document.querySelector('.user-info');
+                let logoutBtn = document.querySelector('.logout-btn');
+                if (!userInfo) {
+                    userInfo = document.createElement('div');
+                    userInfo.className = 'user-info';
+                    document.body.appendChild(userInfo);
+                }
+                userInfo.textContent = '👤 ' + (user.displayName || user.email);
+                if (!logoutBtn) {
+                    logoutBtn = document.createElement('button');
+                    logoutBtn.className = 'logout-btn';
+                    logoutBtn.textContent = 'Đăng xuất';
+                    logoutBtn.onclick = () => signOut(auth);
+                    document.body.appendChild(logoutBtn);
+                }
+            } else {
+                if (mainApp) mainApp.style.display = 'none';
+                if (loginOverlay) loginOverlay.style.display = 'flex';
+                document.querySelector('.user-info')?.remove();
+                document.querySelector('.logout-btn')?.remove();
+            }
+        });
     </script>
 </body>
+
 </html>
