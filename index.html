@@ -1788,7 +1788,7 @@
     <div class="highlight-toolbar" id="highlightToolbar">
         <div
             style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;">
-            <span style="font-weight:600;color:#555;font-size:11px;">✏️ Highlight:</span>
+            <span style="font-weight:600;color:#555;font-size:11px;">Highlight:</span>
             <button class="color-btn" style="background:#ffcdd2;" onclick="setHighlightColor('#ffcdd2')"
                 title="Đỏ nhạt"></button>
             <button class="color-btn" style="background:#c8e6c9;" onclick="setHighlightColor('#c8e6c9')"
@@ -1817,7 +1817,7 @@
     <button class="color-option" style="background:#bbdefb;" onclick="changeHighlightColor(this, '#bbdefb')" title="Xanh dương nhạt"></button>
     <button class="color-option" style="background:#e1bee7;" onclick="changeHighlightColor(this, '#e1bee7')" title="Tím nhạt"></button>
     <button class="color-option" style="background:#ffe0b2;" onclick="changeHighlightColor(this, '#ffe0b2')" title="Cam nhạt"></button>
-    <button class="delete-option" onclick="deleteSingleHighlight()">🗑 Xóa</button>
+    <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
 </div>
     <!-- ===== CONTAINER CHÍNH ===== -->
     <div id="app-container">
@@ -2528,11 +2528,11 @@ if (tabNum === '999' || tabNum === 999) {
             const btn = event.currentTarget;
             if (pyElement.style.display === 'none' || pyElement.style.display === '') {
                 pyElement.style.display = 'block';
-                btn.textContent = '📖 Ẩn phiên âm';
+                btn.textContent = 'Ẩn phiên âm';
                 btn.style.background = '#f44336';
             } else {
                 pyElement.style.display = 'none';
-                btn.textContent = '📖 Phiên âm';
+                btn.textContent = 'Phiên âm';
                 btn.style.background = '#4caf50';
             }
         }
@@ -2545,11 +2545,11 @@ if (tabNum === '999' || tabNum === 999) {
             const btn = event.currentTarget;
             if (viElement.style.display === 'none' || viElement.style.display === '') {
                 viElement.style.display = 'block';
-                btn.textContent = '🌟 Ẩn nghĩa';
+                btn.textContent = 'Ẩn nghĩa';
                 btn.style.background = '#f44336';
             } else {
                 viElement.style.display = 'none';
-                btn.textContent = '🌟 Nghĩa';
+                btn.textContent = 'Nghĩa';
                 btn.style.background = '#ff9800';
             }
         }
@@ -2564,12 +2564,12 @@ if (tabNum === '999' || tabNum === 999) {
             highlightMode = !highlightMode;
             const btn = document.getElementById('highlightToggle');
             if (highlightMode) {
-                btn.textContent = '🛑 Tắt';
+                btn.textContent = 'Tắt';
                 btn.style.background = '#f44336';
                 document.body.style.cursor = 'text';
                 alert('🖍 Chọn văn bản để highlight!');
             } else {
-                btn.textContent = '🖍 Bật';
+                btn.textContent = 'Bật';
                 btn.style.background = '#4caf50';
                 document.body.style.cursor = 'default';
             }
@@ -2733,6 +2733,58 @@ if (tabNum === '999' || tabNum === 999) {
                 loadHighlights();
             }, 100);
         });
+              // ===== QUẢN LÝ HIGHLIGHT LẺ =====
+let currentHighlightElement = null;
+
+// Click vào highlight để mở menu
+document.addEventListener('click', function(e) {
+    const target = e.target.closest('.highlighted');
+    const menu = document.getElementById('highlightMenu');
+    
+    if (target) {
+        e.stopPropagation();
+        currentHighlightElement = target;
+        const rect = target.getBoundingClientRect();
+        menu.style.left = Math.max(10, rect.left + rect.width / 2 - 80) + 'px';
+        menu.style.top = (rect.bottom + 5) + 'px';
+        menu.style.display = 'flex';
+    } else if (menu && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+        currentHighlightElement = null;
+    }
+});
+
+function changeHighlightColor(btn, color) {
+    if (currentHighlightElement) {
+        currentHighlightElement.style.backgroundColor = color;
+        const text = currentHighlightElement.textContent;
+        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+        highlights = highlights.map(h => {
+            if (h.text === text) h.color = color;
+            return h;
+        });
+        localStorage.setItem('highlights', JSON.stringify(highlights));
+        document.getElementById('highlightMenu').style.display = 'none';
+        currentHighlightElement = null;
+    }
+}
+
+function deleteSingleHighlight() {
+    if (currentHighlightElement) {
+        const text = currentHighlightElement.textContent;
+        const parent = currentHighlightElement.parentNode;
+        const textNode = document.createTextNode(text);
+        parent.replaceChild(textNode, currentHighlightElement);
+        parent.normalize();
+        
+        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+        highlights = highlights.filter(h => h.text !== text);
+        localStorage.setItem('highlights', JSON.stringify(highlights));
+        
+        document.getElementById('highlightMenu').style.display = 'none';
+        currentHighlightElement = null;
+    }
+}
     </script>
 
     <!-- ===== FIREBASE ===== -->
@@ -2792,59 +2844,7 @@ if (tabNum === '999' || tabNum === 999) {
                 document.querySelector('.logout-btn')?.remove();
             }
         });
-        // ===== QUẢN LÝ HIGHLIGHT LẺ =====
-let currentHighlightElement = null;
-
-// Click vào highlight để mở menu
-document.addEventListener('click', function(e) {
-    const target = e.target.closest('.highlighted');
-    const menu = document.getElementById('highlightMenu');
-    
-    if (target) {
-        e.stopPropagation();
-        currentHighlightElement = target;
-        const rect = target.getBoundingClientRect();
-        menu.style.left = Math.max(10, rect.left + rect.width / 2 - 80) + 'px';
-        menu.style.top = (rect.bottom + 5) + 'px';
-        menu.style.display = 'flex';
-    } else if (menu && !menu.contains(e.target)) {
-        menu.style.display = 'none';
-        currentHighlightElement = null;
-    }
-});
-
-function changeHighlightColor(btn, color) {
-    if (currentHighlightElement) {
-        currentHighlightElement.style.backgroundColor = color;
-        const text = currentHighlightElement.textContent;
-        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
-        highlights = highlights.map(h => {
-            if (h.text === text) h.color = color;
-            return h;
-        });
-        localStorage.setItem('highlights', JSON.stringify(highlights));
-        document.getElementById('highlightMenu').style.display = 'none';
-        currentHighlightElement = null;
-    }
-}
-
-function deleteSingleHighlight() {
-    if (currentHighlightElement) {
-        const text = currentHighlightElement.textContent;
-        const parent = currentHighlightElement.parentNode;
-        const textNode = document.createTextNode(text);
-        parent.replaceChild(textNode, currentHighlightElement);
-        parent.normalize();
-        
-        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
-        highlights = highlights.filter(h => h.text !== text);
-        localStorage.setItem('highlights', JSON.stringify(highlights));
-        
-        document.getElementById('highlightMenu').style.display = 'none';
-        currentHighlightElement = null;
-    }
-}
-    </script>
+      </script>
 </body>
 
 </html>
