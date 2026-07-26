@@ -48,7 +48,91 @@
             color: #666;
             margin-bottom: 20px;
         }
+        /* ===== HIGHLIGHT ===== */
+.highlighted {
+    background-color: #ffe0b2 !important;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
 
+.highlighted:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* Tooltip nhỏ hiện khi hover */
+.highlighted::after {
+    content: '✖';
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    font-size: 10px;
+    color: #f44336;
+    background: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.highlighted:hover::after {
+    display: flex;
+}
+
+/* Menu đổi màu khi click vào highlight */
+.highlight-menu {
+    position: fixed;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    padding: 8px;
+    z-index: 100000;
+    display: none;
+    border: 1px solid #e0e0e0;
+    gap: 6px;
+    flex-wrap: wrap;
+    max-width: 200px;
+}
+
+.highlight-menu .color-option {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.highlight-menu .color-option:hover {
+    transform: scale(1.15);
+    border-color: #333;
+}
+
+.highlight-menu .delete-option {
+    padding: 4px 10px;
+    border: none;
+    border-radius: 8px;
+    background: #f44336;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.highlight-menu .delete-option:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
         /* ===== TOOLBAR HIGHLIGHT ===== */
         .highlight-toolbar {
             position: fixed;
@@ -133,21 +217,7 @@
         #toggleToolbarBtn:hover {
             transform: scale(1.1);
         }
-
-        /* ===== HIGHLIGHT ===== */
-        .highlighted {
-            background-color: #ffeb3b !important;
-            padding: 2px 4px;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .highlighted:hover {
-            opacity: 0.7;
-        }
-
-        .google-btn {
+            .google-btn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1719,8 +1789,6 @@
         <div
             style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;">
             <span style="font-weight:600;color:#555;font-size:11px;">✏️ Highlight:</span>
-            <button class="color-btn" style="background:#ffeb3b;" onclick="setHighlightColor('#ffeb3b')"
-                title="Vàng"></button>
             <button class="color-btn" style="background:#ffcdd2;" onclick="setHighlightColor('#ffcdd2')"
                 title="Đỏ nhạt"></button>
             <button class="color-btn" style="background:#c8e6c9;" onclick="setHighlightColor('#c8e6c9')"
@@ -1742,7 +1810,15 @@
                 Xóa tất cả</button>
         </div>
     </div>
-
+        <!-- ===== MENU ĐỔI MÀU HIGHLIGHT ===== -->
+<div class="highlight-menu" id="highlightMenu">
+    <button class="color-option" style="background:#ffcdd2;" onclick="changeHighlightColor(this, '#ffcdd2')" title="Đỏ nhạt"></button>
+    <button class="color-option" style="background:#c8e6c9;" onclick="changeHighlightColor(this, '#c8e6c9')" title="Xanh nhạt"></button>
+    <button class="color-option" style="background:#bbdefb;" onclick="changeHighlightColor(this, '#bbdefb')" title="Xanh dương nhạt"></button>
+    <button class="color-option" style="background:#e1bee7;" onclick="changeHighlightColor(this, '#e1bee7')" title="Tím nhạt"></button>
+    <button class="color-option" style="background:#ffe0b2;" onclick="changeHighlightColor(this, '#ffe0b2')" title="Cam nhạt"></button>
+    <button class="delete-option" onclick="deleteSingleHighlight()">🗑 Xóa</button>
+</div>
     <!-- ===== CONTAINER CHÍNH ===== -->
     <div id="app-container">
 
@@ -2481,7 +2557,7 @@ if (tabNum === '999' || tabNum === 999) {
         // ==============================================
         // HIGHLIGHT
         // ==============================================
-        let highlightColor = '#ffeb3b';
+        let highlightColor = '#ffe0b2';
         let highlightMode = false;
 
         function toggleHighlightMode() {
@@ -2603,7 +2679,7 @@ if (tabNum === '999' || tabNum === 999) {
 
                                     const span = document.createElement('span');
                                     span.className = 'highlighted';
-                                    span.style.backgroundColor = h.color || '#ffeb3b';
+                                    span.style.backgroundColor = h.color || '#ffe0b2';
 
                                     const ps = window.getComputedStyle(parent);
                                     span.style.fontFamily = ps.fontFamily || 'inherit';
@@ -2716,6 +2792,58 @@ if (tabNum === '999' || tabNum === 999) {
                 document.querySelector('.logout-btn')?.remove();
             }
         });
+        // ===== QUẢN LÝ HIGHLIGHT LẺ =====
+let currentHighlightElement = null;
+
+// Click vào highlight để mở menu
+document.addEventListener('click', function(e) {
+    const target = e.target.closest('.highlighted');
+    const menu = document.getElementById('highlightMenu');
+    
+    if (target) {
+        e.stopPropagation();
+        currentHighlightElement = target;
+        const rect = target.getBoundingClientRect();
+        menu.style.left = Math.max(10, rect.left + rect.width / 2 - 80) + 'px';
+        menu.style.top = (rect.bottom + 5) + 'px';
+        menu.style.display = 'flex';
+    } else if (menu && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+        currentHighlightElement = null;
+    }
+});
+
+function changeHighlightColor(btn, color) {
+    if (currentHighlightElement) {
+        currentHighlightElement.style.backgroundColor = color;
+        const text = currentHighlightElement.textContent;
+        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+        highlights = highlights.map(h => {
+            if (h.text === text) h.color = color;
+            return h;
+        });
+        localStorage.setItem('highlights', JSON.stringify(highlights));
+        document.getElementById('highlightMenu').style.display = 'none';
+        currentHighlightElement = null;
+    }
+}
+
+function deleteSingleHighlight() {
+    if (currentHighlightElement) {
+        const text = currentHighlightElement.textContent;
+        const parent = currentHighlightElement.parentNode;
+        const textNode = document.createTextNode(text);
+        parent.replaceChild(textNode, currentHighlightElement);
+        parent.normalize();
+        
+        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+        highlights = highlights.filter(h => h.text !== text);
+        localStorage.setItem('highlights', JSON.stringify(highlights));
+        
+        document.getElementById('highlightMenu').style.display = 'none';
+        currentHighlightElement = null;
+    }
+}
     </script>
 </body>
 
