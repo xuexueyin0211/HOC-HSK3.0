@@ -1990,7 +1990,7 @@
                 const exerciseBtn = document.createElement('button');
                 exerciseBtn.className = 'tab-btn';
                 exerciseBtn.textContent = '📝 Bài tập';
-                exerciseBtn.onclick = () => switchTab(levelId, lesson.id, 'exercise');
+exerciseBtn.onclick = () => switchTab(levelId, lesson.id, '999');
                 tabNav.appendChild(exerciseBtn);
 
                 lessonDiv.appendChild(tabNav);
@@ -2065,7 +2065,7 @@
 
                 // ===== TẠO PANE BÀI TẬP (CẢI TIẾN) =====
                 const exercisePane = document.createElement('div');
-                exercisePane.id = `tab-${levelId}-${lesson.id}-exercise`;
+exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
                 exercisePane.className = 'tab-pane';
 
                 const exerciseCard = document.createElement('div');
@@ -2211,48 +2211,54 @@
 
         // ===== CẢI TIẾN switchTab (LỖI #1) =====
         function switchTab(hskLevel, lessonNum, tabId) {
-            const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-            if (!lessonEl) return;
+    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    if (!lessonEl) return;
 
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            const panes = lessonEl.querySelectorAll('.tab-pane');
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    const panes = lessonEl.querySelectorAll('.tab-pane');
 
-            // Xóa active từ tất cả
-            tabs.forEach(tab => tab.classList.remove('active'));
-            panes.forEach(pane => pane.classList.remove('active'));
+    tabs.forEach(tab => tab.classList.remove('active'));
+    panes.forEach(pane => pane.classList.remove('active'));
 
-            // Tìm tab button tương ứng
-            let targetTabIndex = -1;
-            tabs.forEach((tab, index) => {
-                const onclickAttr = tab.getAttribute('onclick');
-                if (onclickAttr && onclickAttr.includes(`'${tabId}'`)) {
-                    targetTabIndex = index;
-                }
-            });
+    let targetIndex = -1;
+    const tabIdStr = String(tabId);
 
-            // Nếu không tìm thấy, coi tabId là index
-            if (targetTabIndex === -1) {
-                const idx = parseInt(tabId) - 1;
-                if (idx >= 0 && idx < tabs.length) {
-                    targetTabIndex = idx;
-                }
+    // Tìm tab theo ID từ onclick
+    tabs.forEach((tab, index) => {
+        const onclickAttr = tab.getAttribute('onclick');
+        if (onclickAttr) {
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
+            if (match && match[1] === tabIdStr) {
+                targetIndex = index;
             }
-
-            // Kích hoạt tab
-            if (targetTabIndex >= 0 && tabs[targetTabIndex]) {
-                tabs[targetTabIndex].classList.add('active');
-            }
-
-            // Kích hoạt pane
-            const paneId = `tab-${hskLevel}-${lessonNum}-${tabId}`;
-            const pane = document.getElementById(paneId);
-            if (pane) {
-                pane.classList.add('active');
-            }
-
-            currentTab = tabId;
-            saveProgress();
         }
+    });
+
+    // Nếu không tìm thấy, thử theo index
+    if (targetIndex === -1) {
+        if (tabIdStr === '999') {
+            targetIndex = tabs.length - 1;
+        } else {
+            const idx = parseInt(tabIdStr) - 1;
+            if (idx >= 0 && idx < tabs.length) {
+                targetIndex = idx;
+            }
+        }
+    }
+
+    if (targetIndex >= 0 && tabs[targetIndex]) {
+        tabs[targetIndex].classList.add('active');
+    }
+
+    const paneId = `tab-${hskLevel}-${lessonNum}-${tabIdStr}`;
+    const pane = document.getElementById(paneId);
+    if (pane) {
+        pane.classList.add('active');
+    }
+
+    currentTab = tabIdStr;
+    saveProgress();
+}
 
         function nextTab(hskLevel, lessonNum) {
             const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
@@ -2284,18 +2290,17 @@
                 showLesson(hskLevel, nextLessonNum, '1');
 
             } else {
-                const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                if (currentLevelIdx < hskLevels.length - 1) {
-                    const nextLevel = hskLevels[currentLevelIdx + 1];
-                    const btn = document.querySelector(`.level-btn.${nextLevel}`);
-                    if (btn) switchLevel(nextLevel, btn);
-                    showLesson(nextLevel, 1, '1');
-                } else {
-                    alert("🎉 Bạn đã học xong toàn bộ chương trình!");
-                }
-            }
+    const currentLevelIdx = hskLevels.indexOf(hskLevel);
+    if (currentLevelIdx < hskLevels.length - 1) {
+        const nextLevel = hskLevels[currentLevelIdx + 1];
+        const btn = document.querySelector(`.level-btn.${nextLevel}`);
+        if (btn) switchLevel(nextLevel, btn);
+        showLesson(nextLevel, 1, '1');
+    } else {
+        alert("🎉 Bạn đã học xong toàn bộ chương trình!");
+    }
+}
         }
-
         function prevTab(hskLevel, lessonNum) {
             const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
             if (!lessonEl) return;
@@ -2325,19 +2330,20 @@
                 showLesson(hskLevel, lessonNum - 1, '1');
 
             } else {
-                const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                if (currentLevelIdx > 0) {
-                    const prevLevel = hskLevels[currentLevelIdx - 1];
-                    const btn = document.querySelector(`.level-btn.${prevLevel}`);
-                    if (btn) switchLevel(prevLevel, btn);
-                    
-                    const prevLevelData = hskData[prevLevel];
-                    const lastLessonId = prevLevelData.lessons[prevLevelData.lessons.length - 1].id;
-                    showLesson(prevLevel, lastLessonId, '1');
-                }
-            }
+    const currentLevelIdx = hskLevels.indexOf(hskLevel);
+    if (currentLevelIdx > 0) {
+        const prevLevel = hskLevels[currentLevelIdx - 1];
+        const btn = document.querySelector(`.level-btn.${prevLevel}`);
+        if (btn) switchLevel(prevLevel, btn);
+        
+        const prevLevelData = hskData[prevLevel];
+        if (prevLevelData && prevLevelData.lessons && prevLevelData.lessons.length > 0) {
+            const lastLessonId = prevLevelData.lessons[prevLevelData.lessons.length - 1].id;
+            showLesson(prevLevel, lastLessonId, '1');
         }
-
+    }
+}
+        }
         function saveProgress() {
             try {
                 localStorage.setItem('hskProgress', JSON.stringify({ level: currentLevel, lesson: currentLesson, tab: currentTab }));
@@ -2484,113 +2490,137 @@
         }
 
         // ==============================================
-        // HIGHLIGHT (CẢI TIẾN)
-        // ==============================================
-        let highlightColor = '#ffe0b2';
-        let highlightMode = false;
-        let currentHighlightElement = null;
-        const highlightMap = new WeakMap(); // LỖI #2: Sử dụng WeakMap để lưu highlight info
+// HIGHLIGHT (CẢI TIẾN)
+// ==============================================
+let highlightColor = '#ffe0b2';
+let highlightMode = false;
+let currentHighlightElement = null;
 
-        function toggleHighlightMode() {
-            highlightMode = !highlightMode;
-            const btn = document.getElementById('highlightToggle');
-            if (highlightMode) {
-                btn.textContent = 'Tắt';
-                btn.style.background = '#f44336';
-                document.body.style.cursor = 'text';
-            } else {
-                btn.textContent = 'Bật';
-                btn.style.background = '#4caf50';
-                document.body.style.cursor = 'default';
-            }
+// Load màu đã chọn từ localStorage
+try {
+    const savedColor = localStorage.getItem('highlightColor');
+    if (savedColor) {
+        highlightColor = savedColor;
+    }
+} catch (e) {}
+
+// Cập nhật active state cho toolbar sau khi render
+setTimeout(() => {
+    document.querySelectorAll('.color-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.style.backgroundColor === highlightColor || btn.style.background === highlightColor) {
+            btn.classList.add('active');
         }
+    });
+}, 500);
 
-        function setHighlightColor(color) {
-            highlightColor = color;
-            document.querySelectorAll('.color-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.style.backgroundColor === color || btn.style.background === color) btn.classList.add('active');
-            });
+function toggleHighlightMode() {
+    highlightMode = !highlightMode;
+    const btn = document.getElementById('highlightToggle');
+    if (highlightMode) {
+        btn.textContent = 'Tắt';
+        btn.style.background = '#f44336';
+        document.body.style.cursor = 'text';
+    } else {
+        btn.textContent = 'Bật';
+        btn.style.background = '#4caf50';
+        document.body.style.cursor = 'default';
+    }
+}
+
+function setHighlightColor(color) {
+    highlightColor = color;
+    document.querySelectorAll('.color-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.style.backgroundColor === color || btn.style.background === color) {
+            btn.classList.add('active');
         }
+    });
+    // Lưu màu vào localStorage
+    try {
+        localStorage.setItem('highlightColor', color);
+    } catch (e) {}
+}
 
-        document.addEventListener('mouseup', function (e) {
-            if (!highlightMode) return;
+document.addEventListener('mouseup', function (e) {
+    if (!highlightMode) return;
 
-            const selection = window.getSelection();
-            if (!selection || selection.isCollapsed) return;
+    const selection = window.getSelection();
+    if (!selection || selection.isCollapsed) return;
 
-            const selectedText = selection.toString().trim();
-            if (selectedText.length === 0) return;
+    const selectedText = selection.toString().trim();
+    if (selectedText.length === 0) return;
 
-            const range = selection.getRangeAt(0);
-            const container = range.commonAncestorContainer;
-            const mainContent = document.querySelector('main');
+    const range = selection.getRangeAt(0);
+    const container = range.commonAncestorContainer;
+    const mainContent = document.querySelector('main');
 
-            if (!mainContent || !mainContent.contains(container)) return;
+    if (!mainContent || !mainContent.contains(container)) return;
 
-            const audioBtn = container.closest?.('.audio-btn');
-            if (audioBtn) {
-                selection.removeAllRanges();
-                return;
-            }
+    const audioBtn = container.closest?.('.audio-btn');
+    if (audioBtn) {
+        selection.removeAllRanges();
+        return;
+    }
 
-            try {
-                let parentElement = container.nodeType === 3 ? container.parentElement : container;
-                const parentStyle = window.getComputedStyle(parentElement);
-const highlightId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
-                const span = document.createElement('span');
-                span.className = 'highlighted';
-                span.dataset.highlightId = highlightId;  // ← THÊM DÒNG NÀY
-                span.style.backgroundColor = highlightColor;
-                span.style.fontFamily = parentStyle.fontFamily || 'inherit';
-                span.style.fontSize = parentStyle.fontSize || 'inherit';
-                span.style.fontWeight = parentStyle.fontWeight || 'inherit';
-                span.style.color = parentStyle.color || 'inherit';
-                span.style.lineHeight = parentStyle.lineHeight || 'inherit';
-                span.style.letterSpacing = parentStyle.letterSpacing || 'inherit';
+    try {
+        let parentElement = container.nodeType === 3 ? container.parentElement : container;
+        const parentStyle = window.getComputedStyle(parentElement);
+        const highlightId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
 
-                span.textContent = selectedText;              
-                range.deleteContents();
-                range.insertNode(span);
+        const span = document.createElement('span');
+        span.className = 'highlighted';
+        span.dataset.highlightId = highlightId;
+        span.style.backgroundColor = highlightColor;
+        span.style.fontFamily = parentStyle.fontFamily || 'inherit';
+        span.style.fontSize = parentStyle.fontSize || 'inherit';
+        span.style.fontWeight = parentStyle.fontWeight || 'inherit';
+        span.style.color = parentStyle.color || 'inherit';
+        span.style.lineHeight = parentStyle.lineHeight || 'inherit';
+        span.style.letterSpacing = parentStyle.letterSpacing || 'inherit';
+        span.textContent = selectedText;
 
-                saveHighlights();
-            } catch (error) {
-                console.log('Lỗi highlight:', error);
-            }
+        range.deleteContents();
+        range.insertNode(span);
 
-            selection.removeAllRanges();
+        saveHighlights();
+    } catch (error) {
+        console.log('Lỗi highlight:', error);
+    }
+
+    selection.removeAllRanges();
+});
+
+function clearAllHighlights() {
+    if (confirm('Xóa tất cả highlight?')) {
+        document.querySelectorAll('.highlighted').forEach(el => {
+            const text = el.textContent;
+            const parent = el.parentNode;
+            const textNode = document.createTextNode(text);
+            parent.replaceChild(textNode, el);
+            parent.normalize();
         });
+        localStorage.removeItem('highlights');
+    }
+}
 
-        function clearAllHighlights() {
-            if (confirm('Xóa tất cả highlight?')) {
-                document.querySelectorAll('.highlighted').forEach(el => {
-                    const text = el.textContent;
-                    const parent = el.parentNode;
-                    const textNode = document.createTextNode(text);
-                    parent.replaceChild(textNode, el);
-                    parent.normalize();
-                });
-                localStorage.removeItem('highlights');
-            }
-        }
+function saveHighlights() {
+    const highlights = [];
+    document.querySelectorAll('.highlighted').forEach(el => {
+        highlights.push({
+            id: el.dataset.highlightId,
+            text: el.textContent,
+            color: el.style.backgroundColor
+        });
+    });
+    try {
+        localStorage.setItem('highlights', JSON.stringify(highlights));
+    } catch (e) {
+        console.warn('Không thể lưu highlight:', e);
+    }
+}
 
-        function saveHighlights() {
-            const highlights = [];
-            document.querySelectorAll('.highlighted').forEach(el => {
-                highlights.push({
-                    id: el.dataset.highlightId,
-                    text: el.textContent,
-                    color: el.style.backgroundColor
-                });
-            });
-            try {
-                localStorage.setItem('highlights', JSON.stringify(highlights));
-            } catch (e) {
-                console.warn('Không thể lưu highlight:', e);
-            }
-        }
-
-        function loadHighlights() {
+function loadHighlights() {
     const saved = localStorage.getItem('highlights');
     if (!saved) return;
     try {
@@ -2637,74 +2667,90 @@ const highlightId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr
     } catch (e) { console.log('Lỗi load highlight:', e); }
 }
 
-        // ===== QUẢN LÝ HIGHLIGHT LẺ (CẢI TIẾN - LỖI #3) =====
-        document.addEventListener('click', function(e) {
-            const target = e.target.closest('.highlighted');
-            const menu = document.getElementById('highlightMenu');
+// ===== QUẢN LÝ HIGHLIGHT LẺ =====
+document.addEventListener('click', function(e) {
+    const target = e.target.closest('.highlighted');
+    const menu = document.getElementById('highlightMenu');
 
-            if (target) {
-                e.stopPropagation();
-                currentHighlightElement = target;
-                const rect = target.getBoundingClientRect();
-                menu.style.left = Math.max(10, rect.left + rect.width / 2 - 80) + 'px';
-                menu.style.top = (rect.bottom + 5) + 'px';
-                menu.style.display = 'flex';
-                return;
-            }
+    if (target) {
+        e.stopPropagation();
+        currentHighlightElement = target;
+        const rect = target.getBoundingClientRect();
+        menu.style.left = Math.max(10, rect.left + rect.width / 2 - 80) + 'px';
+        menu.style.top = (rect.bottom + 5) + 'px';
+        menu.style.display = 'flex';
+        return;
+    }
 
-            if (menu && menu.contains(e.target)) {
-                return;
-            }
+    if (menu && menu.contains(e.target)) {
+        return;
+    }
 
-            if (menu) {
-                menu.style.display = 'none';
-                currentHighlightElement = null;
+    if (menu) {
+        menu.style.display = 'none';
+        currentHighlightElement = null;
+    }
+});
+
+function changeHighlightColor(btn, color) {
+    if (currentHighlightElement) {
+        const highlightId = currentHighlightElement.dataset.highlightId;
+        currentHighlightElement.style.backgroundColor = color;
+        
+        // CẬP NHẬT MÀU HIỆN TẠI
+        highlightColor = color;
+        
+        // Lưu màu vào localStorage
+        try {
+            localStorage.setItem('highlightColor', color);
+        } catch (e) {}
+        
+        // Cập nhật localStorage
+        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+        highlights = highlights.map(h => {
+            if (h.id === highlightId) h.color = color;
+            return h;
+        });
+        try {
+            localStorage.setItem('highlights', JSON.stringify(highlights));
+        } catch (e) {
+            console.warn('Không thể lưu highlight:', e);
+        }
+        
+        // Cập nhật active state cho toolbar
+        document.querySelectorAll('.color-btn').forEach(b => {
+            b.classList.remove('active');
+            if (b.style.backgroundColor === color || b.style.background === color) {
+                b.classList.add('active');
             }
         });
+        
+        document.getElementById('highlightMenu').style.display = 'none';
+        currentHighlightElement = null;
+    }
+}
 
-        function changeHighlightColor(btn, color) {
-            if (currentHighlightElement) {
-                const highlightId = currentHighlightElement.dataset.highlightId;
-                currentHighlightElement.style.backgroundColor = color;
-                
-                let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
-                highlights = highlights.map(h => {
-                    if (h.id === highlightId) h.color = color; // So sánh ID thay vì text
-                    return h;
-                });
-                try {
-                    localStorage.setItem('highlights', JSON.stringify(highlights));
-                } catch (e) {
-                    console.warn('Không thể lưu highlight:', e);
-                }
-                
-                document.getElementById('highlightMenu').style.display = 'none';
-                currentHighlightElement = null;
-            }
+function deleteSingleHighlight() {
+    if (currentHighlightElement) {
+        const text = currentHighlightElement.textContent;
+        const highlightId = currentHighlightElement.dataset.highlightId;
+        const parent = currentHighlightElement.parentNode;
+        const textNode = document.createTextNode(text);
+        parent.replaceChild(textNode, currentHighlightElement);
+        parent.normalize();
+
+        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+        highlights = highlights.filter(h => h.id !== highlightId);
+        try {
+            localStorage.setItem('highlights', JSON.stringify(highlights));
+        } catch (e) {
+            console.warn('Không thể lưu highlight:', e);
         }
 
-        function deleteSingleHighlight() {
-            if (currentHighlightElement) {
-                const text = currentHighlightElement.textContent;
-                const highlightId = currentHighlightElement.dataset.highlightId;
-                const parent = currentHighlightElement.parentNode;
-                const textNode = document.createTextNode(text);
-                parent.replaceChild(textNode, currentHighlightElement);
-                parent.normalize();
-
-                let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
-                highlights = highlights.filter(h => h.id !== highlightId); // So sánh ID thay vì text
-                try {
-                    localStorage.setItem('highlights', JSON.stringify(highlights));
-                } catch (e) {
-                    console.warn('Không thể lưu highlight:', e);
-                }
-
-                document.getElementById('highlightMenu').style.display = 'none';
-                currentHighlightElement = null;
-            }
-        }
-
+        document.getElementById('highlightMenu').style.display = 'none';
+        currentHighlightElement = null;
+    }
+}
         // ===== DOM READY =====
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.submenu a').forEach(link => {
@@ -2799,5 +2845,4 @@ const highlightId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr
         });
       </script>
 </body>
-
 </html>
