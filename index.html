@@ -2208,22 +2208,27 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
     tabs.forEach(tab => tab.classList.remove('active'));
     panes.forEach(pane => pane.classList.remove('active'));
 
+    // Tìm tab dựa trên onclick attribute
     let targetIndex = -1;
     const tabIdStr = String(tabId);
 
-    // Tìm tab theo ID từ onclick
     tabs.forEach((tab, index) => {
         const onclickAttr = tab.getAttribute('onclick');
         if (onclickAttr) {
-            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
-            if (match && match[1] === tabIdStr) {
-                targetIndex = index;
+            // Tìm tabId trong onclick, có thể là số hoặc chuỗi trong dấu nháy
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+            if (match) {
+                const foundId = match[1].trim();
+                if (foundId === tabIdStr) {
+                    targetIndex = index;
+                }
             }
         }
     });
 
     // Nếu không tìm thấy, thử theo index
     if (targetIndex === -1) {
+        // Nếu là bài tập (999), lấy tab cuối cùng
         if (tabIdStr === '999') {
             targetIndex = tabs.length - 1;
         } else {
@@ -2238,6 +2243,7 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         tabs[targetIndex].classList.add('active');
     }
 
+    // Tìm pane tương ứng
     const paneId = `tab-${hskLevel}-${lessonNum}-${tabIdStr}`;
     const pane = document.getElementById(paneId);
     if (pane) {
@@ -2264,9 +2270,9 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
 
         const onclickAttr = nextTabBtn.getAttribute('onclick');
         if (onclickAttr) {
-            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
             if (match && match[1]) {
-                tabId = match[1];
+                tabId = match[1].trim();
             }
         }
 
@@ -2274,20 +2280,18 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     } else {
-        // Chuyển sang bài tiếp theo
         const nextLessonNum = lessonNum + 1;
         if (nextLessonNum <= hskData[hskLevel].lessons.length) {
             const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
             if (nextLessonEl) {
-                // Lấy tab đầu tiên của bài tiếp theo
                 const firstTab = nextLessonEl.querySelector('.tab-btn');
                 let firstTabId = '1';
                 if (firstTab) {
                     const onclickAttr = firstTab.getAttribute('onclick');
                     if (onclickAttr) {
-                        const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
+                        const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
                         if (match && match[1]) {
-                            firstTabId = match[1];
+                            firstTabId = match[1].trim();
                         }
                     }
                 }
@@ -2295,7 +2299,6 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
                 nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         } else {
-            // Chuyển sang level tiếp theo
             const currentLevelIdx = hskLevels.indexOf(hskLevel);
             if (currentLevelIdx < hskLevels.length - 1) {
                 const nextLevel = hskLevels[currentLevelIdx + 1];
@@ -2324,9 +2327,9 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
 
         const onclickAttr = prevTabBtn.getAttribute('onclick');
         if (onclickAttr) {
-            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
             if (match && match[1]) {
-                tabId = match[1];
+                tabId = match[1].trim();
             }
         }
 
@@ -2342,9 +2345,9 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
             if (firstTab) {
                 const onclickAttr = firstTab.getAttribute('onclick');
                 if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
+                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
                     if (match && match[1]) {
-                        firstTabId = match[1];
+                        firstTabId = match[1].trim();
                     }
                 }
             }
