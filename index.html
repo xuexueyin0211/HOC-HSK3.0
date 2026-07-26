@@ -2183,15 +2183,21 @@ if (tabNum === '999' || tabNum === 999) {
     let activeIndex = -1;
     tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
 
-    if (activeIndex !== -1 && activeIndex < tabs.length - 1) {
-        const nextTabBtn = tabs[activeIndex + 1];
-        const onclickAttr = nextTabBtn.getAttribute('onclick');
-        const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
+   if (activeIndex !== -1 && activeIndex < tabs.length - 1) {
+    // Lấy tab tiếp theo bằng index
+    const nextTabBtn = tabs[activeIndex + 1];
+    // Lấy tabNum từ onclick hoặc dùng index + 1
+    let tabNum = (activeIndex + 2).toString(); // fallback
+    const onclickAttr = nextTabBtn.getAttribute('onclick');
+    if (onclickAttr) {
+        const match = onclickAttr.match(/switchTab\('([^']+)',(\d+),'?([^']+)'?\)/);
         if (match) {
-            const tabNum = match[3];
-            switchTab(hskLevel, lessonNum, tabNum);
+            tabNum = match[3];
         }
-        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    switchTab(hskLevel, lessonNum, tabNum);
+    lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
     } else {
         const nextLessonNum = lessonNum + 1;
         const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
@@ -2247,14 +2253,18 @@ if (tabNum === '999' || tabNum === 999) {
     tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
 
     if (activeIndex > 0) {
-        const prevTabBtn = tabs[activeIndex - 1];
-        const onclickAttr = prevTabBtn.getAttribute('onclick');
-        const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
+    const prevTabBtn = tabs[activeIndex - 1];
+    let tabNum = activeIndex.toString(); // fallback
+    const onclickAttr = prevTabBtn.getAttribute('onclick');
+    if (onclickAttr) {
+        const match = onclickAttr.match(/switchTab\('([^']+)',(\d+),'?([^']+)'?\)/);
         if (match) {
-            const tabNum = match[3];
-            switchTab(hskLevel, lessonNum, tabNum);
+            tabNum = match[3];
         }
-        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    switchTab(hskLevel, lessonNum, tabNum);
+    lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
     } else if (lessonNum > 1) {
         const prevLesson = lessonNum - 1;
         const prevLessonEl = document.getElementById(`lesson-${hskLevel}-${prevLesson}`);
