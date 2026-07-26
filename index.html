@@ -2286,8 +2286,20 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
                 lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
             } else if (lessonNum < Object.keys(hskData[hskLevel].lessons).length) {
-                const nextLessonNum = lessonNum + 1;
-                showLesson(hskLevel, nextLessonNum, '1');
+    const nextLessonNum = lessonNum + 1;
+    const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
+    let firstTabId = '1';
+    if (nextLessonEl) {
+        const firstTab = nextLessonEl.querySelector('.tab-btn');
+        if (firstTab) {
+            const onclickAttr = firstTab.getAttribute('onclick');
+            const match = onclickAttr?.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
+            if (match && match[1]) {
+                firstTabId = match[1];
+            }
+        }
+    }
+    showLesson(hskLevel, nextLessonNum, firstTabId);
 
             } else {
     const currentLevelIdx = hskLevels.indexOf(hskLevel);
@@ -2327,7 +2339,20 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
                 lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
             } else if (lessonNum > 1) {
-                showLesson(hskLevel, lessonNum - 1, '1');
+    const prevLessonNum = lessonNum - 1;
+    const prevLessonEl = document.getElementById(`lesson-${hskLevel}-${prevLessonNum}`);
+    let firstTabId = '1';
+    if (prevLessonEl) {
+        const firstTab = prevLessonEl.querySelector('.tab-btn');
+        if (firstTab) {
+            const onclickAttr = firstTab.getAttribute('onclick');
+            const match = onclickAttr?.match(/switchTab\([^,]+,\s*\d+,\s*['"](.*?)['"]?\)/);
+            if (match && match[1]) {
+                firstTabId = match[1];
+            }
+        }
+    }
+    showLesson(hskLevel, prevLessonNum, firstTabId);
 
             } else {
     const currentLevelIdx = hskLevels.indexOf(hskLevel);
@@ -2489,7 +2514,7 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
             }
         }
 
-        // ==============================================
+// ==============================================
 // HIGHLIGHT (CẢI TIẾN)
 // ==============================================
 let highlightColor = '#ffe0b2';
@@ -2508,7 +2533,8 @@ try {
 setTimeout(() => {
     document.querySelectorAll('.color-btn').forEach(btn => {
         btn.classList.remove('active');
-        if (btn.style.backgroundColor === highlightColor || btn.style.background === highlightColor) {
+        const bgColor = btn.style.backgroundColor || btn.style.background;
+        if (bgColor === highlightColor || bgColor === highlightColor) {
             btn.classList.add('active');
         }
     });
@@ -2532,7 +2558,8 @@ function setHighlightColor(color) {
     highlightColor = color;
     document.querySelectorAll('.color-btn').forEach(btn => {
         btn.classList.remove('active');
-        if (btn.style.backgroundColor === color || btn.style.background === color) {
+        const bgColor = btn.style.backgroundColor || btn.style.background;
+        if (bgColor === color || bgColor === color) {
             btn.classList.add('active');
         }
     });
@@ -2571,7 +2598,7 @@ document.addEventListener('mouseup', function (e) {
         const span = document.createElement('span');
         span.className = 'highlighted';
         span.dataset.highlightId = highlightId;
-        span.style.backgroundColor = highlightColor;
+        span.style.backgroundColor = highlightColor;  // Dùng màu hiện tại
         span.style.fontFamily = parentStyle.fontFamily || 'inherit';
         span.style.fontSize = parentStyle.fontSize || 'inherit';
         span.style.fontWeight = parentStyle.fontWeight || 'inherit';
@@ -2648,7 +2675,7 @@ function loadHighlights() {
                             const span = document.createElement('span');
                             span.className = 'highlighted';
                             span.dataset.highlightId = h.id || 'hl_' + Date.now();
-                            span.style.backgroundColor = h.color || '#ffe0b2';
+                            span.style.backgroundColor = h.color || highlightColor;  // Dùng màu đã lưu
 
                             const ps = window.getComputedStyle(parent);
                             span.style.fontFamily = ps.fontFamily || 'inherit';
@@ -2695,36 +2722,54 @@ document.addEventListener('click', function(e) {
 function changeHighlightColor(btn, color) {
     if (currentHighlightElement) {
         const highlightId = currentHighlightElement.dataset.highlightId;
+        
+        // 1. Đổi màu highlight hiện tại
         currentHighlightElement.style.backgroundColor = color;
         
-        // CẬP NHẬT MÀU HIỆN TẠI
+        // 2. Cập nhật màu mặc định cho lần highlight tiếp theo
         highlightColor = color;
         
-        // Lưu màu vào localStorage
+        // 3. Lưu màu vào localStorage
         try {
             localStorage.setItem('highlightColor', color);
         } catch (e) {}
         
-        // Cập nhật localStorage
+        // 4. Cập nhật localStorage cho tất cả highlight
         let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+        let found = false;
         highlights = highlights.map(h => {
-            if (h.id === highlightId) h.color = color;
+            if (h.id === highlightId) {
+                h.color = color;
+                found = true;
+            }
             return h;
         });
+        
+        // Nếu chưa có trong localStorage thì thêm mới
+        if (!found) {
+            highlights.push({
+                id: highlightId,
+                text: currentHighlightElement.textContent,
+                color: color
+            });
+        }
+        
         try {
             localStorage.setItem('highlights', JSON.stringify(highlights));
         } catch (e) {
             console.warn('Không thể lưu highlight:', e);
         }
         
-        // Cập nhật active state cho toolbar
+        // 5. Cập nhật active state cho toolbar
         document.querySelectorAll('.color-btn').forEach(b => {
             b.classList.remove('active');
-            if (b.style.backgroundColor === color || b.style.background === color) {
+            const bgColor = b.style.backgroundColor || b.style.background;
+            if (bgColor === color || bgColor === color) {
                 b.classList.add('active');
             }
         });
         
+        // 6. Đóng menu
         document.getElementById('highlightMenu').style.display = 'none';
         currentHighlightElement = null;
     }
