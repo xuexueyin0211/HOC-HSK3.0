@@ -2751,11 +2751,11 @@ if (tabNum === '999' || tabNum === 999) {
               // ===== QUẢN LÝ HIGHLIGHT LẺ =====
 let currentHighlightElement = null;
 
-// Click vào highlight để mở menu
 document.addEventListener('click', function(e) {
     const target = e.target.closest('.highlighted');
     const menu = document.getElementById('highlightMenu');
     
+    // Nếu click vào highlight
     if (target) {
         e.stopPropagation();
         currentHighlightElement = target;
@@ -2763,7 +2763,16 @@ document.addEventListener('click', function(e) {
         menu.style.left = Math.max(10, rect.left + rect.width / 2 - 80) + 'px';
         menu.style.top = (rect.bottom + 5) + 'px';
         menu.style.display = 'flex';
-    } else if (menu && !menu.contains(e.target)) {
+        return; // ← QUAN TRỌNG: thoát khỏi hàm
+    }
+    
+    // Nếu click vào menu thì giữ nguyên
+    if (menu && menu.contains(e.target)) {
+        return; // ← QUAN TRỌNG: thoát khỏi hàm
+    }
+    
+    // Click ra ngoài thì đóng menu
+    if (menu) {
         menu.style.display = 'none';
         currentHighlightElement = null;
     }
