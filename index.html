@@ -2574,6 +2574,7 @@ if (tabNum === '999' || tabNum === 999) {
         // ==============================================
         let highlightColor = '#ffe0b2';
         let highlightMode = false;
+let currentHighlightElement = null;
 
         function toggleHighlightMode() {
             highlightMode = !highlightMode;
@@ -2582,7 +2583,7 @@ if (tabNum === '999' || tabNum === 999) {
                 btn.textContent = 'Tắt';
                 btn.style.background = '#f44336';
                 document.body.style.cursor = 'text';
-                alert('🖍 Chọn văn bản để highlight!');
+                alert('Chọn văn bản để highlight!');
             } else {
                 btn.textContent = 'Bật';
                 btn.style.background = '#4caf50';
@@ -2749,8 +2750,6 @@ if (tabNum === '999' || tabNum === 999) {
             }, 100);
         });
               // ===== QUẢN LÝ HIGHLIGHT LẺ =====
-let currentHighlightElement = null;
-
 document.addEventListener('click', function(e) {
     const target = e.target.closest('.highlighted');
     const menu = document.getElementById('highlightMenu');
