@@ -6,7 +6,43 @@
     <title>HSK 3.0 - Ngữ Pháp </title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Quicksand:wght@500;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <style>
+<!-- ===== TOOLBAR ===== -->
+<div class="highlight-toolbar" id="highlightToolbar">
+    <!-- Highlight -->
+    <span style="font-weight:600;color:#555;margin-right:5px;">✏️ Highlight:</span>
+    <button class="color-btn" style="background:#ffeb3b;" onclick="setHighlightColor('#ffeb3b')" title="Vàng"></button>
+    <button class="color-btn" style="background:#ffcdd2;" onclick="setHighlightColor('#ffcdd2')" title="Đỏ nhạt"></button>
+    <button class="color-btn" style="background:#c8e6c9;" onclick="setHighlightColor('#c8e6c9')" title="Xanh nhạt"></button>
+    <button class="color-btn" style="background:#bbdefb;" onclick="setHighlightColor('#bbdefb')" title="Xanh dương nhạt"></button>
+    <button class="color-btn" style="background:#e1bee7;" onclick="setHighlightColor('#e1bee7')" title="Tím nhạt"></button>
+    
+    <span style="width:1px;height:25px;background:#ddd;display:inline-block;"></span>
+    
+    <button onclick="toggleHighlightMode()" id="highlightToggle" style="background:#4caf50;color:white;">
+        🖍 Bật highlight
+    </button>
+    <button onclick="clearAllHighlights()" style="background:#f44336;color:white;">
+        🗑 Xóa all
+    </button>
+    
+    <span style="width:1px;height:25px;background:#ddd;display:inline-block;"></span>
+    
+    <!-- Bút vẽ -->
+    <span style="font-weight:600;color:#555;margin-right:5px;">🎨 Bút:</span>
+    <button class="color-btn" style="background:#ff0000;border-color:#ff0000;" onclick="setDrawColor('#ff0000')"></button>
+    <button class="color-btn" style="background:#2196f3;border-color:#2196f3;" onclick="setDrawColor('#2196f3')"></button>
+    <button class="color-btn" style="background:#4caf50;border-color:#4caf50;" onclick="setDrawColor('#4caf50')"></button>
+    <button class="color-btn" style="background:#ff9800;border-color:#ff9800;" onclick="setDrawColor('#ff9800')"></button>
+    <button class="color-btn" style="background:#9c27b0;border-color:#9c27b0;" onclick="setDrawColor('#9c27b0')"></button>
+    
+    <button onclick="toggleDrawMode()" id="drawToggle" style="background:#2196f3;color:white;">
+        ✏️ Bút vẽ
+    </button>
+    <button onclick="clearDrawings()" style="background:#f44336;color:white;">
+        🗑 Xóa vẽ
+    </button>
+</div>    
+<style>
         /* ===== CSS ĐĂNG NHẬP ===== */
         #login-overlay {
             display: none;
@@ -40,6 +76,74 @@
             color: #666;
             margin-bottom: 20px;
         }
+/* ===== HIGHLIGHT ===== */
+.highlight-toolbar {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 99999;
+    border: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.highlight-toolbar button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.highlight-toolbar button:hover {
+    transform: scale(1.05);
+}
+
+.highlight-toolbar .color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.highlight-toolbar .color-btn:hover {
+    transform: scale(1.15);
+    border-color: #333;
+}
+
+.highlight-toolbar .color-btn.active {
+    border-color: #333;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+}
+
+.highlighted {
+    background-color: #ffeb3b !important;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.highlighted:hover {
+    opacity: 0.7;
+}
+
+.highlighted-remove {
+    background-color: transparent !important;
+}
         .google-btn {
             display: flex;
             align-items: center;
@@ -1079,7 +1183,39 @@
             </button>
         </div>
     </div>
+<!-- ===== TOOLBAR HIGHLIGHT & BÚT ===== -->
+<div class="highlight-toolbar" id="highlightToolbar">
+    <!-- Highlight -->
+    <span style="font-weight:600;color:#555;margin-right:5px;">✏️ Highlight:</span>
+    <button class="color-btn" style="background:#ffeb3b;" onclick="setHighlightColor('#ffeb3b')" title="Vàng"></button>
+    <button class="color-btn" style="background:#ffcdd2;" onclick="setHighlightColor('#ffcdd2')" title="Đỏ nhạt"></button>
+    <button class="color-btn" style="background:#c8e6c9;" onclick="setHighlightColor('#c8e6c9')" title="Xanh nhạt"></button>
+    <button class="color-btn" style="background:#bbdefb;" onclick="setHighlightColor('#bbdefb')" title="Xanh dương nhạt"></button>
+    <button class="color-btn" style="background:#e1bee7;" onclick="setHighlightColor('#e1bee7')" title="Tím nhạt"></button>
+    <button class="color-btn" style="background:#ffe0b2;" onclick="setHighlightColor('#ffe0b2')" title="Cam nhạt"></button>
+    
+    <span style="width:1px;height:25px;background:#ddd;display:inline-block;"></span>
+    
+    <button onclick="toggleHighlightMode()" id="highlightToggle" style="background:#4caf50;color:white;">
+        🖍 Bật highlight
+    </button>
+    <button onclick="clearAllHighlights()" style="background:#f44336;color:white;">
+        🗑 Xóa all
+    </button>
+    
+    <span style="width:1px;height:25px;background:#ddd;display:inline-block;"></span>
+    
+    <!-- Bút vẽ -->
+    <button onclick="toggleDrawMode()" id="drawToggle" style="background:#2196f3;color:white;">
+        ✏️ Bút vẽ
+    </button>
+    <button onclick="clearDrawings()" style="background:#f44336;color:white;">
+        🗑 Xóa vẽ
+    </button>
+</div>
 
+<!-- Canvas cho bút vẽ -->
+<canvas id="drawCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;display:none;"></canvas>
     <!-- ===== CONTAINER CHÍNH ===== -->
     <div id="app-container">
 
@@ -1331,24 +1467,24 @@ audioDiv.innerHTML = `
             
             <!-- Nút hiện phiên âm -->
             <button onclick="togglePinyinForThis(event)" 
-                    style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;box-shadow:0 2px 6px rgba(76,175,80,0.3);">
+                    style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">
                 📖 Phiên âm
             </button>
             
             <!-- Nút hiện nghĩa -->
             <button onclick="toggleNghiaForThis(event)" 
-                    style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;box-shadow:0 2px 6px rgba(255,152,0,0.3);">
+                    style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">
                 🌟 Nghĩa
             </button>
         </div>
         
-        <!-- Phiên âm (ẩn ban đầu) -->
-        <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;display:block;">${ex.py}</span>
+        <!-- PHIÊN ÂM: ẨN BAN ĐẦU -->
+        <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;">${ex.py}</span>
         
-        <!-- Nghĩa (ẩn ban đầu) -->
-        <span class="vi" style="display:none;font-size:14px;color:#64748b;display:block;">${ex.vi}</span>
+        <!-- NGHĨA: ẨN BAN ĐẦU -->
+        <span class="vi" style="display:none;font-size:14px;color:#64748b;">${ex.vi}</span>
     </div>
-    <button class="audio-btn" onclick="playAudio('${ex.cn}', event)">🔊</button>
+    <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}', event)">🔊</button>
 `;
                             exampleDiv.appendChild(audioDiv);
 
@@ -1844,6 +1980,7 @@ audioDiv.innerHTML = `
                 
                 renderFavorites();
                 loadData();
+loadHighlights(); // 👈 THÊM DÒNG NÀY
             }, 100);
         });
     </script>
@@ -1967,6 +2104,285 @@ function toggleNghiaForThis(event) {
         btn.style.boxShadow = '0 2px 6px rgba(255,152,0,0.3)';
     }
 }
+// ==============================================
+// HIGHLIGHT
+// ==============================================
+
+let highlightColor = '#ffeb3b';
+let highlightMode = false;
+
+// Bật/tắt chế độ highlight
+function toggleHighlightMode() {
+    highlightMode = !highlightMode;
+    const btn = document.getElementById('highlightToggle');
+    
+    if (highlightMode) {
+        btn.textContent = '🛑 Tắt highlight';
+        btn.style.background = '#f44336';
+        document.body.style.cursor = 'text';
+        alert('🖍 Chọn văn bản để highlight!');
+    } else {
+        btn.textContent = '🖍 Bật highlight';
+        btn.style.background = '#4caf50';
+        document.body.style.cursor = 'default';
+    }
+}
+
+// Chọn màu highlight
+function setHighlightColor(color) {
+    highlightColor = color;
+    document.querySelectorAll('.color-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.style.backgroundColor === color || btn.style.background === color) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+// Xử lý highlight khi chọn văn bản
+document.addEventListener('mouseup', function(e) {
+    if (!highlightMode) return;
+    
+    const selection = window.getSelection();
+    if (!selection || selection.isCollapsed) return;
+    
+    const selectedText = selection.toString().trim();
+    if (selectedText.length === 0) return;
+    
+    // Chỉ highlight trong vùng nội dung chính
+    const range = selection.getRangeAt(0);
+    const container = range.commonAncestorContainer;
+    const mainContent = document.querySelector('main');
+    
+    if (!mainContent || !mainContent.contains(container)) return;
+    
+    // Highlight văn bản được chọn
+    try {
+        const span = document.createElement('span');
+        span.className = 'highlighted';
+        span.style.backgroundColor = highlightColor;
+        span.textContent = selectedText;
+        range.deleteContents();
+        range.insertNode(span);
+        
+        // Lưu highlight vào localStorage
+        saveHighlights();
+    } catch (error) {
+        console.log('Lỗi highlight:', error);
+    }
+    
+    selection.removeAllRanges();
+});
+
+// Xóa tất cả highlight
+function clearAllHighlights() {
+    if (confirm('Xóa tất cả highlight?')) {
+        document.querySelectorAll('.highlighted').forEach(el => {
+            const text = el.textContent;
+            const parent = el.parentNode;
+            const textNode = document.createTextNode(text);
+            parent.replaceChild(textNode, el);
+            parent.normalize();
+        });
+        localStorage.removeItem('highlights');
+    }
+}
+
+// Lưu highlight vào localStorage
+function saveHighlights() {
+    const highlights = [];
+    document.querySelectorAll('.highlighted').forEach(el => {
+        highlights.push({
+            text: el.textContent,
+            color: el.style.backgroundColor,
+            // Lưu thêm thông tin vị trí
+            parent: el.parentNode?.textContent || ''
+        });
+    });
+    localStorage.setItem('highlights', JSON.stringify(highlights));
+}
+
+// ===== KHÔI PHỤC HIGHLIGHT TỪ LOCALSTORAGE =====
+function loadHighlights() {
+    const saved = localStorage.getItem('highlights');
+    if (!saved) return;
+    
+    try {
+        const highlights = JSON.parse(saved);
+        // Đợi nội dung load xong rồi mới highlight
+        setTimeout(() => {
+            highlights.forEach(h => {
+                // Tìm tất cả text nodes trong main
+                const walker = document.createTreeWalker(
+                    document.querySelector('main'),
+                    NodeFilter.SHOW_TEXT,
+                    null,
+                    false
+                );
+                
+                let nodes = [];
+                let node;
+                while (node = walker.nextNode()) {
+                    if (node.textContent.includes(h.text)) {
+                        nodes.push(node);
+                    }
+                }
+                
+                nodes.forEach(textNode => {
+                    const parent = textNode.parentNode;
+                    if (parent && !parent.classList.contains('highlighted')) {
+                        const text = textNode.textContent;
+                        const index = text.indexOf(h.text);
+                        if (index !== -1) {
+                            const range = document.createRange();
+                            range.setStart(textNode, index);
+                            range.setEnd(textNode, index + h.text.length);
+                            
+                            const span = document.createElement('span');
+                            span.className = 'highlighted';
+                            span.style.backgroundColor = h.color || '#ffeb3b';
+                            span.textContent = h.text;
+                            range.deleteContents();
+                            range.insertNode(span);
+                        }
+                    }
+                });
+            });
+        }, 500);
+    } catch (e) {
+        console.log('Lỗi load highlight:', e);
+    }
+}
+// ==============================================
+// BÚT VẼ
+// ==============================================
+
+let drawMode = false;
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+
+const canvas = document.getElementById('drawCanvas');
+const ctx = canvas.getContext('2d');
+
+// Bật/tắt chế độ vẽ
+function toggleDrawMode() {
+    drawMode = !drawMode;
+    const btn = document.getElementById('drawToggle');
+    
+    if (drawMode) {
+        btn.textContent = '🛑 Tắt vẽ';
+        btn.style.background = '#f44336';
+        canvas.style.display = 'block';
+        canvas.style.pointerEvents = 'auto';
+        document.body.style.cursor = 'crosshair';
+        
+        // Thiết lập canvas
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.strokeStyle = '#ff0000';
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        
+        // Load bản vẽ đã lưu
+        loadDrawings();
+    } else {
+        btn.textContent = '✏️ Bút vẽ';
+        btn.style.background = '#2196f3';
+        canvas.style.display = 'none';
+        canvas.style.pointerEvents = 'none';
+        document.body.style.cursor = 'default';
+    }
+}
+
+// Sự kiện vẽ
+canvas.addEventListener('mousedown', function(e) {
+    if (!drawMode) return;
+    isDrawing = true;
+    const rect = canvas.getBoundingClientRect();
+    lastX = e.clientX - rect.left;
+    lastY = e.clientY - rect.top;
+});
+
+canvas.addEventListener('mousemove', function(e) {
+    if (!isDrawing || !drawMode) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    
+    lastX = x;
+    lastY = y;
+});
+
+canvas.addEventListener('mouseup', function() {
+    if (isDrawing) {
+        isDrawing = false;
+        saveDrawings();
+    }
+});
+
+canvas.addEventListener('mouseleave', function() {
+    if (isDrawing) {
+        isDrawing = false;
+        saveDrawings();
+    }
+});
+
+// Đổi màu bút
+function setDrawColor(color) {
+    ctx.strokeStyle = color;
+}
+
+// Đổi size bút
+function setDrawSize(size) {
+    ctx.lineWidth = size;
+}
+
+// Xóa bản vẽ
+function clearDrawings() {
+    if (confirm('Xóa tất cả bản vẽ?')) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        localStorage.removeItem('drawings');
+    }
+}
+
+// Lưu bản vẽ
+function saveDrawings() {
+    const dataURL = canvas.toDataURL();
+    localStorage.setItem('drawings', dataURL);
+}
+
+// Load bản vẽ
+function loadDrawings() {
+    const saved = localStorage.getItem('drawings');
+    if (saved) {
+        const img = new Image();
+        img.onload = function() {
+            ctx.drawImage(img, 0, 0);
+        };
+        img.src = saved;
+    }
+}
+
+// Tự động resize canvas khi cửa sổ thay đổi
+window.addEventListener('resize', function() {
+    if (drawMode) {
+        const tempData = canvas.toDataURL();
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const img = new Image();
+        img.onload = function() {
+            ctx.drawImage(img, 0, 0);
+        };
+        img.src = tempData;
+    }
+});
     </script>
 
 </body>
