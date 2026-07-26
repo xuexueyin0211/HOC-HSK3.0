@@ -2137,8 +2137,7 @@
                 img.src = tempData;
             }
         });
-
-        // ===== DOM READY =====
+// ===== DOM READY =====
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.submenu a').forEach(link => {
                 link.addEventListener('click', function(e) {
@@ -2169,9 +2168,9 @@
             });
 
             setTimeout(() => {
-    loadData();
-    loadHighlights();
-}, 100);
+                loadData();
+                loadHighlights();
+            }, 100);
         });
     </script>
 
