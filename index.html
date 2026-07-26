@@ -41,7 +41,8 @@
             color: #666;
             margin-bottom: 20px;
         }
-/* ===== TOOLBAR THU NHỎ ===== */
+
+/* ===== TOOLBAR 2 HÀNG ===== */
 .highlight-toolbar {
     position: fixed;
     bottom: 100px;
@@ -53,13 +54,44 @@
     z-index: 99999;
     border: 1px solid #e0e0e0;
     display: none;
-    max-width: 320px;
+    max-width: 340px;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 4px;
     align-items: center;
     justify-content: center;
     font-size: 11px;
 }
+
+.highlight-toolbar > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.highlight-toolbar .color-btn {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    padding: 0 !important;
+    transition: all 0.3s ease;
+}
+
+.highlight-toolbar .color-btn:hover {
+    transform: scale(1.15);
+    border-color: #333;
+}
+
+.highlight-toolbar .color-btn.active {
+    border-color: #333;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+}
+
 .highlight-toolbar button {
     font-size: 11px !important;
     padding: 4px 10px !important;
@@ -69,19 +101,14 @@
     font-weight: 600;
     transition: all 0.3s ease;
 }
-.highlight-toolbar button:hover { transform: scale(1.05); }
-.highlight-toolbar .color-btn {
-    width: 22px !important;
-    height: 22px !important;
-    min-width: 22px !important;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    cursor: pointer;
-    padding: 0 !important;
-    transition: all 0.3s ease;
+
+.highlight-toolbar button:hover {
+    transform: scale(1.05);
 }
-.highlight-toolbar .color-btn:hover { transform: scale(1.15); border-color: #333; }
-.highlight-toolbar .color-btn.active { border-color: #333; box-shadow: 0 0 0 3px rgba(0,0,0,0.2); }
+
+#eraserToggle.active {
+    background: #f44336 !important;
+}
 
 #toggleToolbarBtn {
     position: fixed;
@@ -110,6 +137,7 @@
     transition: all 0.3s ease;
 }
 .highlighted:hover { opacity: 0.7; }
+
         .google-btn {
             display: flex;
             align-items: center;
@@ -214,7 +242,57 @@
             background: #f5f5f5;
         }
 
-                /* ===== CÁC CSS CŨ CỦA BẠN ===== */
+        /* ===== VÙNG GHI CHÚ ===== */
+        .note-area {
+            margin-top: 20px;
+            background: #fff8e1;
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #ffe0b2;
+        }
+        .note-area textarea {
+            width: 100%;
+            min-height: 130px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 14px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .note-area textarea:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+        .note-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .note-actions button {
+            padding: 6px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .note-actions .save-note {
+            background: #4caf50;
+            color: white;
+        }
+        .note-actions .save-note:hover {
+            background: #388e3c;
+        }
+        .note-actions .delete-note {
+            background: #f44336;
+            color: white;
+        }
+        .note-actions .delete-note:hover {
+            background: #d32f2f;
+        }
+
+        /* ===== CÁC CSS CŨ CỦA BẠN ===== */
         .search-box {
             padding: 0 15px 15px 15px;
         }
@@ -467,6 +545,54 @@
             align-items: center;
             gap: 8px;
         }
+
+/* ===== BÀI TẬP ===== */
+.exercise-container {
+    padding: 5px 0;
+}
+
+.exercise-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #4caf50;
+    transition: all 0.3s ease;
+}
+
+.exercise-item:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.exercise-item .exercise-result {
+    margin-top: 10px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+.exercise-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exercise-item label:hover {
+    background: #e8f5e9 !important;
+}
+
+.exercise-item input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #4caf50;
+}
         .tab-nav {
             display: flex;
             gap: 5px;
@@ -852,7 +978,7 @@
         .level-btn.hsk3 { color: #e11d48; border-color: #fda4af; }
         .level-btn.hsk3.active { background: #e11d48; color: white; border-color: #be123c; box-shadow: 0 2px 6px rgba(225, 29, 72, 0.3); }
 
-        /* ===== MÀU SẮC HSK 1, 2, 3 (GIỮ NGUYÊN NHƯ CŨ) ===== */
+        /* ===== MÀU SẮC HSK 1, 2, 3 ===== */
         .hsk-wrapper.hsk1 .top-banner { 
             background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9) !important; 
             color: #2e7d32 !important; 
@@ -882,7 +1008,6 @@
         .hsk-wrapper.hsk1 table td { border-color: #c8e6c9 !important; }
         .hsk-wrapper.hsk1 table tr:nth-child(even) { background: #f8fdf8 !important; }
 
-        /* ===== HSK2 - Màu cam ===== */
         .hsk-wrapper.hsk2 .top-banner { 
             background: linear-gradient(135deg, #fef3c7, #fde68a, #fef3c7) !important; 
             color: #b45309 !important; 
@@ -915,7 +1040,6 @@
         .hsk-wrapper.hsk2 table td { border-color: #fde68a !important; }
         .hsk-wrapper.hsk2 table tr:nth-child(even) { background: #fffdf2 !important; }
 
-        /* ===== HSK3 - Màu đỏ ===== */
         .hsk-wrapper.hsk3 .top-banner { 
             background: linear-gradient(135deg, #ffe4e6, #fecdd3, #ffe4e6) !important; 
             color: #be123c !important; 
@@ -1022,12 +1146,12 @@
             .tab-btn { padding: 8px 12px; font-size: 13px; flex: 1; text-align: center; }
             .example-with-audio { padding: 8px 10px; }
             .example-with-audio .text-group .cn { font-size: 18px !important; line-height: 1.6; }
-            .hl-h1, .hl-h2, .hl-h3 { margin: 1px 2px !important; padding: 1px 4px !important; }
             .compare-table, table { display: block; overflow-x: auto; white-space: nowrap; }
             .chinese-decoration { display: none !important; }
             .highlight-toolbar { max-width: 280px; right: 10px; bottom: 90px; padding: 10px 12px; }
             #toggleToolbarBtn { width: 45px; height: 45px; font-size: 20px; bottom: 20px; right: 20px; }
         }
+
 /* ===== HIỆU ỨNG CLICK PINYIN & NGHĨA ===== */
 .text-group .cn {
     cursor: pointer;
@@ -1061,7 +1185,7 @@
     border-radius: 4px;
     display: inline-block;
 }
-/* ===== NÚT BẤM CHO TỪNG CÂU ===== */
+
 .text-group button {
     transition: all 0.3s ease;
     font-family: inherit;
@@ -1097,32 +1221,47 @@
     <!-- ===== NÚT MỞ TOOLBAR ===== -->
     <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
 
-    <!-- ===== TOOLBAR THU NHỎ ===== -->
+    <!-- ===== TOOLBAR 2 HÀNG ===== -->
     <div class="highlight-toolbar" id="highlightToolbar">
-        <span style="font-weight:600;color:#555;font-size:11px;">✏️ Highlight:</span>
-        <button class="color-btn" style="background:#ffeb3b;" onclick="setHighlightColor('#ffeb3b')" title="Vàng"></button>
-        <button class="color-btn" style="background:#ffcdd2;" onclick="setHighlightColor('#ffcdd2')" title="Đỏ nhạt"></button>
-        <button class="color-btn" style="background:#c8e6c9;" onclick="setHighlightColor('#c8e6c9')" title="Xanh nhạt"></button>
-        <button class="color-btn" style="background:#bbdefb;" onclick="setHighlightColor('#bbdefb')" title="Xanh dương nhạt"></button>
-        <button class="color-btn" style="background:#e1bee7;" onclick="setHighlightColor('#e1bee7')" title="Tím nhạt"></button>
-        <button class="color-btn" style="background:#ffe0b2;" onclick="setHighlightColor('#ffe0b2')" title="Cam nhạt"></button>
+        <!-- HÀNG 1: HIGHLIGHT -->
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;padding-bottom:6px;border-bottom:1px solid #eee;">
+            <span style="font-weight:600;color:#555;font-size:11px;">✏️ Highlight:</span>
+            <button class="color-btn" style="background:#ffeb3b;" onclick="setHighlightColor('#ffeb3b')" title="Vàng"></button>
+            <button class="color-btn" style="background:#ffcdd2;" onclick="setHighlightColor('#ffcdd2')" title="Đỏ nhạt"></button>
+            <button class="color-btn" style="background:#c8e6c9;" onclick="setHighlightColor('#c8e6c9')" title="Xanh nhạt"></button>
+            <button class="color-btn" style="background:#bbdefb;" onclick="setHighlightColor('#bbdefb')" title="Xanh dương nhạt"></button>
+            <button class="color-btn" style="background:#e1bee7;" onclick="setHighlightColor('#e1bee7')" title="Tím nhạt"></button>
+            <button class="color-btn" style="background:#ffe0b2;" onclick="setHighlightColor('#ffe0b2')" title="Cam nhạt"></button>
+            
+            <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
+            
+            <button onclick="toggleHighlightMode()" id="highlightToggle" style="padding:4px 10px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;">🖍 Bật</button>
+            <button onclick="clearAllHighlights()" style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">🗑 Xóa tất cả</button>
+        </div>
         
-        <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
-        
-        <button onclick="toggleHighlightMode()" id="highlightToggle" style="background:#4caf50;color:white;">🖍 Bật</button>
-        <button onclick="clearAllHighlights()" style="background:#2196f3;color:white;">🗑 Xóa</button>
-        
-        <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
-        
-        <span style="font-weight:600;color:#555;font-size:11px;">🎨 Bút:</span>
-        <button class="color-btn" style="background:#ff0000;" onclick="setDrawColor('#ff0000')"></button>
-        <button class="color-btn" style="background:#2196f3;" onclick="setDrawColor('#2196f3')"></button>
-        <button class="color-btn" style="background:#4caf50;" onclick="setDrawColor('#4caf50')"></button>
-        <button class="color-btn" style="background:#ff9800;" onclick="setDrawColor('#ff9800')"></button>
-        <button class="color-btn" style="background:#9c27b0;" onclick="setDrawColor('#9c27b0')"></button>
-        
-        <button onclick="toggleDrawMode()" id="drawToggle" style="background:#2196f3;color:white;">✏️ Vẽ</button>
-        <button onclick="clearDrawings()" style="background:#f44336;color:white;">🗑 Xóa</button>
+        <!-- HÀNG 2: BÚT VẼ -->
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;padding-top:6px;">
+            <span style="font-weight:600;color:#555;font-size:11px;">🎨 Bút:</span>
+            <button class="color-btn" style="background:#ff0000;" onclick="setDrawColor('#ff0000')" title="Đỏ"></button>
+            <button class="color-btn" style="background:#2196f3;" onclick="setDrawColor('#2196f3')" title="Xanh dương"></button>
+            <button class="color-btn" style="background:#4caf50;" onclick="setDrawColor('#4caf50')" title="Xanh lá"></button>
+            <button class="color-btn" style="background:#ff9800;" onclick="setDrawColor('#ff9800')" title="Cam"></button>
+            <button class="color-btn" style="background:#9c27b0;" onclick="setDrawColor('#9c27b0')" title="Tím"></button>
+            <button class="color-btn" style="background:#000000;" onclick="setDrawColor('#000000')" title="Đen"></button>
+            
+            <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
+            
+            <select id="eraserSizeSelect" onchange="setEraserSize(this.value)" style="padding:2px 4px;border-radius:4px;border:1px solid #ddd;font-size:10px;">
+                <option value="10">Tẩy nhỏ</option>
+                <option value="20" selected>Tẩy vừa</option>
+                <option value="40">Tẩy lớn</option>
+                <option value="60">Tẩy rất lớn</option>
+            </select>
+            
+            <button onclick="toggleEraserMode()" id="eraserToggle" style="padding:4px 10px;border:none;border-radius:12px;background:#795548;color:white;font-size:11px;font-weight:600;cursor:pointer;">🧹 Tẩy</button>
+            <button onclick="toggleDrawMode()" id="drawToggle" style="padding:4px 10px;border:none;border-radius:12px;background:#2196f3;color:white;font-size:11px;font-weight:600;cursor:pointer;">✏️ Vẽ</button>
+            <button onclick="clearDrawings()" style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">🗑 Xóa tất cả</button>
+        </div>
     </div>
 
     <!-- ===== CANVAS CHO BÚT VẼ ===== -->
@@ -1150,7 +1289,16 @@
                 <p style="margin-top:10px;color:#666;">Đang tải dữ liệu...</p>
             </div>
         </div>
-                   </div>
+
+        <!-- ===== VÙNG GHI CHÚ ===== -->
+        <div class="note-area" id="noteArea" style="max-width:850px;margin:0 auto;padding:15px;">
+            <label style="font-weight:600;color:#5d4037;display:block;margin-bottom:5px;">📝 Ghi chú của bạn:</label>
+            <textarea id="noteContent" placeholder="Viết ghi chú cho bài học này..."></textarea>
+            <div class="note-actions">
+                <button class="save-note" onclick="saveNote()">💾 Lưu ghi chú</button>
+                <button class="delete-note" onclick="deleteNote()">🗑 Xóa</button>
+            </div>
+        </div>
 
     </div>
 
@@ -1163,7 +1311,7 @@
 
     <script>
         // ==============================================
-        // TOÀN BỘ JAVASCRIPT - GIỮ NGUYÊN CODE CŨ
+        // TOÀN BỘ JAVASCRIPT
         // ==============================================
 
         let hskData = {};
@@ -1172,6 +1320,7 @@
         let currentTab = 1;
         const hskLevels = ['hsk1', 'hsk2', 'hsk3'];
 
+        // ===== LOAD DỮ LIỆU =====
         async function loadData() {
             try {
                 document.getElementById('loading').style.display = 'block';
@@ -1197,6 +1346,7 @@
             }
         }
 
+        // ===== RENDER ALL =====
         function renderAll() {
             const app = document.getElementById('app');
             app.innerHTML = '';
@@ -1209,6 +1359,7 @@
             showLesson('hsk1', 1);
         }
 
+        // ===== TẠO WRAPPER HSK =====
         function createHSKWrapper(levelId, levelData) {
             const wrapper = document.createElement('div');
             wrapper.id = levelId;
@@ -1289,11 +1440,19 @@
                     tabNav.appendChild(btn);
                 });
 
+                // THÊM TAB BÀI TẬP
+                const exerciseBtn = document.createElement('button');
+                exerciseBtn.className = 'tab-btn';
+                exerciseBtn.textContent = '📝 Bài tập';
+                exerciseBtn.onclick = () => switchTab(levelId, lesson.id, 'exercise');
+                tabNav.appendChild(exerciseBtn);
+
                 lessonDiv.appendChild(tabNav);
 
                 const tabContent = document.createElement('div');
                 tabContent.className = 'tab-content';
 
+                // Tạo các tab cũ
                 lesson.tabs.forEach((tab, tabIndex) => {
                     const pane = document.createElement('div');
                     pane.id = `tab-${levelId}-${lesson.id}-${tab.id}`;
@@ -1358,6 +1517,91 @@
                     tabContent.appendChild(pane);
                 });
 
+                // TẠO PANE BÀI TẬP
+                const exercisePane = document.createElement('div');
+                exercisePane.id = `tab-${levelId}-${lesson.id}-exercise`;
+                exercisePane.className = 'tab-pane';
+
+                const exerciseCard = document.createElement('div');
+                exerciseCard.className = 'card';
+
+                const exerciseHtml = document.createElement('div');
+                exerciseHtml.className = 'grammar';
+
+                const exTitle = document.createElement('h3');
+                exTitle.textContent = '📝 Bài tập';
+                exerciseHtml.appendChild(exTitle);
+
+                const exContainer = document.createElement('div');
+                exContainer.id = `exercise-${levelId}-${lesson.id}`;
+                exContainer.className = 'exercise-container';
+
+                if (lesson.exercises && lesson.exercises.length > 0) {
+                    lesson.exercises.forEach((ex, idx) => {
+                        const exDiv = document.createElement('div');
+                        exDiv.className = 'exercise-item';
+                        exDiv.style.cssText = 'margin-bottom:20px;padding:15px;background:#f8f9fa;border-radius:10px;border-left:4px solid #4caf50;';
+                        
+                        const qDiv = document.createElement('div');
+                        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+                        qDiv.textContent = `${idx + 1}. ${ex.question}`;
+                        exDiv.appendChild(qDiv);
+                        
+                        const optionsDiv = document.createElement('div');
+                        optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
+                        
+                        ex.options.forEach((opt, optIdx) => {
+                            const label = document.createElement('label');
+                            label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
+                            label.onmouseover = function() { this.style.background = '#e8f5e9'; };
+                            label.onmouseout = function() { this.style.background = 'transparent'; };
+                            
+                            const radio = document.createElement('input');
+                            radio.type = 'radio';
+                            radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
+                            radio.value = optIdx;
+                            radio.onchange = function() {
+                                const parent = this.closest('.exercise-item');
+                                const resultDiv = parent.querySelector('.exercise-result');
+                                const isCorrect = parseInt(this.value) === ex.answer;
+                                if (isCorrect) {
+                                    resultDiv.textContent = '✅ Đúng!';
+                                    resultDiv.style.color = '#4caf50';
+                                } else {
+                                    resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
+                                    resultDiv.style.color = '#f44336';
+                                }
+                            };
+                            
+                            const textSpan = document.createElement('span');
+                            textSpan.textContent = opt;
+                            
+                            label.appendChild(radio);
+                            label.appendChild(textSpan);
+                            optionsDiv.appendChild(label);
+                        });
+                        
+                        exDiv.appendChild(optionsDiv);
+                        
+                        const resultDiv = document.createElement('div');
+                        resultDiv.className = 'exercise-result';
+                        resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:#fff;';
+                        exDiv.appendChild(resultDiv);
+                        
+                        exContainer.appendChild(exDiv);
+                    });
+                } else {
+                    const noEx = document.createElement('p');
+                    noEx.textContent = 'Chưa có bài tập cho bài học này.';
+                    noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
+                    exContainer.appendChild(noEx);
+                }
+
+                exerciseHtml.appendChild(exContainer);
+                exerciseCard.appendChild(exerciseHtml);
+                exercisePane.appendChild(exerciseCard);
+                tabContent.appendChild(exercisePane);
+
                 lessonDiv.appendChild(tabContent);
 
                 const nav = document.createElement('div');
@@ -1377,7 +1621,7 @@
             return wrapper;
         }
 
-        // ===== CÁC HÀM CHÍNH (GIỮ NGUYÊN) =====
+        // ===== CÁC HÀM CHÍNH =====
         function switchLevel(levelId, button) {
             document.querySelectorAll('.hsk-wrapper').forEach(el => el.classList.remove('active'));
             document.getElementById(levelId)?.classList.add('active');
@@ -1429,8 +1673,21 @@
             const panes = lessonEl.querySelectorAll('.tab-pane');
             tabs.forEach(tab => tab.classList.remove('active'));
             panes.forEach(pane => pane.classList.remove('active'));
-            if (tabs[tabNum - 1]) tabs[tabNum - 1].classList.add('active');
-            document.getElementById(`tab-${hskLevel}-${lessonNum}-${tabNum}`)?.classList.add('active');
+            
+            // Tìm index của tab cần active
+            let targetIndex = -1;
+            if (tabNum === 'exercise') {
+                targetIndex = tabs.length - 1; // Tab cuối cùng là bài tập
+            } else {
+                targetIndex = tabNum - 1;
+            }
+            
+            if (tabs[targetIndex]) tabs[targetIndex].classList.add('active');
+            
+            // Active pane tương ứng
+            const targetPaneId = `tab-${hskLevel}-${lessonNum}-${tabNum}`;
+            document.getElementById(targetPaneId)?.classList.add('active');
+            
             currentTab = tabNum;
             saveProgress();
         }
@@ -1441,8 +1698,16 @@
             const tabs = lessonEl.querySelectorAll('.tab-btn');
             let activeIndex = -1;
             tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
+            
             if (activeIndex !== -1 && activeIndex < tabs.length - 1) {
-                switchTab(hskLevel, lessonNum, activeIndex + 2);
+                // Lấy tabNum từ tab kế tiếp
+                const nextTabBtn = tabs[activeIndex + 1];
+                const onclickAttr = nextTabBtn.getAttribute('onclick');
+                const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
+                if (match) {
+                    const tabNum = match[3];
+                    switchTab(hskLevel, lessonNum, tabNum);
+                }
                 lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             } else {
                 const nextLessonNum = lessonNum + 1;
@@ -1463,8 +1728,15 @@
             const tabs = lessonEl.querySelectorAll('.tab-btn');
             let activeIndex = -1;
             tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
+            
             if (activeIndex > 0) {
-                switchTab(hskLevel, lessonNum, activeIndex);
+                const prevTabBtn = tabs[activeIndex - 1];
+                const onclickAttr = prevTabBtn.getAttribute('onclick');
+                const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
+                if (match) {
+                    const tabNum = match[3];
+                    switchTab(hskLevel, lessonNum, tabNum);
+                }
                 lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             } else if (lessonNum > 1) {
                 const prevLesson = lessonNum - 1;
@@ -1552,7 +1824,33 @@
             else { if (btn) { btn.textContent = '☆'; btn.classList.remove('active'); } }
         }
 
-               // ===== SEARCH =====
+        // ===== GHI CHÚ =====
+        function saveNote() {
+            const note = document.getElementById('noteContent')?.value || '';
+            const key = `${currentLevel}-${currentLesson}`;
+            let notes = JSON.parse(localStorage.getItem('studyNotes') || '{}');
+            notes[key] = note;
+            localStorage.setItem('studyNotes', JSON.stringify(notes));
+            alert('✅ Đã lưu ghi chú!');
+        }
+
+        function loadNote() {
+            const key = `${currentLevel}-${currentLesson}`;
+            const notes = JSON.parse(localStorage.getItem('studyNotes') || '{}');
+            const textarea = document.getElementById('noteContent');
+            if (textarea) textarea.value = notes[key] || '';
+        }
+
+        function deleteNote() {
+            const key = `${currentLevel}-${currentLesson}`;
+            let notes = JSON.parse(localStorage.getItem('studyNotes') || '{}');
+            delete notes[key];
+            localStorage.setItem('studyNotes', JSON.stringify(notes));
+            document.getElementById('noteContent').value = '';
+            alert('🗑 Đã xóa ghi chú!');
+        }
+
+        // ===== SEARCH =====
         function universalSearch() {
             let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
             let dropdown = document.getElementById('searchDropdown');
@@ -1668,6 +1966,44 @@
         }
 
         // ==============================================
+        // CỤC TẨY - XÓA TỪNG PHẦN VẼ
+        // ==============================================
+
+        let eraserMode = false;
+        let eraserSize = 20;
+        let isEraser = false;
+
+        function setEraserSize(size) {
+            eraserSize = parseInt(size);
+        }
+
+        function toggleEraserMode() {
+            eraserMode = !eraserMode;
+            const btn = document.getElementById('eraserToggle');
+            
+            if (drawMode) {
+                toggleDrawMode();
+            }
+            
+            if (eraserMode) {
+                btn.textContent = '🧹 Đang tẩy';
+                btn.style.background = '#f44336';
+                btn.classList.add('active');
+                document.body.style.cursor = 'cell';
+                canvas.style.display = 'block';
+                canvas.style.pointerEvents = 'auto';
+                loadDrawings();
+            } else {
+                btn.textContent = '🧹 Tẩy';
+                btn.style.background = '#795548';
+                btn.classList.remove('active');
+                document.body.style.cursor = 'default';
+                canvas.style.display = 'none';
+                canvas.style.pointerEvents = 'none';
+            }
+        }
+
+        // ==============================================
         // HIGHLIGHT
         // ==============================================
         let highlightColor = '#ffeb3b';
@@ -1696,64 +2032,52 @@
             });
         }
 
-      document.addEventListener('mouseup', function(e) {
-    if (!highlightMode) return;
-    
-    const selection = window.getSelection();
-    if (!selection || selection.isCollapsed) return;
-    
-    const selectedText = selection.toString().trim();
-    if (selectedText.length === 0) return;
-    
-    const range = selection.getRangeAt(0);
-    const container = range.commonAncestorContainer;
-    const mainContent = document.querySelector('main');
-    
-    if (!mainContent || !mainContent.contains(container)) return;
-    
-    // ⚠️ KHÔNG CHO HIGHLIGHT TRONG NÚT AUDIO
-    const audioBtn = container.closest?.('.audio-btn');
-    if (audioBtn) {
-        console.warn('⚠️ Không highlight trong nút audio');
-        selection.removeAllRanges();
-        return;
-    }
-    
-    try {
-        // Tìm phần tử cha gần nhất có style
-        let parentElement = container.nodeType === 3 ? container.parentElement : container;
-        
-        // Nếu container là text node, lấy parent
-        if (container.nodeType === 3) {
-            parentElement = container.parentElement;
-        }
-        
-        // Lấy style từ parent
-        const parentStyle = window.getComputedStyle(parentElement);
-        
-        const span = document.createElement('span');
-        span.className = 'highlighted';
-        span.style.backgroundColor = highlightColor;
-        
-        // ✅ COPY TOÀN BỘ STYLE FONT TỪ PARENT
-        span.style.fontFamily = parentStyle.fontFamily || 'inherit';
-        span.style.fontSize = parentStyle.fontSize || 'inherit';
-        span.style.fontWeight = parentStyle.fontWeight || 'inherit';
-        span.style.color = parentStyle.color || 'inherit';
-        span.style.lineHeight = parentStyle.lineHeight || 'inherit';
-        span.style.letterSpacing = parentStyle.letterSpacing || 'inherit';
-        
-        span.textContent = selectedText;
-        range.deleteContents();
-        range.insertNode(span);
-        
-        saveHighlights();
-    } catch (error) {
-        console.log('Lỗi highlight:', error);
-    }
-    
-    selection.removeAllRanges();
-});
+        document.addEventListener('mouseup', function(e) {
+            if (!highlightMode) return;
+            
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed) return;
+            
+            const selectedText = selection.toString().trim();
+            if (selectedText.length === 0) return;
+            
+            const range = selection.getRangeAt(0);
+            const container = range.commonAncestorContainer;
+            const mainContent = document.querySelector('main');
+            
+            if (!mainContent || !mainContent.contains(container)) return;
+            
+            const audioBtn = container.closest?.('.audio-btn');
+            if (audioBtn) {
+                selection.removeAllRanges();
+                return;
+            }
+            
+            try {
+                let parentElement = container.nodeType === 3 ? container.parentElement : container;
+                const parentStyle = window.getComputedStyle(parentElement);
+                
+                const span = document.createElement('span');
+                span.className = 'highlighted';
+                span.style.backgroundColor = highlightColor;
+                span.style.fontFamily = parentStyle.fontFamily || 'inherit';
+                span.style.fontSize = parentStyle.fontSize || 'inherit';
+                span.style.fontWeight = parentStyle.fontWeight || 'inherit';
+                span.style.color = parentStyle.color || 'inherit';
+                span.style.lineHeight = parentStyle.lineHeight || 'inherit';
+                span.style.letterSpacing = parentStyle.letterSpacing || 'inherit';
+                
+                span.textContent = selectedText;
+                range.deleteContents();
+                range.insertNode(span);
+                
+                saveHighlights();
+            } catch (error) {
+                console.log('Lỗi highlight:', error);
+            }
+            
+            selection.removeAllRanges();
+        });
 
         function clearAllHighlights() {
             if (confirm('Xóa tất cả highlight?')) {
@@ -1776,53 +2100,52 @@
             localStorage.setItem('highlights', JSON.stringify(highlights));
         }
 
-       function loadHighlights() {
-    const saved = localStorage.getItem('highlights');
-    if (!saved) return;
-    try {
-        const highlights = JSON.parse(saved);
-        setTimeout(() => {
-            highlights.forEach(h => {
-                const walker = document.createTreeWalker(
-                    document.querySelector('main'),
-                    NodeFilter.SHOW_TEXT, null, false
-                );
-                let nodes = [];
-                let node;
-                while (node = walker.nextNode()) {
-                    if (node.textContent.includes(h.text)) nodes.push(node);
-                }
-                nodes.forEach(textNode => {
-                    const parent = textNode.parentNode;
-                    if (parent && !parent.classList.contains('highlighted')) {
-                        const text = textNode.textContent;
-                        const index = text.indexOf(h.text);
-                        if (index !== -1) {
-                            const range = document.createRange();
-                            range.setStart(textNode, index);
-                            range.setEnd(textNode, index + h.text.length);
-                            
-                            const span = document.createElement('span');
-                            span.className = 'highlighted';
-                            span.style.backgroundColor = h.color || '#ffeb3b';
-                            
-                            // Copy font style
-                            const ps = window.getComputedStyle(parent);
-                            span.style.fontFamily = ps.fontFamily || 'inherit';
-                            span.style.fontSize = ps.fontSize || 'inherit';
-                            span.style.fontWeight = ps.fontWeight || 'inherit';
-                            span.style.color = ps.color || 'inherit';
-                            
-                            span.textContent = h.text;
-                            range.deleteContents();
-                            range.insertNode(span);
+        function loadHighlights() {
+            const saved = localStorage.getItem('highlights');
+            if (!saved) return;
+            try {
+                const highlights = JSON.parse(saved);
+                setTimeout(() => {
+                    highlights.forEach(h => {
+                        const walker = document.createTreeWalker(
+                            document.querySelector('main'),
+                            NodeFilter.SHOW_TEXT, null, false
+                        );
+                        let nodes = [];
+                        let node;
+                        while (node = walker.nextNode()) {
+                            if (node.textContent.includes(h.text)) nodes.push(node);
                         }
-                    }
-                });
-            });
-        }, 500);
-    } catch (e) { console.log('Lỗi load highlight:', e); }
-}
+                        nodes.forEach(textNode => {
+                            const parent = textNode.parentNode;
+                            if (parent && !parent.classList.contains('highlighted')) {
+                                const text = textNode.textContent;
+                                const index = text.indexOf(h.text);
+                                if (index !== -1) {
+                                    const range = document.createRange();
+                                    range.setStart(textNode, index);
+                                    range.setEnd(textNode, index + h.text.length);
+                                    
+                                    const span = document.createElement('span');
+                                    span.className = 'highlighted';
+                                    span.style.backgroundColor = h.color || '#ffeb3b';
+                                    
+                                    const ps = window.getComputedStyle(parent);
+                                    span.style.fontFamily = ps.fontFamily || 'inherit';
+                                    span.style.fontSize = ps.fontSize || 'inherit';
+                                    span.style.fontWeight = ps.fontWeight || 'inherit';
+                                    span.style.color = ps.color || 'inherit';
+                                    
+                                    span.textContent = h.text;
+                                    range.deleteContents();
+                                    range.insertNode(span);
+                                }
+                            }
+                        });
+                    });
+                }, 500);
+            } catch (e) { console.log('Lỗi load highlight:', e); }
+        }
 
         // ==============================================
         // BÚT VẼ
@@ -1836,6 +2159,11 @@
         function toggleDrawMode() {
             drawMode = !drawMode;
             const btn = document.getElementById('drawToggle');
+            
+            if (eraserMode) {
+                toggleEraserMode();
+            }
+            
             if (drawMode) {
                 btn.textContent = '🛑 Tắt';
                 btn.style.background = '#f44336';
@@ -1850,7 +2178,7 @@
                 ctx.lineJoin = 'round';
                 loadDrawings();
             } else {
-                btn.textContent = '✏️ Bật';
+                btn.textContent = '✏️ Vẽ';
                 btn.style.background = '#2196f3';
                 canvas.style.display = 'none';
                 canvas.style.pointerEvents = 'none';
@@ -1858,36 +2186,88 @@
             }
         }
 
+        // Sự kiện canvas - HỖ TRỢ CẢ VẼ VÀ TẨY
         canvas.addEventListener('mousedown', function(e) {
-            if (!drawMode) return;
-            isDrawing = true;
-            const rect = canvas.getBoundingClientRect();
-            lastX = e.clientX - rect.left;
-            lastY = e.clientY - rect.top;
-        });
-        canvas.addEventListener('mousemove', function(e) {
-            if (!isDrawing || !drawMode) return;
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
+            
+            if (eraserMode) {
+                isEraser = true;
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.beginPath();
+                ctx.arc(x, y, eraserSize, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalCompositeOperation = 'source-over';
+                saveDrawings();
+                return;
+            }
+            
+            if (!drawMode) return;
+            isDrawing = true;
+            lastX = x;
+            lastY = y;
+        });
+
+        canvas.addEventListener('mousemove', function(e) {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            if (eraserMode && isEraser) {
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.beginPath();
+                ctx.arc(x, y, eraserSize, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalCompositeOperation = 'source-over';
+                saveDrawings();
+                return;
+            }
+            
+            if (!isDrawing || !drawMode) return;
+            
             ctx.beginPath();
             ctx.moveTo(lastX, lastY);
             ctx.lineTo(x, y);
             ctx.stroke();
+            
             lastX = x;
             lastY = y;
         });
-        canvas.addEventListener('mouseup', function() { if (isDrawing) { isDrawing = false; saveDrawings(); } });
-        canvas.addEventListener('mouseleave', function() { if (isDrawing) { isDrawing = false; saveDrawings(); } });
+
+        canvas.addEventListener('mouseup', function() {
+            if (eraserMode && isEraser) {
+                isEraser = false;
+                return;
+            }
+            if (isDrawing) {
+                isDrawing = false;
+                saveDrawings();
+            }
+        });
+
+        canvas.addEventListener('mouseleave', function() {
+            if (eraserMode && isEraser) {
+                isEraser = false;
+                return;
+            }
+            if (isDrawing) {
+                isDrawing = false;
+                saveDrawings();
+            }
+        });
 
         function setDrawColor(color) { ctx.strokeStyle = color; }
+        
         function clearDrawings() {
             if (confirm('Xóa tất cả bản vẽ?')) {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 localStorage.removeItem('drawings');
             }
         }
+        
         function saveDrawings() { localStorage.setItem('drawings', canvas.toDataURL()); }
+        
         function loadDrawings() {
             const saved = localStorage.getItem('drawings');
             if (saved) {
@@ -1896,8 +2276,9 @@
                 img.src = saved;
             }
         }
+        
         window.addEventListener('resize', function() {
-            if (drawMode) {
+            if (drawMode || eraserMode) {
                 const tempData = canvas.toDataURL();
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
