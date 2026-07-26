@@ -1809,11 +1809,7 @@
     </div>
         <!-- ===== MENU ĐỔI MÀU HIGHLIGHT ===== -->
 <div class="highlight-menu" id="highlightMenu">
-    <button class="color-option" style="background:#ffcdd2;" onclick="changeHighlightColor(this, '#ffcdd2')" title="Đỏ nhạt"></button>
-    <button class="color-option" style="background:#c8e6c9;" onclick="changeHighlightColor(this, '#c8e6c9')" title="Xanh nhạt"></button>
-    <button class="color-option" style="background:#bbdefb;" onclick="changeHighlightColor(this, '#bbdefb')" title="Xanh dương nhạt"></button>
-    <button class="color-option" style="background:#e1bee7;" onclick="changeHighlightColor(this, '#e1bee7')" title="Tím nhạt"></button>
-    <button class="color-option" style="background:#ffe0b2;" onclick="changeHighlightColor(this, '#ffe0b2')" title="Cam nhạt"></button>
+       <button class="color-option" style="background:#ffe0b2;" onclick="changeHighlightColor(this, '#ffe0b2')" title="Cam nhạt"></button>
     <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
 </div>
     <!-- ===== CONTAINER CHÍNH ===== -->
@@ -2043,8 +2039,8 @@ exerciseBtn.onclick = () => switchTab(levelId, lesson.id, '999');
                                 <div class="text-group">
                                     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                                         <span class="cn" style="font-size:22px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${ex.cn}</span>
-                                        <button onclick="togglePinyinForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">📖 Phiên âm</button>
-                                        <button onclick="toggleNghiaForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">🌟 Nghĩa</button>
+                                        <button onclick="togglePinyinForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Phiên âm</button>
+                                        <button onclick="toggleNghiaForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Nghĩa</button>
                                     </div>
                                     <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;">${ex.py}</span>
                                     <span class="vi" style="display:none;font-size:14px;color:#64748b;">${ex.vi}</span>
@@ -2285,7 +2281,7 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
                 switchTab(hskLevel, lessonNum, tabId);
                 lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-            } else if (lessonNum < Object.keys(hskData[hskLevel].lessons).length) {
+} else if (lessonNum < hskData[hskLevel].lessons.length) {
     const nextLessonNum = lessonNum + 1;
     const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
     let firstTabId = '1';
@@ -2515,30 +2511,11 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         }
 
 // ==============================================
-// HIGHLIGHT (CẢI TIẾN)
+// HIGHLIGHT (ĐƠN GIẢN - CHỈ XÓA LẺ)
 // ==============================================
-let highlightColor = '#ffe0b2';
 let highlightMode = false;
 let currentHighlightElement = null;
-
-// Load màu đã chọn từ localStorage
-try {
-    const savedColor = localStorage.getItem('highlightColor');
-    if (savedColor) {
-        highlightColor = savedColor;
-    }
-} catch (e) {}
-
-// Cập nhật active state cho toolbar sau khi render
-setTimeout(() => {
-    document.querySelectorAll('.color-btn').forEach(btn => {
-        btn.classList.remove('active');
-        const bgColor = btn.style.backgroundColor || btn.style.background;
-        if (bgColor === highlightColor || bgColor === highlightColor) {
-            btn.classList.add('active');
-        }
-    });
-}, 500);
+const highlightColor = '#ffe0b2';
 
 function toggleHighlightMode() {
     highlightMode = !highlightMode;
@@ -2548,25 +2525,10 @@ function toggleHighlightMode() {
         btn.style.background = '#f44336';
         document.body.style.cursor = 'text';
     } else {
-        btn.textContent = 'Bật';
+        btn.textContent = 'Highlight';
         btn.style.background = '#4caf50';
         document.body.style.cursor = 'default';
     }
-}
-
-function setHighlightColor(color) {
-    highlightColor = color;
-    document.querySelectorAll('.color-btn').forEach(btn => {
-        btn.classList.remove('active');
-        const bgColor = btn.style.backgroundColor || btn.style.background;
-        if (bgColor === color || bgColor === color) {
-            btn.classList.add('active');
-        }
-    });
-    // Lưu màu vào localStorage
-    try {
-        localStorage.setItem('highlightColor', color);
-    } catch (e) {}
 }
 
 document.addEventListener('mouseup', function (e) {
@@ -2598,7 +2560,7 @@ document.addEventListener('mouseup', function (e) {
         const span = document.createElement('span');
         span.className = 'highlighted';
         span.dataset.highlightId = highlightId;
-        span.style.backgroundColor = highlightColor;  // Dùng màu hiện tại
+        span.style.backgroundColor = highlightColor;
         span.style.fontFamily = parentStyle.fontFamily || 'inherit';
         span.style.fontSize = parentStyle.fontSize || 'inherit';
         span.style.fontWeight = parentStyle.fontWeight || 'inherit';
@@ -2675,7 +2637,7 @@ function loadHighlights() {
                             const span = document.createElement('span');
                             span.className = 'highlighted';
                             span.dataset.highlightId = h.id || 'hl_' + Date.now();
-                            span.style.backgroundColor = h.color || highlightColor;  // Dùng màu đã lưu
+                            span.style.backgroundColor = h.color || '#ffe0b2';
 
                             const ps = window.getComputedStyle(parent);
                             span.style.fontFamily = ps.fontFamily || 'inherit';
@@ -2718,62 +2680,6 @@ document.addEventListener('click', function(e) {
         currentHighlightElement = null;
     }
 });
-
-function changeHighlightColor(btn, color) {
-    if (currentHighlightElement) {
-        const highlightId = currentHighlightElement.dataset.highlightId;
-        
-        // 1. Đổi màu highlight hiện tại
-        currentHighlightElement.style.backgroundColor = color;
-        
-        // 2. Cập nhật màu mặc định cho lần highlight tiếp theo
-        highlightColor = color;
-        
-        // 3. Lưu màu vào localStorage
-        try {
-            localStorage.setItem('highlightColor', color);
-        } catch (e) {}
-        
-        // 4. Cập nhật localStorage cho tất cả highlight
-        let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
-        let found = false;
-        highlights = highlights.map(h => {
-            if (h.id === highlightId) {
-                h.color = color;
-                found = true;
-            }
-            return h;
-        });
-        
-        // Nếu chưa có trong localStorage thì thêm mới
-        if (!found) {
-            highlights.push({
-                id: highlightId,
-                text: currentHighlightElement.textContent,
-                color: color
-            });
-        }
-        
-        try {
-            localStorage.setItem('highlights', JSON.stringify(highlights));
-        } catch (e) {
-            console.warn('Không thể lưu highlight:', e);
-        }
-        
-        // 5. Cập nhật active state cho toolbar
-        document.querySelectorAll('.color-btn').forEach(b => {
-            b.classList.remove('active');
-            const bgColor = b.style.backgroundColor || b.style.background;
-            if (bgColor === color || bgColor === color) {
-                b.classList.add('active');
-            }
-        });
-        
-        // 6. Đóng menu
-        document.getElementById('highlightMenu').style.display = 'none';
-        currentHighlightElement = null;
-    }
-}
 
 function deleteSingleHighlight() {
     if (currentHighlightElement) {
