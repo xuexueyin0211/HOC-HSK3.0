@@ -928,40 +928,109 @@
         .level-btn.hsk2.active { background: #f59e0b; color: white; border-color: #d97706; box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3); }
         .level-btn.hsk3 { color: #e11d48; border-color: #fda4af; }
         .level-btn.hsk3.active { background: #e11d48; color: white; border-color: #be123c; box-shadow: 0 2px 6px rgba(225, 29, 72, 0.3); }
-        .hsk-wrapper.hsk1 .top-banner { background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9) !important; color: #2e7d32 !important; }
-        .hsk-wrapper.hsk1 .badge { color: #2e7d32 !important; border-color: rgba(46, 125, 50, 0.4) !important; }
-        .hsk-wrapper.hsk2 .top-banner { background: linear-gradient(135deg, #fef3c7, #fde68a, #fef3c7) !important; color: #b45309 !important; }
+
+        /* ===== MÀU SẮC HSK 1, 2, 3 (GIỮ NGUYÊN NHƯ CŨ) ===== */
+        .hsk-wrapper.hsk1 .top-banner { 
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9) !important; 
+            color: #2e7d32 !important; 
+        }
+        .hsk-wrapper.hsk1 .badge { 
+            color: #2e7d32 !important; 
+            border-color: rgba(46, 125, 50, 0.4) !important; 
+        }
+        .hsk-wrapper.hsk1 .menu button:hover { background: #e8f5e9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .menu button.active { background: #c8e6c9 !important; color: #2e7d32 !important; box-shadow: inset 4px 0 0 #4caf50 !important; }
+        .hsk-wrapper.hsk1 .submenu { background: #e8f5e9 !important; border-left-color: #66bb6a !important; }
+        .hsk-wrapper.hsk1 .submenu a:hover { color: #2e7d32 !important; background: #c8e6c9 !important; }
+        .hsk-wrapper.hsk1 .card h2, .hsk-wrapper.hsk1 .grammar h3, .hsk-wrapper.hsk1 .sidebar-title { color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .grammar { border-left-color: #4caf50 !important; }
+        .hsk-wrapper.hsk1 .subcard { background: #e8f5e9 !important; border-left-color: #388e3c !important; }
+        .hsk-wrapper.hsk1 .label { color: #388e3c !important; }
+        .hsk-wrapper.hsk1 .example { border-color: #c8e6c9 !important; background: #fefcf5 !important; }
+        .hsk-wrapper.hsk1 .example-with-audio { border-color: #c8e6c9 !important; }
+        .hsk-wrapper.hsk1 .example-with-audio:hover { background: #e8f5e9 !important; border-color: #4caf50 !important; }
+        .hsk-wrapper.hsk1 .py { color: #388e3c !important; }
+        .hsk-wrapper.hsk1 .audio-btn, .hsk-wrapper.hsk1 .nav button { background: #4caf50 !important; box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3) !important; }
+        .hsk-wrapper.hsk1 .audio-btn:hover, .hsk-wrapper.hsk1 .nav button:hover { background: #388e3c !important; }
+        .hsk-wrapper.hsk1 .tab-btn:hover { background: #e8f5e9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .tab-btn.active { background: #c8e6c9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .tab-btn.active::after { background: #4caf50 !important; }
+        .hsk-wrapper.hsk1 table th { background: #e8f5e9 !important; border-color: #c8e6c9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 table td { border-color: #c8e6c9 !important; }
+        .hsk-wrapper.hsk1 table tr:nth-child(even) { background: #f8fdf8 !important; }
+
+        /* ===== HSK2 - Màu cam ===== */
+        .hsk-wrapper.hsk2 .top-banner { 
+            background: linear-gradient(135deg, #fef3c7, #fde68a, #fef3c7) !important; 
+            color: #b45309 !important; 
+        }
         .hsk-wrapper.hsk2 .top-banner h1 { color: #b45309 !important; }
         .hsk-wrapper.hsk2 .top-banner .subtitle { color: #d97706 !important; }
-        .hsk-wrapper.hsk2 .badge { color: #b45309 !important; border-color: rgba(217, 119, 6, 0.4) !important; background: rgba(255, 255, 255, 0.7) !important; }
-        .hsk-wrapper.hsk3 .top-banner { background: linear-gradient(135deg, #ffe4e6, #fecdd3, #ffe4e6) !important; color: #be123c !important; }
+        .hsk-wrapper.hsk2 .badge { 
+            color: #b45309 !important; 
+            border-color: rgba(217, 119, 6, 0.4) !important; 
+            background: rgba(255, 255, 255, 0.7) !important; 
+        }
+        .hsk-wrapper.hsk2 .menu button:hover { background: #fef3c7 !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .menu button.active { background: #fde68a !important; color: #b45309 !important; box-shadow: inset 4px 0 0 #d97706 !important; }
+        .hsk-wrapper.hsk2 .submenu { background: #fffbeb !important; border-left-color: #f59e0b !important; }
+        .hsk-wrapper.hsk2 .submenu a:hover { color: #b45309 !important; background: #fde68a !important; }
+        .hsk-wrapper.hsk2 .card h2, .hsk-wrapper.hsk2 .grammar h3, .hsk-wrapper.hsk2 .sidebar-title { color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .grammar { border-left-color: #f59e0b !important; }
+        .hsk-wrapper.hsk2 .subcard { background: #fffbeb !important; border-left-color: #d97706 !important; }
+        .hsk-wrapper.hsk2 .label { color: #d97706 !important; }
+        .hsk-wrapper.hsk2 .example { border-color: #fde68a !important; background: #fffdf5 !important; }
+        .hsk-wrapper.hsk2 .example-with-audio { border-color: #fde68a !important; }
+        .hsk-wrapper.hsk2 .example-with-audio:hover { background: #fffbeb !important; border-color: #f59e0b !important; }
+        .hsk-wrapper.hsk2 .py { color: #d97706 !important; }
+        .hsk-wrapper.hsk2 .audio-btn, .hsk-wrapper.hsk2 .nav button { background: #f59e0b !important; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3) !important; }
+        .hsk-wrapper.hsk2 .audio-btn:hover, .hsk-wrapper.hsk2 .nav button:hover { background: #d97706 !important; }
+        .hsk-wrapper.hsk2 .tab-btn:hover { background: #fffbeb !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .tab-btn.active { background: #fde68a !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .tab-btn.active::after { background: #f59e0b !important; }
+        .hsk-wrapper.hsk2 table th { background: #fef3c7 !important; border-color: #fde68a !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 table td { border-color: #fde68a !important; }
+        .hsk-wrapper.hsk2 table tr:nth-child(even) { background: #fffdf2 !important; }
+
+        /* ===== HSK3 - Màu đỏ ===== */
+        .hsk-wrapper.hsk3 .top-banner { 
+            background: linear-gradient(135deg, #ffe4e6, #fecdd3, #ffe4e6) !important; 
+            color: #be123c !important; 
+        }
         .hsk-wrapper.hsk3 .top-banner h1 { color: #be123c !important; }
         .hsk-wrapper.hsk3 .top-banner .subtitle { color: #e11d48 !important; }
-        .hsk-wrapper.hsk3 .badge { color: #be123c !important; border-color: rgba(225, 29, 72, 0.4) !important; background: rgba(255, 255, 255, 0.7) !important; }
-        .hsk-tag.hsk1 { background: #2e7d32; }
-        .hsk-tag.hsk2 { background: #f59e0b; }
-        .hsk-tag.hsk3 { background: #e11d48; }
+        .hsk-wrapper.hsk3 .badge { 
+            color: #be123c !important; 
+            border-color: rgba(225, 29, 72, 0.4) !important; 
+            background: rgba(255, 255, 255, 0.7) !important; 
+        }
+        .hsk-wrapper.hsk3 .menu button:hover { background: #ffe4e6 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 .menu button.active { background: #fecdd3 !important; color: #be123c !important; box-shadow: inset 4px 0 0 #e11d48 !important; }
+        .hsk-wrapper.hsk3 .submenu { background: #fff1f2 !important; border-left-color: #fb7185 !important; }
+        .hsk-wrapper.hsk3 .submenu a:hover { color: #be123c !important; background: #fecdd3 !important; }
+        .hsk-wrapper.hsk3 .card h2, .hsk-wrapper.hsk3 .grammar h3, .hsk-wrapper.hsk3 .sidebar-title { color: #be123c !important; }
+        .hsk-wrapper.hsk3 .grammar { border-left-color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .subcard { background: #fff1f2 !important; border-left-color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .label { color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .example { border-color: #fecdd3 !important; background: #fff8f8 !important; }
+        .hsk-wrapper.hsk3 .example-with-audio { border-color: #fecdd3 !important; }
+        .hsk-wrapper.hsk3 .example-with-audio:hover { background: #fff1f2 !important; border-color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .py { color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .audio-btn, .hsk-wrapper.hsk3 .nav button { background: #e11d48 !important; box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3) !important; }
+        .hsk-wrapper.hsk3 .audio-btn:hover, .hsk-wrapper.hsk3 .nav button:hover { background: #be123c !important; }
+        .hsk-wrapper.hsk3 .tab-btn:hover { background: #fff1f2 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 .tab-btn.active { background: #fecdd3 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 .tab-btn.active::after { background: #e11d48 !important; }
+        .hsk-wrapper.hsk3 table th { background: #ffe4e6 !important; border-color: #fecdd3 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 table td { border-color: #fecdd3 !important; }
+        .hsk-wrapper.hsk3 table tr:nth-child(even) { background: #fff5f6 !important; }
+
         .hsk-wrapper {
             display: none !important;
         }
         .hsk-wrapper.active {
             display: block !important;
         }
-        .hsk-wrapper.hsk1 .top-banner {
-            background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9) !important;
-            color: #2e7d32 !important;
-        }
-        .hsk-wrapper.hsk2 .top-banner {
-            background: linear-gradient(135deg, #fff3e0, #ffe0b2, #fff3e0) !important;
-            color: #e65100 !important;
-        }
-        .hsk-wrapper.hsk3 .top-banner {
-            background: linear-gradient(135deg, #ffebee, #ef9a9a, #ffebee) !important;
-            color: #c62828 !important;
-        }
-        .hsk-wrapper.hsk1 .badge { color: #2e7d32 !important; border-color: rgba(46, 125, 50, 0.4) !important; }
-        .hsk-wrapper.hsk2 .badge { color: #e65100 !important; border-color: rgba(230, 81, 0, 0.4) !important; }
-        .hsk-wrapper.hsk3 .badge { color: #c62828 !important; border-color: rgba(198, 40, 40, 0.4) !important; }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -1007,56 +1076,6 @@
             font-weight: 600;
             color: #5d4037;
         }
-        #hsk2 .menu button:hover { background: #fef3c7 !important; color: #b45309 !important; }
-        #hsk2 .menu button.active { background: #fde68a !important; color: #b45309 !important; box-shadow: inset 4px 0 0 #d97706 !important; }
-        #hsk2 .submenu { background: #fffbeb !important; border-left-color: #f59e0b !important; }
-        #hsk2 .submenu a:hover { color: #b45309 !important; background: #fde68a !important; }
-        #hsk2 .card h2, 
-        #hsk2 .grammar h3, 
-        #hsk2 .sidebar-title { color: #b45309 !important; }
-        #hsk2 .grammar { border-left-color: #f59e0b !important; }
-        #hsk2 .subcard { background: #fffbeb !important; border-left-color: #d97706 !important; }
-        #hsk2 .label { color: #d97706 !important; }
-        #hsk2 .example { border-color: #fde68a !important; background: #fffdf5 !important; }
-        #hsk2 .example-with-audio { border-color: #fde68a !important; }
-        #hsk2 .example-with-audio:hover { background: #fffbeb !important; border-color: #f59e0b !important; }
-        #hsk2 .py, #hsk2 .example-with-audio .text-group .py { color: #d97706 !important; }
-        #hsk2 .audio-btn, 
-        #hsk2 .nav button { background: #f59e0b !important; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3) !important; }
-        #hsk2 .audio-btn:hover, 
-        #hsk2 .nav button:hover { background: #d97706 !important; }
-        #hsk2 .badge { color: #b45309 !important; border-color: rgba(217, 119, 6, 0.4) !important; background: rgba(255, 255, 255, 0.8) !important; }
-        #hsk2 .tab-btn:hover { background: #fffbeb !important; color: #b45309 !important; }
-        #hsk2 .tab-btn.active { background: #fde68a !important; color: #b45309 !important; }
-        #hsk2 .tab-btn.active::after { background: #f59e0b !important; }
-        #hsk2 table th { background: #fef3c7 !important; border-color: #fde68a !important; color: #b45309 !important; }
-        #hsk2 table td { border-color: #fde68a !important; }
-        #hsk2 table tr:nth-child(even) { background: #fffdf2 !important; }
-        #hsk3 .menu button:hover { background: #ffe4e6 !important; color: #be123c !important; }
-        #hsk3 .menu button.active { background: #fecdd3 !important; color: #be123c !important; box-shadow: inset 4px 0 0 #e11d48 !important; }
-        #hsk3 .submenu { background: #fff1f2 !important; border-left-color: #fb7185 !important; }
-        #hsk3 .submenu a:hover { color: #be123c !important; background: #fecdd3 !important; }
-        #hsk3 .card h2, 
-        #hsk3 .grammar h3, 
-        #hsk3 .sidebar-title { color: #be123c !important; }
-        #hsk3 .grammar { border-left-color: #e11d48 !important; }
-        #hsk3 .subcard { background: #fff1f2 !important; border-left-color: #e11d48 !important; }
-        #hsk3 .label { color: #e11d48 !important; }
-        #hsk3 .example { border-color: #fecdd3 !important; background: #fff8f8 !important; }
-        #hsk3 .example-with-audio { border-color: #fecdd3 !important; }
-        #hsk3 .example-with-audio:hover { background: #fff1f2 !important; border-color: #e11d48 !important; }
-        #hsk3 .py, #hsk3 .example-with-audio .text-group .py { color: #e11d48 !important; }
-        #hsk3 .audio-btn, 
-        #hsk3 .nav button { background: #e11d48 !important; box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3) !important; }
-        #hsk3 .audio-btn:hover, 
-        #hsk3 .nav button:hover { background: #be123c !important; }
-        #hsk3 .badge { color: #be123c !important; border-color: rgba(225, 29, 72, 0.4) !important; background: rgba(255, 255, 255, 0.8) !important; }
-        #hsk3 .tab-btn:hover { background: #fff1f2 !important; color: #be123c !important; }
-        #hsk3 .tab-btn.active { background: #fecdd3 !important; color: #be123c !important; }
-        #hsk3 .tab-btn.active::after { background: #e11d48 !important; }
-        #hsk3 table th { background: #ffe4e6 !important; border-color: #fecdd3 !important; color: #be123c !important; }
-        #hsk3 table td { border-color: #fecdd3 !important; }
-        #hsk3 table tr:nth-child(even) { background: #fff5f6 !important; }
         @media screen and (max-width: 1024px) {
             aside { width: 240px; }
             main { padding: 25px; }
@@ -1083,6 +1102,8 @@
             .hl-h1, .hl-h2, .hl-h3 { margin: 1px 2px !important; padding: 1px 4px !important; }
             .compare-table, table { display: block; overflow-x: auto; white-space: nowrap; }
             .chinese-decoration { display: none !important; }
+            .highlight-toolbar { max-width: 280px; right: 10px; bottom: 90px; padding: 10px 12px; }
+            #toggleToolbarBtn { width: 45px; height: 45px; font-size: 20px; bottom: 20px; right: 20px; }
         }
 /* ===== HIỆU ỨNG CLICK PINYIN & NGHĨA ===== */
 .text-group .cn {
