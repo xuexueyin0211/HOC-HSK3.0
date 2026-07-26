@@ -1047,6 +1047,19 @@
     border-radius: 4px;
     display: inline-block;
 }
+/* ===== NÚT BẤM CHO TỪNG CÂU ===== */
+.text-group button {
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.text-group button:hover {
+    transform: scale(1.05);
+}
+
+.text-group button:active {
+    transform: scale(0.95);
+}
     </style>
 </head>
 <body>
@@ -1312,12 +1325,28 @@
 audioDiv.className = 'example-with-audio';
 audioDiv.innerHTML = `
     <div class="text-group">
-        <!-- Click vào chữ Hán để hiện pinyin -->
-        <span class="cn" onclick="togglePinyin(this)" style="cursor:pointer;">${ex.cn}</span>
-        <!-- Pinyin ẩn ban đầu, click mới hiện -->
-        <span class="py" style="display:none;cursor:pointer;" onclick="toggleNghia(this)">${ex.py}</span>
-        <!-- Nghĩa ẩn ban đầu, click vào pinyin mới hiện -->
-        <span class="vi" style="display:none;">${ex.vi}</span>
+        <!-- Chữ Hán -->
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <span class="cn" style="font-size:22px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${ex.cn}</span>
+            
+            <!-- Nút hiện phiên âm -->
+            <button onclick="togglePinyinForThis(event)" 
+                    style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;box-shadow:0 2px 6px rgba(76,175,80,0.3);">
+                📖 Phiên âm
+            </button>
+            
+            <!-- Nút hiện nghĩa -->
+            <button onclick="toggleNghiaForThis(event)" 
+                    style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;box-shadow:0 2px 6px rgba(255,152,0,0.3);">
+                🌟 Nghĩa
+            </button>
+        </div>
+        
+        <!-- Phiên âm (ẩn ban đầu) -->
+        <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;display:block;">${ex.py}</span>
+        
+        <!-- Nghĩa (ẩn ban đầu) -->
+        <span class="vi" style="display:none;font-size:14px;color:#64748b;display:block;">${ex.vi}</span>
     </div>
     <button class="audio-btn" onclick="playAudio('${ex.cn}', event)">🔊</button>
 `;
@@ -1897,30 +1926,45 @@ audioDiv.innerHTML = `
                 if (logoutBtn) logoutBtn.remove();
             }
         });
-function togglePinyin(element) {
-    const pyElement = element.nextElementSibling;
-    if (pyElement && pyElement.classList.contains('py')) {
-        const isHidden = pyElement.style.display === 'none';
-        pyElement.style.display = isHidden ? 'block' : 'none';
-        
-        // Lưu trạng thái vào data attribute của element cha
-        const parent = element.closest('.text-group');
-        const cnText = element.textContent;
-        const key = 'pinyin_' + cnText;
-        localStorage.setItem(key, isHidden ? 'shown' : 'hidden');
+// ===== BẤM NÚT "PHIÊN ÂM" (HIỆN/ẨN ĐỘC LẬP) =====
+function togglePinyinForThis(event) {
+    event.stopPropagation();
+    
+    const container = event.currentTarget.closest('.text-group');
+    const pyElement = container.querySelector('.py');
+    const btn = event.currentTarget;
+    
+    if (pyElement.style.display === 'none' || pyElement.style.display === '') {
+        pyElement.style.display = 'block';
+        btn.textContent = '📖 Ẩn phiên âm';
+        btn.style.background = '#f44336';
+        btn.style.boxShadow = '0 2px 6px rgba(244,67,54,0.3)';
+    } else {
+        pyElement.style.display = 'none';
+        btn.textContent = '📖 Phiên âm';
+        btn.style.background = '#4caf50';
+        btn.style.boxShadow = '0 2px 6px rgba(76,175,80,0.3)';
     }
 }
 
-function toggleNghia(element) {
-    const viElement = element.nextElementSibling;
-    if (viElement && viElement.classList.contains('vi')) {
-        const isHidden = viElement.style.display === 'none';
-        viElement.style.display = isHidden ? 'block' : 'none';
-        
-        const parent = element.closest('.text-group');
-        const pyText = element.textContent;
-        const key = 'nghia_' + pyText;
-        localStorage.setItem(key, isHidden ? 'shown' : 'hidden');
+// ===== BẤM NÚT "NGHĨA" (HIỆN/ẨN ĐỘC LẬP, KHÔNG CẦN PHIÊN ÂM) =====
+function toggleNghiaForThis(event) {
+    event.stopPropagation();
+    
+    const container = event.currentTarget.closest('.text-group');
+    const viElement = container.querySelector('.vi');
+    const btn = event.currentTarget;
+    
+    if (viElement.style.display === 'none' || viElement.style.display === '') {
+        viElement.style.display = 'block';
+        btn.textContent = '🌟 Ẩn nghĩa';
+        btn.style.background = '#f44336';
+        btn.style.boxShadow = '0 2px 6px rgba(244,67,54,0.3)';
+    } else {
+        viElement.style.display = 'none';
+        btn.textContent = '🌟 Nghĩa';
+        btn.style.background = '#ff9800';
+        btn.style.boxShadow = '0 2px 6px rgba(255,152,0,0.3)';
     }
 }
     </script>
