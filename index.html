@@ -2164,44 +2164,68 @@
         }
 
         function nextTab(hskLevel, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-            if (!lessonEl) return;
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIndex = -1;
-            tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
+    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    if (!lessonEl) return;
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIndex = -1;
+    tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
 
-            if (activeIndex !== -1 && activeIndex < tabs.length - 1) {
-                const nextTabBtn = tabs[activeIndex + 1];
-                const onclickAttr = nextTabBtn.getAttribute('onclick');
+    if (activeIndex !== -1 && activeIndex < tabs.length - 1) {
+        const nextTabBtn = tabs[activeIndex + 1];
+        const onclickAttr = nextTabBtn.getAttribute('onclick');
+        const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
+        if (match) {
+            const tabNum = match[3];
+            switchTab(hskLevel, lessonNum, tabNum);
+        }
+        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        const nextLessonNum = lessonNum + 1;
+        const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
+        if (nextLessonEl) {
+            // Tìm tab đầu tiên của bài tiếp theo
+            const firstTab = nextLessonEl.querySelector('.tab-btn');
+            let firstTabId = '1';
+            if (firstTab) {
+                const onclickAttr = firstTab.getAttribute('onclick');
                 const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
                 if (match) {
-                    const tabNum = match[3];
-                    switchTab(hskLevel, lessonNum, tabNum);
-                }
-                lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                const nextLessonNum = lessonNum + 1;
-                if (document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`)) {
-                    showLesson(hskLevel, nextLessonNum, 1);
-                } else {
-                    const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                    if (currentLevelIdx !== -1 && currentLevelIdx < hskLevels.length - 1) {
-                        const nextLevel = hskLevels[currentLevelIdx + 1];
-                        const nextLevelData = hskData[nextLevel];
-                        if (nextLevelData && nextLevelData.lessons && nextLevelData.lessons.length > 0) {
-                            const firstLessonId = nextLevelData.lessons[0].id;
-                            showLesson(nextLevel, firstLessonId, 1);
-                            const nextBtn = document.querySelector(`.level-btn.${nextLevel}`);
-                            if (nextBtn) switchLevel(nextLevel, nextBtn);
-                        } else {
-                            alert("🎉 Bạn đã học xong toàn bộ chương trình!");
-                        }
-                    } else {
-                        alert("🎉 Bạn đã học xong toàn bộ chương trình!");
-                    }
+                    firstTabId = match[3];
                 }
             }
+            showLesson(hskLevel, nextLessonNum, firstTabId);
+        } else {
+            const currentLevelIdx = hskLevels.indexOf(hskLevel);
+            if (currentLevelIdx !== -1 && currentLevelIdx < hskLevels.length - 1) {
+                const nextLevel = hskLevels[currentLevelIdx + 1];
+                const nextLevelData = hskData[nextLevel];
+                if (nextLevelData && nextLevelData.lessons && nextLevelData.lessons.length > 0) {
+                    const firstLessonId = nextLevelData.lessons[0].id;
+                    // Tìm tab đầu tiên của bài đầu tiên ở cấp độ mới
+                    const firstLessonEl = document.getElementById(`lesson-${nextLevel}-${firstLessonId}`);
+                    let firstTabId = '1';
+                    if (firstLessonEl) {
+                        const firstTab = firstLessonEl.querySelector('.tab-btn');
+                        if (firstTab) {
+                            const onclickAttr = firstTab.getAttribute('onclick');
+                            const match = onclickAttr?.match(/switchTab\('([^']+)',(\d+),'?([^')]+)'?\)/);
+                            if (match) {
+                                firstTabId = match[3];
+                            }
+                        }
+                    }
+                    showLesson(nextLevel, firstLessonId, firstTabId);
+                    const nextBtn = document.querySelector(`.level-btn.${nextLevel}`);
+                    if (nextBtn) switchLevel(nextLevel, nextBtn);
+                } else {
+                    alert("🎉 Bạn đã học xong toàn bộ chương trình!");
+                }
+            } else {
+                alert("🎉 Bạn đã học xong toàn bộ chương trình!");
+            }
         }
+    }
+}
 
         function prevTab(hskLevel, lessonNum) {
             const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
