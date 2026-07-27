@@ -22,17 +22,26 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        :root {
-    --pink-50: #FFF0F5;      /* Hồng siêu nhạt */
-    --pink-100: #FFD1DC;     /* Hồng pastel */
-    --pink-200: #FFB7C5;     
-    --pink-300: #FF9CB2;     
-    --pink-400: #E88FAC;     
-    --pink-500: #F8BBD0;     /* Tím pastel - MÀU CHÍNH */
-    --pink-600: #C084FC;     
-    --pink-700: #f37272;     
-   --shadow-sm: 0 2px 12px rgba(248, 187, 208, 0.15); /* ← SỬA THÀNH rgba(248, 187, 208, ...) */
-    --shadow-md: 0 8px 30px rgba(248, 187, 208, 0.2);
+       :root {
+    /* PRIMARY - Hồng chính */
+    --primary-dark: #ec4899;      /* Hồng đậm - buttons, active states */
+    --primary-light: #F8BBD0;     /* Hồng nhạt - backgrounds */
+    --primary-very-light: #FFF5FF; /* Hồng siêu nhạt */
+    
+    /* SECONDARY - Red */
+    --red-600: #dc2626;
+    --red-500: #ef4444;
+    
+    /* NEUTRAL */
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #a0526a;
+    --border: #fce7f3;
+    
+    /* FEEDBACK */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
 }
 
         /* ===== LOGIN ===== */
@@ -432,7 +441,7 @@
             color: #4a4a4a;
         }
         .search-box button {
-    background: #F8BBD0 !important; /* Tím pastel */
+    background: var(--primary-light) !important;
             border: none;
             border-radius: 30px;
             padding: 6px 16px;
@@ -443,7 +452,7 @@
             transition: all 0.3s ease;
                 box-shadow: 0 4px 14px rgba(212, 165, 255, 0.4) !important;
         }
-        .search-box button:hover {   background: #C084FC !important; /* ← SỬA THÀNH #C084FC */; }
+        .search-box button:hover {       background: var(--primary-dark) !important;  }
 
         .search-results-dropdown {
    position: fixed; /* ← SỬA THÀNH fixed */
@@ -760,10 +769,11 @@ background: white;
             position: sticky;
             top: 80px;
             max-height: calc(100vh - 120px);
-            overflow-y: auto;
-            overflow-x: visible; /* ← THÊM DÒNG NÀY */
-    z-index: 10; /* ← THÊM DÒNG NÀY */
-        }
+           overflow: visible; /* Thay từ overflow-y: auto */
+    overflow-y: auto;  /* Riêng chiều Y */
+    /* Thêm vào: */
+    z-index: 10;
+}
         .lesson-sidebar::-webkit-scrollbar {
             width: 4px;
         }
@@ -840,7 +850,7 @@ background: white;
             left: 15%;
             width: 70%;
             height: 3px;
-    background: #F8BBD0 !important;
+    background: var(--primary-light) !important; /* Thay #F8BBD0 */
             border-radius: 3px 3px 0 0;
         }
 
@@ -940,7 +950,7 @@ background: #FFFAFC;
         }
 
         .audio-btn {
-    background: #F8BBD0 !important; /* Tím pastel */
+    background: var(--primary-light) !important;
             border: none;
             border-radius: 50%;
             width: 34px;
@@ -1160,14 +1170,14 @@ background: #FFFAFC;
             .lesson-sidebar .lesson-item {
                 padding: 6px 14px;
                 border-left: none;
-                border-bottom: 2px solid transparent;
+                border-bottom: none;
                 font-size: 13px;
                 flex: 0 0 auto;
                 position: relative;
             }
             .lesson-sidebar .lesson-item.active {
                 border-left: none;
-                border-bottom-color: #ec4899;
+    border-bottom: 2px solid #ec4899; /* ← Chỉ show khi active */
             }
             .lesson-sidebar .lesson-item .lesson-num { display: none; }
             .lesson-sidebar .lesson-item .lesson-item-tooltip {
@@ -2078,29 +2088,29 @@ background: #FFFAFC;
         // NEXT / PREV TAB
         // ================================================================
         function nextTab(hskLevel, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-            if (!lessonEl) return;
+    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    if (!lessonEl) return;
 
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIndex = -1;
-            tabs.forEach((tab, index) => {
-                if (tab.classList.contains('active')) activeIndex = index;
-            });
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIndex = -1;
+    tabs.forEach((tab, index) => {
+        if (tab.classList.contains('active')) activeIndex = index;
+    });
 
-            if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
-                const nextTabBtn = tabs[activeIndex + 1];
-                let tabId = (activeIndex + 2).toString();
-                
-                const onclickAttr = nextTabBtn.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1]) {
-                        tabId = match[1].trim();
-                    }
-                }
-                
-                switchTab(hskLevel, lessonNum, tabId);
-                lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
+        const nextTabBtn = tabs[activeIndex + 1];
+        // ← Sửa: Tìm tabId từ button text
+        let tabId = '1'; // default
+        if (nextTabBtn.textContent.includes('Bài Tập')) {
+            tabId = '999';
+        } else {
+            const match = nextTabBtn.getAttribute('onclick')?.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)/);
+            if (match) tabId = match[1].trim();
+        }
+        
+        switchTab(hskLevel, lessonNum, tabId);
+        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
             } else {
                 const data = cachedData[`grammar-${hskLevel}`];
                 if (data && data.lessons) {
@@ -2308,13 +2318,16 @@ background: #FFFAFC;
 
         function saveHighlights() {
     const highlights = [];
-    document.querySelectorAll('.highlighted').forEach(el => {
-        highlights.push({
-            id: el.dataset.highlightId,
-            text: el.textContent,
-            color: el.style.backgroundColor || '#ffe0b2'
-        });
+document.querySelectorAll('.highlighted').forEach(el => {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentHighlightElement = this;
+        const menu = document.getElementById('highlightMenu');
+        menu.style.left = e.pageX + 'px';
+        menu.style.top = e.pageY + 'px';
+        menu.style.display = 'flex';
     });
+});
     try {
         localStorage.setItem('hsk_highlights', JSON.stringify(highlights));
     } catch (e) {
