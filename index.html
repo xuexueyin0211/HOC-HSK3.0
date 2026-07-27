@@ -1960,20 +1960,19 @@
                 tabNav.className = 'tab-nav';
 
                 lesson.tabs.forEach((tab, tabIndex) => {
-                    const btn = document.createElement('button');
-                    btn.className = 'tab-btn';
-                    if (tabIndex === 0) btn.classList.add('active');
-                    btn.textContent = tab.title;
-                    btn.onclick = () => switchTab(levelId, lesson.id, tab.id);
-                    tabNav.appendChild(btn);
-                });
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn';
+    if (tabIndex === 0) btn.classList.add('active');
+    btn.textContent = tab.title;
+    btn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '${tab.id}')`);  // ✅ SỬA
+    tabNav.appendChild(btn);
+});
 
-                // THÊM TAB BÀI TẬP
                 const exerciseBtn = document.createElement('button');
-                exerciseBtn.className = 'tab-btn';
-                exerciseBtn.textContent = 'Bài Tập';
-exerciseBtn.onclick = () => switchTab(levelId, lesson.id, '999');
-                tabNav.appendChild(exerciseBtn);
+exerciseBtn.className = 'tab-btn';
+exerciseBtn.textContent = 'Bài Tập';
+exerciseBtn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '999')`);  // ✅ SỬA
+tabNav.appendChild(exerciseBtn);
 
                 lessonDiv.appendChild(tabNav);
 
