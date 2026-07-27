@@ -2385,12 +2385,8 @@ function loadHighlights() {
     }
 }
 
-// Gọi loadHighlights sau khi render
-// Thêm vào cuối hàm renderGrammarLessons:
-function renderGrammarLessons(level, data) {
-    // ... code render
     setTimeout(() => loadHighlights(), 600);
-}
+        
 
         function deleteSingleHighlight() {
             if (currentHighlightElement) {
