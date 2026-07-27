@@ -1859,86 +1859,27 @@ const exContainer = document.createElement('div');
 exContainer.id = `exercise-${levelId}-${lesson.id}`;
 exContainer.className = 'exercise-container';
 
+// ===== PHẦN RENDER EXERCISE ĐÚNG =====
 if (lesson.exercises && lesson.exercises.length > 0) {
     lesson.exercises.forEach((ex, idx) => {
         const exDiv = document.createElement('div');
         exDiv.className = 'exercise-item';
 
-        // Hiển thị câu hỏi / chữ Hán
+        // Hiển thị câu tiếng Trung (nếu có)
         if (ex.cn) {
             const cnDiv = document.createElement('div');
-            cnDiv.style.cssText = 'font-size:22px;font-weight:700;color:#1e293b;font-family:"Kaiti","SimSun",sans-serif;margin-bottom:4px;';
-            
-            const pyBtn = document.createElement('button');
-            pyBtn.textContent = 'Phiên âm';
-            pyBtn.style.cssText = 'padding:2px 12px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;margin-left:10px;';
-            pyBtn.onclick = function(e) {
-                e.stopPropagation();
-                // Đã sửa: dùng closest để truy xuất thẻ .ex-py chính xác
-                const pySpan = this.closest('.exercise-item').querySelector('.ex-py');
-                if (pySpan) {
-                    if (pySpan.style.display === 'none') {
-                        pySpan.style.display = 'block';
-                        this.textContent = 'Ẩn phiên âm';
-                        this.style.background = '#f44336';
-                    } else {
-                        pySpan.style.display = 'none';
-                        this.textContent = 'Phiên âm';
-                        this.style.background = '#4caf50';
-                    }
-                }
-            };
-            
-            const cnText = document.createElement('span');
-            cnText.textContent = ex.cn;
-            cnDiv.appendChild(cnText);
-            cnDiv.appendChild(pyBtn);
+            cnDiv.style.cssText = 'font-size:22px;font-weight:700;color:#1e293b;font-family:"Kaiti","SimSun",sans-serif;margin-bottom:8px;';
+            cnDiv.textContent = ex.cn;
             exDiv.appendChild(cnDiv);
-            
-            const pySpan = document.createElement('div');
-            pySpan.className = 'ex-py';
-            pySpan.style.cssText = 'display:none;font-size:14px;color:#388e3c;margin:2px 0;';
-            pySpan.textContent = ex.py || ex.pinyin || '';
-            exDiv.appendChild(pySpan);
-            
-        } else {
-            const qDiv = document.createElement('div');
-            qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-            qDiv.textContent = `${idx + 1}. ${ex.question}`;
-            
-            if (ex.pinyin) {
-                const pyBtn = document.createElement('button');
-                pyBtn.textContent = 'Phiên âm';
-                pyBtn.style.cssText = 'padding:2px 12px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;margin-left:10px;';
-                pyBtn.onclick = function(e) {
-                    e.stopPropagation();
-                    const pySpan = this.closest('.exercise-item').querySelector('.ex-py');
-                    if (pySpan) {
-                        if (pySpan.style.display === 'none') {
-                            pySpan.style.display = 'block';
-                            this.textContent = 'Ẩn phiên âm';
-                            this.style.background = '#f44336';
-                        } else {
-                            pySpan.style.display = 'none';
-                            this.textContent = 'Phiên âm';
-                            this.style.background = '#4caf50';
-                        }
-                    }
-                };
-                qDiv.appendChild(pyBtn);
-            }
-            
-            exDiv.appendChild(qDiv);
-
-            if (ex.pinyin) {
-                const pySpan = document.createElement('div');
-                pySpan.className = 'ex-py';
-                pySpan.style.cssText = 'display:none;font-size:14px;color:#388e3c;margin:2px 0 8px 0;';
-                pySpan.textContent = ex.pinyin;
-                exDiv.appendChild(pySpan);
-            }
         }
 
+        // Hiển thị câu hỏi (luôn có)
+        const qDiv = document.createElement('div');
+        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+        qDiv.textContent = `${idx + 1}. ${ex.question}`;
+        exDiv.appendChild(qDiv);
+
+        // Hiển thị các lựa chọn
         const optionsDiv = document.createElement('div');
         optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
 
@@ -1967,14 +1908,6 @@ if (lesson.exercises && lesson.exercises.length > 0) {
 
             const textSpan = document.createElement('span');
             textSpan.textContent = opt;
-            
-            // Đã sửa tên thuộc tính thành options_pinyin
-            if (ex.options_pinyin && ex.options_pinyin[optIdx]) {
-                const pySpan = document.createElement('span');
-                pySpan.style.cssText = 'font-size:12px;color:#388e3c;margin-left:6px;';
-                pySpan.textContent = ex.options_pinyin[optIdx];
-                textSpan.appendChild(pySpan);
-            }
 
             label.appendChild(radio);
             label.appendChild(textSpan);
@@ -1990,7 +1923,7 @@ if (lesson.exercises && lesson.exercises.length > 0) {
 
         exContainer.appendChild(exDiv);
     });
-} else {
+    } else {
     const noEx = document.createElement('p');
     noEx.textContent = 'Chưa có bài tập cho bài học này.';
     noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
