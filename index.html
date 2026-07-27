@@ -2511,54 +2511,74 @@ function loadHighlights() {
     dropdown.innerHTML = '';
     let resultsMap = new Set();
     
-    const levels = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'];
-    levels.forEach(levelId => {
-        const data = cachedData[`grammar-${levelId}`];
-        if (!data || !data.lessons) return;
-        
-        data.lessons.forEach(lesson => {
-            if (!lesson.tabs) return;
-            lesson.tabs.forEach(tab => {
-                let content = JSON.stringify(tab).toLowerCase();
-                if (content.includes(query)) {
-                    const key = `${levelId}-${lesson.id}-${tab.id}`;
-                    if (!resultsMap.has(key)) {
-                        resultsMap.add(key);
-                        const item = document.createElement('div');
-                        item.className = 'search-item-result';
-                        const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
-                        const levelLabel = levelId.toUpperCase();
-                        const levelColor = levelId === 'hsk1' ? '#4caf50' : (levelId === 'hsk2' ? '#f59e0b' : '#e11d48');
-                        item.innerHTML = `
-                            <div>
-                                <span class="hsk-tag" style="background:${levelColor};color:white;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;margin-right:6px;">${levelLabel}</span>
-                                <span class="title" style="font-size:13px;font-weight:600;color:#1e293b;">${lesson.title} - ${tab.title}</span>
-                            </div>
-                            <div class="desc" style="font-size:11px;color:#64748b;margin-top:2px;">${snippet ? '📝 ' + snippet : ''}</div>
-                        `;
-                        item.onclick = function () {
-                            const levelBtn = document.querySelector(`.hsk-item[data-level="${levelId}"]`);
-                            if (levelBtn) {
-                                document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
-                                levelBtn.classList.add('active');
-                            }
-                            showContent('grammar', levelId);
-                            setTimeout(() => {
-                                switchTab(levelId, lesson.id, tab.id);
-                                document.getElementById('globalGrammarSearch').value = '';
-                                dropdown.style.display = 'none';
-                            }, 400);
-                        };
-                        dropdown.appendChild(item);
-                    }
+    // ===== THÊM VÀO: Load dữ liệu cho tất cả HSK nếu chưa có =====
+    // Sử dụng async/await hoặc Promise.all để load
+    (async function loadAllData() {
+        const levels = ['hsk1', 'hsk2', 'hsk3'];
+        for (const levelId of levels) {
+            if (!cachedData[`grammar-${levelId}`]) {
+                try {
+                    await loadModuleData('grammar', levelId);
+                } catch (e) {
+                    console.warn(`Không thể load ${levelId}:`, e);
                 }
+            }
+        }
+        
+        // Sau khi load xong, thực hiện tìm kiếm
+        performSearch();
+    })();
+    
+    function performSearch() {
+        const levels = ['hsk1', 'hsk2', 'hsk3'];
+        levels.forEach(levelId => {
+            const data = cachedData[`grammar-${levelId}`];
+            if (!data || !data.lessons) return;
+            
+            data.lessons.forEach(lesson => {
+                if (!lesson.tabs) return;
+                lesson.tabs.forEach(tab => {
+                    let content = JSON.stringify(tab).toLowerCase();
+                    if (content.includes(query)) {
+                        const key = `${levelId}-${lesson.id}-${tab.id}`;
+                        if (!resultsMap.has(key)) {
+                            resultsMap.add(key);
+                            const item = document.createElement('div');
+                            item.className = 'search-item-result';
+                            const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
+                            const levelLabel = levelId.toUpperCase();
+                            const levelColor = levelId === 'hsk1' ? '#4caf50' : (levelId === 'hsk2' ? '#f59e0b' : '#e11d48');
+                            item.innerHTML = `
+                                <div>
+                                    <span class="hsk-tag" style="background:${levelColor};color:white;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;margin-right:6px;">${levelLabel}</span>
+                                    <span class="title" style="font-size:13px;font-weight:600;color:#1e293b;">${lesson.title} - ${tab.title}</span>
+                                </div>
+                                <div class="desc" style="font-size:11px;color:#64748b;margin-top:2px;">${snippet ? '📝 ' + snippet : ''}</div>
+                            `;
+                            item.onclick = function () {
+                                const levelBtn = document.querySelector(`.hsk-item[data-level="${levelId}"]`);
+                                if (levelBtn) {
+                                    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+                                    levelBtn.classList.add('active');
+                                }
+                                showContent('grammar', levelId);
+                                setTimeout(() => {
+                                    switchTab(levelId, lesson.id, tab.id);
+                                    document.getElementById('globalGrammarSearch').value = '';
+                                    dropdown.style.display = 'none';
+                                }, 400);
+                            };
+                            dropdown.appendChild(item);
+                        }
+                    }
+                });
             });
         });
-    });
-    
-    dropdown.style.display = resultsMap.size > 0 ? 'block' : 'none';
-    if (resultsMap.size === 0) {
-        dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">🔍 Không tìm thấy nội dung phù hợp!</div>';
+        
+        dropdown.style.display = resultsMap.size > 0 ? 'block' : 'none';
+        if (resultsMap.size === 0) {
+            dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">🔍 Không tìm thấy nội dung phù hợp!</div>';
+        }
     }
 }
 
