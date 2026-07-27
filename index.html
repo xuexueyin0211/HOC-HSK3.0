@@ -332,29 +332,7 @@
         .flashcard-box .flashcard-actions .btn-close { background: #f44336; color: white; }
         .flashcard-box .flashcard-actions button:hover { transform: scale(1.05); }
 
-        /* ===== STREAK ===== */
-        .streak-badge {
-            position: fixed;
-            top: 60px;
-            left: 20px;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 14px;
-            box-shadow: 0 4px 12px rgba(238, 90, 36, 0.4);
-            z-index: 999;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .streak-badge:hover { transform: scale(1.05); }
-        .streak-badge .fire { font-size: 18px; }
-
-        /* ===== USER INFO ===== */
+            /* ===== USER INFO ===== */
         .user-info {
             position: fixed;
             top: 60px;
@@ -1255,13 +1233,7 @@
         </div>
     </div>
 
-    <!-- ===== STREAK ===== -->
-    <div class="streak-badge" id="streakBadge" onclick="showStreakInfo()">
-        <span class="fire">🔥</span>
-        <span id="streakDays">0</span> ngày liên tục
-    </div>
-
-    <!-- ===== TOOLBAR ===== -->
+        <!-- ===== TOOLBAR ===== -->
     <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
 
     <div class="highlight-toolbar" id="highlightToolbar">
@@ -2579,36 +2551,7 @@ document.getElementById('globalGrammarSearch').addEventListener('keypress', func
         universalSearch();
     }
 });
-        // ================================================================
-        // STREAK
-        // ================================================================
-        function updateStreak() {
-            const today = new Date().toDateString();
-            const streakData = JSON.parse(localStorage.getItem('streakData') || '{"days":0,"lastDate":""}');
-            if (streakData.lastDate !== today) {
-                const yesterday = new Date(Date.now() - 86400000).toDateString();
-                if (streakData.lastDate === yesterday) { streakData.days++; } 
-                else if (streakData.lastDate !== today) { streakData.days = 1; }
-                streakData.lastDate = today;
-                localStorage.setItem('streakData', JSON.stringify(streakData));
-            }
-            document.getElementById('streakDays').textContent = streakData.days;
-        }
-
-        function showStreakInfo() {
-            const streakData = JSON.parse(localStorage.getItem('streakData') || '{"days":0,"lastDate":""}');
-            const days = streakData.days;
-            let msg = `🔥 ${days} ngày học liên tục!\n\n`;
-            if (days === 0) msg += 'Hãy học một bài ngay hôm nay để bắt đầu chuỗi! 💪';
-            else if (days >= 30) msg += '🚀 Bạn thật tuyệt vời! 30 ngày kiên trì! 🌟';
-            else if (days >= 14) msg += '💪 Cố lên! Bạn đang đi đúng hướng!';
-            else if (days >= 7) msg += '🔥 7 ngày liên tục! Đừng bỏ cuộc nhé!';
-            else if (days >= 3) msg += '💪 3 ngày rồi! Giữ vững phong độ!';
-            else msg += '🌈 Học hôm nay để duy trì streak!';
-            alert(msg);
-        }
-
-        // ================================================================
+                // ================================================================
         // BACK HOME
         // ================================================================
         function backToHome() {
@@ -2652,7 +2595,6 @@ document.getElementById('globalGrammarSearch').addEventListener('keypress', func
             contentArea.classList.remove('show');
             setTimeout(() => {
                 showContent('grammar', 'hsk1');
-                updateStreak();
             }, 300);
         });
     </script>
