@@ -35,7 +35,42 @@
             --shadow-md: 0 8px 30px rgba(236, 72, 153, 0.12);
             --shadow-lg: 0 20px 60px rgba(236, 72, 153, 0.15);
         }
+/* ===== MÀU SẮC THEO HSK ===== */
+/* HSK 1 - Xanh lá */
+.hsk1 .feature-card.active { border-color: #4caf50 !important; background: #e8f5e9 !important; }
+.hsk1 .hsk-item.active { background: #4caf50 !important; border-color: #4caf50 !important; }
+.hsk1 .tab-btn.active { background: #e8f5e9 !important; color: #2e7d32 !important; }
+.hsk1 .tab-btn.active::after { background: #4caf50 !important; }
+.hsk1 .grammar { border-left-color: #4caf50 !important; }
+.hsk1 .subcard { border-left-color: #4caf50 !important; background: #f1f8e9 !important; }
+.hsk1 .subcard .label { color: #2e7d32 !important; }
+.hsk1 .audio-btn { background: #4caf50 !important; }
+.hsk1 .nav button { background: #4caf50 !important; }
+.hsk1 .card h3 { color: #2e7d32 !important; }
 
+/* HSK 2 - Vàng cam */
+.hsk2 .feature-card.active { border-color: #f59e0b !important; background: #fffbeb !important; }
+.hsk2 .hsk-item.active { background: #f59e0b !important; border-color: #f59e0b !important; }
+.hsk2 .tab-btn.active { background: #fef3c7 !important; color: #b45309 !important; }
+.hsk2 .tab-btn.active::after { background: #f59e0b !important; }
+.hsk2 .grammar { border-left-color: #f59e0b !important; }
+.hsk2 .subcard { border-left-color: #f59e0b !important; background: #fffbeb !important; }
+.hsk2 .subcard .label { color: #d97706 !important; }
+.hsk2 .audio-btn { background: #f59e0b !important; }
+.hsk2 .nav button { background: #f59e0b !important; }
+.hsk2 .card h3 { color: #b45309 !important; }
+
+/* HSK 3 - Đỏ hồng */
+.hsk3 .feature-card.active { border-color: #e11d48 !important; background: #fff1f2 !important; }
+.hsk3 .hsk-item.active { background: #e11d48 !important; border-color: #e11d48 !important; }
+.hsk3 .tab-btn.active { background: #ffe4e6 !important; color: #be123c !important; }
+.hsk3 .tab-btn.active::after { background: #e11d48 !important; }
+.hsk3 .grammar { border-left-color: #e11d48 !important; }
+.hsk3 .subcard { border-left-color: #e11d48 !important; background: #fff1f2 !important; }
+.hsk3 .subcard .label { color: #be123c !important; }
+.hsk3 .audio-btn { background: #e11d48 !important; }
+.hsk3 .nav button { background: #e11d48 !important; }
+.hsk3 .card h3 { color: #be123c !important; }
         /* ===== LOGIN OVERLAY ===== */
         #login-overlay {
             display: none;
@@ -965,13 +1000,13 @@
     <!-- ===== HSK NAV ===== -->
     <div class="hsk-nav-wrapper" id="hskNavWrapper">
         <div class="hsk-nav" id="hskNav">
-            <div class="hsk-item active" data-level="hsk1">HSK 1</div>
-            <div class="hsk-item" data-level="hsk2">HSK 2</div>
-            <div class="hsk-item" data-level="hsk3">HSK 3</div>
-            <div class="hsk-item" data-level="hsk4">HSK 4</div>
-            <div class="hsk-item" data-level="hsk5">HSK 5</div>
-            <div class="hsk-item" data-level="hsk6">HSK 6</div>
-        </div>
+    <div class="hsk-item active" data-level="hsk1" style="background:#4caf50;color:white;">HSK 1</div>
+    <div class="hsk-item" data-level="hsk2" style="background:#f59e0b;color:white;">HSK 2</div>
+    <div class="hsk-item" data-level="hsk3" style="background:#e11d48;color:white;">HSK 3</div>
+    <div class="hsk-item" data-level="hsk4">HSK 4</div>
+    <div class="hsk-item" data-level="hsk5">HSK 5</div>
+    <div class="hsk-item" data-level="hsk6">HSK 6</div>
+</div>
     </div>
 
     <!-- ===== CONTENT ===== -->
@@ -1169,47 +1204,49 @@ async function loadModuleData(module, level) {
         // ================================================================
         // SHOW CONTENT
         // ================================================================
-        async function showContent(module, level) {
-            currentModule = module;
-            currentLevel = level;
+       async function showContent(module, level) {
+    currentModule = module;
+    currentLevel = level;
 
-            // Active feature card
-            document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
-            const activeCard = document.querySelector(`.feature-card[data-module="${module}"]`);
-            if (activeCard) activeCard.classList.add('active');
+    // Active feature card
+    document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
+    const activeCard = document.querySelector(`.feature-card[data-module="${module}"]`);
+    if (activeCard) activeCard.classList.add('active');
 
-            // Active HSK
-            document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
-            const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
-            if (activeHsk) activeHsk.classList.add('active');
+    // Active HSK
+    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+    const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
+    if (activeHsk) activeHsk.classList.add('active');
 
-            // Hiển thị
-            hskNavWrapper.classList.add('show');
-            contentArea.classList.add('show');
-            featuresSection.style.display = 'none';
+    // ===== THÊM: Cập nhật class cho content area =====
+    contentArea.className = 'content-area show ' + level;
 
-            // Load data
-            contentInner.innerHTML = `
-                <div id="loading">
-                    <div class="spinner"></div>
-                    <p style="color: #a0526a;">Đang tải dữ liệu...</p>
-                </div>
-            `;
+    // Hiển thị
+    hskNavWrapper.classList.add('show');
+    featuresSection.style.display = 'none';
 
-            try {
-                const data = await loadModuleData(module, level);
-                renderContent(module, level, data);
-            } catch (error) {
-                contentInner.innerHTML = `
-                    <div style="text-align:center;padding:40px;color:#a0526a;">
-                        <p style="font-size:24px;">😅</p>
-                        <p>Không thể tải dữ liệu. Vui lòng thử lại sau.</p>
-                    </div>
-                `;
-            }
+    // Load data
+    contentInner.innerHTML = `
+        <div id="loading">
+            <div class="spinner"></div>
+            <p style="color: #a0526a;">Đang tải dữ liệu...</p>
+        </div>
+    `;
 
-            contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+    try {
+        const data = await loadModuleData(module, level);
+        renderContent(module, level, data);
+    } catch (error) {
+        contentInner.innerHTML = `
+            <div style="text-align:center;padding:40px;color:#a0526a;">
+                <p style="font-size:24px;">😅</p>
+                <p>Không thể tải dữ liệu. Vui lòng thử lại sau.</p>
+            </div>
+        `;
+    }
+
+    contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
         // ================================================================
         // RENDER CONTENT
@@ -1241,225 +1278,327 @@ async function loadModuleData(module, level) {
         // ================================================================
         // RENDER GRAMMAR LESSONS
         // ================================================================
-        function renderGrammarLessons(level, data) {
-            const wrapper = document.createElement('div');
-
-            // Banner
-            const banner = document.createElement('div');
-            banner.style.cssText = `
-                background: linear-gradient(135deg, #fdf2f8, #fce7f3);
-                padding: 20px 30px;
-                border-radius: 16px;
-                margin-bottom: 25px;
-                border: 1px solid #fbcfe8;
-            `;
-            banner.innerHTML = `
-                <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
-                <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
-                <div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>
-            `;
-            wrapper.appendChild(banner);
-
-            // Lessons
-            data.lessons.forEach((lesson, index) => {
-                const lessonDiv = document.createElement('div');
-                lessonDiv.id = `lesson-${level}-${lesson.id}`;
-                lessonDiv.className = 'lesson';
-                if (index === 0) lessonDiv.classList.add('active');
-
-                // Tab nav
-                const tabNav = document.createElement('div');
-                tabNav.className = 'tab-nav';
-
-                lesson.tabs.forEach((tab, tabIndex) => {
-                    const btn = document.createElement('button');
-                    btn.className = 'tab-btn';
-                    if (tabIndex === 0) btn.classList.add('active');
-                    btn.textContent = tab.title;
-                    btn.onclick = () => switchTab(level, lesson.id, tab.id);
-                    tabNav.appendChild(btn);
-                });
-
-                // Bài Tập
-                const exerciseBtn = document.createElement('button');
-                exerciseBtn.className = 'tab-btn';
-                exerciseBtn.textContent = 'Bài Tập';
-                exerciseBtn.onclick = () => switchTab(level, lesson.id, '999');
-                tabNav.appendChild(exerciseBtn);
-                lessonDiv.appendChild(tabNav);
-
-                // Tab content
-                const tabContent = document.createElement('div');
-                tabContent.className = 'tab-content';
-
-                // Các tab
-                lesson.tabs.forEach((tab, tabIndex) => {
-                    const pane = document.createElement('div');
-                    pane.id = `tab-${level}-${lesson.id}-${tab.id}`;
-                    pane.className = 'tab-pane';
-                    if (tabIndex === 0) pane.classList.add('active');
-
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    const grammarDiv = document.createElement('div');
-                    grammarDiv.className = 'grammar';
-
-                    const h3 = document.createElement('h3');
-                    h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
-                    grammarDiv.appendChild(h3);
-
-                    // Subcards
-                    if (tab.subcards) {
-                        tab.subcards.forEach(sc => {
-                            const subcard = document.createElement('div');
-                            subcard.className = 'subcard';
-                            if (sc.type === 'vocab_grid') {
-                                const labelSpan = document.createElement('span');
-                                labelSpan.className = 'label';
-                                labelSpan.textContent = sc.label;
-                                subcard.appendChild(labelSpan);
-
-                                const gridDiv = document.createElement('div');
-                                gridDiv.className = 'vocab-grid';
-                                sc.items.forEach(item => {
-                                    const itemDiv = document.createElement('div');
-                                    itemDiv.className = 'vocab-item';
-                                    itemDiv.innerHTML = `
-                                        <span class="cn">${item.cn}</span>
-                                        <span class="py">${item.py}</span>
-                                    `;
-                                    gridDiv.appendChild(itemDiv);
-                                });
-                                subcard.appendChild(gridDiv);
-                            } else {
-                                subcard.innerHTML = `
-                                    <span class="label">${sc.label}</span>
-                                    <p>${sc.text.replace(/\n/g, '<br>')}</p>
-                                `;
-                            }
-                            grammarDiv.appendChild(subcard);
-                        });
-                    }
-
-                    // Examples
-                    if (tab.examples) {
-                        const exampleDiv = document.createElement('div');
-                        exampleDiv.className = 'example';
-                        tab.examples.forEach((ex, idx) => {
-                            const label = document.createElement('span');
-                            label.className = 'example-label';
-                            label.innerHTML = `<b>例句${idx + 1}：</b>`;
-                            exampleDiv.appendChild(label);
-
-                            const audioDiv = document.createElement('div');
-                            audioDiv.className = 'example-with-audio';
-                            audioDiv.innerHTML = `
-                                <div class="text-group">
-                                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                                        <span class="cn">${ex.cn}</span>
-                                        <button onclick="togglePinyinForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Phiên âm</button>
-                                        <button onclick="toggleNghiaForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#f472b6;color:white;font-size:11px;font-weight:600;cursor:pointer;">Nghĩa</button>
-                                    </div>
-                                    <span class="py" style="display:none;">${ex.py}</span>
-                                    <span class="vi" style="display:none;">${ex.vi}</span>
-                                </div>
-                                <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}')">🔊</button>
-                            `;
-                            exampleDiv.appendChild(audioDiv);
-                            if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
-                        });
-                        grammarDiv.appendChild(exampleDiv);
-                    }
-
-                    card.appendChild(grammarDiv);
-                    pane.appendChild(card);
-                    tabContent.appendChild(pane);
-                });
-
-                // Tab Bài Tập
-                const exercisePane = document.createElement('div');
-                exercisePane.id = `tab-${level}-${lesson.id}-999`;
-                exercisePane.className = 'tab-pane';
-
-                const exerciseCard = document.createElement('div');
-                exerciseCard.className = 'card';
-                const exerciseHtml = document.createElement('div');
-                exerciseHtml.className = 'grammar';
-                const exTitle = document.createElement('h3');
-                exTitle.textContent = 'Bài tập';
-                exerciseHtml.appendChild(exTitle);
-
-                const exContainer = document.createElement('div');
-
-                if (lesson.exercises && lesson.exercises.length > 0) {
-                    lesson.exercises.forEach((ex, idx) => {
-                        const exDiv = document.createElement('div');
-                        exDiv.style.cssText = 'margin-bottom:20px;padding:15px;background:#fdf2f8;border-radius:10px;border-left:4px solid #ec4899;';
-                        const qDiv = document.createElement('div');
-                        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-                        qDiv.textContent = `${idx + 1}. ${ex.question}`;
-                        exDiv.appendChild(qDiv);
-
-                        const optionsDiv = document.createElement('div');
-                        optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
-                        ex.options.forEach((opt, optIdx) => {
-                            const label = document.createElement('label');
-                            label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;';
-                            const radio = document.createElement('input');
-                            radio.type = 'radio';
-                            radio.name = `exercise-${level}-${lesson.id}-${idx}`;
-                            radio.value = optIdx;
-                            radio.onchange = function() {
-                                const parent = this.closest('.exercise-item');
-                                const resultDiv = parent.querySelector('.exercise-result');
-                                const isCorrect = parseInt(this.value) === ex.answer;
-                                resultDiv.textContent = isCorrect ? '✅ Đúng!' : '❌ Sai. Đáp án: ' + ex.options[ex.answer];
-                                resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
-                            };
-                            const textSpan = document.createElement('span');
-                            textSpan.textContent = opt;
-                            label.appendChild(radio);
-                            label.appendChild(textSpan);
-                            optionsDiv.appendChild(label);
-                        });
-                        exDiv.appendChild(optionsDiv);
-
-                        const resultDiv = document.createElement('div');
-                        resultDiv.className = 'exercise-result';
-                        resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:white;';
-                        exDiv.appendChild(resultDiv);
-                        exContainer.appendChild(exDiv);
-                    });
-                } else {
-                    exContainer.innerHTML = '<p style="color:#999;text-align:center;padding:20px;">Chưa có bài tập.</p>';
-                }
-
-                exerciseHtml.appendChild(exContainer);
-                exerciseCard.appendChild(exerciseHtml);
-                exercisePane.appendChild(exerciseCard);
-                tabContent.appendChild(exercisePane);
-
-                lessonDiv.appendChild(tabContent);
-
-                // Navigation
-                const nav = document.createElement('div');
-                nav.className = 'nav';
-                nav.innerHTML = `
-                    <button onclick="prevTab('${level}', ${lesson.id})">⬅ Trước</button>
-                    <button onclick="nextTab('${level}', ${lesson.id})">Tiếp ➜</button>
-                `;
-                lessonDiv.appendChild(nav);
-
-                wrapper.appendChild(lessonDiv);
-            });
-
-            contentInner.appendChild(wrapper);
-
-            // Hiện lesson đầu tiên
-            document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-            const firstLesson = document.querySelector(`#lesson-${level}-1`);
-            if (firstLesson) firstLesson.classList.add('active');
+       function renderGrammarLessons(level, data) {
+    const wrapper = document.createElement('div');
+    wrapper.className = level; // hsk1, hsk2, hsk3
+    
+    // ===== TẠO LAYOUT 2 CỘT =====
+    const layout = document.createElement('div');
+    layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;';
+    
+    // ===== SIDEBAR (thanh bài học bên trái) =====
+    const sidebar = document.createElement('div');
+    sidebar.className = 'lesson-sidebar';
+    sidebar.style.cssText = `
+        width:260px;
+        flex-shrink:0;
+        background:white;
+        border-radius:16px;
+        border:1px solid #fce7f3;
+        box-shadow:var(--shadow-sm);
+        padding:12px 0;
+        position:sticky;
+        top:80px;
+        max-height:calc(100vh - 120px);
+        overflow-y:auto;
+    `;
+    
+    const sidebarTitle = document.createElement('div');
+    sidebarTitle.className = 'sidebar-title';
+    sidebarTitle.style.cssText = 'padding:8px 20px 10px;font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #fce7f3;';
+    sidebarTitle.textContent = '📖 Danh sách bài học';
+    sidebar.appendChild(sidebarTitle);
+    
+    // ===== MAIN CONTENT =====
+    const mainContent = document.createElement('div');
+    mainContent.style.cssText = 'flex:1;min-width:0;';
+    
+    // Banner
+    const banner = document.createElement('div');
+    banner.style.cssText = `
+        background: linear-gradient(135deg, #fdf2f8, #fce7f3);
+        padding: 20px 30px;
+        border-radius: 16px;
+        margin-bottom: 25px;
+        border: 1px solid #fbcfe8;
+    `;
+    banner.innerHTML = `
+        <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
+        <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
+        <div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>
+    `;
+    mainContent.appendChild(banner);
+    
+    // Lessons container
+    const lessonsContainer = document.createElement('div');
+    
+    // Tạo các lesson
+    data.lessons.forEach((lesson, index) => {
+        // ===== THÊM VÀO SIDEBAR =====
+        const lessonItem = document.createElement('div');
+        lessonItem.className = 'lesson-item' + (index === 0 ? ' active' : '');
+        lessonItem.style.cssText = `
+            padding:10px 20px;
+            cursor:pointer;
+            transition:all 0.3s ease;
+            font-size:14px;
+            color:#4a5568;
+            border-left:3px solid transparent;
+            display:flex;
+            align-items:center;
+            gap:8px;
+        `;
+        if (index === 0) {
+            lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
         }
+        lessonItem.innerHTML = `
+            <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
+            <span>${lesson.title}</span>
+            <span class="check-mark" style="margin-left:auto;color:#4caf50;font-size:14px;">${index === 0 ? '📖' : ''}</span>
+        `;
+        lessonItem.onclick = () => {
+            // Chuyển đến lesson tương ứng
+            document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lesson-item').forEach(el => el.classList.remove('active'));
+            
+            const targetLesson = document.getElementById(`lesson-${level}-${lesson.id}`);
+            if (targetLesson) {
+                targetLesson.classList.add('active');
+                targetLesson.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            
+            lessonItem.classList.add('active');
+            lessonItem.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
+            const numSpan = lessonItem.querySelector('.lesson-num');
+            if (numSpan) {
+                numSpan.style.background = '#ec4899';
+                numSpan.style.color = 'white';
+            }
+            const checkSpan = lessonItem.querySelector('.check-mark');
+            if (checkSpan) checkSpan.textContent = '📖';
+            
+            // Cập nhật lại các item khác
+            document.querySelectorAll('.lesson-item').forEach(item => {
+                if (item !== lessonItem) {
+                    item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
+                    const num = item.querySelector('.lesson-num');
+                    if (num) {
+                        num.style.background = '#fce7f3';
+                        num.style.color = '#be185d';
+                    }
+                    const check = item.querySelector('.check-mark');
+                    if (check) check.textContent = '';
+                }
+            });
+        };
+        sidebar.appendChild(lessonItem);
+        
+        // ===== TẠO LESSON =====
+        const lessonDiv = document.createElement('div');
+        lessonDiv.id = `lesson-${level}-${lesson.id}`;
+        lessonDiv.className = 'lesson';
+        if (index === 0) lessonDiv.classList.add('active');
+
+        // Tab nav
+        const tabNav = document.createElement('div');
+        tabNav.className = 'tab-nav';
+
+        lesson.tabs.forEach((tab, tabIndex) => {
+            const btn = document.createElement('button');
+            btn.className = 'tab-btn';
+            if (tabIndex === 0) btn.classList.add('active');
+            btn.textContent = tab.title;
+            btn.onclick = () => switchTab(level, lesson.id, tab.id);
+            tabNav.appendChild(btn);
+        });
+
+        // Bài Tập
+        const exerciseBtn = document.createElement('button');
+        exerciseBtn.className = 'tab-btn';
+        exerciseBtn.textContent = '📝 Bài Tập';
+        exerciseBtn.onclick = () => switchTab(level, lesson.id, '999');
+        tabNav.appendChild(exerciseBtn);
+        lessonDiv.appendChild(tabNav);
+
+        // Tab content
+        const tabContent = document.createElement('div');
+        tabContent.className = 'tab-content';
+
+        // Các tab
+        lesson.tabs.forEach((tab, tabIndex) => {
+            const pane = document.createElement('div');
+            pane.id = `tab-${level}-${lesson.id}-${tab.id}`;
+            pane.className = 'tab-pane';
+            if (tabIndex === 0) pane.classList.add('active');
+
+            const card = document.createElement('div');
+            card.className = 'card';
+            const grammarDiv = document.createElement('div');
+            grammarDiv.className = 'grammar';
+
+            const h3 = document.createElement('h3');
+            h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
+            grammarDiv.appendChild(h3);
+
+            // Subcards
+            if (tab.subcards) {
+                tab.subcards.forEach(sc => {
+                    const subcard = document.createElement('div');
+                    subcard.className = 'subcard';
+                    if (sc.type === 'vocab_grid') {
+                        const labelSpan = document.createElement('span');
+                        labelSpan.className = 'label';
+                        labelSpan.textContent = sc.label;
+                        subcard.appendChild(labelSpan);
+
+                        const gridDiv = document.createElement('div');
+                        gridDiv.className = 'vocab-grid';
+                        sc.items.forEach(item => {
+                            const itemDiv = document.createElement('div');
+                            itemDiv.className = 'vocab-item';
+                            itemDiv.innerHTML = `
+                                <span class="cn">${item.cn}</span>
+                                <span class="py">${item.py}</span>
+                            `;
+                            gridDiv.appendChild(itemDiv);
+                        });
+                        subcard.appendChild(gridDiv);
+                    } else {
+                        subcard.innerHTML = `
+                            <span class="label">${sc.label}</span>
+                            <p>${sc.text.replace(/\n/g, '<br>')}</p>
+                        `;
+                    }
+                    grammarDiv.appendChild(subcard);
+                });
+            }
+
+            // Examples
+            if (tab.examples) {
+                const exampleDiv = document.createElement('div');
+                exampleDiv.className = 'example';
+                tab.examples.forEach((ex, idx) => {
+                    const label = document.createElement('span');
+                    label.className = 'example-label';
+                    label.innerHTML = `<b>例句${idx + 1}：</b>`;
+                    exampleDiv.appendChild(label);
+
+                    const audioDiv = document.createElement('div');
+                    audioDiv.className = 'example-with-audio';
+                    audioDiv.innerHTML = `
+                        <div class="text-group">
+                            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                                <span class="cn">${ex.cn}</span>
+                                <button onclick="togglePinyinForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Phiên âm</button>
+                                <button onclick="toggleNghiaForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#f472b6;color:white;font-size:11px;font-weight:600;cursor:pointer;">Nghĩa</button>
+                            </div>
+                            <span class="py" style="display:none;">${ex.py}</span>
+                            <span class="vi" style="display:none;">${ex.vi}</span>
+                        </div>
+                        <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}')">🔊</button>
+                    `;
+                    exampleDiv.appendChild(audioDiv);
+                    if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
+                });
+                grammarDiv.appendChild(exampleDiv);
+            }
+
+            card.appendChild(grammarDiv);
+            pane.appendChild(card);
+            tabContent.appendChild(pane);
+        });
+
+        // Tab Bài Tập
+        const exercisePane = document.createElement('div');
+        exercisePane.id = `tab-${level}-${lesson.id}-999`;
+        exercisePane.className = 'tab-pane';
+
+        const exerciseCard = document.createElement('div');
+        exerciseCard.className = 'card';
+        const exerciseHtml = document.createElement('div');
+        exerciseHtml.className = 'grammar';
+        const exTitle = document.createElement('h3');
+        exTitle.textContent = '📝 Bài tập';
+        exerciseHtml.appendChild(exTitle);
+
+        const exContainer = document.createElement('div');
+
+        if (lesson.exercises && lesson.exercises.length > 0) {
+            lesson.exercises.forEach((ex, idx) => {
+                const exDiv = document.createElement('div');
+                exDiv.style.cssText = 'margin-bottom:20px;padding:15px;background:#fdf2f8;border-radius:10px;border-left:4px solid #ec4899;';
+                
+                const qDiv = document.createElement('div');
+                qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+                qDiv.textContent = `${idx + 1}. ${ex.question}`;
+                exDiv.appendChild(qDiv);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
+                ex.options.forEach((opt, optIdx) => {
+                    const label = document.createElement('label');
+                    label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;';
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `exercise-${level}-${lesson.id}-${idx}`;
+                    radio.value = optIdx;
+                    radio.onchange = function() {
+                        const parent = this.closest('.exercise-item');
+                        const resultDiv = parent.querySelector('.exercise-result');
+                        const isCorrect = parseInt(this.value) === ex.answer;
+                        resultDiv.textContent = isCorrect ? '✅ Đúng!' : '❌ Sai. Đáp án: ' + ex.options[ex.answer];
+                        resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+                    };
+                    const textSpan = document.createElement('span');
+                    textSpan.textContent = opt;
+                    label.appendChild(radio);
+                    label.appendChild(textSpan);
+                    optionsDiv.appendChild(label);
+                });
+                exDiv.appendChild(optionsDiv);
+
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'exercise-result';
+                resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:white;';
+                exDiv.appendChild(resultDiv);
+                exContainer.appendChild(exDiv);
+            });
+        } else {
+            exContainer.innerHTML = '<p style="color:#999;text-align:center;padding:20px;">Chưa có bài tập.</p>';
+        }
+
+        exerciseHtml.appendChild(exContainer);
+        exerciseCard.appendChild(exerciseHtml);
+        exercisePane.appendChild(exerciseCard);
+        tabContent.appendChild(exercisePane);
+
+        lessonDiv.appendChild(tabContent);
+
+        // Navigation
+        const nav = document.createElement('div');
+        nav.className = 'nav';
+        nav.innerHTML = `
+            <button onclick="prevTab('${level}', ${lesson.id})">⬅ Trước</button>
+            <button onclick="nextTab('${level}', ${lesson.id})">Tiếp ➜</button>
+        `;
+        lessonDiv.appendChild(nav);
+
+        lessonsContainer.appendChild(lessonDiv);
+    });
+
+    mainContent.appendChild(lessonsContainer);
+    
+    // ===== GHÉP SIDEBAR + MAIN CONTENT =====
+    layout.appendChild(sidebar);
+    layout.appendChild(mainContent);
+    wrapper.appendChild(layout);
+    contentInner.appendChild(wrapper);
+
+    // Hiện lesson đầu tiên
+    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+    const firstLesson = document.querySelector(`#lesson-${level}-1`);
+    if (firstLesson) firstLesson.classList.add('active');
+}
 
         // ================================================================
         // RENDER CARD ITEMS (vocab, hanzi, dictation, shadowing)
@@ -1571,7 +1710,26 @@ async function loadModuleData(module, level) {
                 resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
-
+// ================================================================
+// SWITCH LEVEL (cập nhật màu sắc)
+// ================================================================
+function switchLevel(level) {
+    currentLevel = level;
+    
+    // Active HSK
+    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+    const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
+    if (activeHsk) activeHsk.classList.add('active');
+    
+    // Cập nhật màu cho content
+    const contentWrapper = document.querySelector('.content-area');
+    if (contentWrapper) {
+        contentWrapper.className = 'content-area show ' + level;
+    }
+    
+    // Reload content
+    showContent(currentModule, level);
+}
         // ================================================================
         // SWITCH TAB (grammar)
         // ================================================================
@@ -1616,72 +1774,79 @@ async function loadModuleData(module, level) {
         // ================================================================
         // NEXT / PREV TAB
         // ================================================================
-        function nextTab(level, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-            if (!lessonEl) return;
+       // ================================================================
+// NEXT / PREV TAB (SỬA LỖI)
+// ================================================================
+function nextTab(level, lessonNum) {
+    const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
+    if (!lessonEl) return;
 
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIndex = -1;
-            tabs.forEach((tab, index) => {
-                if (tab.classList.contains('active')) activeIndex = index;
-            });
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIndex = -1;
+    tabs.forEach((tab, index) => {
+        if (tab.classList.contains('active')) activeIndex = index;
+    });
 
-            if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
-                const nextTabBtn = tabs[activeIndex + 1];
-                let tabId = (activeIndex + 2).toString();
-                const onclickAttr = nextTabBtn.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1]) tabId = match[1].trim();
-                }
-                switchTab(level, lessonNum, tabId);
-            } else {
-                const lessons = cachedData[`grammar-${level}`]?.lessons;
-                if (lessons && lessonNum < lessons.length) {
-                    const nextLessonNum = lessonNum + 1;
-                    const nextLessonEl = document.getElementById(`lesson-${level}-${nextLessonNum}`);
-                    if (nextLessonEl) {
-                        document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-                        nextLessonEl.classList.add('active');
-                        switchTab(level, nextLessonNum, '1');
-                        nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                } else {
-                    alert('🎉 Bạn đã học xong bài cuối cùng!');
-                }
-            }
+    if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
+        const nextTabBtn = tabs[activeIndex + 1];
+        let tabId = (activeIndex + 2).toString();
+        const onclickAttr = nextTabBtn.getAttribute('onclick');
+        if (onclickAttr) {
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+            if (match && match[1]) tabId = match[1].trim();
         }
-
-        function prevTab(level, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-            if (!lessonEl) return;
-
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIndex = -1;
-            tabs.forEach((tab, index) => {
-                if (tab.classList.contains('active')) activeIndex = index;
-            });
-
-            if (activeIndex > 0) {
-                const prevTabBtn = tabs[activeIndex - 1];
-                let tabId = activeIndex.toString();
-                const onclickAttr = prevTabBtn.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1]) tabId = match[1].trim();
-                }
-                switchTab(level, lessonNum, tabId);
-            } else if (lessonNum > 1) {
-                const prevLessonNum = lessonNum - 1;
-                const prevLessonEl = document.getElementById(`lesson-${level}-${prevLessonNum}`);
-                if (prevLessonEl) {
-                    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-                    prevLessonEl.classList.add('active');
-                    switchTab(level, prevLessonNum, '1');
-                    prevLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        switchTab(level, lessonNum, tabId);
+    } else {
+        // ===== SỬA: Lấy lessons từ cachedData đúng cách =====
+        const key = `grammar-${level}`;
+        const data = cachedData[key];
+        const lessons = data?.lessons;
+        
+        if (lessons && lessonNum < lessons.length) {
+            const nextLessonNum = lessonNum + 1;
+            const nextLessonEl = document.getElementById(`lesson-${level}-${nextLessonNum}`);
+            if (nextLessonEl) {
+                document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+                nextLessonEl.classList.add('active');
+                switchTab(level, nextLessonNum, '1');
+                nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+        } else {
+            alert('🎉 Bạn đã học xong bài cuối cùng!');
         }
+    }
+}
+
+function prevTab(level, lessonNum) {
+    const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
+    if (!lessonEl) return;
+
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIndex = -1;
+    tabs.forEach((tab, index) => {
+        if (tab.classList.contains('active')) activeIndex = index;
+    });
+
+    if (activeIndex > 0) {
+        const prevTabBtn = tabs[activeIndex - 1];
+        let tabId = activeIndex.toString();
+        const onclickAttr = prevTabBtn.getAttribute('onclick');
+        if (onclickAttr) {
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+            if (match && match[1]) tabId = match[1].trim();
+        }
+        switchTab(level, lessonNum, tabId);
+    } else if (lessonNum > 1) {
+        const prevLessonNum = lessonNum - 1;
+        const prevLessonEl = document.getElementById(`lesson-${level}-${prevLessonNum}`);
+        if (prevLessonEl) {
+            document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+            prevLessonEl.classList.add('active');
+            switchTab(level, prevLessonNum, '1');
+            prevLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+}
 
         // ================================================================
         // AUDIO
