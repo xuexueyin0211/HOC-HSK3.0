@@ -2885,8 +2885,6 @@ function closeFlashcard() {
 }
 
 // ===== JS: QUICK TRANSLATE POPUP =====
-let popupTimeout = null;
-
 document.addEventListener('dblclick', function(e) {
     const selection = window.getSelection().toString().trim();
     if (selection.length > 0 && selection.length < 20) {
