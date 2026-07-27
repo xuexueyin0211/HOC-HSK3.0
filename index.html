@@ -79,7 +79,54 @@
             background: #f5f5f5;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
+/* ===== LESSON TOOLTIP ===== */
+.lesson-item-tooltip {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 8px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    border: 1px solid #fce7f3;
+    z-index: 10000;
+    display: none;
+    min-width: 220px;
+    max-width: 280px;
+    word-wrap: break-word;
+}
 
+.lesson-item:hover .lesson-item-tooltip {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.lesson-item-tooltip .tooltip-title {
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #be185d;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fce7f3;
+    letter-spacing: 0.5px;
+}
+
+.lesson-item-tooltip .tooltip-item {
+    padding: 6px 14px;
+    font-size: 12px;
+    color: #4a5568;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lesson-item-tooltip .tooltip-item:hover {
+    background: #fdf2f8;
+    color: #be185d;
+    border-left-color: #ec4899;
+    padding-left: 18px;
+}
         /* ===== HIGHLIGHT ===== */
         .highlighted {
             background-color: #ffe0b2 !important;
@@ -1514,9 +1561,20 @@
                     lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
                 }
                 lessonItem.innerHTML = `
-                    <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
-                    <span>${lesson.title}</span>
-                `;
+    <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
+    <span>${lesson.title}</span>
+    <div class="lesson-item-tooltip">
+        <div class="tooltip-title">📑 Các phần trong bài</div>
+        ${lesson.tabs.map((tab, tabIdx) => `
+            <div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${hskLevel}', ${lesson.id}, '${tab.id}')">
+                ${tab.title}
+            </div>
+        `).join('')}
+        <div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${hskLevel}', ${lesson.id}, '999')" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
+            ✏️ Bài Tập
+        </div>
+    </div>
+`;
                 lessonItem.onclick = () => {
                     document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
                     document.querySelectorAll('.lesson-item').forEach(el => el.classList.remove('active'));
