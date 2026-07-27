@@ -1913,27 +1913,43 @@ if (ex.cn) {
                 optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
 
                 ex.options.forEach((opt, optIdx) => {
-                    const label = document.createElement('label');
-                    label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
-                    label.onmouseover = function () { this.style.background = '#e8f5e9'; };
-                    label.onmouseout = function () { this.style.background = 'transparent'; };
+    const label = document.createElement('label');
+    label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
+    label.onmouseover = function () { this.style.background = '#e8f5e9'; };
+    label.onmouseout = function () { this.style.background = 'transparent'; };
 
-                    const radio = document.createElement('input');
-                    radio.type = 'radio';
-                    radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
-                    radio.value = optIdx;
-                    radio.onchange = function () {
-                        const parent = this.closest('.exercise-item');
-                        const resultDiv = parent.querySelector('.exercise-result');
-                        const isCorrect = parseInt(this.value) === ex.answer;
-                        if (isCorrect) {
-                            resultDiv.textContent = '✅ Đúng!';
-                            resultDiv.style.color = '#4caf50';
-                        } else {
-                            resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
-                            resultDiv.style.color = '#f44336';
-                        }
-                    };
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
+    radio.value = optIdx;
+    radio.onchange = function () {
+        const parent = this.closest('.exercise-item');
+        const resultDiv = parent.querySelector('.exercise-result');
+        const isCorrect = parseInt(this.value) === ex.answer;
+        if (isCorrect) {
+            resultDiv.textContent = '✅ Đúng!';
+            resultDiv.style.color = '#4caf50';
+        } else {
+            resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
+            resultDiv.style.color = '#f44336';
+        }
+    };
+
+    const textSpan = document.createElement('span');
+    textSpan.textContent = opt;
+    
+    // HIỂN THỊ PHIÊN ÂM CỦA ĐÁP ÁN (NẾU CÓ)
+    if (ex.options_py && ex.options_py[optIdx]) {
+        const pySpan = document.createElement('span');
+        pySpan.style.cssText = 'font-size:12px;color:#388e3c;margin-left:6px;';
+        pySpan.textContent = ex.options_py[optIdx];
+        textSpan.appendChild(pySpan);
+    }
+
+    label.appendChild(radio);
+    label.appendChild(textSpan);
+    optionsDiv.appendChild(label);
+});
 
                     const textSpan = document.createElement('span');
                     textSpan.textContent = opt;
