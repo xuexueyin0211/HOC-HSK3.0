@@ -1624,10 +1624,10 @@
                 border: 1px solid #fbcfe8;
             `;
             banner.innerHTML = `
-                <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
-                <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
-                <div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>
-            `;
+    <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
+    <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
+    ${data.subtitle ? `<div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>` : ''}
+`;
             mainContent.appendChild(banner);
 
             const lessonsContainer = document.createElement('div');
@@ -1877,10 +1877,11 @@
             header.className = 'section-header';
             header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;';
             header.innerHTML = `
-                <h2 style="font-size:24px;color:#be185d;font-family:'Lexend',sans-serif;">
-                    ${MODULES[module].icon} ${data.title} <small style="font-size:15px;font-weight:400;color:#a0526a;margin-left:10px;">${data.subtitle}</small>
-                </h2>
-            `;
+    <h2 style="font-size:24px;color:#be185d;font-family:'Lexend',sans-serif;">
+        ${MODULES[module].icon} ${data.title} 
+        ${data.subtitle ? `<small style="font-size:15px;font-weight:400;color:#a0526a;margin-left:10px;">${data.subtitle}</small>` : ''}
+    </h2>
+`;
             contentInner.appendChild(header);
 
             const grid = document.createElement('div');
