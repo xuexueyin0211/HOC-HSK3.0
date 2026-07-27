@@ -11,8 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
-        //========== CSS: RESET & CƠ BẢN ==========//
-        * {
+/* ========== CSS: ... ========== */
+        {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -56,7 +56,7 @@
             scroll-behavior: smooth;
         }
 
-        //========== CSS: DARK MODE ==========//
+        /* ========== CSS: DARK MODE ========== */
         body.dark-mode {
             background: #1a1a2e !important;
             color: #e0e0e0 !important;
@@ -165,7 +165,7 @@
             color: #ffd700 !important;
         }
 
-        //========== CSS: BG DECORATIONS & OVERLAYS ==========//
+        /* ========== CSS: BG DECORATIONS & OVERLAYS ========== */
         .chinese-decoration {
             position: fixed;
             pointer-events: none;
@@ -227,7 +227,7 @@
             z-index: 1;
         }
 
-        //========== CSS: LOGIN MODAL ==========//
+        /* ========== CSS: LOGIN MODAL ========== */
         #login-overlay {
             display: none;
             position: fixed;
@@ -286,7 +286,7 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        //========== CSS: STREAK BADGE ==========//
+        /* ========== CSS: STREAK BADGE ========== */
         .streak-badge {
             position: fixed;
             top: 60px;
@@ -315,7 +315,7 @@
             font-size: 18px;
         }
 
-        //========== CSS: USER INFO & LOGOUT ==========//
+        /* ========== CSS: USER INFO & LOGOUT ========== */
         .user-info {
             position: fixed;
             top: 60px;
@@ -344,7 +344,7 @@
             transition: all 0.3s ease;
         }
 
-        //========== CSS: TOP BANNER & HEADER ==========//
+        /* ========== CSS: TOP BANNER & HEADER ========== */
         .top-banner {
             background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9);
             color: #2e7d32;
@@ -398,7 +398,7 @@
             letter-spacing: 0.8px;
         }
 
-        //========== CSS: LEVEL SELECTOR ==========//
+        /* ========== CSS: LEVEL SELECTOR ========== */
         .level-selector {
             position: sticky;
             top: 0;
@@ -478,7 +478,7 @@
             box-shadow: 0 2px 6px rgba(225, 29, 72, 0.3);
         }
 
-        //========== CSS: PROGRESS STATS ==========//
+        /* ========== CSS: PROGRESS STATS ========== */
         .progress-stats {
             padding: 10px 25px;
             font-size: 13px;
@@ -505,7 +505,7 @@
             transition: width 0.5s ease;
         }
 
-        //========== CSS: LAYOUT - SIDEBAR & MAIN ==========//
+        /* ========== CSS: LAYOUT - SIDEBAR & MAIN ========== */
         aside {
             width: 300px;
             background: white;
@@ -611,7 +611,7 @@
             padding-left: 16px;
         }
 
-        //========== CSS: LESSONS & CARDS ==========//
+        /* ========== CSS: LESSONS & CARDS ========== */
         .lesson {
             display: none;
             max-width: 850px;
@@ -653,7 +653,7 @@
             gap: 8px;
         }
 
-        //========== CSS: TABS ==========//
+        /* ========== CSS: TABS ========== */
         .tab-nav {
             display: flex;
             gap: 5px;
@@ -718,7 +718,7 @@
             display: block;
         }
 
-        //========== CSS: GRAMMAR CONTENT ==========//
+        /* ========== CSS: GRAMMAR CONTENT ========== */
         .grammar {
             border-left: 5px solid #4caf50;
             padding-left: 20px;
@@ -771,7 +771,7 @@
             border: 1px solid rgba(76, 175, 80, 0.3);
         }
 
-        //========== CSS: EXAMPLES ==========//
+        /* ========== CSS: EXAMPLES ========== */
         .example-label {
             color: #5d4037;
             font-weight: 600;
@@ -855,7 +855,7 @@
             display: inline-block;
         }
 
-        //========== CSS: AUDIO BUTTON ==========//
+        /* ========== CSS: AUDIO BUTTON ========== */
         .audio-btn {
             background: #4caf50;
             border: none;
@@ -885,7 +885,7 @@
             animation: pulse 0.8s ease infinite;
         }
 
-        //========== CSS: EXERCISES ==========//
+        /* ========== CSS: EXERCISES ========== */
         .exercise-container {
             padding: 5px 0;
         }
@@ -933,7 +933,7 @@
             accent-color: #4caf50;
         }
 
-        //========== CSS: NAVIGATION ==========//
+        /* ========== CSS: NAVIGATION ========== */
         .nav {
             display: flex;
             justify-content: space-between;
@@ -963,7 +963,7 @@
             visibility: hidden;
         }
 
-        //========== CSS: TEXT COLORS (CN, PY, VI) ==========//
+        /* ========== CSS: TEXT COLORS (CN, PY, VI) ========== */
         .cn {
             font-size: 24px;
             font-weight: 700;
@@ -985,7 +985,7 @@
             font-size: 15px;
         }
 
-        //========== CSS: SEARCH BOX ==========//
+        /* ========== CSS: SEARCH BOX ========== */
         .search-box {
             padding: 0 15px 15px 15px;
         }
@@ -1089,7 +1089,7 @@
             margin-top: 2px;
         }
 
-        //========== CSS: HIGHLIGHT SYSTEM ==========//
+        /* ========== CSS: HIGHLIGHT SYSTEM ========== */
         .highlighted {
             background-color: #ffe0b2 !important;
             padding: 2px 4px;
@@ -1173,7 +1173,7 @@
             transform: scale(1.05);
         }
 
-        //========== CSS: HIGHLIGHT TOOLBAR ==========//
+        /* ========== CSS: HIGHLIGHT TOOLBAR ========== */
         .highlight-toolbar {
             position: fixed;
             bottom: 100px;
@@ -1258,7 +1258,7 @@
             transform: scale(1.1);
         }
 
-        //========== CSS: QUICK TRANSLATE POPUP ==========//
+        /* ========== CSS: QUICK TRANSLATE POPUP ========== */
         .translate-popup {
             position: fixed;
             background: white;
@@ -1298,7 +1298,7 @@
             font-size: 14px;
         }
 
-        //========== CSS: FLASHCARD MODAL ==========//
+        /* ========== CSS: FLASHCARD MODAL ========== */
         .flashcard-modal {
             position: fixed;
             top: 0;
@@ -1395,7 +1395,7 @@
             transform: scale(1.05);
         }
 
-        //========== CSS: TABLES ==========//
+        /* ========== CSS: TABLES ========== */
         .compare-table {
             width: 100%;
             border-collapse: collapse;
@@ -1479,7 +1479,7 @@
             color: #388e3c;
         }
 
-        //========== CSS: HSK COLOR WRAPPERS (SIMPLIFIED) ==========//
+        /* ========== CSS: HSK COLOR WRAPPERS (SIMPLIFIED) ========== */
         .hsk-wrapper {
             display: none !important;
         }
@@ -1561,7 +1561,7 @@
         .hsk-wrapper.hsk3 table td { border-color: #fecdd3 !important; }
         .hsk-wrapper.hsk3 table tr:nth-child(even) { background: #fff5f6 !important; }
 
-        //========== CSS: RESPONSIVE DESIGN ==========//
+        /* ========== CSS: RESPONSIVE DESIGN ========== */
         @media screen and (max-width: 1024px) {
             aside {
                 width: 240px;
@@ -1713,7 +1713,7 @@
 </head>
 
 <body>
-    //========== HTML: LOGIN SCREEN ==========//
+    /* ========== HTML: LOGIN SCREEN ========== */
     <div id="login-overlay" style="display:flex;">
         <div class="login-box">
             <h2>📚 HSK123</h2>
@@ -1734,7 +1734,7 @@
         </div>
     </div>
 
-    //========== HTML: UI BADGES & BUTTONS ==========//
+    /* ========== HTML: UI BADGES & BUTTONS ========== */
     <div class="streak-badge" id="streakBadge" onclick="showStreakInfo()">
         <span class="fire">🔥</span>
         <span id="streakDays">0</span> ngày liên tục
@@ -1781,9 +1781,9 @@
         </div>
     </div>
 
-    //========== HTML: MAIN CONTAINER ==========//
+    /* ========== HTML: MAIN CONTAINER ========== */
     <div id="app-container">
-        //========== HTML: LEVEL SELECTOR ==========//
+        /* ========== HTML: LEVEL SELECTOR ========== */
         <div class="level-selector">
             <div class="level-btns">
                 <button class="level-btn hsk1 active" onclick="switchLevel('hsk1', this)">🌿 HSK1</button>
@@ -1803,7 +1803,7 @@
             </div>
         </div>
 
-        //========== HTML: APP CONTENT ==========//
+        /* ========== HTML: APP CONTENT ========== */
         <div id="app">
             <div id="loading" style="text-align:center; padding:50px;">
                 <div
@@ -1814,7 +1814,7 @@
         </div>
     </div>
 
-    //========== JAVASCRIPT: MAIN LOGIC ==========//
+    /* ========== JAVASCRIPT: MAIN LOGIC ========== */
     <script>
 // ===== JS: VARIABLES INIT =====
 let hskData = {};
@@ -2958,7 +2958,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
     </script>
 
-    //========== JAVASCRIPT: FIREBASE AUTHENTICATION ==========//
+    /* ========== JAVASCRIPT: FIREBASE AUTHENTICATION ========== */
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
