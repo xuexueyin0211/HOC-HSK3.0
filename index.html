@@ -1615,6 +1615,7 @@
                 style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
             <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
             <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">🔄 Flashcard</button>
+        <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">📋 Chưa nắm</button>
         </div>
     </div>
 
@@ -1629,20 +1630,25 @@
         <div class="meaning" id="popupMeaning">Xin chào</div>
     </div>
 
-    <div class="flashcard-modal" id="flashcardModal">
-        <div class="flashcard-box">
-            <div class="card-count" id="flashcardCount">1/10</div>
-            <div class="card-face" id="flashcardFace">
-                <span class="cn">你好</span>
-            </div>
-            <div class="flashcard-actions">
-                <button class="btn-show" onclick="flashcardShowAnswer()">Xem nghĩa</button>
-                <button class="btn-prev" onclick="flashcardPrev()">⬅️</button>
-                <button class="btn-next" onclick="flashcardNext()">➡️</button>
-                <button class="btn-close" onclick="closeFlashcard()">❌ Đóng</button>
-            </div>
+   <div class="flashcard-modal" id="flashcardModal">
+    <div class="flashcard-box">
+        <div style="text-align:center;margin-bottom:10px;font-size:13px;color:#666;">📚 Ôn tập lại các ví dụ</div>
+        <div class="card-count" id="flashcardCount">1/10</div>
+        <div class="card-face" id="flashcardFace">
+            <span class="cn">你好</span>
+        </div>
+        <div class="flashcard-actions">
+            <button class="btn-show" onclick="flashcardShowAnswer()">Xem nghĩa</button>
+            <button class="btn-prev" onclick="flashcardPrev()">⬅️</button>
+            <button class="btn-next" onclick="flashcardNext()">➡️</button>
+            <button class="btn-close" onclick="closeFlashcard()">❌ Đóng</button>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:15px;justify-content:center;">
+            <button onclick="markAsUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#4caf50;color:white;font-weight:600;cursor:pointer;">✅ Đã nắm được</button>
+            <button onclick="markAsNotUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#ff9800;color:white;font-weight:600;cursor:pointer;">⏳ Chưa nắm được</button>
         </div>
     </div>
+</div>
 
     <!-- ========== HTML: MAIN CONTAINER ========== -->
     <div id="app-container">
@@ -2586,7 +2592,8 @@ function toggleToolbar() {
     }
 }
 // ===== JS: FLASHCARD SYSTEM =====
-function startFlashcard() {
+let undefinedWords = []; // Lưu từ chưa nắm được
+        function startFlashcard() {
     const words = [];
     const levelData = hskData[currentLevel];
     if (levelData && levelData.lessons) {
@@ -2664,7 +2671,20 @@ function flashcardPrev() {
 function closeFlashcard() {
     document.getElementById('flashcardModal').classList.remove('active');
 }
-
+function reviewUndefinedWords() {
+    const saved = localStorage.getItem('undefinedWords');
+    if (!saved || JSON.parse(saved).length === 0) {
+        alert('✅ Không có từ nào chưa nắm được! Bạn giỏi lắm!');
+        return;
+    }
+    
+    undefinedWords = JSON.parse(saved);
+    flashcardData = undefinedWords;
+    flashcardIndex = 0;
+    flashcardShowing = false;
+    document.getElementById('flashcardModal').classList.add('active');
+    showFlashcard();
+}
 // ===== JS: QUICK TRANSLATE POPUP =====
 document.addEventListener('dblclick', function(e) {
     const selection = window.getSelection().toString().trim();
@@ -2675,7 +2695,35 @@ document.addEventListener('dblclick', function(e) {
         }
     }
 });
+function markAsUnderstood() {
+    const data = flashcardData[flashcardIndex];
+    if (!data) return;
+    
+    // Xóa khỏi danh sách chưa nắm (nếu có)
+    undefinedWords = undefinedWords.filter(w => w.cn !== data.cn);
+    
+    // Lưu localStorage
+    localStorage.setItem('undefinedWords', JSON.stringify(undefinedWords));
+    
+    flashcardNext();
+}
 
+function markAsNotUnderstood() {
+    const data = flashcardData[flashcardIndex];
+    if (!data) return;
+    
+    // Kiểm tra xem đã có trong danh sách chưa
+    const exists = undefinedWords.some(w => w.cn === data.cn);
+    if (!exists) {
+        undefinedWords.push(data);
+        localStorage.setItem('undefinedWords', JSON.stringify(undefinedWords));
+        alert('✅ Đã thêm vào danh sách ôn lại!');
+    } else {
+        alert('⚠️ Từ này đã có trong danh sách rồi!');
+    }
+    
+    flashcardNext();
+}
 function showTranslatePopup(x, y, text) {
     const popup = document.getElementById('translatePopup');
     document.getElementById('popupWord').textContent = text;
