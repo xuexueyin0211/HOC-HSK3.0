@@ -1858,97 +1858,128 @@
             currentTab = tabIdStr;
         }
 
-        // ================================================================
-        // NEXT / PREV TAB
-        // ================================================================
-        function nextTab(level, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-            if (!lessonEl) return;
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIndex = -1;
-            tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
+        // ===== JS: NEXT TAB =====
+function nextTab(hskLevel, lessonNum) {
+    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    if (!lessonEl) return;
 
-            if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
-                const nextTabBtn = tabs[activeIndex + 1];
-                let tabId = (activeIndex + 2).toString();
-                const onclickAttr = nextTabBtn.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1]) tabId = match[1].trim();
-                }
-                switchTab(level, lessonNum, tabId);
-            } else {
-                const key = `grammar-${level}`;
-                const data = cachedData[key];
-                const lessons = data?.lessons;
-                if (lessons && lessonNum < lessons.length) {
-                    const nextLessonNum = lessonNum + 1;
-                    const nextLessonEl = document.getElementById(`lesson-${level}-${nextLessonNum}`);
-                    if (nextLessonEl) {
-                        document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-                        nextLessonEl.classList.add('active');
-                        switchTab(level, nextLessonNum, '1');
-                        nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        // Cập nhật sidebar
-                        document.querySelectorAll('.lesson-item').forEach((item, idx) => {
-                            item.classList.toggle('active', idx === nextLessonNum - 1);
-                            if (idx === nextLessonNum - 1) {
-                                item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
-                                const num = item.querySelector('.lesson-num');
-                                if (num) { num.style.background = '#ec4899'; num.style.color = 'white'; }
-                            } else {
-                                item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
-                                const num = item.querySelector('.lesson-num');
-                                if (num) { num.style.background = '#fce7f3'; num.style.color = '#be185d'; }
-                            }
-                        });
-                    }
-                } else {
-                    alert('🎉 Bạn đã học xong bài cuối cùng!');
-                }
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIndex = -1;
+    tabs.forEach((tab, index) => {
+        if (tab.classList.contains('active')) activeIndex = index;
+    });
+
+    if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
+        const nextTabBtn = tabs[activeIndex + 1];
+        let tabId = (activeIndex + 2).toString();
+
+        const onclickAttr = nextTabBtn.getAttribute('onclick');
+        if (onclickAttr) {
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+            if (match && match[1]) {
+                tabId = match[1].trim();
             }
         }
 
-        function prevTab(level, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-            if (!lessonEl) return;
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIndex = -1;
-            tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
+        switchTab(hskLevel, lessonNum, tabId);
+        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-            if (activeIndex > 0) {
-                const prevTabBtn = tabs[activeIndex - 1];
-                let tabId = activeIndex.toString();
-                const onclickAttr = prevTabBtn.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1]) tabId = match[1].trim();
-                }
-                switchTab(level, lessonNum, tabId);
-            } else if (lessonNum > 1) {
-                const prevLessonNum = lessonNum - 1;
-                const prevLessonEl = document.getElementById(`lesson-${level}-${prevLessonNum}`);
-                if (prevLessonEl) {
-                    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-                    prevLessonEl.classList.add('active');
-                    switchTab(level, prevLessonNum, '1');
-                    prevLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    document.querySelectorAll('.lesson-item').forEach((item, idx) => {
-                        item.classList.toggle('active', idx === prevLessonNum - 1);
-                        if (idx === prevLessonNum - 1) {
-                            item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
-                            const num = item.querySelector('.lesson-num');
-                            if (num) { num.style.background = '#ec4899'; num.style.color = 'white'; }
-                        } else {
-                            item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
-                            const num = item.querySelector('.lesson-num');
-                            if (num) { num.style.background = '#fce7f3'; num.style.color = '#be185d'; }
+    } else {
+        const lessons = hskData[hskLevel].lessons;
+        const totalLessons = lessons.length;
+        const nextLessonNum = lessonNum + 1;
+        
+        if (nextLessonNum <= totalLessons) {
+            const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
+            if (nextLessonEl) {
+                const firstTab = nextLessonEl.querySelector('.tab-btn');
+                let firstTabId = '1';
+                if (firstTab) {
+                    const onclickAttr = firstTab.getAttribute('onclick');
+                    if (onclickAttr) {
+                        const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+                        if (match && match[1]) {
+                            firstTabId = match[1].trim();
                         }
-                    });
+                    }
                 }
+                showLesson(hskLevel, nextLessonNum, firstTabId);
+                nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else {
+            const currentLevelIdx = hskLevels.indexOf(hskLevel);
+            if (currentLevelIdx < hskLevels.length - 1) {
+                const nextLevel = hskLevels[currentLevelIdx + 1];
+                const btn = document.querySelector(`.level-btn.${nextLevel}`);
+                if (btn) switchLevel(nextLevel, btn);
+                showLesson(nextLevel, 1, '1');
+            } else {
+                alert("🎉 Bạn đã học xong toàn bộ chương trình!");
+            }
+        }
+    }
+}
+
+// ===== JS: PREV TAB =====
+function prevTab(hskLevel, lessonNum) {
+    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    if (!lessonEl) return;
+
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    let activeIndex = -1;
+    tabs.forEach((tab, index) => {
+        if (tab.classList.contains('active')) activeIndex = index;
+    });
+
+    if (activeIndex > 0) {
+        const prevTabBtn = tabs[activeIndex - 1];
+        let tabId = activeIndex.toString();
+
+        const onclickAttr = prevTabBtn.getAttribute('onclick');
+        if (onclickAttr) {
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+            if (match && match[1]) {
+                tabId = match[1].trim();
             }
         }
 
+        switchTab(hskLevel, lessonNum, tabId);
+        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    } else if (lessonNum > 1) {
+        const prevLessonNum = lessonNum - 1;
+        const prevLessonEl = document.getElementById(`lesson-${hskLevel}-${prevLessonNum}`);
+        if (prevLessonEl) {
+            const firstTab = prevLessonEl.querySelector('.tab-btn');
+            let firstTabId = '1';
+            if (firstTab) {
+                const onclickAttr = firstTab.getAttribute('onclick');
+                if (onclickAttr) {
+                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+                    if (match && match[1]) {
+                        firstTabId = match[1].trim();
+                    }
+                }
+            }
+            showLesson(hskLevel, prevLessonNum, firstTabId);
+            prevLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+    } else {
+        const currentLevelIdx = hskLevels.indexOf(hskLevel);
+        if (currentLevelIdx > 0) {
+            const prevLevel = hskLevels[currentLevelIdx - 1];
+            const btn = document.querySelector(`.level-btn.${prevLevel}`);
+            if (btn) switchLevel(prevLevel, btn);
+            
+            const prevLevelData = hskData[prevLevel];
+            if (prevLevelData && prevLevelData.lessons && prevLevelData.lessons.length > 0) {
+                const lastLessonId = prevLevelData.lessons[prevLevelData.lessons.length - 1].id;
+                showLesson(prevLevel, lastLessonId, '1');
+            }
+        }
+    }
+}
         // ================================================================
         // AUDIO
         // ================================================================
@@ -2188,55 +2219,52 @@
         // ================================================================
         // SEARCH
         // ================================================================
-        function universalSearch() {
-            const query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
-            const dropdown = document.getElementById('searchDropdown');
-            if (query === '') { dropdown.style.display = 'none'; return; }
-            dropdown.innerHTML = '';
-            let resultsMap = new Set();
-            const levels = ['hsk1', 'hsk2', 'hsk3'];
-            levels.forEach(levelId => {
-                const data = cachedData[`grammar-${levelId}`];
-                if (!data || !data.lessons) return;
-                data.lessons.forEach(lesson => {
-                    lesson.tabs.forEach(tab => {
-                        let content = JSON.stringify(tab).toLowerCase();
-                        if (content.includes(query)) {
-                            const key = `${levelId}-${lesson.id}-${tab.id}`;
-                            if (!resultsMap.has(key)) {
-                                resultsMap.add(key);
-                                const item = document.createElement('div');
-                                item.className = 'search-item-result';
-                                const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
-                                item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
-                                    <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>`;
-                                item.onclick = function() {
-                                    const btn = document.querySelector(`.hsk-item[data-level="${levelId}"]`);
-                                    if (btn) { btn.click(); }
-                                    showContent('grammar', levelId);
-                                    setTimeout(() => {
-                                        switchTab(levelId, lesson.id, tab.id);
-                                        document.getElementById('globalGrammarSearch').value = '';
-                                        dropdown.style.display = 'none';
-                                    }, 300);
-                                };
-                                dropdown.appendChild(item);
-                            }
-                        }
-                    });
-                });
+       function universalSearch() {
+    let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
+    let dropdown = document.getElementById('searchDropdown');
+    if (!dropdown) {
+        dropdown = document.createElement('div');
+        dropdown.id = 'searchDropdown';
+        dropdown.className = 'search-results-dropdown';
+        document.querySelector('.global-search-box').appendChild(dropdown);
+    }
+    if (query === '') {
+        dropdown.style.display = 'none';
+        return;
+    }
+    dropdown.innerHTML = '';
+    let resultsMap = new Set();
+    hskLevels.forEach(levelId => {
+        const levelData = hskData[levelId];
+        if (!levelData) return;
+        levelData.lessons.forEach((lesson) => {
+            lesson.tabs.forEach((tab) => {
+                let content = JSON.stringify(tab).toLowerCase();
+                if (content.includes(query)) {
+                    const key = `${levelId}-${lesson.id}-${tab.id}`;
+                    if (!resultsMap.has(key)) {
+                        resultsMap.add(key);
+                        const item = document.createElement('div');
+                        item.className = 'search-item-result';
+                        const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
+                        item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
+                            <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>`;
+                        item.onclick = function () {
+                            const btn = document.querySelector(`.level-btn.${levelId}`);
+                            if (btn) switchLevel(levelId, btn);
+                            showLesson(levelId, lesson.id, tab.id);
+                            dropdown.style.display = 'none';
+                            document.getElementById('globalGrammarSearch').value = '';
+                        };
+                        dropdown.appendChild(item);
+                    }
+                }
             });
-            dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
-            if (resultsMap.size === 0) dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
-        }
-
-        document.addEventListener('click', function(e) {
-            const dropdown = document.getElementById('searchDropdown');
-            const searchBox = document.querySelector('.search-box');
-            if (dropdown && searchBox && !searchBox.contains(e.target)) {
-                dropdown.style.display = 'none';
-            }
         });
+    });
+    dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
+    if (resultsMap.size === 0) dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
+}
 
         // ================================================================
         // STREAK
