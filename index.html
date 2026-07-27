@@ -374,7 +374,7 @@
             gap: 10px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             backdrop-filter: blur(10px);
             background: rgba(255, 249, 249, 0.92);
         }
@@ -414,6 +414,7 @@
             border: 1.5px solid #fbcfe8;
             transition: all 0.3s ease;
             position: relative;
+                z-index: 1001; /* ← THÊM DÒNG NÀY */
         }
         .search-box:focus-within {
             border-color: #ec4899;
@@ -443,10 +444,10 @@
         .search-box button:hover {   background: #C084FC !important; /* ← SỬA THÀNH #C084FC */; }
 
         .search-results-dropdown {
-    position: absolute;
-    top: calc(100% + 5px); /* ← SỬA: cách ô tìm kiếm 5px */
-    right: 0; /* ← SỬA: căn phải thay vì left:0 */
-    left: auto; /* ← THÊM: bỏ left */
+   position: fixed; /* ← SỬA THÀNH fixed */
+    top: auto; /* ← SỬA */
+    right: auto; /* ← SỬA */
+    left: auto; /* ← SỬA */
     width: 350px; /* ← SỬA: width cố định */
     max-width: 350px; /* ← SỬA: max-width cố định */
     min-width: 280px; /* ← THÊM: min-width */
@@ -2488,14 +2489,7 @@ function loadHighlights() {
         dropdown = document.createElement('div');
         dropdown.id = 'searchDropdown';
         dropdown.className = 'search-results-dropdown';
-        // Tìm .search-box để append vào
-        const searchBox = document.querySelector('.search-box');
-        if (searchBox) {
-            searchBox.style.position = 'relative';
-            searchBox.appendChild(dropdown);
-        } else {
-            document.querySelector('.header-actions').appendChild(dropdown);
-        }
+        document.body.appendChild(dropdown);
     }
     
     if (query === '') {
@@ -2503,10 +2497,18 @@ function loadHighlights() {
         return;
     }
     
+    // ===== CẬP NHẬT VỊ TRÍ DROPDOWN =====
+    const searchBox = document.querySelector('.search-box');
+    if (searchBox) {
+        const rect = searchBox.getBoundingClientRect();
+        dropdown.style.top = (rect.bottom + 5) + 'px';
+        dropdown.style.right = (window.innerWidth - rect.right) + 'px';
+        dropdown.style.left = 'auto';
+    }
+    
     dropdown.innerHTML = '';
     let resultsMap = new Set();
     
-    // Duyệt qua tất cả dữ liệu đã cache
     const levels = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'];
     levels.forEach(levelId => {
         const data = cachedData[`grammar-${levelId}`];
@@ -2533,7 +2535,6 @@ function loadHighlights() {
                             <div class="desc" style="font-size:11px;color:#64748b;margin-top:2px;">${snippet ? '📝 ' + snippet : ''}</div>
                         `;
                         item.onclick = function () {
-                            // Chuyển đến level và tab tương ứng
                             const levelBtn = document.querySelector(`.hsk-item[data-level="${levelId}"]`);
                             if (levelBtn) {
                                 document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
@@ -2553,7 +2554,7 @@ function loadHighlights() {
         });
     });
     
-dropdown.style.display = resultsMap.size > 0 ? 'block' : 'none';
+    dropdown.style.display = resultsMap.size > 0 ? 'block' : 'none';
     if (resultsMap.size === 0) {
         dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">🔍 Không tìm thấy nội dung phù hợp!</div>';
     }
