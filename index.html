@@ -56,115 +56,6 @@
             scroll-behavior: smooth;
         }
 
-        /* ========== CSS: DARK MODE ========== */
-        body.dark-mode {
-            background: #1a1a2e !important;
-            color: #e0e0e0 !important;
-        }
-
-        body.dark-mode .card,
-        body.dark-mode .tab-content,
-        body.dark-mode .example,
-        body.dark-mode .example-with-audio,
-        body.dark-mode .highlight-toolbar,
-        body.dark-mode .highlight-menu,
-        body.dark-mode .login-box,
-        body.dark-mode .flashcard-box {
-            background: #16213e !important;
-            border-color: #2a3a5e !important;
-            color: #e0e0e0 !important;
-        }
-
-        body.dark-mode .cn {
-            color: #ffd700 !important;
-        }
-
-        body.dark-mode .py {
-            color: #4fc3f7 !important;
-        }
-
-        body.dark-mode .vi {
-            color: #aed581 !important;
-        }
-
-        body.dark-mode .menu button {
-            color: #b0b0b0 !important;
-        }
-
-        body.dark-mode .menu button:hover {
-            background: #1a3a4a !important;
-            color: #fff !important;
-        }
-
-        body.dark-mode .menu button.active {
-            background: #1a4a3a !important;
-            color: #fff !important;
-        }
-
-        body.dark-mode aside {
-            background: #16213e !important;
-            border-color: #2a3a5e !important;
-        }
-
-        body.dark-mode .top-banner {
-            background: linear-gradient(135deg, #1a2a1a, #0d1f0d) !important;
-            color: #aed581 !important;
-        }
-
-        body.dark-mode .top-banner h1 {
-            color: #aed581 !important;
-        }
-
-        body.dark-mode .subcard {
-            background: #1a2a3a !important;
-        }
-
-        body.dark-mode .grammar h3 {
-            color: #4fc3f7 !important;
-        }
-
-        body.dark-mode .label {
-            color: #4fc3f7 !important;
-        }
-
-        body.dark-mode .badge {
-            background: #1a3a2a !important;
-            color: #aed581 !important;
-        }
-
-        body.dark-mode .exercise-item {
-            background: #1a2a3a !important;
-        }
-
-        body.dark-mode .exercise-item label:hover {
-            background: #1a3a4a !important;
-        }
-
-        body.dark-mode .translate-popup {
-            background: #16213e !important;
-            border-color: #2a3a5e !important;
-        }
-
-        body.dark-mode .translate-popup .word {
-            color: #ffd700 !important;
-        }
-
-        body.dark-mode .translate-popup .meaning {
-            color: #4fc3f7 !important;
-        }
-
-        body.dark-mode .translate-popup .pinyin {
-            color: #999 !important;
-        }
-
-        body.dark-mode .flashcard-box .card-face .vi {
-            color: #4fc3f7 !important;
-        }
-
-        body.dark-mode .flashcard-box .card-face .cn {
-            color: #ffd700 !important;
-        }
-
         /* ========== CSS: BG DECORATIONS & OVERLAYS ========== */
         .chinese-decoration {
             position: fixed;
@@ -1723,7 +1614,6 @@
             <button onclick="clearAllHighlights()"
                 style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
             <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
-            <button onclick="toggleDarkMode()" id="darkModeBtn" style="padding:4px 10px;border:none;border-radius:12px;background:#333;color:white;font-size:11px;font-weight:600;cursor:pointer;">🌙</button>
             <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">🔄 Flashcard</button>
         </div>
     </div>
@@ -2695,30 +2585,6 @@ function toggleToolbar() {
         btn.style.transform = 'rotate(0deg)';
     }
 }
-
-// ===== JS: DARK MODE =====
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    const btn = document.getElementById('darkModeBtn');
-    if (document.body.classList.contains('dark-mode')) {
-        btn.textContent = '☀️';
-        btn.style.background = '#ff9800';
-        localStorage.setItem('darkMode', 'true');
-    } else {
-        btn.textContent = '🌙';
-        btn.style.background = '#333';
-        localStorage.setItem('darkMode', 'false');
-    }
-}
-
-try {
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('darkModeBtn').textContent = '☀️';
-        document.getElementById('darkModeBtn').style.background = '#ff9800';
-    }
-} catch (e) {}
-
 // ===== JS: FLASHCARD SYSTEM =====
 function startFlashcard() {
     const words = [];
