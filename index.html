@@ -1122,46 +1122,6 @@
             transform: scale(1.1);
         }
 
-        /* ========== CSS: QUICK TRANSLATE POPUP ========== */
-        .translate-popup {
-            position: fixed;
-            background: white;
-            padding: 12px 18px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            z-index: 999999;
-            max-width: 300px;
-            border: 1px solid #e0e0e0;
-            font-size: 14px;
-            display: none;
-        }
-
-        .translate-popup .word {
-            font-weight: 700;
-            font-size: 18px;
-            color: #1e293b;
-        }
-
-        .translate-popup .meaning {
-            color: #388e3c;
-            margin-top: 4px;
-        }
-
-        .translate-popup .pinyin {
-            color: #666;
-            font-size: 13px;
-            margin-top: 2px;
-        }
-
-        .translate-popup .close-popup {
-            position: absolute;
-            top: 4px;
-            right: 8px;
-            cursor: pointer;
-            color: #999;
-            font-size: 14px;
-        }
-
         /* ========== CSS: FLASHCARD MODAL ========== */
         .flashcard-modal {
             position: fixed;
@@ -1621,13 +1581,6 @@
 
     <div class="highlight-menu" id="highlightMenu">
         <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
-    </div>
-
-    <div class="translate-popup" id="translatePopup">
-        <span class="close-popup" onclick="closeTranslatePopup()">✕</span>
-        <div class="word" id="popupWord">你好</div>
-        <div class="pinyin" id="popupPinyin">nǐ hǎo</div>
-        <div class="meaning" id="popupMeaning">Xin chào</div>
     </div>
 
    <div class="flashcard-modal" id="flashcardModal">
@@ -2685,16 +2638,6 @@ function reviewUndefinedWords() {
     document.getElementById('flashcardModal').classList.add('active');
     showFlashcard();
 }
-// ===== JS: QUICK TRANSLATE POPUP =====
-document.addEventListener('dblclick', function(e) {
-    const selection = window.getSelection().toString().trim();
-    if (selection.length > 0 && selection.length < 20) {
-        const isChinese = /[\u4e00-\u9fff]/.test(selection);
-        if (isChinese) {
-            showTranslatePopup(e.clientX, e.clientY, selection);
-        }
-    }
-});
 function markAsUnderstood() {
     const data = flashcardData[flashcardIndex];
     if (!data) return;
@@ -2724,50 +2667,6 @@ function markAsNotUnderstood() {
     
     flashcardNext();
 }
-function showTranslatePopup(x, y, text) {
-    const popup = document.getElementById('translatePopup');
-    document.getElementById('popupWord').textContent = text;
-    document.getElementById('popupPinyin').textContent = 'Đang tra...';
-    document.getElementById('popupMeaning').textContent = '⏳';
-    
-    popup.style.left = Math.min(x + 10, window.innerWidth - 320) + 'px';
-    popup.style.top = Math.min(y - 20, window.innerHeight - 150) + 'px';
-    popup.style.display = 'block';
-    
-    if (popupTimeout) clearTimeout(popupTimeout);
-    
-    fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=zh|vi`)
-        .then(res => res.json())
-        .then(data => {
-            if (data.responseData && data.responseData.translatedText) {
-                document.getElementById('popupMeaning').textContent = data.responseData.translatedText;
-                document.getElementById('popupPinyin').textContent = '🔊 ' + text;
-            } else {
-                document.getElementById('popupMeaning').textContent = 'Không tìm thấy';
-            }
-        })
-        .catch(() => {
-            document.getElementById('popupMeaning').textContent = 'Lỗi tra từ';
-        });
-    
-    popupTimeout = setTimeout(() => {
-        popup.style.display = 'none';
-    }, 5000);
-}
-
-function closeTranslatePopup() {
-    document.getElementById('translatePopup').style.display = 'none';
-    if (popupTimeout) clearTimeout(popupTimeout);
-}
-
-document.addEventListener('click', function(e) {
-    const popup = document.getElementById('translatePopup');
-    if (popup.style.display === 'block' && !popup.contains(e.target)) {
-        popup.style.display = 'none';
-        if (popupTimeout) clearTimeout(popupTimeout);
-    }
-});
-
 // ===== JS: SEARCH DROPDOWN CLOSE =====
 document.addEventListener('click', function (e) {
     const searchBox = document.querySelector('.global-search-box');
