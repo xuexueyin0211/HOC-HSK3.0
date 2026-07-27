@@ -2384,7 +2384,6 @@ document.addEventListener('click', function(e) {
                 const highlightId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
                 
                 // Tạo highlight - giữ nguyên font chữ
-const parentStyle = window.getComputedStyle(parentElement);
 const span = document.createElement('span');
 span.className = 'highlighted';
 span.dataset.highlightId = highlightId;
