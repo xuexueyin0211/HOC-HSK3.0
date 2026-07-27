@@ -2321,7 +2321,7 @@ function updateStreakEmoji(days) {
 function showStreakInfo() {
     const streakData = JSON.parse(localStorage.getItem('streakData') || '{"days":0,"lastDate":""}');
     const days = streakData.days;
-    let msg = `🔥 <b>${days} ngày</b> học liên tục!\n\n`;
+    let msg = `🔥 ${days} ngày học liên tục!\n\n`;
     
     if (days === 0) {
         msg += 'Hãy học một bài ngay hôm nay để bắt đầu chuỗi! 💪';
