@@ -1032,22 +1032,53 @@
         // ================================================================
         // LOAD JSON THEO CẤU TRÚC MỚI
         // ================================================================
-        async function loadModuleData(module, level) {
-            const key = `${module}-${level}`;
-            if (cachedData[key]) return cachedData[key];
+        // ================================================================
+// LOAD JSON - HỖ TRỢ CẢ 2 ĐỊNH DẠNG
+// ================================================================
+async function loadModuleData(module, level) {
+    const key = `${module}-${level}`;
+    if (cachedData[key]) return cachedData[key];
 
-            try {
-                const path = MODULES[module].path + level + '.json';
-                const response = await fetch(path);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                const data = await response.json();
-                cachedData[key] = data;
-                return data;
-            } catch (error) {
-                console.warn(`⚠️ Không thể tải ${path}:`, error);
-                return getFallbackData(module, level);
+    try {
+        const path = MODULES[module].path + level + '.json';
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        
+        // ===== QUAN TRỌNG: Tự động phát hiện cấu trúc =====
+        let innerData = data;
+        
+        // Nếu dữ liệu có key trùng với level (hsk1/hsk2/hsk3) thì lấy bên trong
+        if (data[level]) {
+            innerData = data[level];
+        }
+        // Nếu vẫn không có lessons/items, thử tìm key đầu tiên có lessons/items
+        if (!innerData.lessons && !innerData.items) {
+            const keys = Object.keys(data);
+            for (const k of keys) {
+                if (data[k] && (data[k].lessons || data[k].items)) {
+                    innerData = data[k];
+                    break;
+                }
             }
         }
+        
+        // Kiểm tra dữ liệu hợp lệ
+        if (!innerData.lessons && !innerData.items && !innerData.exercises) {
+            console.warn('⚠️ Dữ liệu không có lessons/items/exercises:', innerData);
+            // Trả về fallback để không bị lỗi
+            return getFallbackData(module, level);
+        }
+        
+        cachedData[key] = innerData;
+        console.log(`✅ Đã tải ${key}:`, innerData.title || innerData);
+        return innerData;
+        
+    } catch (error) {
+        console.warn(`⚠️ Không thể tải ${path}:`, error);
+        return getFallbackData(module, level);
+    }
+}
 
         // ================================================================
         // FALLBACK DATA (khi chưa có JSON)
