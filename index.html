@@ -2685,19 +2685,48 @@ document.addEventListener('click', function(e) {
             }
         }
 
-        document.addEventListener('click', function(e) {
-            const dropdown = document.getElementById('searchDropdown');
-            const searchBox = document.querySelector('.search-box');
-            if (dropdown && searchBox && !searchBox.contains(e.target)) {
-                dropdown.style.display = 'none';
+        // ================================================================
+// XỬ LÝ CLICK TOOLTIP & HIGHLIGHT - DÙNG EVENT DELEGATION
+// ================================================================
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('highlightMenu');
+    
+    // 1. XỬ LÝ CLICK HIGHLIGHT
+    const highlight = e.target.closest('.highlighted');
+    if (highlight) {
+        e.stopPropagation();
+        currentHighlightElement = highlight;
+        menu.style.left = e.pageX + 'px';
+        menu.style.top = e.pageY + 'px';
+        menu.style.display = 'flex';
+        return; // Không xử lý tooltip nếu click vào highlight
+    }
+    
+    // 2. XỬ LÝ CLICK TOOLTIP ITEM
+    const tooltipItem = e.target.closest('.tooltip-item');
+    if (tooltipItem) {
+        const level = tooltipItem.dataset.level;
+        const lessonId = tooltipItem.dataset.lesson;
+        const tabId = tooltipItem.dataset.tab;
+        
+        if (level && lessonId && tabId) {
+            e.stopPropagation();
+            // Ẩn tooltip sau khi click
+            const tooltip = tooltipItem.closest('.lesson-item-tooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
             }
-        });
-
-        document.getElementById('globalGrammarSearch').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                universalSearch();
-            }
-        });
+            // Chuyển đến bài học và tab
+            goToTab(level, parseInt(lessonId), tabId);
+        }
+        return;
+    }
+    
+    // 3. ẨN MENU HIGHLIGHT KHI CLICK RA NGOÀI
+    if (menu && !menu.contains(e.target) && !e.target.closest('.highlighted')) {
+        menu.style.display = 'none';
+    }
+});
 
         // ================================================================
         // BACK HOME
@@ -2744,7 +2773,6 @@ document.addEventListener('click', function(e) {
             setTimeout(() => {
                 showContent('grammar', 'hsk1');
             }, 300);
-            setTimeout(attachHighlightClickListeners, 500);
         });
       
 // ================================================================
