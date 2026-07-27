@@ -11,304 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
-        /* ===== CSS ĐĂNG NHẬP ===== */
-        #login-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #login-overlay.active {
-            display: flex;
-        }
-
-        .login-box {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .login-box h2 {
-            color: #2e7d32;
-            margin-bottom: 10px;
-        }
-
-        .login-box p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        /* ===== HIGHLIGHT ===== */
-.highlighted {
-    background-color: #ffe0b2 !important;
-    padding: 2px 4px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.highlighted:hover {
-    opacity: 0.8;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
-}
-
-/* Tooltip nhỏ hiện khi hover */
-.highlighted::after {
-    content: '✖';
-    position: absolute;
-    top: -12px;
-    right: -8px;
-    font-size: 10px;
-    color: #f44336;
-    background: white;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.highlighted:hover::after {
-    display: flex;
-}
-
-/* Menu đổi màu khi click vào highlight */
-.highlight-menu {
-    position: fixed;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    padding: 8px;
-    z-index: 100000;
-    display: none;
-    border: 1px solid #e0e0e0;
-    gap: 6px;
-    flex-wrap: wrap;
-    max-width: 200px;
-}
-
-.highlight-menu .color-option {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    padding: 0;
-}
-
-.highlight-menu .color-option:hover {
-    transform: scale(1.15);
-    border-color: #333;
-}
-
-.highlight-menu .delete-option {
-    padding: 4px 10px;
-    border: none;
-    border-radius: 8px;
-    background: #f44336;
-    color: white;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.highlight-menu .delete-option:hover {
-    background: #d32f2f;
-    transform: scale(1.05);
-}
-        /* ===== TOOLBAR HIGHLIGHT ===== */
-        .highlight-toolbar {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: white;
-            padding: 12px 16px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            z-index: 99999;
-            border: 1px solid #e0e0e0;
-            display: none;
-            max-width: 340px;
-            flex-wrap: wrap;
-            gap: 4px;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-        }
-
-        .highlight-toolbar>div {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .highlight-toolbar .color-btn {
-            width: 26px !important;
-            height: 26px !important;
-            min-width: 26px !important;
-            border-radius: 50%;
-            border: 2px solid #ddd;
-            cursor: pointer;
-            padding: 0 !important;
-            transition: all 0.3s ease;
-        }
-
-        .highlight-toolbar .color-btn:hover {
-            transform: scale(1.15);
-            border-color: #333;
-        }
-
-        .highlight-toolbar .color-btn.active {
-            border-color: #333;
-            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
-        }
-
-        .highlight-toolbar button {
-            font-size: 11px !important;
-            padding: 4px 10px !important;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .highlight-toolbar button:hover {
-            transform: scale(1.05);
-        }
-
-        #toggleToolbarBtn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #4caf50;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
-            z-index: 100000;
-            transition: all 0.3s ease;
-        }
-
-        #toggleToolbarBtn:hover {
-            transform: scale(1.1);
-        }
-            .google-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .google-btn:hover {
-            background: #f5f5f5;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .logout-btn {
-            position: fixed;
-            top: 60px;
-            right: 20px;
-            z-index: 999;
-            padding: 8px 16px;
-            background: #f44336;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 13px;
-            transition: all 0.3s ease;
-        }
-
-        .logout-btn:hover {
-            background: #d32f2f;
-            transform: scale(1.05);
-        }
-
-        .user-info {
-            position: fixed;
-            top: 60px;
-            right: 120px;
-            z-index: 100;
-            font-size: 13px;
-            color: #333;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 4px 12px;
-            border-radius: 12px;
-        }
-
-        .logout-btn {
-            position: fixed;
-            top: 60px;
-            right: 20px;
-            z-index: 100;
-            padding: 4px 12px;
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 13px;
-            transition: all 0.3s ease;
-        }
-
-        /* ===== CÁC CSS CŨ CỦA BẠN ===== */
-        .search-box {
-            padding: 0 15px 15px 15px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 10px 14px;
-            border: 2px solid #c8e6c9;
-            border-radius: 20px;
-            font-size: 13px;
-            outline: none;
-            transition: all 0.3s ease;
-            background-color: #fafafa;
-        }
-
-        .search-box input:focus {
-            border-color: #4caf50;
-            background-color: #fff;
-            box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
-        }
-
+        //========== CSS: RESET & CƠ BẢN ==========//
         * {
             margin: 0;
             padding: 0;
@@ -328,6 +31,141 @@
             overflow-y: auto;
         }
 
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        //========== CSS: DARK MODE ==========//
+        body.dark-mode {
+            background: #1a1a2e !important;
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode .card,
+        body.dark-mode .tab-content,
+        body.dark-mode .example,
+        body.dark-mode .example-with-audio,
+        body.dark-mode .highlight-toolbar,
+        body.dark-mode .highlight-menu,
+        body.dark-mode .login-box,
+        body.dark-mode .flashcard-box {
+            background: #16213e !important;
+            border-color: #2a3a5e !important;
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode .cn {
+            color: #ffd700 !important;
+        }
+
+        body.dark-mode .py {
+            color: #4fc3f7 !important;
+        }
+
+        body.dark-mode .vi {
+            color: #aed581 !important;
+        }
+
+        body.dark-mode .menu button {
+            color: #b0b0b0 !important;
+        }
+
+        body.dark-mode .menu button:hover {
+            background: #1a3a4a !important;
+            color: #fff !important;
+        }
+
+        body.dark-mode .menu button.active {
+            background: #1a4a3a !important;
+            color: #fff !important;
+        }
+
+        body.dark-mode aside {
+            background: #16213e !important;
+            border-color: #2a3a5e !important;
+        }
+
+        body.dark-mode .top-banner {
+            background: linear-gradient(135deg, #1a2a1a, #0d1f0d) !important;
+            color: #aed581 !important;
+        }
+
+        body.dark-mode .top-banner h1 {
+            color: #aed581 !important;
+        }
+
+        body.dark-mode .subcard {
+            background: #1a2a3a !important;
+        }
+
+        body.dark-mode .grammar h3 {
+            color: #4fc3f7 !important;
+        }
+
+        body.dark-mode .label {
+            color: #4fc3f7 !important;
+        }
+
+        body.dark-mode .badge {
+            background: #1a3a2a !important;
+            color: #aed581 !important;
+        }
+
+        body.dark-mode .exercise-item {
+            background: #1a2a3a !important;
+        }
+
+        body.dark-mode .exercise-item label:hover {
+            background: #1a3a4a !important;
+        }
+
+        body.dark-mode .translate-popup {
+            background: #16213e !important;
+            border-color: #2a3a5e !important;
+        }
+
+        body.dark-mode .translate-popup .word {
+            color: #ffd700 !important;
+        }
+
+        body.dark-mode .translate-popup .meaning {
+            color: #4fc3f7 !important;
+        }
+
+        body.dark-mode .translate-popup .pinyin {
+            color: #999 !important;
+        }
+
+        body.dark-mode .flashcard-box .card-face .vi {
+            color: #4fc3f7 !important;
+        }
+
+        body.dark-mode .flashcard-box .card-face .cn {
+            color: #ffd700 !important;
+        }
+
+        //========== CSS: BG DECORATIONS & OVERLAYS ==========//
         .chinese-decoration {
             position: fixed;
             pointer-events: none;
@@ -389,14 +227,124 @@
             z-index: 1;
         }
 
-        .example-label {
-            color: #5d4037;
-            font-weight: 600;
-            display: inline-block;
-            margin-right: 5px;
-            font-size: 16px;
+        //========== CSS: LOGIN MODAL ==========//
+        #login-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
         }
 
+        #login-overlay.active {
+            display: flex;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-box h2 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .login-box p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .google-btn:hover {
+            background: #f5f5f5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        //========== CSS: STREAK BADGE ==========//
+        .streak-badge {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(238, 90, 36, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .streak-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(238, 90, 36, 0.6);
+        }
+
+        .streak-badge .fire {
+            font-size: 18px;
+        }
+
+        //========== CSS: USER INFO & LOGOUT ==========//
+        .user-info {
+            position: fixed;
+            top: 60px;
+            right: 120px;
+            z-index: 100;
+            font-size: 13px;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+
+        .logout-btn {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            z-index: 100;
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        //========== CSS: TOP BANNER & HEADER ==========//
         .top-banner {
             background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9);
             color: #2e7d32;
@@ -450,9 +398,185 @@
             letter-spacing: 0.8px;
         }
 
+        //========== CSS: LEVEL SELECTOR ==========//
+        .level-selector {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: linear-gradient(to right,
+                    #e8f5e9 0%, #e8f5e9 33%,
+                    #fff3e0 33%, #fff3e0 66%,
+                    #ffebee 66%, #ffebee 100%);
+            padding: 8px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-bottom: 2px solid #ddd;
+        }
+
+        .level-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .level-btn {
+            padding: 5px 14px;
+            border: 1.5px solid #ddd;
+            background: white;
+            border-radius: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .level-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .level-btn.hsk1 {
+            color: #2e7d32;
+            border-color: #81c784;
+        }
+
+        .level-btn.hsk1.active {
+            background: #2e7d32;
+            color: white;
+            border-color: #2e7d32;
+            box-shadow: 0 2px 6px rgba(46, 125, 50, 0.25);
+        }
+
+        .level-btn.hsk2 {
+            color: #d77f00;
+            border-color: #fbc02d;
+        }
+
+        .level-btn.hsk2.active {
+            background: #f59e0b;
+            color: white;
+            border-color: #d97706;
+            box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+        }
+
+        .level-btn.hsk3 {
+            color: #e11d48;
+            border-color: #fda4af;
+        }
+
+        .level-btn.hsk3.active {
+            background: #e11d48;
+            color: white;
+            border-color: #be123c;
+            box-shadow: 0 2px 6px rgba(225, 29, 72, 0.3);
+        }
+
+        //========== CSS: PROGRESS STATS ==========//
+        .progress-stats {
+            padding: 10px 25px;
+            font-size: 13px;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin-top: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar .fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+
+        //========== CSS: LAYOUT - SIDEBAR & MAIN ==========//
+        aside {
+            width: 300px;
+            background: white;
+            border-right: 1px solid #eef2f5;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            background: #fefcf5;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar-title {
+            padding: 20px 25px 10px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu {
+            padding: 10px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
         .menu-item {
             position: relative;
             margin-bottom: 5px;
+        }
+
+        .menu button {
+            width: 100%;
+            padding: 12px 18px;
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            font-weight: 500;
+            color: #4a5568;
+            cursor: pointer;
+            text-align: left;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            transition: all 0.25s ease;
+        }
+
+        .menu button:hover {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding-left: 24px;
+        }
+
+        .menu button.active {
+            background: #c8e6c9;
+            color: #2e7d32;
+            font-weight: 700;
+            box-shadow: inset 4px 0 0 #4caf50;
         }
 
         .submenu {
@@ -487,78 +611,7 @@
             padding-left: 16px;
         }
 
-        .content-wrapper {
-            display: flex;
-            flex: 1;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        aside {
-            width: 300px;
-            background: white;
-            border-right: 1px solid #eef2f5;
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            max-height: calc(100vh - 40px);
-            overflow-y: auto;
-        }
-
-        .sidebar-title {
-            padding: 20px 25px 10px;
-            font-size: 14px;
-            font-weight: 700;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .menu {
-            padding: 10px;
-            flex: 1;
-            overflow-y: auto;
-        }
-
-        .menu button {
-            width: 100%;
-            padding: 12px 18px;
-            border: none;
-            background: transparent;
-            font-size: 14px;
-            font-weight: 500;
-            color: #4a5568;
-            cursor: pointer;
-            text-align: left;
-            border-radius: 8px;
-            margin-bottom: 5px;
-            transition: all 0.25s ease;
-        }
-
-        .menu button:hover {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding-left: 24px;
-        }
-
-        .menu button.active {
-            background: #c8e6c9;
-            color: #2e7d32;
-            font-weight: 700;
-            box-shadow: inset 4px 0 0 #4caf50;
-        }
-
-        main {
-            flex: 1;
-            padding: 40px;
-            background: #fefcf5;
-        }
-
+        //========== CSS: LESSONS & CARDS ==========//
         .lesson {
             display: none;
             max-width: 850px;
@@ -568,18 +621,6 @@
 
         .lesson.active {
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .card {
@@ -612,54 +653,7 @@
             gap: 8px;
         }
 
-        /* ===== BÀI TẬP ===== */
-        .exercise-container {
-            padding: 5px 0;
-        }
-
-        .exercise-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #4caf50;
-            transition: all 0.3s ease;
-        }
-
-        .exercise-item:hover {
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .exercise-item .exercise-result {
-            margin-top: 10px;
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 6px;
-            background: white;
-            border: 1px solid #e0e0e0;
-        }
-
-        .exercise-item label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 6px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .exercise-item label:hover {
-            background: #e8f5e9 !important;
-        }
-
-        .exercise-item input[type="radio"] {
-            width: 16px;
-            height: 16px;
-            cursor: pointer;
-            accent-color: #4caf50;
-        }
-
+        //========== CSS: TABS ==========//
         .tab-nav {
             display: flex;
             gap: 5px;
@@ -724,6 +718,7 @@
             display: block;
         }
 
+        //========== CSS: GRAMMAR CONTENT ==========//
         .grammar {
             border-left: 5px solid #4caf50;
             padding-left: 20px;
@@ -764,6 +759,27 @@
             margin-bottom: 6px;
         }
 
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 3px 14px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 4px 0;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+
+        //========== CSS: EXAMPLES ==========//
+        .example-label {
+            color: #5d4037;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+
         .example {
             background: #fefcf5;
             padding: 20px;
@@ -800,6 +816,16 @@
             font-weight: 700;
             color: #1e293b;
             font-family: "Kaiti", "SimSun", sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .example-with-audio .text-group .cn:hover {
+            background: rgba(76, 175, 80, 0.15);
+            transform: scale(1.02);
         }
 
         .example-with-audio .text-group .py {
@@ -807,14 +833,29 @@
             font-size: 14px;
             color: #388e3c;
             margin: 2px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .example-with-audio .text-group .py:hover {
+            background: rgba(255, 193, 7, 0.2);
+            transform: scale(1.02);
         }
 
         .example-with-audio .text-group .vi {
             display: block;
             font-size: 14px;
             color: #64748b;
+            transition: all 0.3s ease;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
         }
 
+        //========== CSS: AUDIO BUTTON ==========//
         .audio-btn {
             background: #4caf50;
             border: none;
@@ -844,18 +885,55 @@
             animation: pulse 0.8s ease infinite;
         }
 
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.15);
-            }
+        //========== CSS: EXERCISES ==========//
+        .exercise-container {
+            padding: 5px 0;
         }
 
+        .exercise-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #4caf50;
+            transition: all 0.3s ease;
+        }
+
+        .exercise-item:hover {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .exercise-item .exercise-result {
+            margin-top: 10px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: white;
+            border: 1px solid #e0e0e0;
+        }
+
+        .exercise-item label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .exercise-item label:hover {
+            background: #e8f5e9 !important;
+        }
+
+        .exercise-item input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: #4caf50;
+        }
+
+        //========== CSS: NAVIGATION ==========//
         .nav {
             display: flex;
             justify-content: space-between;
@@ -885,18 +963,7 @@
             visibility: hidden;
         }
 
-        .badge {
-            display: inline-block;
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 3px 14px;
-            border-radius: 14px;
-            font-size: 15px;
-            font-weight: 600;
-            margin: 4px 0;
-            border: 1px solid rgba(76, 175, 80, 0.3);
-        }
-
+        //========== CSS: TEXT COLORS (CN, PY, VI) ==========//
         .cn {
             font-size: 24px;
             font-weight: 700;
@@ -918,118 +985,26 @@
             font-size: 15px;
         }
 
-        @media (max-width: 768px) {
-            body {
-                overflow: auto;
-                height: auto;
-            }
-
-            .top-banner {
-                padding: 25px 20px;
-            }
-
-            .top-banner h1 {
-                font-size: 26px;
-            }
-
-            .top-banner .subtitle {
-                font-size: 14px;
-            }
-
-            .content-wrapper {
-                flex-direction: column;
-            }
-
-            aside {
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid #eee;
-                position: relative;
-                top: auto;
-                max-height: none;
-            }
-
-            main {
-                padding: 20px;
-            }
-
-            .tab-nav {
-                padding: 8px 10px 0 10px;
-                gap: 3px;
-            }
-
-            .tab-btn {
-                padding: 10px 14px;
-                font-size: 13px;
-            }
-
-            .tab-content {
-                padding: 15px;
-            }
-
-            .chinese-decoration {
-                display: none;
-            }
-
-            .user-info {
-                display: none;
-            }
-
-            .logout-btn {
-                top: 52px;
-                right: 10px;
-                font-size: 11px;
-                padding: 4px 12px;
-            }
+        //========== CSS: SEARCH BOX ==========//
+        .search-box {
+            padding: 0 15px 15px 15px;
         }
 
-        .compare-table {
+        .search-box input {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 14px;
+            padding: 10px 14px;
+            border: 2px solid #c8e6c9;
+            border-radius: 20px;
+            font-size: 13px;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .search-box input:focus {
+            border-color: #4caf50;
             background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .compare-table th {
-            background-color: #e0f2f1;
-            color: #00695c;
-            text-align: left;
-            padding: 10px;
-            font-weight: 600;
-        }
-
-        .compare-table td {
-            padding: 10px;
-            border-top: 1px solid #b2dfdb;
-            color: #333;
-        }
-
-        .compare-table code {
-            background: #f4fbfb;
-            color: #00796b;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: inherit;
-            font-weight: 600;
-        }
-
-        .level-selector {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .level-btns {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
         }
 
         .global-search-box {
@@ -1114,425 +1089,345 @@
             margin-top: 2px;
         }
 
-        .level-selector {
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            background: linear-gradient(to right,
-                    #e8f5e9 0%, #e8f5e9 33%,
-                    #fff3e0 33%, #fff3e0 66%,
-                    #ffebee 66%, #ffebee 100%);
-            padding: 8px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border-bottom: 2px solid #ddd;
+        //========== CSS: HIGHLIGHT SYSTEM ==========//
+        .highlighted {
+            background-color: #ffe0b2 !important;
+            padding: 2px 4px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .level-btn {
-            padding: 5px 14px;
-            border: 1.5px solid #ddd;
+        .highlighted:hover {
+            opacity: 0.8;
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+        }
+
+        .highlighted::after {
+            content: '✖';
+            position: absolute;
+            top: -12px;
+            right: -8px;
+            font-size: 10px;
+            color: #f44336;
             background: white;
-            border-radius: 18px;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .highlighted:hover::after {
+            display: flex;
+        }
+
+        .highlight-menu {
+            position: fixed;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            padding: 8px;
+            z-index: 100000;
+            display: none;
+            border: 1px solid #e0e0e0;
+            gap: 6px;
+            flex-wrap: wrap;
+            max-width: 200px;
+        }
+
+        .highlight-menu .color-option {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 0;
+        }
+
+        .highlight-menu .color-option:hover {
+            transform: scale(1.15);
+            border-color: #333;
+        }
+
+        .highlight-menu .delete-option {
+            padding: 4px 10px;
+            border: none;
+            border-radius: 8px;
+            background: #f44336;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .highlight-menu .delete-option:hover {
+            background: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        //========== CSS: HIGHLIGHT TOOLBAR ==========//
+        .highlight-toolbar {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: white;
+            padding: 12px 16px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            z-index: 99999;
+            border: 1px solid #e0e0e0;
+            display: none;
+            max-width: 340px;
+            flex-wrap: wrap;
+            gap: 4px;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+
+        .highlight-toolbar>div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .highlight-toolbar .color-btn {
+            width: 26px !important;
+            height: 26px !important;
+            min-width: 26px !important;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            padding: 0 !important;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-toolbar .color-btn:hover {
+            transform: scale(1.15);
+            border-color: #333;
+        }
+
+        .highlight-toolbar .color-btn.active {
+            border-color: #333;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-toolbar button {
+            font-size: 11px !important;
+            padding: 4px 10px !important;
+            border: none;
+            border-radius: 12px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.25s ease;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-toolbar button:hover {
+            transform: scale(1.05);
+        }
+
+        #toggleToolbarBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+            z-index: 100000;
+            transition: all 0.3s ease;
+        }
+
+        #toggleToolbarBtn:hover {
+            transform: scale(1.1);
+        }
+
+        //========== CSS: QUICK TRANSLATE POPUP ==========//
+        .translate-popup {
+            position: fixed;
+            background: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            z-index: 999999;
+            max-width: 300px;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            display: none;
+        }
+
+        .translate-popup .word {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1e293b;
+        }
+
+        .translate-popup .meaning {
+            color: #388e3c;
+            margin-top: 4px;
+        }
+
+        .translate-popup .pinyin {
+            color: #666;
+            font-size: 13px;
+            margin-top: 2px;
+        }
+
+        .translate-popup .close-popup {
+            position: absolute;
+            top: 4px;
+            right: 8px;
+            cursor: pointer;
+            color: #999;
+            font-size: 14px;
+        }
+
+        //========== CSS: FLASHCARD MODAL ==========//
+        .flashcard-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flashcard-modal.active {
+            display: flex;
+        }
+
+        .flashcard-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            min-height: 280px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .flashcard-box .card-face {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 20px 0;
+            min-height: 80px;
             display: flex;
             align-items: center;
-            gap: 4px;
+            justify-content: center;
         }
 
-        .level-btn:hover {
-            transform: translateY(-1px);
+        .flashcard-box .card-face .cn {
+            font-size: 40px;
         }
 
-        .level-btn.hsk1 {
-            color: #2e7d32;
-            border-color: #81c784;
+        .flashcard-box .card-face .vi {
+            font-size: 28px;
+            color: #388e3c;
         }
 
-        .level-btn.hsk1.active {
-            background: #2e7d32;
+        .flashcard-box .card-count {
+            color: #999;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .flashcard-box .flashcard-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .flashcard-box .flashcard-actions button {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .flashcard-box .flashcard-actions .btn-show {
+            background: #4caf50;
             color: white;
-            border-color: #2e7d32;
-            box-shadow: 0 2px 6px rgba(46, 125, 50, 0.25);
         }
 
-        .level-btn.hsk2 {
-            color: #d77f00;
-            border-color: #fbc02d;
-        }
-
-        .level-btn.hsk2.active {
-            background: #f59e0b;
+        .flashcard-box .flashcard-actions .btn-next {
+            background: #2196f3;
             color: white;
-            border-color: #d97706;
-            box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
         }
 
-        .level-btn.hsk3 {
-            color: #e11d48;
-            border-color: #fda4af;
-        }
-
-        .level-btn.hsk3.active {
-            background: #e11d48;
+        .flashcard-box .flashcard-actions .btn-prev {
+            background: #ff9800;
             color: white;
-            border-color: #be123c;
-            box-shadow: 0 2px 6px rgba(225, 29, 72, 0.3);
         }
 
-        /* ===== MÀU SẮC HSK 1, 2, 3 ===== */
-        .hsk-wrapper.hsk1 .top-banner {
-            background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9) !important;
-            color: #2e7d32 !important;
+        .flashcard-box .flashcard-actions .btn-close {
+            background: #f44336;
+            color: white;
         }
 
-        .hsk-wrapper.hsk1 .badge {
-            color: #2e7d32 !important;
-            border-color: rgba(46, 125, 50, 0.4) !important;
+        .flashcard-box .flashcard-actions button:hover {
+            transform: scale(1.05);
         }
 
-        .hsk-wrapper.hsk1 .menu button:hover {
-            background: #e8f5e9 !important;
-            color: #2e7d32 !important;
+        //========== CSS: TABLES ==========//
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
-        .hsk-wrapper.hsk1 .menu button.active {
-            background: #c8e6c9 !important;
-            color: #2e7d32 !important;
-            box-shadow: inset 4px 0 0 #4caf50 !important;
+        .compare-table th {
+            background-color: #e0f2f1;
+            color: #00695c;
+            text-align: left;
+            padding: 10px;
+            font-weight: 600;
         }
 
-        .hsk-wrapper.hsk1 .submenu {
-            background: #e8f5e9 !important;
-            border-left-color: #66bb6a !important;
+        .compare-table td {
+            padding: 10px;
+            border-top: 1px solid #b2dfdb;
+            color: #333;
         }
 
-        .hsk-wrapper.hsk1 .submenu a:hover {
-            color: #2e7d32 !important;
-            background: #c8e6c9 !important;
-        }
-
-        .hsk-wrapper.hsk1 .card h2,
-        .hsk-wrapper.hsk1 .grammar h3,
-        .hsk-wrapper.hsk1 .sidebar-title {
-            color: #2e7d32 !important;
-        }
-
-        .hsk-wrapper.hsk1 .grammar {
-            border-left-color: #4caf50 !important;
-        }
-
-        .hsk-wrapper.hsk1 .subcard {
-            background: #e8f5e9 !important;
-            border-left-color: #388e3c !important;
-        }
-
-        .hsk-wrapper.hsk1 .label {
-            color: #388e3c !important;
-        }
-
-        .hsk-wrapper.hsk1 .example {
-            border-color: #c8e6c9 !important;
-            background: #fefcf5 !important;
-        }
-
-        .hsk-wrapper.hsk1 .example-with-audio {
-            border-color: #c8e6c9 !important;
-        }
-
-        .hsk-wrapper.hsk1 .example-with-audio:hover {
-            background: #e8f5e9 !important;
-            border-color: #4caf50 !important;
-        }
-
-        .hsk-wrapper.hsk1 .py {
-            color: #388e3c !important;
-        }
-
-        .hsk-wrapper.hsk1 .audio-btn,
-        .hsk-wrapper.hsk1 .nav button {
-            background: #4caf50 !important;
-            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3) !important;
-        }
-
-        .hsk-wrapper.hsk1 .audio-btn:hover,
-        .hsk-wrapper.hsk1 .nav button:hover {
-            background: #388e3c !important;
-        }
-
-        .hsk-wrapper.hsk1 .tab-btn:hover {
-            background: #e8f5e9 !important;
-            color: #2e7d32 !important;
-        }
-
-        .hsk-wrapper.hsk1 .tab-btn.active {
-            background: #c8e6c9 !important;
-            color: #2e7d32 !important;
-        }
-
-        .hsk-wrapper.hsk1 .tab-btn.active::after {
-            background: #4caf50 !important;
-        }
-
-        .hsk-wrapper.hsk1 table th {
-            background: #e8f5e9 !important;
-            border-color: #c8e6c9 !important;
-            color: #2e7d32 !important;
-        }
-
-        .hsk-wrapper.hsk1 table td {
-            border-color: #c8e6c9 !important;
-        }
-
-        .hsk-wrapper.hsk1 table tr:nth-child(even) {
-            background: #f8fdf8 !important;
-        }
-
-        .hsk-wrapper.hsk2 .top-banner {
-            background: linear-gradient(135deg, #fef3c7, #fde68a, #fef3c7) !important;
-            color: #b45309 !important;
-        }
-
-        .hsk-wrapper.hsk2 .top-banner h1 {
-            color: #b45309 !important;
-        }
-
-        .hsk-wrapper.hsk2 .top-banner .subtitle {
-            color: #d97706 !important;
-        }
-
-        .hsk-wrapper.hsk2 .badge {
-            color: #b45309 !important;
-            border-color: rgba(217, 119, 6, 0.4) !important;
-            background: rgba(255, 255, 255, 0.7) !important;
-        }
-
-        .hsk-wrapper.hsk2 .menu button:hover {
-            background: #fef3c7 !important;
-            color: #b45309 !important;
-        }
-
-        .hsk-wrapper.hsk2 .menu button.active {
-            background: #fde68a !important;
-            color: #b45309 !important;
-            box-shadow: inset 4px 0 0 #d97706 !important;
-        }
-
-        .hsk-wrapper.hsk2 .submenu {
-            background: #fffbeb !important;
-            border-left-color: #f59e0b !important;
-        }
-
-        .hsk-wrapper.hsk2 .submenu a:hover {
-            color: #b45309 !important;
-            background: #fde68a !important;
-        }
-
-        .hsk-wrapper.hsk2 .card h2,
-        .hsk-wrapper.hsk2 .grammar h3,
-        .hsk-wrapper.hsk2 .sidebar-title {
-            color: #b45309 !important;
-        }
-
-        .hsk-wrapper.hsk2 .grammar {
-            border-left-color: #f59e0b !important;
-        }
-
-        .hsk-wrapper.hsk2 .subcard {
-            background: #fffbeb !important;
-            border-left-color: #d97706 !important;
-        }
-
-        .hsk-wrapper.hsk2 .label {
-            color: #d97706 !important;
-        }
-
-        .hsk-wrapper.hsk2 .example {
-            border-color: #fde68a !important;
-            background: #fffdf5 !important;
-        }
-
-        .hsk-wrapper.hsk2 .example-with-audio {
-            border-color: #fde68a !important;
-        }
-
-        .hsk-wrapper.hsk2 .example-with-audio:hover {
-            background: #fffbeb !important;
-            border-color: #f59e0b !important;
-        }
-
-        .hsk-wrapper.hsk2 .py {
-            color: #d97706 !important;
-        }
-
-        .hsk-wrapper.hsk2 .audio-btn,
-        .hsk-wrapper.hsk2 .nav button {
-            background: #f59e0b !important;
-            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3) !important;
-        }
-
-        .hsk-wrapper.hsk2 .audio-btn:hover,
-        .hsk-wrapper.hsk2 .nav button:hover {
-            background: #d97706 !important;
-        }
-
-        .hsk-wrapper.hsk2 .tab-btn:hover {
-            background: #fffbeb !important;
-            color: #b45309 !important;
-        }
-
-        .hsk-wrapper.hsk2 .tab-btn.active {
-            background: #fde68a !important;
-            color: #b45309 !important;
-        }
-
-        .hsk-wrapper.hsk2 .tab-btn.active::after {
-            background: #f59e0b !important;
-        }
-
-        .hsk-wrapper.hsk2 table th {
-            background: #fef3c7 !important;
-            border-color: #fde68a !important;
-            color: #b45309 !important;
-        }
-
-        .hsk-wrapper.hsk2 table td {
-            border-color: #fde68a !important;
-        }
-
-        .hsk-wrapper.hsk2 table tr:nth-child(even) {
-            background: #fffdf2 !important;
-        }
-
-        .hsk-wrapper.hsk3 .top-banner {
-            background: linear-gradient(135deg, #ffe4e6, #fecdd3, #ffe4e6) !important;
-            color: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 .top-banner h1 {
-            color: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 .top-banner .subtitle {
-            color: #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 .badge {
-            color: #be123c !important;
-            border-color: rgba(225, 29, 72, 0.4) !important;
-            background: rgba(255, 255, 255, 0.7) !important;
-        }
-
-        .hsk-wrapper.hsk3 .menu button:hover {
-            background: #ffe4e6 !important;
-            color: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 .menu button.active {
-            background: #fecdd3 !important;
-            color: #be123c !important;
-            box-shadow: inset 4px 0 0 #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 .submenu {
-            background: #fff1f2 !important;
-            border-left-color: #fb7185 !important;
-        }
-
-        .hsk-wrapper.hsk3 .submenu a:hover {
-            color: #be123c !important;
-            background: #fecdd3 !important;
-        }
-
-        .hsk-wrapper.hsk3 .card h2,
-        .hsk-wrapper.hsk3 .grammar h3,
-        .hsk-wrapper.hsk3 .sidebar-title {
-            color: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 .grammar {
-            border-left-color: #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 .subcard {
-            background: #fff1f2 !important;
-            border-left-color: #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 .label {
-            color: #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 .example {
-            border-color: #fecdd3 !important;
-            background: #fff8f8 !important;
-        }
-
-        .hsk-wrapper.hsk3 .example-with-audio {
-            border-color: #fecdd3 !important;
-        }
-
-        .hsk-wrapper.hsk3 .example-with-audio:hover {
-            background: #fff1f2 !important;
-            border-color: #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 .py {
-            color: #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 .audio-btn,
-        .hsk-wrapper.hsk3 .nav button {
-            background: #e11d48 !important;
-            box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3) !important;
-        }
-
-        .hsk-wrapper.hsk3 .audio-btn:hover,
-        .hsk-wrapper.hsk3 .nav button:hover {
-            background: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 .tab-btn:hover {
-            background: #fff1f2 !important;
-            color: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 .tab-btn.active {
-            background: #fecdd3 !important;
-            color: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 .tab-btn.active::after {
-            background: #e11d48 !important;
-        }
-
-        .hsk-wrapper.hsk3 table th {
-            background: #ffe4e6 !important;
-            border-color: #fecdd3 !important;
-            color: #be123c !important;
-        }
-
-        .hsk-wrapper.hsk3 table td {
-            border-color: #fecdd3 !important;
-        }
-
-        .hsk-wrapper.hsk3 table tr:nth-child(even) {
-            background: #fff5f6 !important;
-        }
-
-        .hsk-wrapper {
-            display: none !important;
-        }
-
-        .hsk-wrapper.active {
-            display: block !important;
+        .compare-table code {
+            background: #f4fbfb;
+            color: #00796b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: inherit;
+            font-weight: 600;
         }
 
         table {
@@ -1584,6 +1479,89 @@
             color: #388e3c;
         }
 
+        //========== CSS: HSK COLOR WRAPPERS (SIMPLIFIED) ==========//
+        .hsk-wrapper {
+            display: none !important;
+        }
+
+        .hsk-wrapper.active {
+            display: block !important;
+        }
+
+        .hsk-wrapper.hsk1 .top-banner { background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #e8f5e9) !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .badge { color: #2e7d32 !important; border-color: rgba(46, 125, 50, 0.4) !important; }
+        .hsk-wrapper.hsk1 .menu button:hover { background: #e8f5e9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .menu button.active { background: #c8e6c9 !important; color: #2e7d32 !important; box-shadow: inset 4px 0 0 #4caf50 !important; }
+        .hsk-wrapper.hsk1 .submenu { background: #e8f5e9 !important; border-left-color: #66bb6a !important; }
+        .hsk-wrapper.hsk1 .submenu a:hover { color: #2e7d32 !important; background: #c8e6c9 !important; }
+        .hsk-wrapper.hsk1 .card h2, .hsk-wrapper.hsk1 .grammar h3, .hsk-wrapper.hsk1 .sidebar-title { color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .grammar { border-left-color: #4caf50 !important; }
+        .hsk-wrapper.hsk1 .subcard { background: #e8f5e9 !important; border-left-color: #388e3c !important; }
+        .hsk-wrapper.hsk1 .label { color: #388e3c !important; }
+        .hsk-wrapper.hsk1 .example { border-color: #c8e6c9 !important; background: #fefcf5 !important; }
+        .hsk-wrapper.hsk1 .example-with-audio { border-color: #c8e6c9 !important; }
+        .hsk-wrapper.hsk1 .example-with-audio:hover { background: #e8f5e9 !important; border-color: #4caf50 !important; }
+        .hsk-wrapper.hsk1 .py { color: #388e3c !important; }
+        .hsk-wrapper.hsk1 .audio-btn, .hsk-wrapper.hsk1 .nav button { background: #4caf50 !important; box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3) !important; }
+        .hsk-wrapper.hsk1 .audio-btn:hover, .hsk-wrapper.hsk1 .nav button:hover { background: #388e3c !important; }
+        .hsk-wrapper.hsk1 .tab-btn:hover { background: #e8f5e9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .tab-btn.active { background: #c8e6c9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 .tab-btn.active::after { background: #4caf50 !important; }
+        .hsk-wrapper.hsk1 table th { background: #e8f5e9 !important; border-color: #c8e6c9 !important; color: #2e7d32 !important; }
+        .hsk-wrapper.hsk1 table td { border-color: #c8e6c9 !important; }
+        .hsk-wrapper.hsk1 table tr:nth-child(even) { background: #f8fdf8 !important; }
+
+        .hsk-wrapper.hsk2 .top-banner { background: linear-gradient(135deg, #fef3c7, #fde68a, #fef3c7) !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .top-banner h1 { color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .top-banner .subtitle { color: #d97706 !important; }
+        .hsk-wrapper.hsk2 .badge { color: #b45309 !important; border-color: rgba(217, 119, 6, 0.4) !important; background: rgba(255, 255, 255, 0.7) !important; }
+        .hsk-wrapper.hsk2 .menu button:hover { background: #fef3c7 !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .menu button.active { background: #fde68a !important; color: #b45309 !important; box-shadow: inset 4px 0 0 #d97706 !important; }
+        .hsk-wrapper.hsk2 .submenu { background: #fffbeb !important; border-left-color: #f59e0b !important; }
+        .hsk-wrapper.hsk2 .submenu a:hover { color: #b45309 !important; background: #fde68a !important; }
+        .hsk-wrapper.hsk2 .card h2, .hsk-wrapper.hsk2 .grammar h3, .hsk-wrapper.hsk2 .sidebar-title { color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .grammar { border-left-color: #f59e0b !important; }
+        .hsk-wrapper.hsk2 .subcard { background: #fffbeb !important; border-left-color: #d97706 !important; }
+        .hsk-wrapper.hsk2 .label { color: #d97706 !important; }
+        .hsk-wrapper.hsk2 .example { border-color: #fde68a !important; background: #fffdf5 !important; }
+        .hsk-wrapper.hsk2 .example-with-audio { border-color: #fde68a !important; }
+        .hsk-wrapper.hsk2 .example-with-audio:hover { background: #fffbeb !important; border-color: #f59e0b !important; }
+        .hsk-wrapper.hsk2 .py { color: #d97706 !important; }
+        .hsk-wrapper.hsk2 .audio-btn, .hsk-wrapper.hsk2 .nav button { background: #f59e0b !important; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3) !important; }
+        .hsk-wrapper.hsk2 .audio-btn:hover, .hsk-wrapper.hsk2 .nav button:hover { background: #d97706 !important; }
+        .hsk-wrapper.hsk2 .tab-btn:hover { background: #fffbeb !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .tab-btn.active { background: #fde68a !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 .tab-btn.active::after { background: #f59e0b !important; }
+        .hsk-wrapper.hsk2 table th { background: #fef3c7 !important; border-color: #fde68a !important; color: #b45309 !important; }
+        .hsk-wrapper.hsk2 table td { border-color: #fde68a !important; }
+        .hsk-wrapper.hsk2 table tr:nth-child(even) { background: #fffdf2 !important; }
+
+        .hsk-wrapper.hsk3 .top-banner { background: linear-gradient(135deg, #ffe4e6, #fecdd3, #ffe4e6) !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 .top-banner h1 { color: #be123c !important; }
+        .hsk-wrapper.hsk3 .top-banner .subtitle { color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .badge { color: #be123c !important; border-color: rgba(225, 29, 72, 0.4) !important; background: rgba(255, 255, 255, 0.7) !important; }
+        .hsk-wrapper.hsk3 .menu button:hover { background: #ffe4e6 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 .menu button.active { background: #fecdd3 !important; color: #be123c !important; box-shadow: inset 4px 0 0 #e11d48 !important; }
+        .hsk-wrapper.hsk3 .submenu { background: #fff1f2 !important; border-left-color: #fb7185 !important; }
+        .hsk-wrapper.hsk3 .submenu a:hover { color: #be123c !important; background: #fecdd3 !important; }
+        .hsk-wrapper.hsk3 .card h2, .hsk-wrapper.hsk3 .grammar h3, .hsk-wrapper.hsk3 .sidebar-title { color: #be123c !important; }
+        .hsk-wrapper.hsk3 .grammar { border-left-color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .subcard { background: #fff1f2 !important; border-left-color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .label { color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .example { border-color: #fecdd3 !important; background: #fff8f8 !important; }
+        .hsk-wrapper.hsk3 .example-with-audio { border-color: #fecdd3 !important; }
+        .hsk-wrapper.hsk3 .example-with-audio:hover { background: #fff1f2 !important; border-color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .py { color: #e11d48 !important; }
+        .hsk-wrapper.hsk3 .audio-btn, .hsk-wrapper.hsk3 .nav button { background: #e11d48 !important; box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3) !important; }
+        .hsk-wrapper.hsk3 .audio-btn:hover, .hsk-wrapper.hsk3 .nav button:hover { background: #be123c !important; }
+        .hsk-wrapper.hsk3 .tab-btn:hover { background: #fff1f2 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 .tab-btn.active { background: #fecdd3 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 .tab-btn.active::after { background: #e11d48 !important; }
+        .hsk-wrapper.hsk3 table th { background: #ffe4e6 !important; border-color: #fecdd3 !important; color: #be123c !important; }
+        .hsk-wrapper.hsk3 table td { border-color: #fecdd3 !important; }
+        .hsk-wrapper.hsk3 table tr:nth-child(even) { background: #fff5f6 !important; }
+
+        //========== CSS: RESPONSIVE DESIGN ==========//
         @media screen and (max-width: 1024px) {
             aside {
                 width: 240px;
@@ -1708,59 +1686,34 @@
                 bottom: 20px;
                 right: 20px;
             }
-        }
 
-        /* ===== HIỆU ỨNG CLICK PINYIN & NGHĨA ===== */
-        .text-group .cn {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 2px 6px;
-            border-radius: 4px;
-            display: inline-block;
-        }
+            .streak-badge {
+                top: 52px;
+                left: 10px;
+                padding: 4px 12px;
+                font-size: 11px;
+            }
 
-        .text-group .cn:hover {
-            background: rgba(76, 175, 80, 0.15);
-            transform: scale(1.02);
-        }
+            .streak-badge .fire {
+                font-size: 14px;
+            }
 
-        .text-group .py {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 2px 6px;
-            border-radius: 4px;
-            display: inline-block;
-        }
+            .user-info {
+                display: none;
+            }
 
-        .text-group .py:hover {
-            background: rgba(255, 193, 7, 0.2);
-            transform: scale(1.02);
-        }
-
-        .text-group .vi {
-            transition: all 0.3s ease;
-            padding: 2px 6px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-
-        .text-group button {
-            transition: all 0.3s ease;
-            font-family: inherit;
-        }
-
-        .text-group button:hover {
-            transform: scale(1.05);
-        }
-
-        .text-group button:active {
-            transform: scale(0.95);
+            .logout-btn {
+                top: 52px;
+                right: 10px;
+                font-size: 11px;
+                padding: 4px 12px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- ===== MÀN HÌNH ĐĂNG NHẬP ===== -->
+    //========== HTML: LOGIN SCREEN ==========//
     <div id="login-overlay" style="display:flex;">
         <div class="login-box">
             <h2>📚 HSK123</h2>
@@ -1781,10 +1734,14 @@
         </div>
     </div>
 
-    <!-- ===== NÚT MỞ TOOLBAR ===== -->
+    //========== HTML: UI BADGES & BUTTONS ==========//
+    <div class="streak-badge" id="streakBadge" onclick="showStreakInfo()">
+        <span class="fire">🔥</span>
+        <span id="streakDays">0</span> ngày liên tục
+    </div>
+
     <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
 
-    <!-- ===== TOOLBAR HIGHLIGHT ===== -->
     <div class="highlight-toolbar" id="highlightToolbar">
         <div
             style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;">
@@ -1792,16 +1749,41 @@
                 style="padding:4px 10px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;">Highlight</button>
             <button onclick="clearAllHighlights()"
                 style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
+            <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
+            <button onclick="toggleDarkMode()" id="darkModeBtn" style="padding:4px 10px;border:none;border-radius:12px;background:#333;color:white;font-size:11px;font-weight:600;cursor:pointer;">🌙</button>
+            <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">🔄 Flashcard</button>
         </div>
     </div>
-        <!-- ===== MENU ĐỔI MÀU HIGHLIGHT ===== -->
-<div class="highlight-menu" id="highlightMenu">
-    <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
-</div>
-    <!-- ===== CONTAINER CHÍNH ===== -->
-    <div id="app-container">
 
-        <!-- ===== LEVEL SELECTOR ===== -->
+    <div class="highlight-menu" id="highlightMenu">
+        <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
+    </div>
+
+    <div class="translate-popup" id="translatePopup">
+        <span class="close-popup" onclick="closeTranslatePopup()">✕</span>
+        <div class="word" id="popupWord">你好</div>
+        <div class="pinyin" id="popupPinyin">nǐ hǎo</div>
+        <div class="meaning" id="popupMeaning">Xin chào</div>
+    </div>
+
+    <div class="flashcard-modal" id="flashcardModal">
+        <div class="flashcard-box">
+            <div class="card-count" id="flashcardCount">1/10</div>
+            <div class="card-face" id="flashcardFace">
+                <span class="cn">你好</span>
+            </div>
+            <div class="flashcard-actions">
+                <button class="btn-show" onclick="flashcardShowAnswer()">Xem nghĩa</button>
+                <button class="btn-prev" onclick="flashcardPrev()">⬅️</button>
+                <button class="btn-next" onclick="flashcardNext()">➡️</button>
+                <button class="btn-close" onclick="closeFlashcard()">❌ Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    //========== HTML: MAIN CONTAINER ==========//
+    <div id="app-container">
+        //========== HTML: LEVEL SELECTOR ==========//
         <div class="level-selector">
             <div class="level-btns">
                 <button class="level-btn hsk1 active" onclick="switchLevel('hsk1', this)">🌿 HSK1</button>
@@ -1813,7 +1795,15 @@
             </div>
         </div>
 
-        <!-- ===== NỘI DUNG CHÍNH ===== -->
+        <div class="progress-stats" id="progressStats">
+            <span>📚 Tiến độ: <span id="progressText">0/0</span> bài</span>
+            <span id="progressPercent">0%</span>
+            <div class="progress-bar">
+                <div class="fill" id="progressFill" style="width:0%"></div>
+            </div>
+        </div>
+
+        //========== HTML: APP CONTENT ==========//
         <div id="app">
             <div id="loading" style="text-align:center; padding:50px;">
                 <div
@@ -1822,376 +1812,372 @@
                 <p style="margin-top:10px;color:#666;">Đang tải dữ liệu...</p>
             </div>
         </div>
-
     </div>
 
-    <style>
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-
+    //========== JAVASCRIPT: MAIN LOGIC ==========//
     <script>
-        // ==============================================
-        // TOÀN BỘ JAVASCRIPT
-        // ==============================================
+// ===== JS: VARIABLES INIT =====
+let hskData = {};
+let currentLevel = 'hsk1';
+let currentLesson = 1;
+let currentTab = 1;
+let toolbarVisible = false;
+let highlightMode = false;
+let currentHighlightElement = null;
+let flashcardData = [];
+let flashcardIndex = 0;
+let flashcardShowing = false;
+let popupTimeout = null;
 
-        let hskData = {};
-        let currentLevel = 'hsk1';
-        let currentLesson = 1;
-        let currentTab = 1;
-        const hskLevels = ['hsk1', 'hsk2', 'hsk3'];
+const hskLevels = ['hsk1', 'hsk2', 'hsk3'];
+const highlightColor = '#ffe0b2';
 
-        // ===== LOAD DỮ LIỆU =====
-        async function loadData() {
-            try {
-                document.getElementById('loading').style.display = 'block';
-                const [hsk1Res, hsk2Res, hsk3Res] = await Promise.all([
-                    fetch('data/hsk1.json'),
-                    fetch('data/hsk2.json'),
-                    fetch('data/hsk3.json')
-                ]);
-                hskData = {
-                    hsk1: (await hsk1Res.json()).hsk1,
-                    hsk2: (await hsk2Res.json()).hsk2,
-                    hsk3: (await hsk3Res.json()).hsk3
-                };
-                document.getElementById('loading').style.display = 'none';
-                renderAll();
-                loadProgress();
-            } catch (error) {
-                console.error('Lỗi tải dữ liệu:', error);
-                document.getElementById('loading').innerHTML = `
-                    <p style="color:red;font-size:18px;">❌ Không thể tải dữ liệu!</p>
-                    <p style="color:#666;">Vui lòng kiểm tra các file trong thư mục <b>data/</b></p>
-                `;
+// ===== JS: LOAD DATA =====
+async function loadData() {
+    try {
+        document.getElementById('loading').style.display = 'block';
+        const [hsk1Res, hsk2Res, hsk3Res] = await Promise.all([
+            fetch('data/hsk1.json'),
+            fetch('data/hsk2.json'),
+            fetch('data/hsk3.json')
+        ]);
+        hskData = {
+            hsk1: (await hsk1Res.json()).hsk1,
+            hsk2: (await hsk2Res.json()).hsk2,
+            hsk3: (await hsk3Res.json()).hsk3
+        };
+        document.getElementById('loading').style.display = 'none';
+        renderAll();
+        loadProgress();
+        updateProgress();
+        updateMenuProgress();
+    } catch (error) {
+        console.error('❌ Lỗi tải dữ liệu:', error);
+        document.getElementById('loading').innerHTML = `
+            <p style="color:red;font-size:18px;">❌ Không thể tải dữ liệu!</p>
+            <p style="color:#666;">Vui lòng kiểm tra các file trong thư mục <b>data/</b></p>
+        `;
+    }
+}
+
+// ===== JS: RENDER ALL HSK LEVELS =====
+function renderAll() {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    hskLevels.forEach(levelId => {
+        const levelData = hskData[levelId];
+        if (!levelData) return;
+        app.appendChild(createHSKWrapper(levelId, levelData));
+    });
+    document.getElementById('hsk1')?.classList.add('active');
+    showLesson('hsk1', 1);
+}
+
+// ===== JS: CREATE HSK WRAPPER =====
+function createHSKWrapper(levelId, levelData) {
+    const wrapper = document.createElement('div');
+    wrapper.id = levelId;
+    wrapper.className = `hsk-wrapper ${levelId}`;
+
+    const banner = document.createElement('div');
+    banner.className = 'top-banner';
+    banner.innerHTML = `
+        <div class="badge">${levelData.badge}</div>
+        <h1>${levelData.title}</h1>
+        <div class="subtitle">${levelData.subtitle}</div>
+    `;
+    wrapper.appendChild(banner);
+
+    const contentWrapper = document.createElement('div');
+    contentWrapper.className = 'content-wrapper';
+
+    const aside = document.createElement('aside');
+    const sidebarTitle = document.createElement('div');
+    sidebarTitle.className = 'sidebar-title';
+    sidebarTitle.textContent = 'Mục lục bài học';
+    aside.appendChild(sidebarTitle);
+
+    const menu = document.createElement('div');
+    menu.className = 'menu';
+    menu.id = `menu-${levelId}`;
+
+    levelData.lessons.forEach((lesson, index) => {
+        const menuItem = document.createElement('div');
+        menuItem.className = 'menu-item';
+
+        const button = document.createElement('button');
+        if (index === 0) button.classList.add('active');
+        button.textContent = `📖 ${lesson.title}`;
+        button.onclick = () => showLesson(levelId, lesson.id);
+        menuItem.appendChild(button);
+
+        const submenu = document.createElement('div');
+        submenu.className = 'submenu';
+
+        lesson.tabs.forEach(tab => {
+            const a = document.createElement('a');
+            a.textContent = tab.title;
+            a.onclick = (e) => {
+                e.preventDefault();
+                const lessonEl = document.getElementById(`lesson-${levelId}-${lesson.id}`);
+                if (lessonEl && !lessonEl.classList.contains('active')) showLesson(levelId, lesson.id);
+                switchTab(levelId, lesson.id, tab.id);
+            };
+            submenu.appendChild(a);
+        });
+
+        menuItem.appendChild(submenu);
+        menu.appendChild(menuItem);
+    });
+
+    aside.appendChild(menu);
+    contentWrapper.appendChild(aside);
+
+    const main = document.createElement('main');
+    main.id = `main-${levelId}`;
+
+    levelData.lessons.forEach((lesson, index) => {
+        const lessonDiv = document.createElement('div');
+        lessonDiv.id = `lesson-${levelId}-${lesson.id}`;
+        lessonDiv.className = 'lesson';
+        if (index === 0) lessonDiv.classList.add('active');
+
+        const tabNav = document.createElement('div');
+        tabNav.className = 'tab-nav';
+
+        lesson.tabs.forEach((tab, tabIndex) => {
+            const btn = document.createElement('button');
+            btn.className = 'tab-btn';
+            if (tabIndex === 0) btn.classList.add('active');
+            btn.textContent = tab.title;
+            btn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '${tab.id}')`);
+            tabNav.appendChild(btn);
+        });
+
+        const exerciseBtn = document.createElement('button');
+        exerciseBtn.className = 'tab-btn';
+        exerciseBtn.textContent = 'Bài Tập';
+        exerciseBtn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '999')`);
+        tabNav.appendChild(exerciseBtn);
+
+        lessonDiv.appendChild(tabNav);
+
+        const tabContent = document.createElement('div');
+        tabContent.className = 'tab-content';
+
+        lesson.tabs.forEach((tab, tabIndex) => {
+            const pane = document.createElement('div');
+            pane.id = `tab-${levelId}-${lesson.id}-${tab.id}`;
+            pane.className = 'tab-pane';
+            if (tabIndex === 0) pane.classList.add('active');
+
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const grammarDiv = document.createElement('div');
+            grammarDiv.className = 'grammar';
+
+            const h3 = document.createElement('h3');
+            h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
+            grammarDiv.appendChild(h3);
+
+            if (tab.subcards) {
+                tab.subcards.forEach(sc => {
+                    const subcard = document.createElement('div');
+                    subcard.className = 'subcard';
+                    subcard.innerHTML = `
+                        <span class="label">${sc.label}</span>
+                        <p>${sc.text.replace(/\n/g, '<br>')}</p>
+                    `;
+                    grammarDiv.appendChild(subcard);
+                });
             }
-        }
 
-        // ===== RENDER ALL =====
-        function renderAll() {
-            const app = document.getElementById('app');
-            app.innerHTML = '';
-            hskLevels.forEach(levelId => {
-                const levelData = hskData[levelId];
-                if (!levelData) return;
-                app.appendChild(createHSKWrapper(levelId, levelData));
-            });
-            document.getElementById('hsk1')?.classList.add('active');
-            showLesson('hsk1', 1);
-        }
+            if (tab.examples) {
+                const exampleDiv = document.createElement('div');
+                exampleDiv.className = 'example';
 
-        // ===== TẠO WRAPPER HSK =====
-        function createHSKWrapper(levelId, levelData) {
-            const wrapper = document.createElement('div');
-            wrapper.id = levelId;
-            wrapper.className = `hsk-wrapper ${levelId}`;
+                tab.examples.forEach((ex, idx) => {
+                    const label = document.createElement('span');
+                    label.className = 'example-label';
+                    label.innerHTML = `<b>例句${idx + 1}：</b>`;
+                    exampleDiv.appendChild(label);
 
-            const banner = document.createElement('div');
-            banner.className = 'top-banner';
-            banner.innerHTML = `
-                <div class="badge">${levelData.badge}</div>
-                <h1>${levelData.title}</h1>
-                <div class="subtitle">${levelData.subtitle}</div>
-            `;
-            wrapper.appendChild(banner);
+                    const audioDiv = document.createElement('div');
+                    audioDiv.className = 'example-with-audio';
+                    audioDiv.innerHTML = `
+                        <div class="text-group">
+                            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                                <span class="cn" style="font-size:22px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${ex.cn}</span>
+                                <button onclick="togglePinyinForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Phiên âm</button>
+                                <button onclick="toggleNghiaForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Nghĩa</button>
+                            </div>
+                            <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;">${ex.py}</span>
+                            <span class="vi" style="display:none;font-size:14px;color:#64748b;">${ex.vi}</span>
+                        </div>
+                        <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}', event)">🔊</button>
+                    `;
+                    exampleDiv.appendChild(audioDiv);
+                    if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
+                });
 
-            const contentWrapper = document.createElement('div');
-            contentWrapper.className = 'content-wrapper';
+                grammarDiv.appendChild(exampleDiv);
+            }
 
-            const aside = document.createElement('aside');
-            const sidebarTitle = document.createElement('div');
-            sidebarTitle.className = 'sidebar-title';
-            sidebarTitle.textContent = 'Mục lục bài học';
-            aside.appendChild(sidebarTitle);
+            card.appendChild(grammarDiv);
+            pane.appendChild(card);
+            tabContent.appendChild(pane);
+        });
 
-            const menu = document.createElement('div');
-            menu.className = 'menu';
-            menu.id = `menu-${levelId}`;
+        const exercisePane = document.createElement('div');
+        exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
+        exercisePane.className = 'tab-pane';
 
-            levelData.lessons.forEach((lesson, index) => {
-                const menuItem = document.createElement('div');
-                menuItem.className = 'menu-item';
+        const exerciseCard = document.createElement('div');
+        exerciseCard.className = 'card';
 
-                const button = document.createElement('button');
-                if (index === 0) button.classList.add('active');
-                button.textContent = `📖 ${lesson.title}`;
-                button.onclick = () => showLesson(levelId, lesson.id);
-                menuItem.appendChild(button);
+        const exerciseHtml = document.createElement('div');
+        exerciseHtml.className = 'grammar';
 
-                const submenu = document.createElement('div');
-                submenu.className = 'submenu';
+        const exTitle = document.createElement('h3');
+        exTitle.textContent = 'Bài tập';
+        exerciseHtml.appendChild(exTitle);
 
-                lesson.tabs.forEach(tab => {
-                    const a = document.createElement('a');
-                    a.textContent = tab.title;
-                    a.onclick = (e) => {
-                        e.preventDefault();
-                        const lessonEl = document.getElementById(`lesson-${levelId}-${lesson.id}`);
-                        if (lessonEl && !lessonEl.classList.contains('active')) showLesson(levelId, lesson.id);
-                        switchTab(levelId, lesson.id, tab.id);
+        const exContainer = document.createElement('div');
+        exContainer.id = `exercise-${levelId}-${lesson.id}`;
+        exContainer.className = 'exercise-container';
+
+        if (lesson.exercises && lesson.exercises.length > 0) {
+            lesson.exercises.forEach((ex, idx) => {
+                const exDiv = document.createElement('div');
+                exDiv.className = 'exercise-item';
+
+                const qDiv = document.createElement('div');
+                qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+                qDiv.textContent = `${idx + 1}. ${ex.question}`;
+                exDiv.appendChild(qDiv);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
+
+                ex.options.forEach((opt, optIdx) => {
+                    const label = document.createElement('label');
+                    label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
+                    label.onmouseover = function () { this.style.background = '#e8f5e9'; };
+                    label.onmouseout = function () { this.style.background = 'transparent'; };
+
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
+                    radio.value = optIdx;
+                    radio.onchange = function () {
+                        const parent = this.closest('.exercise-item');
+                        const resultDiv = parent.querySelector('.exercise-result');
+                        const isCorrect = parseInt(this.value) === ex.answer;
+                        if (isCorrect) {
+                            resultDiv.textContent = '✅ Đúng!';
+                            resultDiv.style.color = '#4caf50';
+                        } else {
+                            resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
+                            resultDiv.style.color = '#f44336';
+                        }
                     };
-                    submenu.appendChild(a);
+
+                    const textSpan = document.createElement('span');
+                    textSpan.textContent = opt;
+
+                    label.appendChild(radio);
+                    label.appendChild(textSpan);
+                    optionsDiv.appendChild(label);
                 });
 
-                menuItem.appendChild(submenu);
-                menu.appendChild(menuItem);
+                exDiv.appendChild(optionsDiv);
+
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'exercise-result';
+                resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:#fff;';
+                exDiv.appendChild(resultDiv);
+
+                exContainer.appendChild(exDiv);
             });
-
-            aside.appendChild(menu);
-            contentWrapper.appendChild(aside);
-
-            const main = document.createElement('main');
-            main.id = `main-${levelId}`;
-
-            levelData.lessons.forEach((lesson, index) => {
-                const lessonDiv = document.createElement('div');
-                lessonDiv.id = `lesson-${levelId}-${lesson.id}`;
-                lessonDiv.className = 'lesson';
-                if (index === 0) lessonDiv.classList.add('active');
-
-                const tabNav = document.createElement('div');
-                tabNav.className = 'tab-nav';
-
-                lesson.tabs.forEach((tab, tabIndex) => {
-    const btn = document.createElement('button');
-    btn.className = 'tab-btn';
-    if (tabIndex === 0) btn.classList.add('active');
-    btn.textContent = tab.title;
-    btn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '${tab.id}')`);  // ✅ SỬA
-    tabNav.appendChild(btn);
-});
-
-                const exerciseBtn = document.createElement('button');
-exerciseBtn.className = 'tab-btn';
-exerciseBtn.textContent = 'Bài Tập';
-exerciseBtn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '999')`);  // ✅ SỬA
-tabNav.appendChild(exerciseBtn);
-
-                lessonDiv.appendChild(tabNav);
-
-                const tabContent = document.createElement('div');
-                tabContent.className = 'tab-content';
-
-                // Tạo các tab cũ
-                lesson.tabs.forEach((tab, tabIndex) => {
-                    const pane = document.createElement('div');
-                    pane.id = `tab-${levelId}-${lesson.id}-${tab.id}`;
-                    pane.className = 'tab-pane';
-                    if (tabIndex === 0) pane.classList.add('active');
-
-                    const card = document.createElement('div');
-                    card.className = 'card';
-
-                    const grammarDiv = document.createElement('div');
-                    grammarDiv.className = 'grammar';
-
-                    const h3 = document.createElement('h3');
-                    h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
-                    grammarDiv.appendChild(h3);
-
-                    if (tab.subcards) {
-                        tab.subcards.forEach(sc => {
-                            const subcard = document.createElement('div');
-                            subcard.className = 'subcard';
-                            subcard.innerHTML = `
-                                <span class="label">${sc.label}</span>
-                                <p>${sc.text.replace(/\n/g, '<br>')}</p>
-                            `;
-                            grammarDiv.appendChild(subcard);
-                        });
-                    }
-
-                    if (tab.examples) {
-                        const exampleDiv = document.createElement('div');
-                        exampleDiv.className = 'example';
-
-                        tab.examples.forEach((ex, idx) => {
-                            const label = document.createElement('span');
-                            label.className = 'example-label';
-                            label.innerHTML = `<b>例句${idx + 1}：</b>`;
-                            exampleDiv.appendChild(label);
-
-                            const audioDiv = document.createElement('div');
-                            audioDiv.className = 'example-with-audio';
-                            audioDiv.innerHTML = `
-                                <div class="text-group">
-                                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                                        <span class="cn" style="font-size:22px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${ex.cn}</span>
-                                        <button onclick="togglePinyinForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Phiên âm</button>
-                                        <button onclick="toggleNghiaForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Nghĩa</button>
-                                    </div>
-                                    <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;">${ex.py}</span>
-                                    <span class="vi" style="display:none;font-size:14px;color:#64748b;">${ex.vi}</span>
-                                </div>
-                                <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}', event)">🔊</button>
-                            `;
-                            exampleDiv.appendChild(audioDiv);
-                            if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
-                        });
-
-                        grammarDiv.appendChild(exampleDiv);
-                    }
-
-                    card.appendChild(grammarDiv);
-                    pane.appendChild(card);
-                    tabContent.appendChild(pane);
-                });
-
-                // ===== TẠO PANE BÀI TẬP (CẢI TIẾN) =====
-                const exercisePane = document.createElement('div');
-exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
-                exercisePane.className = 'tab-pane';
-
-                const exerciseCard = document.createElement('div');
-                exerciseCard.className = 'card';
-
-                const exerciseHtml = document.createElement('div');
-                exerciseHtml.className = 'grammar';
-
-                const exTitle = document.createElement('h3');
-                exTitle.textContent = 'Bài tập';
-                exerciseHtml.appendChild(exTitle);
-
-                const exContainer = document.createElement('div');
-                exContainer.id = `exercise-${levelId}-${lesson.id}`;
-                exContainer.className = 'exercise-container';
-
-                if (lesson.exercises && lesson.exercises.length > 0) {
-                    lesson.exercises.forEach((ex, idx) => {
-                        const exDiv = document.createElement('div');
-                        exDiv.className = 'exercise-item';
-
-                        const qDiv = document.createElement('div');
-                        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-                        qDiv.textContent = `${idx + 1}. ${ex.question}`;
-                        exDiv.appendChild(qDiv);
-
-                        const optionsDiv = document.createElement('div');
-                        optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
-
-                        ex.options.forEach((opt, optIdx) => {
-                            const label = document.createElement('label');
-                            label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
-                            label.onmouseover = function () { this.style.background = '#e8f5e9'; };
-                            label.onmouseout = function () { this.style.background = 'transparent'; };
-
-                            const radio = document.createElement('input');
-                            radio.type = 'radio';
-                            radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
-                            radio.value = optIdx;
-                            radio.onchange = function () {
-                                const parent = this.closest('.exercise-item');
-                                const resultDiv = parent.querySelector('.exercise-result');
-                                const isCorrect = parseInt(this.value) === ex.answer;
-                                if (isCorrect) {
-                                    resultDiv.textContent = '✅ Đúng!';
-                                    resultDiv.style.color = '#4caf50';
-                                } else {
-                                    resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
-                                    resultDiv.style.color = '#f44336';
-                                }
-                            };
-
-                            const textSpan = document.createElement('span');
-                            textSpan.textContent = opt;
-
-                            label.appendChild(radio);
-                            label.appendChild(textSpan);
-                            optionsDiv.appendChild(label);
-                        });
-
-                        exDiv.appendChild(optionsDiv);
-
-                        const resultDiv = document.createElement('div');
-                        resultDiv.className = 'exercise-result';
-                        resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:#fff;';
-                        exDiv.appendChild(resultDiv);
-
-                        exContainer.appendChild(exDiv);
-                    });
-                } else {
-                    const noEx = document.createElement('p');
-                    noEx.textContent = 'Chưa có bài tập cho bài học này.';
-                    noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
-                    exContainer.appendChild(noEx);
-                }
-
-                exerciseHtml.appendChild(exContainer);
-                exerciseCard.appendChild(exerciseHtml);
-                exercisePane.appendChild(exerciseCard);
-                tabContent.appendChild(exercisePane);
-
-                lessonDiv.appendChild(tabContent);
-
-                const nav = document.createElement('div');
-                nav.className = 'nav';
-                nav.innerHTML = `
-                    <button onclick="prevTab('${levelId}', ${lesson.id})">⬅ 上一个</button>
-                    <button onclick="nextTab('${levelId}', ${lesson.id})">下一个 ➜</button>
-                `;
-                lessonDiv.appendChild(nav);
-
-                main.appendChild(lessonDiv);
-            });
-
-            contentWrapper.appendChild(main);
-            wrapper.appendChild(contentWrapper);
-
-            return wrapper;
+        } else {
+            const noEx = document.createElement('p');
+            noEx.textContent = 'Chưa có bài tập cho bài học này.';
+            noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
+            exContainer.appendChild(noEx);
         }
 
-        // ===== CÁC HÀM CHÍNH =====
-        function switchLevel(levelId, button) {
-            document.querySelectorAll('.hsk-wrapper').forEach(el => el.classList.remove('active'));
-            document.getElementById(levelId)?.classList.add('active');
-            document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            currentLevel = levelId;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            saveProgress();
+        exerciseHtml.appendChild(exContainer);
+        exerciseCard.appendChild(exerciseHtml);
+        exercisePane.appendChild(exerciseCard);
+        tabContent.appendChild(exercisePane);
+
+        lessonDiv.appendChild(tabContent);
+
+        const nav = document.createElement('div');
+        nav.className = 'nav';
+        nav.innerHTML = `
+            <button onclick="prevTab('${levelId}', ${lesson.id})">⬅ Trước</button>
+            <button onclick="nextTab('${levelId}', ${lesson.id})">Tiếp ➜</button>
+        `;
+        lessonDiv.appendChild(nav);
+
+        main.appendChild(lessonDiv);
+    });
+
+    contentWrapper.appendChild(main);
+    wrapper.appendChild(contentWrapper);
+
+    return wrapper;
+}
+
+// ===== JS: SWITCH LEVEL =====
+function switchLevel(levelId, button) {
+    document.querySelectorAll('.hsk-wrapper').forEach(el => el.classList.remove('active'));
+    document.getElementById(levelId)?.classList.add('active');
+    document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    currentLevel = levelId;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    saveProgress();
+}
+
+// ===== JS: SHOW LESSON =====
+function showLesson(hskLevel, lessonNum, defaultTab = '1') {
+    document.querySelectorAll('.hsk-wrapper').forEach(el => el.classList.remove('active'));
+    document.getElementById(hskLevel)?.classList.add('active');
+    document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.level-btn.${hskLevel}`)?.classList.add('active');
+    document.querySelectorAll('.lesson').forEach(lesson => lesson.classList.remove('active'));
+
+    const targetLesson = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
+    if (targetLesson) {
+        targetLesson.classList.add('active');
+        switchTab(hskLevel, lessonNum, defaultTab);
+        targetLesson.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        currentLevel = hskLevel;
+        currentLesson = lessonNum;
+        currentTab = defaultTab;
+        saveProgress();
+        updateStreak();
+    } else {
+        alert("Chưa có dữ liệu bài học này!");
+        return;
+    }
+
+    const activeWrapper = document.querySelector('.hsk-wrapper.active');
+    if (activeWrapper) {
+        const menuButtons = activeWrapper.querySelectorAll('.menu button');
+        menuButtons.forEach(btn => btn.classList.remove('active'));
+        if (menuButtons[lessonNum - 1]) {
+            menuButtons[lessonNum - 1].classList.add('active');
+            menuButtons[lessonNum - 1].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         }
+    }
+}
 
-        function showLesson(hskLevel, lessonNum, defaultTab = '1') {
-            document.querySelectorAll('.hsk-wrapper').forEach(el => el.classList.remove('active'));
-            document.getElementById(hskLevel)?.classList.add('active');
-            document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelector(`.level-btn.${hskLevel}`)?.classList.add('active');
-            document.querySelectorAll('.lesson').forEach(lesson => lesson.classList.remove('active'));
-
-            const targetLesson = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-            if (targetLesson) {
-                targetLesson.classList.add('active');
-                switchTab(hskLevel, lessonNum, defaultTab);
-                targetLesson.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                currentLevel = hskLevel;
-                currentLesson = lessonNum;
-                currentTab = defaultTab;
-                saveProgress();
-            } else {
-                alert("Chưa có dữ liệu bài học này!");
-                return;
-            }
-
-            const activeWrapper = document.querySelector('.hsk-wrapper.active');
-            if (activeWrapper) {
-                const menuButtons = activeWrapper.querySelectorAll('.menu button');
-                menuButtons.forEach(btn => btn.classList.remove('active'));
-                if (menuButtons[lessonNum - 1]) {
-                    menuButtons[lessonNum - 1].classList.add('active');
-                    menuButtons[lessonNum - 1].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-                }
-            }
-        }
-
-        // ===== CẢI TIẾN switchTab (LỖI #1) =====
-        function switchTab(hskLevel, lessonNum, tabId) {
+// ===== JS: SWITCH TAB =====
+function switchTab(hskLevel, lessonNum, tabId) {
     const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
     if (!lessonEl) return;
 
@@ -2201,14 +2187,12 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
     tabs.forEach(tab => tab.classList.remove('active'));
     panes.forEach(pane => pane.classList.remove('active'));
 
-    // Tìm tab dựa trên onclick attribute
     let targetIndex = -1;
     const tabIdStr = String(tabId);
 
     tabs.forEach((tab, index) => {
         const onclickAttr = tab.getAttribute('onclick');
         if (onclickAttr) {
-            // Tìm tabId trong onclick, có thể là số hoặc chuỗi trong dấu nháy
             const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
             if (match) {
                 const foundId = match[1].trim();
@@ -2219,9 +2203,7 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         }
     });
 
-    // Nếu không tìm thấy, thử theo index
     if (targetIndex === -1) {
-        // Nếu là bài tập (999), lấy tab cuối cùng
         if (tabIdStr === '999') {
             targetIndex = tabs.length - 1;
         } else {
@@ -2236,7 +2218,6 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         tabs[targetIndex].classList.add('active');
     }
 
-    // Tìm pane tương ứng
     const paneId = `tab-${hskLevel}-${lessonNum}-${tabIdStr}`;
     const pane = document.getElementById(paneId);
     if (pane) {
@@ -2247,7 +2228,8 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
     saveProgress();
 }
 
- function nextTab(hskLevel, lessonNum) {
+// ===== JS: NEXT TAB =====
+function nextTab(hskLevel, lessonNum) {
     const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
     if (!lessonEl) return;
 
@@ -2263,7 +2245,6 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
 
         const onclickAttr = nextTabBtn.getAttribute('onclick');
         if (onclickAttr) {
-            // Lấy tabId từ onclick
             const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
             if (match && match[1]) {
                 tabId = match[1].trim();
@@ -2274,7 +2255,6 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     } else {
-        // Lấy danh sách bài học
         const lessons = hskData[hskLevel].lessons;
         const totalLessons = lessons.length;
         const nextLessonNum = lessonNum + 1;
@@ -2309,7 +2289,9 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         }
     }
 }
-       function prevTab(hskLevel, lessonNum) {
+
+// ===== JS: PREV TAB =====
+function prevTab(hskLevel, lessonNum) {
     const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
     if (!lessonEl) return;
 
@@ -2368,158 +2350,234 @@ exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
         }
     }
 }
-        function saveProgress() {
-            try {
-                localStorage.setItem('hskProgress', JSON.stringify({ level: currentLevel, lesson: currentLesson, tab: currentTab }));
-            } catch (e) {
-                console.warn('Không thể lưu progress:', e);
-            }
-        }
 
-        function loadProgress() {
-            try {
-                const saved = localStorage.getItem('hskProgress');
-                if (saved) {
-                    const { level, lesson, tab } = JSON.parse(saved);
-                    setTimeout(() => {
-                        const btn = document.querySelector(`.level-btn.${level}`);
-                        if (btn) switchLevel(level, btn);
-                        showLesson(level, lesson, tab);
-                    }, 200);
+// ===== JS: SAVE & LOAD PROGRESS =====
+function saveProgress() {
+    try {
+        localStorage.setItem('hskProgress', JSON.stringify({ level: currentLevel, lesson: currentLesson, tab: currentTab }));
+    } catch (e) {
+        console.warn('Không thể lưu progress:', e);
+    }
+}
+
+function loadProgress() {
+    try {
+        const saved = localStorage.getItem('hskProgress');
+        if (saved) {
+            const { level, lesson, tab } = JSON.parse(saved);
+            setTimeout(() => {
+                const btn = document.querySelector(`.level-btn.${level}`);
+                if (btn) switchLevel(level, btn);
+                showLesson(level, lesson, tab);
+            }, 200);
+        }
+    } catch (e) {
+        console.warn('Không thể đọc progress:', e);
+    }
+}
+
+// ===== JS: UNIVERSAL SEARCH =====
+function universalSearch() {
+    let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
+    let dropdown = document.getElementById('searchDropdown');
+    if (!dropdown) {
+        dropdown = document.createElement('div');
+        dropdown.id = 'searchDropdown';
+        dropdown.className = 'search-results-dropdown';
+        document.querySelector('.global-search-box').appendChild(dropdown);
+    }
+    if (query === '') {
+        dropdown.style.display = 'none';
+        return;
+    }
+    dropdown.innerHTML = '';
+    let resultsMap = new Set();
+    hskLevels.forEach(levelId => {
+        const levelData = hskData[levelId];
+        if (!levelData) return;
+        levelData.lessons.forEach((lesson) => {
+            lesson.tabs.forEach((tab) => {
+                let content = JSON.stringify(tab).toLowerCase();
+                if (content.includes(query)) {
+                    const key = `${levelId}-${lesson.id}-${tab.id}`;
+                    if (!resultsMap.has(key)) {
+                        resultsMap.add(key);
+                        const item = document.createElement('div');
+                        item.className = 'search-item-result';
+                        const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
+                        item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
+                            <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>`;
+                        item.onclick = function () {
+                            const btn = document.querySelector(`.level-btn.${levelId}`);
+                            if (btn) switchLevel(levelId, btn);
+                            showLesson(levelId, lesson.id, tab.id);
+                            dropdown.style.display = 'none';
+                            document.getElementById('globalGrammarSearch').value = '';
+                        };
+                        dropdown.appendChild(item);
+                    }
                 }
-            } catch (e) {
-                console.warn('Không thể đọc progress:', e);
-            }
-        }
+            });
+        });
+    });
+    dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
+    if (resultsMap.size === 0) dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
+}
 
-        // ===== SEARCH =====
-        function universalSearch() {
-            let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
-            let dropdown = document.getElementById('searchDropdown');
-            if (!dropdown) {
-                dropdown = document.createElement('div');
-                dropdown.id = 'searchDropdown';
-                dropdown.className = 'search-results-dropdown';
-                document.querySelector('.global-search-box').appendChild(dropdown);
-            }
-            if (query === '') {
-                dropdown.style.display = 'none';
-                return;
-            }
-            dropdown.innerHTML = '';
-            let resultsMap = new Set();
-            hskLevels.forEach(levelId => {
-                const levelData = hskData[levelId];
-                if (!levelData) return;
-                levelData.lessons.forEach((lesson) => {
-                    lesson.tabs.forEach((tab) => {
-                        let content = JSON.stringify(tab).toLowerCase();
-                        if (content.includes(query)) {
-                            const key = `${levelId}-${lesson.id}-${tab.id}`;
-                            if (!resultsMap.has(key)) {
-                                resultsMap.add(key);
-                                const item = document.createElement('div');
-                                item.className = 'search-item-result';
-                                const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
-                                item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
-                                    <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>`;
-                                item.onclick = function () {
-                                    const btn = document.querySelector(`.level-btn.${levelId}`);
-                                    if (btn) switchLevel(levelId, btn);
-                                    showLesson(levelId, lesson.id, tab.id);
-                                    dropdown.style.display = 'none';
-                                    document.getElementById('globalGrammarSearch').value = '';
-                                };
-                                dropdown.appendChild(item);
+// ===== JS: AUDIO PLAYBACK =====
+function playAudio(text, event) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'zh-CN';
+        window.speechSynthesis.speak(utterance);
+    }
+}
+
+// ===== JS: TOGGLE PINYIN & NGHIA =====
+function togglePinyinForThis(event) {
+    event.stopPropagation();
+    const container = event.currentTarget.closest('.text-group');
+    const pyElement = container.querySelector('.py');
+    const btn = event.currentTarget;
+    if (pyElement.style.display === 'none' || pyElement.style.display === '') {
+        pyElement.style.display = 'block';
+        btn.textContent = 'Ẩn phiên âm';
+        btn.style.background = '#f44336';
+    } else {
+        pyElement.style.display = 'none';
+        btn.textContent = 'Phiên âm';
+        btn.style.background = '#4caf50';
+    }
+}
+
+function toggleNghiaForThis(event) {
+    event.stopPropagation();
+    const container = event.currentTarget.closest('.text-group');
+    const viElement = container.querySelector('.vi');
+    const btn = event.currentTarget;
+    if (viElement.style.display === 'none' || viElement.style.display === '') {
+        viElement.style.display = 'block';
+        btn.textContent = 'Ẩn nghĩa';
+        btn.style.background = '#f44336';
+    } else {
+        viElement.style.display = 'none';
+        btn.textContent = 'Nghĩa';
+        btn.style.background = '#ff9800';
+    }
+}
+
+// ===== JS: STREAK SYSTEM =====
+function updateStreak() {
+    const today = new Date().toDateString();
+    const streakData = JSON.parse(localStorage.getItem('streakData') || '{"days":0,"lastDate":""}');
+    
+    if (streakData.lastDate !== today) {
+        const yesterday = new Date(Date.now() - 86400000).toDateString();
+        if (streakData.lastDate === yesterday) {
+            streakData.days++;
+        } else if (streakData.lastDate !== today) {
+            streakData.days = 1;
+        }
+        streakData.lastDate = today;
+        localStorage.setItem('streakData', JSON.stringify(streakData));
+    }
+    
+    document.getElementById('streakDays').textContent = streakData.days;
+    updateStreakEmoji(streakData.days);
+}
+
+function updateStreakEmoji(days) {
+    const badge = document.getElementById('streakBadge');
+    const fireSpan = badge.querySelector('.fire');
+    if (days >= 30) {
+        fireSpan.textContent = '🔥🔥🔥';
+        badge.style.background = 'linear-gradient(135deg, #ff6b6b, #ee5a24)';
+    } else if (days >= 14) {
+        fireSpan.textContent = '🔥🔥';
+        badge.style.background = 'linear-gradient(135deg, #ff9a76, #f0932b)';
+    } else if (days >= 7) {
+        fireSpan.textContent = '🔥';
+        badge.style.background = 'linear-gradient(135deg, #ffd93d, #f0932b)';
+    } else if (days >= 3) {
+        fireSpan.textContent = '🔥';
+        badge.style.background = 'linear-gradient(135deg, #ffd93d, #f6b93b)';
+    }
+}
+
+function showStreakInfo() {
+    const streakData = JSON.parse(localStorage.getItem('streakData') || '{"days":0,"lastDate":""}');
+    const days = streakData.days;
+    let msg = `🔥 <b>${days} ngày</b> học liên tục!\n\n`;
+    
+    if (days === 0) {
+        msg += 'Hãy học một bài ngay hôm nay để bắt đầu chuỗi! 💪';
+    } else if (days >= 30) {
+        msg += '🚀 Bạn thật tuyệt vời! 30 ngày kiên trì! 🌟';
+    } else if (days >= 14) {
+        msg += '💪 Cố lên! Bạn đang đi đúng hướng!';
+    } else if (days >= 7) {
+        msg += '🔥 7 ngày liên tục! Đừng bỏ cuộc nhé!';
+    } else if (days >= 3) {
+        msg += '💪 3 ngày rồi! Giữ vững phong độ!';
+    } else {
+        msg += '🌈 Học hôm nay để duy trì streak!';
+    }
+    
+    alert(msg);
+}
+
+// ===== JS: PROGRESS TRACKING =====
+function updateProgress() {
+    const progress = JSON.parse(localStorage.getItem('lessonProgress') || '{}');
+    let total = 0, completed = 0;
+    
+    hskLevels.forEach(level => {
+        const levelData = hskData[level];
+        if (levelData && levelData.lessons) {
+            levelData.lessons.forEach(lesson => {
+                total++;
+                const key = `${level}-${lesson.id}`;
+                if (progress[key]) completed++;
+            });
+        }
+    });
+    
+    const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+    document.getElementById('progressText').textContent = `${completed}/${total}`;
+    document.getElementById('progressPercent').textContent = `${pct}%`;
+    document.getElementById('progressFill').style.width = `${pct}%`;
+}
+
+function updateMenuProgress() {
+    const progress = JSON.parse(localStorage.getItem('lessonProgress') || '{}');
+    document.querySelectorAll('.menu button').forEach(btn => {
+        const text = btn.textContent;
+        const match = text.match(/📖\s*(.+?)(?:\s*[✅]?)$/);
+        if (match) {
+            const title = match[1].trim();
+            hskLevels.forEach(level => {
+                const levelData = hskData[level];
+                if (levelData && levelData.lessons) {
+                    levelData.lessons.forEach(lesson => {
+                        if (lesson.title === title || text.includes(lesson.title)) {
+                            const key = `${level}-${lesson.id}`;
+                            if (progress[key]) {
+                                if (!btn.textContent.includes('✅')) {
+                                    btn.textContent += ' ✅';
+                                }
+                            } else {
+                                btn.textContent = btn.textContent.replace(' ✅', '');
                             }
                         }
                     });
-                });
+                }
             });
-            dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
-            if (resultsMap.size === 0) dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
         }
+    });
+}
 
-        // ===== AUDIO =====
-        function playAudio(text, event) {
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'zh-CN';
-                window.speechSynthesis.speak(utterance);
-            }
-        }
-
-        // ===== TỰ ĐÓNG POPUP SEARCH =====
-        document.addEventListener('click', function (e) {
-            const searchBox = document.querySelector('.global-search-box');
-            const dropdown = document.getElementById('searchDropdown');
-            if (dropdown && searchBox && !searchBox.contains(e.target)) {
-                dropdown.style.display = 'none';
-            }
-        });
-
-        // ===== MỞ/ĐÓNG TOOLBAR =====
-        let toolbarVisible = false;
-
-        function toggleToolbar() {
-            const toolbar = document.getElementById('highlightToolbar');
-            const btn = document.getElementById('toggleToolbarBtn');
-            toolbarVisible = !toolbarVisible;
-            if (toolbarVisible) {
-                toolbar.style.display = 'flex';
-                btn.textContent = '✖';
-                btn.style.background = '#f44336';
-                btn.style.transform = 'rotate(90deg)';
-            } else {
-                toolbar.style.display = 'none';
-                btn.textContent = '✏️';
-                btn.style.background = '#4caf50';
-                btn.style.transform = 'rotate(0deg)';
-            }
-        }
-
-        // ===== BẤM NÚT "PHIÊN ÂM" =====
-        function togglePinyinForThis(event) {
-            event.stopPropagation();
-            const container = event.currentTarget.closest('.text-group');
-            const pyElement = container.querySelector('.py');
-            const btn = event.currentTarget;
-            if (pyElement.style.display === 'none' || pyElement.style.display === '') {
-                pyElement.style.display = 'block';
-                btn.textContent = 'Ẩn phiên âm';
-                btn.style.background = '#f44336';
-            } else {
-                pyElement.style.display = 'none';
-                btn.textContent = 'Phiên âm';
-                btn.style.background = '#4caf50';
-            }
-        }
-
-        // ===== BẤM NÚT "NGHĨA" =====
-        function toggleNghiaForThis(event) {
-            event.stopPropagation();
-            const container = event.currentTarget.closest('.text-group');
-            const viElement = container.querySelector('.vi');
-            const btn = event.currentTarget;
-            if (viElement.style.display === 'none' || viElement.style.display === '') {
-                viElement.style.display = 'block';
-                btn.textContent = 'Ẩn nghĩa';
-                btn.style.background = '#f44336';
-            } else {
-                viElement.style.display = 'none';
-                btn.textContent = 'Nghĩa';
-                btn.style.background = '#ff9800';
-            }
-        }
-
-// ==============================================
-// HIGHLIGHT (ĐƠN GIẢN - CHỈ XÓA LẺ)
-// ==============================================
-let highlightMode = false;
-let currentHighlightElement = null;
-const highlightColor = '#ffe0b2';
-
+// ===== JS: HIGHLIGHT SYSTEM =====
 function toggleHighlightMode() {
     highlightMode = !highlightMode;
     const btn = document.getElementById('highlightToggle');
@@ -2659,7 +2717,6 @@ function loadHighlights() {
     } catch (e) { console.log('Lỗi load highlight:', e); }
 }
 
-// ===== QUẢN LÝ HIGHLIGHT LẺ =====
 document.addEventListener('click', function(e) {
     const target = e.target.closest('.highlighted');
     const menu = document.getElementById('highlightMenu');
@@ -2705,42 +2762,205 @@ function deleteSingleHighlight() {
         currentHighlightElement = null;
     }
 }
-        // ===== DOM READY =====
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.submenu a').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const onclickAttr = this.getAttribute('onclick');
-                    if (onclickAttr) {
-                        const match = onclickAttr.match(/switchTab\('([^']+)',(\d+),'([^']+)'\)/);
-                        if (match) {
-                            const level = match[1], lessonId = parseInt(match[2]), tabId = match[3];
-                            const btn = document.querySelector(`.level-btn.${level}`);
-                            if (btn) switchLevel(level, btn);
-                            showLesson(level, lessonId);
-                            switchTab(level, lessonId, tabId);
-                        }
+
+// ===== JS: TOOLBAR =====
+function toggleToolbar() {
+    const toolbar = document.getElementById('highlightToolbar');
+    const btn = document.getElementById('toggleToolbarBtn');
+    toolbarVisible = !toolbarVisible;
+    if (toolbarVisible) {
+        toolbar.style.display = 'flex';
+        btn.textContent = '✖';
+        btn.style.background = '#f44336';
+        btn.style.transform = 'rotate(90deg)';
+    } else {
+        toolbar.style.display = 'none';
+        btn.textContent = '✏️';
+        btn.style.background = '#4caf50';
+        btn.style.transform = 'rotate(0deg)';
+    }
+}
+
+// ===== JS: DARK MODE =====
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const btn = document.getElementById('darkModeBtn');
+    if (document.body.classList.contains('dark-mode')) {
+        btn.textContent = '☀️';
+        btn.style.background = '#ff9800';
+        localStorage.setItem('darkMode', 'true');
+    } else {
+        btn.textContent = '🌙';
+        btn.style.background = '#333';
+        localStorage.setItem('darkMode', 'false');
+    }
+}
+
+try {
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('darkModeBtn').textContent = '☀️';
+        document.getElementById('darkModeBtn').style.background = '#ff9800';
+    }
+} catch (e) {}
+
+// ===== JS: FLASHCARD SYSTEM =====
+function startFlashcard() {
+    const words = [];
+    const levelData = hskData[currentLevel];
+    if (levelData && levelData.lessons) {
+        levelData.lessons.forEach(lesson => {
+            if (lesson.tabs) {
+                lesson.tabs.forEach(tab => {
+                    if (tab.examples) {
+                        tab.examples.forEach(ex => {
+                            words.push({
+                                cn: ex.cn,
+                                py: ex.py || '',
+                                vi: ex.vi || ''
+                            });
+                        });
                     }
                 });
-            });
-
-            document.addEventListener('keydown', function (e) {
-                if ((e.ctrlKey || e.metaKey) && ['1', '2', '3'].includes(e.key)) {
-                    e.preventDefault();
-                    const level = 'hsk' + e.key;
-                    const btn = document.querySelector('.level-btn.' + level);
-                    if (btn) switchLevel(level, btn);
-                }
-            });
-
-            setTimeout(() => {
-                loadData();
-                loadHighlights();
-            }, 100);
+            }
         });
+    }
+    
+    if (words.length === 0) {
+        alert('Không có từ vựng để ôn tập!');
+        return;
+    }
+    
+    flashcardData = words;
+    flashcardIndex = 0;
+    flashcardShowing = false;
+    document.getElementById('flashcardModal').classList.add('active');
+    showFlashcard();
+}
+
+function showFlashcard() {
+    const data = flashcardData[flashcardIndex];
+    if (!data) return;
+    
+    const face = document.getElementById('flashcardFace');
+    const count = document.getElementById('flashcardCount');
+    
+    count.textContent = `${flashcardIndex + 1}/${flashcardData.length}`;
+    face.innerHTML = `<span class="cn">${data.cn}</span>`;
+    flashcardShowing = false;
+}
+
+function flashcardShowAnswer() {
+    const data = flashcardData[flashcardIndex];
+    if (!data) return;
+    
+    const face = document.getElementById('flashcardFace');
+    face.innerHTML = `
+        <div class="cn" style="font-size:28px;">${data.cn}</div>
+        <div style="font-size:16px;color:#388e3c;margin-top:5px;">${data.py}</div>
+        <div style="font-size:20px;color:#64748b;margin-top:5px;">${data.vi}</div>
+    `;
+    flashcardShowing = true;
+}
+
+function flashcardNext() {
+    if (flashcardIndex < flashcardData.length - 1) {
+        flashcardIndex++;
+        showFlashcard();
+    } else {
+        alert('🎉 Đã học xong!');
+        closeFlashcard();
+    }
+}
+
+function flashcardPrev() {
+    if (flashcardIndex > 0) {
+        flashcardIndex--;
+        showFlashcard();
+    }
+}
+
+function closeFlashcard() {
+    document.getElementById('flashcardModal').classList.remove('active');
+}
+
+// ===== JS: QUICK TRANSLATE POPUP =====
+let popupTimeout = null;
+
+document.addEventListener('dblclick', function(e) {
+    const selection = window.getSelection().toString().trim();
+    if (selection.length > 0 && selection.length < 20) {
+        const isChinese = /[\u4e00-\u9fff]/.test(selection);
+        if (isChinese) {
+            showTranslatePopup(e.clientX, e.clientY, selection);
+        }
+    }
+});
+
+function showTranslatePopup(x, y, text) {
+    const popup = document.getElementById('translatePopup');
+    document.getElementById('popupWord').textContent = text;
+    document.getElementById('popupPinyin').textContent = 'Đang tra...';
+    document.getElementById('popupMeaning').textContent = '⏳';
+    
+    popup.style.left = Math.min(x + 10, window.innerWidth - 320) + 'px';
+    popup.style.top = Math.min(y - 20, window.innerHeight - 150) + 'px';
+    popup.style.display = 'block';
+    
+    if (popupTimeout) clearTimeout(popupTimeout);
+    
+    fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=zh|vi`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.responseData && data.responseData.translatedText) {
+                document.getElementById('popupMeaning').textContent = data.responseData.translatedText;
+                document.getElementById('popupPinyin').textContent = '🔊 ' + text;
+            } else {
+                document.getElementById('popupMeaning').textContent = 'Không tìm thấy';
+            }
+        })
+        .catch(() => {
+            document.getElementById('popupMeaning').textContent = 'Lỗi tra từ';
+        });
+    
+    popupTimeout = setTimeout(() => {
+        popup.style.display = 'none';
+    }, 5000);
+}
+
+function closeTranslatePopup() {
+    document.getElementById('translatePopup').style.display = 'none';
+    if (popupTimeout) clearTimeout(popupTimeout);
+}
+
+document.addEventListener('click', function(e) {
+    const popup = document.getElementById('translatePopup');
+    if (popup.style.display === 'block' && !popup.contains(e.target)) {
+        popup.style.display = 'none';
+        if (popupTimeout) clearTimeout(popupTimeout);
+    }
+});
+
+// ===== JS: SEARCH DROPDOWN CLOSE =====
+document.addEventListener('click', function (e) {
+    const searchBox = document.querySelector('.global-search-box');
+    const dropdown = document.getElementById('searchDropdown');
+    if (dropdown && searchBox && !searchBox.contains(e.target)) {
+        dropdown.style.display = 'none';
+    }
+});
+
+// ===== JS: DOM READY & INIT =====
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(() => {
+        loadData();
+        loadHighlights();
+        updateStreak();
+    }, 100);
+});
     </script>
 
-    <!-- ===== FIREBASE ===== -->
+    //========== JAVASCRIPT: FIREBASE AUTHENTICATION ==========//
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
@@ -2799,4 +3019,5 @@ function deleteSingleHighlight() {
         });
       </script>
 </body>
+
 </html>
