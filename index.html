@@ -31,8 +31,8 @@
     --pink-500: #F8BBD0;     /* Tím pastel - MÀU CHÍNH */
     --pink-600: #C084FC;     
     --pink-700: #F7A1A1;     
-    --shadow-sm: 0 2px 12px rgba(212, 165, 255, 0.15);
-    --shadow-md: 0 8px 30px rgba(212, 165, 255, 0.2);
+   --shadow-sm: 0 2px 12px rgba(248, 187, 208, 0.15); /* ← SỬA THÀNH rgba(248, 187, 208, ...) */
+    --shadow-md: 0 8px 30px rgba(248, 187, 208, 0.2);
 }
 
         /* ===== LOGIN ===== */
@@ -97,17 +97,17 @@
         }
         .lesson-item:hover {
             background: #fdf2f8;
-            color: #be185d;
+            color: #F7A1A1;
         }
         .lesson-item.active {
             background: #fdf2f8;
-            color: #be185d;
+            color: #F7A1A1;
             font-weight: 600;
             border-left-color: #ec4899;
         }
         .lesson-item .lesson-num {
             background: #fce7f3;
-            color: #be185d;
+            color: #F7A1A1;
             font-size: 10px;
             font-weight: 700;
             padding: 2px 8px;
@@ -116,7 +116,7 @@
             text-align: center;
         }
         .lesson-item.active .lesson-num {
-            background: #ec4899;
+            background: #F8BBD0;
             color: white;
         }
         .lesson-item-tooltip {
@@ -258,7 +258,9 @@
             transition: all 0.3s ease;
         }
         .highlight-toolbar button:hover { transform: scale(1.05); }
-
+#highlightToggle {
+    background: #F8BBD0; /* ← THÊM DÒNG NÀY */
+}
         #toggleToolbarBtn {
             position: fixed;
             bottom: 30px;
@@ -737,7 +739,7 @@ background: white;
         }
         .back-home:hover {
             background: #fce7f3;
-            color: #be185d;
+            color: #F7A1A1;
         }
 
         /* ===== LESSON ===== */
@@ -824,7 +826,7 @@ background: white;
         }
         .tab-btn:hover {
             background: #fdf2f8;
-            color: #be185d;
+            color: #F7A1A1;
         }
         .tab-btn.active {
             background: #FFF5FF;
@@ -862,7 +864,7 @@ background: white;
             margin-bottom: 20px;
         }
         .grammar h3 {
-            color: #be185d;
+            color: #F7A1A1;
             font-size: 17px;
             margin-bottom: 12px;
         }
@@ -877,7 +879,7 @@ background: white;
         }
         .subcard .label {
             font-weight: 600;
-            color: #db2777;
+            color: #F7A1A1;
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -895,7 +897,7 @@ background: #FFFAFC;
             line-height: 1.8;
         }
         .example-label {
-            color: #5d4037;
+            color: #F7A1A1;
             font-weight: 600;
             display: inline-block;
             margin-right: 4px;
@@ -1657,7 +1659,7 @@ background: #FFFAFC;
                 lessonItem.className = 'lesson-item' + (index === 0 ? ' active' : '');
                 lessonItem.style.cssText = `
                     padding:10px 20px;cursor:pointer;transition:all 0.3s ease;
-                    font-size:14px;color:#4a5568;border-left:3px solid transparent;
+                    font-size:14px;color:#4a5568;border-left:3px solid transparent;    border-bottom:none; /* ← THÊM DÒNG NÀY */
                     display:flex;align-items:center;gap:8px;
                 `;
                 if (index === 0) {
