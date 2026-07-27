@@ -1865,10 +1865,49 @@ function createHSKWrapper(levelId, levelData) {
                 const exDiv = document.createElement('div');
                 exDiv.className = 'exercise-item';
 
-                const qDiv = document.createElement('div');
-                qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-                qDiv.textContent = `${idx + 1}. ${ex.question}`;
-                exDiv.appendChild(qDiv);
+               // Hiển thị câu tiếng Trung (cn)
+if (ex.cn) {
+    const cnDiv = document.createElement('div');
+    cnDiv.style.cssText = 'font-size:22px;font-weight:700;color:#1e293b;font-family:"Kaiti","SimSun",sans-serif;margin-bottom:4px;';
+    
+    // Nút hiện phiên âm
+    const pyBtn = document.createElement('button');
+    pyBtn.textContent = 'Phiên âm';
+    pyBtn.style.cssText = 'padding:2px 12px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;margin-left:10px;';
+    pyBtn.onclick = function(e) {
+        e.stopPropagation();
+        const pySpan = this.parentElement.querySelector('.ex-py');
+        if (pySpan.style.display === 'none') {
+            pySpan.style.display = 'block';
+            this.textContent = 'Ẩn phiên âm';
+            this.style.background = '#f44336';
+        } else {
+            pySpan.style.display = 'none';
+            this.textContent = 'Phiên âm';
+            this.style.background = '#4caf50';
+        }
+    };
+    
+    const cnText = document.createElement('span');
+    cnText.textContent = ex.cn;
+    cnDiv.appendChild(cnText);
+    cnDiv.appendChild(pyBtn);
+    exDiv.appendChild(cnDiv);
+    
+    // Phiên âm (ẩn ban đầu)
+    const pySpan = document.createElement('div');
+    pySpan.className = 'ex-py';
+    pySpan.style.cssText = 'display:none;font-size:14px;color:#388e3c;margin:2px 0;';
+    pySpan.textContent = ex.py || '';
+    exDiv.appendChild(pySpan);
+    
+            } else {
+    // Nếu không có cn, hiển thị câu hỏi bình thường
+    const qDiv = document.createElement('div');
+    qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+    qDiv.textContent = `${idx + 1}. ${ex.question}`;
+    exDiv.appendChild(qDiv);
+}
 
                 const optionsDiv = document.createElement('div');
                 optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
