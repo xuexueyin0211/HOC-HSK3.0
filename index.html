@@ -1328,7 +1328,8 @@
         let flashcardShowing = false;
         let undefinedWords = [];
         let hskData = {};
-
+        let hskLevels = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6']; // ← Thêm dòng này
+        
         // ================================================================
         // DOM REFS
         // ================================================================
@@ -1870,9 +1871,10 @@ function nextTab(hskLevel, lessonNum) {
     });
 
     if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
+        // Chuyển sang tab tiếp theo
         const nextTabBtn = tabs[activeIndex + 1];
         let tabId = (activeIndex + 2).toString();
-
+        
         const onclickAttr = nextTabBtn.getAttribute('onclick');
         if (onclickAttr) {
             const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
@@ -1880,41 +1882,23 @@ function nextTab(hskLevel, lessonNum) {
                 tabId = match[1].trim();
             }
         }
-
-        switchTab(hskLevel, lessonNum, tabId);
-        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    } else {
-        const lessons = hskData[hskLevel].lessons;
-        const totalLessons = lessons.length;
-        const nextLessonNum = lessonNum + 1;
         
-        if (nextLessonNum <= totalLessons) {
-            const nextLessonEl = document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`);
-            if (nextLessonEl) {
-                const firstTab = nextLessonEl.querySelector('.tab-btn');
-                let firstTabId = '1';
-                if (firstTab) {
-                    const onclickAttr = firstTab.getAttribute('onclick');
-                    if (onclickAttr) {
-                        const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                        if (match && match[1]) {
-                            firstTabId = match[1].trim();
-                        }
-                    }
-                }
-                showLesson(hskLevel, nextLessonNum, firstTabId);
-                nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        } else {
-            const currentLevelIdx = hskLevels.indexOf(hskLevel);
-            if (currentLevelIdx < hskLevels.length - 1) {
-                const nextLevel = hskLevels[currentLevelIdx + 1];
-                const btn = document.querySelector(`.level-btn.${nextLevel}`);
-                if (btn) switchLevel(nextLevel, btn);
-                showLesson(nextLevel, 1, '1');
+        switchTab(hskLevel, lessonNum, tabId);
+    } else {
+        // Nếu ở tab Bài Tập, chuyển sang lesson tiếp theo (nếu có)
+        const data = cachedData[`grammar-${hskLevel}`];
+        if (data && data.lessons) {
+            const nextLessonNum = lessonNum + 1;
+            if (nextLessonNum <= data.lessons.length) {
+                showLesson(hskLevel, nextLessonNum, '1');
             } else {
-                alert("🎉 Bạn đã học xong toàn bộ chương trình!");
+                const currentLevelIdx = hskLevels.indexOf(hskLevel);
+                if (currentLevelIdx < hskLevels.length - 1) {
+                    const nextLevel = hskLevels[currentLevelIdx + 1];
+                    showContent('grammar', nextLevel);
+                } else {
+                    alert("🎉 Bạn đã học xong toàn bộ chương trình!");
+                }
             }
         }
     }
@@ -1932,9 +1916,10 @@ function prevTab(hskLevel, lessonNum) {
     });
 
     if (activeIndex > 0) {
+        // Quay lại tab trước
         const prevTabBtn = tabs[activeIndex - 1];
         let tabId = activeIndex.toString();
-
+        
         const onclickAttr = prevTabBtn.getAttribute('onclick');
         if (onclickAttr) {
             const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
@@ -1942,42 +1927,11 @@ function prevTab(hskLevel, lessonNum) {
                 tabId = match[1].trim();
             }
         }
-
+        
         switchTab(hskLevel, lessonNum, tabId);
-        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
     } else if (lessonNum > 1) {
-        const prevLessonNum = lessonNum - 1;
-        const prevLessonEl = document.getElementById(`lesson-${hskLevel}-${prevLessonNum}`);
-        if (prevLessonEl) {
-            const firstTab = prevLessonEl.querySelector('.tab-btn');
-            let firstTabId = '1';
-            if (firstTab) {
-                const onclickAttr = firstTab.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1]) {
-                        firstTabId = match[1].trim();
-                    }
-                }
-            }
-            showLesson(hskLevel, prevLessonNum, firstTabId);
-            prevLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-    } else {
-        const currentLevelIdx = hskLevels.indexOf(hskLevel);
-        if (currentLevelIdx > 0) {
-            const prevLevel = hskLevels[currentLevelIdx - 1];
-            const btn = document.querySelector(`.level-btn.${prevLevel}`);
-            if (btn) switchLevel(prevLevel, btn);
-            
-            const prevLevelData = hskData[prevLevel];
-            if (prevLevelData && prevLevelData.lessons && prevLevelData.lessons.length > 0) {
-                const lastLessonId = prevLevelData.lessons[prevLevelData.lessons.length - 1].id;
-                showLesson(prevLevel, lastLessonId, '1');
-            }
-        }
+        // Chuyển sang lesson trước
+        showLesson(hskLevel, lessonNum - 1, '1');
     }
 }
         // ================================================================
@@ -2304,7 +2258,22 @@ function prevTab(hskLevel, lessonNum) {
             contentArea.classList.remove('show');
             featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+// ================================================================
+// HELPER FUNCTIONS
+// ================================================================
+function showLesson(level, lessonNum, tabId) {
+    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+    const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
+    if (lessonEl) {
+        lessonEl.classList.add('active');
+        switchTab(level, lessonNum, tabId);
+    }
+}
 
+function switchLevel(level, btn) {
+    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
         // ================================================================
         // EVENT LISTENERS
         // ================================================================
