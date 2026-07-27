@@ -1,9 +1,10 @@
-{
-    "title": "TỔNG HỢP NGỮ PHÁP HSK1",
-    "subtitle": "HỌC TIẾNG TRUNG CÙNG CÔ TUYẾT NGÂN",
-    "badge": "🌟 CHUẨN HSK 3.0",
-    "color": "hsk1",
-    "lessons": [
+    {
+  "badge": "🌟 CHUẨN HSK 3.0",
+  "title": "TỔNG HỢP NGỮ PHÁP HSK1",
+  "subtitle": "HỌC TIẾNG TRUNG CÙNG CÔ TUYẾT NGÂN",
+  "color": "hsk1",
+  "lessons": [
+       "lessons": [
       {
         "id": 1,
         "title": "第1课 AI小语，你好",
