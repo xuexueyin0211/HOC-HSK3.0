@@ -11,7 +11,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Mẫu câu chào hỏi",
+            "title": "Mẫu câu chào hỏi",
             "subcards": [
               {
                 "label": "Cách dùng:",
@@ -42,7 +42,7 @@
           },
           {
             "id": 2,
-            "title": "② Mẫu câu cảm ơn",
+            "title": "Mẫu câu cảm ơn",
             "subcards": [],
             "examples": [
               {
@@ -59,7 +59,7 @@
           },
           {
             "id": 3,
-            "title": "③ Mẫu câu tạm biệt",
+            "title": "Mẫu câu tạm biệt",
             "subcards": [],
             "examples": [
               {
@@ -97,13 +97,13 @@
             "answer": 1
           },
           {
-            "question": "Khi ai đó nói \"谢谢你\", bạn nên đáp lại như thế nào?",
+            "question": "Khi ai đó nói \"谢谢\", bạn nên đáp lại như thế nào?",
             "options": ["再见", "不客气", "你好", "对不起"],
             "answer": 1
           },
           {
             "question": "Cách chào thầy/cô giáo bằng tiếng Trung là gì?",
-            "options": ["学生好", "老师好", "你好", "您好"],
+            "options": ["学生好", "老师好", "你好"],
             "answer": 1
           },
           {
@@ -111,13 +111,8 @@
             "options": ["Zàijiàn", "Xièxie", "Nǐhǎo", "Bú kèqi"],
             "answer": 0
           },
-          {
-            "question": "Để chào nhóm người (các bạn), công thức chào chuẩn là:",
-            "options": ["Tên/Đại từ + 好", "好 + Đại từ", "谢谢 + Đại từ", "再见 + Đại từ"],
-            "answer": 0
-          },
-          {
-            "question": "Từ nào sau đây mang nghĩa là \"Đừng khách sáo / Không có gì\"?",
+           {
+            "question": "Từ nào sau đây mang nghĩa là \"Đừng khách sáo\"?",
             "options": ["不客气", "没关系", "再见", "谢谢"],
             "answer": 0
           }
@@ -129,7 +124,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Trật tự câu cơ bản",
+            "title": "Trật tự câu cơ bản",
             "subcards": [
               {
                 "label": "Cấu trúc:",
@@ -155,7 +150,7 @@
           },
           {
             "id": 2,
-            "title": "② Đại từ nghi vấn 什么",
+            "title": "Đại từ nghi vấn 什么",
             "subcards": [
               {
                 "label": "Cấu trúc:",
@@ -177,7 +172,7 @@
           },
           {
             "id": 3,
-            "title": "③ Mẫu câu xin lỗi",
+            "title": "Mẫu câu xin lỗi",
             "subcards": [],
             "examples": [
               {
@@ -204,12 +199,7 @@
             "options": ["Chủ ngữ + Tân ngữ + Động từ", "Chủ ngữ + Động từ + Tân ngữ", "Động từ + Chủ ngữ + Tân ngữ", "Tân ngữ + Chủ ngữ + Động từ"],
             "answer": 1
           },
-          {
-            "question": "Câu \"Tôi tên là Lý Văn\" viết bằng tiếng Trung là gì?",
-            "options": ["我是李文", "我叫李文", "我的名字李文", "李文叫我"],
-            "answer": 1
-          },
-          {
+                   {
             "question": "Đại từ nghi vấn \"什么\" có nghĩa là gì?",
             "options": ["Ai", "Ở đâu", "Cái gì / Giờ gì", "Tại sao"],
             "answer": 2
@@ -257,7 +247,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Câu chữ 是",
+            "title": "Câu chữ 是",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -287,7 +277,7 @@
           },
           {
             "id": 2,
-            "title": "② Trợ từ kết cấu 的",
+            "title": "Trợ từ kết cấu 的",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -317,7 +307,7 @@
           },
           {
             "id": 3,
-            "title": "③ Trợ từ nghi vấn 吗",
+            "title": "Trợ từ nghi vấn 吗",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -397,7 +387,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Câu chữ 有 (1)",
+            "title": "Câu chữ 有 (1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -423,7 +413,7 @@
           },
           {
             "id": 2,
-            "title": "② Cách biểu đạt số đếm từ 0-99",
+            "title": "Cách biểu đạt số đếm từ 0-99",
             "subcards": [
               {
                 "label": "Cấu trúc:",
@@ -450,7 +440,7 @@
           },
           {
             "id": 3,
-            "title": "③ Trợ từ ngữ khí 呢 (1)",
+            "title": "Trợ từ ngữ khí 呢 (1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -480,7 +470,7 @@
           },
           {
             "id": 4,
-            "title": "④ Lượng từ",
+            "title": "Lượng từ",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -568,7 +558,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Biểu đạt thời gian (1)",
+            "title": "Biểu đạt thời gian (1)",
             "subcards": [
               {
                 "label": "Cấu trúc:",
@@ -594,7 +584,7 @@
           },
           {
             "id": 2,
-            "title": "② Câu vị ngữ danh từ",
+            "title": "Câu vị ngữ danh từ",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -616,7 +606,7 @@
           },
           {
             "id": 3,
-            "title": "③ Động từ năng nguyện 会",
+            "title": "Động từ năng nguyện 会",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -696,7 +686,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Động từ năng nguyện 想",
+            "title": "Động từ năng nguyện 想",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -722,7 +712,7 @@
           },
           {
             "id": 2,
-            "title": "② Câu liên động (1)",
+            "title": "Câu liên động (1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -748,7 +738,7 @@
           },
           {
             "id": 3,
-            "title": "③ Đại từ nghi vấn 怎么",
+            "title": "Đại từ nghi vấn 怎么",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -828,7 +818,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Biểu đạt thời gian (2)",
+            "title": "Biểu đạt thời gian (2)",
             "subcards": [
               {
                 "label": "Cấu trúc:",
@@ -859,7 +849,7 @@
           },
           {
             "id": 2,
-            "title": "② Trợ từ ngữ khí 吧 (1)",
+            "title": "Trợ từ ngữ khí 吧 (1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -881,7 +871,7 @@
           },
           {
             "id": 3,
-            "title": "③ Thứ tự của trạng ngữ thời gian và phó từ",
+            "title": "Thứ tự của trạng ngữ thời gian và phó từ",
             "subcards": [
               {
                 "label": "Lưu ý:",
@@ -903,7 +893,7 @@
           },
           {
             "id": 4,
-            "title": "④ Trợ từ ngữ khí 呢 (2)",
+            "title": "Trợ từ ngữ khí 呢 (2)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -987,7 +977,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Phương vị từ",
+            "title": "Phương vị từ",
             "subcards": [
               {
                 "label": "Giải thích:",
@@ -1022,7 +1012,7 @@
           },
           {
             "id": 2,
-            "title": "② Giới từ 在",
+            "title": "Giới từ 在",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1052,7 +1042,7 @@
           },
           {
             "id": 3,
-            "title": "③ Động từ năng nguyện 能",
+            "title": "Động từ năng nguyện 能",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1136,7 +1126,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Câu tồn hiện (1)",
+            "title": "Câu tồn hiện (1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1171,7 +1161,7 @@
           },
           {
             "id": 2,
-            "title": "② Thứ tự của trạng ngữ thời gian và địa điểm",
+            "title": "Thứ tự của trạng ngữ thời gian và địa điểm",
             "subcards": [
               {
                 "label": "Lưu ý:",
@@ -1198,7 +1188,7 @@
           },
           {
             "id": 3,
-            "title": "③ Biểu thị số thứ tự với 第",
+            "title": "Biểu thị số thứ tự với 第",
             "subcards": [
               {
                 "label": "Cấu trúc:",
@@ -1278,7 +1268,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Cách biểu đạt số tiền",
+            "title": "Cách biểu đạt số tiền",
             "subcards": [
               {
                 "label": "Cấu trúc:",
@@ -1304,7 +1294,7 @@
           },
           {
             "id": 2,
-            "title": "② Câu vị ngữ tính từ",
+            "title": "Câu vị ngữ tính từ",
             "subcards": [
               {
                 "label": "Giải thích:",
@@ -1334,7 +1324,7 @@
           },
           {
             "id": 3,
-            "title": "③ Đại từ nghi vấn 怎么样",
+            "title": "Đại từ nghi vấn 怎么样",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1418,7 +1408,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Câu hỏi chính phản",
+            "title": "Câu hỏi chính phản",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1449,7 +1439,7 @@
           },
           {
             "id": 2,
-            "title": "② Phó từ thời gian 在/正在",
+            "title": "Phó từ thời gian 在/正在",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1479,7 +1469,7 @@
           },
           {
             "id": 3,
-            "title": "③ Động từ năng nguyện 要",
+            "title": "Động từ năng nguyện 要",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1563,7 +1553,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Câu không chủ vị",
+            "title": "Câu không chủ vị",
             "subcards": [
               {
                 "label": "Giải thích:",
@@ -1585,7 +1575,7 @@
           },
           {
             "id": 2,
-            "title": "② Trợ từ ngữ khí 了 (了1)",
+            "title": "Trợ từ ngữ khí 了 (了1)",
             "subcards": [
               {
                 "label": "Giải thích:",
@@ -1611,7 +1601,7 @@
           },
           {
             "id": 3,
-            "title": "③ Mẫu câu cảm thán 太......了",
+            "title": "Mẫu câu cảm thán 太......了",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1695,7 +1685,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Động từ năng nguyện 可以",
+            "title": "Động từ năng nguyện 可以",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1726,7 +1716,7 @@
           },
           {
             "id": 2,
-            "title": "② Cấu trúc V + 一下",
+            "title": "Cấu trúc V + 一下",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1748,7 +1738,7 @@
           },
           {
             "id": 3,
-            "title": "③ Câu hai tân ngữ (1)",
+            "title": "Câu hai tân ngữ (1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1832,7 +1822,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Trợ từ động thái 了 (了2)",
+            "title": "Trợ từ động thái 了 (了2)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1863,7 +1853,7 @@
           },
           {
             "id": 2,
-            "title": "② Động từ ly hợp (1)",
+            "title": "Động từ ly hợp (1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1893,7 +1883,7 @@
           },
           {
             "id": 3,
-            "title": "③ Phó từ phạm vi 都",
+            "title": "Phó từ phạm vi 都",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1977,7 +1967,7 @@
         "tabs": [
           {
             "id": 1,
-            "title": "① Câu ghép liên hợp ......，还/也......",
+            "title": "Câu ghép liên hợp ......，还/也......",
             "subcards": [
               {
                 "label": "Công dụng:",
