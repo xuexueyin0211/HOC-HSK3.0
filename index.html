@@ -1369,15 +1369,19 @@ background: #FFFAFC;
         <!-- ===== TOOLBAR ===== -->
     <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
 
-    <div class="highlight-toolbar" id="highlightToolbar">
-        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;">
-            <button onclick="toggleHighlightMode()" id="highlightToggle" style="padding:4px 10px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Highlight</button>
-            <button onclick="clearAllHighlights()" style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
-            <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
-            <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">Flashcard</button>
-            <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
-        </div>
+   <div class="highlight-toolbar" id="highlightToolbar">
+    <!-- Hàng 1: Highlight + Xóa tất cả -->
+    <div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;">
+        <button onclick="toggleHighlightMode()" id="highlightToggle" style="padding:4px 10px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Highlight</button>
+        <button onclick="clearAllHighlights()" style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
     </div>
+    
+    <!-- Hàng 2: Flashcard + Chưa nắm -->
+    <div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;margin-top:6px;">
+        <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">Flashcard</button>
+        <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
+    </div>
+</div>
 
     <div class="highlight-menu" id="highlightMenu">
         <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
