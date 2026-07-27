@@ -1788,20 +1788,20 @@ sidebar.appendChild(sidebarTitle);
                     lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
                 }
                 lessonItem.innerHTML = `
-                    <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
-                    <span>${lesson.title}</span>
-                    <div class="lesson-item-tooltip">
-                        <div class="tooltip-title">Các phần trong bài</div>
-                        ${lesson.tabs.map((tab, tabIdx) => `
-<div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="${tab.id}">
-${tab.title}
-                            </div>
-                        `).join('')}
-                       <div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="999" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
-                            Bài Tập
-                        </div>
-                    </div>
-                `;
+    <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
+    <span>${lesson.title}</span>
+    <div class="lesson-item-tooltip">
+        <div class="tooltip-title">Các phần trong bài</div>
+        ${lesson.tabs.map((tab, tabIdx) => `
+            <div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="${tab.id}">
+                ${tab.title}
+            </div>
+        `).join('')}
+        <div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="999" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
+            Bài Tập
+        </div>
+    </div>
+`;
                 
                 // Gán data attribute để dễ tìm
                 lessonItem.dataset.level = level;
