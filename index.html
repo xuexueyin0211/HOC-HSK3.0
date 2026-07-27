@@ -33,45 +33,9 @@
             --pink-700: #be185d;
             --shadow-sm: 0 2px 12px rgba(236, 72, 153, 0.08);
             --shadow-md: 0 8px 30px rgba(236, 72, 153, 0.12);
-            --shadow-lg: 0 20px 60px rgba(236, 72, 153, 0.15);
         }
-/* ===== MÀU SẮC THEO HSK ===== */
-/* HSK 1 - Xanh lá */
-.hsk1 .feature-card.active { border-color: #4caf50 !important; background: #e8f5e9 !important; }
-.hsk1 .hsk-item.active { background: #4caf50 !important; border-color: #4caf50 !important; }
-.hsk1 .tab-btn.active { background: #e8f5e9 !important; color: #2e7d32 !important; }
-.hsk1 .tab-btn.active::after { background: #4caf50 !important; }
-.hsk1 .grammar { border-left-color: #4caf50 !important; }
-.hsk1 .subcard { border-left-color: #4caf50 !important; background: #f1f8e9 !important; }
-.hsk1 .subcard .label { color: #2e7d32 !important; }
-.hsk1 .audio-btn { background: #4caf50 !important; }
-.hsk1 .nav button { background: #4caf50 !important; }
-.hsk1 .card h3 { color: #2e7d32 !important; }
 
-/* HSK 2 - Vàng cam */
-.hsk2 .feature-card.active { border-color: #f59e0b !important; background: #fffbeb !important; }
-.hsk2 .hsk-item.active { background: #f59e0b !important; border-color: #f59e0b !important; }
-.hsk2 .tab-btn.active { background: #fef3c7 !important; color: #b45309 !important; }
-.hsk2 .tab-btn.active::after { background: #f59e0b !important; }
-.hsk2 .grammar { border-left-color: #f59e0b !important; }
-.hsk2 .subcard { border-left-color: #f59e0b !important; background: #fffbeb !important; }
-.hsk2 .subcard .label { color: #d97706 !important; }
-.hsk2 .audio-btn { background: #f59e0b !important; }
-.hsk2 .nav button { background: #f59e0b !important; }
-.hsk2 .card h3 { color: #b45309 !important; }
-
-/* HSK 3 - Đỏ hồng */
-.hsk3 .feature-card.active { border-color: #e11d48 !important; background: #fff1f2 !important; }
-.hsk3 .hsk-item.active { background: #e11d48 !important; border-color: #e11d48 !important; }
-.hsk3 .tab-btn.active { background: #ffe4e6 !important; color: #be123c !important; }
-.hsk3 .tab-btn.active::after { background: #e11d48 !important; }
-.hsk3 .grammar { border-left-color: #e11d48 !important; }
-.hsk3 .subcard { border-left-color: #e11d48 !important; background: #fff1f2 !important; }
-.hsk3 .subcard .label { color: #be123c !important; }
-.hsk3 .audio-btn { background: #e11d48 !important; }
-.hsk3 .nav button { background: #e11d48 !important; }
-.hsk3 .card h3 { color: #be123c !important; }
-        /* ===== LOGIN OVERLAY ===== */
+        /* ===== LOGIN ===== */
         #login-overlay {
             display: none;
             position: fixed;
@@ -84,9 +48,7 @@
             justify-content: center;
             align-items: center;
         }
-        #login-overlay.active {
-            display: flex;
-        }
+        #login-overlay.active { display: flex; }
         .login-box {
             background: white;
             padding: 40px;
@@ -96,14 +58,8 @@
             text-align: center;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-        .login-box h2 {
-            color: #be185d;
-            margin-bottom: 10px;
-        }
-        .login-box p {
-            color: #666;
-            margin-bottom: 20px;
-        }
+        .login-box h2 { color: #be185d; margin-bottom: 10px; }
+        .login-box p { color: #666; margin-bottom: 20px; }
         .google-btn {
             display: flex;
             align-items: center;
@@ -123,39 +79,201 @@
             background: #f5f5f5;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-/* Đảm bảo ảnh trong hero-avatar vừa khung */
-.hero-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden; /* Quan trọng: bo tròn ảnh */
-    flex-shrink: 0;
-    background: linear-gradient(135deg, #f472b6, #ec4899);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 30px rgba(236, 72, 153, 0.25);
-    border: 4px solid white;
-}
 
-/* Ảnh bên trong hero-avatar */
-.hero-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cắt ảnh vừa khung, giữ tỷ lệ */
-    display: block;
-}
+        /* ===== HIGHLIGHT ===== */
+        .highlighted {
+            background-color: #ffe0b2 !important;
+            padding: 2px 4px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .highlighted:hover { opacity: 0.8; box-shadow: 0 0 0 2px rgba(0,0,0,0.1); }
+        .highlighted::after {
+            content: '✖';
+            position: absolute;
+            top: -12px;
+            right: -8px;
+            font-size: 10px;
+            color: #f44336;
+            background: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .highlighted:hover::after { display: flex; }
 
-/* Ảnh ở header (đã có sẵn trong code cũ) */
-.avatar {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-    box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
-}
-        /* ===== USER INFO & LOGOUT ===== */
+        .highlight-menu {
+            position: fixed;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            padding: 8px;
+            z-index: 100000;
+            display: none;
+            border: 1px solid #e0e0e0;
+            gap: 6px;
+            flex-wrap: wrap;
+            max-width: 200px;
+        }
+        .highlight-menu .delete-option {
+            padding: 4px 10px;
+            border: none;
+            border-radius: 8px;
+            background: #f44336;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .highlight-menu .delete-option:hover {
+            background: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        .highlight-toolbar {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: white;
+            padding: 12px 16px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            z-index: 99999;
+            border: 1px solid #e0e0e0;
+            display: none;
+            max-width: 340px;
+            flex-wrap: wrap;
+            gap: 4px;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+        .highlight-toolbar>div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+        .highlight-toolbar button {
+            font-size: 11px !important;
+            padding: 4px 10px !important;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .highlight-toolbar button:hover { transform: scale(1.05); }
+
+        #toggleToolbarBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #ec4899;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+            z-index: 100000;
+            transition: all 0.3s ease;
+        }
+        #toggleToolbarBtn:hover { transform: scale(1.1); }
+
+        /* ===== FLASHCARD ===== */
+        .flashcard-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .flashcard-modal.active { display: flex; }
+        .flashcard-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            min-height: 280px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .flashcard-box .card-face {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 20px 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flashcard-box .card-face .cn { font-size: 40px; }
+        .flashcard-box .card-face .vi { font-size: 28px; color: #388e3c; }
+        .flashcard-box .card-count { color: #999; font-size: 13px; margin-top: 10px; }
+        .flashcard-box .flashcard-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .flashcard-box .flashcard-actions button {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .flashcard-box .flashcard-actions .btn-show { background: #4caf50; color: white; }
+        .flashcard-box .flashcard-actions .btn-close { background: #f44336; color: white; }
+        .flashcard-box .flashcard-actions button:hover { transform: scale(1.05); }
+
+        /* ===== STREAK ===== */
+        .streak-badge {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(238, 90, 36, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .streak-badge:hover { transform: scale(1.05); }
+        .streak-badge .fire { font-size: 18px; }
+
+        /* ===== USER INFO ===== */
         .user-info {
             position: fixed;
             top: 60px;
@@ -186,46 +304,36 @@
         /* ===== HEADER ===== */
         .header {
             background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fff1f2 100%);
-            padding: 16px 40px;
+            padding: 12px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid #fbcfe8;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 10px;
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
             background: rgba(255, 249, 249, 0.92);
         }
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-area .avatar {
-            width: 52px;
-            height: 52px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #f472b6, #ec4899);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 22px;
-            font-weight: 700;
-            flex-shrink: 0;
+            object-fit: cover;
+            border: 2px solid white;
             box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
         }
         .logo-area h1 {
             font-family: 'Lexend', sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             color: #be185d;
             line-height: 1.2;
         }
         .logo-area h1 span {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
             color: #db2777;
             display: block;
@@ -233,7 +341,7 @@
         }
         .header-actions {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             align-items: center;
             flex-wrap: wrap;
         }
@@ -241,7 +349,7 @@
             display: flex;
             background: white;
             border-radius: 30px;
-            padding: 4px 4px 4px 18px;
+            padding: 3px 3px 3px 16px;
             border: 1.5px solid #fbcfe8;
             transition: all 0.3s ease;
         }
@@ -253,30 +361,28 @@
             border: none;
             outline: none;
             background: transparent;
-            padding: 8px 0;
-            font-size: 14px;
-            width: 200px;
+            padding: 6px 0;
+            font-size: 13px;
+            width: 160px;
             color: #4a4a4a;
         }
         .search-box button {
             background: #ec4899;
             border: none;
             border-radius: 30px;
-            padding: 8px 18px;
+            padding: 6px 16px;
             color: white;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        .search-box button:hover {
-            background: #db2777;
-        }
+        .search-box button:hover { background: #db2777; }
 
         /* ===== HERO ===== */
         .hero-section {
             background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 40%, #fff1f2 100%);
-            padding: 40px 40px 30px;
+            padding: 30px 40px 20px;
             border-bottom: 1px solid #fbcfe8;
             position: relative;
             overflow: hidden;
@@ -284,9 +390,9 @@
         .hero-section::before {
             content: '学';
             position: absolute;
-            right: -30px;
-            bottom: -40px;
-            font-size: 180px;
+            right: -20px;
+            bottom: -30px;
+            font-size: 150px;
             font-weight: 700;
             color: rgba(236, 72, 153, 0.04);
             font-family: "Noto Sans SC", sans-serif;
@@ -296,7 +402,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            gap: 40px;
+            gap: 30px;
             align-items: center;
             flex-wrap: wrap;
             position: relative;
@@ -304,120 +410,103 @@
         }
         .hero-avatar {
             flex-shrink: 0;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #f472b6, #ec4899);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            color: white;
-            font-weight: 700;
+            overflow: hidden;
             box-shadow: 0 8px 30px rgba(236, 72, 153, 0.25);
             border: 4px solid white;
         }
-        .hero-info {
-            flex: 1;
-            min-width: 280px;
+        .hero-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
+        .hero-info { flex: 1; min-width: 250px; }
         .hero-info .badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(4px);
-            padding: 4px 16px;
+            padding: 3px 14px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             color: #be185d;
             border: 1px solid rgba(236, 72, 153, 0.2);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .hero-info h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 28px;
+            font-size: 24px;
             color: #1e1e2a;
             margin-bottom: 4px;
         }
-        .hero-info h2 .highlight {
-            color: #be185d;
-            font-style: italic;
-        }
-        .hero-info .title-role {
-            font-size: 16px;
-            color: #db2777;
-            font-weight: 600;
-            margin-bottom: 12px;
-            font-family: "Noto Sans SC", sans-serif;
-        }
+        .hero-info h2 .highlight { color: #be185d; font-style: italic; }
         .hero-info .desc {
             color: #4a4a5a;
-            font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 14px;
-            max-width: 600px;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            max-width: 550px;
         }
         .hero-info .achievements {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px 20px;
+            gap: 8px 16px;
         }
         .hero-info .achievement-item {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 12px;
+            gap: 5px;
+            font-size: 11px;
             color: #4a4a5a;
             background: rgba(255, 255, 255, 0.6);
-            padding: 4px 14px 4px 10px;
+            padding: 3px 12px 3px 8px;
             border-radius: 20px;
             border: 1px solid rgba(236, 72, 153, 0.1);
         }
-        .hero-info .achievement-item .icon {
-            font-size: 14px;
-        }
-        .hero-info .achievement-item strong {
-            color: #be185d;
-        }
+        .hero-info .achievement-item .icon { font-size: 13px; }
+        .hero-info .achievement-item strong { color: #be185d; }
 
-        /* ===== FEATURES GRID ===== */
+        /* ===== FEATURES ===== */
         .features-section {
-            padding: 40px 40px 20px;
+            padding: 30px 40px 15px;
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
         }
         .features-section .section-title {
             text-align: center;
-            font-size: 28px;
+            font-size: 24px;
             color: #be185d;
             font-family: 'Lexend', sans-serif;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
         .features-section .section-title small {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             color: #a0526a;
             display: block;
             font-family: "Noto Sans SC", sans-serif;
-            margin-top: 4px;
+            margin-top: 3px;
         }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 18px;
         }
         .feature-card {
             background: white;
-            border-radius: 24px;
-            padding: 32px 28px 28px;
+            border-radius: 20px;
+            padding: 24px 20px 20px;
             border: 1px solid #fce7f3;
             box-shadow: var(--shadow-sm);
             cursor: pointer;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            min-height: 180px;
+            min-height: 150px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -430,17 +519,15 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, #f472b6, #ec4899);
             opacity: 0;
             transition: opacity 0.4s ease;
         }
         .feature-card:hover::before,
-        .feature-card.active::before {
-            opacity: 1;
-        }
+        .feature-card.active::before { opacity: 1; }
         .feature-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-md);
             border-color: #f9a8d4;
         }
@@ -449,29 +536,17 @@
             box-shadow: var(--shadow-md);
             background: #fdf2f8;
         }
-        .feature-card .icon {
-            font-size: 44px;
-            margin-bottom: 14px;
-        }
-        .feature-card h3 {
-            font-size: 20px;
-            color: #1e1e2a;
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
-        .feature-card p {
-            color: #6a5a6a;
-            font-size: 14px;
-            line-height: 1.5;
-        }
+        .feature-card .icon { font-size: 36px; margin-bottom: 10px; }
+        .feature-card h3 { font-size: 17px; color: #1e1e2a; margin-bottom: 4px; font-weight: 700; }
+        .feature-card p { color: #6a5a6a; font-size: 13px; line-height: 1.4; }
         .feature-card .feature-badge {
             position: absolute;
-            top: 14px;
-            right: 14px;
+            top: 10px;
+            right: 10px;
             background: #ec4899;
             color: white;
-            font-size: 10px;
-            padding: 2px 12px;
+            font-size: 9px;
+            padding: 2px 10px;
             border-radius: 12px;
             font-weight: 700;
         }
@@ -480,29 +555,26 @@
         .hsk-nav-wrapper {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px 10px;
+            padding: 0 40px 8px;
             width: 100%;
             display: none;
         }
-        .hsk-nav-wrapper.show {
-            display: block;
-            animation: fadeIn 0.4s ease;
-        }
+        .hsk-nav-wrapper.show { display: block; animation: fadeIn 0.4s ease; }
         .hsk-nav {
             background: #fdf2f8;
-            padding: 12px 20px;
-            border-radius: 16px;
+            padding: 10px 16px;
+            border-radius: 14px;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
             border: 1px solid #fce7f3;
             justify-content: center;
         }
         .hsk-item {
-            padding: 8px 22px;
-            border-radius: 24px;
+            padding: 6px 18px;
+            border-radius: 20px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             color: #a0526a;
             cursor: pointer;
             border: 2px solid transparent;
@@ -521,32 +593,29 @@
             box-shadow: 0 2px 12px rgba(236, 72, 153, 0.3);
         }
 
-        /* ===== CONTENT AREA ===== */
+        /* ===== CONTENT ===== */
         .content-area {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 40px 60px;
+            padding: 16px 40px 40px;
             width: 100%;
             display: none;
         }
-        .content-area.show {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
+        .content-area.show { display: block; animation: fadeIn 0.5s ease; }
 
         .back-home {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             color: #a0526a;
             cursor: pointer;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             transition: all 0.3s ease;
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 20px;
             background: #fdf2f8;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             border: none;
         }
         .back-home:hover {
@@ -554,55 +623,108 @@
             color: #be185d;
         }
 
-        /* ===== LESSON CONTENT ===== */
-        .lesson {
-            display: none;
-            animation: fadeIn 0.4s ease;
-        }
-        .lesson.active {
-            display: block;
+        /* ===== LESSON ===== */
+        .lesson-wrapper {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
         }
 
-        .card {
+        .lesson-sidebar {
+            width: 260px;
+            flex-shrink: 0;
             background: white;
-            padding: 30px;
             border-radius: 16px;
-            margin-bottom: 25px;
-            box-shadow: var(--shadow-sm);
             border: 1px solid #fce7f3;
-            position: relative;
-            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            padding: 12px 0;
+            position: sticky;
+            top: 80px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
         }
-
-        .card h2 {
-            color: #be185d;
-            font-size: 22px;
-            margin-bottom: 15px;
+        .lesson-sidebar .sidebar-title {
+            padding: 8px 20px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid #fce7f3;
+        }
+        .lesson-sidebar .lesson-item {
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: #4a5568;
+            border-left: 3px solid transparent;
             display: flex;
             align-items: center;
             gap: 8px;
         }
+        .lesson-sidebar .lesson-item:hover {
+            background: #fdf2f8;
+            color: #be185d;
+        }
+        .lesson-sidebar .lesson-item.active {
+            background: #fdf2f8;
+            color: #be185d;
+            font-weight: 600;
+            border-left-color: #ec4899;
+        }
+        .lesson-sidebar .lesson-item .lesson-num {
+            background: #fce7f3;
+            color: #be185d;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 10px;
+            min-width: 28px;
+            text-align: center;
+        }
+        .lesson-sidebar .lesson-item.active .lesson-num {
+            background: #ec4899;
+            color: white;
+        }
+
+        .lesson-main { flex: 1; min-width: 0; }
+
+        .lesson {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .lesson.active { display: block; }
+
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #fce7f3;
+        }
 
         .tab-nav {
             display: flex;
-            gap: 5px;
+            gap: 4px;
             margin-bottom: 0;
             background: white;
-            padding: 10px 15px 0 15px;
-            border-radius: 16px 16px 0 0;
+            padding: 8px 12px 0 12px;
+            border-radius: 14px 14px 0 0;
             border: 1px solid #fce7f3;
             border-bottom: none;
             flex-wrap: wrap;
         }
         .tab-btn {
-            padding: 10px 20px;
+            padding: 8px 16px;
             border: none;
             background: transparent;
             color: #64748b;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             cursor: pointer;
-            border-radius: 10px 10px 0 0;
+            border-radius: 8px 8px 0 0;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -619,8 +741,8 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: 10%;
-            width: 80%;
+            left: 15%;
+            width: 70%;
             height: 3px;
             background: #ec4899;
             border-radius: 3px 3px 0 0;
@@ -628,76 +750,70 @@
 
         .tab-content {
             background: white;
-            border-radius: 0 0 16px 16px;
+            border-radius: 0 0 14px 14px;
             border: 1px solid #fce7f3;
-            padding: 20px;
-            margin-bottom: 25px;
+            padding: 16px;
+            margin-bottom: 20px;
         }
         .tab-pane {
             display: none;
             animation: fadeIn 0.3s ease;
         }
-        .tab-pane.active {
-            display: block;
-        }
+        .tab-pane.active { display: block; }
 
         .grammar {
-            border-left: 5px solid #ec4899;
-            padding-left: 20px;
-            margin-bottom: 25px;
+            border-left: 4px solid #ec4899;
+            padding-left: 16px;
+            margin-bottom: 20px;
         }
         .grammar h3 {
             color: #be185d;
-            font-size: 18px;
-            margin-bottom: 15px;
+            font-size: 17px;
+            margin-bottom: 12px;
         }
 
         .subcard {
             background: #fdf2f8;
-            border-left: 5px solid #ec4899;
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin: 16px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .03);
+            border-left: 4px solid #ec4899;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 14px 0;
         }
         .subcard .label {
             font-weight: 600;
             color: #db2777;
-            font-size: 13px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: inline-block;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
-        .subcard p {
-            margin-top: 6px;
-            line-height: 1.6;
-        }
+        .subcard p { margin-top: 4px; line-height: 1.6; font-size: 14px; }
 
         .example {
             background: #fefcf5;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 15px;
-            line-height: 2;
+            padding: 16px;
+            border-radius: 10px;
+            margin-top: 12px;
+            line-height: 1.8;
             border: 1px solid #fce7f3;
         }
         .example-label {
             color: #5d4037;
             font-weight: 600;
             display: inline-block;
-            margin-right: 5px;
-            font-size: 15px;
+            margin-right: 4px;
+            font-size: 14px;
         }
 
         .example-with-audio {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 14px;
+            padding: 8px 12px;
             background: #fafafa;
-            border-radius: 10px;
-            margin: 5px 0;
+            border-radius: 8px;
+            margin: 4px 0;
             border: 1px solid #fce7f3;
             transition: all 0.3s ease;
         }
@@ -705,25 +821,23 @@
             background: #fdf2f8;
             border-color: #ec4899;
         }
-        .example-with-audio .text-group {
-            flex: 1;
-        }
+        .example-with-audio .text-group { flex: 1; }
         .example-with-audio .text-group .cn {
             display: inline-block;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             color: #1e293b;
             font-family: "Kaiti", "SimSun", sans-serif;
         }
         .example-with-audio .text-group .py {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             color: #db2777;
             margin: 2px 0;
         }
         .example-with-audio .text-group .vi {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             color: #64748b;
         }
 
@@ -731,9 +845,9 @@
             background: #ec4899;
             border: none;
             border-radius: 50%;
-            width: 38px;
-            height: 38px;
-            font-size: 16px;
+            width: 34px;
+            height: 34px;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
@@ -748,14 +862,78 @@
             transform: scale(1.1);
         }
 
+        /* ===== EXERCISE ===== */
+        .exercise-container { padding: 4px 0; }
+        .exercise-item {
+            margin-bottom: 16px;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #ec4899;
+            transition: all 0.3s ease;
+        }
+        .exercise-item:hover {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        .exercise-item .exercise-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #1e1e2a;
+        }
+        .exercise-item .exercise-options {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding-left: 8px;
+        }
+        .exercise-item .exercise-options label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+        .exercise-item .exercise-options label:hover {
+            background: #fdf2f8;
+        }
+        .exercise-item .exercise-options input[type="radio"] {
+            accent-color: #ec4899;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+        .exercise-item .exercise-result {
+            margin-top: 10px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 6px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        .exercise-item .exercise-result.correct {
+            border-color: #4caf50;
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .exercise-item .exercise-result.wrong {
+            border-color: #f44336;
+            background: #ffebee;
+            color: #c62828;
+        }
+
         .nav {
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
-            gap: 15px;
+            margin-top: 24px;
+            gap: 12px;
         }
         .nav button {
-            padding: 10px 28px;
+            padding: 8px 24px;
             border: none;
             background: #ec4899;
             color: white;
@@ -764,6 +942,7 @@
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 14px;
         }
         .nav button:hover {
             background: #db2777;
@@ -771,68 +950,91 @@
         }
 
         .cn {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             color: #1e293b;
-            letter-spacing: 0.5px;
             font-family: "Kaiti", "SimSun", sans-serif;
         }
         .py {
             color: #db2777;
-            font-size: 15px;
-            margin: 3px 0;
+            font-size: 14px;
+            margin: 2px 0;
             font-weight: 500;
         }
         .vi {
             color: #64748b;
-            font-size: 15px;
+            font-size: 14px;
         }
 
-        /* ===== VOCAB GRID ===== */
         .vocab-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            gap: 8px;
-            margin: 10px 0;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            gap: 6px;
+            margin: 8px 0;
         }
         .vocab-item {
             background: white;
-            padding: 6px 10px;
+            padding: 4px 8px;
             border-radius: 6px;
             text-align: center;
             border: 1px solid #fce7f3;
         }
-        .vocab-item .cn {
-            font-size: 18px;
-            display: block;
-        }
-        .vocab-item .py {
-            font-size: 11px;
-            color: #db2777;
-        }
+        .vocab-item .cn { font-size: 16px; display: block; }
+        .vocab-item .py { font-size: 10px; color: #db2777; }
 
         /* ===== LOADING ===== */
         #loading {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
         }
         .spinner {
             border: 4px solid #fce7f3;
             border-top: 4px solid #ec4899;
             border-radius: 50%;
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             animation: spin 0.8s linear infinite;
-            margin: 0 auto 16px;
+            margin: 0 auto 14px;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(16px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* ===== HSK COLORS ===== */
+        .hsk1 .feature-card.active { border-color: #4caf50 !important; background: #e8f5e9 !important; }
+        .hsk1 .hsk-item.active { background: #4caf50 !important; border-color: #4caf50 !important; }
+        .hsk1 .tab-btn.active { background: #e8f5e9 !important; color: #2e7d32 !important; }
+        .hsk1 .tab-btn.active::after { background: #4caf50 !important; }
+        .hsk1 .grammar { border-left-color: #4caf50 !important; }
+        .hsk1 .subcard { border-left-color: #4caf50 !important; background: #f1f8e9 !important; }
+        .hsk1 .subcard .label { color: #2e7d32 !important; }
+        .hsk1 .audio-btn { background: #4caf50 !important; }
+        .hsk1 .nav button { background: #4caf50 !important; }
+
+        .hsk2 .feature-card.active { border-color: #f59e0b !important; background: #fffbeb !important; }
+        .hsk2 .hsk-item.active { background: #f59e0b !important; border-color: #f59e0b !important; }
+        .hsk2 .tab-btn.active { background: #fef3c7 !important; color: #b45309 !important; }
+        .hsk2 .tab-btn.active::after { background: #f59e0b !important; }
+        .hsk2 .grammar { border-left-color: #f59e0b !important; }
+        .hsk2 .subcard { border-left-color: #f59e0b !important; background: #fffbeb !important; }
+        .hsk2 .subcard .label { color: #d97706 !important; }
+        .hsk2 .audio-btn { background: #f59e0b !important; }
+        .hsk2 .nav button { background: #f59e0b !important; }
+
+        .hsk3 .feature-card.active { border-color: #e11d48 !important; background: #fff1f2 !important; }
+        .hsk3 .hsk-item.active { background: #e11d48 !important; border-color: #e11d48 !important; }
+        .hsk3 .tab-btn.active { background: #ffe4e6 !important; color: #be123c !important; }
+        .hsk3 .tab-btn.active::after { background: #e11d48 !important; }
+        .hsk3 .grammar { border-left-color: #e11d48 !important; }
+        .hsk3 .subcard { border-left-color: #e11d48 !important; background: #fff1f2 !important; }
+        .hsk3 .subcard .label { color: #be123c !important; }
+        .hsk3 .audio-btn { background: #e11d48 !important; }
+        .hsk3 .nav button { background: #e11d48 !important; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
@@ -840,29 +1042,53 @@
             .hero-info .desc { margin: 0 auto; }
             .hero-info .achievements { justify-content: center; }
             .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .lesson-wrapper { flex-direction: column; }
+            .lesson-sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                max-height: 200px;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 8px;
+                gap: 4px;
+            }
+            .lesson-sidebar .sidebar-title { display: none; }
+            .lesson-sidebar .lesson-item {
+                padding: 6px 14px;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+                font-size: 13px;
+                flex: 0 0 auto;
+            }
+            .lesson-sidebar .lesson-item.active {
+                border-left: none;
+                border-bottom-color: #ec4899;
+            }
+            .lesson-sidebar .lesson-item .lesson-num { display: none; }
         }
         @media (max-width: 768px) {
-            .header { padding: 12px 20px; flex-direction: column; align-items: stretch; }
-            .logo-area h1 { font-size: 17px; }
-            .logo-area h1 span { font-size: 12px; }
-            .search-box input { width: 120px; font-size: 13px; }
-            .hero-section { padding: 24px 20px; }
-            .hero-avatar { width: 110px; height: 110px; font-size: 36px; }
-            .hero-info h2 { font-size: 22px; }
-            .features-section { padding: 24px 16px 10px; }
-            .features-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-            .feature-card { padding: 20px 16px; min-height: 130px; }
-            .feature-card .icon { font-size: 32px; }
-            .feature-card h3 { font-size: 16px; }
-            .content-area { padding: 16px 16px 40px; }
-            .card { padding: 16px; }
-            .tab-btn { padding: 8px 14px; font-size: 13px; }
-            .example-with-audio .text-group .cn { font-size: 18px; }
+            .header { padding: 10px 16px; flex-direction: column; align-items: stretch; }
+            .logo-area h1 { font-size: 15px; }
+            .logo-area h1 span { font-size: 11px; }
+            .search-box input { width: 100px; font-size: 12px; }
+            .hero-section { padding: 20px 16px; }
+            .hero-avatar { width: 90px; height: 90px; }
+            .hero-info h2 { font-size: 20px; }
+            .features-section { padding: 20px 16px 10px; }
+            .features-grid { grid-template-columns: 1fr; gap: 12px; }
+            .feature-card { padding: 16px; min-height: 100px; }
+            .feature-card .icon { font-size: 28px; }
+            .feature-card h3 { font-size: 15px; }
+            .content-area { padding: 12px 16px 30px; }
+            .card { padding: 14px; }
+            .tab-btn { padding: 6px 12px; font-size: 12px; }
+            .example-with-audio .text-group .cn { font-size: 17px; }
             .header-actions { width: 100%; }
             .search-box { flex: 1; }
             .search-box input { width: 100%; }
-            .hsk-nav-wrapper { padding: 0 16px 8px; }
-            .hsk-item { padding: 6px 14px; font-size: 12px; }
+            .hsk-nav-wrapper { padding: 0 16px 6px; }
+            .hsk-item { padding: 5px 12px; font-size: 11px; }
         }
         @media (max-width: 480px) {
             .features-grid { grid-template-columns: 1fr; }
@@ -870,13 +1096,12 @@
             .hero-info .achievement-item { width: 100%; justify-content: center; }
         }
 
-        /* ===== DECORATION ===== */
         .bg-decoration {
             position: fixed;
             top: -200px;
             right: -200px;
-            width: 600px;
-            height: 600px;
+            width: 500px;
+            height: 500px;
             background: radial-gradient(circle, rgba(252, 231, 243, 0.3) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
@@ -885,8 +1110,8 @@
         .bg-decoration-2 {
             bottom: -100px;
             left: -100px;
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
             background: radial-gradient(circle, rgba(255, 241, 242, 0.4) 0%, transparent 70%);
             position: fixed;
             border-radius: 50%;
@@ -900,7 +1125,7 @@
     <div class="bg-decoration"></div>
     <div class="bg-decoration-2"></div>
 
-    <!-- ===== LOGIN OVERLAY ===== -->
+    <!-- ===== LOGIN ===== -->
     <div id="login-overlay" style="display:flex;">
         <div class="login-box">
             <h2>🌸 Học tiếng Trung cùng Cô Tuyết Ngân</h2>
@@ -917,10 +1142,50 @@
         </div>
     </div>
 
+    <!-- ===== STREAK ===== -->
+    <div class="streak-badge" id="streakBadge" onclick="showStreakInfo()">
+        <span class="fire">🔥</span>
+        <span id="streakDays">0</span> ngày liên tục
+    </div>
+
+    <!-- ===== TOOLBAR ===== -->
+    <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
+
+    <div class="highlight-toolbar" id="highlightToolbar">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:100%;justify-content:center;">
+            <button onclick="toggleHighlightMode()" id="highlightToggle" style="padding:4px 10px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Highlight</button>
+            <button onclick="clearAllHighlights()" style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
+            <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
+            <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">Flashcard</button>
+            <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
+        </div>
+    </div>
+
+    <div class="highlight-menu" id="highlightMenu">
+        <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
+    </div>
+
+    <!-- ===== FLASHCARD ===== -->
+    <div class="flashcard-modal" id="flashcardModal">
+        <div class="flashcard-box">
+            <div style="text-align:center;margin-bottom:10px;font-size:13px;color:#666;">Ôn tập lại các ví dụ</div>
+            <div class="card-count" id="flashcardCount">1/10</div>
+            <div class="card-face" id="flashcardFace"><span class="cn">你好</span></div>
+            <div class="flashcard-actions">
+                <button class="btn-show" onclick="flashcardShowAnswer()">Xem nghĩa</button>
+                <button class="btn-close" onclick="closeFlashcard()">Đóng</button>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:15px;justify-content:center;">
+                <button onclick="markAsUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#4caf50;color:white;font-weight:600;cursor:pointer;">✅ Đã nắm được</button>
+                <button onclick="markAsNotUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#ff9800;color:white;font-weight:600;cursor:pointer;">⏳ Chưa nắm được</button>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="logo-area">
-<img src="images/avatar.png" alt="Cô Tuyết Ngân" class="avatar" />
+            <img src="images/avatar.png" alt="Cô Tuyết Ngân" class="avatar" />
             <h1>
                 Học tiếng Trung cùng Cô Tuyết Ngân
                 <span>跟雪银老师学习中文</span>
@@ -928,7 +1193,7 @@
         </div>
         <div class="header-actions">
             <div class="search-box">
-                <input type="text" placeholder="Tìm kiếm..." id="searchInput" />
+                <input type="text" placeholder="Tìm kiếm..." id="globalGrammarSearch" oninput="universalSearch()" />
                 <button id="searchBtn">🔍</button>
             </div>
         </div>
@@ -937,12 +1202,12 @@
     <!-- ===== HERO ===== -->
     <section class="hero-section">
         <div class="container">
-<div class="hero-avatar">
-    <img src="images/avatar.png" alt="Cô Tuyết Ngân" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" />
-</div>
+            <div class="hero-avatar">
+                <img src="images/avatar.png" alt="Cô Tuyết Ngân" />
+            </div>
             <div class="hero-info">
                 <div class="badge">🌟 Người sáng lập</div>
-                <h2>NCS. Đặng Thị Tuyết Ngân</h2>
+                <h2>NCS. <span class="highlight">Đặng Thị Tuyết Ngân</span></h2>
                 <p class="desc">
                     Với niềm đam mê giảng dạy và hơn 4 năm kinh nghiệm, cô Tuyết Ngân đã xây dựng phương pháp học
                     tiếng Trung hiệu quả. Cô hiện đang là <strong>Nghiên cứu sinh Tiến sĩ</strong> tại Đại học Tây Nam (Trùng Khánh, Trung Quốc).
@@ -1000,14 +1265,17 @@
     <!-- ===== HSK NAV ===== -->
     <div class="hsk-nav-wrapper" id="hskNavWrapper">
         <div class="hsk-nav" id="hskNav">
-    <div class="hsk-item active" data-level="hsk1" style="background:#4caf50;color:white;">HSK 1</div>
-    <div class="hsk-item" data-level="hsk2" style="background:#f59e0b;color:white;">HSK 2</div>
-    <div class="hsk-item" data-level="hsk3" style="background:#e11d48;color:white;">HSK 3</div>
-    <div class="hsk-item" data-level="hsk4">HSK 4</div>
-    <div class="hsk-item" data-level="hsk5">HSK 5</div>
-    <div class="hsk-item" data-level="hsk6">HSK 6</div>
-</div>
+            <div class="hsk-item active" data-level="hsk1">HSK 1</div>
+            <div class="hsk-item" data-level="hsk2">HSK 2</div>
+            <div class="hsk-item" data-level="hsk3">HSK 3</div>
+            <div class="hsk-item" data-level="hsk4">HSK 4</div>
+            <div class="hsk-item" data-level="hsk5">HSK 5</div>
+            <div class="hsk-item" data-level="hsk6">HSK 6</div>
+        </div>
     </div>
+
+    <!-- ===== SEARCH DROPDOWN ===== -->
+    <div class="search-results-dropdown" id="searchDropdown"></div>
 
     <!-- ===== CONTENT ===== -->
     <div class="content-area show" id="contentArea">
@@ -1021,9 +1289,9 @@
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer style="text-align: center; padding: 24px 20px 18px; color: #a0526a; border-top: 1px solid #fce7f3; font-size: 13px; background: #fff9f9; margin-top: auto;">
+    <footer style="text-align: center; padding: 20px 20px 14px; color: #a0526a; border-top: 1px solid #fce7f3; font-size: 12px; background: #fff9f9; margin-top: auto;">
         <p style="font-weight: 500;">🌸 Học tiếng Trung cùng Cô Tuyết Ngân - 跟雪银老师学习中文</p>
-        <p style="font-size: 12px; margin-top: 4px; color: #c0a0a0;">
+        <p style="font-size: 11px; margin-top: 4px; color: #c0a0a0;">
             NCS. Đặng Thị Tuyết Ngân - Đại học Tây Nam, Trùng Khánh, Trung Quốc
         </p>
     </footer>
@@ -1033,7 +1301,7 @@
     <!-- ============================================================ -->
     <script>
         // ================================================================
-        // CẤU HÌNH: Đường dẫn JSON theo cấu trúc thư mục mới
+        // CẤU HÌNH
         // ================================================================
         const MODULES = {
             vocab: { label: 'Từ vựng', icon: '📚', path: 'data/vocab/' },
@@ -1052,151 +1320,84 @@
         let currentLesson = 1;
         let currentTab = 1;
         let cachedData = {};
+        let highlightMode = false;
+        let toolbarVisible = false;
+        let currentHighlightElement = null;
+        let flashcardData = [];
+        let flashcardIndex = 0;
+        let flashcardShowing = false;
+        let undefinedWords = [];
+        let hskData = {};
 
         // ================================================================
         // DOM REFS
         // ================================================================
         const featuresGrid = document.getElementById('featuresGrid');
         const hskNavWrapper = document.getElementById('hskNavWrapper');
-        const hskNav = document.getElementById('hskNav');
         const contentArea = document.getElementById('contentArea');
         const contentInner = document.getElementById('contentInner');
         const backHomeBtn = document.getElementById('backHomeBtn');
         const featuresSection = document.getElementById('featuresSection');
 
         // ================================================================
-        // LOAD JSON THEO CẤU TRÚC MỚI
+        // LOAD DATA
         // ================================================================
-        // ================================================================
-// LOAD JSON - HỖ TRỢ CẢ 2 ĐỊNH DẠNG
-// ================================================================
-async function loadModuleData(module, level) {
-    const key = `${module}-${level}`;
-    if (cachedData[key]) return cachedData[key];
+        async function loadModuleData(module, level) {
+            const key = `${module}-${level}`;
+            if (cachedData[key]) return cachedData[key];
 
-    try {
-        const path = MODULES[module].path + level + '.json';
-        const response = await fetch(path);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        
-        // ===== QUAN TRỌNG: Tự động phát hiện cấu trúc =====
-        let innerData = data;
-        
-        // Nếu dữ liệu có key trùng với level (hsk1/hsk2/hsk3) thì lấy bên trong
-        if (data[level]) {
-            innerData = data[level];
-        }
-        // Nếu vẫn không có lessons/items, thử tìm key đầu tiên có lessons/items
-        if (!innerData.lessons && !innerData.items) {
-            const keys = Object.keys(data);
-            for (const k of keys) {
-                if (data[k] && (data[k].lessons || data[k].items)) {
-                    innerData = data[k];
-                    break;
+            try {
+                const path = MODULES[module].path + level + '.json';
+                const response = await fetch(path);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                
+                let innerData = data;
+                if (data[level]) innerData = data[level];
+                if (!innerData.lessons && !innerData.items) {
+                    const keys = Object.keys(data);
+                    for (const k of keys) {
+                        if (data[k] && (data[k].lessons || data[k].items)) {
+                            innerData = data[k];
+                            break;
+                        }
+                    }
                 }
+                
+                if (!innerData.lessons && !innerData.items && !innerData.exercises) {
+                    return getFallbackData(module, level);
+                }
+                
+                cachedData[key] = innerData;
+                return innerData;
+            } catch (error) {
+                return getFallbackData(module, level);
             }
         }
-        
-        // Kiểm tra dữ liệu hợp lệ
-        if (!innerData.lessons && !innerData.items && !innerData.exercises) {
-            console.warn('⚠️ Dữ liệu không có lessons/items/exercises:', innerData);
-            // Trả về fallback để không bị lỗi
-            return getFallbackData(module, level);
-        }
-        
-        cachedData[key] = innerData;
-        console.log(`✅ Đã tải ${key}:`, innerData.title || innerData);
-        return innerData;
-        
-    } catch (error) {
-        console.warn(`⚠️ Không thể tải ${path}:`, error);
-        return getFallbackData(module, level);
-    }
-}
 
-        // ================================================================
-        // FALLBACK DATA (khi chưa có JSON)
-        // ================================================================
         function getFallbackData(module, level) {
             const fallbacks = {
                 grammar: {
                     badge: `📚 ${level.toUpperCase()}`,
                     title: `Ngữ pháp ${level.toUpperCase()}`,
                     subtitle: 'Cấu trúc ngữ pháp quan trọng',
-                    lessons: [
-                        {
-                            id: 1,
-                            title: `Bài 1: Giới thiệu ${level}`,
-                            tabs: [
-                                {
-                                    id: '1',
-                                    title: '① Lý thuyết',
-                                    subcards: [
-                                        { label: '📌 Cấu trúc', text: `Nội dung mẫu cho ${level} - Bài 1` }
-                                    ],
-                                    examples: [
-                                        { cn: '你好', py: 'nǐ hǎo', vi: 'Xin chào' }
-                                    ]
-                                }
-                            ],
-                            exercises: [
-                                { question: 'Câu hỏi mẫu?', options: ['A', 'B', 'C', 'D'], answer: 0 }
-                            ]
-                        }
-                    ]
+                    lessons: [{
+                        id: 1,
+                        title: `Bài 1: Giới thiệu`,
+                        tabs: [{
+                            id: '1',
+                            title: '① Lý thuyết',
+                            subcards: [{ label: '📌 Cấu trúc', text: 'Nội dung mẫu' }],
+                            examples: [{ cn: '你好', py: 'nǐ hǎo', vi: 'Xin chào' }]
+                        }],
+                        exercises: [{ question: 'Câu hỏi mẫu?', options: ['A', 'B', 'C', 'D'], answer: 0 }]
+                    }]
                 },
-                vocab: {
-                    badge: `📚 ${level.toUpperCase()}`,
-                    title: `Từ vựng ${level.toUpperCase()}`,
-                    subtitle: 'Danh sách từ theo chủ đề',
-                    items: [
-                        { icon: '📖', title: 'Chủ đề 1', desc: `Mô tả chủ đề 1 - ${level}`, tag: '10 từ', likes: 20 },
-                        { icon: '📖', title: 'Chủ đề 2', desc: `Mô tả chủ đề 2 - ${level}`, tag: '12 từ', likes: 15 }
-                    ]
-                },
-                hanzi: {
-                    badge: `🀄 ${level.toUpperCase()}`,
-                    title: `Chữ Hán ${level.toUpperCase()}`,
-                    subtitle: 'Luyện viết & nhớ mặt chữ',
-                    items: [
-                        { icon: '✍️', title: `Bộ thủ ${level}`, desc: `Danh sách bộ thủ - ${level}`, tag: '30 bộ',
-                            likes: 8 },
-                        { icon: '📖', title: `Chữ Hán ${level}`, desc: `Danh sách chữ Hán - ${level}`, tag: '150 chữ',
-                            likes: 15 }
-                    ]
-                },
-                practice: {
-                    badge: `📖 ${level.toUpperCase()}`,
-                    title: `Luyện đề ${level.toUpperCase()}`,
-                    subtitle: 'Đề thi thử',
-                    exercises: [
-                        { question: `Câu hỏi 1 - ${level}`, options: ['A', 'B', 'C', 'D'], answer: 0 },
-                        { question: `Câu hỏi 2 - ${level}`, options: ['A', 'B', 'C', 'D'], answer: 1 }
-                    ]
-                },
-                dictation: {
-                    badge: `🎧 ${level.toUpperCase()}`,
-                    title: `Nghe chép ${level.toUpperCase()}`,
-                    subtitle: 'Luyện nghe và viết',
-                    items: [
-                        { icon: '🎵', title: `Bài nghe 1 - ${level}`, desc: 'Luyện nghe và chép chính tả', tag: '2:30',
-                            likes: 12 },
-                        { icon: '🎵', title: `Bài nghe 2 - ${level}`, desc: 'Luyện nghe và chép chính tả', tag: '3:15',
-                            likes: 8 }
-                    ]
-                },
-                shadowing: {
-                    badge: `🗣️ ${level.toUpperCase()}`,
-                    title: `Shadowing ${level.toUpperCase()}`,
-                    subtitle: 'Luyện nói bắt chước',
-                    items: [
-                        { icon: '🗣️', title: `Bài shadowing 1 - ${level}`, desc: 'Luyện nói bắt chước giọng mẫu',
-                            tag: '2:00', likes: 10 },
-                        { icon: '🗣️', title: `Bài shadowing 2 - ${level}`, desc: 'Luyện nói bắt chước giọng mẫu',
-                            tag: '3:00', likes: 7 }
-                    ]
-                }
+                vocab: { badge: `📚 ${level.toUpperCase()}`, title: `Từ vựng`, subtitle: 'Danh sách từ', items: [{ icon: '📖', title: 'Chủ đề 1', desc: 'Mô tả', tag: '10 từ', likes: 20 }] },
+                hanzi: { badge: `🀄 ${level.toUpperCase()}`, title: `Chữ Hán`, subtitle: 'Luyện viết', items: [{ icon: '✍️', title: 'Bộ thủ', desc: 'Mô tả', tag: '30 bộ', likes: 8 }] },
+                practice: { badge: `📖 ${level.toUpperCase()}`, title: `Luyện đề`, subtitle: 'Đề thi thử', exercises: [{ question: 'Câu hỏi 1', options: ['A', 'B', 'C', 'D'], answer: 0 }] },
+                dictation: { badge: `🎧 ${level.toUpperCase()}`, title: `Nghe chép`, subtitle: 'Luyện nghe', items: [{ icon: '🎵', title: 'Bài nghe 1', desc: 'Mô tả', tag: '2:30', likes: 12 }] },
+                shadowing: { badge: `🗣️ ${level.toUpperCase()}`, title: `Shadowing`, subtitle: 'Luyện nói', items: [{ icon: '🗣️', title: 'Bài 1', desc: 'Mô tả', tag: '2:00', likes: 10 }] }
             };
             return fallbacks[module] || { title: 'Dữ liệu', subtitle: '', items: [] };
         }
@@ -1204,404 +1405,336 @@ async function loadModuleData(module, level) {
         // ================================================================
         // SHOW CONTENT
         // ================================================================
-       async function showContent(module, level) {
-    currentModule = module;
-    currentLevel = level;
+        async function showContent(module, level) {
+            currentModule = module;
+            currentLevel = level;
 
-    // Active feature card
-    document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
-    const activeCard = document.querySelector(`.feature-card[data-module="${module}"]`);
-    if (activeCard) activeCard.classList.add('active');
+            document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
+            const activeCard = document.querySelector(`.feature-card[data-module="${module}"]`);
+            if (activeCard) activeCard.classList.add('active');
 
-    // Active HSK
-    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
-    const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
-    if (activeHsk) activeHsk.classList.add('active');
+            document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+            const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
+            if (activeHsk) activeHsk.classList.add('active');
 
-    // ===== THÊM: Cập nhật class cho content area =====
-    contentArea.className = 'content-area show ' + level;
+            contentArea.className = 'content-area show ' + level;
+            hskNavWrapper.classList.add('show');
+            featuresSection.style.display = 'none';
 
-    // Hiển thị
-    hskNavWrapper.classList.add('show');
-    featuresSection.style.display = 'none';
+            contentInner.innerHTML = `
+                <div id="loading">
+                    <div class="spinner"></div>
+                    <p style="color: #a0526a;">Đang tải dữ liệu...</p>
+                </div>
+            `;
 
-    // Load data
-    contentInner.innerHTML = `
-        <div id="loading">
-            <div class="spinner"></div>
-            <p style="color: #a0526a;">Đang tải dữ liệu...</p>
-        </div>
-    `;
-
-    try {
-        const data = await loadModuleData(module, level);
-        renderContent(module, level, data);
-    } catch (error) {
-        contentInner.innerHTML = `
-            <div style="text-align:center;padding:40px;color:#a0526a;">
-                <p style="font-size:24px;">😅</p>
-                <p>Không thể tải dữ liệu. Vui lòng thử lại sau.</p>
-            </div>
-        `;
-    }
-
-    contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
+            try {
+                const data = await loadModuleData(module, level);
+                renderContent(module, level, data);
+            } catch (error) {
+                contentInner.innerHTML = `
+                    <div style="text-align:center;padding:40px;color:#a0526a;">
+                        <p style="font-size:24px;">😅</p>
+                        <p>Không thể tải dữ liệu. Vui lòng thử lại sau.</p>
+                    </div>
+                `;
+            }
+            contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
 
         // ================================================================
         // RENDER CONTENT
         // ================================================================
         function renderContent(module, level, data) {
             contentInner.innerHTML = '';
-
-            // Nếu là grammar -> render lessons
             if (module === 'grammar' && data.lessons) {
                 renderGrammarLessons(level, data);
-                return;
-            }
-
-            // Các module khác (vocab, hanzi, dictation, shadowing)
-            if (data.items) {
+            } else if (data.items) {
                 renderCardItems(module, data);
-                return;
-            }
-
-            // Practice
-            if (data.exercises) {
+            } else if (data.exercises) {
                 renderPractice(data);
-                return;
+            } else {
+                contentInner.innerHTML = `<p style="color:#a0526a;text-align:center;padding:40px;">Chưa có dữ liệu cho phần này.</p>`;
             }
-
-            contentInner.innerHTML = `<p style="color:#a0526a;text-align:center;padding:40px;">Chưa có dữ liệu cho phần này.</p>`;
         }
 
         // ================================================================
-        // RENDER GRAMMAR LESSONS
+        // RENDER GRAMMAR LESSONS (có sidebar)
         // ================================================================
-       function renderGrammarLessons(level, data) {
-    const wrapper = document.createElement('div');
-    wrapper.className = level; // hsk1, hsk2, hsk3
-    
-    // ===== TẠO LAYOUT 2 CỘT =====
-    const layout = document.createElement('div');
-    layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;';
-    
-    // ===== SIDEBAR (thanh bài học bên trái) =====
-    const sidebar = document.createElement('div');
-    sidebar.className = 'lesson-sidebar';
-    sidebar.style.cssText = `
-        width:260px;
-        flex-shrink:0;
-        background:white;
-        border-radius:16px;
-        border:1px solid #fce7f3;
-        box-shadow:var(--shadow-sm);
-        padding:12px 0;
-        position:sticky;
-        top:80px;
-        max-height:calc(100vh - 120px);
-        overflow-y:auto;
-    `;
-    
-    const sidebarTitle = document.createElement('div');
-    sidebarTitle.className = 'sidebar-title';
-    sidebarTitle.style.cssText = 'padding:8px 20px 10px;font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid #fce7f3;';
-    sidebarTitle.textContent = '📖 Danh sách bài học';
-    sidebar.appendChild(sidebarTitle);
-    
-    // ===== MAIN CONTENT =====
-    const mainContent = document.createElement('div');
-    mainContent.style.cssText = 'flex:1;min-width:0;';
-    
-    // Banner
-    const banner = document.createElement('div');
-    banner.style.cssText = `
-        background: linear-gradient(135deg, #fdf2f8, #fce7f3);
-        padding: 20px 30px;
-        border-radius: 16px;
-        margin-bottom: 25px;
-        border: 1px solid #fbcfe8;
-    `;
-    banner.innerHTML = `
-        <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
-        <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
-        <div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>
-    `;
-    mainContent.appendChild(banner);
-    
-    // Lessons container
-    const lessonsContainer = document.createElement('div');
-    
-    // Tạo các lesson
-    data.lessons.forEach((lesson, index) => {
-        // ===== THÊM VÀO SIDEBAR =====
-        const lessonItem = document.createElement('div');
-        lessonItem.className = 'lesson-item' + (index === 0 ? ' active' : '');
-        lessonItem.style.cssText = `
-            padding:10px 20px;
-            cursor:pointer;
-            transition:all 0.3s ease;
-            font-size:14px;
-            color:#4a5568;
-            border-left:3px solid transparent;
-            display:flex;
-            align-items:center;
-            gap:8px;
-        `;
-        if (index === 0) {
-            lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
-        }
-        lessonItem.innerHTML = `
-            <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
-            <span>${lesson.title}</span>
-            <span class="check-mark" style="margin-left:auto;color:#4caf50;font-size:14px;">${index === 0 ? '📖' : ''}</span>
-        `;
-        lessonItem.onclick = () => {
-            // Chuyển đến lesson tương ứng
-            document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.lesson-item').forEach(el => el.classList.remove('active'));
-            
-            const targetLesson = document.getElementById(`lesson-${level}-${lesson.id}`);
-            if (targetLesson) {
-                targetLesson.classList.add('active');
-                targetLesson.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            
-            lessonItem.classList.add('active');
-            lessonItem.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
-            const numSpan = lessonItem.querySelector('.lesson-num');
-            if (numSpan) {
-                numSpan.style.background = '#ec4899';
-                numSpan.style.color = 'white';
-            }
-            const checkSpan = lessonItem.querySelector('.check-mark');
-            if (checkSpan) checkSpan.textContent = '📖';
-            
-            // Cập nhật lại các item khác
-            document.querySelectorAll('.lesson-item').forEach(item => {
-                if (item !== lessonItem) {
-                    item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
-                    const num = item.querySelector('.lesson-num');
-                    if (num) {
-                        num.style.background = '#fce7f3';
-                        num.style.color = '#be185d';
-                    }
-                    const check = item.querySelector('.check-mark');
-                    if (check) check.textContent = '';
+        function renderGrammarLessons(level, data) {
+            const wrapper = document.createElement('div');
+            wrapper.className = level;
+
+            const layout = document.createElement('div');
+            layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;';
+
+            // Sidebar
+            const sidebar = document.createElement('div');
+            sidebar.className = 'lesson-sidebar';
+            sidebar.style.cssText = `
+                width:260px;flex-shrink:0;background:white;border-radius:16px;
+                border:1px solid #fce7f3;box-shadow:var(--shadow-sm);padding:12px 0;
+                position:sticky;top:80px;max-height:calc(100vh - 120px);overflow-y:auto;
+            `;
+            const sidebarTitle = document.createElement('div');
+            sidebarTitle.className = 'sidebar-title';
+            sidebarTitle.textContent = '📖 Danh sách bài học';
+            sidebar.appendChild(sidebarTitle);
+
+            // Main content
+            const mainContent = document.createElement('div');
+            mainContent.style.cssText = 'flex:1;min-width:0;';
+
+            const banner = document.createElement('div');
+            banner.style.cssText = `
+                background: linear-gradient(135deg, #fdf2f8, #fce7f3);
+                padding: 20px 30px; border-radius: 16px; margin-bottom: 25px;
+                border: 1px solid #fbcfe8;
+            `;
+            banner.innerHTML = `
+                <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
+                <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
+                <div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>
+            `;
+            mainContent.appendChild(banner);
+
+            const lessonsContainer = document.createElement('div');
+
+            data.lessons.forEach((lesson, index) => {
+                // Sidebar item
+                const lessonItem = document.createElement('div');
+                lessonItem.className = 'lesson-item' + (index === 0 ? ' active' : '');
+                lessonItem.style.cssText = `
+                    padding:10px 20px;cursor:pointer;transition:all 0.3s ease;
+                    font-size:14px;color:#4a5568;border-left:3px solid transparent;
+                    display:flex;align-items:center;gap:8px;
+                `;
+                if (index === 0) {
+                    lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
                 }
-            });
-        };
-        sidebar.appendChild(lessonItem);
-        
-        // ===== TẠO LESSON =====
-        const lessonDiv = document.createElement('div');
-        lessonDiv.id = `lesson-${level}-${lesson.id}`;
-        lessonDiv.className = 'lesson';
-        if (index === 0) lessonDiv.classList.add('active');
-
-        // Tab nav
-        const tabNav = document.createElement('div');
-        tabNav.className = 'tab-nav';
-
-        lesson.tabs.forEach((tab, tabIndex) => {
-            const btn = document.createElement('button');
-            btn.className = 'tab-btn';
-            if (tabIndex === 0) btn.classList.add('active');
-            btn.textContent = tab.title;
-            btn.onclick = () => switchTab(level, lesson.id, tab.id);
-            tabNav.appendChild(btn);
-        });
-
-        // Bài Tập
-        const exerciseBtn = document.createElement('button');
-        exerciseBtn.className = 'tab-btn';
-        exerciseBtn.textContent = 'Bài Tập';
-        exerciseBtn.onclick = () => switchTab(level, lesson.id, '999');
-        tabNav.appendChild(exerciseBtn);
-        lessonDiv.appendChild(tabNav);
-
-        // Tab content
-        const tabContent = document.createElement('div');
-        tabContent.className = 'tab-content';
-
-        // Các tab
-        lesson.tabs.forEach((tab, tabIndex) => {
-            const pane = document.createElement('div');
-            pane.id = `tab-${level}-${lesson.id}-${tab.id}`;
-            pane.className = 'tab-pane';
-            if (tabIndex === 0) pane.classList.add('active');
-
-            const card = document.createElement('div');
-            card.className = 'card';
-            const grammarDiv = document.createElement('div');
-            grammarDiv.className = 'grammar';
-
-            const h3 = document.createElement('h3');
-            h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
-            grammarDiv.appendChild(h3);
-
-            // Subcards
-            if (tab.subcards) {
-                tab.subcards.forEach(sc => {
-                    const subcard = document.createElement('div');
-                    subcard.className = 'subcard';
-                    if (sc.type === 'vocab_grid') {
-                        const labelSpan = document.createElement('span');
-                        labelSpan.className = 'label';
-                        labelSpan.textContent = sc.label;
-                        subcard.appendChild(labelSpan);
-
-                        const gridDiv = document.createElement('div');
-                        gridDiv.className = 'vocab-grid';
-                        sc.items.forEach(item => {
-                            const itemDiv = document.createElement('div');
-                            itemDiv.className = 'vocab-item';
-                            itemDiv.innerHTML = `
-                                <span class="cn">${item.cn}</span>
-                                <span class="py">${item.py}</span>
-                            `;
-                            gridDiv.appendChild(itemDiv);
-                        });
-                        subcard.appendChild(gridDiv);
-                    } else {
-                        subcard.innerHTML = `
-                            <span class="label">${sc.label}</span>
-                            <p>${sc.text.replace(/\n/g, '<br>')}</p>
-                        `;
+                lessonItem.innerHTML = `
+                    <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
+                    <span>${lesson.title}</span>
+                `;
+                lessonItem.onclick = () => {
+                    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+                    document.querySelectorAll('.lesson-item').forEach(el => el.classList.remove('active'));
+                    const targetLesson = document.getElementById(`lesson-${level}-${lesson.id}`);
+                    if (targetLesson) {
+                        targetLesson.classList.add('active');
+                        targetLesson.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
-                    grammarDiv.appendChild(subcard);
+                    lessonItem.classList.add('active');
+                    lessonItem.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
+                    const numSpan = lessonItem.querySelector('.lesson-num');
+                    if (numSpan) { numSpan.style.background = '#ec4899'; numSpan.style.color = 'white'; }
+                    document.querySelectorAll('.lesson-item').forEach(item => {
+                        if (item !== lessonItem) {
+                            item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
+                            const num = item.querySelector('.lesson-num');
+                            if (num) { num.style.background = '#fce7f3'; num.style.color = '#be185d'; }
+                        }
+                    });
+                };
+                sidebar.appendChild(lessonItem);
+
+                // Lesson content
+                const lessonDiv = document.createElement('div');
+                lessonDiv.id = `lesson-${level}-${lesson.id}`;
+                lessonDiv.className = 'lesson';
+                if (index === 0) lessonDiv.classList.add('active');
+
+                // Tab nav
+                const tabNav = document.createElement('div');
+                tabNav.className = 'tab-nav';
+                lesson.tabs.forEach((tab, tabIndex) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'tab-btn';
+                    if (tabIndex === 0) btn.classList.add('active');
+                    btn.textContent = tab.title;
+                    btn.onclick = () => switchTab(level, lesson.id, tab.id);
+                    tabNav.appendChild(btn);
                 });
-            }
+                const exerciseBtn = document.createElement('button');
+                exerciseBtn.className = 'tab-btn';
+                exerciseBtn.textContent = '📝 Bài Tập';
+                exerciseBtn.onclick = () => switchTab(level, lesson.id, '999');
+                tabNav.appendChild(exerciseBtn);
+                lessonDiv.appendChild(tabNav);
 
-            // Examples
-            if (tab.examples) {
-                const exampleDiv = document.createElement('div');
-                exampleDiv.className = 'example';
-                tab.examples.forEach((ex, idx) => {
-                    const label = document.createElement('span');
-                    label.className = 'example-label';
-                    label.innerHTML = `<b>例句${idx + 1}：</b>`;
-                    exampleDiv.appendChild(label);
+                const tabContent = document.createElement('div');
+                tabContent.className = 'tab-content';
 
-                    const audioDiv = document.createElement('div');
-                    audioDiv.className = 'example-with-audio';
-                    audioDiv.innerHTML = `
-                        <div class="text-group">
-                            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                                <span class="cn">${ex.cn}</span>
-                                <button onclick="togglePinyinForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Phiên âm</button>
-                                <button onclick="toggleNghiaForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Nghĩa</button>
-                            </div>
-                            <span class="py" style="display:none;">${ex.py}</span>
-                            <span class="vi" style="display:none;">${ex.vi}</span>
-                        </div>
-                        <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}')">🔊</button>
-                    `;
-                    exampleDiv.appendChild(audioDiv);
-                    if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
+                lesson.tabs.forEach((tab, tabIndex) => {
+                    const pane = document.createElement('div');
+                    pane.id = `tab-${level}-${lesson.id}-${tab.id}`;
+                    pane.className = 'tab-pane';
+                    if (tabIndex === 0) pane.classList.add('active');
+
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    const grammarDiv = document.createElement('div');
+                    grammarDiv.className = 'grammar';
+
+                    const h3 = document.createElement('h3');
+                    h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
+                    grammarDiv.appendChild(h3);
+
+                    if (tab.subcards) {
+                        tab.subcards.forEach(sc => {
+                            const subcard = document.createElement('div');
+                            subcard.className = 'subcard';
+                            if (sc.type === 'vocab_grid') {
+                                const labelSpan = document.createElement('span');
+                                labelSpan.className = 'label';
+                                labelSpan.textContent = sc.label;
+                                subcard.appendChild(labelSpan);
+                                const gridDiv = document.createElement('div');
+                                gridDiv.className = 'vocab-grid';
+                                sc.items.forEach(item => {
+                                    const itemDiv = document.createElement('div');
+                                    itemDiv.className = 'vocab-item';
+                                    itemDiv.innerHTML = `
+                                        <span class="cn">${item.cn}</span>
+                                        <span class="py">${item.py}</span>
+                                    `;
+                                    gridDiv.appendChild(itemDiv);
+                                });
+                                subcard.appendChild(gridDiv);
+                            } else {
+                                subcard.innerHTML = `
+                                    <span class="label">${sc.label}</span>
+                                    <p>${sc.text.replace(/\n/g, '<br>')}</p>
+                                `;
+                            }
+                            grammarDiv.appendChild(subcard);
+                        });
+                    }
+
+                    if (tab.examples) {
+                        const exampleDiv = document.createElement('div');
+                        exampleDiv.className = 'example';
+                        tab.examples.forEach((ex, idx) => {
+                            const label = document.createElement('span');
+                            label.className = 'example-label';
+                            label.innerHTML = `<b>例句${idx + 1}：</b>`;
+                            exampleDiv.appendChild(label);
+
+                            const audioDiv = document.createElement('div');
+                            audioDiv.className = 'example-with-audio';
+                            audioDiv.innerHTML = `
+                                <div class="text-group">
+                                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                                        <span class="cn">${ex.cn}</span>
+                                        <button onclick="togglePinyinForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Phiên âm</button>
+                                        <button onclick="toggleNghiaForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#f472b6;color:white;font-size:11px;font-weight:600;cursor:pointer;">Nghĩa</button>
+                                    </div>
+                                    <span class="py" style="display:none;">${ex.py}</span>
+                                    <span class="vi" style="display:none;">${ex.vi}</span>
+                                </div>
+                                <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}')">🔊</button>
+                            `;
+                            exampleDiv.appendChild(audioDiv);
+                            if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
+                        });
+                        grammarDiv.appendChild(exampleDiv);
+                    }
+
+                    card.appendChild(grammarDiv);
+                    pane.appendChild(card);
+                    tabContent.appendChild(pane);
                 });
-                grammarDiv.appendChild(exampleDiv);
-            }
 
-            card.appendChild(grammarDiv);
-            pane.appendChild(card);
-            tabContent.appendChild(pane);
-        });
+                // Bài Tập tab
+                const exercisePane = document.createElement('div');
+                exercisePane.id = `tab-${level}-${lesson.id}-999`;
+                exercisePane.className = 'tab-pane';
 
-        // Tab Bài Tập
-        const exercisePane = document.createElement('div');
-        exercisePane.id = `tab-${level}-${lesson.id}-999`;
-        exercisePane.className = 'tab-pane';
+                const exerciseCard = document.createElement('div');
+                exerciseCard.className = 'card';
+                const exerciseHtml = document.createElement('div');
+                exerciseHtml.className = 'grammar';
+                const exTitle = document.createElement('h3');
+                exTitle.textContent = '📝 Bài tập';
+                exerciseHtml.appendChild(exTitle);
 
-        const exerciseCard = document.createElement('div');
-        exerciseCard.className = 'card';
-        const exerciseHtml = document.createElement('div');
-        exerciseHtml.className = 'grammar';
-        const exTitle = document.createElement('h3');
-        exTitle.textContent = 'Bài tập';
-        exerciseHtml.appendChild(exTitle);
+                const exContainer = document.createElement('div');
+                if (lesson.exercises && lesson.exercises.length > 0) {
+                    lesson.exercises.forEach((ex, idx) => {
+                        const exDiv = document.createElement('div');
+                        exDiv.className = 'exercise-item';
+                        const qDiv = document.createElement('div');
+                        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+                        qDiv.textContent = `${idx + 1}. ${ex.question}`;
+                        exDiv.appendChild(qDiv);
 
-        const exContainer = document.createElement('div');
+                        const optionsDiv = document.createElement('div');
+                        optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
+                        ex.options.forEach((opt, optIdx) => {
+                            const label = document.createElement('label');
+                            label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;';
+                            const radio = document.createElement('input');
+                            radio.type = 'radio';
+                            radio.name = `exercise-${level}-${lesson.id}-${idx}`;
+                            radio.value = optIdx;
+                            radio.onchange = function() {
+                                const parent = this.closest('.exercise-item');
+                                const resultDiv = parent.querySelector('.exercise-result');
+                                const isCorrect = parseInt(this.value) === ex.answer;
+                                resultDiv.textContent = isCorrect ? '✅ Đúng!' : '❌ Sai. Đáp án: ' + ex.options[ex.answer];
+                                resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+                            };
+                            const textSpan = document.createElement('span');
+                            textSpan.textContent = opt;
+                            label.appendChild(radio);
+                            label.appendChild(textSpan);
+                            optionsDiv.appendChild(label);
+                        });
+                        exDiv.appendChild(optionsDiv);
 
-        if (lesson.exercises && lesson.exercises.length > 0) {
-            lesson.exercises.forEach((ex, idx) => {
-                const exDiv = document.createElement('div');
-                exDiv.style.cssText = 'margin-bottom:20px;padding:15px;background:#fdf2f8;border-radius:10px;border-left:4px solid #ec4899;';
-                
-                const qDiv = document.createElement('div');
-                qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-                qDiv.textContent = `${idx + 1}. ${ex.question}`;
-                exDiv.appendChild(qDiv);
+                        const resultDiv = document.createElement('div');
+                        resultDiv.className = 'exercise-result';
+                        resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:white;';
+                        exDiv.appendChild(resultDiv);
+                        exContainer.appendChild(exDiv);
+                    });
+                } else {
+                    exContainer.innerHTML = '<p style="color:#999;text-align:center;padding:20px;">Chưa có bài tập.</p>';
+                }
 
-                const optionsDiv = document.createElement('div');
-                optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
-                ex.options.forEach((opt, optIdx) => {
-                    const label = document.createElement('label');
-                    label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;';
-                    const radio = document.createElement('input');
-                    radio.type = 'radio';
-                    radio.name = `exercise-${level}-${lesson.id}-${idx}`;
-                    radio.value = optIdx;
-                    radio.onchange = function() {
-                        const parent = this.closest('.exercise-item');
-                        const resultDiv = parent.querySelector('.exercise-result');
-                        const isCorrect = parseInt(this.value) === ex.answer;
-                        resultDiv.textContent = isCorrect ? '✅ Đúng!' : '❌ Sai. Đáp án: ' + ex.options[ex.answer];
-                        resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
-                    };
-                    const textSpan = document.createElement('span');
-                    textSpan.textContent = opt;
-                    label.appendChild(radio);
-                    label.appendChild(textSpan);
-                    optionsDiv.appendChild(label);
-                });
-                exDiv.appendChild(optionsDiv);
+                exerciseHtml.appendChild(exContainer);
+                exerciseCard.appendChild(exerciseHtml);
+                exercisePane.appendChild(exerciseCard);
+                tabContent.appendChild(exercisePane);
 
-                const resultDiv = document.createElement('div');
-                resultDiv.className = 'exercise-result';
-                resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:white;';
-                exDiv.appendChild(resultDiv);
-                exContainer.appendChild(exDiv);
+                lessonDiv.appendChild(tabContent);
+
+                // Navigation
+                const nav = document.createElement('div');
+                nav.className = 'nav';
+                nav.innerHTML = `
+                    <button onclick="prevTab('${level}', ${lesson.id})">⬅ Trước</button>
+                    <button onclick="nextTab('${level}', ${lesson.id})">Tiếp ➜</button>
+                `;
+                lessonDiv.appendChild(nav);
+
+                lessonsContainer.appendChild(lessonDiv);
             });
-        } else {
-            exContainer.innerHTML = '<p style="color:#999;text-align:center;padding:20px;">Chưa có bài tập.</p>';
+
+            mainContent.appendChild(lessonsContainer);
+
+            layout.appendChild(sidebar);
+            layout.appendChild(mainContent);
+            wrapper.appendChild(layout);
+            contentInner.appendChild(wrapper);
+
+            document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+            const firstLesson = document.querySelector(`#lesson-${level}-1`);
+            if (firstLesson) firstLesson.classList.add('active');
         }
 
-        exerciseHtml.appendChild(exContainer);
-        exerciseCard.appendChild(exerciseHtml);
-        exercisePane.appendChild(exerciseCard);
-        tabContent.appendChild(exercisePane);
-
-        lessonDiv.appendChild(tabContent);
-
-        // Navigation
-        const nav = document.createElement('div');
-        nav.className = 'nav';
-        nav.innerHTML = `
-            <button onclick="prevTab('${level}', ${lesson.id})">⬅ Trước</button>
-            <button onclick="nextTab('${level}', ${lesson.id})">Tiếp ➜</button>
-        `;
-        lessonDiv.appendChild(nav);
-
-        lessonsContainer.appendChild(lessonDiv);
-    });
-
-    mainContent.appendChild(lessonsContainer);
-    
-    // ===== GHÉP SIDEBAR + MAIN CONTENT =====
-    layout.appendChild(sidebar);
-    layout.appendChild(mainContent);
-    wrapper.appendChild(layout);
-    contentInner.appendChild(wrapper);
-
-    // Hiện lesson đầu tiên
-    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-    const firstLesson = document.querySelector(`#lesson-${level}-1`);
-    if (firstLesson) firstLesson.classList.add('active');
-}
-
         // ================================================================
-        // RENDER CARD ITEMS (vocab, hanzi, dictation, shadowing)
+        // RENDER CARD ITEMS
         // ================================================================
         function renderCardItems(module, data) {
             const header = document.createElement('div');
@@ -1615,12 +1748,10 @@ async function loadModuleData(module, level) {
             contentInner.appendChild(header);
 
             const grid = document.createElement('div');
-            grid.className = 'cards-grid';
             grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;';
 
             data.items.forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'card-item';
                 card.style.cssText = 'background:white;border-radius:20px;padding:22px 20px 18px;box-shadow:var(--shadow-sm);border:1px solid #fce7f3;transition:all 0.35s ease;cursor:pointer;';
                 card.innerHTML = `
                     <div style="width:44px;height:44px;border-radius:12px;background:#fdf2f8;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px;color:#db2777;">${item.icon || '📌'}</div>
@@ -1633,7 +1764,6 @@ async function loadModuleData(module, level) {
                 `;
                 grid.appendChild(card);
             });
-
             contentInner.appendChild(grid);
         }
 
@@ -1642,13 +1772,11 @@ async function loadModuleData(module, level) {
         // ================================================================
         function renderPractice(data) {
             const block = document.createElement('div');
-            block.className = 'exercise-block';
             block.style.cssText = 'background:white;border-radius:20px;padding:28px;border:1px solid #fce7f3;box-shadow:var(--shadow-sm);';
             block.innerHTML = `<h3 style="color:#be185d;font-size:19px;margin-bottom:18px;">🧠 Luyện tập</h3>`;
 
             data.exercises.forEach((ex, idx) => {
                 const qDiv = document.createElement('div');
-                qDiv.className = 'question-item';
                 qDiv.style.cssText = 'padding:16px 0;border-bottom:1px solid #fce7f3;';
                 qDiv.innerHTML = `
                     <div style="font-weight:600;color:#1e1e2a;margin-bottom:10px;font-size:15px;">${idx + 1}. ${ex.question}</div>
@@ -1665,18 +1793,15 @@ async function loadModuleData(module, level) {
             });
 
             const submitBtn = document.createElement('button');
-            submitBtn.className = 'btn-submit';
             submitBtn.textContent = '✅ Kiểm tra kết quả';
             submitBtn.style.cssText = 'background:linear-gradient(135deg,#ec4899,#db2777);border:none;padding:10px 32px;border-radius:30px;color:white;font-weight:700;font-size:15px;cursor:pointer;transition:all 0.3s ease;margin-top:18px;box-shadow:0 4px 14px rgba(236,72,153,0.3);';
             submitBtn.onclick = () => submitQuiz(data.exercises);
             block.appendChild(submitBtn);
 
             const resultDiv = document.createElement('div');
-            resultDiv.className = 'result-area';
             resultDiv.id = 'quizResult';
             resultDiv.style.cssText = 'margin-top:18px;padding:14px 18px;border-radius:12px;background:#fdf2f8;border-left:4px solid #ec4899;font-weight:500;display:none;';
             block.appendChild(resultDiv);
-
             contentInner.appendChild(block);
         }
 
@@ -1686,52 +1811,23 @@ async function loadModuleData(module, level) {
         function submitQuiz(exercises) {
             let score = 0;
             let resultHtml = '';
-
             exercises.forEach((ex, idx) => {
                 const selected = document.querySelector(`input[name="q${idx}"]:checked`);
                 const userAnswer = selected ? parseInt(selected.value) : null;
                 const correct = ex.answer;
-
-                if (userAnswer === correct) {
-                    score++;
-                    resultHtml += `<p style="color:#16a34a;">✅ Câu ${idx + 1} — Đúng</p>`;
-                } else {
-                    resultHtml += `<p style="color:#dc2626;">❌ Câu ${idx + 1} — Sai. Đáp án đúng: ${ex.options[correct]}</p>`;
-                }
+                if (userAnswer === correct) { score++; resultHtml += `<p style="color:#16a34a;">✅ Câu ${idx + 1} — Đúng</p>`; } 
+                else { resultHtml += `<p style="color:#dc2626;">❌ Câu ${idx + 1} — Sai. Đáp án đúng: ${ex.options[correct]}</p>`; }
             });
-
             const resultDiv = document.getElementById('quizResult');
             if (resultDiv) {
-                resultDiv.innerHTML = `
-                    <strong>📊 Kết quả: ${score}/${exercises.length}</strong>
-                    <div style="margin-top:10px;">${resultHtml}</div>
-                `;
+                resultDiv.innerHTML = `<strong>📊 Kết quả: ${score}/${exercises.length}</strong><div style="margin-top:10px;">${resultHtml}</div>`;
                 resultDiv.style.display = 'block';
                 resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
-// ================================================================
-// SWITCH LEVEL (cập nhật màu sắc)
-// ================================================================
-function switchLevel(level) {
-    currentLevel = level;
-    
-    // Active HSK
-    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
-    const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
-    if (activeHsk) activeHsk.classList.add('active');
-    
-    // Cập nhật màu cho content
-    const contentWrapper = document.querySelector('.content-area');
-    if (contentWrapper) {
-        contentWrapper.className = 'content-area show ' + level;
-    }
-    
-    // Reload content
-    showContent(currentModule, level);
-}
+
         // ================================================================
-        // SWITCH TAB (grammar)
+        // SWITCH TAB
         // ================================================================
         function switchTab(level, lessonNum, tabId) {
             const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
@@ -1747,106 +1843,111 @@ function switchLevel(level) {
             let targetIndex = -1;
             tabs.forEach((tab, index) => {
                 const text = tab.textContent;
-                if (tabIdStr === '999' && text.includes('Bài Tập')) {
-                    targetIndex = index;
-                } else {
+                if (tabIdStr === '999' && text.includes('Bài Tập')) { targetIndex = index; } 
+                else {
                     const onclickAttr = tab.getAttribute('onclick');
-                    if (onclickAttr && onclickAttr.includes(`'${tabIdStr}'`)) {
-                        targetIndex = index;
-                    }
+                    if (onclickAttr && onclickAttr.includes(`'${tabIdStr}'`)) { targetIndex = index; }
                 }
             });
-
-            if (targetIndex === -1) {
-                const idx = parseInt(tabIdStr) - 1;
-                if (idx >= 0 && idx < tabs.length) targetIndex = idx;
-            }
-
+            if (targetIndex === -1) { const idx = parseInt(tabIdStr) - 1; if (idx >= 0 && idx < tabs.length) targetIndex = idx; }
             if (targetIndex >= 0 && tabs[targetIndex]) {
                 tabs[targetIndex].classList.add('active');
                 const pane = document.getElementById(`tab-${level}-${lessonNum}-${tabIdStr}`);
                 if (pane) pane.classList.add('active');
             }
-
             currentTab = tabIdStr;
         }
 
         // ================================================================
         // NEXT / PREV TAB
         // ================================================================
-       // ================================================================
-// NEXT / PREV TAB (SỬA LỖI)
-// ================================================================
-function nextTab(level, lessonNum) {
-    const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-    if (!lessonEl) return;
+        function nextTab(level, lessonNum) {
+            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
+            if (!lessonEl) return;
+            const tabs = lessonEl.querySelectorAll('.tab-btn');
+            let activeIndex = -1;
+            tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
 
-    const tabs = lessonEl.querySelectorAll('.tab-btn');
-    let activeIndex = -1;
-    tabs.forEach((tab, index) => {
-        if (tab.classList.contains('active')) activeIndex = index;
-    });
-
-    if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
-        const nextTabBtn = tabs[activeIndex + 1];
-        let tabId = (activeIndex + 2).toString();
-        const onclickAttr = nextTabBtn.getAttribute('onclick');
-        if (onclickAttr) {
-            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-            if (match && match[1]) tabId = match[1].trim();
-        }
-        switchTab(level, lessonNum, tabId);
-    } else {
-        // ===== SỬA: Lấy lessons từ cachedData đúng cách =====
-        const key = `grammar-${level}`;
-        const data = cachedData[key];
-        const lessons = data?.lessons;
-        
-        if (lessons && lessonNum < lessons.length) {
-            const nextLessonNum = lessonNum + 1;
-            const nextLessonEl = document.getElementById(`lesson-${level}-${nextLessonNum}`);
-            if (nextLessonEl) {
-                document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-                nextLessonEl.classList.add('active');
-                switchTab(level, nextLessonNum, '1');
-                nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
+                const nextTabBtn = tabs[activeIndex + 1];
+                let tabId = (activeIndex + 2).toString();
+                const onclickAttr = nextTabBtn.getAttribute('onclick');
+                if (onclickAttr) {
+                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+                    if (match && match[1]) tabId = match[1].trim();
+                }
+                switchTab(level, lessonNum, tabId);
+            } else {
+                const key = `grammar-${level}`;
+                const data = cachedData[key];
+                const lessons = data?.lessons;
+                if (lessons && lessonNum < lessons.length) {
+                    const nextLessonNum = lessonNum + 1;
+                    const nextLessonEl = document.getElementById(`lesson-${level}-${nextLessonNum}`);
+                    if (nextLessonEl) {
+                        document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+                        nextLessonEl.classList.add('active');
+                        switchTab(level, nextLessonNum, '1');
+                        nextLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Cập nhật sidebar
+                        document.querySelectorAll('.lesson-item').forEach((item, idx) => {
+                            item.classList.toggle('active', idx === nextLessonNum - 1);
+                            if (idx === nextLessonNum - 1) {
+                                item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
+                                const num = item.querySelector('.lesson-num');
+                                if (num) { num.style.background = '#ec4899'; num.style.color = 'white'; }
+                            } else {
+                                item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
+                                const num = item.querySelector('.lesson-num');
+                                if (num) { num.style.background = '#fce7f3'; num.style.color = '#be185d'; }
+                            }
+                        });
+                    }
+                } else {
+                    alert('🎉 Bạn đã học xong bài cuối cùng!');
+                }
             }
-        } else {
-            alert('🎉 Bạn đã học xong bài cuối cùng!');
         }
-    }
-}
 
-function prevTab(level, lessonNum) {
-    const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-    if (!lessonEl) return;
+        function prevTab(level, lessonNum) {
+            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
+            if (!lessonEl) return;
+            const tabs = lessonEl.querySelectorAll('.tab-btn');
+            let activeIndex = -1;
+            tabs.forEach((tab, index) => { if (tab.classList.contains('active')) activeIndex = index; });
 
-    const tabs = lessonEl.querySelectorAll('.tab-btn');
-    let activeIndex = -1;
-    tabs.forEach((tab, index) => {
-        if (tab.classList.contains('active')) activeIndex = index;
-    });
-
-    if (activeIndex > 0) {
-        const prevTabBtn = tabs[activeIndex - 1];
-        let tabId = activeIndex.toString();
-        const onclickAttr = prevTabBtn.getAttribute('onclick');
-        if (onclickAttr) {
-            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-            if (match && match[1]) tabId = match[1].trim();
+            if (activeIndex > 0) {
+                const prevTabBtn = tabs[activeIndex - 1];
+                let tabId = activeIndex.toString();
+                const onclickAttr = prevTabBtn.getAttribute('onclick');
+                if (onclickAttr) {
+                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+                    if (match && match[1]) tabId = match[1].trim();
+                }
+                switchTab(level, lessonNum, tabId);
+            } else if (lessonNum > 1) {
+                const prevLessonNum = lessonNum - 1;
+                const prevLessonEl = document.getElementById(`lesson-${level}-${prevLessonNum}`);
+                if (prevLessonEl) {
+                    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+                    prevLessonEl.classList.add('active');
+                    switchTab(level, prevLessonNum, '1');
+                    prevLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelectorAll('.lesson-item').forEach((item, idx) => {
+                        item.classList.toggle('active', idx === prevLessonNum - 1);
+                        if (idx === prevLessonNum - 1) {
+                            item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
+                            const num = item.querySelector('.lesson-num');
+                            if (num) { num.style.background = '#ec4899'; num.style.color = 'white'; }
+                        } else {
+                            item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
+                            const num = item.querySelector('.lesson-num');
+                            if (num) { num.style.background = '#fce7f3'; num.style.color = '#be185d'; }
+                        }
+                    });
+                }
+            }
         }
-        switchTab(level, lessonNum, tabId);
-    } else if (lessonNum > 1) {
-        const prevLessonNum = lessonNum - 1;
-        const prevLessonEl = document.getElementById(`lesson-${level}-${prevLessonNum}`);
-        if (prevLessonEl) {
-            document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
-            prevLessonEl.classList.add('active');
-            switchTab(level, prevLessonNum, '1');
-            prevLessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-}
 
         // ================================================================
         // AUDIO
@@ -1893,6 +1994,280 @@ function prevTab(level, lessonNum) {
         }
 
         // ================================================================
+        // HIGHLIGHT
+        // ================================================================
+        function toggleHighlightMode() {
+            highlightMode = !highlightMode;
+            const btn = document.getElementById('highlightToggle');
+            if (highlightMode) {
+                btn.textContent = 'Tắt';
+                btn.style.background = '#f44336';
+                document.body.style.cursor = 'text';
+            } else {
+                btn.textContent = 'Highlight';
+                btn.style.background = '#ec4899';
+                document.body.style.cursor = 'default';
+            }
+        }
+
+        function toggleToolbar() {
+            const toolbar = document.getElementById('highlightToolbar');
+            const btn = document.getElementById('toggleToolbarBtn');
+            toolbarVisible = !toolbarVisible;
+            if (toolbarVisible) {
+                toolbar.style.display = 'flex';
+                btn.textContent = '✖';
+                btn.style.background = '#f44336';
+                btn.style.transform = 'rotate(90deg)';
+            } else {
+                toolbar.style.display = 'none';
+                btn.textContent = '✏️';
+                btn.style.background = '#ec4899';
+                btn.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        document.addEventListener('mouseup', function(e) {
+            if (!highlightMode) return;
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed) return;
+            const selectedText = selection.toString().trim();
+            if (selectedText.length === 0) return;
+            const range = selection.getRangeAt(0);
+            const container = range.commonAncestorContainer;
+            const mainContent = document.querySelector('.lesson-main');
+            if (!mainContent || !mainContent.contains(container)) return;
+            try {
+                let parentElement = container.nodeType === 3 ? container.parentElement : container;
+                const parentStyle = window.getComputedStyle(parentElement);
+                const span = document.createElement('span');
+                span.className = 'highlighted';
+                span.style.backgroundColor = '#ffe0b2';
+                span.style.fontFamily = parentStyle.fontFamily || 'inherit';
+                span.style.fontSize = parentStyle.fontSize || 'inherit';
+                span.style.fontWeight = parentStyle.fontWeight || 'inherit';
+                span.textContent = selectedText;
+                range.deleteContents();
+                range.insertNode(span);
+                saveHighlights();
+            } catch (error) { console.log('Lỗi highlight:', error); }
+            selection.removeAllRanges();
+        });
+
+        function clearAllHighlights() {
+            if (confirm('Xóa tất cả highlight?')) {
+                document.querySelectorAll('.highlighted').forEach(el => {
+                    const text = el.textContent;
+                    const parent = el.parentNode;
+                    const textNode = document.createTextNode(text);
+                    parent.replaceChild(textNode, el);
+                    parent.normalize();
+                });
+                localStorage.removeItem('highlights');
+            }
+        }
+
+        function saveHighlights() {
+            const highlights = [];
+            document.querySelectorAll('.highlighted').forEach(el => {
+                highlights.push({ id: el.dataset.highlightId || 'hl_' + Date.now(), text: el.textContent, color: el.style.backgroundColor });
+            });
+            try { localStorage.setItem('highlights', JSON.stringify(highlights)); } catch (e) {}
+        }
+
+        document.addEventListener('click', function(e) {
+            const target = e.target.closest('.highlighted');
+            const menu = document.getElementById('highlightMenu');
+            if (target) {
+                e.stopPropagation();
+                currentHighlightElement = target;
+                const rect = target.getBoundingClientRect();
+                menu.style.left = Math.max(10, rect.left + rect.width / 2 - 80) + 'px';
+                menu.style.top = (rect.bottom + 5) + 'px';
+                menu.style.display = 'flex';
+                return;
+            }
+            if (menu && menu.contains(e.target)) return;
+            if (menu) { menu.style.display = 'none'; currentHighlightElement = null; }
+        });
+
+        function deleteSingleHighlight() {
+            if (currentHighlightElement) {
+                const text = currentHighlightElement.textContent;
+                const highlightId = currentHighlightElement.dataset.highlightId;
+                const parent = currentHighlightElement.parentNode;
+                const textNode = document.createTextNode(text);
+                parent.replaceChild(textNode, currentHighlightElement);
+                parent.normalize();
+                let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
+                highlights = highlights.filter(h => h.id !== highlightId);
+                try { localStorage.setItem('highlights', JSON.stringify(highlights)); } catch (e) {}
+                document.getElementById('highlightMenu').style.display = 'none';
+                currentHighlightElement = null;
+            }
+        }
+
+        // ================================================================
+        // FLASHCARD
+        // ================================================================
+        function startFlashcard() {
+            const words = [];
+            const levelData = cachedData[`grammar-${currentLevel}`];
+            if (levelData && levelData.lessons) {
+                levelData.lessons.forEach(lesson => {
+                    if (lesson.tabs) {
+                        lesson.tabs.forEach(tab => {
+                            if (tab.examples) {
+                                tab.examples.forEach(ex => {
+                                    words.push({ cn: ex.cn, py: ex.py || '', vi: ex.vi || '' });
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+            if (words.length === 0) { alert('Không có từ vựng để ôn tập!'); return; }
+            flashcardData = words;
+            flashcardIndex = 0;
+            flashcardShowing = false;
+            document.getElementById('flashcardModal').classList.add('active');
+            showFlashcard();
+        }
+
+        function showFlashcard() {
+            const data = flashcardData[flashcardIndex];
+            if (!data) return;
+            document.getElementById('flashcardCount').textContent = `${flashcardIndex + 1}/${flashcardData.length}`;
+            document.getElementById('flashcardFace').innerHTML = `<span class="cn">${data.cn}</span>`;
+            flashcardShowing = false;
+        }
+
+        function flashcardShowAnswer() {
+            const data = flashcardData[flashcardIndex];
+            if (!data) return;
+            document.getElementById('flashcardFace').innerHTML = `
+                <div class="cn" style="font-size:28px;">${data.cn}</div>
+                <div style="font-size:16px;color:#388e3c;margin-top:5px;">${data.py}</div>
+                <div style="font-size:20px;color:#64748b;margin-top:5px;">${data.vi}</div>
+            `;
+            flashcardShowing = true;
+        }
+
+        function closeFlashcard() { document.getElementById('flashcardModal').classList.remove('active'); }
+
+        function markAsUnderstood() {
+            const data = flashcardData[flashcardIndex];
+            if (!data) return;
+            undefinedWords = undefinedWords.filter(w => w.cn !== data.cn);
+            localStorage.setItem('undefinedWords', JSON.stringify(undefinedWords));
+            if (flashcardIndex < flashcardData.length - 1) { flashcardIndex++; showFlashcard(); } 
+            else { alert('🎉 Đã học xong!'); closeFlashcard(); }
+        }
+
+        function markAsNotUnderstood() {
+            const data = flashcardData[flashcardIndex];
+            if (!data) return;
+            const exists = undefinedWords.some(w => w.cn === data.cn);
+            if (!exists) { undefinedWords.push(data); localStorage.setItem('undefinedWords', JSON.stringify(undefinedWords)); alert('✅ Đã thêm vào danh sách ôn lại!'); } 
+            else { alert('⚠️ Từ này đã có trong danh sách rồi!'); }
+            if (flashcardIndex < flashcardData.length - 1) { flashcardIndex++; showFlashcard(); } 
+            else { alert('🎉 Đã học xong!'); closeFlashcard(); }
+        }
+
+        function reviewUndefinedWords() {
+            const saved = localStorage.getItem('undefinedWords');
+            if (!saved || JSON.parse(saved).length === 0) { alert('✅ Không có từ nào chưa nắm được!'); return; }
+            undefinedWords = JSON.parse(saved);
+            flashcardData = undefinedWords;
+            flashcardIndex = 0;
+            flashcardShowing = false;
+            document.getElementById('flashcardModal').classList.add('active');
+            showFlashcard();
+        }
+
+        // ================================================================
+        // SEARCH
+        // ================================================================
+        function universalSearch() {
+            const query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
+            const dropdown = document.getElementById('searchDropdown');
+            if (query === '') { dropdown.style.display = 'none'; return; }
+            dropdown.innerHTML = '';
+            let resultsMap = new Set();
+            const levels = ['hsk1', 'hsk2', 'hsk3'];
+            levels.forEach(levelId => {
+                const data = cachedData[`grammar-${levelId}`];
+                if (!data || !data.lessons) return;
+                data.lessons.forEach(lesson => {
+                    lesson.tabs.forEach(tab => {
+                        let content = JSON.stringify(tab).toLowerCase();
+                        if (content.includes(query)) {
+                            const key = `${levelId}-${lesson.id}-${tab.id}`;
+                            if (!resultsMap.has(key)) {
+                                resultsMap.add(key);
+                                const item = document.createElement('div');
+                                item.className = 'search-item-result';
+                                const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
+                                item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
+                                    <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>`;
+                                item.onclick = function() {
+                                    const btn = document.querySelector(`.hsk-item[data-level="${levelId}"]`);
+                                    if (btn) { btn.click(); }
+                                    showContent('grammar', levelId);
+                                    setTimeout(() => {
+                                        switchTab(levelId, lesson.id, tab.id);
+                                        document.getElementById('globalGrammarSearch').value = '';
+                                        dropdown.style.display = 'none';
+                                    }, 300);
+                                };
+                                dropdown.appendChild(item);
+                            }
+                        }
+                    });
+                });
+            });
+            dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
+            if (resultsMap.size === 0) dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">Không tìm thấy nội dung phù hợp!</div>';
+        }
+
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('searchDropdown');
+            const searchBox = document.querySelector('.search-box');
+            if (dropdown && searchBox && !searchBox.contains(e.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // ================================================================
+        // STREAK
+        // ================================================================
+        function updateStreak() {
+            const today = new Date().toDateString();
+            const streakData = JSON.parse(localStorage.getItem('streakData') || '{"days":0,"lastDate":""}');
+            if (streakData.lastDate !== today) {
+                const yesterday = new Date(Date.now() - 86400000).toDateString();
+                if (streakData.lastDate === yesterday) { streakData.days++; } 
+                else if (streakData.lastDate !== today) { streakData.days = 1; }
+                streakData.lastDate = today;
+                localStorage.setItem('streakData', JSON.stringify(streakData));
+            }
+            document.getElementById('streakDays').textContent = streakData.days;
+        }
+
+        function showStreakInfo() {
+            const streakData = JSON.parse(localStorage.getItem('streakData') || '{"days":0,"lastDate":""}');
+            const days = streakData.days;
+            let msg = `🔥 ${days} ngày học liên tục!\n\n`;
+            if (days === 0) msg += 'Hãy học một bài ngay hôm nay để bắt đầu chuỗi! 💪';
+            else if (days >= 30) msg += '🚀 Bạn thật tuyệt vời! 30 ngày kiên trì! 🌟';
+            else if (days >= 14) msg += '💪 Cố lên! Bạn đang đi đúng hướng!';
+            else if (days >= 7) msg += '🔥 7 ngày liên tục! Đừng bỏ cuộc nhé!';
+            else if (days >= 3) msg += '💪 3 ngày rồi! Giữ vững phong độ!';
+            else msg += '🌈 Học hôm nay để duy trì streak!';
+            alert(msg);
+        }
+
+        // ================================================================
         // BACK HOME
         // ================================================================
         function backToHome() {
@@ -1905,8 +2280,6 @@ function prevTab(level, lessonNum) {
         // ================================================================
         // EVENT LISTENERS
         // ================================================================
-
-        // Click feature card
         document.querySelectorAll('.feature-card').forEach(card => {
             card.addEventListener('click', function() {
                 const module = this.dataset.module;
@@ -1915,7 +2288,6 @@ function prevTab(level, lessonNum) {
             });
         });
 
-        // Click HSK item
         document.querySelectorAll('.hsk-item').forEach(item => {
             item.addEventListener('click', function() {
                 const level = this.dataset.level;
@@ -1923,34 +2295,23 @@ function prevTab(level, lessonNum) {
             });
         });
 
-        // Back home
         backHomeBtn.addEventListener('click', backToHome);
-
-        // Search
-        document.getElementById('searchBtn').addEventListener('click', function() {
-            const query = document.getElementById('searchInput').value.trim();
-            alert(query ? `🔍 Tìm kiếm: "${query}"` : 'Vui lòng nhập từ khóa.');
-        });
 
         // ================================================================
         // FIREBASE AUTH
         // ================================================================
-        window.loginWithGoogle = function() {
-            // Firebase sẽ được import từ module bên dưới
-        };
+        window.loginWithGoogle = function() {};
 
         // ================================================================
         // KHỞI TẠO
         // ================================================================
         document.addEventListener('DOMContentLoaded', function() {
-            // Mặc định: hiển thị grammar + hsk1
             featuresSection.style.display = 'block';
             hskNavWrapper.classList.remove('show');
             contentArea.classList.remove('show');
-            
-            // Load dữ liệu grammar hsk1 để hiển thị ngay
             setTimeout(() => {
                 showContent('grammar', 'hsk1');
+                updateStreak();
             }, 300);
         });
     </script>
