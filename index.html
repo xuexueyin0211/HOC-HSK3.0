@@ -92,6 +92,8 @@
             display: flex;
             align-items: center;
             gap: 8px;
+                z-index: 20; /* ← THÊM DÒNG NÀY */
+
         }
         .lesson-item:hover {
             background: #fdf2f8;
@@ -127,7 +129,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             padding: 10px 0;
             border: 1px solid #fce7f3;
-            z-index: 10000;
+            z-index: 99999;
             display: none;
             min-width: 220px;
             max-width: 280px;
@@ -143,8 +145,7 @@
             font-weight: 700;
             color: #be185d;
             text-transform: uppercase;
-            border-bottom: 1px solid #fce7f3;
-            letter-spacing: 0.5px;
+                        letter-spacing: 0.5px;
         }
         .lesson-item-tooltip .tooltip-item {
             padding: 6px 14px;
@@ -443,8 +444,10 @@
             position: absolute;
               top: 100%; /* ← SỬA TỪ 130% THÀNH 100% */
     left: 0; /* ← THÊM DÒNG NÀY */
-    right: auto; /* ← THÊM DÒNG NÀY */
+    right: 0; /* ← THÊM DÒNG NÀY */
     width: 100%; /* ← SỬA TỪ 320px THÀNH 100% */
+            min-width: 300px; /* ← THÊM DÒNG NÀY */
+    max-width: 400px; /* ← THÊM DÒNG NÀY */
             background: white;
             border-radius: 10px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -739,6 +742,8 @@
             top: 80px;
             max-height: calc(100vh - 120px);
             overflow-y: auto;
+            overflow-x: visible; /* ← THÊM DÒNG NÀY */
+    z-index: 10; /* ← THÊM DÒNG NÀY */
         }
         .lesson-sidebar::-webkit-scrollbar {
             width: 4px;
@@ -2361,7 +2366,7 @@ function loadHighlights() {
     setTimeout(() => loadHighlights(), 600);
         
 
-        function deleteSingleHighlight() {
+      function deleteSingleHighlight() {
     if (currentHighlightElement) {
         const text = currentHighlightElement.textContent;
         const highlightId = currentHighlightElement.dataset.highlightId;
@@ -2381,7 +2386,6 @@ function loadHighlights() {
         currentHighlightElement = null;
     }
 }
-
         // ================================================================
         // FLASHCARD
         // ================================================================
