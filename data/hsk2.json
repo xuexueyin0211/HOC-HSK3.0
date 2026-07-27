@@ -787,9 +787,25 @@
                 "text": "\"起来 qǐlái\"có nghĩa là \"thức dậy\"(như 起床); hoặc biểu thị hành động có hướng di chuyển từ thấp lên cao, từ dưới lên trên."
               },
               {
-                "label": "Các động từ có thể dùng BNXH thường gặp:",
-                "text": "上 shàng, 下 xià, 进 jìn, 出 chū, 回 huí, 过 guò, 起 qǐ, 开 kāi, 拿 ná, 买 mǎi, 送 sòng, 请 qǐng, 找 zhǎo, 走 zǒu"
-              }
+  "label": "Các động từ có thể dùng BNXH thường gặp:",
+  "type": "vocab_grid",
+  "items": [
+    { "cn": "上", "py": "shàng" },
+    { "cn": "下", "py": "xià" },
+    { "cn": "进", "py": "jìn" },
+    { "cn": "出", "py": "chū" },
+    { "cn": "回", "py": "huí" },
+    { "cn": "过", "py": "guò" },
+    { "cn": "起", "py": "qǐ" },
+    { "cn": "开", "py": "kāi" },
+    { "cn": "拿", "py": "ná" },
+    { "cn": "买", "py": "mǎi" },
+    { "cn": "送", "py": "sòng" },
+    { "cn": "请", "py": "qǐng" },
+    { "cn": "找", "py": "zhǎo" },
+    { "cn": "走", "py": "zǒu" }
+  ]
+}
             ],
             "examples": [
               {
