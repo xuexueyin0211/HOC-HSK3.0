@@ -399,6 +399,7 @@
             padding: 3px 3px 3px 16px;
             border: 1.5px solid #fbcfe8;
             transition: all 0.3s ease;
+                position: relative; /* ← THÊM DÒNG NÀY */
         }
         .search-box:focus-within {
             border-color: #ec4899;
@@ -425,7 +426,41 @@
             transition: all 0.3s ease;
         }
         .search-box button:hover { background: #db2777; }
-
+.search-results-dropdown {
+    position: absolute;
+    top: 130%;
+    right: 0;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 99999;
+    display: none;
+    border: 1px solid #e0e0e0;
+}
+.search-item-result {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.search-item-result:hover { background: #fdf2f8; }
+.search-item-result .hsk-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-right: 6px;
+    color: white;
+}
+.hsk-tag.hsk1 { background: #4caf50; }
+.hsk-tag.hsk2 { background: #f59e0b; }
+.hsk-tag.hsk3 { background: #e11d48; }
+.search-item-result .title { font-size: 13px; font-weight: 600; color: #1e293b; }
+.search-item-result .desc { font-size: 11px; color: #64748b; margin-top: 2px; }
         /* ===== HERO ===== */
         .hero-section {
             background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 40%, #fff1f2 100%);
@@ -1391,37 +1426,40 @@
         // LOAD DATA
         // ================================================================
         async function loadModuleData(module, level) {
-            const key = `${module}-${level}`;
-            if (cachedData[key]) return cachedData[key];
+    const key = `${module}-${level}`;
+    if (cachedData[key]) return cachedData[key];
 
-            try {
-                const path = MODULES[module].path + level + '.json';
-                const response = await fetch(path);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                const data = await response.json();
-                
-                let innerData = data;
-                if (data[level]) innerData = data[level];
-                if (!innerData.lessons && !innerData.items) {
-                    const keys = Object.keys(data);
-                    for (const k of keys) {
-                        if (data[k] && (data[k].lessons || data[k].items)) {
-                            innerData = data[k];
-                            break;
-                        }
-                    }
+    try {
+        const path = MODULES[module].path + level + '.json';
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        
+        let innerData = data;
+        if (data[level]) innerData = data[level];
+        if (!innerData.lessons && !innerData.items) {
+            const keys = Object.keys(data);
+            for (const k of keys) {
+                if (data[k] && (data[k].lessons || data[k].items)) {
+                    innerData = data[k];
+                    break;
                 }
-                
-                if (!innerData.lessons && !innerData.items && !innerData.exercises) {
-                    return getFallbackData(module, level);
-                }
-                
-                cachedData[key] = innerData;
-                return innerData;
-            } catch (error) {
-                return getFallbackData(module, level);
             }
         }
+        
+        if (!innerData.lessons && !innerData.items && !innerData.exercises) {
+            return getFallbackData(module, level);
+        }
+        
+        // ===== THÊM DÒNG NÀY: Lưu vào hskData để search dùng =====
+        hskData[level] = innerData;
+        
+        cachedData[key] = innerData;
+        return innerData;
+    } catch (error) {
+        return getFallbackData(module, level);
+    }
+}
 
         function getFallbackData(module, level) {
             const fallbacks = {
@@ -1566,7 +1604,7 @@
     <div class="lesson-item-tooltip">
         <div class="tooltip-title">📑 Các phần trong bài</div>
         ${lesson.tabs.map((tab, tabIdx) => `
-            <div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${hskLevel}', ${lesson.id}, '${tab.id}')">
+<div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${level}', ${lesson.id}, '${tab.id}')">
                 ${tab.title}
             </div>
         `).join('')}
@@ -1888,34 +1926,63 @@
         // ================================================================
         // SWITCH TAB
         // ================================================================
-        function switchTab(level, lessonNum, tabId) {
-            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-            if (!lessonEl) return;
+        // ================================================================
+// SWITCH TAB - SỬA LẠI
+// ================================================================
+function switchTab(level, lessonNum, tabId) {
+    const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
+    if (!lessonEl) return;
 
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            const panes = lessonEl.querySelectorAll('.tab-pane');
+    const tabs = lessonEl.querySelectorAll('.tab-btn');
+    const panes = lessonEl.querySelectorAll('.tab-pane');
 
-            tabs.forEach(tab => tab.classList.remove('active'));
-            panes.forEach(pane => pane.classList.remove('active'));
+    // Xóa active từ tất cả tab và pane
+    tabs.forEach(tab => tab.classList.remove('active'));
+    panes.forEach(pane => pane.classList.remove('active'));
 
-            const tabIdStr = String(tabId);
-            let targetIndex = -1;
-            tabs.forEach((tab, index) => {
-                const text = tab.textContent;
-                if (tabIdStr === '999' && text.includes('Bài Tập')) { targetIndex = index; } 
-                else {
-                    const onclickAttr = tab.getAttribute('onclick');
-                    if (onclickAttr && onclickAttr.includes(`'${tabIdStr}'`)) { targetIndex = index; }
-                }
-            });
-            if (targetIndex === -1) { const idx = parseInt(tabIdStr) - 1; if (idx >= 0 && idx < tabs.length) targetIndex = idx; }
-            if (targetIndex >= 0 && tabs[targetIndex]) {
-                tabs[targetIndex].classList.add('active');
-                const pane = document.getElementById(`tab-${level}-${lessonNum}-${tabIdStr}`);
-                if (pane) pane.classList.add('active');
+    // Tìm tab button theo onclick attribute
+    let targetTabBtn = null;
+    const tabIdStr = String(tabId);
+    
+    tabs.forEach(tab => {
+        const onclickAttr = tab.getAttribute('onclick');
+        if (onclickAttr) {
+            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+            if (match && match[1].trim() === tabIdStr) {
+                targetTabBtn = tab;
             }
-            currentTab = tabIdStr;
         }
+    });
+    
+    // Nếu không tìm được qua onclick, tìm "Bài Tập"
+    if (!targetTabBtn && tabIdStr === '999') {
+        targetTabBtn = Array.from(tabs).find(tab => tab.textContent.includes('Bài Tập'));
+    }
+    
+    // Nếu vẫn không tìm được, dùng index
+    if (!targetTabBtn) {
+        const tabIndex = parseInt(tabIdStr) - 1;
+        if (tabIndex >= 0 && tabs[tabIndex]) {
+            targetTabBtn = tabs[tabIndex];
+        }
+    }
+
+    // Set active cho tab button
+    if (targetTabBtn) {
+        targetTabBtn.classList.add('active');
+    }
+
+    // Tìm và set active cho pane
+    const targetPane = document.getElementById(`tab-${level}-${lessonNum}-${tabIdStr}`);
+    if (targetPane) {
+        targetPane.classList.add('active');
+    } else {
+        // Nếu không tìm được pane, in log để debug
+        console.warn(`Không tìm được pane: tab-${level}-${lessonNum}-${tabIdStr}`);
+    }
+
+    currentTab = tabIdStr;
+}
 
         // ===== JS: NEXT TAB =====
 function nextTab(hskLevel, lessonNum) {
@@ -1929,39 +1996,41 @@ function nextTab(hskLevel, lessonNum) {
     });
 
     if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
-        // Chuyển sang tab tiếp theo
-        const nextTabBtn = tabs[activeIndex + 1];
-        let tabId = (activeIndex + 2).toString();
-        
-        const onclickAttr = nextTabBtn.getAttribute('onclick');
-        if (onclickAttr) {
-            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-            if (match && match[1]) {
-                tabId = match[1].trim();
-            }
+    // Chuyển sang tab tiếp theo cùng lesson
+    const nextTabBtn = tabs[activeIndex + 1];
+    let tabId = (activeIndex + 2).toString();
+    
+    const onclickAttr = nextTabBtn.getAttribute('onclick');
+    if (onclickAttr) {
+        const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+        if (match && match[1]) {
+            tabId = match[1].trim();
         }
-        
-        switchTab(hskLevel, lessonNum, tabId);
-    } else {
-        // Nếu ở tab Bài Tập, chuyển sang lesson tiếp theo (nếu có)
-        const data = cachedData[`grammar-${hskLevel}`];
-        if (data && data.lessons) {
-            const nextLessonNum = lessonNum + 1;
-            if (nextLessonNum <= data.lessons.length) {
-                showLesson(hskLevel, nextLessonNum, '1');
+    }
+    
+    switchTab(hskLevel, lessonNum, tabId);
+    lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+} else {
+    // Ở tab Bài Tập, chuyển sang lesson tiếp theo
+    const data = cachedData[`grammar-${hskLevel}`];
+    if (data && data.lessons) {
+        const nextLessonNum = lessonNum + 1;
+        if (nextLessonNum <= data.lessons.length) {
+            showLesson(hskLevel, nextLessonNum, '1');  // ← Dùng showLesson thay vì switchTab
+            document.getElementById(`lesson-${hskLevel}-${nextLessonNum}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            const currentLevelIdx = hskLevels.indexOf(hskLevel);
+            if (currentLevelIdx < hskLevels.length - 1) {
+                const nextLevel = hskLevels[currentLevelIdx + 1];
+                showContent('grammar', nextLevel);
             } else {
-                const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                if (currentLevelIdx < hskLevels.length - 1) {
-                    const nextLevel = hskLevels[currentLevelIdx + 1];
-                    showContent('grammar', nextLevel);
-                } else {
-                    alert("🎉 Bạn đã học xong toàn bộ chương trình!");
-                }
+                alert("🎉 Bạn đã học xong toàn bộ chương trình!");
             }
         }
     }
+    }
 }
-
 // ===== JS: PREV TAB =====
 function prevTab(hskLevel, lessonNum) {
     const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
@@ -1973,24 +2042,40 @@ function prevTab(hskLevel, lessonNum) {
         if (tab.classList.contains('active')) activeIndex = index;
     });
 
-    if (activeIndex > 0) {
-        // Quay lại tab trước
-        const prevTabBtn = tabs[activeIndex - 1];
-        let tabId = activeIndex.toString();
-        
-        const onclickAttr = prevTabBtn.getAttribute('onclick');
-        if (onclickAttr) {
-            const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-            if (match && match[1]) {
-                tabId = match[1].trim();
-            }
+   if (activeIndex > 0) {
+    const prevTabBtn = tabs[activeIndex - 1];
+    let tabId = activeIndex.toString();
+    
+    const onclickAttr = prevTabBtn.getAttribute('onclick');
+    if (onclickAttr) {
+        const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
+        if (match && match[1]) {
+            tabId = match[1].trim();
         }
-        
-        switchTab(hskLevel, lessonNum, tabId);
-    } else if (lessonNum > 1) {
-        // Chuyển sang lesson trước
-        showLesson(hskLevel, lessonNum - 1, '1');
     }
+    
+    switchTab(hskLevel, lessonNum, tabId);
+    lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+} else if (lessonNum > 1) {
+    const prevLessonNum = lessonNum - 1;
+    showLesson(hskLevel, prevLessonNum, '1');  // ← Dùng showLesson
+    document.getElementById(`lesson-${hskLevel}-${prevLessonNum}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+} else {
+    const currentLevelIdx = hskLevels.indexOf(hskLevel);
+    if (currentLevelIdx > 0) {
+        const prevLevel = hskLevels[currentLevelIdx - 1];
+        const data = cachedData[`grammar-${prevLevel}`];
+        if (data && data.lessons && data.lessons.length > 0) {
+            const lastLessonId = data.lessons[data.lessons.length - 1].id;
+            showContent('grammar', prevLevel);
+            setTimeout(() => {
+                showLesson(prevLevel, lastLessonId, '1');
+            }, 500);
+        }
+    }
+}
 }
         // ================================================================
         // AUDIO
@@ -2238,7 +2323,7 @@ function prevTab(hskLevel, lessonNum) {
         dropdown = document.createElement('div');
         dropdown.id = 'searchDropdown';
         dropdown.className = 'search-results-dropdown';
-        document.querySelector('.global-search-box').appendChild(dropdown);
+        document.querySelector('.search-box').appendChild(dropdown); // Sửa selector
     }
     if (query === '') {
         dropdown.style.display = 'none';
@@ -2246,11 +2331,14 @@ function prevTab(hskLevel, lessonNum) {
     }
     dropdown.innerHTML = '';
     let resultsMap = new Set();
-    hskLevels.forEach(levelId => {
-        const levelData = hskData[levelId];
-        if (!levelData) return;
-        levelData.lessons.forEach((lesson) => {
-            lesson.tabs.forEach((tab) => {
+    
+    // ===== SỬA: Dùng cachedData thay vì hskData =====
+    const levels = ['hsk1', 'hsk2', 'hsk3'];
+    levels.forEach(levelId => {
+        const data = cachedData[`grammar-${levelId}`];
+        if (!data || !data.lessons) return;
+        data.lessons.forEach(lesson => {
+            lesson.tabs.forEach(tab => {
                 let content = JSON.stringify(tab).toLowerCase();
                 if (content.includes(query)) {
                     const key = `${levelId}-${lesson.id}-${tab.id}`;
@@ -2262,11 +2350,12 @@ function prevTab(hskLevel, lessonNum) {
                         item.innerHTML = `<div><span class="hsk-tag ${levelId}">${levelId.toUpperCase()}</span><span class="title">${lesson.title} - ${tab.title}</span></div>
                             <div class="desc">${snippet ? '📝 ' + snippet : ''}</div>`;
                         item.onclick = function () {
-                            const btn = document.querySelector(`.level-btn.${levelId}`);
-                            if (btn) switchLevel(levelId, btn);
-                            showLesson(levelId, lesson.id, tab.id);
-                            dropdown.style.display = 'none';
-                            document.getElementById('globalGrammarSearch').value = '';
+                            showContent('grammar', levelId);
+                            setTimeout(() => {
+                                switchTab(levelId, lesson.id, tab.id);
+                                document.getElementById('globalGrammarSearch').value = '';
+                                dropdown.style.display = 'none';
+                            }, 300);
                         };
                         dropdown.appendChild(item);
                     }
@@ -2320,12 +2409,56 @@ function prevTab(hskLevel, lessonNum) {
 // HELPER FUNCTIONS
 // ================================================================
 function showLesson(level, lessonNum, tabId) {
+    // Ẩn tất cả lesson
     document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+    
+    // Ẩn tất cả lesson-item trong sidebar
+    document.querySelectorAll('.lesson-item').forEach(el => el.classList.remove('active'));
+    
+    // Cập nhật style khi remove active
+    document.querySelectorAll('.lesson-item').forEach(el => {
+        el.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
+        const numSpan = el.querySelector('.lesson-num');
+        if (numSpan) {
+            numSpan.style.background = '#fce7f3';
+            numSpan.style.color = '#be185d';
+        }
+    });
+    
+    // Hiển thị lesson được chọn
     const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
     if (lessonEl) {
         lessonEl.classList.add('active');
-        switchTab(level, lessonNum, tabId);
     }
+    
+    // Cập nhật active trong sidebar
+    const sidebarItem = document.querySelector(`.lesson-item[onclick*="'${level}', ${lessonNum}"]`);
+    if (!sidebarItem) {
+        // Tìm bằng cách duyệt qua tất cả item
+        document.querySelectorAll('.lesson-item').forEach(item => {
+            const onclick = item.getAttribute('onclick');
+            if (onclick && onclick.includes(`'${level}', ${lessonNum}`)) {
+                item.classList.add('active');
+                item.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
+                const numSpan = item.querySelector('.lesson-num');
+                if (numSpan) {
+                    numSpan.style.background = '#ec4899';
+                    numSpan.style.color = 'white';
+                }
+            }
+        });
+    } else {
+        sidebarItem.classList.add('active');
+        sidebarItem.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
+        const numSpan = sidebarItem.querySelector('.lesson-num');
+        if (numSpan) {
+            numSpan.style.background = '#ec4899';
+            numSpan.style.color = 'white';
+        }
+    }
+    
+    // Switch tab
+    switchTab(level, lessonNum, tabId);
 }
 
 function switchLevel(level, btn) {
