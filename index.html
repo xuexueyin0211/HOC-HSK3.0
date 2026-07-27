@@ -2316,7 +2316,7 @@ background: #FFFAFC;
     selection.removeAllRanges();
 });
 
-        function clearAllHighlights() {
+     function clearAllHighlights() {
     if (confirm('Xóa tất cả highlight?')) {
         document.querySelectorAll('.highlighted').forEach(el => {
             const text = el.textContent;
@@ -2325,7 +2325,11 @@ background: #FFFAFC;
             parent.replaceChild(textNode, el);
             parent.normalize();
         });
-        localStorage.removeItem('hsk_highlights'); // ← SỬA THÀNH 'hsk_highlights'
+        localStorage.removeItem('hsk_highlights');
+        
+        // ← THÊM DÒNG NÀY
+        // Cập nhật lại listeners (nếu vẫn có highlights khác)
+        setTimeout(() => attachHighlightClickListeners(), 100);
     }
 }
 
@@ -2349,12 +2353,8 @@ background: #FFFAFC;
 // ← CHUYỂN event listener vào hàm mới (gọi sau khi render)
 function attachHighlightClickListeners() {
     document.querySelectorAll('.highlighted').forEach(el => {
-        // Loại bỏ listener cũ (nếu có)
-        const newEl = el.cloneNode(true);
-        el.parentNode.replaceChild(newEl, el);
-        
-        // Thêm listener mới
-        newEl.addEventListener('click', function(e) {
+        // Bỏ cách clone, chỉ cần add listener trực tiếp
+        el.addEventListener('click', function(e) {
             e.stopPropagation();
             currentHighlightElement = this;
             const menu = document.getElementById('highlightMenu');
@@ -2435,7 +2435,6 @@ function loadHighlights() {
         parent.replaceChild(textNode, currentHighlightElement);
         parent.normalize();
         
-        // ===== SỬA: Dùng đúng key 'hsk_highlights' =====
         let highlights = JSON.parse(localStorage.getItem('hsk_highlights') || '[]');
         highlights = highlights.filter(h => h.id !== highlightId);
         try { 
@@ -2444,6 +2443,10 @@ function loadHighlights() {
         
         document.getElementById('highlightMenu').style.display = 'none';
         currentHighlightElement = null;
+        
+        // ← THÊM DÒNG NÀY
+        // Cập nhật listeners cho các highlight còn lại
+        setTimeout(() => attachHighlightClickListeners(), 50);
     }
 }
         // ================================================================
