@@ -22,7 +22,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
-       :root {
+      :root {
     /* PRIMARY - Hồng chính */
     --primary-dark: #ec4899;      /* Hồng đậm - buttons, active states */
     --primary-light: #F8BBD0;     /* Hồng nhạt - backgrounds */
@@ -37,6 +37,10 @@
     --text-secondary: #64748b;
     --text-muted: #a0526a;
     --border: #fce7f3;
+    
+    /* SHADOWS - THÊM VÀO */
+    --shadow-sm: 0 2px 12px rgba(212, 165, 255, 0.08);
+    --shadow-md: 0 8px 30px rgba(212, 165, 255, 0.15);
     
     /* FEEDBACK */
     --success: #10b981;
@@ -67,7 +71,7 @@
             text-align: center;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-        .login-box h2 { color: #be185d; margin-bottom: 10px; }
+        .login-box h2 { color: var(--primary-dark); margin-bottom: 10px; }
         .login-box p { color: #666; margin-bottom: 20px; }
         .google-btn {
             display: flex;
@@ -106,17 +110,17 @@
         }
         .lesson-item:hover {
             background: #fdf2f8;
-            color: #f37272;
+            color: var(--primary-dark);
         }
         .lesson-item.active {
-            background: #fdf2f8;
-            color: #f37272;
-            font-weight: 600;
-            border-left-color: #ec4899;
-        }
+    background: #fdf2f8;
+    color: var(--primary-dark);
+    font-weight: 600;
+    border-left-color: var(--primary-dark);
+}
         .lesson-item .lesson-num {
             background: #fce7f3;
-            color: #f37272;
+            color: var(--primary-dark);
             font-size: 10px;
             font-weight: 700;
             padding: 2px 8px;
@@ -137,7 +141,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             padding: 10px 0;
-            border: 1px solid #fce7f3;
+            border: 1px solid var(--border);
             z-index: 99999;
             display: none;
             min-width: 220px;
@@ -152,7 +156,7 @@
             padding: 8px 14px;
             font-size: 12px;
             font-weight: 700;
-            color: #be185d;
+            color: var(--primary-dark);
             text-transform: uppercase;
                         letter-spacing: 0.5px;
         }
@@ -166,7 +170,7 @@
         }
         .lesson-item-tooltip .tooltip-item:hover {
             background: #fdf2f8;
-            color: #be185d;
+            color: var(--primary-dark);
             border-left-color: #ec4899;
             padding-left: 18px;
         }
@@ -407,7 +411,7 @@
         .logo-area h1 span {
             font-size: 13px;
             font-weight: 400;
-            color: #f37272;
+            color: var(--primary-dark);
             display: block;
             font-family: "Noto Sans SC", sans-serif;
         }
@@ -559,7 +563,7 @@
             border-radius: 20px;
             font-size: 11px;
             font-weight: 700;
-            color: #be185d;
+            color: var(--primary-dark);
             border: 1px solid rgba(236, 72, 153, 0.2);
             margin-bottom: 8px;
         }
@@ -569,7 +573,7 @@
     color: #f37272 !important;
             margin-bottom: 4px;
         }
-        .hero-info h2 .highlight { color: #f37272; font-style: italic; }
+        .hero-info h2 .highlight { color: var(--primary-dark); font-style: italic; }
         .hero-info .desc {
             color: #4a4a5a;
             font-size: 13px;
@@ -594,7 +598,7 @@
             border: 1px solid rgba(236, 72, 153, 0.1);
         }
         .hero-info .achievement-item .icon { font-size: 13px; }
-        .hero-info .achievement-item strong { color: #be185d; }
+        .hero-info .achievement-item strong { color: var(--primary-dark); }
 
         /* ===== FEATURES ===== */
         .features-section {
@@ -704,14 +708,14 @@ background: #FFF5FF;
             font-weight: 600;
             font-size: 13px;
 background: white;
-    color: #f37272;            
+    color: var(--primary-dark);            
             cursor: pointer;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
         .hsk-item:hover {
             border-color: #f9a8d4;
-            color: #be185d;
+            color: var(--primary-dark);
             transform: translateY(-2px);
         }
         .hsk-item.active {
@@ -748,7 +752,7 @@ background: white;
         }
         .back-home:hover {
             background: #fce7f3;
-            color: #f37272;
+            color: var(--primary-dark);
         }
 
         /* ===== LESSON ===== */
@@ -763,7 +767,7 @@ background: white;
             flex-shrink: 0;
             background: white;
             border-radius: 16px;
-            border: 1px solid #fce7f3;
+            border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
             padding: 12px 0;
             position: sticky;
@@ -818,7 +822,7 @@ background: white;
             background: white;
             padding: 8px 12px 0 12px;
             border-radius: 14px 14px 0 0;
-            border: 1px solid #fce7f3;
+            border: 1px solid var(--border);
             border-bottom: none;
             flex-wrap: wrap;
         }
@@ -836,11 +840,11 @@ background: white;
         }
         .tab-btn:hover {
             background: #fdf2f8;
-            color: #f37272;
+            color: var(--primary-dark);
         }
         .tab-btn.active {
             background: #FFF5FF;
-    color: #f37272;
+    color: var(--primary-dark);
             font-weight: 700;
         }
         .tab-btn.active::after {
@@ -857,7 +861,7 @@ background: white;
         .tab-content {
             background: white;
             border-radius: 0 0 14px 14px;
-            border: 1px solid #fce7f3;
+            border: 1px solid var(--border);
             padding: 16px;
             margin-bottom: 20px;
         }
@@ -874,7 +878,7 @@ background: white;
             margin-bottom: 20px;
         }
         .grammar h3 {
-            color: #f37272;
+            color: var(--primary-dark);
             font-size: 17px;
             margin-bottom: 12px;
         }
@@ -889,7 +893,7 @@ background: white;
         }
         .subcard .label {
             font-weight: 600;
-            color: #f37272;
+            color: var(--primary-dark);
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -907,7 +911,7 @@ background: #FFFAFC;
             line-height: 1.8;
         }
         .example-label {
-            color: #f37272;
+            color: var(--primary-dark);
             font-weight: 600;
             display: inline-block;
             margin-right: 4px;
@@ -1024,16 +1028,29 @@ background: #FFFAFC;
             border: 1px solid #e0e0e0;
             font-size: 14px;
         }
-        .exercise-item .exercise-result.correct {
-            border-color: #4caf50;
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
-        .exercise-item .exercise-result.wrong {
-            border-color: #f44336;
-            background: #ffebee;
-            color: #c62828;
-        }
+        /* Sử dụng --success */
+.exercise-item .exercise-result.correct {
+    border-color: var(--success);
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Sử dụng --error */
+.exercise-item .exercise-result.wrong {
+    border-color: var(--error);
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* Sử dụng --warning */
+.hsk-tag.hsk2 { 
+    background: var(--warning); 
+}
+
+/* Sử dụng --text-muted */
+.logo-area h1 span {
+    color: var(--text-muted);
+}
 
         .nav {
             display: flex;
@@ -1086,7 +1103,7 @@ background: #FFFAFC;
             padding: 4px 8px;
             border-radius: 6px;
             text-align: center;
-            border: 1px solid #fce7f3;
+            border: 1px solid var(--border);
         }
         .vocab-item .cn { font-size: 16px; display: block; }
         .vocab-item .py { font-size: 10px; color: #db2777; }
@@ -2090,7 +2107,6 @@ background: #FFFAFC;
         function nextTab(hskLevel, lessonNum) {
     const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
     if (!lessonEl) return;
-
     const tabs = lessonEl.querySelectorAll('.tab-btn');
     let activeIndex = -1;
     tabs.forEach((tab, index) => {
@@ -2099,36 +2115,33 @@ background: #FFFAFC;
 
     if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
         const nextTabBtn = tabs[activeIndex + 1];
-        // ← Sửa: Tìm tabId từ button text
-        let tabId = '1'; // default
+        let tabId = '1';
         if (nextTabBtn.textContent.includes('Bài Tập')) {
             tabId = '999';
         } else {
             const match = nextTabBtn.getAttribute('onclick')?.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)/);
             if (match) tabId = match[1].trim();
         }
-        
         switchTab(hskLevel, lessonNum, tabId);
         lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
+    } else {  // ← CHỈ CẦN 1 ELSE
+        const data = cachedData[`grammar-${hskLevel}`];
+        if (data && data.lessons) {
+            const nextLessonNum = lessonNum + 1;
+            if (nextLessonNum <= data.lessons.length) {
+                showLesson(hskLevel, nextLessonNum, '1');
             } else {
-                const data = cachedData[`grammar-${hskLevel}`];
-                if (data && data.lessons) {
-                    const nextLessonNum = lessonNum + 1;
-                    if (nextLessonNum <= data.lessons.length) {
-                        showLesson(hskLevel, nextLessonNum, '1');
-                    } else {
-                        const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                        if (currentLevelIdx < hskLevels.length - 1) {
-                            const nextLevel = hskLevels[currentLevelIdx + 1];
-                            showContent('grammar', nextLevel);
-                        } else {
-                            alert("🎉 Bạn đã học xong toàn bộ chương trình!");
-                        }
-                    }
+                const currentLevelIdx = hskLevels.indexOf(hskLevel);
+                if (currentLevelIdx < hskLevels.length - 1) {
+                    const nextLevel = hskLevels[currentLevelIdx + 1];
+                    showContent('grammar', nextLevel);
+                } else {
+                    alert("🎉 Bạn đã học xong toàn bộ chương trình!");
                 }
             }
         }
+    }
+}
 
         function prevTab(hskLevel, lessonNum) {
             const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
@@ -2318,21 +2331,38 @@ background: #FFFAFC;
 
         function saveHighlights() {
     const highlights = [];
-document.querySelectorAll('.highlighted').forEach(el => {
-    el.addEventListener('click', function(e) {
-        e.stopPropagation();
-        currentHighlightElement = this;
-        const menu = document.getElementById('highlightMenu');
-        menu.style.left = e.pageX + 'px';
-        menu.style.top = e.pageY + 'px';
-        menu.style.display = 'flex';
+    // Thu thập dữ liệu highlight
+    document.querySelectorAll('.highlighted').forEach(el => {
+        highlights.push({
+            id: el.dataset.highlightId,
+            text: el.textContent,
+            color: el.style.backgroundColor || '#ffe0b2'
+        });
     });
-});
     try {
         localStorage.setItem('hsk_highlights', JSON.stringify(highlights));
     } catch (e) {
         console.warn('Không thể lưu highlight:', e);
     }
+}
+
+// ← CHUYỂN event listener vào hàm mới (gọi sau khi render)
+function attachHighlightClickListeners() {
+    document.querySelectorAll('.highlighted').forEach(el => {
+        // Loại bỏ listener cũ (nếu có)
+        const newEl = el.cloneNode(true);
+        el.parentNode.replaceChild(newEl, el);
+        
+        // Thêm listener mới
+        newEl.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentHighlightElement = this;
+            const menu = document.getElementById('highlightMenu');
+            menu.style.left = e.pageX + 'px';
+            menu.style.top = e.pageY + 'px';
+            menu.style.display = 'flex';
+        });
+    });
 }
 
 function loadHighlights() {
@@ -2386,6 +2416,7 @@ function loadHighlights() {
                     }
                 });
             });
+                        attachHighlightClickListeners(); // ← THÊM DÒNG NÀY
         }, 500);
     } catch (e) {
         console.log('Lỗi load highlight:', e);
