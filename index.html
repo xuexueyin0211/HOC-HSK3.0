@@ -1865,19 +1865,11 @@ if (lesson.exercises && lesson.exercises.length > 0) {
         const exDiv = document.createElement('div');
         exDiv.className = 'exercise-item';
 
-        // Hiển thị câu tiếng Trung (nếu có)
-        if (ex.cn) {
-            const cnDiv = document.createElement('div');
-            cnDiv.style.cssText = 'font-size:22px;font-weight:700;color:#1e293b;font-family:"Kaiti","SimSun",sans-serif;margin-bottom:8px;';
-            cnDiv.textContent = ex.cn;
-            exDiv.appendChild(cnDiv);
-        }
-
-        // Hiển thị câu hỏi (luôn có)
-        const qDiv = document.createElement('div');
-        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-        qDiv.textContent = `${idx + 1}. ${ex.question}`;
-        exDiv.appendChild(qDiv);
+        // Hiển thị câu hỏi (luôn có) - KHÔNG cần if (ex.cn) nữa
+const qDiv = document.createElement('div');
+qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+qDiv.textContent = `${idx + 1}. ${ex.question}`;
+exDiv.appendChild(qDiv);
 
         // Hiển thị các lựa chọn
         const optionsDiv = document.createElement('div');
