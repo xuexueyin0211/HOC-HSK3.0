@@ -1573,9 +1573,10 @@
                 style="padding:4px 10px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;">Highlight</button>
             <button onclick="clearAllHighlights()"
                 style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
+            <br>
             <span style="width:1px;height:20px;background:#ddd;display:inline-block;"></span>
-            <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">🔄 Flashcard</button>
-        <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">📋 Chưa nắm</button>
+            <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">Flashcard</button>
+        <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
         </div>
     </div>
 
@@ -1585,16 +1586,14 @@
 
    <div class="flashcard-modal" id="flashcardModal">
     <div class="flashcard-box">
-        <div style="text-align:center;margin-bottom:10px;font-size:13px;color:#666;">📚 Ôn tập lại các ví dụ</div>
+        <div style="text-align:center;margin-bottom:10px;font-size:13px;color:#666;">Ôn tập lại các ví dụ</div>
         <div class="card-count" id="flashcardCount">1/10</div>
         <div class="card-face" id="flashcardFace">
             <span class="cn">你好</span>
         </div>
         <div class="flashcard-actions">
             <button class="btn-show" onclick="flashcardShowAnswer()">Xem nghĩa</button>
-            <button class="btn-prev" onclick="flashcardPrev()">⬅️</button>
-            <button class="btn-next" onclick="flashcardNext()">➡️</button>
-            <button class="btn-close" onclick="closeFlashcard()">❌ Đóng</button>
+            <button class="btn-close" onclick="closeFlashcard()">Đóng</button>
         </div>
         <div style="display:flex;gap:10px;margin-top:15px;justify-content:center;">
             <button onclick="markAsUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#4caf50;color:white;font-weight:600;cursor:pointer;">✅ Đã nắm được</button>
