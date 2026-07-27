@@ -2015,50 +2015,51 @@ background: #FFFAFC;
         // SWITCH TAB
         // ================================================================
         function switchTab(level, lessonNum, tabId) {
-            const lessonEl = document.getElementById(`lesson-${level}-${lessonNum}`);
-            if (!lessonEl) return;
 
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            const panes = lessonEl.querySelectorAll('.tab-pane');
+    const lesson = document.getElementById(`lesson-${level}-${lessonNum}`);
+    if (!lesson) return;
 
-            tabs.forEach(tab => tab.classList.remove('active'));
-            panes.forEach(pane => pane.classList.remove('active'));
+    // tắt toàn bộ tab
+    lesson.querySelectorAll(".tab-btn").forEach(btn=>{
+        btn.classList.remove("active");
+    });
 
-            const tabIdStr = String(tabId);
-            let targetTabBtn = null;
-            
-            tabs.forEach(tab => {
-                const onclickAttr = tab.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1].trim() === tabIdStr) {
-                        targetTabBtn = tab;
-                    }
-                }
-            });
-            
-            if (!targetTabBtn && tabIdStr === '999') {
-                targetTabBtn = Array.from(tabs).find(tab => tab.textContent.includes('Bài Tập'));
-            }
-            
-            if (!targetTabBtn) {
-                const tabIndex = parseInt(tabIdStr) - 1;
-                if (tabIndex >= 0 && tabs[tabIndex]) {
-                    targetTabBtn = tabs[tabIndex];
-                }
-            }
+    lesson.querySelectorAll(".tab-pane").forEach(pane=>{
+        pane.classList.remove("active");
+    });
 
-            if (targetTabBtn) {
-                targetTabBtn.classList.add('active');
-            }
+    // tìm tab theo data-tab trước
+    let targetBtn =
+        lesson.querySelector(`.tab-btn[data-tab="${tabId}"]`);
 
-            const targetPane = document.getElementById(`tab-${level}-${lessonNum}-${tabIdStr}`);
-            if (targetPane) {
-                targetPane.classList.add('active');
-            }
+    // nếu chưa có data-tab thì tìm theo onclick
+    if(!targetBtn){
 
-            currentTab = tabIdStr;
-        }
+        targetBtn=[...lesson.querySelectorAll(".tab-btn")].find(btn=>{
+
+            const onclick=btn.getAttribute("onclick")||"";
+
+            return onclick.includes(`'${tabId}'`) ||
+                   onclick.includes(`"${tabId}"`);
+
+        });
+
+    }
+
+    if(targetBtn)
+        targetBtn.classList.add("active");
+
+    // bật pane
+    const pane=document.getElementById(
+        `tab-${level}-${lessonNum}-${tabId}`
+    );
+
+    if(pane)
+        pane.classList.add("active");
+
+    currentTab=tabId;
+
+}
 
         // ================================================================
         // SHOW LESSON
@@ -2104,87 +2105,128 @@ background: #FFFAFC;
         // ================================================================
         // NEXT / PREV TAB
         // ================================================================
-        function nextTab(hskLevel, lessonNum) {
-    const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-    if (!lessonEl) return;
-    const tabs = lessonEl.querySelectorAll('.tab-btn');
-    let activeIndex = -1;
-    tabs.forEach((tab, index) => {
-        if (tab.classList.contains('active')) activeIndex = index;
-    });
+        function nextTab(hskLevel, lessonNum){
 
-    if (activeIndex >= 0 && activeIndex < tabs.length - 1) {
-        const nextTabBtn = tabs[activeIndex + 1];
-        let tabId = '1';
-        if (nextTabBtn.textContent.includes('Bài Tập')) {
-            tabId = '999';
-        } else {
-            const match = nextTabBtn.getAttribute('onclick')?.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)/);
-            if (match) tabId = match[1].trim();
-        }
-        switchTab(hskLevel, lessonNum, tabId);
-        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {  // ← CHỈ CẦN 1 ELSE
-        const data = cachedData[`grammar-${hskLevel}`];
-        if (data && data.lessons) {
-            const nextLessonNum = lessonNum + 1;
-            if (nextLessonNum <= data.lessons.length) {
-                showLesson(hskLevel, nextLessonNum, '1');
-            } else {
-                const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                if (currentLevelIdx < hskLevels.length - 1) {
-                    const nextLevel = hskLevels[currentLevelIdx + 1];
-                    showContent('grammar', nextLevel);
-                } else {
-                    alert("🎉 Bạn đã học xong toàn bộ chương trình!");
-                }
-            }
-        }
+    const lesson=document.getElementById(
+        `lesson-${hskLevel}-${lessonNum}`
+    );
+
+    if(!lesson) return;
+
+    const tabs=[...lesson.querySelectorAll(".tab-btn")];
+
+    let active=tabs.findIndex(tab=>
+        tab.classList.contains("active")
+    );
+
+    // còn tab tiếp
+    if(active<tabs.length-1){
+
+        tabs[active+1].click();
+
+        return;
+
     }
+
+    // sang bài tiếp
+    const data=cachedData[`grammar-${hskLevel}`];
+
+    if(!data) return;
+
+    if(lessonNum<data.lessons.length){
+
+        showLesson(
+            hskLevel,
+            lessonNum+1,
+            "1"
+        );
+
+        return;
+
+    }
+
+    // sang HSK tiếp
+    const idx=hskLevels.indexOf(hskLevel);
+
+    if(idx<hskLevels.length-1){
+
+        const nextLevel=hskLevels[idx+1];
+
+        showContent("grammar",nextLevel);
+
+        setTimeout(()=>{
+
+            showLesson(nextLevel,1,"1");
+
+        },300);
+
+    }else{
+
+        alert("🎉 Bạn đã hoàn thành toàn bộ khóa học!");
+
+    }
+
 }
+       function prevTab(hskLevel,lessonNum){
 
-        function prevTab(hskLevel, lessonNum) {
-            const lessonEl = document.getElementById(`lesson-${hskLevel}-${lessonNum}`);
-            if (!lessonEl) return;
+    const lesson=document.getElementById(
+        `lesson-${hskLevel}-${lessonNum}`
+    );
 
-            const tabs = lessonEl.querySelectorAll('.tab-btn');
-            let activeIndex = -1;
-            tabs.forEach((tab, index) => {
-                if (tab.classList.contains('active')) activeIndex = index;
-            });
+    if(!lesson) return;
 
-            if (activeIndex > 0) {
-                const prevTabBtn = tabs[activeIndex - 1];
-                let tabId = activeIndex.toString();
-                
-                const onclickAttr = prevTabBtn.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/switchTab\([^,]+,\s*\d+,\s*['"]?([^'"\)]+)['"]?\)/);
-                    if (match && match[1]) {
-                        tabId = match[1].trim();
-                    }
-                }
-                
-                switchTab(hskLevel, lessonNum, tabId);
-                lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else if (lessonNum > 1) {
-                const prevLessonNum = lessonNum - 1;
-                showLesson(hskLevel, prevLessonNum, '1');
-            } else {
-                const currentLevelIdx = hskLevels.indexOf(hskLevel);
-                if (currentLevelIdx > 0) {
-                    const prevLevel = hskLevels[currentLevelIdx - 1];
-                    const data = cachedData[`grammar-${prevLevel}`];
-                    if (data && data.lessons && data.lessons.length > 0) {
-                        const lastLessonId = data.lessons[data.lessons.length - 1].id;
-                        showContent('grammar', prevLevel);
-                        setTimeout(() => {
-                            showLesson(prevLevel, lastLessonId, '1');
-                        }, 500);
-                    }
-                }
-            }
-        }
+    const tabs=[...lesson.querySelectorAll(".tab-btn")];
+
+    let active=tabs.findIndex(tab=>
+        tab.classList.contains("active")
+    );
+
+    // còn tab trước
+    if(active>0){
+
+        tabs[active-1].click();
+
+        return;
+
+    }
+
+    // về bài trước
+    if(lessonNum>1){
+
+        showLesson(
+            hskLevel,
+            lessonNum-1,
+            "1"
+        );
+
+        return;
+
+    }
+
+    // về HSK trước
+    const idx=hskLevels.indexOf(hskLevel);
+
+    if(idx>0){
+
+        const prevLevel=hskLevels[idx-1];
+
+        const data=cachedData[`grammar-${prevLevel}`];
+
+        showContent("grammar",prevLevel);
+
+        setTimeout(()=>{
+
+            showLesson(
+                prevLevel,
+                data.lessons.length,
+                "1"
+            );
+
+        },300);
+
+    }
+
+}
 
         // ================================================================
         // AUDIO
