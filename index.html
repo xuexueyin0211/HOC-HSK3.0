@@ -1429,38 +1429,17 @@
     const key = `${module}-${level}`;
     if (cachedData[key]) return cachedData[key];
 
-    try {
-        const path = MODULES[module].path + level + '.json';
-        const response = await fetch(path);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        
-        let innerData = data;
-        if (data[level]) innerData = data[level];
-        if (!innerData.lessons && !innerData.items) {
-            const keys = Object.keys(data);
-            for (const k of keys) {
-                if (data[k] && (data[k].lessons || data[k].items)) {
-                    innerData = data[k];
-                    break;
-                }
-            }
-        }
-        
-        if (!innerData.lessons && !innerData.items && !innerData.exercises) {
-            return getFallbackData(module, level);
-        }
-        
-        // ===== THÊM DÒNG NÀY: Lưu vào hskData để search dùng =====
-        hskData[level] = innerData;
-        
-        cachedData[key] = innerData;
-        return innerData;
-    } catch (error) {
-        return getFallbackData(module, level);
+    // Luôn dùng fallback data (không fetch file)
+    const data = getFallbackData(module, level);
+    
+    if (data) {
+        hskData[level] = data;
+        cachedData[key] = data;
     }
+    
+    return data || getFallbackData(module, level);
 }
-
+        
         function getFallbackData(module, level) {
             const fallbacks = {
                 grammar: {
@@ -1532,17 +1511,31 @@
         // RENDER CONTENT
         // ================================================================
         function renderContent(module, level, data) {
-            contentInner.innerHTML = '';
-            if (module === 'grammar' && data.lessons) {
-                renderGrammarLessons(level, data);
-            } else if (data.items) {
-                renderCardItems(module, data);
-            } else if (data.exercises) {
-                renderPractice(data);
-            } else {
-                contentInner.innerHTML = `<p style="color:#a0526a;text-align:center;padding:40px;">Chưa có dữ liệu cho phần này.</p>`;
-            }
-        }
+    console.log('Dữ liệu nhận được:', data); // Debug
+    
+    contentInner.innerHTML = '';
+    
+    // Kiểm tra data có hợp lệ không
+    if (!data) {
+        contentInner.innerHTML = `<p style="color:#a0526a;text-align:center;padding:40px;">Dữ liệu trống!</p>`;
+        return;
+    }
+    
+    if (module === 'grammar' && data.lessons && data.lessons.length > 0) {
+        renderGrammarLessons(level, data);
+    } else if (data.items && data.items.length > 0) {
+        renderCardItems(module, data);
+    } else if (data.exercises && data.exercises.length > 0) {
+        renderPractice(data);
+    } else {
+        contentInner.innerHTML = `
+            <p style="color:#a0526a;text-align:center;padding:40px;">
+                Chưa có dữ liệu cho phần này.<br>
+                Module: ${module} | Level: ${level}
+            </p>
+        `;
+    }
+}
 
         // ================================================================
         // RENDER GRAMMAR LESSONS (có sidebar)
@@ -1608,7 +1601,7 @@
                 ${tab.title}
             </div>
         `).join('')}
-        <div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${hskLevel}', ${lesson.id}, '999')" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
+        <div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${level}', ${lesson.id}, '999')" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
             ✏️ Bài Tập
         </div>
     </div>
