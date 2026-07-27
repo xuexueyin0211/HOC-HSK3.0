@@ -1425,48 +1425,111 @@
         // ================================================================
         // LOAD DATA
         // ================================================================
-        async function loadModuleData(module, level) {
+        // ================================================================
+// LOAD DATA - HỖ TRỢ FETCH JSON + FALLBACK
+// ================================================================
+async function loadModuleData(module, level) {
     const key = `${module}-${level}`;
     if (cachedData[key]) return cachedData[key];
 
-    // Luôn dùng fallback data (không fetch file)
-    const data = getFallbackData(module, level);
-    
-    if (data) {
-        hskData[level] = data;
-        cachedData[key] = data;
+    try {
+        // ===== THỬ FETCH FILE JSON =====
+        const path = MODULES[module].path + level + '.json';
+        const response = await fetch(path);
+        
+        if (response.ok) {
+            const data = await response.json();
+            
+            // Xử lý dữ liệu (hỗ trợ cả 2 cấu trúc)
+            let innerData = data;
+            if (data[level]) innerData = data[level];
+            if (!innerData.lessons && !innerData.items) {
+                const keys = Object.keys(data);
+                for (const k of keys) {
+                    if (data[k] && (data[k].lessons || data[k].items)) {
+                        innerData = data[k];
+                        break;
+                    }
+                }
+            }
+            
+            // Lưu vào cache
+            hskData[level] = innerData;
+            cachedData[key] = innerData;
+            console.log(`✅ Đã tải ${key} từ JSON`);
+            return innerData;
+        } else {
+            // File không tồn tại → dùng fallback
+            console.warn(`⚠️ Không tìm thấy ${path}, dùng fallback`);
+            const fallback = getFallbackData(module, level);
+            hskData[level] = fallback;
+            cachedData[key] = fallback;
+            return fallback;
+        }
+        
+    } catch (error) {
+        // Lỗi fetch → dùng fallback
+        console.warn(`⚠️ Lỗi tải ${path}:`, error);
+        const fallback = getFallbackData(module, level);
+        hskData[level] = fallback;
+        cachedData[key] = fallback;
+        return fallback;
     }
-    
-    return data || getFallbackData(module, level);
 }
         
         function getFallbackData(module, level) {
-            const fallbacks = {
-                grammar: {
-                    badge: `📚 ${level.toUpperCase()}`,
-                    title: `Ngữ pháp ${level.toUpperCase()}`,
-                    subtitle: 'Cấu trúc ngữ pháp quan trọng',
-                    lessons: [{
-                        id: 1,
-                        title: `Bài 1: Giới thiệu`,
-                        tabs: [{
-                            id: '1',
-                            title: '① Lý thuyết',
-                            subcards: [{ label: '📌 Cấu trúc', text: 'Nội dung mẫu' }],
-                            examples: [{ cn: '你好', py: 'nǐ hǎo', vi: 'Xin chào' }]
-                        }],
-                        exercises: [{ question: 'Câu hỏi mẫu?', options: ['A', 'B', 'C', 'D'], answer: 0 }]
-                    }]
-                },
-                vocab: { badge: `📚 ${level.toUpperCase()}`, title: `Từ vựng`, subtitle: 'Danh sách từ', items: [{ icon: '📖', title: 'Chủ đề 1', desc: 'Mô tả', tag: '10 từ', likes: 20 }] },
-                hanzi: { badge: `🀄 ${level.toUpperCase()}`, title: `Chữ Hán`, subtitle: 'Luyện viết', items: [{ icon: '✍️', title: 'Bộ thủ', desc: 'Mô tả', tag: '30 bộ', likes: 8 }] },
-                practice: { badge: `📖 ${level.toUpperCase()}`, title: `Luyện đề`, subtitle: 'Đề thi thử', exercises: [{ question: 'Câu hỏi 1', options: ['A', 'B', 'C', 'D'], answer: 0 }] },
-                dictation: { badge: `🎧 ${level.toUpperCase()}`, title: `Nghe chép`, subtitle: 'Luyện nghe', items: [{ icon: '🎵', title: 'Bài nghe 1', desc: 'Mô tả', tag: '2:30', likes: 12 }] },
-                shadowing: { badge: `🗣️ ${level.toUpperCase()}`, title: `Shadowing`, subtitle: 'Luyện nói', items: [{ icon: '🗣️', title: 'Bài 1', desc: 'Mô tả', tag: '2:00', likes: 10 }] }
-            };
-            return fallbacks[module] || { title: 'Dữ liệu', subtitle: '', items: [] };
+    // Trả về dữ liệu rỗng với thông báo "Chưa có dữ liệu"
+    const emptyData = {
+        grammar: {
+            badge: `📚 ${level.toUpperCase()}`,
+            title: `Ngữ pháp ${level.toUpperCase()}`,
+            subtitle: 'Chưa có dữ liệu',
+            lessons: [{
+                id: 1,
+                title: `Bài 1: Chưa có dữ liệu`,
+                tabs: [{
+                    id: '1',
+                    title: '① Chưa có dữ liệu',
+                    subcards: [{ label: '📌 Thông báo', text: 'Chưa có dữ liệu cho phần này. Vui lòng thêm file JSON sau.' }],
+                    examples: [{ cn: '暂无数据', py: 'zàn wú shù jù', vi: 'Chưa có dữ liệu' }]
+                }],
+                exercises: [{ question: 'Chưa có bài tập', options: ['A', 'B', 'C', 'D'], answer: 0 }]
+            }]
+        },
+        vocab: {
+            badge: `📚 ${level.toUpperCase()}`,
+            title: `Từ vựng ${level.toUpperCase()}`,
+            subtitle: 'Chưa có dữ liệu',
+            items: [{ icon: '📖', title: 'Chưa có dữ liệu', desc: 'Vui lòng thêm file JSON sau', tag: '0 từ', likes: 0 }]
+        },
+        hanzi: {
+            badge: `🀄 ${level.toUpperCase()}`,
+            title: `Chữ Hán ${level.toUpperCase()}`,
+            subtitle: 'Chưa có dữ liệu',
+            items: [{ icon: '✍️', title: 'Chưa có dữ liệu', desc: 'Vui lòng thêm file JSON sau', tag: '0 bộ', likes: 0 }]
+        },
+        practice: {
+            badge: `📖 ${level.toUpperCase()}`,
+            title: `Luyện đề ${level.toUpperCase()}`,
+            subtitle: 'Chưa có dữ liệu',
+            exercises: [{ question: 'Chưa có câu hỏi', options: ['A', 'B', 'C', 'D'], answer: 0 }]
+        },
+        dictation: {
+            badge: `🎧 ${level.toUpperCase()}`,
+            title: `Nghe chép ${level.toUpperCase()}`,
+            subtitle: 'Chưa có dữ liệu',
+            items: [{ icon: '🎵', title: 'Chưa có dữ liệu', desc: 'Vui lòng thêm file JSON sau', tag: '0:00', likes: 0 }]
+        },
+        shadowing: {
+            badge: `🗣️ ${level.toUpperCase()}`,
+            title: `Shadowing ${level.toUpperCase()}`,
+            subtitle: 'Chưa có dữ liệu',
+            items: [{ icon: '🗣️', title: 'Chưa có dữ liệu', desc: 'Vui lòng thêm file JSON sau', tag: '0:00', likes: 0 }]
         }
-
+    };
+    
+    return emptyData[module] || { title: 'Chưa có dữ liệu', subtitle: '', items: [] };
+}
         // ================================================================
         // SHOW CONTENT
         // ================================================================
