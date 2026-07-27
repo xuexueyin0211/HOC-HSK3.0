@@ -96,8 +96,7 @@
         ],
         "exercises": [
           {
-            "cn": "你就是新汉语老师吧？",
-            "question": "Trong câu 你就是新汉语老师吧？, trợ từ ngữ khí 吧 được dùng với mục đích gì?",
+            "question": "Trong câu \"你就是新汉语老师吧？\", trợ từ ngữ khí 吧 được dùng với mục đích gì?",
             "options": [
               "Hỏi khi hoàn toàn chưa biết thông tin",
               "Hỏi để xác nhận lại phán đoán/suy đoán đã có sẵn",
@@ -107,8 +106,7 @@
             "answer": 1
           },
           {
-            "cn": "你是中国人吗？/ 你是中国人吧？",
-            "question": "Điểm khác biệt chính giữa 2 câu trên là gì?",
+            "question": "Điểm khác biệt chính giữa câu dùng 吗 và câu dùng 吧 là gì?",
             "options": [
               "Câu dùng 吗 là câu hỏi tu từ, câu dùng 吧 là câu hỏi nghi vấn",
               "Câu dùng 吗 hỏi khi chưa biết; câu dùng 吧 hỏi khi đã đoán được phần nào và muốn xác nhận",
@@ -118,8 +116,7 @@
             "answer": 1
           },
           {
-            "cn": "要下雨了吧？",
-            "question": "Khi thấy mây đen giăng kín trời, câu nào dưới đây diễn đạt đúng ý: \"Trời sắp mưa rồi nhỉ?\"",
+            "question": "Khi thấy mây đen giăng kín trời, câu nào diễn đạt đúng ý \"Trời sắp mưa rồi nhỉ?\"",
             "options": [
               "要下雨了吧？",
               "要下雨了吗？",
@@ -129,8 +126,7 @@
             "answer": 0
           },
           {
-            "cn": "是...的 cấu trúc nhấn mạnh",
-            "question": "Cấu trúc nhấn mạnh 是...的 KHÔNG thể dùng cho trường hợp nào sau đây?",
+            "question": "Cấu trúc nhấn mạnh 是...的 KHÔNG thể dùng cho trường hợp nào?",
             "options": [
               "Nhấn mạnh thời gian xảy ra hành động",
               "Nhấn mạnh địa điểm xảy ra hành động",
@@ -140,8 +136,7 @@
             "answer": 3
           },
           {
-            "cn": "我(1)是(2)昨天(3)到北京(4)。",
-            "question": "Chọn vị trí thích hợp để điền 的 vào câu:",
+            "question": "Chọn vị trí thích hợp để điền 的 vào câu: 我(1)是(2)昨天(3)到北京(4)。",
             "options": [
               "Vị trí 1",
               "Vị trí 2",
@@ -151,8 +146,7 @@
             "answer": 3
           },
           {
-            "cn": "Câu sai ngữ pháp",
-            "question": "Câu nào sau đây sai ngữ pháp?",
+            "question": "Câu nào sau đây SAI ngữ pháp?",
             "options": [
               "我昨天来的。",
               "我是昨天去的北京。",
@@ -162,8 +156,7 @@
             "answer": 2
           },
           {
-            "cn": "他是坐飞机来的。",
-            "question": "Dạng phủ định của câu trên là gì?",
+            "question": "Dạng phủ định của câu \"他是坐飞机来的。\" là gì?",
             "options": [
               "他没坐飞机来。",
               "他不是坐飞机来的。",
@@ -173,7 +166,6 @@
             "answer": 1
           },
           {
-            "cn": "Câu kiêm ngữ",
             "question": "Câu nào dưới đây là một câu kiêm ngữ?",
             "options": [
               "我去商店买东西。",
@@ -184,8 +176,7 @@
             "answer": 1
           },
           {
-            "cn": "老师请大家回答问题。",
-            "question": "Trong câu trên, thành phần nào đóng vai trò là kiêm ngữ?",
+            "question": "Trong câu \"老师请大家回答问题。\", thành phần nào đóng vai trò là kiêm ngữ?",
             "options": [
               "老师",
               "请",
@@ -195,8 +186,7 @@
             "answer": 2
           },
           {
-            "cn": "老师_____小张去上海学习。",
-            "question": "Điền động từ kiêm ngữ phù hợp vào chỗ trống",
+            "question": "Điền động từ kiêm ngữ phù hợp vào chỗ trống: 老师_____小张去上海学习。",
             "options": [
               "让",
               "去",
@@ -288,8 +278,7 @@
         ],
         "exercises": [
           {
-            "cn": "我们还是坐地铁吧。",
-            "question": "Câu nào dưới đây thể hiện sự đề xuất/đưa ra lựa chọn nhẹ nhàng sau khi cân nhắc?",
+            "question": "Câu nào thể hiện sự đề xuất/đưa ra lựa chọn nhẹ nhàng sau khi cân nhắc?",
             "options": [
               "我们还是坐地铁吧。",
               "我们坐地铁吗？",
@@ -299,8 +288,7 @@
             "answer": 0
           },
           {
-            "cn": "天气太冷了，我们(1)在(2)房间里(3)看书(4)吧。",
-            "question": "Chọn vị trí thích hợp để điền 还是 vào câu:",
+            "question": "Chọn vị trí thích hợp để điền 还是 vào câu: 天气太冷了，我们(1)在(2)房间里(3)看书(4)吧。",
             "options": [
               "Vị trí 1",
               "Vị trí 2",
@@ -310,8 +298,7 @@
             "answer": 1
           },
           {
-            "cn": "多 với số tròn chục",
-            "question": "Khi số chia hết 10 (tròn chục), từ 多 được đặt ở đâu?",
+            "question": "Khi số chia hết cho 10 (tròn chục), từ 多 được đặt ở đâu?",
             "options": [
               "Đứng trước số tròn chục",
               "Đứng sau số tròn chục và trước lượng từ",
@@ -321,7 +308,6 @@
             "answer": 1
           },
           {
-            "cn": "Hơn 20 cân",
             "question": "Cách diễn đạt nào đúng khi nói 'hơn 20 cân'?",
             "options": [
               "多二十斤",
@@ -332,8 +318,7 @@
             "answer": 1
           },
           {
-            "cn": "多 với số không tròn chục",
-            "question": "Nếu số không chia hết cho 10 (không tròn chục), từ 多 được đặt ở đâu?",
+            "question": "Nếu số không chia hết cho 10, từ 多 được đặt ở đâu?",
             "options": [
               "Đứng trước số từ",
               "Đứng sau số từ",
@@ -343,8 +328,7 @@
             "answer": 2
           },
           {
-            "cn": "Hơn 3 tháng",
-            "question": "Cách biểu thị 'hơn 3 tháng' nào sau đây là đúng ngữ pháp?",
+            "question": "Cách biểu thị 'hơn 3 tháng' nào đúng ngữ pháp?",
             "options": [
               "三个多月",
               "多三个月",
@@ -354,8 +338,7 @@
             "answer": 0
           },
           {
-            "cn": "Câu sai ngữ pháp (định ngữ)",
-            "question": "Câu nào sau đây sai ngữ pháp?",
+            "question": "Câu nào sau đây SAI ngữ pháp?",
             "options": [
               "这是我买的水果。",
               "那是新来的老师。",
@@ -365,8 +348,7 @@
             "answer": 3
           },
           {
-            "cn": "唱歌的人是我的好朋友。",
-            "question": "Dịch câu sau sang tiếng Trung: 'Người đang hát là bạn thân của tôi.'",
+            "question": "Dịch sang tiếng Trung: 'Người đang hát là bạn thân của tôi.'",
             "options": [
               "唱歌的人是我的好朋友。",
               "人唱歌是我的好朋友。",
@@ -376,8 +358,7 @@
             "answer": 0
           },
           {
-            "cn": "昨天在超市买的苹果",
-            "question": "Xác định trung tâm ngữ (đối tượng chính được miêu tả) trong cụm từ trên?",
+            "question": "Xác định trung tâm ngữ trong cụm từ: 昨天在超市买的苹果",
             "options": [
               "昨天",
               "超市",
@@ -387,8 +368,7 @@
             "answer": 3
           },
           {
-            "cn": "新来的同学是昨天_____年轻人。",
-            "question": "Điền từ thích hợp vào chỗ trống: ",
+            "question": "Điền từ thích hợp vào chỗ trống: 新来的同学是昨天_____年轻人。",
             "options": [
               "踢足球的",
               "踢足球了",
@@ -500,14 +480,12 @@
         ],
         "exercises": [
           {
-            "cn": "我听______了，请你再说一遍。",
-            "question": "Điền bổ ngữ kết quả thích hợp vào chỗ trống: ",
+            "question": "Điền bổ ngữ kết quả thích hợp vào chỗ trống: 我听______了，请你再说一遍。",
             "options": ["懂", "见", "完"],
             "answer": 1
           },
           {
-            "cn": "我做完作业了。",
-            "question": "Câu nào dưới đây sử dụng đúng bổ ngữ kết quả để diễn đạt: \"Tôi đã làm xong bài tập rồi\"?",
+            "question": "Câu nào dùng đúng bổ ngữ kết quả để diễn đạt \"Tôi đã làm xong bài tập rồi\"?",
             "options": [
               "我做完作业了。",
               "我作业做好了了。",
@@ -517,8 +495,7 @@
             "answer": 0
           },
           {
-            "cn": "我看见他了。",
-            "question": "Dạng phủ định của bổ ngữ kết quả trên là gì?",
+            "question": "Dạng phủ định của bổ ngữ kết quả trong câu \"我看见他了。\" là gì?",
             "options": [
               "我不看见他。",
               "我没看见他。",
@@ -528,14 +505,12 @@
             "answer": 1
           },
           {
-            "cn": "这道题你做______了，应该选A。",
-            "question": "Điền bổ ngữ kết quả thích hợp vào chỗ trống: ",
+            "question": "Điền bổ ngữ kết quả thích hợp: 这道题你做______了，应该选A。",
             "options": ["对", "错", "完", "见"],
             "answer": 1
           },
           {
-            "cn": "Bổ ngữ kết quả với tân ngữ",
-            "question": "Khi động từ mang tân ngữ và có bổ ngữ kết quả, tân ngữ đứng ở vị trí nào?",
+            "question": "Khi động từ có tân ngữ và bổ ngữ kết quả, tân ngữ đứng ở vị trí nào?",
             "options": [
               "Đứng trước động từ",
               "Đứng giữa động từ và bổ ngữ kết quả",
@@ -544,19 +519,17 @@
             "answer": 2
           },
           {
-            "cn": "Lặp lại động từ",
-            "question": "Việc lặp lại động từ (trùng điệp động từ) mang ý nghĩa/mục đích gì?",
+            "question": "Lặp lại động từ mang ý nghĩa/mục đích gì?",
             "options": [
               "Biểu thị hành động diễn ra trong thời gian dài",
-              "Biểu thị hành động diễn ra ngắn, nhẹ nhàng, mang tính thử nghiệm/thoải mái",
+              "Biểu thị hành động diễn ra ngắn, nhẹ nhàng, mang tính thử nghiệm",
               "Biểu thị hành động chắc chắn xảy ra trong tương lai",
               "Biểu thị sự bắt buộc phải thực hiện hành động"
             ],
             "answer": 1
           },
           {
-            "cn": "听了听",
-            "question": "Hình thức lặp lại đúng của động từ đơn âm tiết 听 (tīng) khi biểu thị sự việc đã xảy ra là gì?",
+            "question": "Hình thức lặp lại đúng của động từ 听 khi biểu thị sự việc đã xảy ra là gì?",
             "options": [
               "听听了",
               "听了听",
@@ -566,19 +539,17 @@
             "answer": 1
           },
           {
-            "cn": "学习学习",
-            "question": "Động từ hai âm tiết 学习 (xuéxí) có hình thức lặp lại là gì?",
+            "question": "Động từ 学习 có hình thức lặp lại là gì?",
             "options": [
               "学学习习",
               "学习学习",
-              "学习学 ",
+              "学习学",
               "学习了习"
             ],
             "answer": 1
           },
           {
-            "cn": "今天周末，我们出去逛逛吧。",
-            "question": "Chọn câu đúng ngữ pháp diễn đạt ý: \"Hôm nay là cuối tuần, chúng ta đi ra ngoài dạo chút đi.\"",
+            "question": "Chọn câu đúng diễn đạt: \"Hôm nay là cuối tuần, chúng ta đi ra ngoài dạo chút đi.\"",
             "options": [
               "今天周末，我们出去逛逛吧。",
               "今天周末，我们出去逛逛逛吧。",
@@ -588,8 +559,7 @@
             "answer": 0
           },
           {
-            "cn": "Trường hợp không dùng lặp lại động từ",
-            "question": "Trường hợp nào sau đây KHÔNG ĐƯỢC dùng hình thức lặp lại động từ?",
+            "question": "Trường hợp nào KHÔNG được dùng hình thức lặp lại động từ?",
             "options": [
               "Khi muốn nhờ ai đó thử làm gì",
               "Khi diễn tả hành động đang diễn ra tại thời điểm nói",
@@ -691,63 +661,103 @@
         ],
         "exercises": [
           {
-            "cn": "过 biểu thị trải nghiệm",
-            "question": "Trợ từ động thái \"过\"biểu thị điều gì?",
-            "options": ["Hành động đang diễn ra", "Đã từng có trải nghiệm trong quá khứ", "Hành động sắp xảy ra", "Hành động đã hoàn thành"],
+            "question": "Trợ từ động thái 过 biểu thị điều gì?",
+            "options": [
+              "Hành động đang diễn ra",
+              "Đã từng có trải nghiệm trong quá khứ",
+              "Hành động sắp xảy ra",
+              "Hành động đã hoàn thành"
+            ],
             "answer": 1
           },
           {
-            "cn": "我去过中国。",
             "question": "Dịch câu: \"Tôi đã từng đến Trung Quốc.\"",
-            "options": ["我去中国了。", "我去过中国。", "我要去中国。", "我正去中国。"],
+            "options": [
+              "我去中国了。",
+              "我去过中国。",
+              "我要去中国。",
+              "我正去中国。"
+            ],
             "answer": 1
           },
           {
-            "cn": "没(有) + V + 过",
-            "question": "Dạng phủ định của \"V + 过\"là gì?",
-            "options": ["不 + V + 过", "没(有) + V + 过", "别 + V + 过", "不要 + V + 过"],
+            "question": "Dạng phủ định của \"V + 过\" là gì?",
+            "options": [
+              "不 + V + 过",
+              "没(有) + V + 过",
+              "别 + V + 过",
+              "不要 + V + 过"
+            ],
             "answer": 1
           },
           {
-            "cn": "因为...所以...",
-            "question": "Cấu trúc \"因为...所以...\"biểu thị điều gì?",
-            "options": ["Quan hệ nguyên nhân - kết quả", "Quan hệ tương phản", "Quan hệ điều kiện", "Quan hệ mục đích"],
+            "question": "Cấu trúc \"因为...所以...\" biểu thị điều gì?",
+            "options": [
+              "Quan hệ nguyên nhân - kết quả",
+              "Quan hệ tương phản",
+              "Quan hệ điều kiện",
+              "Quan hệ mục đích"
+            ],
             "answer": 0
           },
           {
-            "cn": "因为今天下雨，所以不出去。",
             "question": "Dịch câu: \"Vì hôm nay trời mưa nên chúng tôi không ra ngoài.\"",
-            "options": ["今天下雨，我们不出去。", "因为今天下雨，所以不出去。", "因为今天下雨，我们不出去。", "B và C đều đúng"],
+            "options": [
+              "今天下雨，我们不出去。",
+              "因为今天下雨，所以不出去。",
+              "因为今天下雨，我们不出去。",
+              "B và C đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "红的",
-            "question": "Khi danh từ chính đứng sau 的 được lược bỏ, cụm \"红的\"có nghĩa là gì?",
-            "options": ["Màu đỏ", "Cái màu đỏ", "Người màu đỏ", "Đồ màu đỏ"],
+            "question": "Khi danh từ chính đứng sau 的 được lược bỏ, cụm \"红的\" có nghĩa là gì?",
+            "options": [
+              "Màu đỏ",
+              "Cái màu đỏ",
+              "Người màu đỏ",
+              "Đồ màu đỏ"
+            ],
             "answer": 1
           },
           {
-            "cn": "红色的比较漂亮。",
             "question": "Dịch câu: \"Cái màu đỏ đẹp hơn.\"",
-            "options": ["红的比较漂亮。", "红色比较漂亮。", "红色的比较漂亮。", "比较漂亮的红。"],
+            "options": [
+              "红的比较漂亮。",
+              "红色比较漂亮。",
+              "红色的比较漂亮。",
+              "比较漂亮的红。"
+            ],
             "answer": 2
           },
           {
-            "cn": "我___看过这部电影。",
             "question": "Điền vào chỗ trống: 我___看过这部电影。 (Tôi chưa từng xem bộ phim này)",
-            "options": ["不", "没", "没有", "B và C đều đúng"],
+            "options": [
+              "不",
+              "没",
+              "没有",
+              "B và C đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "因为...所以... có thể lược bỏ",
-            "question": "Cấu trúc \"因为...所以...\"có thể lược bỏ phần nào?",
-            "options": ["Chỉ được bỏ 因为", "Chỉ được bỏ 所以", "Có thể bỏ 因为 hoặc 所以", "Không được bỏ phần nào"],
+            "question": "Cấu trúc \"因为...所以...\" có thể lược bỏ phần nào?",
+            "options": [
+              "Chỉ được bỏ 因为",
+              "Chỉ được bỏ 所以",
+              "Có thể bỏ 因为 hoặc 所以",
+              "Không được bỏ phần nào"
+            ],
             "answer": 2
           },
           {
-            "cn": "这是新的，那是旧的。",
             "question": "Dịch câu: \"Đây là cái mới, kia là cái cũ.\"",
-            "options": ["这是新的，那是旧的。", "新的是这个，旧的是那个。", "这是新，那是旧。", "A và B đều đúng"],
+            "options": [
+              "这是新的，那是旧的。",
+              "新的是这个，旧的是那个。",
+              "这是新，那是旧。",
+              "A và B đều đúng"
+            ],
             "answer": 0
           }
         ]
@@ -838,63 +848,98 @@
         ],
         "exercises": [
           {
-            "cn": "来 hướng về người nói",
-            "question": "Bổ ngữ xu hướng đơn \"来\"biểu thị hướng di chuyển như thế nào?",
-            "options": ["Rời xa người nói", "Hướng về phía người nói", "Từ trên xuống dưới", "Từ dưới lên trên"],
+            "question": "Bổ ngữ xu hướng đơn 来 biểu thị hướng di chuyển như thế nào?",
+            "options": [
+              "Rời xa người nói",
+              "Hướng về phía người nói",
+              "Từ trên xuống dưới",
+              "Từ dưới lên trên"
+            ],
             "answer": 1
           },
           {
-            "cn": "老师进教室来了。",
             "question": "Dịch câu: \"Giáo viên đi vào lớp.\"",
-            "options": ["老师进教室来了。", "老师进教室去了。", "老师来进教室。", "老师去进教室。"],
+            "options": [
+              "老师进教室来了。",
+              "老师进教室去了。",
+              "老师来进教室。",
+              "老师去进教室。"
+            ],
             "answer": 0
           },
           {
-            "cn": "Tân ngữ nơi chốn đặt trước 来/去",
             "question": "Khi tân ngữ là nơi chốn trong câu có bổ ngữ xu hướng đơn, vị trí của nó là gì?",
-            "options": ["Đặt sau 来/去", "Đặt trước 来/去", "Đặt đầu câu", "Đặt cuối câu"],
+            "options": [
+              "Đặt sau 来/去",
+              "Đặt trước 来/去",
+              "Đặt đầu câu",
+              "Đặt cuối câu"
+            ],
             "answer": 1
           },
           {
-            "cn": "起来 có nghĩa thức dậy",
-            "question": "\"起来\"trong tiếng Trung có nghĩa là gì?",
-            "options": ["Thức dậy", "Đi lên", "Bắt đầu", "Tất cả các đáp án trên"],
+            "question": "\"起来\" trong tiếng Trung có nghĩa là gì?",
+            "options": [
+              "Thức dậy",
+              "Đi lên",
+              "Bắt đầu",
+              "Tất cả các đáp án trên"
+            ],
             "answer": 3
           },
           {
-            "cn": "都...了 nhấn mạnh mức độ",
-            "question": "Cấu trúc \"都...了\"dùng để làm gì?",
-            "options": ["Diễn tả sự ngạc nhiên", "Nhấn mạnh mức độ đã đạt đến", "Diễn tả sự chắc chắn", "Hỏi về thời gian"],
+            "question": "Cấu trúc \"都...了\" dùng để làm gì?",
+            "options": [
+              "Diễn tả sự ngạc nhiên",
+              "Nhấn mạnh mức độ đã đạt đến",
+              "Diễn tả sự chắc chắn",
+              "Hỏi về thời gian"
+            ],
             "answer": 1
           },
           {
-            "cn": "都八点了，你还不起床！",
             "question": "Dịch câu: \"Đã 8 giờ rồi mà bạn vẫn chưa dậy!\"",
-            "options": ["八点了，你起床！", "都八点了，你还不起床！", "八点都了，你不起床！", "你还不起床，都八点了！"],
+            "options": [
+              "八点了，你起床！",
+              "都八点了，你还不起床！",
+              "八点都了，你不起床！",
+              "你还不起床，都八点了！"
+            ],
             "answer": 1
           },
           {
-            "cn": "请拿一本书来。",
             "question": "Điền vào chỗ trống: 请拿一本书___。 (Hãy mang một quyển sách đến đây)",
             "options": ["来", "去", "上", "下"],
             "answer": 0
           },
           {
-            "cn": "去 rời xa người nói",
-            "question": "Bổ ngữ xu hướng đơn \"去\"biểu thị hướng di chuyển như thế nào?",
-            "options": ["Hướng về phía người nói", "Rời xa người nói", "Từ trên xuống dưới", "Không xác định"],
+            "question": "Bổ ngữ xu hướng đơn 去 biểu thị hướng di chuyển như thế nào?",
+            "options": [
+              "Hướng về phía người nói",
+              "Rời xa người nói",
+              "Từ trên xuống dưới",
+              "Không xác định"
+            ],
             "answer": 1
           },
           {
-            "cn": "他回家去了。",
-            "question": "Dịch câu: \"Anh ấy về nhà rồi.\"(dùng bổ ngữ xu hướng)",
-            "options": ["他回家了。", "他回家去了。", "他回去家了。", "他去家了。"],
+            "question": "Dịch câu: \"Anh ấy về nhà rồi.\" (dùng bổ ngữ xu hướng)",
+            "options": [
+              "他回家了。",
+              "他回家去了。",
+              "他回去家了。",
+              "他去家了。"
+            ],
             "answer": 1
           },
           {
-            "cn": "都...了 thường dùng phàn nàn",
-            "question": "Cấu trúc \"都...了\"thường được dùng trong tình huống nào?",
-            "options": ["Khi khen ngợi ai đó", "Khi nhấn mạnh, thúc giục hoặc phàn nàn", "Khi hỏi về sở thích", "Khi miêu tả thời tiết"],
+            "question": "Cấu trúc \"都...了\" thường được dùng trong tình huống nào?",
+            "options": [
+              "Khi khen ngợi ai đó",
+              "Khi nhấn mạnh, thúc giục hoặc phàn nàn",
+              "Khi hỏi về sở thích",
+              "Khi miêu tả thời tiết"
+            ],
             "answer": 1
           }
         ]
@@ -1000,63 +1045,98 @@
         ],
         "exercises": [
           {
-            "cn": "高兴 -> 高高兴兴",
-            "question": "Lặp lại tính từ \"高兴\"đúng cách là gì?",
-            "options": ["高兴高兴", "高高兴兴", "高兴了高兴", "高兴一高兴"],
+            "question": "Lặp lại tính từ 高兴 đúng cách là gì?",
+            "options": [
+              "高兴高兴",
+              "高高兴兴",
+              "高兴了高兴",
+              "高兴一高兴"
+            ],
             "answer": 1
           },
           {
-            "cn": "干净 -> 干干净净",
-            "question": "Lặp lại tính từ \"干净\"đúng cách là gì?",
-            "options": ["干净干净", "干干净", "干干净净", "干净了干净"],
+            "question": "Lặp lại tính từ 干净 đúng cách là gì?",
+            "options": [
+              "干净干净",
+              "干干净",
+              "干干净净",
+              "干净了干净"
+            ],
             "answer": 2
           },
           {
-            "cn": "...什么的 = vân vân",
-            "question": "\"...什么的\"đặt sau danh từ hoặc cụm danh từ để biểu thị điều gì?",
-            "options": ["Sự ngạc nhiên", "Vân vân, các loại, và những thứ tương tự", "Sự chắc chắn", "Sự phủ định"],
+            "question": "\"...什么的\" đặt sau danh từ để biểu thị điều gì?",
+            "options": [
+              "Sự ngạc nhiên",
+              "Vân vân, các loại, và những thứ tương tự",
+              "Sự chắc chắn",
+              "Sự phủ định"
+            ],
             "answer": 1
           },
           {
-            "cn": "我喜欢看电影、听音乐什么的。",
             "question": "Dịch câu: \"Tôi thích xem phim, nghe nhạc và những hoạt động tương tự.\"",
-            "options": ["我喜欢看电影、听音乐什么的。", "我喜欢看电影、听音乐。", "我喜欢看电影、听音乐等等。", "A và C đều đúng"],
+            "options": [
+              "我喜欢看电影、听音乐什么的。",
+              "我喜欢看电影、听音乐。",
+              "我喜欢看电影、听音乐等等。",
+              "A và C đều đúng"
+            ],
             "answer": 0
           },
           {
-            "cn": "地 đứng giữa Adj và V",
-            "question": "Trợ từ kết cấu \"地\"đứng ở vị trí nào trong câu?",
-            "options": ["Giữa tính từ và động từ", "Giữa động từ và tân ngữ", "Cuối câu", "Đầu câu"],
+            "question": "Trợ từ kết cấu 地 đứng ở vị trí nào trong câu?",
+            "options": [
+              "Giữa tính từ và động từ",
+              "Giữa động từ và tân ngữ",
+              "Cuối câu",
+              "Đầu câu"
+            ],
             "answer": 0
           },
           {
-            "cn": "他认真地学习汉语。",
             "question": "Dịch câu: \"Anh ấy học tiếng Trung một cách chăm chỉ.\"",
-            "options": ["他学习汉语认真地。", "他认真地学习汉语。", "他认真地学习汉语地。", "他学习汉语认真。"],
+            "options": [
+              "他学习汉语认真地。",
+              "他认真地学习汉语。",
+              "他认真地学习汉语地。",
+              "他学习汉语认真。"
+            ],
             "answer": 1
           },
           {
-            "cn": "孩子高高兴兴___回家了。",
-            "question": "Điền vào chỗ trống: 孩子高高兴兴___回家了。 (Đứa trẻ rất vui vẻ trở về nhà)",
+            "question": "Điền vào chỗ trống: 孩子高高兴兴___回家了。 (Đứa trẻ vui vẻ trở về nhà)",
             "options": ["的", "地", "得", "了"],
             "answer": 1
           },
           {
-            "cn": "蓝 -> 蓝蓝",
-            "question": "Lặp lại tính từ \"蓝\"(xanh) đúng cách là gì?",
-            "options": ["蓝蓝", "蓝一蓝", "蓝色蓝", "蓝了蓝"],
+            "question": "Lặp lại tính từ 蓝 (xanh) đúng cách là gì?",
+            "options": [
+              "蓝蓝",
+              "蓝一蓝",
+              "蓝色蓝",
+              "蓝了蓝"
+            ],
             "answer": 0
           },
           {
-            "cn": "她轻轻地关上门。",
             "question": "Dịch câu: \"Cô ấy nhẹ nhàng đóng cửa.\"",
-            "options": ["她轻轻地关上门。", "她轻轻关上门。", "她关门轻轻地。", "她关门轻轻。"],
+            "options": [
+              "她轻轻地关上门。",
+              "她轻轻关上门。",
+              "她关门轻轻地。",
+              "她关门轻轻。"
+            ],
             "answer": 0
           },
           {
-            "cn": "...什么的 = vân vân, các kiểu",
-            "question": "\"...什么的\"có thể được dịch sang tiếng Việt là gì?",
-            "options": ["Gì đó", "Vân vân, các kiểu", "Những thứ tương tự", "Tất cả các đáp án trên"],
+            "question": "\"...什么的\" có thể dịch sang tiếng Việt là gì?",
+            "options": [
+              "Gì đó",
+              "Vân vân, các kiểu",
+              "Những thứ tương tự",
+              "Tất cả các đáp án trên"
+            ],
             "answer": 3
           }
         ]
@@ -1149,63 +1229,88 @@
         ],
         "exercises": [
           {
-            "cn": "一...就...",
-            "question": "Cấu trúc \"一......就......\"diễn tả điều gì?",
-            "options": ["Hành động xảy ra đồng thời", "Hành động sau xảy ra ngay sau hành động trước", "Hành động trước là nguyên nhân của hành động sau", "B và C đều đúng"],
+            "question": "Cấu trúc \"一......就......\" diễn tả điều gì?",
+            "options": [
+              "Hành động xảy ra đồng thời",
+              "Hành động sau xảy ra ngay sau hành động trước",
+              "Hành động trước là nguyên nhân của hành động sau",
+              "B và C đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "我一下课就回家。",
             "question": "Dịch câu: \"Vừa tan học tôi liền về nhà.\"",
-            "options": ["我下课就回家。", "我一下课就回家。", "我一回家就下课。", "我回家一下课就。"],
+            "options": [
+              "我下课就回家。",
+              "我一下课就回家。",
+              "我一回家就下课。",
+              "我回家一下课就。"
+            ],
             "answer": 1
           },
           {
-            "cn": "得 là bổ ngữ trạng thái",
             "question": "Bổ ngữ trạng thái đứng sau từ gì?",
             "options": ["的", "地", "得", "了"],
             "answer": 2
           },
           {
-            "cn": "他说得很快。",
             "question": "Dịch câu: \"Anh ấy nói rất nhanh.\"",
-            "options": ["他说得快很。", "他说得很快。", "他很说得快。", "他很快说得。"],
+            "options": [
+              "他说得快很。",
+              "他说得很快。",
+              "他很说得快。",
+              "他很快说得。"
+            ],
             "answer": 1
           },
           {
-            "cn": "她唱歌唱___很好。",
             "question": "Điền vào chỗ trống: 她唱歌唱___很好。 (Cô ấy hát rất hay)",
             "options": ["的", "地", "得", "了"],
             "answer": 2
           },
           {
-            "cn": "Bổ ngữ trạng thái với tân ngữ",
-            "question": "Khi động từ có tân ngữ và dùng bổ ngữ trạng thái, cách nào sau đây đúng?",
-            "options": ["汉字写得很漂亮。", "写汉字写得很漂亮。", "Cả A và B đều đúng", "Chỉ A đúng"],
+            "question": "Khi động từ có tân ngữ và dùng bổ ngữ trạng thái, cách nào đúng?",
+            "options": [
+              "汉字写得很漂亮。",
+              "写汉字写得很漂亮。",
+              "Cả A và B đều đúng",
+              "Chỉ A đúng"
+            ],
             "answer": 2
           },
           {
-            "cn": "V + 得 + 不 + Adj",
             "question": "Dạng phủ định của bổ ngữ trạng thái là gì?",
-            "options": ["V + 得 + 不 + Adj", "V + 不 + 得 + Adj", "V + 得 + Adj + 不", "不 + V + 得 + Adj"],
+            "options": [
+              "V + 得 + 不 + Adj",
+              "V + 不 + 得 + Adj",
+              "V + 得 + Adj + 不",
+              "不 + V + 得 + Adj"
+            ],
             "answer": 0
           },
           {
-            "cn": "天气一冷，我就想喝热茶。",
             "question": "Dịch câu: \"Trời cứ lạnh là tôi muốn uống trà nóng.\"",
-            "options": ["天气冷，我就想喝热茶。", "天气一冷，我就想喝热茶。", "天气一冷，我想喝热茶就。", "冷天气一，我就想喝热茶。"],
+            "options": [
+              "天气冷，我就想喝热茶。",
+              "天气一冷，我就想喝热茶。",
+              "天气一冷，我想喝热茶就。",
+              "冷天气一，我就想喝热茶。"
+            ],
             "answer": 1
           },
           {
-            "cn": "怎么样 là câu hỏi",
             "question": "Câu hỏi với bổ ngữ trạng thái dùng từ gì để hỏi?",
             "options": ["怎么", "怎么样", "什么", "为什么"],
             "answer": 1
           },
           {
-            "cn": "你汉语说得怎么样？",
             "question": "Dịch câu: \"Bạn nói tiếng Trung thế nào?\"",
-            "options": ["你汉语说怎么？", "你汉语说得怎么样？", "你怎么样说汉语？", "你汉语怎么说？"],
+            "options": [
+              "你汉语说怎么？",
+              "你汉语说得怎么样？",
+              "你怎么样说汉语？",
+              "你汉语怎么说？"
+            ],
             "answer": 1
           }
         ]
@@ -1294,61 +1399,86 @@
         ],
         "exercises": [
           {
-            "cn": "A 比 B + Adj",
             "question": "Câu so sánh với 比 có cấu trúc như thế nào?",
-            "options": ["A 比 B + Adj", "A + Adj + 比 B", "比 A + B + Adj", "A + 比 + Adj + B"],
+            "options": [
+              "A 比 B + Adj",
+              "A + Adj + 比 B",
+              "比 A + B + Adj",
+              "A + 比 + Adj + B"
+            ],
             "answer": 0
           },
           {
-            "cn": "今天比昨天冷。",
             "question": "Dịch câu: \"Hôm nay lạnh hơn hôm qua.\"",
-            "options": ["今天比昨天冷。", "昨天比今天冷。", "今天比昨天热。", "昨天比今天热。"],
+            "options": [
+              "今天比昨天冷。",
+              "昨天比今天冷。",
+              "今天比昨天热。",
+              "昨天比今天热。"
+            ],
             "answer": 0
           },
           {
-            "cn": "Sau 比 không dùng 很/非常",
             "question": "Sau 比 KHÔNG được dùng phó từ nào?",
             "options": ["很", "非常", "更", "Cả A và B"],
             "answer": 3
           },
           {
-            "cn": "虽然...但是...",
-            "question": "Cặp liên từ \"虽然......但是......\"biểu thị điều gì?",
-            "options": ["Quan hệ nguyên nhân - kết quả", "Quan hệ tương phản, chuyển ý", "Quan hệ điều kiện", "Quan hệ mục đích"],
+            "question": "Cặp liên từ \"虽然......但是......\" biểu thị điều gì?",
+            "options": [
+              "Quan hệ nguyên nhân - kết quả",
+              "Quan hệ tương phản, chuyển ý",
+              "Quan hệ điều kiện",
+              "Quan hệ mục đích"
+            ],
             "answer": 1
           },
           {
-            "cn": "虽然今天很忙，但是我还是来了。",
             "question": "Dịch câu: \"Mặc dù hôm nay rất bận nhưng tôi vẫn đến.\"",
-            "options": ["虽然今天很忙，但是我还是来了。", "因为今天很忙，所以我不来了。", "今天很忙，但是我不来。", "虽然今天很忙，我还是来。"],
+            "options": [
+              "虽然今天很忙，但是我还是来了。",
+              "因为今天很忙，所以我不来了。",
+              "今天很忙，但是我不来。",
+              "虽然今天很忙，我还是来。"
+            ],
             "answer": 0
           },
           {
-            "cn": "我哥哥___我高。",
             "question": "Điền vào chỗ trống: 我哥哥___我高。 (Anh trai tôi cao hơn tôi)",
             "options": ["比", "跟", "和", "对"],
             "answer": 0
           },
           {
-            "cn": "虽然...但是... trong câu",
             "question": "Trong câu \"虽然他很年轻，但是工作经验很多\", cặp liên từ nào được sử dụng?",
-            "options": ["因为...所以...", "虽然...但是...", "不但...而且...", "如果...就..."],
+            "options": [
+              "因为...所以...",
+              "虽然...但是...",
+              "不但...而且...",
+              "如果...就..."
+            ],
             "answer": 1
           },
           {
-            "cn": "他觉得踢足球比打篮球有意思。",
             "question": "Dịch câu: \"Anh ấy cảm thấy đá bóng thú vị hơn chơi bóng rổ.\"",
-            "options": ["他觉得踢足球比打篮球有意思。", "他觉得踢足球有意思比打篮球。", "他觉得比打篮球踢足球有意思。", "他踢足球觉得比打篮球有意思。"],
+            "options": [
+              "他觉得踢足球比打篮球有意思。",
+              "他觉得踢足球有意思比打篮球。",
+              "他觉得比打篮球踢足球有意思。",
+              "他踢足球觉得比打篮球有意思。"
+            ],
             "answer": 0
           },
           {
-            "cn": "虽然...但是... có thể lược bỏ",
-            "question": "Cặp liên từ \"虽然......但是......\"có thể lược bỏ phần nào?",
-            "options": ["Chỉ được bỏ 虽然", "Chỉ được bỏ 但是", "Có thể bỏ 虽然 hoặc 但是", "Không được bỏ phần nào"],
+            "question": "Cặp liên từ \"虽然......但是......\" có thể lược bỏ phần nào?",
+            "options": [
+              "Chỉ được bỏ 虽然",
+              "Chỉ được bỏ 但是",
+              "Có thể bỏ 虽然 hoặc 但是",
+              "Không được bỏ phần nào"
+            ],
             "answer": 2
           },
           {
-            "cn": "更/还 để nhấn mạnh so sánh",
             "question": "Trong so sánh với 比, để nhấn mạnh mức độ có thể dùng từ gì?",
             "options": ["很", "非常", "更 hoặc 还", "太"],
             "answer": 2
@@ -1516,63 +1646,98 @@
         ],
         "exercises": [
           {
-            "cn": "没有 = không bằng",
             "question": "Câu so sánh với 没有 có nghĩa là gì?",
-            "options": ["A hơn B", "A bằng B", "A không bằng B", "A kém B"],
+            "options": [
+              "A hơn B",
+              "A bằng B",
+              "A không bằng B",
+              "A kém B"
+            ],
             "answer": 2
           },
           {
-            "cn": "昨天没有今天这么冷。",
             "question": "Dịch câu: \"Hôm qua không lạnh bằng hôm nay.\"",
-            "options": ["昨天没有今天冷。", "昨天没有今天这么冷。", "今天没有昨天冷。", "A và B đều đúng"],
+            "options": [
+              "昨天没有今天冷。",
+              "昨天没有今天这么冷。",
+              "今天没有昨天冷。",
+              "A và B đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "离 = khoảng cách",
             "question": "Động từ 离 dùng để biểu thị điều gì?",
-            "options": ["Khoảng cách về không gian hoặc thời gian", "Sự sở hữu", "Sự so sánh", "Nguyên nhân - kết quả"],
+            "options": [
+              "Khoảng cách về không gian hoặc thời gian",
+              "Sự sở hữu",
+              "Sự so sánh",
+              "Nguyên nhân - kết quả"
+            ],
             "answer": 0
           },
           {
-            "cn": "学校离医院不远。",
             "question": "Dịch câu: \"Trường học không xa bệnh viện.\"",
-            "options": ["书店离医院不远。", "学校离医院很近。", "医院离学校不远。", "A và C đều đúng"],
+            "options": [
+              "书店离医院不远。",
+              "学校离医院很近。",
+              "医院离学校不远。",
+              "A và C đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "Bổ ngữ thời lượng",
             "question": "Bổ ngữ thời lượng biểu thị điều gì?",
-            "options": ["Khoảng cách", "Khoảng thời gian hành động kéo dài", "Số lần hành động", "Kết quả hành động"],
+            "options": [
+              "Khoảng cách",
+              "Khoảng thời gian hành động kéo dài",
+              "Số lần hành động",
+              "Kết quả hành động"
+            ],
             "answer": 1
           },
           {
-            "cn": "我等朋友等了半个小时。",
             "question": "Dịch câu: \"Tôi đợi bạn nửa tiếng.\"",
-            "options": ["我等朋友等了半个小时。", "我等半个小时朋友。", "我半个小时等朋友。", "我等朋友半个小时。"],
+            "options": [
+              "我等朋友等了半个小时。",
+              "我等半个小时朋友。",
+              "我半个小时等朋友。",
+              "我等朋友半个小时。"
+            ],
             "answer": 0
           },
           {
-            "cn": "现在___我的生日还有三天。",
             "question": "Điền vào chỗ trống: 现在___我的生日还有三天。 (Còn ba ngày nữa là đến sinh nhật tôi)",
             "options": ["在", "从", "离", "对"],
             "answer": 2
           },
           {
-            "cn": "有...吗？ = có bằng... không",
             "question": "Câu so sánh với 有 dùng để làm gì?",
-            "options": ["Hỏi A có bằng B không", "Khẳng định A bằng B", "Phủ định A bằng B", "So sánh A hơn B"],
+            "options": [
+              "Hỏi A có bằng B không",
+              "Khẳng định A bằng B",
+              "Phủ định A bằng B",
+              "So sánh A hơn B"
+            ],
             "answer": 0
           },
           {
-            "cn": "妹妹有姐姐高吗？",
             "question": "Dịch câu: \"Em gái có cao bằng chị gái không?\"",
-            "options": ["妹妹有姐姐高吗？", "妹妹比姐姐高吗？", "姐姐有妹妹高吗？", "妹妹没有姐姐高吗？"],
+            "options": [
+              "妹妹有姐姐高吗？",
+              "妹妹比姐姐高吗？",
+              "姐姐有妹妹高吗？",
+              "妹妹没有姐姐高吗？"
+            ],
             "answer": 0
           },
           {
-            "cn": "Tân ngữ là tên người/đại từ",
             "question": "Khi tân ngữ là tên người/đại từ trong bổ ngữ thời lượng, vị trí của nó là gì?",
-            "options": ["Sau bổ ngữ thời lượng", "Trước bổ ngữ thời lượng", "Đầu câu", "Cuối câu"],
+            "options": [
+              "Sau bổ ngữ thời lượng",
+              "Trước bổ ngữ thời lượng",
+              "Đầu câu",
+              "Cuối câu"
+            ],
             "answer": 1
           }
         ]
@@ -1682,61 +1847,86 @@
         ],
         "exercises": [
           {
-            "cn": "Câu vị ngữ chủ vị",
             "question": "Câu vị ngữ chủ vị là câu có vị ngữ như thế nào?",
-            "options": ["Là một động từ đơn lẻ", "Là một tính từ đơn lẻ", "Là một cụm chủ vị", "Là một danh từ"],
+            "options": [
+              "Là một động từ đơn lẻ",
+              "Là một tính từ đơn lẻ",
+              "Là một cụm chủ vị",
+              "Là một danh từ"
+            ],
             "answer": 2
           },
           {
-            "cn": "我的书包你看见了吗？",
             "question": "Dịch câu: \"Cặp sách của tôi, bạn nhìn thấy chưa?\"",
-            "options": ["我的书包你看见了吗？", "你看见我的书包了吗？", "我的书包你看得见吗？", "A và B đều đúng"],
+            "options": [
+              "我的书包你看见了吗？",
+              "你看见我的书包了吗？",
+              "我的书包你看得见吗？",
+              "A và B đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "还是 = hay (trong câu hỏi)",
-            "question": "Liên từ \"还是\"trong câu hỏi lựa chọn có nghĩa là gì?",
+            "question": "Liên từ 还是 trong câu hỏi lựa chọn có nghĩa là gì?",
             "options": ["Và", "Hoặc (trong câu hỏi)", "Nhưng", "Vì"],
             "answer": 1
           },
           {
-            "cn": "你喜欢打篮球还是踢足球？",
             "question": "Dịch câu: \"Bạn thích bóng rổ hay đá bóng hơn?\"",
-            "options": ["你喜欢打篮球和踢足球？", "你喜欢打篮球还是踢足球？", "你喜欢打篮球或者踢足球？", "你喜欢打篮球,踢足球？"],
+            "options": [
+              "你喜欢打篮球和踢足球？",
+              "你喜欢打篮球还是踢足球？",
+              "你喜欢打篮球或者踢足球？",
+              "你喜欢打篮球,踢足球？"
+            ],
             "answer": 1
           },
           {
-            "cn": "就要...了 = sắp...rồi",
-            "question": "Cấu trúc \"就要......了\"diễn tả điều gì?",
-            "options": ["Hành động đã xảy ra trong quá khứ", "Hành động đang diễn ra", "Hành động sắp xảy ra", "Hành động thường xuyên xảy ra"],
+            "question": "Cấu trúc \"就要......了\" diễn tả điều gì?",
+            "options": [
+              "Hành động đã xảy ra trong quá khứ",
+              "Hành động đang diễn ra",
+              "Hành động sắp xảy ra",
+              "Hành động thường xuyên xảy ra"
+            ],
             "answer": 2
           },
           {
-            "cn": "电影要开始了。",
             "question": "Dịch câu: \"Bộ phim sắp bắt đầu rồi.\"",
-            "options": ["电影开始了。", "电影要开始了。", "电影开始了吗？", "电影开始过了。"],
+            "options": [
+              "电影开始了。",
+              "电影要开始了。",
+              "电影开始了吗？",
+              "电影开始过了。"
+            ],
             "answer": 1
           },
           {
-            "cn": "我们下星期___考试了。",
             "question": "Điền vào chỗ trống: 我们下星期___考试了。 (Tuần sau chúng tôi sắp thi rồi)",
             "options": ["就要", "快要", "要", "快"],
             "answer": 0
           },
           {
-            "cn": "Chủ ngữ phía trước là đối tượng",
             "question": "Trong câu vị ngữ chủ vị, chủ ngữ phía trước thường là gì?",
-            "options": ["Chủ ngữ của hành động", "Đối tượng được giới thiệu (tân ngữ)", "Bổ ngữ", "Trạng ngữ"],
+            "options": [
+              "Chủ ngữ của hành động",
+              "Đối tượng được giới thiệu (tân ngữ)",
+              "Bổ ngữ",
+              "Trạng ngữ"
+            ],
             "answer": 1
           },
           {
-            "cn": "这件事他知道。",
             "question": "Dịch câu: \"Chuyện này anh ấy biết.\"",
-            "options": ["这件事他知道。", "他知道这件事。", "这件事他知道吗？", "A và B đều đúng"],
+            "options": [
+              "这件事他知道。",
+              "他知道这件事。",
+              "这件事他知道吗？",
+              "A và B đều đúng"
+            ],
             "answer": 0
           },
           {
-            "cn": "正在...了 KHÔNG đúng",
             "question": "Cấu trúc nào sau đây KHÔNG diễn tả sự việc sắp xảy ra?",
             "options": ["要...了", "快...了", "快要...了", "正在...了"],
             "answer": 3
@@ -1831,63 +2021,93 @@
         ],
         "exercises": [
           {
-            "cn": "着 = đang...",
-            "question": "Trợ từ động thái \"着\"đứng sau động từ biểu thị điều gì?",
-            "options": ["Hành động đã hoàn thành", "Hành động hoặc trạng thái đang được duy trì", "Hành động sắp xảy ra", "Hành động đã từng xảy ra"],
+            "question": "Trợ từ động thái 着 đứng sau động từ biểu thị điều gì?",
+            "options": [
+              "Hành động đã hoàn thành",
+              "Hành động hoặc trạng thái đang được duy trì",
+              "Hành động sắp xảy ra",
+              "Hành động đã từng xảy ra"
+            ],
             "answer": 1
           },
           {
-            "cn": "教室的门开着。",
             "question": "Dịch câu: \"Cửa lớp đang mở.\"",
-            "options": ["教室的门开了。", "教室的门开着。", "教室的门开过。", "教室的门要开了。"],
+            "options": [
+              "教室的门开了。",
+              "教室的门开着。",
+              "教室的门开过。",
+              "教室的门要开了。"
+            ],
             "answer": 1
           },
           {
-            "cn": "没(有) + V + 着",
-            "question": "Dạng phủ định của \"V + 着\"là gì?",
-            "options": ["不 + V + 着", "没(有) + V + 着", "别 + V + 着", "不要 + V + 着"],
+            "question": "Dạng phủ định của \"V + 着\" là gì?",
+            "options": [
+              "不 + V + 着",
+              "没(有) + V + 着",
+              "别 + V + 着",
+              "不要 + V + 着"
+            ],
             "answer": 1
           },
           {
-            "cn": "最 = nhất",
-            "question": "Phó từ mức độ \"最\"có nghĩa là gì?",
+            "question": "Phó từ mức độ 最 có nghĩa là gì?",
             "options": ["Rất", "Khá", "Nhất (mức độ cao nhất)", "Hơi"],
             "answer": 2
           },
           {
-            "cn": "你最喜欢吃中国菜。",
             "question": "Dịch câu: \"Bạn thích ăn món Trung Quốc nhất.\"",
-            "options": ["你很喜欢吃中国菜。", "你最想吃中国菜。", "你最喜欢吃中国菜。", "你比较喜欢吃中国菜。"],
+            "options": [
+              "你很喜欢吃中国菜。",
+              "你最想吃中国菜。",
+              "你最喜欢吃中国菜。",
+              "你比较喜欢吃中国菜。"
+            ],
             "answer": 2
           },
           {
-            "cn": "她___着白色的裤子。",
             "question": "Điền vào chỗ trống: 她___着白色的裤子。 (Cô ấy đang mặc quần màu trắng)",
             "options": ["穿", "在穿", "穿着", "穿过"],
             "answer": 2
           },
           {
-            "cn": "最 cần phạm vi xác định",
-            "question": "Khi dùng \"最\", phạm vi so sánh phải như thế nào?",
-            "options": ["Không cần xác định", "Phải được xác định rõ", "Luôn là thế giới", "Luôn là gia đình"],
+            "question": "Khi dùng 最, phạm vi so sánh phải như thế nào?",
+            "options": [
+              "Không cần xác định",
+              "Phải được xác định rõ",
+              "Luôn là thế giới",
+              "Luôn là gia đình"
+            ],
             "answer": 1
           },
           {
-            "cn": "在我家，爸爸最高。",
             "question": "Dịch câu: \"Trong gia đình tôi, bố cao nhất.\"",
-            "options": ["在我家，爸爸很高。", "在我家，爸爸最高。", "在我家，爸爸比较高。", "在我家，爸爸不太高。"],
+            "options": [
+              "在我家，爸爸很高。",
+              "在我家，爸爸最高。",
+              "在我家，爸爸比较高。",
+              "在我家，爸爸不太高。"
+            ],
             "answer": 1
           },
           {
-            "cn": "我最喜欢星期六。",
             "question": "Dịch câu: \"Tôi thích thứ Bảy nhất.\"",
-            "options": ["我很喜欢星期六。", "我最喜欢星期六。", "我喜欢星期六最。", "星期六我最喜欢。"],
+            "options": [
+              "我很喜欢星期六。",
+              "我最喜欢星期六。",
+              "我喜欢星期六最。",
+              "星期六我最喜欢。"
+            ],
             "answer": 1
           },
           {
-            "cn": "着 miêu tả trạng thái",
-            "question": "Trợ từ động thái \"着\"thường được dùng để miêu tả gì?",
-            "options": ["Hành động đã xảy ra", "Trạng thái đang tồn tại", "Hành động sắp xảy ra", "Số lần hành động"],
+            "question": "Trợ từ động thái 着 thường được dùng để miêu tả gì?",
+            "options": [
+              "Hành động đã xảy ra",
+              "Trạng thái đang tồn tại",
+              "Hành động sắp xảy ra",
+              "Số lần hành động"
+            ],
             "answer": 1
           }
         ]
@@ -1984,63 +2204,93 @@
         ],
         "exercises": [
           {
-            "cn": "多了/得多 = hơn nhiều",
-            "question": "\"多了\"và \"得多\"đứng sau tính từ trong câu so sánh với 比 có tác dụng gì?",
-            "options": ["Nhấn mạnh sự chênh lệch rất lớn", "Nhấn mạnh sự chênh lệch nhỏ", "Biểu thị sự bằng nhau", "Biểu thị sự không chắc chắn"],
+            "question": "\"多了\" và \"得多\" đứng sau tính từ trong câu so sánh với 比 có tác dụng gì?",
+            "options": [
+              "Nhấn mạnh sự chênh lệch rất lớn",
+              "Nhấn mạnh sự chênh lệch nhỏ",
+              "Biểu thị sự bằng nhau",
+              "Biểu thị sự không chắc chắn"
+            ],
             "answer": 0
           },
           {
-            "cn": "我这里比北京冷多了。",
             "question": "Dịch câu: \"Chỗ tôi lạnh hơn Bắc Kinh nhiều.\"",
-            "options": ["我这里比北京冷多了。", "我这里比北京冷一点儿。", "我这里比北京冷一些。", "我这里比北京冷。"],
+            "options": [
+              "我这里比北京冷多了。",
+              "我这里比北京冷一点儿。",
+              "我这里比北京冷一些。",
+              "我这里比北京冷。"
+            ],
             "answer": 0
           },
           {
-            "cn": "A 比 B + V + 得 + Adj",
             "question": "Cấu trúc so sánh với bổ ngữ trạng thái có dạng nào?",
-            "options": ["A 比 B + V + 得 + Adj", "A 比 B + V + Adj + 得", "A + V + 得 + 比 B + Adj", "A và C đều đúng"],
+            "options": [
+              "A 比 B + V + 得 + Adj",
+              "A 比 B + V + Adj + 得",
+              "A + V + 得 + 比 B + Adj",
+              "A và C đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "李文跑得比白家月快。",
             "question": "Dịch câu: \"Lý Văn chạy nhanh hơn Bạch Gia Nguyệt.\"",
-            "options": ["李文跑得比白家月快。", "李文比白家月跑得快。", "白家月跑得比李文快。", "A và B đều đúng"],
+            "options": [
+              "李文跑得比白家月快。",
+              "李文比白家月跑得快。",
+              "白家月跑得比李文快。",
+              "A và B đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "他比我踢足球踢___好。",
             "question": "Điền vào chỗ trống: 他比我踢足球踢___好。 (Anh ấy đá bóng giỏi hơn tôi)",
             "options": ["的", "地", "得", "了"],
             "answer": 2
           },
           {
-            "cn": "你跑步跑得比我快。",
             "question": "Dịch câu: \"Bạn chạy bộ nhanh hơn tôi.\"",
-            "options": ["你跑步跑得比我快。", "你比我跑步跑得快。", "你跑步比我跑得快。", "A và B đều đúng"],
+            "options": [
+              "你跑步跑得比我快。",
+              "你比我跑步跑得快。",
+              "你跑步比我跑得快。",
+              "A và B đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "白家月写汉字写得比陈天中好",
             "question": "Trong câu \"白家月写汉字写得比陈天中好\", đối tượng được so sánh là gì?",
             "options": ["白家月 và 陈天中", "Chữ Hán", "Viết chữ Hán", "Tất cả các đáp án trên"],
             "answer": 0
           },
           {
-            "cn": "我汉字写得比以前漂亮。",
             "question": "Dịch câu: \"Chữ Hán của tôi đẹp hơn trước.\"",
-            "options": ["我汉字写得比以前漂亮。", "我以前写得比现在漂亮。", "我比以前写汉字漂亮。", "A và C đều đúng"],
+            "options": [
+              "我汉字写得比以前漂亮。",
+              "我以前写得比现在漂亮。",
+              "我比以前写汉字漂亮。",
+              "A và C đều đúng"
+            ],
             "answer": 0
           },
           {
-            "cn": "多了 và 得多 không khác nhau",
-            "question": "Sự khác biệt giữa \"多了\"và \"得多\"là gì?",
-            "options": ["Không có sự khác biệt về nghĩa", "多了 dùng cho tính từ đơn âm, 得多 dùng cho tính từ đa âm", "多了 dùng trong khẩu ngữ, 得多 dùng trong văn viết", "多了 nhấn mạnh hơn 得多"],
+            "question": "Sự khác biệt giữa \"多了\" và \"得多\" là gì?",
+            "options": [
+              "Không có sự khác biệt về nghĩa",
+              "多了 dùng cho tính từ đơn âm, 得多 dùng cho tính từ đa âm",
+              "多了 dùng trong khẩu ngữ, 得多 dùng trong văn viết",
+              "多了 nhấn mạnh hơn 得多"
+            ],
             "answer": 0
           },
           {
-            "cn": "他觉得红茶比绿茶好喝得多。",
             "question": "Dịch câu: \"Anh ấy thấy trà đen ngon hơn trà xanh rất nhiều.\"",
-            "options": ["他觉得红茶比绿茶好喝很多。", "他觉得红茶比绿茶好喝得多。", "他觉得红茶比绿茶好喝多了。", "B và C đều đúng"],
+            "options": [
+              "他觉得红茶比绿茶好喝很多。",
+              "他觉得红茶比绿茶好喝得多。",
+              "他觉得红茶比绿茶好喝多了。",
+              "B và C đều đúng"
+            ],
             "answer": 3
           }
         ]
@@ -2155,63 +2405,83 @@
         ],
         "exercises": [
           {
-            "cn": "S + V + O1(người) + O2(vật)",
             "question": "Câu hai tân ngữ có cấu trúc như thế nào?",
-            "options": ["S + V + O2 (vật) + O1 (người)", "S + V + O1 (người) + O2 (vật)", "S + O1 + V + O2", "S + O2 + V + O1"],
+            "options": [
+              "S + V + O2 (vật) + O1 (người)",
+              "S + V + O1 (người) + O2 (vật)",
+              "S + O1 + V + O2",
+              "S + O2 + V + O1"
+            ],
             "answer": 1
           },
           {
-            "cn": "她拿给我一杯水。",
             "question": "Dịch câu: \"Cô ấy mang cho tôi một cốc nước.\"",
-            "options": ["她拿给我一杯水。", "她给我拿一杯水。", "她拿一杯水给我。", "A và C đều đúng"],
+            "options": [
+              "她拿给我一杯水。",
+              "她给我拿一杯水。",
+              "她拿一杯水给我。",
+              "A và C đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "O1 là người/nơi chốn/tổ chức",
             "question": "Trong câu hai tân ngữ, tân ngữ 1 thường là gì?",
             "options": ["Vật", "Người/nơi chốn/tổ chức", "Thời gian", "Địa điểm"],
             "answer": 1
           },
           {
-            "cn": "Động từ KHÔNG dùng trong câu 2 tân ngữ",
-            "question": "Động từ nào sau đây KHÔNG thường dùng trong câu hai tân ngữ?",
+            "question": "Động từ nào KHÔNG thường dùng trong câu hai tân ngữ?",
             "options": ["给", "送", "吃", "教"],
             "answer": 2
           },
           {
-            "cn": "姐姐比我大三岁。",
             "question": "Dịch câu: \"Chị gái lớn hơn tôi 3 tuổi.\"",
-            "options": ["姐姐比我大岁三。", "姐姐比我大三岁。", "姐姐大三岁比我。", "比我姐姐大三岁。"],
+            "options": [
+              "姐姐比我大岁三。",
+              "姐姐比我大三岁。",
+              "姐姐大三岁比我。",
+              "比我姐姐大三岁。"
+            ],
             "answer": 1
           },
           {
-            "cn": "一点儿/一些 = khác biệt nhỏ",
-            "question": "So sánh với \"一点儿/一些\"biểu thị điều gì?",
-            "options": ["Sự khác biệt rất lớn", "Sự khác biệt không lớn", "Sự bằng nhau", "Sự không chắc chắn"],
+            "question": "So sánh với \"一点儿/一些\" biểu thị điều gì?",
+            "options": [
+              "Sự khác biệt rất lớn",
+              "Sự khác biệt không lớn",
+              "Sự bằng nhau",
+              "Sự không chắc chắn"
+            ],
             "answer": 1
           },
           {
-            "cn": "今天比昨天热一点儿。",
             "question": "Dịch câu: \"Hôm nay nóng hơn hôm qua một chút.\"",
-            "options": ["今天比昨天热一点儿。", "今天比昨天热很多。", "今天比昨天热多了。", "今天比昨天热一些。"],
+            "options": [
+              "今天比昨天热一点儿。",
+              "今天比昨天热很多。",
+              "今天比昨天热多了。",
+              "今天比昨天热一些。"
+            ],
             "answer": 0
           },
           {
-            "cn": "姐姐比我高___。",
             "question": "Điền vào chỗ trống: 姐姐比我高___。 (Chị gái cao hơn tôi một chút)",
             "options": ["一点儿", "一些", "多了", "A và B đều đúng"],
             "answer": 3
           },
           {
-            "cn": "So sánh với số lượng cụ thể",
             "question": "Trong so sánh với số lượng cụ thể, sau tính từ thêm gì?",
             "options": ["Cụm số lượng", "一点儿", "一些", "很多"],
             "answer": 0
           },
           {
-            "cn": "老师教我们汉语。",
             "question": "Dịch câu: \"Giáo viên dạy chúng tôi tiếng Trung.\"",
-            "options": ["老师教我们汉语。", "老师教汉语我们。", "我们教老师汉语。", "老师给我们教汉语。"],
+            "options": [
+              "老师教我们汉语。",
+              "老师教汉语我们。",
+              "我们教老师汉语。",
+              "老师给我们教汉语。"
+            ],
             "answer": 0
           }
         ]
@@ -2342,61 +2612,81 @@
         ],
         "exercises": [
           {
-            "cn": "Nơi chốn + V + trợ từ + N",
             "question": "Câu tồn hiện có cấu trúc như thế nào?",
-            "options": ["S + V + O", "Nơi chốn + V + bổ ngữ/trợ từ + Người/vật", "S + 有 + O", "S + 是 + O"],
+            "options": [
+              "S + V + O",
+              "Nơi chốn + V + bổ ngữ/trợ từ + Người/vật",
+              "S + 有 + O",
+              "S + 是 + O"
+            ],
             "answer": 1
           },
           {
-            "cn": "你家楼下站着一个人。",
             "question": "Dịch câu: \"Dưới lầu nhà bạn đang có một người đứng.\"",
-            "options": ["你家楼下站着一个人。", "你家楼下有一个人。", "一个人站在你家楼下。", "A và C đều đúng"],
+            "options": [
+              "你家楼下站着一个人。",
+              "你家楼下有一个人。",
+              "一个人站在你家楼下。",
+              "A và C đều đúng"
+            ],
             "answer": 0
           },
           {
-            "cn": "多 = quá, biết bao",
-            "question": "Phó từ mức độ \"多\"trong câu cảm thán có nghĩa là gì?",
+            "question": "Phó từ mức độ 多 trong câu cảm thán có nghĩa là gì?",
             "options": ["Nhiều", "Quá, biết bao", "Ít", "Có"],
             "answer": 1
           },
           {
-            "cn": "你一个人在这儿多没意思啊！",
             "question": "Dịch câu: \"Một mình ở đây chán biết bao!\"",
-            "options": ["你一个人在这儿多没意思啊！", "你一个人在这儿很有意思啊！", "你一个人在这儿没意思！", "你一个人在这儿有意思吗？"],
+            "options": [
+              "你一个人在这儿多没意思啊！",
+              "你一个人在这儿很有意思啊！",
+              "你一个人在这儿没意思！",
+              "你一个人在这儿有意思吗？"
+            ],
             "answer": 0
           },
           {
-            "cn": "BNXH kép = V đơn + 来/去",
             "question": "Bổ ngữ xu hướng kép được tạo thành từ gì?",
-            "options": ["Động từ + 来/去", "Động từ xu hướng đơn + 来/去", "Động từ + 上/下", "Động từ + 起来"],
+            "options": [
+              "Động từ + 来/去",
+              "Động từ xu hướng đơn + 来/去",
+              "Động từ + 上/下",
+              "Động từ + 起来"
+            ],
             "answer": 1
           },
           {
-            "cn": "他们跑回北京去了。",
             "question": "Dịch câu: \"Họ chạy về Bắc Kinh rồi.\"",
-            "options": ["他们跑回北京去了。", "他们跑去北京回了。", "他们跑北京回去了。", "他们回北京跑去了。"],
+            "options": [
+              "他们跑回北京去了。",
+              "他们跑去北京回了。",
+              "他们跑北京回去了。",
+              "他们回北京跑去了。"
+            ],
             "answer": 0
           },
           {
-            "cn": "爸爸手里___着一杯咖啡。",
-            "question": "Điền vào chỗ trống: 爸爸手里___着一杯咖啡。 (Bố đang cầm một cốc cà phê trên tay)",
+            "question": "Điền vào chỗ trống: 爸爸手里___着一杯咖啡。 (Bố đang cầm cà phê trên tay)",
             "options": ["拿", "在拿", "拿着", "拿过"],
             "answer": 2
           },
           {
-            "cn": "起来 = thức dậy/bắt đầu",
-            "question": "\"起来\"trong bổ ngữ xu hướng kép có nghĩa gì?",
+            "question": "\"起来\" trong bổ ngữ xu hướng kép có nghĩa gì?",
             "options": ["Đi lên", "Thức dậy, bắt đầu", "Đi xuống", "Quay lại"],
             "answer": 1
           },
           {
-            "cn": "楼不高，我们走上去吧。",
             "question": "Dịch câu: \"Lầu không cao, chúng ta đi bộ lên nhé.\"",
-            "options": ["楼不高，我们走上去吧。", "楼不高，我们走下来吧。", "楼不高，我们走进去吧。", "楼不高，我们走出来吧。"],
+            "options": [
+              "楼不高，我们走上去吧。",
+              "楼不高，我们走下来吧。",
+              "楼不高，我们走进去吧。",
+              "楼不高，我们走出来吧。"
+            ],
             "answer": 0
           },
           {
-            "cn": "着 thường dùng trong câu tồn hiện",
             "question": "Trong câu tồn hiện, trợ từ thường được dùng là gì?",
             "options": ["了", "过", "着", "的"],
             "answer": 2
@@ -2490,63 +2780,93 @@
         ],
         "exercises": [
           {
-            "cn": "次 = số lần",
             "question": "Bổ ngữ động lượng dùng để biểu thị điều gì?",
-            "options": ["Khoảng thời gian", "Số lần thực hiện hành động", "Kết quả hành động", "Phương thức hành động"],
+            "options": [
+              "Khoảng thời gian",
+              "Số lần thực hiện hành động",
+              "Kết quả hành động",
+              "Phương thức hành động"
+            ],
             "answer": 1
           },
           {
-            "cn": "安妮去过一次北京。",
             "question": "Dịch câu: \"Annie đã từng đến Bắc Kinh một lần.\"",
-            "options": ["安妮去过一次北京。", "安妮去过北京一次。", "安妮一次去过北京。", "A và B đều đúng"],
+            "options": [
+              "安妮去过一次北京。",
+              "安妮去过北京一次。",
+              "安妮一次去过北京。",
+              "A và B đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "次 là lượng từ HSK2",
             "question": "Lượng từ nào thường được dùng trong bổ ngữ động lượng ở HSK2?",
             "options": ["次", "遍", "回", "趟"],
             "answer": 0
           },
           {
-            "cn": "Đại từ đứng trước số từ + 次",
             "question": "Khi tân ngữ là đại từ trong bổ ngữ động lượng, vị trí của nó là gì?",
-            "options": ["Sau số từ + 次", "Trước số từ + 次", "Đầu câu", "Cuối câu"],
+            "options": [
+              "Sau số từ + 次",
+              "Trước số từ + 次",
+              "Đầu câu",
+              "Cuối câu"
+            ],
             "answer": 1
           },
           {
-            "cn": "我想找他一次。",
             "question": "Dịch câu: \"Tôi muốn gặp anh ấy một lần.\"",
-            "options": ["我想找他一次。", "我想一次找他。", "我一次想找他。", "我想一次找他。"],
+            "options": [
+              "我想找他一次。",
+              "我想一次找他。",
+              "我一次想找他。",
+              "我想一次找他。"
+            ],
             "answer": 0
           },
           {
-            "cn": "有 + cụm số lượng = đã đạt đến",
-            "question": "Cấu trúc \"有 + cụm số lượng\"trong câu chữ 有 (2) biểu thị điều gì?",
-            "options": ["Sự sở hữu", "Đã đạt đến một khoảng thời gian hoặc số lượng nhất định", "Sự tồn tại", "Sự so sánh"],
+            "question": "Cấu trúc \"有 + cụm số lượng\" trong câu chữ 有 (2) biểu thị điều gì?",
+            "options": [
+              "Sự sở hữu",
+              "Đã đạt đến một khoảng thời gian hoặc số lượng nhất định",
+              "Sự tồn tại",
+              "Sự so sánh"
+            ],
             "answer": 1
           },
           {
-            "cn": "你有一年没回国了吧？",
             "question": "Dịch câu: \"Bạn đã một năm chưa về nước rồi phải không?\"",
-            "options": ["你有一年没回国了吧？", "你有一年回国了吧？", "你一年没回国了？", "你没回国一年了吧？"],
+            "options": [
+              "你有一年没回国了吧？",
+              "你有一年回国了吧？",
+              "你一年没回国了？",
+              "你没回国一年了吧？"
+            ],
             "answer": 0
           },
           {
-            "cn": "安妮去___一次北京。",
             "question": "Điền vào chỗ trống: 安妮去___一次北京。 (Annie đã từng đến Bắc Kinh một lần)",
             "options": ["过", "了", "着", "的"],
             "answer": 0
           },
           {
-            "cn": "我们有三个月没见面了。",
             "question": "Dịch câu: \"Chúng tôi đã ba tháng không gặp nhau.\"",
-            "options": ["我们有三个月没见面了。", "我们三个月没见面了。", "我们没见面三个月了。", "A và B đều đúng"],
+            "options": [
+              "我们有三个月没见面了。",
+              "我们三个月没见面了。",
+              "我们没见面三个月了。",
+              "A và B đều đúng"
+            ],
             "answer": 3
           },
           {
-            "cn": "S + V + số từ + 次 (+ O)",
             "question": "Bổ ngữ động lượng thường có cấu trúc nào?",
-            "options": ["S + V + số từ + 次 (+ O)", "S + số từ + 次 + V (+ O)", "S + V + O + số từ + 次", "S + O + V + số từ + 次"],
+            "options": [
+              "S + V + số từ + 次 (+ O)",
+              "S + số từ + 次 + V (+ O)",
+              "S + V + O + số từ + 次",
+              "S + O + V + số từ + 次"
+            ],
             "answer": 0
           }
         ]
