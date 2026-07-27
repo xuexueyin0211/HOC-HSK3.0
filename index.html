@@ -773,10 +773,7 @@ background: white;
             position: sticky;
             top: 80px;
             max-height: calc(100vh - 120px);
-           overflow: visible; /* Thay từ overflow-y: auto */
-    overflow-y: auto;  /* Riêng chiều Y */
-    /* Thêm vào: */
-    z-index: 10;
+            z-index: 10;
 }
         .lesson-sidebar::-webkit-scrollbar {
             width: 4px;
@@ -1649,16 +1646,23 @@ background: #FFFAFC;
 
             // Sidebar
             const sidebar = document.createElement('div');
-            sidebar.className = 'lesson-sidebar';
-            sidebar.style.cssText = `
-                width:300px;flex-shrink:0;background:white;border-radius:16px;
-                border:1px solid #fce7f3;box-shadow:var(--shadow-sm);padding:12px 0;
-                position:sticky;top:80px;max-height:calc(100vh - 120px);overflow-y:auto;
-            `;
-            const sidebarTitle = document.createElement('div');
-            sidebarTitle.className = 'sidebar-title';
-            sidebarTitle.textContent = 'Danh sách bài học';
-            sidebar.appendChild(sidebarTitle);
+sidebar.className = 'lesson-sidebar';
+sidebar.style.cssText = `
+    width:300px;flex-shrink:0;background:white;border-radius:16px;
+    border:1px solid #fce7f3;box-shadow:var(--shadow-sm);padding:12px 0;
+    position:sticky;top:80px;
+`;
+
+// Tạo wrapper cho danh sách bài học (có overflow-y)
+const scrollWrapper = document.createElement('div');
+scrollWrapper.className = 'sidebar-scroll';
+scrollWrapper.style.cssText = 'overflow: visible; max-height: calc(100vh - 160px); padding-right: 4px;';
+
+const sidebarTitle = document.createElement('div');
+sidebarTitle.className = 'sidebar-title';
+sidebarTitle.textContent = 'Danh sách bài học';
+sidebar.appendChild(sidebarTitle);
+sidebar.appendChild(scrollWrapper);  // thay vì thêm trực tiếp các lesson-item vào sidebar
 
             // Main content
             const mainContent = document.createElement('div');
@@ -1720,8 +1724,7 @@ background: #FFFAFC;
                     const lid = parseInt(this.dataset.lessonId);
                     showLesson(lv, lid, '1');
                 };
-                sidebar.appendChild(lessonItem);
-
+scrollWrapper.appendChild(lessonItem);
                 // Lesson content
                 const lessonDiv = document.createElement('div');
                 lessonDiv.id = `lesson-${level}-${lesson.id}`;
