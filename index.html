@@ -441,9 +441,10 @@
 
         .search-results-dropdown {
             position: absolute;
-            top: 130%;
-            right: 0;
-            width: 320px;
+              top: 100%; /* ← SỬA TỪ 130% THÀNH 100% */
+    left: 0; /* ← THÊM DÒNG NÀY */
+    right: auto; /* ← THÊM DÒNG NÀY */
+    width: 100%; /* ← SỬA TỪ 320px THÀNH 100% */
             background: white;
             border-radius: 10px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -758,7 +759,6 @@
             color: #888;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            border-bottom: 1px solid #fce7f3;
         }
         .lesson-main { flex: 1; min-width: 0; }
 
@@ -2272,17 +2272,17 @@
 });
 
         function clearAllHighlights() {
-            if (confirm('Xóa tất cả highlight?')) {
-                document.querySelectorAll('.highlighted').forEach(el => {
-                    const text = el.textContent;
-                    const parent = el.parentNode;
-                    const textNode = document.createTextNode(text);
-                    parent.replaceChild(textNode, el);
-                    parent.normalize();
-                });
-                localStorage.removeItem('highlights');
-            }
-        }
+    if (confirm('Xóa tất cả highlight?')) {
+        document.querySelectorAll('.highlighted').forEach(el => {
+            const text = el.textContent;
+            const parent = el.parentNode;
+            const textNode = document.createTextNode(text);
+            parent.replaceChild(textNode, el);
+            parent.normalize();
+        });
+        localStorage.removeItem('hsk_highlights'); // ← SỬA THÀNH 'hsk_highlights'
+    }
+}
 
         function saveHighlights() {
     const highlights = [];
@@ -2361,20 +2361,25 @@ function loadHighlights() {
         
 
         function deleteSingleHighlight() {
-            if (currentHighlightElement) {
-                const text = currentHighlightElement.textContent;
-                const highlightId = currentHighlightElement.dataset.highlightId;
-                const parent = currentHighlightElement.parentNode;
-                const textNode = document.createTextNode(text);
-                parent.replaceChild(textNode, currentHighlightElement);
-                parent.normalize();
-                let highlights = JSON.parse(localStorage.getItem('highlights') || '[]');
-                highlights = highlights.filter(h => h.id !== highlightId);
-                try { localStorage.setItem('highlights', JSON.stringify(highlights)); } catch (e) {}
-                document.getElementById('highlightMenu').style.display = 'none';
-                currentHighlightElement = null;
-            }
-        }
+    if (currentHighlightElement) {
+        const text = currentHighlightElement.textContent;
+        const highlightId = currentHighlightElement.dataset.highlightId;
+        const parent = currentHighlightElement.parentNode;
+        const textNode = document.createTextNode(text);
+        parent.replaceChild(textNode, currentHighlightElement);
+        parent.normalize();
+        
+        // ===== SỬA: Dùng đúng key 'hsk_highlights' =====
+        let highlights = JSON.parse(localStorage.getItem('hsk_highlights') || '[]');
+        highlights = highlights.filter(h => h.id !== highlightId);
+        try { 
+            localStorage.setItem('hsk_highlights', JSON.stringify(highlights)); 
+        } catch (e) {}
+        
+        document.getElementById('highlightMenu').style.display = 'none';
+        currentHighlightElement = null;
+    }
+}
 
         // ================================================================
         // FLASHCARD
@@ -2530,7 +2535,7 @@ function loadHighlights() {
         });
     });
     
-    dropdown.style.display = resultsMap.size > 0 ? 'block' : 'block';
+dropdown.style.display = resultsMap.size > 0 ? 'block' : 'none';
     if (resultsMap.size === 0) {
         dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">🔍 Không tìm thấy nội dung phù hợp!</div>';
     }
