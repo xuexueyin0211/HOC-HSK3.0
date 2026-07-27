@@ -7,11 +7,11 @@
     "lessons": [
       {
         "id": 1,
-        "title": "第1课 Bài 1",
+        "title": "第1课 我们去机场接你们",
         "tabs": [
           {
             "id": 1,
-            "title": "① 看上去/看起来",
+            "title": "看上去/看起来",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -46,7 +46,7 @@
           },
           {
             "id": 2,
-            "title": "② 非疑问代词(1)",
+            "title": "非疑问代词(1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -76,7 +76,7 @@
           },
           {
             "id": 3,
-            "title": "③ 多项定语",
+            "title": "多项定语",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -108,11 +108,11 @@
       },
       {
         "id": 2,
-        "title": "第2课 Bài 2",
+        "title": "第2课 你们想吃什么就点什么",
         "tabs": [
           {
             "id": 1,
-            "title": "① 又...又...",
+            "title": "又...又...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -142,7 +142,7 @@
           },
           {
             "id": 2,
-            "title": "② 非疑问代词(2)",
+            "title": "非疑问代词(2)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -172,7 +172,7 @@
           },
           {
             "id": 3,
-            "title": "③ 非疑问代词(3)",
+            "title": "非疑问代词(3)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -204,11 +204,11 @@
       },
       {
         "id": 3,
-        "title": "第3课 Bài 3",
+        "title": "第3课 这个小区挺好的",
         "tabs": [
           {
             "id": 1,
-            "title": "① 挺",
+            "title": "挺",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -238,7 +238,7 @@
           },
           {
             "id": 2,
-            "title": "② 坏了",
+            "title": "坏了",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -268,7 +268,7 @@
           },
           {
             "id": 3,
-            "title": "③ 就 vs 才",
+            "title": "就 vs 才",
             "subcards": [
               {
                 "label": "\"就\":",
@@ -300,11 +300,11 @@
       },
       {
         "id": 4,
-        "title": "第4课 Bài 4",
+        "title": "第4课 这家宾馆跟别的都不一样",
         "tabs": [
           {
             "id": 1,
-            "title": "① 一...也/都+不/没",
+            "title": "一...也/都+不/没",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -334,7 +334,7 @@
           },
           {
             "id": 2,
-            "title": "② A跟B一样",
+            "title": "A跟B一样",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -364,7 +364,7 @@
           },
           {
             "id": 3,
-            "title": "③ 除了...以外",
+            "title": "除了...以外",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -396,11 +396,11 @@
       },
       {
         "id": 5,
-        "title": "第5课 Bài 5",
+        "title": "第5课 这样的照片才好看",
         "tabs": [
           {
             "id": 1,
-            "title": "① 得很",
+            "title": "得很",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -430,7 +430,7 @@
           },
           {
             "id": 2,
-            "title": "② 量词重叠",
+            "title": "量词重叠",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -460,7 +460,7 @@
           },
           {
             "id": 3,
-            "title": "③ 存现句(3)",
+            "title": "存现句(3)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -490,7 +490,7 @@
           },
           {
             "id": 4,
-            "title": "④ ...了...就...",
+            "title": "...了...就...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -522,11 +522,11 @@
       },
       {
         "id": 6,
-        "title": "第6课 Bài 6",
+        "title": "第6课 高铁上还可以点外卖",
         "tabs": [
           {
             "id": 1,
-            "title": "① 该...了",
+            "title": "该...了",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -556,7 +556,7 @@
           },
           {
             "id": 2,
-            "title": "② 如果...就...",
+            "title": "如果...就...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -586,7 +586,7 @@
           },
           {
             "id": 3,
-            "title": "③ 越来越",
+            "title": "越来越",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -618,11 +618,11 @@
       },
       {
         "id": 7,
-        "title": "第7课 Bài 7",
+        "title": "第7课 那条裙子比短裤更好看",
         "tabs": [
           {
             "id": 1,
-            "title": "① 连动句(2)",
+            "title": "连动句(2)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -652,7 +652,7 @@
           },
           {
             "id": 2,
-            "title": "② 比较句(10)",
+            "title": "比较句(10)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -682,7 +682,7 @@
           },
           {
             "id": 3,
-            "title": "③ 程度补语(3) - 极了",
+            "title": "程度补语(3) - 极了",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -712,7 +712,7 @@
           },
           {
             "id": 4,
-            "title": "④ 不但...而且...",
+            "title": "不但...而且...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -744,11 +744,11 @@
       },
       {
         "id": 8,
-        "title": "第8课 Bài 8",
+        "title": "第8课 今天我出院了",
         "tabs": [
           {
             "id": 1,
-            "title": "① 下去",
+            "title": "下去",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -778,7 +778,7 @@
           },
           {
             "id": 2,
-            "title": "② 离合词(2)",
+            "title": "离合词(2)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -808,7 +808,7 @@
           },
           {
             "id": 3,
-            "title": "③ 时量补语(2)",
+            "title": "时量补语(2)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -838,7 +838,7 @@
           },
           {
             "id": 4,
-            "title": "④ ...以前/以后/前/后",
+            "title": "...以前/以后/前/后",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -870,11 +870,11 @@
       },
       {
         "id": 9,
-        "title": "第9课 Bài 9",
+        "title": "第9课 打不好没关系",
         "tabs": [
           {
             "id": 1,
-            "title": "① 为了",
+            "title": "为了",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -904,7 +904,7 @@
           },
           {
             "id": 2,
-            "title": "② 可能补语",
+            "title": "可能补语",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -934,7 +934,7 @@
           },
           {
             "id": 3,
-            "title": "③ 越A越B",
+            "title": "越A越B",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -966,11 +966,11 @@
       },
       {
         "id": 10,
-        "title": "第10课 Bài 10",
+        "title": "第10课 你明天再把书还给我",
         "tabs": [
           {
             "id": 1,
-            "title": "① 把(1)",
+            "title": "把(1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1000,7 +1000,7 @@
           },
           {
             "id": 2,
-            "title": "② 在...上/中/下",
+            "title": "在...上/中/下",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1030,7 +1030,7 @@
           },
           {
             "id": 3,
-            "title": "③ 把(2)",
+            "title": "把(2)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1062,11 +1062,11 @@
       },
       {
         "id": 11,
-        "title": "第11课 Bài 11",
+        "title": "第11课 看来我没办法解决这个问题",
         "tabs": [
           {
             "id": 1,
-            "title": "① 还是 vs 或者",
+            "title": "还是 vs 或者",
             "subcards": [
               {
                 "label": "\"还是\":",
@@ -1096,7 +1096,7 @@
           },
           {
             "id": 2,
-            "title": "② 看来",
+            "title": "看来",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1126,7 +1126,7 @@
           },
           {
             "id": 3,
-            "title": "③ 把(3)",
+            "title": "把(3)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1156,7 +1156,7 @@
           },
           {
             "id": 4,
-            "title": "④ 对...来说",
+            "title": "对...来说",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1188,11 +1188,11 @@
       },
       {
         "id": 12,
-        "title": "第12课 Bài 12",
+        "title": "第12课 这个季节天气变化很快",
         "tabs": [
           {
             "id": 1,
-            "title": "① 或者...或者...",
+            "title": "或者...或者...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1222,7 +1222,7 @@
           },
           {
             "id": 2,
-            "title": "② 起来",
+            "title": "起来",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1252,7 +1252,7 @@
           },
           {
             "id": 3,
-            "title": "③ 范围副词\"就\"",
+            "title": "范围副词\"就\"",
             "subcards": [
               {
                 "label": "Công dụng (1):",
@@ -1286,7 +1286,7 @@
           },
           {
             "id": 4,
-            "title": "④ 下来",
+            "title": "下来",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1318,11 +1318,11 @@
       },
       {
         "id": 13,
-        "title": "第13课 Bài 13",
+        "title": "第13课 我的新邻居来自英国",
         "tabs": [
           {
             "id": 1,
-            "title": "① ...的话，就...",
+            "title": "...的话，就...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1352,7 +1352,7 @@
           },
           {
             "id": 2,
-            "title": "② 把(4)",
+            "title": "把(4)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1382,7 +1382,7 @@
           },
           {
             "id": 3,
-            "title": "③ 一边...一边...",
+            "title": "一边...一边...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1414,11 +1414,11 @@
       },
       {
         "id": 14,
-        "title": "第14课 Bài 14",
+        "title": "第14课 这本书被别人借走了",
         "tabs": [
           {
             "id": 1,
-            "title": "① 被动句(1)",
+            "title": "被动句(1)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1448,7 +1448,7 @@
           },
           {
             "id": 2,
-            "title": "② 先...再/然后...",
+            "title": "先...再/然后...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1478,7 +1478,7 @@
           },
           {
             "id": 3,
-            "title": "③ ×什么(啊)",
+            "title": "×什么(啊)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1510,11 +1510,11 @@
       },
       {
         "id": 15,
-        "title": "第15课 Bài 15",
+        "title": "第15课 我是半个南京人",
         "tabs": [
           {
             "id": 1,
-            "title": "① 根据",
+            "title": "根据",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1544,7 +1544,7 @@
           },
           {
             "id": 2,
-            "title": "② 数量重叠",
+            "title": "数量重叠",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1574,7 +1574,7 @@
           },
           {
             "id": 3,
-            "title": "③ 在...看来",
+            "title": "在...看来",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1604,7 +1604,7 @@
           },
           {
             "id": 4,
-            "title": "④ 不一会儿",
+            "title": "不一会儿",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1636,11 +1636,11 @@
       },
       {
         "id": 16,
-        "title": "第16课 Bài 16",
+        "title": "第16课 我听说有的熊猫出国了",
         "tabs": [
           {
             "id": 1,
-            "title": "① 一会儿...一会儿...",
+            "title": "一会儿...一会儿...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1670,7 +1670,7 @@
           },
           {
             "id": 2,
-            "title": "② 关于",
+            "title": "关于",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1700,7 +1700,7 @@
           },
           {
             "id": 3,
-            "title": "③ 一般来说",
+            "title": "一般来说",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1730,7 +1730,7 @@
           },
           {
             "id": 4,
-            "title": "④ 比较句(11)",
+            "title": "比较句(11)",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1762,11 +1762,11 @@
       },
       {
         "id": 17,
-        "title": "第17课 Bài 17",
+        "title": "第17课 我要多向认真的人学习",
         "tabs": [
           {
             "id": 1,
-            "title": "① 向",
+            "title": "向",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1796,7 +1796,7 @@
           },
           {
             "id": 2,
-            "title": "② 不是...吗？",
+            "title": "不是...吗？",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1826,7 +1826,7 @@
           },
           {
             "id": 3,
-            "title": "③ ...，更...",
+            "title": "...，更...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1856,7 +1856,7 @@
           },
           {
             "id": 4,
-            "title": "④ 只有...才...",
+            "title": "只有...才...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1888,11 +1888,11 @@
       },
       {
         "id": 18,
-        "title": "第18课 Bài 18",
+        "title": "第18课 我学会了包饺子",
         "tabs": [
           {
             "id": 1,
-            "title": "① 概数表达法",
+            "title": "概数表达法",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1922,7 +1922,7 @@
           },
           {
             "id": 2,
-            "title": "② 刚才 vs 刚刚",
+            "title": "刚才 vs 刚刚",
             "subcards": [
               {
                 "label": "\"刚才\":",
@@ -1952,7 +1952,7 @@
           },
           {
             "id": 3,
-            "title": "③ 只要...就...",
+            "title": "只要...就...",
             "subcards": [
               {
                 "label": "Công dụng:",
@@ -1982,7 +1982,7 @@
           },
           {
             "id": 4,
-            "title": "④ 从...起",
+            "title": "从...起",
             "subcards": [
               {
                 "label": "Công dụng:",
