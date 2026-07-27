@@ -2007,7 +2007,6 @@ sidebar.appendChild(lessonItem);
             document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
             const firstLesson = document.querySelector(`#lesson-${level}-1`);
             if (firstLesson) firstLesson.classList.add('active');
-            attachHighlightClickListeners();
         }
 
         // ================================================================
@@ -2173,7 +2172,6 @@ function goToTab(level, lessonId, tabId) {
             
             // Switch tab
             switchTab(level, lessonNum, tabId);
-                attachHighlightClickListeners();
         }
 
         // ================================================================
@@ -2292,6 +2290,7 @@ function goToTab(level, lessonId, tabId) {
         // ================================================================
         // HIGHLIGHT
         // ================================================================
+
         function toggleHighlightMode() {
             highlightMode = !highlightMode;
             const btn = document.getElementById('highlightToggle');
@@ -2322,6 +2321,25 @@ function goToTab(level, lessonId, tabId) {
                 btn.style.transform = 'rotate(0deg)';
             }
         }
+
+        // Event delegation: bắt click trên bất kỳ phần tử .highlighted nào
+        document.addEventListener('click', function(e) {
+            const highlight = e.target.closest('.highlighted');
+            if (highlight) {
+                e.stopPropagation();
+                currentHighlightElement = highlight;
+                const menu = document.getElementById('highlightMenu');
+                menu.style.left = e.pageX + 'px';
+                menu.style.top = e.pageY + 'px';
+                menu.style.display = 'flex';
+            } else {
+                // Ẩn menu nếu click ra ngoài
+                const menu = document.getElementById('highlightMenu');
+                if (menu && !menu.contains(e.target)) {
+                    menu.style.display = 'none';
+                }
+            }
+        });
 
         document.addEventListener('mouseup', function(e) {
             if (!highlightMode) return;
@@ -2385,7 +2403,7 @@ function goToTab(level, lessonId, tabId) {
                     parent.normalize();
                 });
                 localStorage.removeItem('hsk_highlights');
-                setTimeout(() => attachHighlightClickListeners(), 100);
+                // Không cần gọi attachHighlightClickListeners
             }
         }
 
@@ -2404,22 +2422,6 @@ function goToTab(level, lessonId, tabId) {
                 console.warn('Không thể lưu highlight:', e);
             }
         }
-
-        function attachHighlightClickListeners() {
-    document.querySelectorAll('.highlighted').forEach(el => {
-        // Remove listener cũ bằng cách clone và replace
-        const newEl = el.cloneNode(true);
-        el.parentNode.replaceChild(newEl, el);
-        newEl.addEventListener('click', function(e) {
-            e.stopPropagation();
-            currentHighlightElement = this;
-            const menu = document.getElementById('highlightMenu');
-            menu.style.left = e.pageX + 'px';
-            menu.style.top = e.pageY + 'px';
-            menu.style.display = 'flex';
-        });
-    });
-}
 
         function loadHighlights() {
             const saved = localStorage.getItem('hsk_highlights');
@@ -2470,7 +2472,7 @@ function goToTab(level, lessonId, tabId) {
                             }
                         });
                     });
-                    attachHighlightClickListeners();
+                    // Không cần gọi attachHighlightClickListeners nữa
                 }, 500);
             } catch (e) {
                 console.log('Lỗi load highlight:', e);
@@ -2496,11 +2498,9 @@ function goToTab(level, lessonId, tabId) {
                 
                 document.getElementById('highlightMenu').style.display = 'none';
                 currentHighlightElement = null;
-                
-                setTimeout(() => attachHighlightClickListeners(), 50);
+                // Không cần gọi attachHighlightClickListeners
             }
         }
-
         // ================================================================
         // FLASHCARD
         // ================================================================
@@ -2747,13 +2747,11 @@ document.addEventListener('mouseover', function(e) {
         const rect = lessonItem.getBoundingClientRect();
         const tooltipWidth = 280;
         const spaceRight = window.innerWidth - rect.right;
-        let left = rect.right + 8;      // Mặc định bên phải
+        let left = rect.right + 8;
         let top = rect.top;
-        // Nếu không đủ chỗ bên phải, chuyển sang trái
         if (spaceRight < tooltipWidth + 10) {
             left = rect.left - tooltipWidth - 8;
         }
-        // Điều chỉnh tránh tràn trên/dưới màn hình
         if (top + tooltip.offsetHeight > window.innerHeight) {
             top = window.innerHeight - tooltip.offsetHeight - 10;
         }
@@ -2762,7 +2760,7 @@ document.addEventListener('mouseover', function(e) {
         tooltip.style.top = top + 'px';
         tooltip.style.display = 'block';
     } else {
-        // Ẩn khi không hover (CSS đã lo, nhưng để chắc chắn)
+        // ✅ Ẩn tooltip khi không hover
         tooltip.style.display = 'none';
     }
 });
