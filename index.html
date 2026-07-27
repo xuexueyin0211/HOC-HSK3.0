@@ -1834,16 +1834,44 @@ lesson.tabs.forEach((tab, tabIndex) => {
     grammarDiv.appendChild(h3);
 
     if (tab.subcards) {
-        tab.subcards.forEach(sc => {
-            const subcard = document.createElement('div');
-            subcard.className = 'subcard';
+    tab.subcards.forEach(sc => {
+        const subcard = document.createElement('div');
+        subcard.className = 'subcard';
+        
+        // Kiểm tra nếu là vocab_grid
+        if (sc.type === 'vocab_grid') {
+            // Hiển thị label
+            const labelSpan = document.createElement('span');
+            labelSpan.className = 'label';
+            labelSpan.textContent = sc.label;
+            subcard.appendChild(labelSpan);
+            
+            // Tạo grid
+            const gridDiv = document.createElement('div');
+            gridDiv.className = 'vocab-grid';
+            
+            sc.items.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'vocab-item';
+                itemDiv.innerHTML = `
+                    <span class="cn">${item.cn}</span>
+                    <span class="py">${item.py}</span>
+                `;
+                gridDiv.appendChild(itemDiv);
+            });
+            
+            subcard.appendChild(gridDiv);
+        } else {
+            // Subcard thông thường
             subcard.innerHTML = `
                 <span class="label">${sc.label}</span>
                 <p>${sc.text.replace(/\n/g, '<br>')}</p>
             `;
-            grammarDiv.appendChild(subcard);
-        });
-    }
+        }
+        
+        grammarDiv.appendChild(subcard);
+    });
+}
 
     if (tab.examples) {
         const exampleDiv = document.createElement('div');
