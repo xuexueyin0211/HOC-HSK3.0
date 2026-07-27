@@ -2742,32 +2742,47 @@ function goToTab(level, lessonId, tabId) {
             setTimeout(attachHighlightClickListeners, 500);
         });
       
-document.addEventListener('mouseover', function(e) {
+// ================================================================
+// XỬ LÝ TOOLTIP - DÙNG MOUSEENTER/MOUSELEAVE
+// ================================================================
+document.addEventListener('mouseenter', function(e) {
     const lessonItem = e.target.closest('.lesson-item');
     if (!lessonItem) return;
+    
     const tooltip = lessonItem.querySelector('.lesson-item-tooltip');
     if (!tooltip) return;
-    if (lessonItem.matches(':hover')) {
-        const rect = lessonItem.getBoundingClientRect();
-        const tooltipWidth = 280;
-        const spaceRight = window.innerWidth - rect.right;
-        let left = rect.right + 8;
-        let top = rect.top;
-        if (spaceRight < tooltipWidth + 10) {
-            left = rect.left - tooltipWidth - 8;
-        }
-        if (top + tooltip.offsetHeight > window.innerHeight) {
-            top = window.innerHeight - tooltip.offsetHeight - 10;
-        }
-        if (top < 10) top = 10;
-        tooltip.style.left = left + 'px';
-        tooltip.style.top = top + 'px';
-        tooltip.style.display = 'block';
-    } else {
-        // ✅ Ẩn tooltip khi không hover
-        tooltip.style.display = 'none';
+    
+    // Khi hover vào lesson-item, hiển thị tooltip
+    const rect = lessonItem.getBoundingClientRect();
+    const tooltipWidth = 280;
+    const spaceRight = window.innerWidth - rect.right;
+    let left = rect.right + 8;
+    let top = rect.top;
+    
+    if (spaceRight < tooltipWidth + 10) {
+        left = rect.left - tooltipWidth - 8;
     }
-});
+    
+    if (top + tooltip.offsetHeight > window.innerHeight) {
+        top = window.innerHeight - tooltip.offsetHeight - 10;
+    }
+    if (top < 10) top = 10;
+    
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+    tooltip.style.display = 'block';
+}, true);
+
+document.addEventListener('mouseleave', function(e) {
+    const lessonItem = e.target.closest('.lesson-item');
+    if (!lessonItem) return;
+    
+    const tooltip = lessonItem.querySelector('.lesson-item-tooltip');
+    if (!tooltip) return;
+    
+    // Khi rời khỏi lesson-item, ẩn tooltip
+    tooltip.style.display = 'none';
+}, true);
     </script>
 
     <!-- ===== FIREBASE AUTH ===== -->
