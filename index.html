@@ -1702,11 +1702,11 @@ sidebar.appendChild(scrollWrapper);  // thay vì thêm trực tiếp các lesson
                     <div class="lesson-item-tooltip">
                         <div class="tooltip-title">📑 Các phần trong bài</div>
                         ${lesson.tabs.map((tab, tabIdx) => `
-                            <div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${level}', ${lesson.id}, '${tab.id}')">
+<div class="tooltip-item" onclick="event.stopPropagation(); goToTab('${level}', ${lesson.id}, '${tab.id}')">
                                 ${tab.title}
                             </div>
                         `).join('')}
-                        <div class="tooltip-item" onclick="event.stopPropagation(); switchTab('${level}', ${lesson.id}, '999')" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
+                       <div class="tooltip-item" onclick="event.stopPropagation(); goToTab('${level}', ${lesson.id}, '999')" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
                             ✏️ Bài Tập
                         </div>
                     </div>
@@ -1920,6 +1920,7 @@ scrollWrapper.appendChild(lessonItem);
             document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
             const firstLesson = document.querySelector(`#lesson-${level}-1`);
             if (firstLesson) firstLesson.classList.add('active');
+            attachHighlightClickListeners();
         }
 
         // ================================================================
@@ -2042,7 +2043,10 @@ scrollWrapper.appendChild(lessonItem);
 
             currentTab = tabId;
         }
-
+function goToTab(level, lessonId, tabId) {
+    // Chuyển đến bài học đó
+    showLesson(level, lessonId, tabId);
+}
         // ================================================================
         // SHOW LESSON
         // ================================================================
@@ -2082,6 +2086,7 @@ scrollWrapper.appendChild(lessonItem);
             
             // Switch tab
             switchTab(level, lessonNum, tabId);
+                attachHighlightClickListeners();
         }
 
         // ================================================================
