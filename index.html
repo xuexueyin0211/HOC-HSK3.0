@@ -1557,7 +1557,7 @@
                 });
                 const exerciseBtn = document.createElement('button');
                 exerciseBtn.className = 'tab-btn';
-                exerciseBtn.textContent = '📝 Bài Tập';
+                exerciseBtn.textContent = 'Bài Tập';
                 exerciseBtn.onclick = () => switchTab(level, lesson.id, '999');
                 tabNav.appendChild(exerciseBtn);
                 lessonDiv.appendChild(tabNav);
@@ -1627,7 +1627,7 @@
                                     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                                         <span class="cn">${ex.cn}</span>
                                         <button onclick="togglePinyinForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Phiên âm</button>
-                                        <button onclick="toggleNghiaForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#f472b6;color:white;font-size:11px;font-weight:600;cursor:pointer;">Nghĩa</button>
+                                        <button onclick="toggleNghiaForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Nghĩa</button>
                                     </div>
                                     <span class="py" style="display:none;">${ex.py}</span>
                                     <span class="vi" style="display:none;">${ex.vi}</span>
@@ -1655,7 +1655,7 @@
                 const exerciseHtml = document.createElement('div');
                 exerciseHtml.className = 'grammar';
                 const exTitle = document.createElement('h3');
-                exTitle.textContent = '📝 Bài tập';
+                exTitle.textContent = 'Bài tập';
                 exerciseHtml.appendChild(exTitle);
 
                 const exContainer = document.createElement('div');
