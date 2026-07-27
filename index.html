@@ -12,7 +12,7 @@
 
     <style>
 /* ========== CSS: ... ========== */
-        {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -1768,229 +1768,252 @@ function createHSKWrapper(levelId, levelData) {
         });
 
         const exerciseBtn = document.createElement('button');
-        exerciseBtn.className = 'tab-btn';
-        exerciseBtn.textContent = 'Bài Tập';
-        exerciseBtn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '999')`);
-        tabNav.appendChild(exerciseBtn);
+exerciseBtn.className = 'tab-btn';
+exerciseBtn.textContent = 'Bài Tập';
+exerciseBtn.setAttribute('onclick', `switchTab('${levelId}', ${lesson.id}, '999')`);
+tabNav.appendChild(exerciseBtn);
 
-        lessonDiv.appendChild(tabNav);
+lessonDiv.appendChild(tabNav);
 
-        const tabContent = document.createElement('div');
-        tabContent.className = 'tab-content';
+const tabContent = document.createElement('div');
+tabContent.className = 'tab-content';
 
-        lesson.tabs.forEach((tab, tabIndex) => {
-            const pane = document.createElement('div');
-            pane.id = `tab-${levelId}-${lesson.id}-${tab.id}`;
-            pane.className = 'tab-pane';
-            if (tabIndex === 0) pane.classList.add('active');
+lesson.tabs.forEach((tab, tabIndex) => {
+    const pane = document.createElement('div');
+    pane.id = `tab-${levelId}-${lesson.id}-${tab.id}`;
+    pane.className = 'tab-pane';
+    if (tabIndex === 0) pane.classList.add('active');
 
-            const card = document.createElement('div');
-            card.className = 'card';
+    const card = document.createElement('div');
+    card.className = 'card';
 
-            const grammarDiv = document.createElement('div');
-            grammarDiv.className = 'grammar';
+    const grammarDiv = document.createElement('div');
+    grammarDiv.className = 'grammar';
 
-            const h3 = document.createElement('h3');
-            h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
-            grammarDiv.appendChild(h3);
+    const h3 = document.createElement('h3');
+    h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
+    grammarDiv.appendChild(h3);
 
-            if (tab.subcards) {
-                tab.subcards.forEach(sc => {
-                    const subcard = document.createElement('div');
-                    subcard.className = 'subcard';
-                    subcard.innerHTML = `
-                        <span class="label">${sc.label}</span>
-                        <p>${sc.text.replace(/\n/g, '<br>')}</p>
-                    `;
-                    grammarDiv.appendChild(subcard);
-                });
-            }
-
-            if (tab.examples) {
-                const exampleDiv = document.createElement('div');
-                exampleDiv.className = 'example';
-
-                tab.examples.forEach((ex, idx) => {
-                    const label = document.createElement('span');
-                    label.className = 'example-label';
-                    label.innerHTML = `<b>例句${idx + 1}：</b>`;
-                    exampleDiv.appendChild(label);
-
-                    const audioDiv = document.createElement('div');
-                    audioDiv.className = 'example-with-audio';
-                    audioDiv.innerHTML = `
-                        <div class="text-group">
-                            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                                <span class="cn" style="font-size:22px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${ex.cn}</span>
-                                <button onclick="togglePinyinForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Phiên âm</button>
-                                <button onclick="toggleNghiaForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Nghĩa</button>
-                            </div>
-                            <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;">${ex.py}</span>
-                            <span class="vi" style="display:none;font-size:14px;color:#64748b;">${ex.vi}</span>
-                        </div>
-                        <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}', event)">🔊</button>
-                    `;
-                    exampleDiv.appendChild(audioDiv);
-                    if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
-                });
-
-                grammarDiv.appendChild(exampleDiv);
-            }
-
-            card.appendChild(grammarDiv);
-            pane.appendChild(card);
-            tabContent.appendChild(pane);
+    if (tab.subcards) {
+        tab.subcards.forEach(sc => {
+            const subcard = document.createElement('div');
+            subcard.className = 'subcard';
+            subcard.innerHTML = `
+                <span class="label">${sc.label}</span>
+                <p>${sc.text.replace(/\n/g, '<br>')}</p>
+            `;
+            grammarDiv.appendChild(subcard);
         });
-
-        const exercisePane = document.createElement('div');
-        exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
-        exercisePane.className = 'tab-pane';
-
-        const exerciseCard = document.createElement('div');
-        exerciseCard.className = 'card';
-
-        const exerciseHtml = document.createElement('div');
-        exerciseHtml.className = 'grammar';
-
-        const exTitle = document.createElement('h3');
-        exTitle.textContent = 'Bài tập';
-        exerciseHtml.appendChild(exTitle);
-
-        const exContainer = document.createElement('div');
-        exContainer.id = `exercise-${levelId}-${lesson.id}`;
-        exContainer.className = 'exercise-container';
-
-        if (lesson.exercises && lesson.exercises.length > 0) {
-            lesson.exercises.forEach((ex, idx) => {
-                const exDiv = document.createElement('div');
-                exDiv.className = 'exercise-item';
-
-               // Hiển thị câu tiếng Trung (cn)
-if (ex.cn) {
-    const cnDiv = document.createElement('div');
-    cnDiv.style.cssText = 'font-size:22px;font-weight:700;color:#1e293b;font-family:"Kaiti","SimSun",sans-serif;margin-bottom:4px;';
-    
-    // Nút hiện phiên âm
-    const pyBtn = document.createElement('button');
-    pyBtn.textContent = 'Phiên âm';
-    pyBtn.style.cssText = 'padding:2px 12px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;margin-left:10px;';
-    pyBtn.onclick = function(e) {
-        e.stopPropagation();
-        const pySpan = this.parentElement.querySelector('.ex-py');
-        if (pySpan.style.display === 'none') {
-            pySpan.style.display = 'block';
-            this.textContent = 'Ẩn phiên âm';
-            this.style.background = '#f44336';
-        } else {
-            pySpan.style.display = 'none';
-            this.textContent = 'Phiên âm';
-            this.style.background = '#4caf50';
-        }
-    };
-    
-    const cnText = document.createElement('span');
-    cnText.textContent = ex.cn;
-    cnDiv.appendChild(cnText);
-    cnDiv.appendChild(pyBtn);
-    exDiv.appendChild(cnDiv);
-    
-    // Phiên âm (ẩn ban đầu)
-    const pySpan = document.createElement('div');
-    pySpan.className = 'ex-py';
-    pySpan.style.cssText = 'display:none;font-size:14px;color:#388e3c;margin:2px 0;';
-    pySpan.textContent = ex.py || '';
-    exDiv.appendChild(pySpan);
-    
-            } else {
-    // Nếu không có cn, hiển thị câu hỏi bình thường
-    const qDiv = document.createElement('div');
-    qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-    qDiv.textContent = `${idx + 1}. ${ex.question}`;
-    exDiv.appendChild(qDiv);
-}
-
-                const optionsDiv = document.createElement('div');
-                optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
-
-                ex.options.forEach((opt, optIdx) => {
-    const label = document.createElement('label');
-    label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
-    label.onmouseover = function () { this.style.background = '#e8f5e9'; };
-    label.onmouseout = function () { this.style.background = 'transparent'; };
-
-    const radio = document.createElement('input');
-    radio.type = 'radio';
-    radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
-    radio.value = optIdx;
-    radio.onchange = function () {
-        const parent = this.closest('.exercise-item');
-        const resultDiv = parent.querySelector('.exercise-result');
-        const isCorrect = parseInt(this.value) === ex.answer;
-        if (isCorrect) {
-            resultDiv.textContent = '✅ Đúng!';
-            resultDiv.style.color = '#4caf50';
-        } else {
-            resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
-            resultDiv.style.color = '#f44336';
-        }
-    };
-
-    const textSpan = document.createElement('span');
-    textSpan.textContent = opt;
-    
-    // HIỂN THỊ PHIÊN ÂM CỦA ĐÁP ÁN (NẾU CÓ)
-    if (ex.options_py && ex.options_py[optIdx]) {
-        const pySpan = document.createElement('span');
-        pySpan.style.cssText = 'font-size:12px;color:#388e3c;margin-left:6px;';
-        pySpan.textContent = ex.options_py[optIdx];
-        textSpan.appendChild(pySpan);
     }
 
-    label.appendChild(radio);
-    label.appendChild(textSpan);
-    optionsDiv.appendChild(label);
+    if (tab.examples) {
+        const exampleDiv = document.createElement('div');
+        exampleDiv.className = 'example';
+
+        tab.examples.forEach((ex, idx) => {
+            const label = document.createElement('span');
+            label.className = 'example-label';
+            label.innerHTML = `<b>例句${idx + 1}：</b>`;
+            exampleDiv.appendChild(label);
+
+            const audioDiv = document.createElement('div');
+            audioDiv.className = 'example-with-audio';
+            audioDiv.innerHTML = `
+                <div class="text-group">
+                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                        <span class="cn" style="font-size:22px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${ex.cn}</span>
+                        <button onclick="togglePinyinForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Phiên âm</button>
+                        <button onclick="toggleNghiaForThis(event)" style="padding:4px 14px;border:none;border-radius:12px;background:#ff9800;color:white;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Nghĩa</button>
+                    </div>
+                    <span class="py" style="display:none;font-size:14px;color:#388e3c;margin:4px 0;">${ex.py}</span>
+                    <span class="vi" style="display:none;font-size:14px;color:#64748b;">${ex.vi}</span>
+                </div>
+                <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}', event)">🔊</button>
+            `;
+            exampleDiv.appendChild(audioDiv);
+            if (idx < tab.examples.length - 1) exampleDiv.appendChild(document.createElement('br'));
+        });
+
+        grammarDiv.appendChild(exampleDiv);
+    }
+
+    card.appendChild(grammarDiv);
+    pane.appendChild(card);
+    tabContent.appendChild(pane);
 });
 
-                    const textSpan = document.createElement('span');
-                    textSpan.textContent = opt;
+const exercisePane = document.createElement('div');
+exercisePane.id = `tab-${levelId}-${lesson.id}-999`;
+exercisePane.className = 'tab-pane';
 
-                    label.appendChild(radio);
-                    label.appendChild(textSpan);
-                    optionsDiv.appendChild(label);
-                });
+const exerciseCard = document.createElement('div');
+exerciseCard.className = 'card';
 
-                exDiv.appendChild(optionsDiv);
+const exerciseHtml = document.createElement('div');
+exerciseHtml.className = 'grammar';
 
-                const resultDiv = document.createElement('div');
-                resultDiv.className = 'exercise-result';
-                resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:#fff;';
-                exDiv.appendChild(resultDiv);
+const exTitle = document.createElement('h3');
+exTitle.textContent = 'Bài tập';
+exerciseHtml.appendChild(exTitle);
 
-                exContainer.appendChild(exDiv);
-            });
+const exContainer = document.createElement('div');
+exContainer.id = `exercise-${levelId}-${lesson.id}`;
+exContainer.className = 'exercise-container';
+
+if (lesson.exercises && lesson.exercises.length > 0) {
+    lesson.exercises.forEach((ex, idx) => {
+        const exDiv = document.createElement('div');
+        exDiv.className = 'exercise-item';
+
+        // Hiển thị câu hỏi / chữ Hán
+        if (ex.cn) {
+            const cnDiv = document.createElement('div');
+            cnDiv.style.cssText = 'font-size:22px;font-weight:700;color:#1e293b;font-family:"Kaiti","SimSun",sans-serif;margin-bottom:4px;';
+            
+            const pyBtn = document.createElement('button');
+            pyBtn.textContent = 'Phiên âm';
+            pyBtn.style.cssText = 'padding:2px 12px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;margin-left:10px;';
+            pyBtn.onclick = function(e) {
+                e.stopPropagation();
+                // Đã sửa: dùng closest để truy xuất thẻ .ex-py chính xác
+                const pySpan = this.closest('.exercise-item').querySelector('.ex-py');
+                if (pySpan) {
+                    if (pySpan.style.display === 'none') {
+                        pySpan.style.display = 'block';
+                        this.textContent = 'Ẩn phiên âm';
+                        this.style.background = '#f44336';
+                    } else {
+                        pySpan.style.display = 'none';
+                        this.textContent = 'Phiên âm';
+                        this.style.background = '#4caf50';
+                    }
+                }
+            };
+            
+            const cnText = document.createElement('span');
+            cnText.textContent = ex.cn;
+            cnDiv.appendChild(cnText);
+            cnDiv.appendChild(pyBtn);
+            exDiv.appendChild(cnDiv);
+            
+            const pySpan = document.createElement('div');
+            pySpan.className = 'ex-py';
+            pySpan.style.cssText = 'display:none;font-size:14px;color:#388e3c;margin:2px 0;';
+            pySpan.textContent = ex.py || ex.pinyin || '';
+            exDiv.appendChild(pySpan);
+            
         } else {
-            const noEx = document.createElement('p');
-            noEx.textContent = 'Chưa có bài tập cho bài học này.';
-            noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
-            exContainer.appendChild(noEx);
+            const qDiv = document.createElement('div');
+            qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+            qDiv.textContent = `${idx + 1}. ${ex.question}`;
+            
+            if (ex.pinyin) {
+                const pyBtn = document.createElement('button');
+                pyBtn.textContent = 'Phiên âm';
+                pyBtn.style.cssText = 'padding:2px 12px;border:none;border-radius:12px;background:#4caf50;color:white;font-size:11px;font-weight:600;cursor:pointer;margin-left:10px;';
+                pyBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    const pySpan = this.closest('.exercise-item').querySelector('.ex-py');
+                    if (pySpan) {
+                        if (pySpan.style.display === 'none') {
+                            pySpan.style.display = 'block';
+                            this.textContent = 'Ẩn phiên âm';
+                            this.style.background = '#f44336';
+                        } else {
+                            pySpan.style.display = 'none';
+                            this.textContent = 'Phiên âm';
+                            this.style.background = '#4caf50';
+                        }
+                    }
+                };
+                qDiv.appendChild(pyBtn);
+            }
+            
+            exDiv.appendChild(qDiv);
+
+            if (ex.pinyin) {
+                const pySpan = document.createElement('div');
+                pySpan.className = 'ex-py';
+                pySpan.style.cssText = 'display:none;font-size:14px;color:#388e3c;margin:2px 0 8px 0;';
+                pySpan.textContent = ex.pinyin;
+                exDiv.appendChild(pySpan);
+            }
         }
 
-        exerciseHtml.appendChild(exContainer);
-        exerciseCard.appendChild(exerciseHtml);
-        exercisePane.appendChild(exerciseCard);
-        tabContent.appendChild(exercisePane);
+        const optionsDiv = document.createElement('div');
+        optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
 
-        lessonDiv.appendChild(tabContent);
+        ex.options.forEach((opt, optIdx) => {
+            const label = document.createElement('label');
+            label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.3s ease;';
+            label.onmouseover = function () { this.style.background = '#e8f5e9'; };
+            label.onmouseout = function () { this.style.background = 'transparent'; };
 
-        const nav = document.createElement('div');
-        nav.className = 'nav';
-        nav.innerHTML = `
-            <button onclick="prevTab('${levelId}', ${lesson.id})">⬅ Trước</button>
-            <button onclick="nextTab('${levelId}', ${lesson.id})">Tiếp ➜</button>
-        `;
-        lessonDiv.appendChild(nav);
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.name = `exercise-${levelId}-${lesson.id}-${idx}`;
+            radio.value = optIdx;
+            radio.onchange = function () {
+                const parent = this.closest('.exercise-item');
+                const resultDiv = parent.querySelector('.exercise-result');
+                const isCorrect = parseInt(this.value) === ex.answer;
+                if (isCorrect) {
+                    resultDiv.textContent = '✅ Đúng!';
+                    resultDiv.style.color = '#4caf50';
+                } else {
+                    resultDiv.textContent = '❌ Sai. Đáp án đúng là: ' + ex.options[ex.answer];
+                    resultDiv.style.color = '#f44336';
+                }
+            };
 
-        main.appendChild(lessonDiv);
+            const textSpan = document.createElement('span');
+            textSpan.textContent = opt;
+            
+            // Đã sửa tên thuộc tính thành options_pinyin
+            if (ex.options_pinyin && ex.options_pinyin[optIdx]) {
+                const pySpan = document.createElement('span');
+                pySpan.style.cssText = 'font-size:12px;color:#388e3c;margin-left:6px;';
+                pySpan.textContent = ex.options_pinyin[optIdx];
+                textSpan.appendChild(pySpan);
+            }
+
+            label.appendChild(radio);
+            label.appendChild(textSpan);
+            optionsDiv.appendChild(label);
+        });
+
+        exDiv.appendChild(optionsDiv);
+
+        const resultDiv = document.createElement('div');
+        resultDiv.className = 'exercise-result';
+        resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 12px;border-radius:6px;background:#fff;';
+        exDiv.appendChild(resultDiv);
+
+        exContainer.appendChild(exDiv);
+    });
+} else {
+    const noEx = document.createElement('p');
+    noEx.textContent = 'Chưa có bài tập cho bài học này.';
+    noEx.style.cssText = 'color:#999;text-align:center;padding:20px;';
+    exContainer.appendChild(noEx);
+}
+
+exerciseHtml.appendChild(exContainer);
+exerciseCard.appendChild(exerciseHtml);
+exercisePane.appendChild(exerciseCard);
+tabContent.appendChild(exercisePane);
+
+lessonDiv.appendChild(tabContent);
+
+const nav = document.createElement('div');
+nav.className = 'nav';
+nav.innerHTML = `
+    <button onclick="prevTab('${levelId}', ${lesson.id})">⬅ Trước</button>
+    <button onclick="nextTab('${levelId}', ${lesson.id})">Tiếp ➜</button>
+`;
+lessonDiv.appendChild(nav);
+
+main.appendChild(lessonDiv);
     });
 
     contentWrapper.appendChild(main);
