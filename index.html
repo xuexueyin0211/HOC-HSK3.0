@@ -763,17 +763,18 @@ background: white;
         }
 
         .lesson-sidebar {
-            width: 260px;
-            flex-shrink: 0;
-            background: white;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            padding: 12px 0;
-            position: sticky;
-            top: 80px;
-            max-height: calc(100vh - 120px);
-            z-index: 10;
+    width: 260px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: 12px 0;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 120px);
+    overflow: hidden; /* Thêm dòng này */
+    z-index: 10;
 }
         .lesson-sidebar::-webkit-scrollbar {
             width: 4px;
@@ -1647,22 +1648,23 @@ background: #FFFAFC;
             // Sidebar
             const sidebar = document.createElement('div');
 sidebar.className = 'lesson-sidebar';
+scrollWrapper.style.cssText = 'overflow-y: auto; overflow-x: visible; max-height: calc(100vh - 160px); padding-right: 4px;';
+const scrollWrapper = document.createElement('div');
+scrollWrapper.className = 'sidebar-scroll';
+scrollWrapper.style.cssText = 'overflow-y: auto; overflow-x: visible; max-height: calc(100vh - 160px); padding-right: 4px;';
+
 sidebar.style.cssText = `
     width:300px;flex-shrink:0;background:white;border-radius:16px;
     border:1px solid #fce7f3;box-shadow:var(--shadow-sm);padding:12px 0;
     position:sticky;top:80px;
-`;
-
-// Tạo wrapper cho danh sách bài học (có overflow-y)
-const scrollWrapper = document.createElement('div');
-scrollWrapper.className = 'sidebar-scroll';
-scrollWrapper.style.cssText = 'overflow: visible; max-height: calc(100vh - 160px); padding-right: 4px;';
+    overflow:hidden;
+`;  // ← ĐÓNG ĐÚNG Ở ĐÂY
 
 const sidebarTitle = document.createElement('div');
 sidebarTitle.className = 'sidebar-title';
 sidebarTitle.textContent = 'Danh sách bài học';
 sidebar.appendChild(sidebarTitle);
-sidebar.appendChild(scrollWrapper);  // thay vì thêm trực tiếp các lesson-item vào sidebar
+sidebar.appendChild(scrollWrapper);
 
             // Main content
             const mainContent = document.createElement('div');
@@ -1700,14 +1702,14 @@ sidebar.appendChild(scrollWrapper);  // thay vì thêm trực tiếp các lesson
                     <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
                     <span>${lesson.title}</span>
                     <div class="lesson-item-tooltip">
-                        <div class="tooltip-title">📑 Các phần trong bài</div>
+                        <div class="tooltip-title">Các phần trong bài</div>
                         ${lesson.tabs.map((tab, tabIdx) => `
 <div class="tooltip-item" onclick="event.stopPropagation(); goToTab('${level}', ${lesson.id}, '${tab.id}')">
                                 ${tab.title}
                             </div>
                         `).join('')}
                        <div class="tooltip-item" onclick="event.stopPropagation(); goToTab('${level}', ${lesson.id}, '999')" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
-                            ✏️ Bài Tập
+                            Bài Tập
                         </div>
                     </div>
                 `;
@@ -2319,17 +2321,20 @@ function goToTab(level, lessonId, tabId) {
         }
 
         function attachHighlightClickListeners() {
-            document.querySelectorAll('.highlighted').forEach(el => {
-                el.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    currentHighlightElement = this;
-                    const menu = document.getElementById('highlightMenu');
-                    menu.style.left = e.pageX + 'px';
-                    menu.style.top = e.pageY + 'px';
-                    menu.style.display = 'flex';
-                });
-            });
-        }
+    document.querySelectorAll('.highlighted').forEach(el => {
+        // Remove listener cũ bằng cách clone và replace
+        const newEl = el.cloneNode(true);
+        el.parentNode.replaceChild(newEl, el);
+        newEl.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentHighlightElement = this;
+            const menu = document.getElementById('highlightMenu');
+            menu.style.left = e.pageX + 'px';
+            menu.style.top = e.pageY + 'px';
+            menu.style.display = 'flex';
+        });
+    });
+}
 
         function loadHighlights() {
             const saved = localStorage.getItem('hsk_highlights');
