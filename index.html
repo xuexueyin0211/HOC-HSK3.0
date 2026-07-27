@@ -207,6 +207,8 @@
         .highlighted:hover::after { display: flex; }
 
         .highlight-menu {
+               width: 80px; /* Đặt width cố định để tính toán dễ hơn */
+                text-align: center;
             position: fixed;
             background: white;
             border-radius: 12px;
@@ -220,6 +222,7 @@
             max-width: 200px;
         }
         .highlight-menu .delete-option {
+                width: 100%;
             padding: 4px 10px;
             border: none;
             border-radius: 8px;
@@ -2380,20 +2383,21 @@ document.addEventListener('click', function(e) {
                 const parentStyle = window.getComputedStyle(parentElement);
                 const highlightId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
                 
-                const span = document.createElement('span');
-                span.className = 'highlighted';
-                span.dataset.highlightId = highlightId;
-                span.style.backgroundColor = '#ffe0b2';
-                span.style.fontFamily = parentStyle.fontFamily || 'inherit';
-                span.style.fontSize = parentStyle.fontSize || 'inherit';
-                span.style.fontWeight = parentStyle.fontWeight || 'inherit';
-                span.style.color = parentStyle.color || 'inherit';
-                span.style.lineHeight = parentStyle.lineHeight || 'inherit';
-                span.textContent = selectedText;
+                // Tạo highlight - giữ nguyên font chữ
+const parentStyle = window.getComputedStyle(parentElement);
+const span = document.createElement('span');
+span.className = 'highlighted';
+span.dataset.highlightId = highlightId;
+span.style.backgroundColor = '#ffe0b2';
+span.style.font = parentStyle.font || 'inherit';
+span.style.fontFamily = parentStyle.fontFamily || 'inherit';
+span.style.fontSize = parentStyle.fontSize || 'inherit';
+span.style.fontWeight = parentStyle.fontWeight || 'inherit';
+span.style.color = parentStyle.color || 'inherit';
+span.textContent = selectedText;
                 
-                range.deleteContents();
-                range.insertNode(span);
-                
+range.deleteContents();
+range.insertNode(span);
                 saveHighlights();
             } catch (error) {
                 console.log('Lỗi highlight:', error);
@@ -2692,15 +2696,21 @@ document.addEventListener('click', function(e) {
     const menu = document.getElementById('highlightMenu');
     
     // 1. XỬ LÝ CLICK HIGHLIGHT
-    const highlight = e.target.closest('.highlighted');
-    if (highlight) {
-        e.stopPropagation();
-        currentHighlightElement = highlight;
-        menu.style.left = e.pageX + 'px';
-        menu.style.top = e.pageY + 'px';
-        menu.style.display = 'flex';
-        return; // Không xử lý tooltip nếu click vào highlight
-    }
+    // XỬ LÝ CLICK HIGHLIGHT - ĐẶT MENU CẠNH HIGHLIGHT
+const highlight = e.target.closest('.highlighted');
+if (highlight) {
+    e.stopPropagation();
+    currentHighlightElement = highlight;
+    const rect = highlight.getBoundingClientRect();
+    const menu = document.getElementById('highlightMenu');
+    
+    // Đặt menu bên dưới highlight, căn giữa
+    const menuWidth = 80; // Ước lượng chiều rộng menu (khoảng 80px)
+    menu.style.left = (rect.left + rect.width / 2 - menuWidth / 2) + 'px';
+    menu.style.top = (rect.bottom + 5) + 'px';
+    menu.style.display = 'flex';
+    return;
+}
     
     // 2. XỬ LÝ CLICK TOOLTIP ITEM
     const tooltipItem = e.target.closest('.tooltip-item');
