@@ -1793,11 +1793,11 @@ sidebar.appendChild(sidebarTitle);
                     <div class="lesson-item-tooltip">
                         <div class="tooltip-title">Các phần trong bài</div>
                         ${lesson.tabs.map((tab, tabIdx) => `
-<div class="tooltip-item" onclick="event.stopPropagation(); goToTab('${level}', ${lesson.id}, '${tab.id}')">
-                                ${tab.title}
+<div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="${tab.id}">
+${tab.title}
                             </div>
                         `).join('')}
-                       <div class="tooltip-item" onclick="event.stopPropagation(); goToTab('${level}', ${lesson.id}, '999')" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
+                       <div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="999" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
                             Bài Tập
                         </div>
                     </div>
@@ -2327,23 +2327,28 @@ function goToTab(level, lessonId, tabId) {
         }
 
         // Event delegation: bắt click trên bất kỳ phần tử .highlighted nào
-        document.addEventListener('click', function(e) {
-            const highlight = e.target.closest('.highlighted');
-            if (highlight) {
-                e.stopPropagation();
-                currentHighlightElement = highlight;
-                const menu = document.getElementById('highlightMenu');
-                menu.style.left = e.pageX + 'px';
-                menu.style.top = e.pageY + 'px';
-                menu.style.display = 'flex';
-            } else {
-                // Ẩn menu nếu click ra ngoài
-                const menu = document.getElementById('highlightMenu');
-                if (menu && !menu.contains(e.target)) {
-                    menu.style.display = 'none';
-                }
-            }
-        });
+        // ================================================================
+// XỬ LÝ CLICK TOOLTIP - DÙNG EVENT DELEGATION
+// ================================================================
+document.addEventListener('click', function(e) {
+    const tooltipItem = e.target.closest('.tooltip-item');
+    if (!tooltipItem) return;
+    
+    const level = tooltipItem.dataset.level;
+    const lessonId = tooltipItem.dataset.lesson;
+    const tabId = tooltipItem.dataset.tab;
+    
+    if (level && lessonId && tabId) {
+        e.stopPropagation();
+        // Ẩn tooltip sau khi click
+        const tooltip = tooltipItem.closest('.lesson-item-tooltip');
+        if (tooltip) {
+            tooltip.style.display = 'none';
+        }
+        // Chuyển đến bài học và tab
+        goToTab(level, parseInt(lessonId), tabId);
+    }
+});
 
         document.addEventListener('mouseup', function(e) {
             if (!highlightMode) return;
