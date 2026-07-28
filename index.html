@@ -3902,103 +3902,304 @@ function closeSelectorModal() {
             showFlashcard();
         }
 
-        // ================================================================
-        // SEARCH
-        // ================================================================
-        function universalSearch() {
-            let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
-            let dropdown = document.getElementById('searchDropdown');
-            
-            if (!dropdown) {
-                dropdown = document.createElement('div');
-                dropdown.id = 'searchDropdown';
-                dropdown.className = 'search-results-dropdown';
-                document.body.appendChild(dropdown);
-            }
-            
-            if (query === '') {
-                dropdown.style.display = 'none';
-                return;
-            }
-            
-            const searchBox = document.querySelector('.search-box');
-            if (searchBox) {
-                const rect = searchBox.getBoundingClientRect();
-                dropdown.style.top = (rect.bottom + 5) + 'px';
-                dropdown.style.right = (window.innerWidth - rect.right) + 'px';
-                dropdown.style.left = 'auto';
-            }
-            
-            dropdown.innerHTML = '';
-            let resultsMap = new Set();
-            
-            (async function loadAllData() {
-                const levels = ['hsk1', 'hsk2', 'hsk3'];
-                for (const levelId of levels) {
-                    if (!cachedData[`grammar-${levelId}`]) {
-                        try {
-                            await loadModuleData('grammar', levelId);
-                        } catch (e) {
-                            console.warn(`Không thể load ${levelId}:`, e);
-                        }
+       // ================================================================
+// SEARCH - TÌM KIẾM TRONG TẤT CẢ MODULES
+// ================================================================
+function universalSearch() {
+    let query = document.getElementById('globalGrammarSearch').value.toLowerCase().trim();
+    let dropdown = document.getElementById('searchDropdown');
+    
+    if (!dropdown) {
+        dropdown = document.createElement('div');
+        dropdown.id = 'searchDropdown';
+        dropdown.className = 'search-results-dropdown';
+        document.body.appendChild(dropdown);
+    }
+    
+    if (query === '') {
+        dropdown.style.display = 'none';
+        return;
+    }
+    
+    // Đặt vị trí dropdown
+    const searchBox = document.querySelector('.search-box');
+    if (searchBox) {
+        const rect = searchBox.getBoundingClientRect();
+        dropdown.style.top = (rect.bottom + 5) + 'px';
+        dropdown.style.right = (window.innerWidth - rect.right) + 'px';
+        dropdown.style.left = 'auto';
+        dropdown.style.width = Math.min(400, window.innerWidth - 40) + 'px';
+        dropdown.style.maxWidth = '400px';
+        dropdown.style.minWidth = '280px';
+    }
+    
+    dropdown.innerHTML = '<div style="padding:12px;text-align:center;color:#888;">🔍 Đang tìm kiếm...</div>';
+    dropdown.style.display = 'block';
+    
+    // Load tất cả dữ liệu
+    (async function loadAllDataForSearch() {
+        const modules = ['grammar', 'vocab', 'hanzi', 'practice', 'dictation', 'shadowing'];
+        const levels = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'];
+        
+        for (const module of modules) {
+            for (const level of levels) {
+                const key = `${module}-${level}`;
+                if (!cachedData[key]) {
+                    try {
+                        await loadModuleData(module, level);
+                    } catch (e) {
+                        // Bỏ qua lỗi
                     }
-                }
-                performSearch();
-            })();
-            
-            function performSearch() {
-                const levels = ['hsk1', 'hsk2', 'hsk3'];
-                levels.forEach(levelId => {
-                    const data = cachedData[`grammar-${levelId}`];
-                    if (!data || !data.lessons) return;
-                    
-                    data.lessons.forEach(lesson => {
-                        if (!lesson.tabs) return;
-                        lesson.tabs.forEach(tab => {
-                            let content = JSON.stringify(tab).toLowerCase();
-                            if (content.includes(query)) {
-                                const key = `${levelId}-${lesson.id}-${tab.id}`;
-                                if (!resultsMap.has(key)) {
-                                    resultsMap.add(key);
-                                    const item = document.createElement('div');
-                                    item.className = 'search-item-result';
-                                    const snippet = tab.examples && tab.examples.length > 0 ? tab.examples[0].cn : '';
-                                    const levelLabel = levelId.toUpperCase();
-                                    const levelColor = levelId === 'hsk1' ? '#4caf50' : (levelId === 'hsk2' ? '#f59e0b' : '#e11d48');
-                                    item.innerHTML = `
-                                        <div>
-                                            <span class="hsk-tag" style="background:${levelColor};color:white;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;margin-right:6px;">${levelLabel}</span>
-                                            <span class="title" style="font-size:13px;font-weight:600;color:#1e293b;">${lesson.title} - ${tab.title}</span>
-                                        </div>
-                                        <div class="desc" style="font-size:11px;color:#64748b;margin-top:2px;">${snippet ? '📝 ' + snippet : ''}</div>
-                                    `;
-                                    item.onclick = function () {
-                                        const levelBtn = document.querySelector(`.hsk-item[data-level="${levelId}"]`);
-                                        if (levelBtn) {
-                                            document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
-                                            levelBtn.classList.add('active');
-                                        }
-                                        showContent('grammar', levelId);
-                                        setTimeout(() => {
-                                            switchTab(levelId, lesson.id, tab.id);
-                                            document.getElementById('globalGrammarSearch').value = '';
-                                            dropdown.style.display = 'none';
-                                        }, 400);
-                                    };
-                                    dropdown.appendChild(item);
-                                }
-                            }
-                        });
-                    });
-                });
-                
-                dropdown.style.display = resultsMap.size > 0 ? 'block' : 'none';
-                if (resultsMap.size === 0) {
-                    dropdown.innerHTML = '<div style="padding:12px;color:#888;text-align:center;">🔍 Không tìm thấy nội dung phù hợp!</div>';
                 }
             }
         }
-
+        performSearch();
+    })();
+    
+    function performSearch() {
+        dropdown.innerHTML = '';
+        let resultsMap = new Map(); // Dùng Map để tránh trùng lặp
+        
+        const modules = ['grammar', 'vocab', 'hanzi', 'practice', 'dictation', 'shadowing'];
+        const levels = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'];
+        
+        // Module labels
+        const moduleLabels = {
+            grammar: '📝 Ngữ pháp',
+            vocab: '📚 Từ vựng',
+            hanzi: '🀄 Chữ Hán',
+            practice: '📖 Luyện đề',
+            dictation: '🎧 Nghe chép',
+            shadowing: '🗣️ Shadowing'
+        };
+        
+        const moduleColors = {
+            grammar: '#EC4899',
+            vocab: '#F59E0B',
+            hanzi: '#8B5CF6',
+            practice: '#10B981',
+            dictation: '#06B6D4',
+            shadowing: '#F472B6'
+        };
+        
+        levels.forEach(levelId => {
+            modules.forEach(moduleId => {
+                const data = cachedData[`${moduleId}-${levelId}`];
+                if (!data) return;
+                
+                // Tìm trong lessons (grammar, vocab)
+                if (data.lessons) {
+                    data.lessons.forEach(lesson => {
+                        // Tìm trong lesson title
+                        const lessonTitle = lesson.title || '';
+                        if (lessonTitle.toLowerCase().includes(query)) {
+                            const key = `${moduleId}-${levelId}-lesson-${lesson.id}`;
+                            if (!resultsMap.has(key)) {
+                                resultsMap.set(key, {
+                                    module: moduleId,
+                                    level: levelId,
+                                    title: lessonTitle,
+                                    desc: `Bài ${lesson.id}: ${lessonTitle}`,
+                                    moduleLabel: moduleLabels[moduleId] || moduleId,
+                                    color: moduleColors[moduleId] || '#888'
+                                });
+                            }
+                        }
+                        
+                        // Tìm trong tabs (grammar)
+                        if (lesson.tabs) {
+                            lesson.tabs.forEach(tab => {
+                                let content = JSON.stringify(tab).toLowerCase();
+                                if (content.includes(query)) {
+                                    const key = `${moduleId}-${levelId}-lesson-${lesson.id}-tab-${tab.id}`;
+                                    if (!resultsMap.has(key)) {
+                                        // Lấy snippet từ examples hoặc subcards
+                                        let snippet = '';
+                                        if (tab.examples && tab.examples.length > 0) {
+                                            snippet = tab.examples[0].cn || '';
+                                        } else if (tab.subcards) {
+                                            tab.subcards.forEach(sc => {
+                                                if (sc.text) snippet = sc.text.substring(0, 80);
+                                            });
+                                        }
+                                        
+                                        resultsMap.set(key, {
+                                            module: moduleId,
+                                            level: levelId,
+                                            lessonId: lesson.id,
+                                            tabId: tab.id,
+                                            title: `${lesson.title} - ${tab.title}`,
+                                            desc: snippet ? '📝 ' + snippet : '',
+                                            moduleLabel: moduleLabels[moduleId] || moduleId,
+                                            color: moduleColors[moduleId] || '#888',
+                                            isTab: true
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                        
+                        // Tìm trong exercises (grammar, vocab)
+                        if (lesson.exercises) {
+                            lesson.exercises.forEach((ex, idx) => {
+                                let content = JSON.stringify(ex).toLowerCase();
+                                if (content.includes(query)) {
+                                    const key = `${moduleId}-${levelId}-lesson-${lesson.id}-ex-${idx}`;
+                                    if (!resultsMap.has(key)) {
+                                        resultsMap.set(key, {
+                                            module: moduleId,
+                                            level: levelId,
+                                            lessonId: lesson.id,
+                                            title: `${lesson.title} - Bài tập ${idx + 1}`,
+                                            desc: ex.question ? '📝 ' + ex.question.substring(0, 80) : '',
+                                            moduleLabel: moduleLabels[moduleId] || moduleId,
+                                            color: moduleColors[moduleId] || '#888',
+                                            isExercise: true
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                    });
+                }
+                
+                // Tìm trong items (hanzi, practice, dictation, shadowing)
+                if (data.items) {
+                    data.items.forEach((item, idx) => {
+                        let content = JSON.stringify(item).toLowerCase();
+                        if (content.includes(query)) {
+                            const key = `${moduleId}-${levelId}-item-${idx}`;
+                            if (!resultsMap.has(key)) {
+                                resultsMap.set(key, {
+                                    module: moduleId,
+                                    level: levelId,
+                                    title: item.title || '',
+                                    desc: item.desc || '',
+                                    moduleLabel: moduleLabels[moduleId] || moduleId,
+                                    color: moduleColors[moduleId] || '#888',
+                                    isItem: true
+                                });
+                            }
+                        }
+                    });
+                }
+                
+                // Tìm trong exercises (practice)
+                if (data.exercises) {
+                    data.exercises.forEach((ex, idx) => {
+                        let content = JSON.stringify(ex).toLowerCase();
+                        if (content.includes(query)) {
+                            const key = `${moduleId}-${levelId}-ex-${idx}`;
+                            if (!resultsMap.has(key)) {
+                                resultsMap.set(key, {
+                                    module: moduleId,
+                                    level: levelId,
+                                    title: `Bài tập ${idx + 1}`,
+                                    desc: ex.question ? '📝 ' + ex.question.substring(0, 80) : '',
+                                    moduleLabel: moduleLabels[moduleId] || moduleId,
+                                    color: moduleColors[moduleId] || '#888',
+                                    isPractice: true
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Hiển thị kết quả
+        if (resultsMap.size === 0) {
+            dropdown.innerHTML = `
+                <div style="padding:16px;text-align:center;color:#888;">
+                    <div style="font-size:24px;margin-bottom:8px;">🔍</div>
+                    <div>Không tìm thấy kết quả cho "<strong>${query}</strong>"</div>
+                    <div style="font-size:12px;color:#aaa;margin-top:4px;">Hãy thử từ khóa khác</div>
+                </div>
+            `;
+        } else {
+            // Hiển thị số lượng kết quả
+            const countDiv = document.createElement('div');
+            countDiv.style.cssText = 'padding:8px 16px;font-size:12px;color:#888;border-bottom:1px solid #f0f0f0;';
+            countDiv.textContent = `Tìm thấy ${resultsMap.size} kết quả`;
+            dropdown.appendChild(countDiv);
+            
+            // Hiển thị từng kết quả
+            resultsMap.forEach((result) => {
+                const item = document.createElement('div');
+                item.className = 'search-item-result';
+                item.style.cssText = `
+                    padding:10px 16px;
+                    border-bottom:1px solid #f0f0f0;
+                    cursor:pointer;
+                    transition:background 0.2s;
+                `;
+                item.onmouseenter = function() { this.style.background = '#fdf2f8'; };
+                item.onmouseleave = function() { this.style.background = 'transparent'; };
+                
+                const levelLabel = result.level.toUpperCase();
+                
+                item.innerHTML = `
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+                        <span class="hsk-tag" style="background:${result.color};color:white;padding:2px 10px;border-radius:4px;font-size:10px;font-weight:700;">${levelLabel}</span>
+                        <span style="font-size:11px;color:#888;">${result.moduleLabel}</span>
+                    </div>
+                    <div class="title" style="font-size:13px;font-weight:600;color:#1e293b;">${result.title}</div>
+                    ${result.desc ? `<div class="desc" style="font-size:12px;color:#64748b;margin-top:2px;">${result.desc}</div>` : ''}
+                `;
+                
+                item.onclick = function() {
+                    // Chọn HSK level
+                    const levelBtn = document.querySelector(`.hsk-item[data-level="${result.level}"]`);
+                    if (levelBtn) {
+                        document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+                        levelBtn.classList.add('active');
+                    }
+                    
+                    // Chọn module
+                    const featureCard = document.querySelector(`.feature-card[data-module="${result.module}"]`);
+                    if (featureCard) {
+                        document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
+                        featureCard.classList.add('active');
+                    }
+                    
+                    // Hiển thị nội dung
+                    showContent(result.module, result.level);
+                    
+                    // Nếu có lessonId và tabId, chuyển đến đúng bài
+                    if (result.isTab && result.lessonId && result.tabId) {
+                        setTimeout(() => {
+                            // Tìm lesson và tab tương ứng
+                            if (result.module === 'grammar') {
+                                switchTab(result.level, result.lessonId, result.tabId);
+                            } else if (result.module === 'vocab') {
+                                showVocabLesson(result.level, result.lessonId, result.tabId);
+                            }
+                        }, 500);
+                    } else if (result.isExercise && result.lessonId) {
+                        setTimeout(() => {
+                            if (result.module === 'grammar') {
+                                showLesson(result.level, result.lessonId, '999');
+                            } else if (result.module === 'vocab') {
+                                showVocabLesson(result.level, result.lessonId, 'exercise');
+                            }
+                        }, 500);
+                    } else if (result.isItem || result.isPractice) {
+                        // Với các module dạng items, chỉ cần hiển thị content
+                        // Không cần chuyển tab cụ thể
+                    }
+                    
+                    // Đóng dropdown và xóa input
+                    document.getElementById('globalGrammarSearch').value = '';
+                    dropdown.style.display = 'none';
+                };
+                
+                dropdown.appendChild(item);
+            });
+        }
+        
+        dropdown.style.display = 'block';
+    }
+}
         // ================================================================
 // XỬ LÝ CLICK TOOLTIP & HIGHLIGHT - DÙNG EVENT DELEGATION
 // ================================================================
