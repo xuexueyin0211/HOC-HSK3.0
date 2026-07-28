@@ -758,25 +758,23 @@ background: white;
             align-items: flex-start;
         }
 
-  .lesson-sidebar {
-    /* ← THÊM PHẦN NÀY ↓ */
-    width: 100%;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
+    .lesson-sidebar {
+    width: 280px;
+            min-width: 240px;
+    flex-shrink: 0;
     background: white;
     border-radius: 16px;
     border: 1px solid #fce7f3;
     box-shadow: 0 2px 12px rgba(212, 165, 255, 0.08);
     padding: 12px 0;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden; /* Ẩn thanh ngang */
     z-index: 10;
 }
-.lesson-sidebar .lesson-item {
-    white-space: nowrap;
-    flex-shrink: 0;
-}
+
 /* CUỘN ĐẸP */
 .lesson-sidebar::-webkit-scrollbar {
     width: 4px;
@@ -798,7 +796,7 @@ background: white;
     text-transform: uppercase;
     letter-spacing: 0.8px;
 }
-  .lesson-sidebar .lesson-item {
+        .lesson-sidebar .lesson-item {
     position: relative;
     padding: 10px 20px;
     cursor: pointer;
@@ -865,7 +863,7 @@ background: white;
 .lesson-sidebar .lesson-item-tooltip:hover {
     display: block;
 }
-        .lesson-main { flex: auto; min-width: 0; max-width: 100%;}
+        .lesson-main { flex: 1; min-width: 0; max-width: 100%;}
 
         .lesson {
             display: none;
@@ -1647,9 +1645,16 @@ background: #FFFAFC;
     /* Lesson sidebar - horizontal scroll trên mobile */
     .lesson-sidebar {
         display: flex !important;
-        flex-direction: column;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
         gap: 8px;
         max-height: none !important;
+        width: 100% !important;
+        position: relative !important;
+        top: auto !important;
     }
     .lesson-item {
         padding: 12px 16px;
@@ -1658,6 +1663,8 @@ background: #FFFAFC;
         display: flex;
         align-items: center;
         gap: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
     .lesson-item .lesson-num {
         min-width: 32px;
@@ -2220,15 +2227,15 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
             wrapper.className = level;
 
             const layout = document.createElement('div');
-layout.style.cssText = 'display:flex;flex-direction:column;gap:20px;width:100%;max-width:100%;overflow:hidden;';
+layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;max-width:100%;overflow:hidden;';
 
 // Sidebar - ĐƠN GIẢN VÀ CHẮC CHẮN
 const sidebar = document.createElement('div');
 sidebar.className = 'lesson-sidebar';
 sidebar.style.cssText = `
-    width:100%;flex-shrink:0;background:white;border-radius:16px;
+    width:300px;flex-shrink:0;background:white;border-radius:16px;
     border:1px solid #fce7f3;box-shadow:var(--shadow-sm);
-    position:relative;top:auto;max-height:auto;
+    position:sticky;top:80px;max-height:calc(100vh - 120px);
     overflow-y:auto;overflow-x:hidden;padding:12px 0;
 `;
 
@@ -2242,7 +2249,7 @@ sidebar.appendChild(sidebarTitle);
             // Main content
             const mainContent = document.createElement('div');
             mainContent.className = 'lesson-main';
-mainContent.style.cssText = 'flex:1;min-width:0;width:100%;';
+            mainContent.style.cssText = 'flex:1;min-width:0;';
 
             const banner = document.createElement('div');
             banner.style.cssText = `
