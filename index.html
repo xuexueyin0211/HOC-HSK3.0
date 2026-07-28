@@ -759,9 +759,9 @@ background: white;
         }
 
     .lesson-sidebar {
-    width: 280px;
-            min-width: 240px;
-    flex-shrink: 0;
+    width: 100%;
+    min-width: 240px;
+    flex-shrink: 1;
     background: white;
     border-radius: 16px;
     border: 1px solid #fce7f3;
@@ -769,7 +769,7 @@ background: white;
     padding: 12px 0;
     position: sticky;
     top: 80px;
-    max-height: calc(100vh - 120px);
+    max-height: auto;
     overflow-y: auto;
     overflow-x: hidden; /* Ẩn thanh ngang */
     z-index: 10;
@@ -796,7 +796,7 @@ background: white;
     text-transform: uppercase;
     letter-spacing: 0.8px;
 }
-        .lesson-sidebar .lesson-item {
+  .lesson-sidebar .lesson-item {
     position: relative;
     padding: 10px 20px;
     cursor: pointer;
@@ -863,7 +863,7 @@ background: white;
 .lesson-sidebar .lesson-item-tooltip:hover {
     display: block;
 }
-        .lesson-main { flex: 1; min-width: 0; max-width: 100%;}
+        .lesson-main { flex: auto; min-width: 0; max-width: 100%;}
 
         .lesson {
             display: none;
@@ -2218,15 +2218,15 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
             wrapper.className = level;
 
             const layout = document.createElement('div');
-layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;max-width:100%;overflow:hidden;';
+layout.style.cssText = 'display:flex;flex-direction:column;gap:20px;width:100%;max-width:100%;overflow:hidden;';
 
 // Sidebar - ĐƠN GIẢN VÀ CHẮC CHẮN
 const sidebar = document.createElement('div');
 sidebar.className = 'lesson-sidebar';
 sidebar.style.cssText = `
-    width:300px;flex-shrink:0;background:white;border-radius:16px;
+    width:100%;flex-shrink:0;background:white;border-radius:16px;
     border:1px solid #fce7f3;box-shadow:var(--shadow-sm);
-    position:sticky;top:80px;max-height:calc(100vh - 120px);
+    position:relative;top:auto;max-height:auto;
     overflow-y:auto;overflow-x:hidden;padding:12px 0;
 `;
 
@@ -2240,7 +2240,7 @@ sidebar.appendChild(sidebarTitle);
             // Main content
             const mainContent = document.createElement('div');
             mainContent.className = 'lesson-main';
-            mainContent.style.cssText = 'flex:1;min-width:0;';
+mainContent.style.cssText = 'flex:1;min-width:0;width:100%;';
 
             const banner = document.createElement('div');
             banner.style.cssText = `
