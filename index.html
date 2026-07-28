@@ -4148,6 +4148,7 @@ function universalSearch() {
                 `;
                 
 item.onclick = function() {
+    console.log('🔄 Đang chuyển đến:', targetModule, targetLevel, targetLessonId, targetTabId);
     // Đóng dropdown ngay lập tức
     document.getElementById('globalGrammarSearch').value = '';
     dropdown.style.display = 'none';
