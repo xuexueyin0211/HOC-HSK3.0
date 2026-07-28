@@ -1643,6 +1643,12 @@ background: #FFFAFC;
     }
     
     /* Lesson sidebar - horizontal scroll trên mobile */
+    .lesson-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: stretch !important;
+    }
     .lesson-sidebar {
         display: flex !important;
         flex-direction: row !important;
@@ -2226,7 +2232,8 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
             const wrapper = document.createElement('div');
             wrapper.className = level;
 
-            const layout = document.createElement('div');
+const layout = document.createElement('div');
+layout.className = 'lesson-layout';  // ← THÊM DÒNG NÀY
 layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;max-width:100%;overflow:hidden;';
 
 // Sidebar - ĐƠN GIẢN VÀ CHẮC CHẮN
