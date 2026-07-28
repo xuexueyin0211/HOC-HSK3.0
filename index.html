@@ -3628,12 +3628,17 @@ if (highlight) {
             });
         });
 
-        document.querySelectorAll('.hsk-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const level = this.dataset.level;
-                showContent(currentModule, level);
-            });
-        });
+       document.querySelectorAll('.hsk-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const level = this.dataset.level;
+        // Lấy module từ feature card đang active
+        const activeFeature = document.querySelector('.feature-card.active');
+        const module = activeFeature ? activeFeature.dataset.module : 'grammar';
+        // Cập nhật currentModule
+        currentModule = module;
+        showContent(module, level);
+    });
+});
 
         backHomeBtn.addEventListener('click', backToHome);
 
