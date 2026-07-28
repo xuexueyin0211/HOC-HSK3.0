@@ -2387,7 +2387,7 @@ layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;
         const vocabTabBtn = document.createElement('button');
         vocabTabBtn.className = 'tab-btn active';
         vocabTabBtn.dataset.tab = 'vocab';
-        vocabTabBtn.textContent = '📝 Từ vựng';
+        vocabTabBtn.textContent = 'Từ vựng';
         vocabTabBtn.onclick = () => switchVocabTab(level, lesson.id, 'vocab');
         tabNav.appendChild(vocabTabBtn);
 
@@ -2396,7 +2396,7 @@ layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;
             const exerciseTabBtn = document.createElement('button');
             exerciseTabBtn.className = 'tab-btn';
             exerciseTabBtn.dataset.tab = 'exercise';
-            exerciseTabBtn.textContent = '📝 Bài Tập';
+            exerciseTabBtn.textContent = 'Bài Tập';
             exerciseTabBtn.onclick = () => switchVocabTab(level, lesson.id, 'exercise');
             tabNav.appendChild(exerciseTabBtn);
         }
@@ -2526,9 +2526,8 @@ if (word.examples && word.examples.length > 0) {
                     'fill_blank': '✏️ Điền từ',
                     'multiple_choice': '🔘 Trắc nghiệm',
                     'translation': '🌐 Dịch câu',
-                    'unknown': '📝 Bài tập'
                 };
-                const typeLabel = typeLabels[exerciseType] || '📝 Bài tập';
+                const typeLabel = typeLabels[exerciseType] || 'Bài tập';
 
                 const headerDiv = document.createElement('div');
                 headerDiv.style.cssText = `
