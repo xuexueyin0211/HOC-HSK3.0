@@ -106,6 +106,7 @@
             align-items: center;
             gap: 8px;
                 z-index: 20; /* ← THÊM DÒNG NÀY */
+    pointer-events: none; /* Cho phép hover xuyên qua */
 
         }
         .lesson-item:hover {
@@ -132,23 +133,6 @@
             background: #F8BBD0;
             color: white;
         }
-        .lesson-item-tooltip {
-    position: absolute;
-    left: 100%;
-    top: 0;
-    margin-left: 8px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    padding: 10px 0;
-    border: 1px solid var(--border);
-    z-index: 999999;
-    display: none;
-    min-width: 220px;
-    max-width: 280px;
-    word-wrap: break-word;
-    pointer-events: auto;
-}
         .lesson-item:hover .lesson-item-tooltip {
             display: block;
             animation: fadeIn 0.3s ease;
@@ -815,8 +799,12 @@ background: white;
     align-items: center;
     gap: 8px;
     z-index: 20;
+            pointer-events: none;
 }
-
+.lesson-sidebar .lesson-item .lesson-num,
+.lesson-sidebar .lesson-item > span {
+    pointer-events: auto;
+}
 .lesson-sidebar .lesson-item:hover {
     background: #fdf2f8;
     color: #ec4899;
@@ -846,9 +834,9 @@ background: white;
 }
 
 /* TOOLTIP */
+/* TOOLTIP - ĐỊNH NGHĨA DUY NHẤT */
 .lesson-sidebar .lesson-item-tooltip {
-    position: fixed; /* Đổi thành fixed */
-    /* bỏ left, top, margin */
+    position: fixed;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -1268,8 +1256,12 @@ background: #FFFAFC;
         margin: 0 !important;
         background: #f8f9fa !important;
         border-radius: 6px !important;
+            pointer-events: none;
     }
-    
+    .lesson-sidebar .lesson-item .lesson-num,
+.lesson-sidebar .lesson-item > span {
+    pointer-events: auto;
+}
     .lesson-sidebar .lesson-item.active {
         border-left: none !important;
         border-bottom: 2px solid #ec4899 !important;
@@ -2327,31 +2319,7 @@ function goToTab(level, lessonId, tabId) {
             }
         }
 
-        // Event delegation: bắt click trên bất kỳ phần tử .highlighted nào
-        // ================================================================
-// XỬ LÝ CLICK TOOLTIP - DÙNG EVENT DELEGATION
-// ================================================================
-document.addEventListener('click', function(e) {
-    const tooltipItem = e.target.closest('.tooltip-item');
-    if (!tooltipItem) return;
-    
-    const level = tooltipItem.dataset.level;
-    const lessonId = tooltipItem.dataset.lesson;
-    const tabId = tooltipItem.dataset.tab;
-    
-    if (level && lessonId && tabId) {
-        e.stopPropagation();
-        // Ẩn tooltip sau khi click
-        const tooltip = tooltipItem.closest('.lesson-item-tooltip');
-        if (tooltip) {
-            tooltip.style.display = 'none';
-        }
-        // Chuyển đến bài học và tab
-        goToTab(level, parseInt(lessonId), tabId);
-    }
-});
-
-        document.addEventListener('mouseup', function(e) {
+                document.addEventListener('mouseup', function(e) {
             if (!highlightMode) return;
             
             const selection = window.getSelection();
