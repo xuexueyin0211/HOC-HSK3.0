@@ -4148,12 +4148,11 @@ function universalSearch() {
                 `;
                 
 item.onclick = function() {
-    console.log('🔄 Đang chuyển đến:', targetModule, targetLevel, targetLessonId, targetTabId);
-    // Đóng dropdown ngay lập tức
+    // Đóng dropdown
     document.getElementById('globalGrammarSearch').value = '';
     dropdown.style.display = 'none';
     
-    // Lưu thông tin để điều hướng
+    // Lưu thông tin
     const targetModule = result.module;
     const targetLevel = result.level;
     const targetLessonId = result.lessonId || null;
@@ -4161,61 +4160,44 @@ item.onclick = function() {
     const isTab = result.isTab || false;
     const isExercise = result.isExercise || false;
     
-    // Cập nhật UI: chọn HSK level
+    // Cập nhật UI
     document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
     const levelBtn = document.querySelector(`.hsk-item[data-level="${targetLevel}"]`);
     if (levelBtn) levelBtn.classList.add('active');
     
-    // Cập nhật UI: chọn module
     document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
     const featureCard = document.querySelector(`.feature-card[data-module="${targetModule}"]`);
     if (featureCard) featureCard.classList.add('active');
     
-    // Hiển thị content
-    showContent(targetModule, targetLevel);
-    
-    // Chờ content load xong rồi mới điều hướng
-    let checkInterval = setInterval(() => {
-        const loadingEl = document.querySelector('#loading');
-        if (!loadingEl || loadingEl.style.display === 'none') {
-            clearInterval(checkInterval);
-            
+    // Gọi showContent (async) và đợi
+    (async function() {
+        await showContent(targetModule, targetLevel);
+        
+        // Đợi thêm 500ms để DOM render
+        setTimeout(() => {
             if (isTab && targetLessonId && targetTabId) {
-                setTimeout(() => {
-                    if (targetModule === 'grammar') {
-                        showLesson(targetLevel, targetLessonId, targetTabId);
-                    } else if (targetModule === 'vocab') {
-                        showVocabLesson(targetLevel, targetLessonId, targetTabId);
-                    }
-                    setTimeout(() => {
-                        const contentArea = document.getElementById('contentArea');
-                        if (contentArea) contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 300);
-                }, 300);
+                if (targetModule === 'grammar') {
+                    showLesson(targetLevel, targetLessonId, targetTabId);
+                } else if (targetModule === 'vocab') {
+                    showVocabLesson(targetLevel, targetLessonId, targetTabId);
+                }
             } else if (isExercise && targetLessonId) {
-                setTimeout(() => {
-                    if (targetModule === 'grammar') {
-                        showLesson(targetLevel, targetLessonId, '999');
-                    } else if (targetModule === 'vocab') {
-                        showVocabLesson(targetLevel, targetLessonId, 'exercise');
-                    }
-                    setTimeout(() => {
-                        const contentArea = document.getElementById('contentArea');
-                        if (contentArea) contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 300);
-                }, 300);
-            } else {
-                setTimeout(() => {
-                    const contentArea = document.getElementById('contentArea');
-                    if (contentArea) contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 300);
+                if (targetModule === 'grammar') {
+                    showLesson(targetLevel, targetLessonId, '999');
+                } else if (targetModule === 'vocab') {
+                    showVocabLesson(targetLevel, targetLessonId, 'exercise');
+                }
             }
-        }
-    }, 200);
-    
-    setTimeout(() => {
-        clearInterval(checkInterval);
-    }, 5000);
+            
+            // Cuộn đến content
+            setTimeout(() => {
+                const contentArea = document.getElementById('contentArea');
+                if (contentArea) {
+                    contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 300);
+        }, 500);
+    })();
 };
 
 dropdown.appendChild(item);
