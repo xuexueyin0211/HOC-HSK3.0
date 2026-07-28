@@ -2518,51 +2518,67 @@ function renderVocabLessons(level, data) {
                     exDiv.appendChild(resultDiv);
                 }
                 // 2. Flashcard
-                else if (exerciseType === 'flashcard' && ex.pairs) {
-                    const flashcardGrid = document.createElement('div');
-                    flashcardGrid.style.cssText = `
-                        display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-                        gap:10px;margin-top:8px;
-                    `;
-                    ex.pairs.forEach((pair, pairIdx) => {
-                        const card = document.createElement('div');
-                        card.style.cssText = `
-                            background:white;padding:12px;border-radius:10px;
-                            border:1px solid #f0f0f0;text-align:center;
-                            transition:all 0.3s ease;cursor:pointer;
-                        `;
-                        card.onmouseenter = function() { this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; };
-                        card.onmouseleave = function() { this.style.boxShadow = 'none'; };
-                        card.innerHTML = `
-                            <div style="font-size:20px;font-weight:700;color:#1e293b;">${pair.hanzi}</div>
-                            <div style="color:#db2777;font-size:13px;margin:2px 0;">${pair.pinyin}</div>
-                            <div style="color:#64748b;font-size:14px;margin-top:6px;padding-top:6px;border-top:1px solid #f0f0f0;display:none;" class="flashcard-meaning-${idx}-${pairIdx}">${pair.meaning}</div>
-                            <button onclick="toggleFlashcardMeaning(event, ${idx}, ${pairIdx})" style="padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;cursor:pointer;margin-top:6px;">Hiện nghĩa</button>
-                        `;
-                        flashcardGrid.appendChild(card);
-                    });
-                    exDiv.appendChild(flashcardGrid);
+else if (exerciseType === 'flashcard' && ex.pairs) {
+    const flashcardGrid = document.createElement('div');
+    flashcardGrid.className = 'flashcard-grid';
+    flashcardGrid.style.cssText = `
+        display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+        gap:10px;margin-top:8px;
+    `;
 
-                    if (!window.flashcardToggleAdded) {
-                        window.flashcardToggleAdded = true;
-                        window.toggleFlashcardMeaning = function(event, exIdx, pairIdx) {
-                            const btn = event.target;
-                            const card = btn.closest('div[style*="background:white"]');
-                            const meaningDiv = card.querySelector(`.flashcard-meaning-${exIdx}-${pairIdx}`);
-                            if (meaningDiv) {
-                                if (meaningDiv.style.display === 'none') {
-                                    meaningDiv.style.display = 'block';
-                                    btn.textContent = 'Ẩn nghĩa';
-                                    btn.style.background = '#db2777';
-                                } else {
-                                    meaningDiv.style.display = 'none';
-                                    btn.textContent = 'Hiện nghĩa';
-                                    btn.style.background = '#ec4899';
-                                }
-                            }
-                        };
-                    }
+    ex.pairs.forEach((pair, pairIdx) => {
+        const card = document.createElement('div');
+        card.className = 'flashcard-item';
+        card.style.cssText = `
+            background:white;padding:12px;border-radius:10px;
+            border:1px solid #f0f0f0;text-align:center;
+            transition:all 0.3s ease;cursor:pointer;
+        `;
+        card.onmouseenter = function() { this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; };
+        card.onmouseleave = function() { this.style.boxShadow = 'none'; };
+
+        const hanziDiv = document.createElement('div');
+        hanziDiv.style.cssText = 'font-size:20px;font-weight:700;color:#1e293b;';
+        hanziDiv.textContent = pair.hanzi;
+
+        const pinyinDiv = document.createElement('div');
+        pinyinDiv.style.cssText = 'color:#db2777;font-size:13px;margin:2px 0;';
+        pinyinDiv.textContent = pair.pinyin;
+
+        const meaningDiv = document.createElement('div');
+        meaningDiv.className = `flashcard-meaning-${pairIdx}`; // ✅ Chỉ cần pairIdx là đủ
+        meaningDiv.style.cssText = 'color:#64748b;font-size:14px;margin-top:6px;padding-top:6px;border-top:1px solid #f0f0f0;display:none;';
+        meaningDiv.textContent = pair.meaning;
+
+        const btn = document.createElement('button');
+        btn.textContent = 'Hiện nghĩa';
+        btn.style.cssText = 'padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;cursor:pointer;margin-top:6px;';
+
+        btn.addEventListener('click', function() {
+            const card = this.closest('.flashcard-item');
+            const meaning = card.querySelector(`.flashcard-meaning-${pairIdx}`);
+            if (meaning) {
+                if (meaning.style.display === 'none') {
+                    meaning.style.display = 'block';
+                    this.textContent = 'Ẩn nghĩa';
+                    this.style.background = '#db2777';
+                } else {
+                    meaning.style.display = 'none';
+                    this.textContent = 'Hiện nghĩa';
+                    this.style.background = '#ec4899';
                 }
+            }
+        });
+
+        card.appendChild(hanziDiv);
+        card.appendChild(pinyinDiv);
+        card.appendChild(meaningDiv);
+        card.appendChild(btn);
+        flashcardGrid.appendChild(card);
+    });
+
+    exDiv.appendChild(flashcardGrid);
+}
                 // 3. Điền từ
                 else if (exerciseType === 'fill_blank' && ex.items) {
                     const fillContainer = document.createElement('div');
