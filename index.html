@@ -2248,7 +2248,7 @@ showLesson(hskLevel, lessonNum - 1, "999");  // ✅ CHỈ ĐẾN TAB BÀI TẬP
                 const data = cachedData[`grammar-${prevLevel}`];
                 showContent("grammar", prevLevel);
                 setTimeout(() => {
-                    showLesson(prevLevel, data.lessons.length, "1");
+showLesson(prevLevel, data.lessons[data.lessons.length - 1].id, "999");
                 }, 300);
             }
         }
@@ -2776,7 +2776,9 @@ document.addEventListener('mouseenter', function(e) {
     
     const tooltip = lessonItem.querySelector('.lesson-item-tooltip');
     if (!tooltip) return;
-    
+    document.querySelectorAll('.lesson-item-tooltip').forEach(t => {
+        if (t !== tooltip) t.style.display = 'none';
+    });
     currentTooltip = tooltip;
     
     // Khi hover vào lesson-item, hiển thị tooltip
