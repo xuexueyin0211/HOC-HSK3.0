@@ -1346,6 +1346,7 @@ background: #FFFAFC;
     .lesson-wrapper {
         flex-direction: column !important;
         gap: 16px !important;
+        display: flex !important; /* ← THÊM DÒNG NÀY */
     }
     
     .lesson-sidebar {
@@ -1361,6 +1362,7 @@ background: #FFFAFC;
         overflow-y: auto !important;
         border: 1px solid #fce7f3 !important;
         order: 1 !important;
+        flex-shrink: 0 !important; /* ← THÊM DÒNG NÀY */
     }
     
     .lesson-main {
@@ -1368,6 +1370,7 @@ background: #FFFAFC;
         flex: 1 !important;
         min-width: 0 !important;
         max-width: 100% !important;  
+        width: 100% !important; 
     }
     
     .lesson-sidebar .sidebar-title { display: none !important; }
@@ -1446,9 +1449,20 @@ background: #FFFAFC;
     
     .content-area { padding: 12px 16px 24px; }
     
-    .lesson-sidebar { max-height: 180px !important; }
-    .lesson-sidebar .lesson-item { padding: 6px 12px !important; font-size: 13px; }
-    .lesson-sidebar .lesson-item-tooltip { max-width: calc(100vw - 20px); width: 240px; }
+    /* ✅ GỘP VÀO ĐÂY - KHÔNG LỒNG MEDIA QUERY */
+    .lesson-sidebar { 
+        max-height: 180px !important; 
+        display: flex !important; 
+        flex-wrap: wrap !important; 
+    }
+    .lesson-sidebar .lesson-item { 
+        padding: 6px 12px !important; 
+        font-size: 13px; 
+    }
+    .lesson-sidebar .lesson-item-tooltip { 
+        max-width: calc(100vw - 20px); 
+        width: 240px; 
+    }
     
     .card { padding: 16px; margin-bottom: 16px; }
     .tab-nav { padding: 6px 8px 0 8px; gap: 2px; }
@@ -1462,7 +1476,7 @@ background: #FFFAFC;
     .user-info, .logout-btn { top: 70px !important; right: 16px !important; font-size: 11px; }
     .logout-btn { right: 100px !important; }
 }
-
+    
 /* SMALL PHONE (max 480px) */
 @media (max-width: 480px) {
     .header { padding: 8px 12px; }
