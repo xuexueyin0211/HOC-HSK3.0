@@ -2751,26 +2751,26 @@ else if (exerciseType === 'flashcard' && ex.pairs) {
                     exDiv.appendChild(fillContainer);
                 }
                 // 4. Dịch câu
-else if (exerciseType === 'translation' && ex.items) {
+else if (exerciseType === 'translation' && ex && ex.items) {
     const transContainer = document.createElement('div');
     transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
-    
+
     ex.items.forEach((item) => {
         const itemDiv = document.createElement('div');
+        // Thêm class cụ thể thay vì dùng style để query
+        itemDiv.className = 'trans-item-card'; 
         itemDiv.style.cssText = `
             background:white;padding:12px 14px;border-radius:8px;
             border:1px solid #f0f0f0;
         `;
 
-        // 1. Lấy câu tiếng Việt (Tự động thích ứng kể cả khi JSON dùng 'vietnamese', 'question' hoặc 'vi')
-        const vietText = item.vietnamese || item.question || item.vi || '';
-
-        // 2. Lấy đáp án tiếng Trung (Tự động thích ứng với 'chinese', 'answer', 'hanzi' hoặc 'zh')
-        const chinText = item.chinese || item.answer || item.hanzi || item.zh || '';
+        // Tự động lấy câu hỏi & đáp án dù JSON dùng tên key nào
+        const vietText = item?.vietnamese || item?.question || item?.vi || '';
+        const chinText = item?.chinese || item?.answer || item?.hanzi || item?.zh || '';
 
         const sentenceDiv = document.createElement('div');
         sentenceDiv.style.cssText = 'font-size:14px;margin-bottom:6px;font-weight:600;color:#1e293b;';
-        sentenceDiv.textContent = vietText; // Hiển thị tiếng Việt
+        sentenceDiv.textContent = vietText;
         itemDiv.appendChild(sentenceDiv);
 
         const inputRow = document.createElement('div');
@@ -2790,18 +2790,19 @@ else if (exerciseType === 'translation' && ex.items) {
             background:#ec4899;color:white;font-size:12px;cursor:pointer;
         `;
 
+        // Sử dụng Arrow Function để giữ Scope và tránh lỗi closest()
         checkBtn.onclick = function() {
-            // Lấy div cha chứa bài tập hiện tại
-            const parentDiv = this.closest('div[style*="background:white"]');
+            const parentDiv = this.closest('.trans-item-card');
+            if (!parentDiv) return;
+
             const inputEl = parentDiv.querySelector('.trans-input');
             const resultDiv = parentDiv.querySelector('.trans-result');
-            
+            if (!inputEl || !resultDiv) return;
+
             const userAnswer = inputEl.value.trim();
-            const targetAnswer = chinText.toString().trim();
-            
-            // So sánh câu trả lời của người dùng với đáp án chuẩn
+            const targetAnswer = String(chinText).trim();
+
             const isCorrect = userAnswer === targetAnswer;
-            
             resultDiv.innerHTML = isCorrect ?
                 `✅ Đúng! (${targetAnswer})` :
                 `❌ Sai. Đáp án đúng: ${targetAnswer}`;
@@ -2824,9 +2825,14 @@ else if (exerciseType === 'translation' && ex.items) {
         transContainer.appendChild(itemDiv);
     });
 
-    // An toàn: Kiểm tra biến exDiv có tồn tại không trước khi append
-    if (typeof exDiv !== 'undefined' && exDiv) {
-        exDiv.appendChild(transContainer);
+    // Kiểm tra xem biến chứa phần tử cha ở đoạn code của bạn tên là gì
+    // Thử ghép vào exDiv, nếu không có thì thử các tên biến phổ biến khác
+    const targetParent = (typeof exDiv !== 'undefined' && exDiv) 
+                      || (typeof exerciseDiv !== 'undefined' && exerciseDiv)
+                      || (typeof container !== 'undefined' && container);
+
+    if (targetParent) {
+        targetParent.appendChild(transContainer);
     }
 }
                 // 5. Không xác định
