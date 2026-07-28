@@ -210,50 +210,30 @@
       "answer": 1,
       "explanation": "Trật tự đúng: 已经 + động từ + 了."
     },
-    {
-      "type": "fill_blank",
-      "question": "5. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):\n他 ___ 我学中文。 (Tā ___ wǒ xué Zhōngwén.)",
-      "answer": "帮忙",
-      "hint": "giúp đỡ",
-      "explanation": "Động từ '帮忙' đứng trước tân ngữ chỉ người."
-    },
-    {
-      "type": "fill_blank",
-      "question": "6. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):\n请给我一 ___ 水。 (Qǐng gěi wǒ yī ___ shuǐ.)",
-      "answer": "杯",
-      "hint": "lượng từ cho cốc/chén",
-      "explanation": "杯 là lượng từ dùng cho đồ uống (cốc, ly). Tuy không có trong từ vựng nhưng là từ quen thuộc."
-    },
-    {
-      "type": "fill_blank",
-      "question": "7. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):\n我 ___ 去了北京两次。 (Wǒ ___ qùle Běijīng liǎng cì.)",
-      "answer": "已经",
-      "hint": "đã (chỉ hoàn thành)",
-      "explanation": "已经 đứng trước động từ để chỉ hành động đã xảy ra."
-    },
-    {
-      "type": "translation",
-      "question": "8. Dịch câu sau sang tiếng Trung:\nBạn có thể giúp tôi không?",
-      "answer": "你能帮忙我吗？",
-      "explanation": "Cấu trúc: 能 + động từ + tân ngữ + 吗? để hỏi khả năng."
-    },
-    {
-      "type": "translation",
-      "question": "9. Dịch câu sau sang tiếng Trung:\nTôi thích du lịch.",
-      "answer": "我喜欢旅游。",
-      "explanation": "喜欢 + động từ để diễn tả sở thích."
-    },
-    {
-      "type": "translation",
-      "question": "10. Dịch câu sau sang tiếng Trung:\nXin lỗi, tôi đến muộn.",
-      "answer": "不好意思，我迟到了。",
-      "explanation": "不好意思 dùng để xin lỗi, 迟到 có nghĩa là đến muộn."
-    }
-  ]
+{
+    "type": "fill_blank",
+    "question": "5. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):",
+    "items": [
+      {
+        "sentence": "他 ___ 我学中文。 (Tā ___ wǒ xué Zhōngwén.)",
+        "answer": "帮忙",
+        "hint": "giúp đỡ"
+      },
+      {
+        "sentence": "请给我一 ___ 水。 (Qǐng gěi wǒ yī ___ shuǐ.)",
+        "answer": "杯",
+        "hint": "lượng từ cho cốc/chén"
+      },
+      {
+        "sentence": "我 ___ 去了北京两次。 (Wǒ ___ qùle Běijīng liǎng cì.)",
+        "answer": "已经",
+        "hint": "đã (chỉ hoàn thành)"
+      }
+    ]
   },
   {
     "type": "translation",
-    "question": "Dịch câu sang tiếng Trung:",
+    "question": "8-10. Dịch các câu sau sang tiếng Trung:",
     "items": [
       {
         "vietnamese": "Bạn có thể giúp tôi không?",
@@ -261,16 +241,18 @@
         "explanation": "Cấu trúc: 能 + động từ + tân ngữ + 吗?"
       },
       {
-        "vietnamese": "Tôi hiểu tiếng Trung.",
-        "chinese": "我懂中文。",
-        "explanation": "懂 + tân ngữ để chỉ hiểu cái gì đó."
+        "vietnamese": "Tôi thích du lịch.",
+        "chinese": "我喜欢旅游。",
+        "explanation": "喜欢 + động từ để diễn tả sở thích."
       },
       {
         "vietnamese": "Xin lỗi, tôi đến muộn.",
         "chinese": "不好意思，我迟到了。",
         "explanation": "不好意思 dùng để xin lỗi, 迟到 có nghĩa là đến muộn."
       }
-  ]
+    ]
+  }
+]
 },
       {
         "id": 2,
@@ -1363,4 +1345,4 @@
       }
     ]
   }
-}
+  }
