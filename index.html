@@ -1892,7 +1892,6 @@ background: #FFFAFC;
 
         <!-- ===== TOOLBAR ===== -->
     <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
-
    <div class="highlight-toolbar" id="highlightToolbar">
     <!-- Hàng 1: Highlight + Xóa tất cả -->
     <div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;">
@@ -1900,21 +1899,24 @@ background: #FFFAFC;
         <button onclick="clearAllHighlights()" style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
     </div>
     
-    <!-- Hàng 2: Flashcard + Chưa nắm -->
-<div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;margin-top:6px;">
-    <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">📚 Flashcard</button>
-    <button onclick="startVocabFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#673ab7;color:white;font-size:11px;font-weight:600;cursor:pointer;">📚 Từ Vựng</button>
-    <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
-</div>
-       <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">Flashcard</button>
-        <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
+    <!-- Hàng 2: Ôn tập (mở modal chọn) + Chưa nắm -->
+    <div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;margin-top:6px;">
+        <button onclick="openFlashcardSelector()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">📚 Ôn tập</button>
+        <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">⏳ Chưa nắm</button>
     </div>
 </div>
-
-    <div class="highlight-menu" id="highlightMenu">
-        <button class="delete-option" onclick="deleteSingleHighlight()">Xóa</button>
+    <!-- Modal chọn loại ôn tập -->
+<div id="flashcardSelectorModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;">
+    <div style="background:white;border-radius:16px;padding:20px;max-width:350px;width:90%;box-shadow:0 10px 40px rgba(0,0,0,0.2);">
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:15px;color:#1e293b;">Chọn loại ôn tập</h3>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+            <button onclick="startFlashcard();closeSelectorModal()" style="padding:12px;border:none;border-radius:8px;background:#9c27b0;color:white;font-weight:600;cursor:pointer;transition:all 0.2s;">📚 Flashcard Ngữ pháp</button>
+            <button onclick="startVocabFlashcard();closeSelectorModal()" style="padding:12px;border:none;border-radius:8px;background:#673ab7;color:white;font-weight:600;cursor:pointer;transition:all 0.2s;">📝 Flashcard Từ vựng</button>
+        </div>
+        <button onclick="closeSelectorModal()" style="width:100%;margin-top:12px;padding:8px;border:1px solid #ddd;border-radius:8px;background:white;cursor:pointer;color:#666;font-weight:600;">Đóng</button>
     </div>
-
+</div>
+    
     <!-- ===== FLASHCARD ===== -->
     <div class="flashcard-modal" id="flashcardModal">
         <div class="flashcard-box">
@@ -1929,7 +1931,9 @@ background: #FFFAFC;
         <div class="py" style="color:#db2777;font-size:14px;margin-bottom:6px;"></div>
         <div class="vi" style="color:#64748b;font-size:16px;"></div>
     </div>
-</div>            <div class="flashcard-actions">
+</div>         
+            <button onclick="shuffleFlashcards()" style="padding:8px 16px;border:none;border-radius:8px;background:#2196F3;color:white;font-weight:600;cursor:pointer;margin-top:10px;">🔀 Xáo trộn</button>
+            <div class="flashcard-actions">
 <button class="btn-show" onclick="document.getElementById('flashcardFace').classList.toggle('flipped')">🔄 Lật thẻ</button>
     <button class="btn-close" onclick="closeFlashcard()">Đóng</button>
             </div>
@@ -2191,20 +2195,35 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
             return emptyData[module] || { title: 'Chưa có dữ liệu', subtitle: '', items: [] };
         }
 function saveState(module, level) {
-    try {
-        localStorage.setItem('hsk_current_module', module);
-        localStorage.setItem('hsk_current_level', level);
-    } catch (e) {}
+    const state = { module, level };
+    localStorage.setItem('appState', JSON.stringify(state));
 }
 
 function loadState() {
-    try {
-        const module = localStorage.getItem('hsk_current_module') || 'grammar';
-        const level = localStorage.getItem('hsk_current_level') || 'hsk1';
-        return { module, level };
-    } catch (e) {
-        return { module: 'grammar', level: 'hsk1' };
-    }
+    const state = localStorage.getItem('appState');
+    return state ? JSON.parse(state) : { module: 'grammar', level: 'hsk1' };
+}
+
+// ===== LƯU TIẾN ĐỘ FLASHCARD =====
+function saveFlashcardProgress(level, lessonNum, currentIndex, isShuffled) {
+    const key = `flashcard_progress_${level}_lesson${lessonNum}`;
+    const progress = {
+        currentIndex: currentIndex,
+        isShuffled: isShuffled,
+        timestamp: new Date().getTime()
+    };
+    localStorage.setItem(key, JSON.stringify(progress));
+}
+
+function loadFlashcardProgress(level, lessonNum) {
+    const key = `flashcard_progress_${level}_lesson${lessonNum}`;
+    const progress = localStorage.getItem(key);
+    return progress ? JSON.parse(progress) : { currentIndex: 0, isShuffled: false };
+}
+
+function clearFlashcardProgress(level, lessonNum) {
+    const key = `flashcard_progress_${level}_lesson${lessonNum}`;
+    localStorage.removeItem(key);
 }
         // ================================================================
         // SHOW CONTENT
@@ -2570,65 +2589,109 @@ if (word.examples && word.examples.length > 0) {
                 }
                 // 2. Flashcard
 else if (exerciseType === 'flashcard' && ex.pairs) {
-    const flashcardGrid = document.createElement('div');
-    flashcardGrid.className = 'flashcard-grid';
-    flashcardGrid.style.cssText = `
-        display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-        gap:10px;margin-top:8px;
+    // Container chứa state
+    const exerciseState = {
+        pairs: ex.pairs.slice(),
+        currentIndex: 0,
+        showing: false
+    };
+    
+    // Xáo trộn ban đầu
+    for (let i = exerciseState.pairs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [exerciseState.pairs[i], exerciseState.pairs[j]] = [exerciseState.pairs[j], exerciseState.pairs[i]];
+    }
+    
+    const flashcardContainer = document.createElement('div');
+    flashcardContainer.style.cssText = `
+        background:linear-gradient(135deg,#fdf2f8,#f8f0fc);
+        border-radius:12px;padding:20px;margin-top:8px;
+        border:1px solid #fce7f3;text-align:center;
     `;
-
-    ex.pairs.forEach((pair, pairIdx) => {
-        const card = document.createElement('div');
-        card.className = 'flashcard-item';
-        card.style.cssText = `
-            background:white;padding:12px;border-radius:10px;
-            border:1px solid #f0f0f0;text-align:center;
-            transition:all 0.3s ease;cursor:pointer;
+    
+    const countDiv = document.createElement('div');
+    countDiv.style.cssText = 'color:#888;font-size:12px;margin-bottom:10px;';
+    flashcardContainer.appendChild(countDiv);
+    
+    const cardDiv = document.createElement('div');
+    cardDiv.style.cssText = `
+        background:white;border-radius:12px;padding:30px;
+        cursor:pointer;min-height:150px;display:flex;
+        align-items:center;justify-content:center;flex-direction:column;
+        transition:all 0.3s ease;box-shadow:0 4px 12px rgba(236,72,153,0.15);
+        margin-bottom:15px;
+    `;
+    cardDiv.onmouseenter = function() { this.style.transform = 'translateY(-5px)'; this.style.boxShadow = '0 8px 20px rgba(236,72,153,0.25)'; };
+    cardDiv.onmouseleave = function() { this.style.transform = 'translateY(0)'; this.style.boxShadow = '0 4px 12px rgba(236,72,153,0.15)'; };
+    
+    const updateCard = () => {
+        const pair = exerciseState.pairs[exerciseState.currentIndex];
+        countDiv.textContent = `${exerciseState.currentIndex + 1}/${exerciseState.pairs.length}`;
+        exerciseState.showing = false;
+        cardDiv.innerHTML = `
+            <div style="font-size:28px;font-weight:700;color:#1e293b;margin-bottom:8px;">${pair.hanzi}</div>
+            <div style="font-size:14px;color:#db2777;">${pair.pinyin}</div>
+            <div style="font-size:11px;color:#888;margin-top:6px;">👆 Click để xem nghĩa</div>
         `;
-        card.onmouseenter = function() { this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; };
-        card.onmouseleave = function() { this.style.boxShadow = 'none'; };
-
-        const hanziDiv = document.createElement('div');
-        hanziDiv.style.cssText = 'font-size:20px;font-weight:700;color:#1e293b;';
-        hanziDiv.textContent = pair.hanzi;
-
-        const pinyinDiv = document.createElement('div');
-        pinyinDiv.style.cssText = 'color:#db2777;font-size:13px;margin:2px 0;';
-        pinyinDiv.textContent = pair.pinyin;
-
-        const meaningDiv = document.createElement('div');
-        meaningDiv.className = `flashcard-meaning-${pairIdx}`; // ✅ Chỉ cần pairIdx là đủ
-        meaningDiv.style.cssText = 'color:#64748b;font-size:14px;margin-top:6px;padding-top:6px;border-top:1px solid #f0f0f0;display:none;';
-        meaningDiv.textContent = pair.meaning;
-
-        const btn = document.createElement('button');
-        btn.textContent = 'Hiện nghĩa';
-        btn.style.cssText = 'padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;cursor:pointer;margin-top:6px;';
-
-        btn.addEventListener('click', function() {
-            const card = this.closest('.flashcard-item');
-            const meaning = card.querySelector(`.flashcard-meaning-${pairIdx}`);
-            if (meaning) {
-                if (meaning.style.display === 'none') {
-                    meaning.style.display = 'block';
-                    this.textContent = 'Ẩn nghĩa';
-                    this.style.background = '#db2777';
-                } else {
-                    meaning.style.display = 'none';
-                    this.textContent = 'Hiện nghĩa';
-                    this.style.background = '#ec4899';
-                }
-            }
-        });
-
-        card.appendChild(hanziDiv);
-        card.appendChild(pinyinDiv);
-        card.appendChild(meaningDiv);
-        card.appendChild(btn);
-        flashcardGrid.appendChild(card);
-    });
-
-    exDiv.appendChild(flashcardGrid);
+    };
+    
+    cardDiv.onclick = () => {
+        if (!exerciseState.showing) {
+            const pair = exerciseState.pairs[exerciseState.currentIndex];
+            cardDiv.innerHTML = `
+                <div style="font-size:14px;color:#64748b;font-weight:600;">${pair.meaning}</div>
+                <div style="font-size:11px;color:#888;margin-top:6px;">👆 Click để quay lại</div>
+            `;
+            exerciseState.showing = true;
+        } else {
+            updateCard();
+        }
+    };
+    
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.style.cssText = 'display:flex;gap:8px;justify-content:center;flex-wrap:wrap;';
+    
+    const prevBtn = document.createElement('button');
+    prevBtn.textContent = '⬅️ Trước';
+    prevBtn.style.cssText = 'padding:8px 16px;border:none;border-radius:8px;background:#ec4899;color:white;font-weight:600;cursor:pointer;';
+    prevBtn.onclick = () => {
+        if (exerciseState.currentIndex > 0) {
+            exerciseState.currentIndex--;
+            updateCard();
+        }
+    };
+    buttonsDiv.appendChild(prevBtn);
+    
+    const shuffleBtn = document.createElement('button');
+    shuffleBtn.textContent = '🔀 Xáo trộn';
+    shuffleBtn.style.cssText = 'padding:8px 16px;border:none;border-radius:8px;background:#2196F3;color:white;font-weight:600;cursor:pointer;';
+    shuffleBtn.onclick = () => {
+        for (let i = exerciseState.pairs.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [exerciseState.pairs[i], exerciseState.pairs[j]] = [exerciseState.pairs[j], exerciseState.pairs[i]];
+        }
+        exerciseState.currentIndex = 0;
+        updateCard();
+    };
+    buttonsDiv.appendChild(shuffleBtn);
+    
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = 'Tiếp ➜';
+    nextBtn.style.cssText = 'padding:8px 16px;border:none;border-radius:8px;background:#ec4899;color:white;font-weight:600;cursor:pointer;';
+    nextBtn.onclick = () => {
+        if (exerciseState.currentIndex < exerciseState.pairs.length - 1) {
+            exerciseState.currentIndex++;
+            updateCard();
+        } else {
+            alert('🎉 Đã học xong bài này!');
+        }
+    };
+    buttonsDiv.appendChild(nextBtn);
+    
+    flashcardContainer.appendChild(cardDiv);
+    flashcardContainer.appendChild(buttonsDiv);
+    exDiv.appendChild(flashcardContainer);
+    updateCard();
 }
                 // 3. Điền từ
                 else if (exerciseType === 'fill_blank' && ex.items) {
@@ -2688,44 +2751,59 @@ else if (exerciseType === 'flashcard' && ex.pairs) {
                     exDiv.appendChild(fillContainer);
                 }
                 // 4. Dịch câu
+// 3. Dịch câu (Translation)
 else if (exerciseType === 'translation' && ex.items) {
     const transContainer = document.createElement('div');
     transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
-    ex.items.forEach((item, itemIdx) => {
+    ex.items.forEach((item) => {
         const itemDiv = document.createElement('div');
         itemDiv.style.cssText = `
             background:white;padding:12px 14px;border-radius:8px;
             border:1px solid #f0f0f0;
         `;
-        
-        const answerSafe = (item.answer || '').replace(/'/g, "\\'").replace(/"/g, '\\"');
-        itemDiv.innerHTML = `
-            <div style="font-size:15px;font-weight:500;color:#1e293b;margin-bottom:8px;">🇻🇳 ${item.vietnamese}</div>
-            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-                <input type="text" class="trans-input" style="flex:1;min-width:200px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;" placeholder="Nhập câu dịch..." />
-                <button class="check-trans-btn" style="padding:6px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:12px;cursor:pointer;font-weight:600;">✅ Kiểm tra</button>
-            </div>
-            <div class="trans-result" style="margin-top:6px;font-weight:600;font-size:13px;display:none;padding:4px 8px;border-radius:4px;background:#f8f9fa;"></div>
+        const sentenceDiv = document.createElement('div');
+        sentenceDiv.style.cssText = 'font-size:14px;margin-bottom:6px;font-weight:600;color:#1e293b;';
+        sentenceDiv.textContent = item.chinese;
+        itemDiv.appendChild(sentenceDiv);
+
+        const inputRow = document.createElement('div');
+        inputRow.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'trans-input';
+        input.style.cssText = 'flex:1;min-width:150px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;';
+        input.placeholder = 'Nhập bản dịch tiếng Việt...';
+        inputRow.appendChild(input);
+
+        const checkBtn = document.createElement('button');
+        checkBtn.textContent = '✅ Kiểm tra';
+        checkBtn.style.cssText = `
+            padding:4px 16px;border:none;border-radius:12px;
+            background:#ec4899;color:white;font-size:12px;cursor:pointer;
         `;
-        
-        // Gán event listener để tránh vấn đề closure
-        const checkBtn = itemDiv.querySelector('.check-trans-btn');
-        checkBtn.addEventListener('click', function() {
+        checkBtn.onclick = function() {
             const parentDiv = this.closest('div[style*="background:white"]');
             const inputEl = parentDiv.querySelector('.trans-input');
             const resultDiv = parentDiv.querySelector('.trans-result');
             const userAnswer = inputEl.value.trim();
-            
-            const normalize = (s) => s.replace(/[.,!?;:()\'\"]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
-            const isCorrect = normalize(userAnswer) === normalize(answerSafe.replace(/\\/g, ''));
-            
+            const isCorrect = userAnswer.toLowerCase() === item.vietnamese.toLowerCase();
             resultDiv.innerHTML = isCorrect ?
-                `✅ Đúng!` :
-                `❌ Sai. Đáp án gợi ý: ${item.answer}`;
+                `✅ Đúng! (${item.vietnamese})` :
+                `❌ Sai. Bản dịch đúng: ${item.vietnamese}`;
             resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
             resultDiv.style.display = 'block';
-        });
-        
+        };
+        inputRow.appendChild(checkBtn);
+        itemDiv.appendChild(inputRow);
+
+        const resultDiv = document.createElement('div');
+        resultDiv.className = 'trans-result';
+        resultDiv.style.cssText = `
+            margin-top:6px;font-weight:600;font-size:13px;
+            display:none;padding:4px 8px;border-radius:4px;
+            background:#f8f9fa;
+        `;
+        itemDiv.appendChild(resultDiv);
         transContainer.appendChild(itemDiv);
     });
     exDiv.appendChild(transContainer);
@@ -3651,7 +3729,15 @@ range.insertNode(span);
             }
         }
        function startVocabFlashcard() {
-    const words = [];
+    // Lưu trữ loại flashcard
+    flashcardType = 'vocab';
+    
+    // Kiểm tra nếu đã học trước đó, khôi phục vị trí
+    const savedIndex = localStorage.getItem(`flashcard_index_vocab_${currentLevel}`);
+    if (savedIndex !== null && !confirm('Tiếp tục từ vị trí cũ hay học lại từ đầu?')) {
+        flashcardIndex = parseInt(savedIndex);
+    }
+           const words = [];
     const levelData = cachedData[`vocab-${currentLevel}`];
     
     if (levelData && levelData.lessons) {
@@ -3684,6 +3770,14 @@ range.insertNode(span);
     showFlashcard();
 }
         function startFlashcard() {
+           // Lưu trữ loại flashcard
+            flashcardType = 'grammar';
+            
+            // Kiểm tra nếu đã học trước đó, khôi phục vị trí
+            const savedIndex = localStorage.getItem(`flashcard_index_grammar_${currentLevel}`);
+            if (savedIndex !== null && !confirm('Tiếp tục từ vị trí cũ hay học lại từ đầu?')) {
+                flashcardIndex = parseInt(savedIndex);
+            }
             const words = [];
             const levelData = cachedData[`grammar-${currentLevel}`];
             if (levelData && levelData.lessons) {
@@ -3726,8 +3820,23 @@ range.insertNode(span);
     document.querySelector('.flashcard-back .vi').textContent = data.vi || '';
     
     flashcardShowing = false;
+            // Lưu tiến độ
+    if (flashcardType === 'vocab') {
+        localStorage.setItem(`flashcard_index_vocab_${currentLevel}`, flashcardIndex);
+    } else {
+        localStorage.setItem(`flashcard_index_grammar_${currentLevel}`, flashcardIndex);
+    }
 }
-
+function shuffleFlashcards() {
+    // Fisher-Yates shuffle
+    for (let i = flashcardData.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [flashcardData[i], flashcardData[j]] = [flashcardData[j], flashcardData[i]];
+    }
+    flashcardIndex = 0;
+    showFlashcard();
+    alert('✅ Đã xáo trộn!');
+}
 function flashcardShowAnswer() {
     const face = document.getElementById('flashcardFace');
     face.classList.add('flipped');
@@ -3741,7 +3850,13 @@ function flashcardHideAnswer() {
 }
 
         function closeFlashcard() { document.getElementById('flashcardModal').classList.remove('active'); }
+function openFlashcardSelector() {
+    document.getElementById('flashcardSelectorModal').style.display = 'flex';
+}
 
+function closeSelectorModal() {
+    document.getElementById('flashcardSelectorModal').style.display = 'none';
+}
         function markAsUnderstood() {
             const data = flashcardData[flashcardIndex];
             if (!data) return;
