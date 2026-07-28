@@ -2200,31 +2200,30 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
         // ================================================================
         // RENDER CONTENT
         // ================================================================
-        function renderContent(module, level, data) {
-            console.log('Dữ liệu nhận được:', data);
-            contentInner.innerHTML = '';
-            
-            if (!data) {
-                contentInner.innerHTML = `<p style="color:#a0526a;text-align:center;padding:40px;">Dữ liệu trống!</p>`;
-                return;
-            }
-            
-            if (module === 'grammar' && data.lessons && data.lessons.length > 0) {
-                renderGrammarLessons(level, data);
-            } else if (data.items && data.items.length > 0) {
-                renderCardItems(module, data);
-            } else if (data.exercises && data.exercises.length > 0) {
-                renderPractice(data);
-            } else {
-                contentInner.innerHTML = `
-                    <p style="color:#a0526a;text-align:center;padding:40px;">
-                        Chưa có dữ liệu cho phần này.<br>
-                        Module: ${module} | Level: ${level}
-                    </p>
-                `;
-            }
-        }
-
+       function renderContent(module, level, data) {
+    console.log('Dữ liệu nhận được:', data);
+    contentInner.innerHTML = '';
+    
+    if (!data) {
+        contentInner.innerHTML = `<p style="color:#a0526a;text-align:center;padding:40px;">Dữ liệu trống!</p>`;
+        return;
+    }
+    
+    if (data.lessons && data.lessons.length > 0) {
+        renderGrammarLessons(level, data);
+    } else if (data.items && data.items.length > 0) {
+        renderCardItems(module, data);
+    } else if (data.exercises && data.exercises.length > 0) {
+        renderPractice(data);
+    } else {
+        contentInner.innerHTML = `
+            <p style="color:#a0526a;text-align:center;padding:40px;">
+                Chưa có dữ liệu cho phần này.<br>
+                Module: ${module} | Level: ${level}
+            </p>
+        `;
+    }
+}
         // ================================================================
         // RENDER GRAMMAR LESSONS
         // ================================================================
