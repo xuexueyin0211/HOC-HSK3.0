@@ -936,7 +936,6 @@ background: white;
 
         .grammar {
                    border-left-color: #E9D5FF !important;  /* Tím pastel */
-    border-left: 4px solid #D97BD0;          /* Hồng tím pastel */
             padding-left: 16px;
             margin-bottom: 20px;
         }
@@ -1040,8 +1039,7 @@ background: #FFFAFC;
         /* ===== EXERCISE ===== */
         .exercise-container { padding: 4px 0; }
         .exercise-item {
-    border-left-color: #E9D5FF !important;  /* Tím pastel */
-    border-left: 4px solid #D97BD0;          /* Hồng tím pastel */
+    border-left-color: #F8BBD0 !important;
             margin-bottom: 16px;
             padding: 14px;
             background: #f8f9fa;
@@ -1250,26 +1248,32 @@ background: #FFFAFC;
 .hsk6 .nav button { background: #F5AACE !important; }
         /* ===== TITLE & BORDER OVERRIDE ===== */
 /* HSK 1 */
+        .hsk1 .grammar { border-left: 4px solid #C8E6C9 !important; }
 .hsk1 .grammar h3 { color: #059669 !important; }
 .hsk1 .exercise-item { border-left: 4px solid #C8E6C9 !important; }
 
 /* HSK 2 */
+        .hsk2 .grammar { border-left: 4px solid #FED7AA !important; }
 .hsk2 .grammar h3 { color: #D97706 !important; }
 .hsk2 .exercise-item { border-left: 4px solid #FED7AA !important; }
 
 /* HSK 3 */
-.hsk3 .grammar h3 { color: #BE185D !important; }
+.hsk3 .grammar { border-left: 4px solid #FBCFE8 !important; }
+        .hsk3 .grammar h3 { color: #BE185D !important; }
 .hsk3 .exercise-item { border-left: 4px solid #FBCFE8 !important; }
 
 /* HSK 4 */
-.hsk4 .grammar h3 { color: #7C3AED !important; }
+.hsk4 .grammar { border-left: 4px solid #E9D5FF !important; }
+        .hsk4 .grammar h3 { color: #7C3AED !important; }
 .hsk4 .exercise-item { border-left: 4px solid #E9D5FF !important; }
 
 /* HSK 5 */
+        .hsk5 .grammar { border-left: 4px solid #BAE6FD !important; }
 .hsk5 .grammar h3 { color: #0369A1 !important; }
 .hsk5 .exercise-item { border-left: 4px solid #BAE6FD !important; }
 
 /* HSK 6 */
+        .hsk6 .grammar { border-left: 4px solid #F5AACE !important; }
 .hsk6 .grammar h3 { color: #D97BD0 !important; }
 .hsk6 .exercise-item { border-left: 4px solid #F5AACE !important; }
         /* ===== TAB BUTTON ACTIVE TITLE COLOR ===== */
@@ -1290,6 +1294,25 @@ background: #FFFAFC;
 
 /* HSK 6 */
 .hsk6 .tab-btn.active { color: #D97BD0 !important; }
+
+        /* ===== TAB BUTTON HOVER TITLE COLOR ===== */
+/* HSK 1 */
+.hsk1 .tab-btn:hover { color: #059669 !important; }
+
+/* HSK 2 */
+.hsk2 .tab-btn:hover { color: #D97706 !important; }
+
+/* HSK 3 */
+.hsk3 .tab-btn:hover { color: #BE185D !important; }
+
+/* HSK 4 */
+.hsk4 .tab-btn:hover { color: #7C3AED !important; }
+
+/* HSK 5 */
+.hsk5 .tab-btn:hover { color: #0369A1 !important; }
+
+/* HSK 6 */
+.hsk6 .tab-btn:hover { color: #D97BD0 !important; }
       /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .hero-section .container { flex-direction: column; text-align: center; }
