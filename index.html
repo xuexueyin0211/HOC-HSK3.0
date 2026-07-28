@@ -2156,46 +2156,70 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
             };
             return emptyData[module] || { title: 'Chưa có dữ liệu', subtitle: '', items: [] };
         }
+function saveState(module, level) {
+    try {
+        localStorage.setItem('hsk_current_module', module);
+        localStorage.setItem('hsk_current_level', level);
+    } catch (e) {}
+}
 
+function loadState() {
+    try {
+        const module = localStorage.getItem('hsk_current_module') || 'grammar';
+        const level = localStorage.getItem('hsk_current_level') || 'hsk1';
+        return { module, level };
+    } catch (e) {
+        return { module: 'grammar', level: 'hsk1' };
+    }
+}
         // ================================================================
         // SHOW CONTENT
         // ================================================================
         async function showContent(module, level) {
-            currentModule = module;
-            currentLevel = level;
+    // Nếu module không được truyền, lấy từ feature card active
+    if (!module) {
+        const activeFeature = document.querySelector('.feature-card.active');
+        module = activeFeature ? activeFeature.dataset.module : 'grammar';
+    }
+    
+    currentModule = module;
+    currentLevel = level;
+    
+    // ✅ LƯU VÀO LOCALSTORAGE
+    saveState(module, level);
 
-            document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
-            const activeCard = document.querySelector(`.feature-card[data-module="${module}"]`);
-            if (activeCard) activeCard.classList.add('active');
+    document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
+    const activeCard = document.querySelector(`.feature-card[data-module="${module}"]`);
+    if (activeCard) activeCard.classList.add('active');
 
-            document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
-            const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
-            if (activeHsk) activeHsk.classList.add('active');
+    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+    const activeHsk = document.querySelector(`.hsk-item[data-level="${level}"]`);
+    if (activeHsk) activeHsk.classList.add('active');
 
-            contentArea.className = 'content-area show ' + level;
-            hskNavWrapper.classList.add('show');
-            featuresSection.style.display = 'none';
+    contentArea.className = 'content-area show ' + level;
+    hskNavWrapper.classList.add('show');
+    featuresSection.style.display = 'none';
 
-            contentInner.innerHTML = `
-                <div id="loading">
-                    <div class="spinner"></div>
-                    <p style="color: #a0526a;">Đang tải dữ liệu...</p>
-                </div>
-            `;
+    contentInner.innerHTML = `
+        <div id="loading">
+            <div class="spinner"></div>
+            <p style="color: #a0526a;">Đang tải dữ liệu...</p>
+        </div>
+    `;
 
-            try {
-                const data = await loadModuleData(module, level);
-                renderContent(module, level, data);
-            } catch (error) {
-                contentInner.innerHTML = `
-                    <div style="text-align:center;padding:40px;color:#a0526a;">
-                        <p style="font-size:24px;">😅</p>
-                        <p>Không thể tải dữ liệu. Vui lòng thử lại sau.</p>
-                    </div>
-                `;
-            }
-            contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+    try {
+        const data = await loadModuleData(module, level);
+        renderContent(module, level, data);
+    } catch (error) {
+        contentInner.innerHTML = `
+            <div style="text-align:center;padding:40px;color:#a0526a;">
+                <p style="font-size:24px;">😅</p>
+                <p>Không thể tải dữ liệu. Vui lòng thử lại sau.</p>
+            </div>
+        `;
+    }
+    contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
         // ================================================================
         // RENDER CONTENT
@@ -3799,11 +3823,15 @@ if (highlight) {
         // BACK HOME
         // ================================================================
         function backToHome() {
-            featuresSection.style.display = 'block';
-            hskNavWrapper.classList.remove('show');
-            contentArea.classList.remove('show');
-            featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+    featuresSection.style.display = 'block';
+    hskNavWrapper.classList.remove('show');
+    contentArea.classList.remove('show');
+    featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // ✅ Reset về grammar khi về trang chủ
+    currentModule = 'grammar';
+    currentLevel = 'hsk1';
+    saveState('grammar', 'hsk1');
+}
 
         // ================================================================
         // EVENT LISTENERS
@@ -3816,7 +3844,7 @@ if (highlight) {
             });
         });
 
-       document.querySelectorAll('.hsk-item').forEach(item => {
+     document.querySelectorAll('.hsk-item').forEach(item => {
     item.addEventListener('click', function() {
         const level = this.dataset.level;
         // Lấy module từ feature card đang active
@@ -3838,14 +3866,29 @@ if (highlight) {
         // ================================================================
         // KHỞI TẠO
         // ================================================================
-        document.addEventListener('DOMContentLoaded', function() {
-            featuresSection.style.display = 'block';
-            hskNavWrapper.classList.remove('show');
-            contentArea.classList.remove('show');
-            setTimeout(() => {
-                showContent('grammar', 'hsk1');
-            }, 300);
-        });
+       document.addEventListener('DOMContentLoaded', function() {
+    featuresSection.style.display = 'block';
+    hskNavWrapper.classList.remove('show');
+    contentArea.classList.remove('show');
+    
+    // ✅ LOAD STATE TỪ LOCALSTORAGE
+    const savedState = loadState();
+    currentModule = savedState.module;
+    currentLevel = savedState.level;
+    
+    // Cập nhật UI
+    document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
+    const activeCard = document.querySelector(`.feature-card[data-module="${savedState.module}"]`);
+    if (activeCard) activeCard.classList.add('active');
+    
+    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+    const activeHsk = document.querySelector(`.hsk-item[data-level="${savedState.level}"]`);
+    if (activeHsk) activeHsk.classList.add('active');
+    
+    setTimeout(() => {
+        showContent(savedState.module, savedState.level);
+    }, 300);
+});
       
 // ================================================================
 // XỬ LÝ TOOLTIP - DÙNG MOUSEENTER/MOUSELEAVE - ĐÃ SỬA
