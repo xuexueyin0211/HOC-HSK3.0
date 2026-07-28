@@ -106,8 +106,6 @@
             align-items: center;
             gap: 8px;
                 z-index: 20; /* ← THÊM DÒNG NÀY */
-    pointer-events: none; /* Cho phép hover xuyên qua */
-
         }
         .lesson-item:hover {
             background: #fdf2f8;
@@ -133,10 +131,15 @@
             background: #F8BBD0;
             color: white;
         }
-        .lesson-item:hover .lesson-item-tooltip {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
+        /* ===== TOOLTIP SHOW ON HOVER ===== */
+.lesson-item:hover .lesson-item-tooltip {
+    display: block !important;
+    animation: fadeIn 0.3s ease;
+}
+
+.lesson-item-tooltip:hover {
+    display: block !important;
+}
         .lesson-item-tooltip .tooltip-title {
             padding: 8px 14px;
             font-size: 12px;
@@ -2104,31 +2107,41 @@ sidebar.appendChild(lessonItem);
         // SWITCH TAB - ĐÃ SỬA
         // ================================================================
         function switchTab(level, lessonNum, tabId) {
-            const lesson = document.getElementById(`lesson-${level}-${lessonNum}`);
-            if (!lesson) return;
+    const lesson = document.getElementById(`lesson-${level}-${lessonNum}`);
+    if (!lesson) return;
 
-            // Tắt toàn bộ tab
-            lesson.querySelectorAll(".tab-btn").forEach(btn => {
-                btn.classList.remove("active");
-            });
+    // Tắt toàn bộ tab-btn
+    lesson.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
 
-            lesson.querySelectorAll(".tab-pane").forEach(pane => {
-                pane.classList.remove("active");
-            });
+    // Tắt toàn bộ tab-pane
+    lesson.querySelectorAll(".tab-pane").forEach(pane => {
+        pane.classList.remove("active");
+    });
 
-            // Tìm tab theo data-tab
-            let targetBtn = lesson.querySelector(`.tab-btn[data-tab="${tabId}"]`);
-            if (targetBtn) targetBtn.classList.add("active");
-
-            // Bật pane
-            const pane = document.getElementById(`tab-${level}-${lessonNum}-${tabId}`);
-            if (pane) pane.classList.add("active");
-
-            currentTab = tabId;
+    // ✅ Chuyển tabId thành string để so sánh
+    const tabIdStr = String(tabId);
+    
+    // Tìm button với data-tab khớp
+    let targetBtn = null;
+    lesson.querySelectorAll(".tab-btn").forEach(btn => {
+        if (String(btn.dataset.tab) === tabIdStr) {
+            targetBtn = btn;
         }
-function goToTab(level, lessonId, tabId) {
-    // Chuyển đến bài học đó
-    showLesson(level, lessonId, tabId);
+    });
+    
+    if (targetBtn) {
+        targetBtn.classList.add("active");
+    }
+
+    // Bật pane tương ứng
+    const pane = document.getElementById(`tab-${level}-${lessonNum}-${tabIdStr}`);
+    if (pane) {
+        pane.classList.add("active");
+    }
+
+    currentTab = tabIdStr;
 }
         // ================================================================
         // SHOW LESSON
