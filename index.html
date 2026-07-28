@@ -1250,32 +1250,32 @@ background: #FFFAFC;
 .hsk6 .nav button { background: #F5AACE !important; }
         /* ===== TITLE & BORDER OVERRIDE ===== */
 /* HSK 1 */
-        .hsk1 .grammar { border-left: 4px solid #C8E6C9 !important; }
+.hsk1 .grammar { border-left: 4px solid #C8E6C9 !important; }
 .hsk1 .grammar h3 { color: #059669 !important; }
 .hsk1 .exercise-item { border-left: 4px solid #C8E6C9 !important; }
 
 /* HSK 2 */
-        .hsk2 .grammar { border-left: 4px solid #FED7AA !important; }
+.hsk2 .grammar { border-left: 4px solid #FED7AA !important; }
 .hsk2 .grammar h3 { color: #D97706 !important; }
 .hsk2 .exercise-item { border-left: 4px solid #FED7AA !important; }
 
 /* HSK 3 */
 .hsk3 .grammar { border-left: 4px solid #FBCFE8 !important; }
-        .hsk3 .grammar h3 { color: #BE185D !important; }
+.hsk3 .grammar h3 { color: #BE185D !important; }
 .hsk3 .exercise-item { border-left: 4px solid #FBCFE8 !important; }
 
 /* HSK 4 */
 .hsk4 .grammar { border-left: 4px solid #E9D5FF !important; }
-        .hsk4 .grammar h3 { color: #7C3AED !important; }
+.hsk4 .grammar h3 { color: #7C3AED !important; }
 .hsk4 .exercise-item { border-left: 4px solid #E9D5FF !important; }
 
 /* HSK 5 */
-        .hsk5 .grammar { border-left: 4px solid #BAE6FD !important; }
+.hsk5 .grammar { border-left: 4px solid #BAE6FD !important; }
 .hsk5 .grammar h3 { color: #0369A1 !important; }
 .hsk5 .exercise-item { border-left: 4px solid #BAE6FD !important; }
 
 /* HSK 6 */
-        .hsk6 .grammar { border-left: 4px solid #F5AACE !important; }
+.hsk6 .grammar { border-left: 4px solid #F5AACE !important; }
 .hsk6 .grammar h3 { color: #D97BD0 !important; }
 .hsk6 .exercise-item { border-left: 4px solid #F5AACE !important; }
         /* ===== TAB BUTTON ACTIVE TITLE COLOR ===== */
@@ -1334,30 +1334,42 @@ background: #FFFAFC;
 
 /* HSK 6 */
 .hsk6 .example-label { color: #D97BD0 !important; }
-      /* ===== RESPONSIVE ===== */
+    /* ===== RESPONSIVE DESIGN ===== */
+
+/* TABLET & MOBILE (max 1024px) */
 @media (max-width: 1024px) {
     .hero-section .container { flex-direction: column; text-align: center; }
     .hero-info .desc { margin: 0 auto; }
     .hero-info .achievements { justify-content: center; }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
-    .lesson-wrapper { flex-direction: column; }
+    
+    /* ===== QUAN TRỌNG: CHUYỂN SIDEBAR XUỐNG DƯỚI ===== */
+    .lesson-wrapper {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
     
     .lesson-sidebar {
         width: 100% !important;
-        position: relative !important;
-        top: 0 !important;
         max-height: 200px !important;
+        position: relative !important;
+        top: auto !important;
         display: flex !important;
         flex-wrap: wrap !important;
         padding: 8px !important;
         gap: 4px !important;
         overflow-y: auto !important;
         border: 1px solid #fce7f3 !important;
+        order: 1 !important;
     }
     
-    .lesson-sidebar .sidebar-title { 
-        display: none !important; 
+    .lesson-main {
+        order: 2 !important;
+        flex: 1 !important;
+        min-width: 0 !important;
     }
+    
+    .lesson-sidebar .sidebar-title { display: none !important; }
     
     .lesson-sidebar .lesson-item {
         flex: 0 0 auto !important;
@@ -1368,12 +1380,14 @@ background: #FFFAFC;
         margin: 0 !important;
         background: #f8f9fa !important;
         border-radius: 6px !important;
-            pointer-events: auto;
+        pointer-events: auto !important;
     }
+    
     .lesson-sidebar .lesson-item .lesson-num,
-.lesson-sidebar .lesson-item > span {
-    pointer-events: auto;
-}
+    .lesson-sidebar .lesson-item > span {
+        pointer-events: auto !important;
+    }
+    
     .lesson-sidebar .lesson-item.active {
         border-left: none !important;
         border-bottom: 2px solid #ec4899 !important;
@@ -1397,308 +1411,69 @@ background: #FFFAFC;
         border: 1px solid #fce7f3 !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
     }
-}
-        @media (max-width: 768px) {
-        .lesson-wrapper {        flex-direction: column;        gap: 12px;}
-        .lesson-sidebar {        width: 100%;        max-height: 180px;        position: relative;        top: auto;        order: 1;    }
-        .lesson-main {        order: 2;        flex: 1;    }
-            .header { padding: 10px 16px; flex-direction: column; align-items: stretch; }
-            .logo-area h1 { font-size: 15px; }
-            .logo-area h1 span { font-size: 11px; }
-            .search-box input { width: 100px; font-size: 12px; }
-            .hero-section { padding: 20px 16px; }
-            .hero-avatar { width: 90px; height: 90px; }
-            .hero-info h2 { font-size: 20px; }
-            .features-section { padding: 20px 16px 10px; }
-            .features-grid { grid-template-columns: 1fr; gap: 12px; }
-            .feature-card { padding: 16px; min-height: 100px; }
-            .feature-card .icon { font-size: 28px; }
-            .feature-card h3 { font-size: 15px; }
-            .content-area { padding: 12px 16px 30px; }
-            .card { padding: 14px; }
-            .tab-btn { padding: 6px 12px; font-size: 12px; }
-            .example-with-audio .text-group .cn { font-size: 17px; }
-            .header-actions { width: 100%; }
-            .search-box { flex: 1; }
-            .search-box input { width: 100%; }
-            .hsk-nav-wrapper { padding: 0 16px 6px; }
-            .hsk-item { padding: 5px 12px; font-size: 11px; }
-        }
-        @media (max-width: 480px) {
-            .features-grid { grid-template-columns: 1fr; }
-            .hero-info .achievements { flex-direction: column; align-items: center; }
-            .hero-info .achievement-item { width: 100%; justify-content: center; }
-        }
-
-        .bg-decoration {
-            position: fixed;
-            top: -200px;
-            right: -200px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(252, 231, 243, 0.3) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .bg-decoration-2 {
-            bottom: -100px;
-            left: -100px;
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(255, 241, 242, 0.4) 0%, transparent 70%);
-            position: fixed;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        /* ===== MEDIA QUERIES - RESPONSIVE DESIGN ===== */
-
-/* TABLET (768px - 1024px) */
-@media (max-width: 1024px) {
-    .header {
-        padding: 12px 24px;
-    }
     
-    .content-area {
-        padding: 12px 24px 32px;
-    }
-    
-    .features-section {
-        padding: 24px 24px 12px;
-    }
-    
-    .hero-section {
-        padding: 20px 24px 15px;
-    }
-    
-    .lesson-wrapper {
-        gap: 16px;
-                display: flex;
-    }
-    
-    .lesson-sidebar {
-        width: 240px;
-        top: 70px;
-    }
-    
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
-    .lesson-main {
-        flex: 1;
-        min-width: 0;
-    }
-    
-    .search-box input {
-        width: 120px;
-    }
+    .header { padding: 12px 24px; }
+    .content-area { padding: 12px 24px 32px; }
+    .features-section { padding: 24px 24px 12px; }
+    .hero-section { padding: 20px 24px 15px; }
+    .search-box input { width: 120px; }
 }
 
 /* MOBILE (max 767px) */
 @media (max-width: 767px) {
-    /* HEADER */
     .header {
         padding: 10px 16px;
         flex-direction: column;
         gap: 12px;
     }
+    .logo-area h1 { font-size: 16px; }
+    .search-box { width: 100%; max-width: 280px; }
+    .search-box input { width: 200px; }
     
-    .logo-area h1 {
-        font-size: 16px;
-    }
+    .hero-section { padding: 16px; }
+    .hero-section .container { gap: 16px; justify-content: center; }
+    .hero-avatar { width: 100px; height: 100px; }
+    .hero-info { min-width: auto; text-align: center; }
+    .hero-info h2 { font-size: 20px; }
     
-    .search-box {
-        width: 100%;
-        max-width: 280px;
-    }
+    .features-section { padding: 16px; }
+    .features-grid { grid-template-columns: 1fr; gap: 12px; }
     
-    .search-box input {
-        width: 200px;
-    }
+    .hsk-nav-wrapper { padding: 0 16px 8px; }
+    .hsk-nav { padding: 8px 12px; gap: 4px; }
+    .hsk-item { padding: 5px 14px; font-size: 12px; }
     
-    /* HERO */
-    .hero-section {
-        padding: 16px;
-    }
+    .content-area { padding: 12px 16px 24px; }
     
-    .hero-section .container {
-        gap: 16px;
-        justify-content: center;
-    }
+    .lesson-sidebar { max-height: 180px !important; }
+    .lesson-sidebar .lesson-item { padding: 6px 12px !important; font-size: 13px; }
+    .lesson-sidebar .lesson-item-tooltip { max-width: calc(100vw - 20px); width: 240px; }
     
-    .hero-avatar {
-        width: 100px;
-        height: 100px;
-    }
+    .card { padding: 16px; margin-bottom: 16px; }
+    .tab-nav { padding: 6px 8px 0 8px; gap: 2px; }
+    .tab-btn { padding: 6px 12px; font-size: 12px; }
+    .tab-content { padding: 12px; }
     
-    .hero-info {
-        min-width: auto;
-        text-align: center;
-    }
+    .example-with-audio { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .example-with-audio .text-group .cn { font-size: 18px; }
     
-    .hero-info h2 {
-        font-size: 20px;
-    }
-    
-    /* FEATURES */
-    .features-section {
-        padding: 16px;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    /* HSK NAV */
-    .hsk-nav-wrapper {
-        padding: 0 16px 8px;
-    }
-    
-    .hsk-nav {
-        padding: 8px 12px;
-        gap: 4px;
-    }
-    
-    .hsk-item {
-        padding: 5px 14px;
-        font-size: 12px;
-    }
-    
-    /* CONTENT */
-    .content-area {
-        padding: 12px 16px 24px;
-    }
-    
-    /* LESSON */
-    .lesson-wrapper {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-   .lesson-sidebar {
-        width: 100%;
-        max-height: 200px;
-        position: relative;
-        top: auto;
-        border-radius: 12px;
-        order: 1;           /* ← THÊM: Sidebar ở trên */
-        margin-bottom: 12px;
-    }
-    .lesson-main {
-        order: 2;           /* ← THÊM: Content ở dưới */
-        flex: 1;
-        min-width: 0;
-    }
-    
-    .lesson-sidebar .lesson-item {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
-    
-    /* TOOLTIP */
-    .lesson-sidebar .lesson-item-tooltip {
-        max-width: calc(100vw - 20px);
-        width: 240px;
-    }
-    
-    /* CARD */
-    .card {
-        padding: 16px;
-        margin-bottom: 16px;
-    }
-    
-    /* TABS */
-    .tab-nav {
-        padding: 6px 8px 0 8px;
-        gap: 2px;
-    }
-    
-    .tab-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    
-    .tab-content {
-        padding: 12px;
-    }
-    
-    /* EXAMPLE */
-    .example-with-audio {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    
-    .example-with-audio .text-group .cn {
-        font-size: 18px;
-    }
-    
-    /* FIXED BUTTONS */
-    #toggleToolbarBtn {
-        bottom: 16px;
-        right: 16px;
-        width: 48px;
-        height: 48px;
-        font-size: 20px;
-    }
-    
-    .user-info, .logout-btn {
-        top: 70px !important;
-        right: 16px !important;
-        font-size: 11px;
-    }
-    
-    .logout-btn {
-        right: 100px !important;
-    }
+    #toggleToolbarBtn { bottom: 16px; right: 16px; width: 48px; height: 48px; font-size: 20px; }
+    .user-info, .logout-btn { top: 70px !important; right: 16px !important; font-size: 11px; }
+    .logout-btn { right: 100px !important; }
 }
 
 /* SMALL PHONE (max 480px) */
 @media (max-width: 480px) {
-    .header {
-        padding: 8px 12px;
-    }
-    
-    .logo-area h1 {
-        font-size: 14px;
-    }
-    
-    .search-box {
-        max-width: 240px;
-    }
-    
-    .search-box input {
-        width: 160px;
-    }
-    
-    .features-section .section-title {
-        font-size: 20px;
-        margin-bottom: 16px;
-    }
-    
-    .hero-section::before {
-        font-size: 80px;
-        right: -20px;
-        bottom: -40px;
-    }
-    
-    .tab-btn {
-        padding: 5px 10px;
-        font-size: 11px;
-    }
-    
-    .example-label {
-        font-size: 12px;
-    }
-    
-    .lesson-sidebar .lesson-item-tooltip {
-        width: calc(100vw - 24px);
-        max-width: 220px;
-    }
-}
+    .header { padding: 8px 12px; }
+    .logo-area h1 { font-size: 14px; }
+    .search-box { max-width: 240px; }
+    .search-box input { width: 160px; }
+    .features-section .section-title { font-size: 20px; margin-bottom: 16px; }
+    .hero-section::before { font-size: 80px; right: -20px; bottom: -40px; }
+    .tab-btn { padding: 5px 10px; font-size: 11px; }
+    .example-label { font-size: 12px; }
+    .lesson-sidebar .lesson-item-tooltip { width: calc(100vw - 24px); max-width: 220px; }
+}  
     </style>
 </head>
 <body>
