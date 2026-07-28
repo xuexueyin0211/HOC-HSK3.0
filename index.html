@@ -298,6 +298,7 @@
         }
         .flashcard-modal.active { display: flex; }
         .flashcard-box {
+            perspective: 1000px;
             background: white;
             padding: 40px;
             border-radius: 20px;
@@ -308,6 +309,28 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             position: relative;
         }
+        .flashcard-face {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flashcard-face.flipped {
+    transform: rotateY(180deg);
+}
+.flashcard-front {
+    backface-visibility: hidden;
+}
+.flashcard-back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
         .flashcard-box .card-face {
             font-size: 36px;
             font-weight: 700;
@@ -1878,8 +1901,12 @@ background: #FFFAFC;
     </div>
     
     <!-- Hàng 2: Flashcard + Chưa nắm -->
-    <div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;margin-top:6px;">
-        <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">Flashcard</button>
+<div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;margin-top:6px;">
+    <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">📚 Flashcard</button>
+    <button onclick="startVocabFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#673ab7;color:white;font-size:11px;font-weight:600;cursor:pointer;">📚 Từ Vựng</button>
+    <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
+</div>
+       <button onclick="startFlashcard()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">Flashcard</button>
         <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">Chưa nắm</button>
     </div>
 </div>
@@ -1893,10 +1920,18 @@ background: #FFFAFC;
         <div class="flashcard-box">
             <div style="text-align:center;margin-bottom:10px;font-size:13px;color:#666;">Ôn tập lại các ví dụ</div>
             <div class="card-count" id="flashcardCount">1/10</div>
-            <div class="card-face" id="flashcardFace"><span class="cn">你好</span></div>
-            <div class="flashcard-actions">
-                <button class="btn-show" onclick="flashcardShowAnswer()">Xem nghĩa</button>
-                <button class="btn-close" onclick="closeFlashcard()">Đóng</button>
+<div class="flashcard-face" id="flashcardFace">
+    <div class="flashcard-front" id="flashcardFront">
+        <span class="cn">你好</span>
+    </div>
+    <div class="flashcard-back" id="flashcardBack">
+        <div class="cn" style="font-size:24px;margin-bottom:8px;"></div>
+        <div class="py" style="color:#db2777;font-size:14px;margin-bottom:6px;"></div>
+        <div class="vi" style="color:#64748b;font-size:16px;"></div>
+    </div>
+</div>            <div class="flashcard-actions">
+<button class="btn-show" onclick="document.getElementById('flashcardFace').classList.toggle('flipped')">🔄 Lật thẻ</button>
+    <button class="btn-close" onclick="closeFlashcard()">Đóng</button>
             </div>
             <div style="display:flex;gap:10px;margin-top:15px;justify-content:center;">
                 <button onclick="markAsUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#4caf50;color:white;font-weight:600;cursor:pointer;">✅ Đã nắm được</button>
@@ -2256,7 +2291,8 @@ function renderVocabLessons(level, data) {
     wrapper.className = level;
 
     const layout = document.createElement('div');
-    layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;max-width:100%;overflow:hidden;';
+layout.className = 'lesson-wrapper';  // ← THÊM DÒNG NÀY
+layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;max-width:100%;overflow:hidden;';
 
     // Sidebar
     const sidebar = document.createElement('div');
@@ -2382,13 +2418,29 @@ function renderVocabLessons(level, data) {
                     border-left: 4px solid #FED7AA;
                 `;
                 let examplesHtml = '';
-                if (word.examples && word.examples.length > 0) {
-                    examplesHtml = word.examples.map(ex => `
-                        <div style="padding:6px 10px;background:white;border-radius:6px;margin-top:4px;border:1px solid #f0f0f0;">
-                            <div style="font-size:16px;font-weight:600;color:#1e293b;">${ex}</div>
-                        </div>
-                    `).join('');
-                }
+if (word.examples && word.examples.length > 0) {
+    examplesHtml = word.examples.map((ex, exIdx) => {
+        // Hỗ trợ cả string và object
+        const cnText = typeof ex === 'string' ? ex : (ex.cn || ex.hanzi || '');
+        const pyText = typeof ex === 'object' ? (ex.py || ex.pinyin || '') : '';
+        const viText = typeof ex === 'object' ? (ex.vi || ex.meaning || '') : '';
+        
+        return `
+            <div class="example-with-audio" style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:#FFFAFC;border:1px solid #FFD1DC;border-radius:8px;margin:4px 0;transition:all 0.3s ease;">
+                <div class="text-group" style="flex:1;">
+                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px;">
+                        <span class="cn" style="font-size:20px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${cnText}</span>
+                        <button onclick="togglePinyinForThis(event)" style="padding:3px 10px;border:none;border-radius:8px;background:#ec4899;color:white;font-size:10px;font-weight:600;cursor:pointer;">Phiên âm</button>
+                        <button onclick="toggleNghiaForThis(event)" style="padding:3px 10px;border:none;border-radius:8px;background:#db2777;color:white;font-size:10px;font-weight:600;cursor:pointer;">Nghĩa</button>
+                    </div>
+                    <span class="py" style="display:none;font-size:12px;color:#db2777;margin:2px 0;">${pyText}</span>
+                    <span class="vi" style="display:none;font-size:13px;color:#64748b;margin-top:3px;">${viText}</span>
+                </div>
+                <button class="audio-btn" onclick="playAudio('${cnText}')" style="background:#F5AACE;border:none;border-radius:50%;width:34px;height:34px;font-size:14px;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;box-shadow:0 4px 14px rgba(212,165,255,0.4);margin-left:8px;">🔊</button>
+            </div>
+        `;
+    }).join('');
+}
                 wordDiv.innerHTML = `
                     <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
                         <span style="font-size:22px;font-weight:700;color:#1e293b;">${word.hanzi}</span>
@@ -2637,45 +2689,48 @@ else if (exerciseType === 'flashcard' && ex.pairs) {
                     exDiv.appendChild(fillContainer);
                 }
                 // 4. Dịch câu
-                else if (exerciseType === 'translation' && ex.items) {
-                    const transContainer = document.createElement('div');
-                    transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
-                    ex.items.forEach((item) => {
-                        const itemDiv = document.createElement('div');
-                        itemDiv.style.cssText = `
-                            background:white;padding:12px 14px;border-radius:8px;
-                            border:1px solid #f0f0f0;
-                        `;
-                        itemDiv.innerHTML = `
-                            <div style="font-size:15px;font-weight:500;color:#1e293b;">🇻🇳 ${item.vietnamese}</div>
-                            <div style="display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap;">
-                                <input type="text" class="trans-input" style="flex:1;min-width:200px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;" placeholder="Nhập câu dịch..." />
-                                <button onclick="checkTranslation(event, '${item.answer.replace(/'/g, "\\'")}')" style="padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:12px;cursor:pointer;">✅ Kiểm tra</button>
-                            </div>
-                            <div class="trans-result" style="margin-top:6px;font-weight:600;font-size:13px;display:none;padding:4px 8px;border-radius:4px;background:#f8f9fa;"></div>
-                        `;
-                        transContainer.appendChild(itemDiv);
-                    });
-                    exDiv.appendChild(transContainer);
-
-                    if (!window.translationCheckAdded) {
-                        window.translationCheckAdded = true;
-                        window.checkTranslation = function(event, answer) {
-                            const btn = event.target;
-                            const itemDiv = btn.closest('div[style*="background:white"]');
-                            const input = itemDiv.querySelector('.trans-input');
-                            const resultDiv = itemDiv.querySelector('.trans-result');
-                            const userAnswer = input.value.trim();
-                            const normalize = (s) => s.replace(/[.,!?;:()\'\"]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
-                            const isCorrect = normalize(userAnswer) === normalize(answer);
-                            resultDiv.innerHTML = isCorrect ?
-                                `✅ Đúng!` :
-                                `❌ Sai. Đáp án gợi ý: ${answer}`;
-                            resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
-                            resultDiv.style.display = 'block';
-                        };
-                    }
-                }
+else if (exerciseType === 'translation' && ex.items) {
+    const transContainer = document.createElement('div');
+    transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
+    ex.items.forEach((item, itemIdx) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.style.cssText = `
+            background:white;padding:12px 14px;border-radius:8px;
+            border:1px solid #f0f0f0;
+        `;
+        
+        const answerSafe = (item.answer || '').replace(/'/g, "\\'").replace(/"/g, '\\"');
+        itemDiv.innerHTML = `
+            <div style="font-size:15px;font-weight:500;color:#1e293b;margin-bottom:8px;">🇻🇳 ${item.vietnamese}</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                <input type="text" class="trans-input" style="flex:1;min-width:200px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;" placeholder="Nhập câu dịch..." />
+                <button class="check-trans-btn" style="padding:6px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:12px;cursor:pointer;font-weight:600;">✅ Kiểm tra</button>
+            </div>
+            <div class="trans-result" style="margin-top:6px;font-weight:600;font-size:13px;display:none;padding:4px 8px;border-radius:4px;background:#f8f9fa;"></div>
+        `;
+        
+        // Gán event listener để tránh vấn đề closure
+        const checkBtn = itemDiv.querySelector('.check-trans-btn');
+        checkBtn.addEventListener('click', function() {
+            const parentDiv = this.closest('div[style*="background:white"]');
+            const inputEl = parentDiv.querySelector('.trans-input');
+            const resultDiv = parentDiv.querySelector('.trans-result');
+            const userAnswer = inputEl.value.trim();
+            
+            const normalize = (s) => s.replace(/[.,!?;:()\'\"]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+            const isCorrect = normalize(userAnswer) === normalize(answerSafe.replace(/\\/g, ''));
+            
+            resultDiv.innerHTML = isCorrect ?
+                `✅ Đúng!` :
+                `❌ Sai. Đáp án gợi ý: ${item.answer}`;
+            resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+            resultDiv.style.display = 'block';
+        });
+        
+        transContainer.appendChild(itemDiv);
+    });
+    exDiv.appendChild(transContainer);
+}
                 // 5. Không xác định
                 else {
                     const unknownDiv = document.createElement('div');
@@ -3596,9 +3651,39 @@ range.insertNode(span);
                 // Không cần gọi attachHighlightClickListeners
             }
         }
-        // ================================================================
-        // FLASHCARD
-        // ================================================================
+       function startVocabFlashcard() {
+    const words = [];
+    const levelData = cachedData[`vocab-${currentLevel}`];
+    
+    if (levelData && levelData.lessons) {
+        levelData.lessons.forEach(lesson => {
+            if (lesson.tabs && lesson.tabs.length > 0) {
+                const firstTab = lesson.tabs[0];
+                if (firstTab.subcards && firstTab.subcards.length > 0) {
+                    const subcard = firstTab.subcards[0];
+                    if (subcard.type === 'vocab_list' && subcard.words) {
+                        words.push(...subcard.words.map(w => ({
+                            cn: w.hanzi,
+                            py: w.pinyin || '',
+                            vi: w.meaning || ''
+                        })));
+                    }
+                }
+            }
+        });
+    }
+    
+    if (words.length === 0) {
+        alert('Không có từ vựng để ôn tập!');
+        return;
+    }
+    
+    flashcardData = words;
+    flashcardIndex = 0;
+    flashcardShowing = false;
+    document.getElementById('flashcardModal').classList.add('active');
+    showFlashcard();
+}
         function startFlashcard() {
             const words = [];
             const levelData = cachedData[`grammar-${currentLevel}`];
@@ -3624,23 +3709,37 @@ range.insertNode(span);
         }
 
         function showFlashcard() {
-            const data = flashcardData[flashcardIndex];
-            if (!data) return;
-            document.getElementById('flashcardCount').textContent = `${flashcardIndex + 1}/${flashcardData.length}`;
-            document.getElementById('flashcardFace').innerHTML = `<span class="cn">${data.cn}</span>`;
-            flashcardShowing = false;
-        }
+    const data = flashcardData[flashcardIndex];
+    if (!data) return;
+    
+    document.getElementById('flashcardCount').textContent = `${flashcardIndex + 1}/${flashcardData.length}`;
+    
+    // Reset flip
+    const face = document.getElementById('flashcardFace');
+    face.classList.remove('flipped');
+    
+    // Hiển thị mặt trước (chữ Hán)
+    document.getElementById('flashcardFront').innerHTML = `<span class="cn" style="font-size:40px;">${data.cn}</span>`;
+    
+    // Chuẩn bị mặt sau (phiên âm + nghĩa)
+    document.querySelector('.flashcard-back .cn').textContent = data.cn;
+    document.querySelector('.flashcard-back .py').textContent = data.py || '';
+    document.querySelector('.flashcard-back .vi').textContent = data.vi || '';
+    
+    flashcardShowing = false;
+}
 
-        function flashcardShowAnswer() {
-            const data = flashcardData[flashcardIndex];
-            if (!data) return;
-            document.getElementById('flashcardFace').innerHTML = `
-                <div class="cn" style="font-size:28px;">${data.cn}</div>
-                <div style="font-size:16px;color:#388e3c;margin-top:5px;">${data.py}</div>
-                <div style="font-size:20px;color:#64748b;margin-top:5px;">${data.vi}</div>
-            `;
-            flashcardShowing = true;
-        }
+function flashcardShowAnswer() {
+    const face = document.getElementById('flashcardFace');
+    face.classList.add('flipped');
+    flashcardShowing = true;
+}
+
+function flashcardHideAnswer() {
+    const face = document.getElementById('flashcardFace');
+    face.classList.remove('flipped');
+    flashcardShowing = false;
+}
 
         function closeFlashcard() { document.getElementById('flashcardModal').classList.remove('active'); }
 
