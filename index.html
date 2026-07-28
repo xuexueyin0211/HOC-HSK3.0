@@ -2694,183 +2694,108 @@ else if (exerciseType === 'flashcard' && ex.pairs) {
     updateCard();
 }
                 // ===== 3. ĐIỀN TỪ (FILL_BLANK) =====
-else if (exerciseType === 'fill_blank') {
-    let items = [];
+else if (exerciseType === 'fill_blank' && ex.items) {
+    const fillContainer = document.createElement('div');
+    fillContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
     
-    // Cấu trúc cũ: question + answer + hint (Bài 1)
-    if (ex.sentence && ex.answer) {
-        items = [{
-            sentence: ex.sentence,
-            answer: ex.answer,
-            hint: ex.hint || ''
-        }];
-    } 
-    // Cấu trúc mới: items: [...] (Bài 2, 3,...)
-    else if (ex.items) {
-        items = ex.items;
-    }
-    
-    if (items.length > 0) {
-        const fillContainer = document.createElement('div');
-        fillContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
+    ex.items.forEach((item) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.style.cssText = 'background:white;padding:12px 14px;border-radius:8px;border:1px solid #f0f0f0;';
         
-        items.forEach((item) => {
-            const itemDiv = document.createElement('div');
-            itemDiv.style.cssText = `
-                background:white;padding:12px 14px;border-radius:8px;
-                border:1px solid #f0f0f0;
-            `;
-            
-            // Hiển thị câu hỏi
-            const sentenceSpan = document.createElement('div');
-            sentenceSpan.style.cssText = 'font-size:14px;margin-bottom:6px;';
-            sentenceSpan.textContent = item.sentence || '';
-            itemDiv.appendChild(sentenceSpan);
-            
-            // Hiển thị gợi ý nếu có
-            if (item.hint) {
-                const hintSpan = document.createElement('div');
-                hintSpan.style.cssText = 'font-size:12px;color:#888;margin-bottom:6px;';
-                hintSpan.textContent = '💡 Gợi ý: ' + item.hint;
-                itemDiv.appendChild(hintSpan);
-            }
+        const sentenceSpan = document.createElement('div');
+        sentenceSpan.style.cssText = 'font-size:14px;margin-bottom:6px;';
+        sentenceSpan.textContent = item.sentence;
+        itemDiv.appendChild(sentenceSpan);
+        
+        if (item.hint) {
+            const hintSpan = document.createElement('div');
+            hintSpan.style.cssText = 'font-size:12px;color:#888;margin-bottom:6px;';
+            hintSpan.textContent = '💡 Gợi ý: ' + item.hint;
+            itemDiv.appendChild(hintSpan);
+        }
 
-            // Ô nhập + nút kiểm tra
-            const inputRow = document.createElement('div');
-            inputRow.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
-            
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.className = 'fill-input';
-            input.style.cssText = 'flex:1;min-width:150px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;';
-            input.placeholder = 'Nhập đáp án...';
-            inputRow.appendChild(input);
+        const inputRow = document.createElement('div');
+        inputRow.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'fill-input';
+        input.style.cssText = 'flex:1;min-width:150px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;';
+        input.placeholder = 'Nhập đáp án...';
+        inputRow.appendChild(input);
 
-            const checkBtn = document.createElement('button');
-            checkBtn.textContent = '✅ Kiểm tra';
-            checkBtn.style.cssText = `
-                padding:4px 16px;border:none;border-radius:12px;
-                background:#ec4899;color:white;font-size:12px;cursor:pointer;
-            `;
-            checkBtn.onclick = function() {
-                const parentDiv = this.closest('div[style*="background:white"]');
-                const inputEl = parentDiv.querySelector('.fill-input');
-                const resultDiv = parentDiv.querySelector('.fill-result');
-                const userAnswer = inputEl.value.trim();
-                const isCorrect = userAnswer.toLowerCase() === item.answer.toLowerCase();
-                resultDiv.innerHTML = isCorrect ?
-                    `✅ Đúng! (${item.answer})` :
-                    `❌ Sai. Đáp án đúng: ${item.answer}`;
-                resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
-                resultDiv.style.display = 'block';
-            };
-            inputRow.appendChild(checkBtn);
-            itemDiv.appendChild(inputRow);
+        const checkBtn = document.createElement('button');
+        checkBtn.textContent = '✅ Kiểm tra';
+        checkBtn.style.cssText = 'padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:12px;cursor:pointer;';
+        checkBtn.onclick = function() {
+            const parentDiv = this.closest('div[style*="background:white"]');
+            const inputEl = parentDiv.querySelector('.fill-input');
+            const resultDiv = parentDiv.querySelector('.fill-result');
+            const userAnswer = inputEl.value.trim();
+            const isCorrect = userAnswer.toLowerCase() === item.answer.toLowerCase();
+            resultDiv.innerHTML = isCorrect ? `✅ Đúng! (${item.answer})` : `❌ Sai. Đáp án đúng: ${item.answer}`;
+            resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+            resultDiv.style.display = 'block';
+        };
+        inputRow.appendChild(checkBtn);
+        itemDiv.appendChild(inputRow);
 
-            const resultDiv = document.createElement('div');
-            resultDiv.className = 'fill-result';
-            resultDiv.style.cssText = `
-                margin-top:6px;font-weight:600;font-size:13px;
-                display:none;padding:4px 8px;border-radius:4px;
-                background:#f8f9fa;
-            `;
-            itemDiv.appendChild(resultDiv);
-            fillContainer.appendChild(itemDiv);
-        });
-        exDiv.appendChild(fillContainer);
-    } else {
-        // Không có dữ liệu
-        const emptyDiv = document.createElement('div');
-        emptyDiv.style.cssText = 'color:#999;font-size:13px;padding:8px 0;';
-        emptyDiv.textContent = '📌 Chưa có dữ liệu bài tập điền từ.';
-        exDiv.appendChild(emptyDiv);
-    }
+        const resultDiv = document.createElement('div');
+        resultDiv.className = 'fill-result';
+        resultDiv.style.cssText = 'margin-top:6px;font-weight:600;font-size:13px;display:none;padding:4px 8px;border-radius:4px;background:#f8f9fa;';
+        itemDiv.appendChild(resultDiv);
+        fillContainer.appendChild(itemDiv);
+    });
+    exDiv.appendChild(fillContainer);
 }
 
 // ===== 4. DỊCH CÂU (TRANSLATION) =====
-else if (exerciseType === 'translation') {
-    let items = [];
+else if (exerciseType === 'translation' && ex.items) {
+    const transContainer = document.createElement('div');
+    transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
     
-    // Cấu trúc cũ: vietnamese + answer (Bài 1)
-    if (ex.vietnamese && ex.answer) {
-        items = [{
-            vietnamese: ex.vietnamese,
-            chinese: ex.answer || '',
-            explanation: ex.explanation || ''
-        }];
-    } 
-    // Cấu trúc mới: items: [...] (Bài 2, 3,...)
-    else if (ex.items) {
-        items = ex.items;
-    }
-    
-    if (items.length > 0) {
-        const transContainer = document.createElement('div');
-        transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
+    ex.items.forEach((item) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.style.cssText = 'background:white;padding:12px 14px;border-radius:8px;border:1px solid #f0f0f0;';
         
-        items.forEach((item) => {
-            const itemDiv = document.createElement('div');
-            itemDiv.style.cssText = `
-                background:white;padding:12px 14px;border-radius:8px;
-                border:1px solid #f0f0f0;
-            `;
-            
-            // Hiển thị câu tiếng Việt cần dịch
-            const sentenceDiv = document.createElement('div');
-            sentenceDiv.style.cssText = 'font-size:14px;margin-bottom:6px;font-weight:600;color:#1e293b;';
-            sentenceDiv.textContent = '🌐 ' + (item.vietnamese || '');
-            itemDiv.appendChild(sentenceDiv);
+        const sentenceDiv = document.createElement('div');
+        sentenceDiv.style.cssText = 'font-size:14px;margin-bottom:6px;font-weight:600;color:#1e293b;';
+        sentenceDiv.textContent = '🌐 ' + item.vietnamese;
+        itemDiv.appendChild(sentenceDiv);
 
-            // Ô nhập + nút kiểm tra
-            const inputRow = document.createElement('div');
-            inputRow.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
-            
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.className = 'trans-input';
-            input.style.cssText = 'flex:1;min-width:150px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;';
-            input.placeholder = 'Nhập bản dịch tiếng Trung...';
-            inputRow.appendChild(input);
+        const inputRow = document.createElement('div');
+        inputRow.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'trans-input';
+        input.style.cssText = 'flex:1;min-width:150px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;';
+        input.placeholder = 'Nhập bản dịch tiếng Trung...';
+        inputRow.appendChild(input);
 
-            const checkBtn = document.createElement('button');
-            checkBtn.textContent = '✅ Kiểm tra';
-            checkBtn.style.cssText = `
-                padding:4px 16px;border:none;border-radius:12px;
-                background:#ec4899;color:white;font-size:12px;cursor:pointer;
-            `;
-            checkBtn.onclick = function() {
-                const parentDiv = this.closest('div[style*="background:white"]');
-                const inputEl = parentDiv.querySelector('.trans-input');
-                const resultDiv = parentDiv.querySelector('.trans-result');
-                const userAnswer = inputEl.value.trim();
-                const isCorrect = userAnswer.toLowerCase() === item.chinese.toLowerCase();
-                resultDiv.innerHTML = isCorrect ?
-                    `✅ Đúng! (${item.chinese})` :
-                    `❌ Sai. Bản dịch đúng: ${item.chinese}`;
-                resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
-                resultDiv.style.display = 'block';
-            };
-            inputRow.appendChild(checkBtn);
-            itemDiv.appendChild(inputRow);
+        const checkBtn = document.createElement('button');
+        checkBtn.textContent = '✅ Kiểm tra';
+        checkBtn.style.cssText = 'padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:12px;cursor:pointer;';
+        checkBtn.onclick = function() {
+            const parentDiv = this.closest('div[style*="background:white"]');
+            const inputEl = parentDiv.querySelector('.trans-input');
+            const resultDiv = parentDiv.querySelector('.trans-result');
+            const userAnswer = inputEl.value.trim();
+            const isCorrect = userAnswer.toLowerCase() === item.chinese.toLowerCase();
+            resultDiv.innerHTML = isCorrect ? `✅ Đúng! (${item.chinese})` : `❌ Sai. Bản dịch đúng: ${item.chinese}`;
+            resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+            resultDiv.style.display = 'block';
+        };
+        inputRow.appendChild(checkBtn);
+        itemDiv.appendChild(inputRow);
 
-            const resultDiv = document.createElement('div');
-            resultDiv.className = 'trans-result';
-            resultDiv.style.cssText = `
-                margin-top:6px;font-weight:600;font-size:13px;
-                display:none;padding:4px 8px;border-radius:4px;
-                background:#f8f9fa;
-            `;
-            itemDiv.appendChild(resultDiv);
-            transContainer.appendChild(itemDiv);
-        });
-        exDiv.appendChild(transContainer);
-    } else {
-        // Không có dữ liệu
-        const emptyDiv = document.createElement('div');
-        emptyDiv.style.cssText = 'color:#999;font-size:13px;padding:8px 0;';
-        emptyDiv.textContent = '📌 Chưa có dữ liệu bài tập dịch câu.';
-        exDiv.appendChild(emptyDiv);
-    }
+        const resultDiv = document.createElement('div');
+        resultDiv.className = 'trans-result';
+        resultDiv.style.cssText = 'margin-top:6px;font-weight:600;font-size:13px;display:none;padding:4px 8px;border-radius:4px;background:#f8f9fa;';
+        itemDiv.appendChild(resultDiv);
+        transContainer.appendChild(itemDiv);
+    });
+    exDiv.appendChild(transContainer);
 }
                 // 5. Không xác định
                 else {
