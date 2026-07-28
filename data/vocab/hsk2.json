@@ -216,18 +216,15 @@
     "items": [
       {
         "sentence": "他 ___ 我学中文。 (Tā ___ wǒ xué Zhōngwén.)",
-        "answer": "帮忙",
-        "hint": "giúp đỡ"
+        "answer": "帮忙"
       },
       {
         "sentence": "请给我一 ___ 水。 (Qǐng gěi wǒ yī ___ shuǐ.)",
-        "answer": "杯",
-        "hint": "lượng từ cho cốc/chén"
+        "answer": "杯"
       },
       {
         "sentence": "我 ___ 去了北京两次。 (Wǒ ___ qùle Běijīng liǎng cì.)",
-        "answer": "已经",
-        "hint": "đã (chỉ hoàn thành)"
+        "answer": "已经"
       }
     ]
   },
@@ -237,18 +234,15 @@
     "items": [
       {
         "vietnamese": "Bạn có thể giúp tôi không?",
-        "chinese": "你能帮忙我吗？",
-        "explanation": "Cấu trúc: 能 + động từ + tân ngữ + 吗?"
+        "chinese": "你能帮忙我吗？"
       },
       {
         "vietnamese": "Tôi thích du lịch.",
-        "chinese": "我喜欢旅游。",
-        "explanation": "喜欢 + động từ để diễn tả sở thích."
+        "chinese": "我喜欢旅游。"
       },
       {
         "vietnamese": "Xin lỗi, tôi đến muộn.",
-        "chinese": "不好意思，我迟到了。",
-        "explanation": "不好意思 dùng để xin lỗi, 迟到 có nghĩa là đến muộn."
+        "chinese": "不好意思，我迟到了。"
       }
     ]
   }
@@ -322,15 +316,13 @@
           {
             "type": "fill_blank",
             "question": "Điền từ thích hợp vào chỗ trống.",
-            "sentence": "学校离我家很 ___。 (Xuéxiào lí wǒjiā hěn ___. )",
-            "answer": "远",
-            "hint": "xa"
+            "sentence": "学校离我家很 ___。",
+            "answer": "远"
           },
           {
             "type": "translation",
             "question": "Dịch câu sau sang tiếng Trung.",
-            "vietnamese": "Tôi muốn mua hai vé.",
-            "answer": "我想买两张票。(Wǒ xiǎng mǎi liǎng zhāng piào.)"
+            "vietnamese": "Tôi muốn mua hai vé."
           }
         ]
       },
