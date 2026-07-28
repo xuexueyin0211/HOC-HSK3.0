@@ -1399,6 +1399,9 @@ background: #FFFAFC;
     }
 }
         @media (max-width: 768px) {
+        .lesson-wrapper {        flex-direction: column;        gap: 12px;}
+        .lesson-sidebar {        width: 100%;        max-height: 180px;        position: relative;        top: auto;        order: 1;    }
+        .lesson-main {        order: 2;        flex: 1;    }
             .header { padding: 10px 16px; flex-direction: column; align-items: stretch; }
             .logo-area h1 { font-size: 15px; }
             .logo-area h1 span { font-size: 11px; }
@@ -1471,6 +1474,7 @@ background: #FFFAFC;
     
     .lesson-wrapper {
         gap: 16px;
+                display: flex;
     }
     
     .lesson-sidebar {
@@ -1481,6 +1485,10 @@ background: #FFFAFC;
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
+    }
+    .lesson-main {
+        flex: 1;
+        min-width: 0;
     }
     
     .search-box input {
@@ -1570,12 +1578,19 @@ background: #FFFAFC;
         gap: 12px;
     }
     
-    .lesson-sidebar {
+   .lesson-sidebar {
         width: 100%;
-        max-height: 180px;
+        max-height: 200px;
         position: relative;
         top: auto;
         border-radius: 12px;
+        order: 1;           /* ← THÊM: Sidebar ở trên */
+        margin-bottom: 12px;
+    }
+    .lesson-main {
+        order: 2;           /* ← THÊM: Content ở dưới */
+        flex: 1;
+        min-width: 0;
     }
     
     .lesson-sidebar .lesson-item {
