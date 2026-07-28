@@ -7,79 +7,250 @@
         "id": 1,
         "title": "Bài 1 - 帮忙, 懂, 不好意思",
         "tabs": [
-          {
-            "id": 1,
-            "title": "Từ vựng bài 1",
-            "subcards": [
-              {
-                "label": "📝 Danh sách từ vựng:",
-                "type": "vocab_list",
-                "words": [
-                  {"hanzi": "帮忙", "pinyin": "bāngmáng", "word_type": "động từ", "meaning": "giúp đỡ", "note": "Có thể dùng với tân ngữ hoặc không. Thường dùng: 帮忙 + (someone) + do something", "examples": ["你能帮忙我吗？(Nǐ néng bāngmáng wǒ ma?) - Bạn có thể giúp tôi không?", "他帮忙我学中文。(Tā bāngmáng wǒ xué Zhōngwén.) - Anh ấy giúp tôi học tiếng Trung."]},
-                  {"hanzi": "懂", "pinyin": "dǒng", "word_type": "động từ", "meaning": "hiểu", "note": "Có thể dùng với tân ngữ hoặc không.", "examples": ["你懂吗？(Nǐ dǒng ma?) - Bạn hiểu không?", "我懂中文。(Wǒ dǒng Zhōngwén.) - Tôi hiểu tiếng Trung."]},
-                  {"hanzi": "不好意思", "pinyin": "bù hǎoyìsi", "word_type": "tính từ/cảm thán", "meaning": "ngại, xin lỗi, không tiện", "note": "Dùng để xin lỗi hoặc từ chối một cách lịch sự.", "examples": ["不好意思，我迟到了。(Bù hǎoyìsi, wǒ chídàole.) - Xin lỗi, tôi đến muộn.", "不好意思，我不能帮你。(Bù hǎoyìsi, wǒ bùnéng bāng nǐ.) - Xin lỗi, tôi không thể giúp bạn."]},
-                  {"hanzi": "次", "pinyin": "cì", "word_type": "lượng từ", "meaning": "lần (số lần)", "note": "Dùng để đếm số lần xảy ra hành động.", "examples": ["我去过北京两次。(Wǒ qùguo Běijīng liǎng cì.) - Tôi đã đi Bắc Kinh hai lần.", "请你再说一次。(Qǐng nǐ zài shuō yī cì.) - Xin hãy nói lại một lần nữa."]},
-                  {"hanzi": "给", "pinyin": "gěi", "word_type": "động từ/giới từ", "meaning": "cho, tặng / cho (ai đó)", "note": "Là động từ có nghĩa là \"đưa cho\"; cũng là giới từ chỉ đối tượng nhận.", "examples": ["请给我一杯水。(Qǐng gěi wǒ yī bēi shuǐ.) - Xin cho tôi một cốc nước.", "我给他一本书。(Wǒ gěi tā yī běn shū.) - Tôi đưa cho anh ấy một quyển sách."]},
-                  {"hanzi": "就", "pinyin": "jiù", "word_type": "phó từ", "meaning": "thì, là, ngay (nhấn mạnh thời gian hoặc sự sớm)", "note": "Dùng để nhấn mạnh một hành động xảy ra sớm hoặc ngay sau đó.", "examples": ["我马上就回来。(Wǒ mǎshàng jiù huílái.) - Tôi sẽ quay lại ngay.", "八点就上课。(Bā diǎn jiù shàngkè.) - 8 giờ là có tiết học rồi."]},
-                  {"hanzi": "旅游", "pinyin": "lǚyóu", "word_type": "động từ/danh từ", "meaning": "du lịch", "note": "Có thể dùng như động từ (đi du lịch) hoặc danh từ (chuyến du lịch).", "examples": ["我喜欢旅游。(Wǒ xǐhuān lǚyóu.) - Tôi thích du lịch.", "这个暑假我们打算去旅游。(Zhège shǔjià wǒmen dǎsuàn qù lǚyóu.) - Kỳ nghỉ hè này chúng tôi dự định đi du lịch."]},
-                  {"hanzi": "那", "pinyin": "nà", "word_type": "đại từ", "meaning": "đó, kia", "note": "Chỉ người hoặc vật ở xa người nói.", "examples": ["那个人是谁？(Nàge rén shì shéi?) - Người kia là ai?", "那是我的书。(Nà shì wǒ de shū.) - Kia là sách của tôi."]},
-                  {"hanzi": "让", "pinyin": "ràng", "word_type": "động từ", "meaning": "để cho, nhường", "note": "Dùng trong câu cầu khiến: 让 + người + hành động.", "examples": ["让他进来吧。(Ràng tā jìnlái ba.) - Để cho anh ấy vào đi.", "请让一下。(Qǐng ràng yīxià.) - Xin nhường một chút."]},
-                  {"hanzi": "已经", "pinyin": "yǐjīng", "word_type": "phó từ", "meaning": "đã (chỉ hành động đã hoàn thành)", "note": "Thường kết hợp với 了 ở cuối câu.", "examples": ["我已经吃了。(Wǒ yǐjīng chīle.) - Tôi đã ăn rồi.", "他已经来了。(Tā yǐjīng láile.) - Anh ấy đã đến rồi."]},
-                  {"hanzi": "意思", "pinyin": "yìsi", "word_type": "danh từ", "meaning": "ý nghĩa, ý kiến", "note": "", "examples": ["这个词什么意思？(Zhège cí shénme yìsi?) - Từ này có nghĩa là gì?", "我不明白你的意思。(Wǒ bù míngbai nǐ de yìsi.) - Tôi không hiểu ý bạn."]},
-                  {"hanzi": "有时", "pinyin": "yǒushí", "word_type": "phó từ", "meaning": "thỉnh thoảng, đôi khi", "note": "Chỉ hành động xảy ra không thường xuyên.", "examples": ["我有时去图书馆。(Wǒ yǒushí qù túshūguǎn.) - Tôi thỉnh thoảng đến thư viện.", "他有时很忙。(Tā yǒushí hěn máng.) - Anh ấy đôi khi rất bận."]},
-                  {"hanzi": "北京烤鸭", "pinyin": "Běijīng Kǎoyā", "word_type": "danh từ riêng", "meaning": "Vịt quay Bắc Kinh", "note": "Món ăn nổi tiếng của Trung Quốc.", "examples": ["我想吃北京烤鸭。(Wǒ xiǎng chī Běijīng Kǎoyā.) - Tôi muốn ăn vịt quay Bắc Kinh."]}
-                ]
-              }
-            ]
-          }
-        ],
-        "exercises": [
-          {
-            "type": "flashcard",
-            "question": "Ôn tập từ vựng bài 1 bằng thẻ ghi nhớ.",
-            "pairs": [
-              {"hanzi": "帮忙", "pinyin": "bāngmáng", "meaning": "giúp đỡ"},
-              {"hanzi": "懂", "pinyin": "dǒng", "meaning": "hiểu"},
-              {"hanzi": "不好意思", "pinyin": "bù hǎoyìsi", "meaning": "xin lỗi/ngại"},
-              {"hanzi": "次", "pinyin": "cì", "meaning": "lần"},
-              {"hanzi": "给", "pinyin": "gěi", "meaning": "cho/tặng"},
-              {"hanzi": "就", "pinyin": "jiù", "meaning": "thì/ngay"},
-              {"hanzi": "旅游", "pinyin": "lǚyóu", "meaning": "du lịch"},
-              {"hanzi": "那", "pinyin": "nà", "meaning": "đó/kia"},
-              {"hanzi": "让", "pinyin": "ràng", "meaning": "để cho/nhường"},
-              {"hanzi": "已经", "pinyin": "yǐjīng", "meaning": "đã"},
-              {"hanzi": "意思", "pinyin": "yìsi", "meaning": "ý nghĩa"},
-              {"hanzi": "有时", "pinyin": "yǒushí", "meaning": "thỉnh thoảng"},
-              {"hanzi": "北京烤鸭", "pinyin": "Běijīng Kǎoyā", "meaning": "Vịt quay Bắc Kinh"}
-            ]
-          },
-          {
-            "type": "multiple_choice",
-            "question": "Từ nào có nghĩa là \"giúp đỡ\"?",
-            "options": ["A. 懂", "B. 帮忙", "C. 让", "D. 意思"],
-            "answer": 1
-          },
-          {
-            "type": "multiple_choice",
-            "question": "\"不好意思\" có nghĩa là gì?",
-            "options": ["A. Không tốt", "B. Ngại/xin lỗi", "C. Không vui", "D. Không đẹp"],
-            "answer": 1
-          },
-          {
-            "type": "fill_blank",
-            "question": "Điền từ thích hợp vào chỗ trống.",
-            "sentence": "他 ___ 我学中文。 (Tā ___ wǒ xué Zhōngwén.)",
-            "answer": "帮忙",
-            "hint": "giúp đỡ"
-          },
-          {
-            "type": "translation",
-            "question": "Dịch câu sau sang tiếng Trung.",
-            "vietnamese": "Tôi đã ăn rồi.",
-            "answer": "我已经吃了。(Wǒ yǐjīng chīle.)"
-          }
-        ]
-      },
+    {
+      "id": 1,
+      "title": "Từ vựng bài 1",
+      "subcards": [
+        {
+          "label": "📝 Danh sách từ vựng:",
+          "type": "vocab_list",
+          "words": [
+            {
+              "hanzi": "帮忙",
+              "pinyin": "bāngmáng",
+              "word_type": "động từ",
+              "meaning": "giúp đỡ",
+              "note": "Có thể dùng với tân ngữ hoặc không. Thường dùng: 帮忙 + (người) + việc gì đó",
+              "examples": [
+                { "cn": "你能帮忙我吗？", "py": "Nǐ néng bāngmáng wǒ ma?", "vi": "Bạn có thể giúp tôi không?" },
+                { "cn": "他帮忙我学中文。", "py": "Tā bāngmáng wǒ xué Zhōngwén.", "vi": "Anh ấy giúp tôi học tiếng Trung." }
+              ]
+            },
+            {
+              "hanzi": "懂",
+              "pinyin": "dǒng",
+              "word_type": "động từ",
+              "meaning": "hiểu",
+              "note": "Có thể dùng với tân ngữ hoặc không.",
+              "examples": [
+                { "cn": "你懂吗？", "py": "Nǐ dǒng ma?", "vi": "Bạn hiểu không?" },
+                { "cn": "我懂中文。", "py": "Wǒ dǒng Zhōngwén.", "vi": "Tôi hiểu tiếng Trung." }
+              ]
+            },
+            {
+              "hanzi": "不好意思",
+              "pinyin": "bù hǎoyìsi",
+              "word_type": "tính từ/cảm thán",
+              "meaning": "ngại, xin lỗi, không tiện",
+              "note": "Dùng để xin lỗi hoặc từ chối một cách lịch sự.",
+              "examples": [
+                { "cn": "不好意思，我迟到了。", "py": "Bù hǎoyìsi, wǒ chídàole.", "vi": "Xin lỗi, tôi đến muộn." },
+                { "cn": "不好意思，我不能帮你。", "py": "Bù hǎoyìsi, wǒ bùnéng bāng nǐ.", "vi": "Xin lỗi, tôi không thể giúp bạn." }
+              ]
+            },
+            {
+              "hanzi": "次",
+              "pinyin": "cì",
+              "word_type": "lượng từ",
+              "meaning": "lần (số lần)",
+              "note": "Dùng để đếm số lần xảy ra hành động.",
+              "examples": [
+                { "cn": "我去过北京两次。", "py": "Wǒ qùguo Běijīng liǎng cì.", "vi": "Tôi đã đi Bắc Kinh hai lần." },
+                { "cn": "请你再说一次。", "py": "Qǐng nǐ zài shuō yī cì.", "vi": "Xin hãy nói lại một lần nữa." }
+              ]
+            },
+            {
+              "hanzi": "给",
+              "pinyin": "gěi",
+              "word_type": "động từ/giới từ",
+              "meaning": "cho, tặng / cho (ai đó)",
+              "note": "Là động từ có nghĩa là \"đưa cho\"; cũng là giới từ chỉ đối tượng nhận.",
+              "examples": [
+                { "cn": "请给我一杯水。", "py": "Qǐng gěi wǒ yī bēi shuǐ.", "vi": "Xin cho tôi một cốc nước." },
+                { "cn": "我给他一本书。", "py": "Wǒ gěi tā yī běn shū.", "vi": "Tôi đưa cho anh ấy một quyển sách." }
+              ]
+            },
+            {
+              "hanzi": "就",
+              "pinyin": "jiù",
+              "word_type": "phó từ",
+              "meaning": "thì, là, ngay (nhấn mạnh thời gian hoặc sự sớm)",
+              "note": "Dùng để nhấn mạnh một hành động xảy ra sớm hoặc ngay sau đó.",
+              "examples": [
+                { "cn": "我马上就回来。", "py": "Wǒ mǎshàng jiù huílái.", "vi": "Tôi sẽ quay lại ngay." },
+                { "cn": "八点就上课。", "py": "Bā diǎn jiù shàngkè.", "vi": "8 giờ là có tiết học rồi." }
+              ]
+            },
+            {
+              "hanzi": "旅游",
+              "pinyin": "lǚyóu",
+              "word_type": "động từ/danh từ",
+              "meaning": "du lịch",
+              "note": "Có thể dùng như động từ (đi du lịch) hoặc danh từ (chuyến du lịch).",
+              "examples": [
+                { "cn": "我喜欢旅游。", "py": "Wǒ xǐhuān lǚyóu.", "vi": "Tôi thích du lịch." },
+                { "cn": "这个暑假我们打算去旅游。", "py": "Zhège shǔjià wǒmen dǎsuàn qù lǚyóu.", "vi": "Kỳ nghỉ hè này chúng tôi dự định đi du lịch." }
+              ]
+            },
+            {
+              "hanzi": "那",
+              "pinyin": "nà",
+              "word_type": "đại từ",
+              "meaning": "đó, kia",
+              "note": "Chỉ người hoặc vật ở xa người nói.",
+              "examples": [
+                { "cn": "那个人是谁？", "py": "Nàge rén shì shéi?", "vi": "Người kia là ai?" },
+                { "cn": "那是我的书。", "py": "Nà shì wǒ de shū.", "vi": "Kia là sách của tôi." }
+              ]
+            },
+            {
+              "hanzi": "让",
+              "pinyin": "ràng",
+              "word_type": "động từ",
+              "meaning": "để cho, nhường",
+              "note": "Dùng trong câu cầu khiến: 让 + người + hành động.",
+              "examples": [
+                { "cn": "让他进来吧。", "py": "Ràng tā jìnlái ba.", "vi": "Để cho anh ấy vào đi." },
+                { "cn": "请让一下。", "py": "Qǐng ràng yīxià.", "vi": "Xin nhường một chút." }
+              ]
+            },
+            {
+              "hanzi": "已经",
+              "pinyin": "yǐjīng",
+              "word_type": "phó từ",
+              "meaning": "đã (chỉ hành động đã hoàn thành)",
+              "note": "Thường kết hợp với 了 ở cuối câu.",
+              "examples": [
+                { "cn": "我已经吃了。", "py": "Wǒ yǐjīng chīle.", "vi": "Tôi đã ăn rồi." },
+                { "cn": "他已经来了。", "py": "Tā yǐjīng láile.", "vi": "Anh ấy đã đến rồi." }
+              ]
+            },
+            {
+              "hanzi": "意思",
+              "pinyin": "yìsi",
+              "word_type": "danh từ",
+              "meaning": "ý nghĩa, ý kiến",
+              "note": "",
+              "examples": [
+                { "cn": "这个词什么意思？", "py": "Zhège cí shénme yìsi?", "vi": "Từ này có nghĩa là gì?" },
+                { "cn": "我不明白你的意思。", "py": "Wǒ bù míngbai nǐ de yìsi.", "vi": "Tôi không hiểu ý bạn." }
+              ]
+            },
+            {
+              "hanzi": "有时",
+              "pinyin": "yǒushí",
+              "word_type": "phó từ",
+              "meaning": "thỉnh thoảng, đôi khi",
+              "note": "Chỉ hành động xảy ra không thường xuyên.",
+              "examples": [
+                { "cn": "我有时去图书馆。", "py": "Wǒ yǒushí qù túshūguǎn.", "vi": "Tôi thỉnh thoảng đến thư viện." },
+                { "cn": "他有时很忙。", "py": "Tā yǒushí hěn máng.", "vi": "Anh ấy đôi khi rất bận." }
+              ]
+            },
+            {
+              "hanzi": "北京烤鸭",
+              "pinyin": "Běijīng Kǎoyā",
+              "word_type": "danh từ riêng",
+              "meaning": "Vịt quay Bắc Kinh",
+              "note": "Món ăn nổi tiếng của Trung Quốc.",
+              "examples": [
+                { "cn": "我想吃北京烤鸭。", "py": "Wǒ xiǎng chī Běijīng Kǎoyā.", "vi": "Tôi muốn ăn vịt quay Bắc Kinh." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "flashcard",
+      "question": "🃏 Ôn tập từ vựng bài 1 bằng thẻ ghi nhớ.",
+      "pairs": [
+        {"hanzi": "帮忙", "pinyin": "bāngmáng", "meaning": "giúp đỡ"},
+        {"hanzi": "懂", "pinyin": "dǒng", "meaning": "hiểu"},
+        {"hanzi": "不好意思", "pinyin": "bù hǎoyìsi", "meaning": "xin lỗi/ngại"},
+        {"hanzi": "次", "pinyin": "cì", "meaning": "lần"},
+        {"hanzi": "给", "pinyin": "gěi", "meaning": "cho/tặng"},
+        {"hanzi": "就", "pinyin": "jiù", "meaning": "thì/ngay"},
+        {"hanzi": "旅游", "pinyin": "lǚyóu", "meaning": "du lịch"},
+        {"hanzi": "那", "pinyin": "nà", "meaning": "đó/kia"},
+        {"hanzi": "让", "pinyin": "ràng", "meaning": "để cho/nhường"},
+        {"hanzi": "已经", "pinyin": "yǐjīng", "meaning": "đã"},
+        {"hanzi": "意思", "pinyin": "yìsi", "meaning": "ý nghĩa"},
+        {"hanzi": "有时", "pinyin": "yǒushí", "meaning": "thỉnh thoảng"},
+        {"hanzi": "北京烤鸭", "pinyin": "Běijīng Kǎoyā", "meaning": "Vịt quay Bắc Kinh"}
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "question": "1. Từ nào có nghĩa là \"giúp đỡ\"?",
+      "options": ["A. 懂", "B. 帮忙", "C. 让", "D. 意思"],
+      "answer": 1,
+      "explanation": "Vì '帮忙' nghĩa là giúp đỡ. Các từ còn lại: 懂 (hiểu), 让 (để cho), 意思 (ý nghĩa)."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "2. \"不好意思\" có nghĩa là gì?",
+      "options": ["A. Không tốt", "B. Ngại/xin lỗi", "C. Không vui", "D. Không đẹp"],
+      "answer": 1,
+      "explanation": "不好意思 dùng để xin lỗi hoặc thể hiện sự ngại ngùng."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "3. Từ nào dùng để chỉ số lần?",
+      "options": ["A. 就", "B. 给", "C. 次", "D. 那"],
+      "answer": 2,
+      "explanation": "次 là lượng từ chỉ số lần. 就 (thì), 给 (cho), 那 (đó)."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "4. Dịch câu \"Tôi đã ăn rồi\" sang tiếng Trung?",
+      "options": ["A. 我吃了已经。", "B. 我已经吃了。", "C. 我吃已经了。", "D. 已经我吃了。"],
+      "answer": 1,
+      "explanation": "Trật tự đúng: 已经 + động từ + 了."
+    },
+    {
+      "type": "fill_blank",
+      "question": "5. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):\n他 ___ 我学中文。 (Tā ___ wǒ xué Zhōngwén.)",
+      "answer": "帮忙",
+      "hint": "giúp đỡ",
+      "explanation": "Động từ '帮忙' đứng trước tân ngữ chỉ người."
+    },
+    {
+      "type": "fill_blank",
+      "question": "6. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):\n请给我一 ___ 水。 (Qǐng gěi wǒ yī ___ shuǐ.)",
+      "answer": "杯",
+      "hint": "lượng từ cho cốc/chén",
+      "explanation": "杯 là lượng từ dùng cho đồ uống (cốc, ly). Tuy không có trong từ vựng nhưng là từ quen thuộc."
+    },
+    {
+      "type": "fill_blank",
+      "question": "7. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):\n我 ___ 去了北京两次。 (Wǒ ___ qùle Běijīng liǎng cì.)",
+      "answer": "已经",
+      "hint": "đã (chỉ hoàn thành)",
+      "explanation": "已经 đứng trước động từ để chỉ hành động đã xảy ra."
+    },
+    {
+      "type": "translation",
+      "question": "8. Dịch câu sau sang tiếng Trung:\nBạn có thể giúp tôi không?",
+      "answer": "你能帮忙我吗？",
+      "explanation": "Cấu trúc: 能 + động từ + tân ngữ + 吗? để hỏi khả năng."
+    },
+    {
+      "type": "translation",
+      "question": "9. Dịch câu sau sang tiếng Trung:\nTôi thích du lịch.",
+      "answer": "我喜欢旅游。",
+      "explanation": "喜欢 + động từ để diễn tả sở thích."
+    },
+    {
+      "type": "translation",
+      "question": "10. Dịch câu sau sang tiếng Trung:\nXin lỗi, tôi đến muộn.",
+      "answer": "不好意思，我迟到了。",
+      "explanation": "不好意思 dùng để xin lỗi, 迟到 có nghĩa là đến muộn."
+      }
+  ]
+},
       {
         "id": 2,
         "title": "Bài 2 - 啊, 车站, 打车",
