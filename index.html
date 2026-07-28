@@ -2754,19 +2754,28 @@ else if (exerciseType === 'flashcard' && ex.pairs) {
 else if (exerciseType === 'translation' && ex.items) {
     const transContainer = document.createElement('div');
     transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
+    
     ex.items.forEach((item) => {
         const itemDiv = document.createElement('div');
         itemDiv.style.cssText = `
             background:white;padding:12px 14px;border-radius:8px;
             border:1px solid #f0f0f0;
         `;
+
+        // 1. Lấy câu tiếng Việt (Tự động thích ứng kể cả khi JSON dùng 'vietnamese', 'question' hoặc 'vi')
+        const vietText = item.vietnamese || item.question || item.vi || '';
+
+        // 2. Lấy đáp án tiếng Trung (Tự động thích ứng với 'chinese', 'answer', 'hanzi' hoặc 'zh')
+        const chinText = item.chinese || item.answer || item.hanzi || item.zh || '';
+
         const sentenceDiv = document.createElement('div');
         sentenceDiv.style.cssText = 'font-size:14px;margin-bottom:6px;font-weight:600;color:#1e293b;';
-        sentenceDiv.textContent = item.vietnamese; // ← Hiển thị tiếng Việt
+        sentenceDiv.textContent = vietText; // Hiển thị tiếng Việt
         itemDiv.appendChild(sentenceDiv);
 
         const inputRow = document.createElement('div');
         inputRow.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
+        
         const input = document.createElement('input');
         input.type = 'text';
         input.className = 'trans-input';
@@ -2780,18 +2789,26 @@ else if (exerciseType === 'translation' && ex.items) {
             padding:4px 16px;border:none;border-radius:12px;
             background:#ec4899;color:white;font-size:12px;cursor:pointer;
         `;
+
         checkBtn.onclick = function() {
+            // Lấy div cha chứa bài tập hiện tại
             const parentDiv = this.closest('div[style*="background:white"]');
             const inputEl = parentDiv.querySelector('.trans-input');
             const resultDiv = parentDiv.querySelector('.trans-result');
+            
             const userAnswer = inputEl.value.trim();
-            const isCorrect = userAnswer === item.chinese.trim(); // ← Check tiếng Trung
+            const targetAnswer = chinText.toString().trim();
+            
+            // So sánh câu trả lời của người dùng với đáp án chuẩn
+            const isCorrect = userAnswer === targetAnswer;
+            
             resultDiv.innerHTML = isCorrect ?
-                `✅ Đúng! (${item.chinese})` :
-                `❌ Sai. Đáp án đúng: ${item.chinese}`;
+                `✅ Đúng! (${targetAnswer})` :
+                `❌ Sai. Đáp án đúng: ${targetAnswer}`;
             resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
             resultDiv.style.display = 'block';
         };
+
         inputRow.appendChild(checkBtn);
         itemDiv.appendChild(inputRow);
 
@@ -2803,9 +2820,14 @@ else if (exerciseType === 'translation' && ex.items) {
             background:#f8f9fa;
         `;
         itemDiv.appendChild(resultDiv);
+
         transContainer.appendChild(itemDiv);
     });
-    exDiv.appendChild(transContainer);
+
+    // An toàn: Kiểm tra biến exDiv có tồn tại không trước khi append
+    if (typeof exDiv !== 'undefined' && exDiv) {
+        exDiv.appendChild(transContainer);
+    }
 }
                 // 5. Không xác định
                 else {
