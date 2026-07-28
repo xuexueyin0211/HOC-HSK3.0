@@ -2201,7 +2201,7 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
         // RENDER CONTENT
         // ================================================================
        function renderContent(module, level, data) {
-    console.log('Dữ liệu nhận được:', data);
+    console.log('📦 Dữ liệu nhận được:', data);
     contentInner.innerHTML = '';
     
     if (!data) {
@@ -2209,7 +2209,10 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
         return;
     }
     
-    if (data.lessons && data.lessons.length > 0) {
+    if (module === 'vocab' && data.lessons && data.lessons.length > 0) {
+        // ✅ Gọi hàm riêng cho vocab
+        renderVocabLessons(level, data);
+    } else if (module === 'grammar' && data.lessons && data.lessons.length > 0) {
         renderGrammarLessons(level, data);
     } else if (data.items && data.items.length > 0) {
         renderCardItems(module, data);
@@ -2222,6 +2225,247 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
                 Module: ${module} | Level: ${level}
             </p>
         `;
+    }
+}
+        // ================================================================
+// RENDER VOCAB LESSONS (RIÊNG CHO TỪ VỰNG)
+// ================================================================
+function renderVocabLessons(level, data) {
+    const wrapper = document.createElement('div');
+    wrapper.className = level;
+
+    const layout = document.createElement('div');
+    layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;max-width:100%;overflow:hidden;';
+
+    // Sidebar
+    const sidebar = document.createElement('div');
+    sidebar.className = 'lesson-sidebar';
+    sidebar.style.cssText = `
+        width:300px;flex-shrink:0;background:white;border-radius:16px;
+        border:1px solid #fce7f3;box-shadow:var(--shadow-sm);
+        position:sticky;top:80px;max-height:calc(100vh - 120px);
+        overflow-y:auto;overflow-x:hidden;padding:12px 0;
+    `;
+
+    const sidebarTitle = document.createElement('div');
+    sidebarTitle.className = 'sidebar-title';
+    sidebarTitle.textContent = 'Danh sách bài học';
+    sidebar.appendChild(sidebarTitle);
+
+    // Main content
+    const mainContent = document.createElement('div');
+    mainContent.className = 'lesson-main';
+    mainContent.style.cssText = 'flex:1;min-width:0;';
+
+    // Banner
+    const banner = document.createElement('div');
+    banner.style.cssText = `
+        background: linear-gradient(135deg, #fdf2f8, #fce7f3);
+        padding: 20px 30px; border-radius: 16px; margin-bottom: 25px;
+        border: 1px solid #fbcfe8;
+    `;
+    banner.innerHTML = `
+        <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
+        <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
+        ${data.subtitle ? `<div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>` : ''}
+    `;
+    mainContent.appendChild(banner);
+
+    const lessonsContainer = document.createElement('div');
+
+    data.lessons.forEach((lesson, index) => {
+        // Sidebar item
+        const lessonItem = document.createElement('div');
+        lessonItem.className = 'lesson-item' + (index === 0 ? ' active' : '');
+        lessonItem.style.cssText = `
+            padding:10px 20px;cursor:pointer;transition:all 0.3s ease;
+            font-size:14px;color:#4a5568;border-left:3px solid transparent;
+            display:flex;align-items:center;gap:8px;
+        `;
+        if (index === 0) {
+            lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
+        }
+        lessonItem.innerHTML = `
+            <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
+            <span>${lesson.title}</span>
+        `;
+        lessonItem.dataset.level = level;
+        lessonItem.dataset.lessonId = lesson.id;
+        
+        lessonItem.onclick = function(e) {
+            const lv = this.dataset.level;
+            const lid = parseInt(this.dataset.lessonId);
+            showVocabLesson(lv, lid);
+        };
+        sidebar.appendChild(lessonItem);
+
+        // Lesson content
+        const lessonDiv = document.createElement('div');
+        lessonDiv.id = `vocab-lesson-${level}-${lesson.id}`;
+        lessonDiv.className = 'lesson';
+        if (index === 0) lessonDiv.classList.add('active');
+
+        // Tab nav - chỉ có 1 tab "Từ vựng"
+        const tabNav = document.createElement('div');
+        tabNav.className = 'tab-nav';
+        const tabBtn = document.createElement('button');
+        tabBtn.className = 'tab-btn active';
+        tabBtn.textContent = '📝 Từ vựng';
+        tabNav.appendChild(tabBtn);
+        lessonDiv.appendChild(tabNav);
+
+        const tabContent = document.createElement('div');
+        tabContent.className = 'tab-content';
+
+        const pane = document.createElement('div');
+        pane.className = 'tab-pane active';
+
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        // Lấy danh sách từ vựng từ tabs[0].subcards[0].words
+        let words = [];
+        if (lesson.tabs && lesson.tabs.length > 0) {
+            const firstTab = lesson.tabs[0];
+            if (firstTab.subcards && firstTab.subcards.length > 0) {
+                const subcard = firstTab.subcards[0];
+                if (subcard.type === 'vocab_list' && subcard.words) {
+                    words = subcard.words;
+                }
+            }
+        }
+
+        if (words.length > 0) {
+            words.forEach((word, idx) => {
+                const wordDiv = document.createElement('div');
+                wordDiv.style.cssText = `
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                    padding: 16px;
+                    margin-bottom: 12px;
+                    border-left: 4px solid #FED7AA;
+                `;
+                
+                let examplesHtml = '';
+                if (word.examples && word.examples.length > 0) {
+                    examplesHtml = word.examples.map(ex => `
+                        <div style="padding:6px 10px;background:white;border-radius:6px;margin-top:4px;border:1px solid #f0f0f0;">
+                            <div style="font-size:16px;font-weight:600;color:#1e293b;">${ex}</div>
+                        </div>
+                    `).join('');
+                }
+
+                wordDiv.innerHTML = `
+                    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                        <span style="font-size:22px;font-weight:700;color:#1e293b;">${word.hanzi}</span>
+                        <span style="color:#db2777;font-size:14px;">${word.pinyin}</span>
+                        <span style="background:#fce7f3;padding:2px 10px;border-radius:12px;font-size:11px;color:#be185d;">${word.word_type || ''}</span>
+                    </div>
+                    <div style="color:#64748b;font-size:15px;margin-top:4px;">${word.meaning}</div>
+                    ${word.note ? `<div style="color:#888;font-size:13px;margin-top:4px;font-style:italic;">💡 ${word.note}</div>` : ''}
+                    ${examplesHtml ? `<div style="margin-top:8px;">${examplesHtml}</div>` : ''}
+                `;
+                card.appendChild(wordDiv);
+            });
+        } else {
+            card.innerHTML = `<p style="color:#999;text-align:center;padding:20px;">Chưa có từ vựng cho bài này.</p>`;
+        }
+
+        pane.appendChild(card);
+        tabContent.appendChild(pane);
+        lessonDiv.appendChild(tabContent);
+
+        // Navigation
+        const nav = document.createElement('div');
+        nav.className = 'nav';
+        nav.innerHTML = `
+            <button onclick="prevVocabTab('${level}', ${lesson.id})">⬅ Trước</button>
+            <button onclick="nextVocabTab('${level}', ${lesson.id})">Tiếp ➜</button>
+        `;
+        lessonDiv.appendChild(nav);
+
+        lessonsContainer.appendChild(lessonDiv);
+    });
+
+    mainContent.appendChild(lessonsContainer);
+
+    layout.appendChild(sidebar);
+    layout.appendChild(mainContent);
+    wrapper.appendChild(layout);
+    contentInner.appendChild(wrapper);
+
+    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+    const firstLesson = document.querySelector(`#vocab-lesson-${level}-1`);
+    if (firstLesson) firstLesson.classList.add('active');
+}
+
+// ================================================================
+// SHOW VOCAB LESSON
+// ================================================================
+function showVocabLesson(level, lessonNum) {
+    document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lesson-item').forEach(el => {
+        el.classList.remove('active');
+        el.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#4a5568;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;';
+        const numSpan = el.querySelector('.lesson-num');
+        if (numSpan) {
+            numSpan.style.background = '#fce7f3';
+            numSpan.style.color = '#be185d';
+        }
+    });
+    
+    const lessonEl = document.getElementById(`vocab-lesson-${level}-${lessonNum}`);
+    if (lessonEl) {
+        lessonEl.classList.add('active');
+        lessonEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+    const sidebarItem = document.querySelector(`.lesson-item[data-level="${level}"][data-lesson-id="${lessonNum}"]`);
+    if (sidebarItem) {
+        sidebarItem.classList.add('active');
+        sidebarItem.style.cssText = 'padding:10px 20px;cursor:pointer;transition:all 0.3s ease;font-size:14px;color:#be185d;font-weight:600;border-left:3px solid #ec4899;display:flex;align-items:center;gap:8px;background:#fdf2f8;';
+        const numSpan = sidebarItem.querySelector('.lesson-num');
+        if (numSpan) {
+            numSpan.style.background = '#ec4899';
+            numSpan.style.color = 'white';
+        }
+    }
+}
+
+// ================================================================
+// NEXT / PREV VOCAB TAB
+// ================================================================
+function nextVocabTab(hskLevel, lessonNum) {
+    const data = cachedData[`vocab-${hskLevel}`];
+    if (!data) return;
+    if (lessonNum < data.lessons.length) {
+        showVocabLesson(hskLevel, lessonNum + 1);
+        return;
+    }
+    const idx = hskLevels.indexOf(hskLevel);
+    if (idx < hskLevels.length - 1) {
+        const nextLevel = hskLevels[idx + 1];
+        showContent("vocab", nextLevel);
+    } else {
+        alert("🎉 Bạn đã hoàn thành toàn bộ khóa học!");
+    }
+}
+
+function prevVocabTab(hskLevel, lessonNum) {
+    if (lessonNum > 1) {
+        showVocabLesson(hskLevel, lessonNum - 1);
+        return;
+    }
+    const idx = hskLevels.indexOf(hskLevel);
+    if (idx > 0) {
+        const prevLevel = hskLevels[idx - 1];
+        const data = cachedData[`vocab-${prevLevel}`];
+        if (data) {
+            showContent("vocab", prevLevel);
+            setTimeout(() => {
+                showVocabLesson(prevLevel, data.lessons.length);
+            }, 300);
+        }
     }
 }
         // ================================================================
