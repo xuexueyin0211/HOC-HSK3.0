@@ -2294,7 +2294,6 @@ function renderVocabLessons(level, data) {
 
     const lessonsContainer = document.createElement('div');
 
-    // Duyệt qua từng bài học
     data.lessons.forEach((lesson, index) => {
         // Sidebar item
         const lessonItem = document.createElement('div');
@@ -2409,7 +2408,7 @@ function renderVocabLessons(level, data) {
         vocabPane.appendChild(vocabCard);
         tabContent.appendChild(vocabPane);
 
-        // ===== TAB 2: BÀI TẬP =====
+        // ===== TAB 2: BÀI TẬP (đầy đủ các dạng) =====
         if (lesson.exercises && lesson.exercises.length > 0) {
             const exercisePane = document.createElement('div');
             exercisePane.id = `vocab-tab-${level}-${lesson.id}-exercise`;
@@ -2432,7 +2431,7 @@ function renderVocabLessons(level, data) {
                     border-left: 4px solid #FED7AA;
                 `;
 
-                // Tự động phát hiện loại bài tập
+                // Phát hiện loại bài tập
                 let exerciseType = ex.type || '';
                 if (!exerciseType) {
                     if (ex.options && ex.answer !== undefined) {
@@ -2477,7 +2476,8 @@ function renderVocabLessons(level, data) {
                 qDiv.textContent = ex.question || '';
                 exDiv.appendChild(qDiv);
 
-                // Xử lý theo loại
+                // ===== XỬ LÝ CÁC LOẠI =====
+                // 1. Trắc nghiệm
                 if (exerciseType === 'multiple_choice' && ex.options) {
                     const optionsDiv = document.createElement('div');
                     optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;padding-left:8px;';
@@ -2517,6 +2517,7 @@ function renderVocabLessons(level, data) {
                     resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 14px;border-radius:6px;background:white;border:1px solid #e0e0e0;font-size:14px;transition:all 0.3s ease;';
                     exDiv.appendChild(resultDiv);
                 }
+                // 2. Flashcard
                 else if (exerciseType === 'flashcard' && ex.pairs) {
                     const flashcardGrid = document.createElement('div');
                     flashcardGrid.style.cssText = `
@@ -2562,6 +2563,7 @@ function renderVocabLessons(level, data) {
                         };
                     }
                 }
+                // 3. Điền từ
                 else if (exerciseType === 'fill_blank' && ex.items) {
                     const fillContainer = document.createElement('div');
                     fillContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
@@ -2618,6 +2620,7 @@ function renderVocabLessons(level, data) {
                     });
                     exDiv.appendChild(fillContainer);
                 }
+                // 4. Dịch câu
                 else if (exerciseType === 'translation' && ex.items) {
                     const transContainer = document.createElement('div');
                     transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
@@ -2657,10 +2660,11 @@ function renderVocabLessons(level, data) {
                         };
                     }
                 }
+                // 5. Không xác định
                 else {
                     const unknownDiv = document.createElement('div');
                     unknownDiv.style.cssText = 'color:#999;font-size:13px;padding:8px 0;';
-                    unknownDiv.textContent = `📌 Hiển thị dạng text: ${JSON.stringify(ex).substring(0, 200)}...`;
+                    unknownDiv.textContent = `📌 Dạng bài tập chưa được hỗ trợ: ${JSON.stringify(ex).substring(0, 200)}...`;
                     exDiv.appendChild(unknownDiv);
                 }
 
@@ -2674,7 +2678,7 @@ function renderVocabLessons(level, data) {
 
         lessonDiv.appendChild(tabContent);
 
-        // Navigation (thêm nếu cần)
+        // Navigation
         const nav = document.createElement('div');
         nav.className = 'nav';
         nav.innerHTML = `
@@ -2687,18 +2691,13 @@ function renderVocabLessons(level, data) {
 
     }); // kết thúc data.lessons.forEach
 
-    // Gắn sidebar và mainContent vào layout
     layout.appendChild(sidebar);
     layout.appendChild(mainContent);
     wrapper.appendChild(layout);
-
-    // Gắn lessonsContainer vào mainContent (đã có)
     mainContent.appendChild(lessonsContainer);
-
-    // Đưa wrapper vào contentInner
     contentInner.appendChild(wrapper);
 
-} // kết thúc hàm renderVocabLessons
+} // kết thúc hàm
 // ================================================================
 // SHOW VOCAB LESSON - GIỮ TAB HIỆN TẠI
 // ================================================================
