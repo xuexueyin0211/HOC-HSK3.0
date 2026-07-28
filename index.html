@@ -4147,53 +4147,77 @@ function universalSearch() {
                     ${result.desc ? `<div class="desc" style="font-size:12px;color:#64748b;margin-top:2px;">${result.desc}</div>` : ''}
                 `;
                 
-                item.onclick = function() {
-                    // Chọn HSK level
-                    const levelBtn = document.querySelector(`.hsk-item[data-level="${result.level}"]`);
-                    if (levelBtn) {
-                        document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
-                        levelBtn.classList.add('active');
+item.onclick = function() {
+    // Đóng dropdown ngay lập tức
+    document.getElementById('globalGrammarSearch').value = '';
+    dropdown.style.display = 'none';
+    
+    // Lưu thông tin để điều hướng
+    const targetModule = result.module;
+    const targetLevel = result.level;
+    const targetLessonId = result.lessonId || null;
+    const targetTabId = result.tabId || null;
+    const isTab = result.isTab || false;
+    const isExercise = result.isExercise || false;
+    
+    // Cập nhật UI: chọn HSK level
+    document.querySelectorAll('.hsk-item').forEach(el => el.classList.remove('active'));
+    const levelBtn = document.querySelector(`.hsk-item[data-level="${targetLevel}"]`);
+    if (levelBtn) levelBtn.classList.add('active');
+    
+    // Cập nhật UI: chọn module
+    document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
+    const featureCard = document.querySelector(`.feature-card[data-module="${targetModule}"]`);
+    if (featureCard) featureCard.classList.add('active');
+    
+    // Hiển thị content
+    showContent(targetModule, targetLevel);
+    
+    // Chờ content load xong rồi mới điều hướng
+    let checkInterval = setInterval(() => {
+        const loadingEl = document.querySelector('#loading');
+        if (!loadingEl || loadingEl.style.display === 'none') {
+            clearInterval(checkInterval);
+            
+            if (isTab && targetLessonId && targetTabId) {
+                setTimeout(() => {
+                    if (targetModule === 'grammar') {
+                        showLesson(targetLevel, targetLessonId, targetTabId);
+                    } else if (targetModule === 'vocab') {
+                        showVocabLesson(targetLevel, targetLessonId, targetTabId);
                     }
-                    
-                    // Chọn module
-                    const featureCard = document.querySelector(`.feature-card[data-module="${result.module}"]`);
-                    if (featureCard) {
-                        document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('active'));
-                        featureCard.classList.add('active');
+                    setTimeout(() => {
+                        const contentArea = document.getElementById('contentArea');
+                        if (contentArea) contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 300);
+                }, 300);
+            } else if (isExercise && targetLessonId) {
+                setTimeout(() => {
+                    if (targetModule === 'grammar') {
+                        showLesson(targetLevel, targetLessonId, '999');
+                    } else if (targetModule === 'vocab') {
+                        showVocabLesson(targetLevel, targetLessonId, 'exercise');
                     }
-                    
-                    // Hiển thị nội dung
-                    showContent(result.module, result.level);
-                    
-                    // Nếu có lessonId và tabId, chuyển đến đúng bài
-                    if (result.isTab && result.lessonId && result.tabId) {
-                        setTimeout(() => {
-                            // Tìm lesson và tab tương ứng
-                            if (result.module === 'grammar') {
-                                switchTab(result.level, result.lessonId, result.tabId);
-                            } else if (result.module === 'vocab') {
-                                showVocabLesson(result.level, result.lessonId, result.tabId);
-                            }
-                        }, 500);
-                    } else if (result.isExercise && result.lessonId) {
-                        setTimeout(() => {
-                            if (result.module === 'grammar') {
-                                showLesson(result.level, result.lessonId, '999');
-                            } else if (result.module === 'vocab') {
-                                showVocabLesson(result.level, result.lessonId, 'exercise');
-                            }
-                        }, 500);
-                    } else if (result.isItem || result.isPractice) {
-                        // Với các module dạng items, chỉ cần hiển thị content
-                        // Không cần chuyển tab cụ thể
-                    }
-                    
-                    // Đóng dropdown và xóa input
-                    document.getElementById('globalGrammarSearch').value = '';
-                    dropdown.style.display = 'none';
-                };
-                
-                dropdown.appendChild(item);
+                    setTimeout(() => {
+                        const contentArea = document.getElementById('contentArea');
+                        if (contentArea) contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 300);
+                }, 300);
+            } else {
+                setTimeout(() => {
+                    const contentArea = document.getElementById('contentArea');
+                    if (contentArea) contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            }
+        }
+    }, 200);
+    
+    setTimeout(() => {
+        clearInterval(checkInterval);
+    }, 5000);
+};
+
+dropdown.appendChild(item);
             });
         }
         
