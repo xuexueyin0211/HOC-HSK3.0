@@ -1493,7 +1493,341 @@ background: #FFFAFC;
     .tab-btn { padding: 5px 10px; font-size: 11px; }
     .example-label { font-size: 12px; }
     .lesson-sidebar .lesson-item-tooltip { width: calc(100vw - 24px); max-width: 220px; }
-}  
+}
+
+/* ===== PORTRAIT MODE OPTIMIZATION ===== */
+/* iPad & Tablet trong chế độ PORTRAIT (max 900px chiều ngang) */
+@media (max-width: 900px) and (orientation: portrait) {
+    /* Tăng font size cho dễ đọc */
+    body { font-size: 16px; line-height: 1.6; }
+    
+    /* Header tối ưu */
+    .header {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+    }
+    .logo-area h1 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .logo-area h1 span {
+        font-size: 13px;
+    }
+    .avatar {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    /* Search box fullwidth */
+    .search-box {
+        width: calc(100% - 20px);
+        max-width: 300px;
+    }
+    .search-box input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    .search-box button {
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+    
+    /* Hero section tối ưu */
+    .hero-section {
+        padding: 16px 12px;
+    }
+    .hero-section .container {
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    .hero-avatar img {
+        width: 100%;
+        height: 100%;
+    }
+    .hero-info {
+        text-align: center;
+        width: 100%;
+    }
+    .hero-info h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    .hero-info .desc {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+    .achievements {
+        gap: 8px;
+    }
+    .achievement-item {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    /* Features section */
+    .features-section {
+        padding: 16px 12px;
+    }
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+    .section-title small {
+        font-size: 14px;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .feature-card {
+        padding: 16px;
+        font-size: 15px;
+    }
+    .feature-icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+    
+    /* Navigation tối ưu */
+    .hsk-nav-wrapper {
+        max-width: 100%;
+        padding: 0 12px 8px;
+        width: 100%;
+    }
+    .hsk-nav {
+        padding: 10px 12px;
+        gap: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 12px;
+    }
+    .hsk-item {
+        padding: 8px 16px;
+        font-size: 13px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    /* Content area tối ưu */
+    .content-area {
+        max-width: 100%;
+        padding: 12px 12px 24px;
+        width: 100%;
+    }
+    
+    /* Back button */
+    .back-home {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Lesson sidebar - horizontal scroll trên mobile */
+    .lesson-sidebar {
+        display: flex !important;
+        flex-direction: column;
+        gap: 8px;
+        max-height: none !important;
+    }
+    .lesson-item {
+        padding: 12px 16px;
+        font-size: 14px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .lesson-item .lesson-num {
+        min-width: 32px;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 16px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+    }
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    /* Tabs */
+    .tab-nav {
+        padding: 8px 8px 0;
+        gap: 4px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tab-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+        min-height: 40px;
+        border-radius: 10px 10px 0 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .tab-content {
+        padding: 14px;
+        font-size: 14px;
+    }
+    
+    /* Text content */
+    .cn {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .vi {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .pinyin {
+        font-size: 12px;
+    }
+    
+    /* Examples */
+    .example-with-audio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+    .example-with-audio .text-group .cn {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .example-with-audio .text-group .vi {
+        font-size: 13px;
+    }
+    
+    /* Buttons */
+    button, input[type="button"], input[type="submit"] {
+        min-height: 44px;
+        font-size: 14px;
+        padding: 10px 16px !important;
+    }
+    
+    /* Audio button */
+    .btn-audio {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 8px !important;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    
+    /* Toolbar */
+    #toggleToolbarBtn {
+        bottom: 16px;
+        right: 16px;
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+    .highlight-toolbar {
+        padding: 12px !important;
+        border-radius: 14px;
+    }
+    .toolbar-row button {
+        padding: 8px 12px !important;
+        font-size: 12px;
+        min-height: 36px;
+    }
+    
+    /* Login modal */
+    .login-box {
+        padding: 32px 20px;
+        max-width: 90%;
+        border-radius: 16px;
+    }
+    .login-box h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .login-box p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .google-btn {
+        padding: 14px 16px !important;
+        font-size: 14px;
+    }
+    
+    /* User info */
+    .user-info, .logout-btn {
+        font-size: 12px;
+        padding: 8px 12px !important;
+        min-height: auto;
+    }
+}
+
+/* SMALL PHONE PORTRAIT (max 480px) */
+@media (max-width: 480px) and (orientation: portrait) {
+    /* Thêm optimize cho phone nhỏ */
+    body { font-size: 15px; }
+    
+    .header {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+    .logo-area h1 {
+        font-size: 16px;
+    }
+    .logo-area h1 span {
+        font-size: 11px;
+    }
+    
+    .hero-section { padding: 12px 10px; }
+    .hero-info h2 { font-size: 18px; }
+    .hero-info .desc { font-size: 13px; }
+    .achievement-item { font-size: 12px; }
+    
+    .section-title { font-size: 18px; }
+    .feature-card { padding: 14px; font-size: 14px; }
+    
+    .hsk-item { padding: 8px 14px; font-size: 12px; }
+    .lesson-item { padding: 10px 12px; font-size: 13px; }
+    
+    .card { padding: 14px; }
+    .card h3 { font-size: 15px; }
+    
+    .cn { font-size: 18px; }
+    .vi { font-size: 12px; }
+}
+
+/* LANDSCAPE MODE - Giữ layout original */
+@media (orientation: landscape) {
+    /* Reduce padding trong landscape để tránh scroll nhiều */
+    .header { padding: 8px 20px; }
+    .hero-section { padding: 12px 20px; }
+    .features-section { padding: 12px 20px; }
+    .content-area { padding: 8px 20px 16px; }
+}
     </style>
 </head>
 <body>
