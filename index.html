@@ -2391,87 +2391,275 @@ function renderVocabLessons(level, data) {
         tabContent.appendChild(vocabPane);
 
         // ===== TAB 2: BÀI TẬP =====
-        if (lesson.exercises && lesson.exercises.length > 0) {
-            const exercisePane = document.createElement('div');
-            exercisePane.id = `vocab-tab-${level}-${lesson.id}-exercise`;
-            exercisePane.className = 'tab-pane';
+        // ===== TAB 2: BÀI TẬP =====
+if (lesson.exercises && lesson.exercises.length > 0) {
+    const exercisePane = document.createElement('div');
+    exercisePane.id = `vocab-tab-${level}-${lesson.id}-exercise`;
+    exercisePane.className = 'tab-pane';
 
-            const exerciseCard = document.createElement('div');
-            exerciseCard.className = 'card';
+    const exerciseCard = document.createElement('div');
+    exerciseCard.className = 'card';
 
-            const exerciseContainer = document.createElement('div');
-            exerciseContainer.className = 'exercise-container';
+    const exerciseContainer = document.createElement('div');
+    exerciseContainer.className = 'exercise-container';
 
-            lesson.exercises.forEach((ex, idx) => {
-    const exDiv = document.createElement('div');
-    exDiv.className = 'exercise-item';
-    exDiv.style.cssText = `
-        margin-bottom: 16px;
-        padding: 14px;
-        background: #f8f9fa;
-        border-radius: 10px;
-        border-left: 4px solid #FED7AA;
-    `;
+    lesson.exercises.forEach((ex, idx) => {
+        const exDiv = document.createElement('div');
+        exDiv.className = 'exercise-item';
+        exDiv.style.cssText = `
+            margin-bottom: 16px;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #FED7AA;
+        `;
 
-    const qDiv = document.createElement('div');
-    qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
-    qDiv.textContent = `${idx + 1}. ${ex.question}`;
-    exDiv.appendChild(qDiv);
+        // ===== TIÊU ĐỀ BÀI TẬP =====
+        const typeLabels = {
+            'flashcard': '🃏 Thẻ ghi nhớ',
+            'fill_blank': '✏️ Điền từ',
+            'multiple_choice': '🔘 Trắc nghiệm',
+            'translation': '🌐 Dịch câu'
+        };
+        const typeLabel = typeLabels[ex.type] || '📝 Bài tập';
+        
+        const headerDiv = document.createElement('div');
+        headerDiv.style.cssText = `
+            display:flex;justify-content:space-between;align-items:center;
+            margin-bottom:10px;flex-wrap:wrap;gap:4px;
+        `;
+        headerDiv.innerHTML = `
+            <span style="font-size:12px;background:#fce7f3;padding:2px 12px;border-radius:12px;color:#be185d;font-weight:600;">${typeLabel}</span>
+            <span style="font-size:13px;color:#64748b;">${idx + 1}/${lesson.exercises.length}</span>
+        `;
+        exDiv.appendChild(headerDiv);
 
-    // ===== KIỂM TRA LOẠI BÀI TẬP =====
-    if (ex.type === 'multiple_choice' && ex.options) {
-        // ... code hiện tại cho multiple_choice
-    } 
-    else if (ex.type === 'flashcard' && ex.pairs) {
-        // Hiển thị flashcard
-        const flashcardDiv = document.createElement('div');
-        flashcardDiv.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;';
-        ex.pairs.forEach(pair => {
-            const card = document.createElement('div');
-            card.style.cssText = 'background:white;padding:10px;border-radius:8px;border:1px solid #f0f0f0;text-align:center;';
-            card.innerHTML = `
-                <div style="font-size:18px;font-weight:700;color:#1e293b;">${pair.hanzi}</div>
-                <div style="color:#db2777;font-size:12px;">${pair.pinyin}</div>
-                <div style="color:#64748b;font-size:13px;margin-top:4px;">${pair.meaning}</div>
+        const qDiv = document.createElement('div');
+        qDiv.style.cssText = 'font-weight:600;margin-bottom:10px;font-size:16px;';
+        qDiv.textContent = ex.question || '';
+        exDiv.appendChild(qDiv);
+
+        // ===== XỬ LÝ THEO LOẠI BÀI TẬP =====
+        
+        // 1. FLASHCARD
+        if (ex.type === 'flashcard' && ex.pairs) {
+            const flashcardGrid = document.createElement('div');
+            flashcardGrid.style.cssText = `
+                display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+                gap:10px;margin-top:8px;
             `;
-            flashcardDiv.appendChild(card);
-        });
-        exDiv.appendChild(flashcardDiv);
-    }
-    else if (ex.type === 'fill_blank' && ex.items) {
-        // Hiển thị bài tập điền từ
-        ex.items.forEach((item, itemIdx) => {
-            const blankDiv = document.createElement('div');
-            blankDiv.style.cssText = 'padding:6px 0;border-bottom:1px solid #f0f0f0;';
-            blankDiv.innerHTML = `
-                <div style="font-size:14px;">${item.sentence}</div>
-                <div style="font-size:12px;color:#888;margin-top:2px;">💡 Gợi ý: ${item.hint}</div>
-                <div style="font-size:12px;color:#16a34a;margin-top:2px;display:none;" class="fill-answer-${idx}-${itemIdx}">✅ Đáp án: ${item.answer}</div>
-                <button onclick="toggleFillAnswer(${idx}, ${itemIdx})" style="padding:2px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;cursor:pointer;margin-top:4px;">Xem đáp án</button>
-            `;
-            exDiv.appendChild(blankDiv);
-        });
-    }
-    else if (ex.type === 'translation' && ex.items) {
-        // Hiển thị bài tập dịch
-        ex.items.forEach((item, itemIdx) => {
-            const transDiv = document.createElement('div');
-            transDiv.style.cssText = 'padding:6px 0;border-bottom:1px solid #f0f0f0;';
-            transDiv.innerHTML = `
-                <div style="font-size:14px;">🇻🇳 ${item.vietnamese}</div>
-                <div style="font-size:12px;color:#16a34a;margin-top:2px;display:none;" class="trans-answer-${idx}-${itemIdx}">✅ ${item.answer}</div>
-                <button onclick="toggleTransAnswer(${idx}, ${itemIdx})" style="padding:2px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;cursor:pointer;margin-top:4px;">Xem đáp án</button>
-            `;
-            exDiv.appendChild(transDiv);
-        });
-    }
+            ex.pairs.forEach(pair => {
+                const card = document.createElement('div');
+                card.style.cssText = `
+                    background:white;padding:12px;border-radius:10px;
+                    border:1px solid #f0f0f0;text-align:center;
+                    transition:all 0.3s ease;cursor:pointer;
+                `;
+                card.onmouseenter = function() { 
+                    this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; 
+                };
+                card.onmouseleave = function() { 
+                    this.style.boxShadow = 'none'; 
+                };
+                
+                let meaningDisplay = '???';
+                let showMeaning = false;
+                
+                card.innerHTML = `
+                    <div style="font-size:20px;font-weight:700;color:#1e293b;">${pair.hanzi}</div>
+                    <div style="color:#db2777;font-size:13px;margin:2px 0;">${pair.pinyin}</div>
+                    <div style="color:#64748b;font-size:14px;margin-top:6px;padding-top:6px;border-top:1px solid #f0f0f0;display:none;" class="flashcard-meaning-${idx}">${pair.meaning}</div>
+                    <button onclick="toggleFlashcardMeaning(event, ${idx})" style="padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;cursor:pointer;margin-top:6px;">Hiện nghĩa</button>
+                `;
+                flashcardGrid.appendChild(card);
+            });
+            exDiv.appendChild(flashcardGrid);
+            
+            // Thêm hàm toggle cho flashcard
+            if (!window.flashcardToggleAdded) {
+                window.flashcardToggleAdded = true;
+                window.toggleFlashcardMeaning = function(event, idx) {
+                    const btn = event.target;
+                    const card = btn.closest('div[style*="background:white"]');
+                    const meaningDiv = card.querySelector(`.flashcard-meaning-${idx}`);
+                    if (meaningDiv) {
+                        if (meaningDiv.style.display === 'none') {
+                            meaningDiv.style.display = 'block';
+                            btn.textContent = 'Ẩn nghĩa';
+                            btn.style.background = '#db2777';
+                        } else {
+                            meaningDiv.style.display = 'none';
+                            btn.textContent = 'Hiện nghĩa';
+                            btn.style.background = '#ec4899';
+                        }
+                    }
+                };
+            }
+        }
+        
+        // 2. FILL_BLANK (Điền từ)
+        else if (ex.type === 'fill_blank' && ex.items) {
+            const fillContainer = document.createElement('div');
+            fillContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
+            
+            ex.items.forEach((item, itemIdx) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.style.cssText = `
+                    background:white;padding:12px 14px;border-radius:8px;
+                    border:1px solid #f0f0f0;
+                `;
+                
+                // Tạo input cho người dùng nhập
+                const inputRow = document.createElement('div');
+                inputRow.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
+                
+                const sentenceSpan = document.createElement('span');
+                // Thay thế dấu ___ bằng input
+                const sentenceParts = item.sentence.split('___');
+                sentenceSpan.innerHTML = sentenceParts.join('<input type="text" class="fill-input" style="border:1px solid #ddd;border-radius:4px;padding:4px 8px;width:120px;font-size:14px;" placeholder="..." />');
+                inputRow.appendChild(sentenceSpan);
+                
+                const checkBtn = document.createElement('button');
+                checkBtn.textContent = '✅ Kiểm tra';
+                checkBtn.style.cssText = `
+                    padding:4px 16px;border:none;border-radius:12px;
+                    background:#ec4899;color:white;font-size:12px;cursor:pointer;
+                `;
+                checkBtn.onclick = function() {
+                    const input = this.closest('.fill-item').querySelector('.fill-input');
+                    const resultDiv = this.closest('.fill-item').querySelector('.fill-result');
+                    const userAnswer = input.value.trim();
+                    const isCorrect = userAnswer.toLowerCase() === item.answer.toLowerCase();
+                    resultDiv.innerHTML = isCorrect ? 
+                        `✅ Đúng! (${item.answer})` : 
+                        `❌ Sai. Đáp án đúng: ${item.answer}`;
+                    resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+                    resultDiv.style.display = 'block';
+                };
+                inputRow.appendChild(checkBtn);
+                itemDiv.appendChild(inputRow);
+                
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'fill-result';
+                resultDiv.style.cssText = `
+                    margin-top:6px;font-weight:600;font-size:13px;
+                    display:none;padding:4px 8px;border-radius:4px;
+                    background:#f8f9fa;
+                `;
+                itemDiv.appendChild(resultDiv);
+                
+                // Gán class để tìm
+                itemDiv.className = 'fill-item';
+                fillContainer.appendChild(itemDiv);
+            });
+            exDiv.appendChild(fillContainer);
+        }
+        
+        // 3. MULTIPLE_CHOICE (Trắc nghiệm)
+        else if (ex.type === 'multiple_choice' && ex.options) {
+            const optionsDiv = document.createElement('div');
+            optionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:6px;padding-left:8px;';
 
-    exerciseContainer.appendChild(exDiv);
-});
+            ex.options.forEach((opt, optIdx) => {
+                const label = document.createElement('label');
+                label.style.cssText = 'display:flex;align-items:center;gap:10px;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s ease;font-size:14px;';
+                label.onmouseenter = function() { this.style.background = '#fdf2f8'; };
+                label.onmouseleave = function() { this.style.background = 'transparent'; };
 
-            exerciseCard.appendChild(exerciseContainer);
-            exercisePane.appendChild(exerciseCard);
-            tabContent.appendChild(exercisePane);
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = `vocab-exercise-${level}-${lesson.id}-${idx}`;
+                radio.value = optIdx;
+                radio.style.cssText = 'accent-color:#ec4899;width:15px;height:15px;cursor:pointer;';
+
+                radio.onchange = function() {
+                    const parent = this.closest('.exercise-item');
+                    const resultDiv = parent.querySelector('.exercise-result');
+                    const isCorrect = parseInt(this.value) === ex.answer;
+                    const correctAnswer = ex.options[ex.answer];
+                    resultDiv.textContent = isCorrect ? '✅ Đúng!' : `❌ Sai. Đáp án đúng: ${correctAnswer}`;
+                    resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+                    resultDiv.style.borderColor = isCorrect ? '#16a34a' : '#dc2626';
+                    resultDiv.style.background = isCorrect ? '#e8f5e9' : '#ffebee';
+                };
+
+                const textSpan = document.createElement('span');
+                textSpan.textContent = opt;
+
+                label.appendChild(radio);
+                label.appendChild(textSpan);
+                optionsDiv.appendChild(label);
+            });
+
+            exDiv.appendChild(optionsDiv);
+
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'exercise-result';
+            resultDiv.style.cssText = 'margin-top:10px;font-weight:600;padding:6px 14px;border-radius:6px;background:white;border:1px solid #e0e0e0;font-size:14px;transition:all 0.3s ease;';
+            exDiv.appendChild(resultDiv);
+        }
+        
+        // 4. TRANSLATION (Dịch câu)
+        else if (ex.type === 'translation' && ex.items) {
+            const transContainer = document.createElement('div');
+            transContainer.style.cssText = 'display:flex;flex-direction:column;gap:10px;margin-top:8px;';
+            
+            ex.items.forEach((item, itemIdx) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.style.cssText = `
+                    background:white;padding:12px 14px;border-radius:8px;
+                    border:1px solid #f0f0f0;
+                `;
+                
+                itemDiv.innerHTML = `
+                    <div style="font-size:15px;font-weight:500;color:#1e293b;">🇻🇳 ${item.vietnamese}</div>
+                    <div style="display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap;">
+                        <input type="text" class="trans-input" style="flex:1;min-width:200px;border:1px solid #ddd;border-radius:4px;padding:6px 12px;font-size:14px;" placeholder="Nhập câu dịch..." />
+                        <button onclick="checkTranslation(event, '${item.answer}')" style="padding:4px 16px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:12px;cursor:pointer;">✅ Kiểm tra</button>
+                    </div>
+                    <div class="trans-result" style="margin-top:6px;font-weight:600;font-size:13px;display:none;padding:4px 8px;border-radius:4px;background:#f8f9fa;"></div>
+                `;
+                transContainer.appendChild(itemDiv);
+            });
+            exDiv.appendChild(transContainer);
+            
+            // Thêm hàm checkTranslation
+            if (!window.translationCheckAdded) {
+                window.translationCheckAdded = true;
+                window.checkTranslation = function(event, answer) {
+                    const btn = event.target;
+                    const itemDiv = btn.closest('div[style*="background:white"]');
+                    const input = itemDiv.querySelector('.trans-input');
+                    const resultDiv = itemDiv.querySelector('.trans-result');
+                    const userAnswer = input.value.trim();
+                    
+                    // So sánh gần đúng (bỏ dấu câu, khoảng trắng thừa)
+                    const normalize = (s) => s.replace(/[.,!?;:()\'\"]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+                    const isCorrect = normalize(userAnswer) === normalize(answer);
+                    
+                    resultDiv.innerHTML = isCorrect ? 
+                        `✅ Đúng!` : 
+                        `❌ Sai. Đáp án gợi ý: ${answer}`;
+                    resultDiv.style.color = isCorrect ? '#16a34a' : '#dc2626';
+                    resultDiv.style.display = 'block';
+                };
+            }
+        }
+        
+        // 5. KHÔNG XÁC ĐỊNH
+        else {
+            const unknownDiv = document.createElement('div');
+            unknownDiv.style.cssText = 'color:#999;font-size:13px;padding:8px 0;';
+            unknownDiv.textContent = `📌 Loại bài tập: ${ex.type || 'Không xác định'}`;
+            exDiv.appendChild(unknownDiv);
+        }
+
+        exerciseContainer.appendChild(exDiv);
+    });
+
+    exerciseCard.appendChild(exerciseContainer);
+    exercisePane.appendChild(exerciseCard);
+    tabContent.appendChild(exercisePane);
         }
 
         lessonDiv.appendChild(tabContent);
