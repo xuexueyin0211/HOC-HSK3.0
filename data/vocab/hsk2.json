@@ -18,12 +18,12 @@
             {
               "hanzi": "帮忙",
               "pinyin": "bāngmáng",
-              "word_type": "động từ",
+              "word_type": "động từ ly hợp",
               "meaning": "giúp đỡ",
-              "note": "Có thể dùng với tân ngữ hoặc không. Thường dùng: 帮忙 + (người) + việc gì đó",
+              "note": "Thành phần khác như tân ngữ chỉ người/lượng từ/trợ từ động thái/...phải nằm giữa 帮忙. Thường dùng: 帮 + người + （的）忙",
               "examples": [
-                { "cn": "你能帮忙我吗？", "py": "Nǐ néng bāngmáng wǒ ma?", "vi": "Bạn có thể giúp tôi không?" },
-                { "cn": "他帮忙我学中文。", "py": "Tā bāngmáng wǒ xué Zhōngwén.", "vi": "Anh ấy giúp tôi học tiếng Trung." }
+                { "cn": "你能帮我的忙吗？", "py": "Nǐ néng bāng wǒ de máng ma?", "vi": "Bạn có thể giúp tôi không?" },
+                { "cn": "谢谢你帮忙。", "py": "Xièxie nǐ bāngmáng.", "vi": "Cảm ơn bạn đã giúp đỡ." }
               ]
             },
             {
@@ -215,15 +215,15 @@
     "question": "5. Điền từ thích hợp vào chỗ trống (dùng từ trong bài):",
     "items": [
       {
-        "sentence": "他 ___ 我学中文。 (Tā ___ wǒ xué Zhōngwén.)",
+        "sentence": "他 ___ 我学中文。",
         "answer": "帮忙"
       },
       {
-        "sentence": "请给我一 ___ 水。 (Qǐng gěi wǒ yī ___ shuǐ.)",
+        "sentence": "请给我一 ___ 水。",
         "answer": "杯"
       },
       {
-        "sentence": "我 ___ 去了北京两次。 (Wǒ ___ qùle Běijīng liǎng cì.)",
+        "sentence": "我 ___ 去了北京两次。",
         "answer": "已经"
       }
     ]
