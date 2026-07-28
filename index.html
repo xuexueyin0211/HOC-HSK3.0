@@ -758,23 +758,25 @@ background: white;
             align-items: flex-start;
         }
 
-    .lesson-sidebar {
+  .lesson-sidebar {
+    /* ← THÊM PHẦN NÀY ↓ */
     width: 100%;
-    min-width: 240px;
-    flex-shrink: 1;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
     background: white;
     border-radius: 16px;
     border: 1px solid #fce7f3;
     box-shadow: 0 2px 12px rgba(212, 165, 255, 0.08);
     padding: 12px 0;
-    position: sticky;
-    top: 80px;
-    max-height: auto;
-    overflow-y: auto;
-    overflow-x: hidden; /* Ẩn thanh ngang */
     z-index: 10;
 }
-
+.lesson-sidebar .lesson-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
 /* CUỘN ĐẸP */
 .lesson-sidebar::-webkit-scrollbar {
     width: 4px;
