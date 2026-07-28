@@ -850,6 +850,10 @@ background: white;
     display: block;
     animation: fadeIn 0.3s ease;
 }
+        /* Khi tooltip đang hiển thị, vẫn giữ hover trên lesson-item */
+.lesson-sidebar .lesson-item-tooltip:hover {
+    display: block;
+}
         .lesson-main { flex: 1; min-width: 0; }
 
         .lesson {
@@ -1252,7 +1256,7 @@ background: #FFFAFC;
         margin: 0 !important;
         background: #f8f9fa !important;
         border-radius: 6px !important;
-            pointer-events: none;
+            pointer-events: auto;
     }
     .lesson-sidebar .lesson-item .lesson-num,
 .lesson-sidebar .lesson-item > span {
