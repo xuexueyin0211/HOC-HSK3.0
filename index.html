@@ -1347,6 +1347,7 @@ background: #FFFAFC;
         flex-direction: column !important;
         gap: 16px !important;
         display: flex !important; /* ← THÊM DÒNG NÀY */
+         width: 100% !important;
     }
     
     .lesson-sidebar {
@@ -1362,15 +1363,19 @@ background: #FFFAFC;
         overflow-y: auto !important;
         border: 1px solid #fce7f3 !important;
         order: 1 !important;
-        flex-shrink: 0 !important; /* ← THÊM DÒNG NÀY */
+        flex-shrink: 1 !important; /* ← THÊM DÒNG NÀY */
+        flex: 0 1 100% !important; /* ← THÊM DÒNG NÀY */
+        box-sizing: border-box !important; /* ← THÊM DÒNG NÀY */
     }
     
     .lesson-main {
         order: 2 !important;
-        flex: 1 !important;
+        flex: 1 1 100% !important;
         min-width: 0 !important;
         max-width: 100% !important;  
         width: 100% !important; 
+                box-sizing: border-box !important; /* ← THÊM DÒNG NÀY */
+        overflow: hidden !important; /* ← THÊM DÒNG NÀY - tránh tràn nội dung */
     }
     
     .lesson-sidebar .sidebar-title { display: none !important; }
@@ -1879,7 +1884,7 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
             wrapper.className = level;
 
             const layout = document.createElement('div');
-layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;';
+layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;max-width:100%;overflow:hidden;';
 
 // Sidebar - ĐƠN GIẢN VÀ CHẮC CHẮN
 const sidebar = document.createElement('div');
