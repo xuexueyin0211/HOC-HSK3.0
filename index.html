@@ -24,9 +24,9 @@
         }
       :root {
     /* PRIMARY - Hồng chính */
-    --primary-dark: #ec4899;      /* Hồng đậm - buttons, active states */
-    --primary-light: #F8BBD0;     /* Hồng nhạt - backgrounds */
-    --primary-very-light: #FFF5FF; /* Hồng siêu nhạt */
+    --primary-dark: #D97BD0;      /* ← Sửa dòng này */
+    --primary-light: #F5AACE;     /* ← Sửa dòng này */
+    --primary-very-light: #FEF2FF; /* ← Sửa dòng này */
     
     /* SECONDARY - Red */
     --red-600: #dc2626;
@@ -36,7 +36,7 @@
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --text-muted: #a0526a;
-    --border: #fce7f3;
+    --border: #F5DFFE;
     
     /* SHADOWS - THÊM VÀO */
     --shadow-sm: 0 2px 12px rgba(212, 165, 255, 0.08);
@@ -252,7 +252,7 @@
             justify-content: center;
         }
         .highlight-toolbar button {
-               background: #F8BBD0; /* ← SỬA CÁC NÚT TRONG TOOLBAR */
+    background: #F5AACE; /* Hồng pastel */
             font-size: 11px !important;
             padding: 4px 10px !important;
             border: none;
@@ -263,13 +263,13 @@
         }
         .highlight-toolbar button:hover { transform: scale(1.05); }
 #highlightToggle {
-    background: #F8BBD0; /* ← THÊM DÒNG NÀY */
+    background: #F5AACE; /* Hồng pastel */
 }
         #toggleToolbarBtn {
             position: fixed;
             bottom: 30px;
             right: 30px;
-    background: #F8BBD0; /* ← SỬA THÀNH #F8BBD0 */
+    background: #F5AACE; /* Hồng pastel */
             color: white;
             border: none;
             border-radius: 50%;
@@ -654,8 +654,8 @@
             border-color: #f9a8d4;
         }
         .feature-card.active {
-            border-color: #F8BBD0;
-    background: #FFF5FF;
+    border-color: #F5AACE;  /* Hồng pastel */
+            background: #FFF5FF;
     box-shadow: 0 8px 30px rgba(212, 165, 255, 0.15);
             
         }
@@ -666,7 +666,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-    background: #F8BBD0; /* ← SỬA THÀNH #F8BBD0 */
+    background: #E9D5FF; /* Tím pastel */
             color: white;
             font-size: 9px;
             padding: 2px 10px;
@@ -710,9 +710,9 @@ background: white;
             transform: translateY(-2px);
         }
         .hsk-item.active {
-            background: #F8BBD0;
-    color: white;
-    border-color: #F8BBD0;
+    background: #F5AACE;     /* Hồng pastel */
+    border-color: #F5AACE;   /* Hồng pastel */
+            color: white;
             box-shadow: 0 2px 12px rgba(236, 72, 153, 0.3);
         }
 
@@ -913,7 +913,7 @@ background: white;
             left: 15%;
             width: 70%;
             height: 3px;
-    background: var(--primary-light) !important; /* Thay #F8BBD0 */
+    background: var(--primary-light) !important; /* ← Sửa CSS var */
             border-radius: 3px 3px 0 0;
         }
 
@@ -931,8 +931,8 @@ background: white;
         .tab-pane.active { display: block; }
 
         .grammar {
-                border-left-color: #F8BBD0 !important;
-            border-left: 4px solid #ec4899;
+                   border-left-color: #E9D5FF !important;  /* Tím pastel */
+    border-left: 4px solid #D97BD0;          /* Hồng tím pastel */
             padding-left: 16px;
             margin-bottom: 20px;
         }
@@ -943,8 +943,8 @@ background: white;
         }
 
         .subcard {
-            background: #FFF5FF;
-    border-left: 4px solid #F8BBD0;
+              background: #FEF2FF;            /* Hồng bg nhạt */
+    border-left: 4px solid #E9D5FF; /* Tím pastel */
             border-left: 4px solid #ec4899;
             border-radius: 10px;
             padding: 14px 18px;
@@ -1013,7 +1013,7 @@ background: #FFFAFC;
         }
 
         .audio-btn {
-    background: var(--primary-light) !important;
+    background: var(--primary-light) !important; /* Sử dụng var cũ */
             border: none;
             border-radius: 50%;
             width: 34px;
@@ -1036,12 +1036,12 @@ background: #FFFAFC;
         /* ===== EXERCISE ===== */
         .exercise-container { padding: 4px 0; }
         .exercise-item {
-                border-left-color: #F8BBD0 !important;
+    border-left-color: #E9D5FF !important;  /* Tím pastel */
+    border-left: 4px solid #D97BD0;          /* Hồng tím pastel */
             margin-bottom: 16px;
             padding: 14px;
             background: #f8f9fa;
             border-radius: 10px;
-            border-left: 4px solid #ec4899;
             transition: all 0.3s ease;
         }
         .exercise-item:hover {
@@ -1120,7 +1120,7 @@ background: #FFFAFC;
         .nav button {
             padding: 8px 24px;
             border: none;
-    background: #F8BBD0 !important; /* Tím pastel */
+    background: #F5AACE !important; /* Hồng pastel */
             color: white;
     box-shadow: 0 4px 14px rgba(212, 165, 255, 0.4) !important;
             font-weight: 600;
@@ -1174,7 +1174,7 @@ background: #FFFAFC;
         }
         .spinner {
             border: 4px solid #fce7f3;
-    border-top: 4px solid #F8BBD0; /* ← SỬA THÀNH #F8BBD0 */
+    border-top: 4px solid #E9D5FF; /* Tím pastel */
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -1191,39 +1191,62 @@ background: #FFFAFC;
         }
 
         /* ===== HSK COLORS - ĐỒNG BỘ MÀU ===== */
-        /* HSK 1 - Xanh lá pastel */
-.hsk1 .feature-card.active { border-color: #B5EAD7 !important; background: #E8F5E9 !important; }
-.hsk1 .hsk-item.active { background: #B5EAD7 !important; border-color: #B5EAD7 !important; }
-.hsk1 .tab-btn.active { background: #E8F5E9 !important; color: #4CAF50 !important; }
-.hsk1 .tab-btn.active::after { background: #B5EAD7 !important; }
-.hsk1 .grammar { border-left-color: #B5EAD7 !important; }
-.hsk1 .subcard { border-left-color: #B5EAD7 !important; background: #F0F8F4 !important; }
-.hsk1 .subcard .label { color: #66BB6A !important; }
-.hsk1 .audio-btn { background: #B5EAD7 !important; }
-.hsk1 .nav button { background: #B5EAD7 !important; }
+.hsk1 .feature-card.active { border-color: #C8E6C9 !important; }
+.hsk1 .hsk-item.active { background: #C8E6C9 !important; }
+.hsk1 .tab-btn.active { background: #E8F5E9 !important; }
+.hsk1 .tab-btn.active::after { background: #C8E6C9 !important; }
+.hsk1 .grammar { border-left-color: #C8E6C9 !important; }
+.hsk1 .subcard { border-left-color: #C8E6C9 !important; background: #F0F8F4 !important; }
+.hsk1 .audio-btn { background: #C8E6C9 !important; }
+.hsk1 .nav button { background: #C8E6C9 !important; }
 
-/* HSK 2 - Vàng pastel */
-.hsk2 .feature-card.active { border-color: #FFDAC1 !important; background: #FFF8F0 !important; }
-.hsk2 .hsk-item.active { background: #FFDAC1 !important; border-color: #FFDAC1 !important; }
-.hsk2 .tab-btn.active { background: #FFF8F0 !important; color: #F59E0B !important; }
-.hsk2 .tab-btn.active::after { background: #FFDAC1 !important; }
-.hsk2 .grammar { border-left-color: #FFDAC1 !important; }
-.hsk2 .subcard { border-left-color: #FFDAC1 !important; background: #FFFCF5 !important; }
-.hsk2 .subcard .label { color: #F59E0B !important; }
-.hsk2 .audio-btn { background: #FFDAC1 !important; }
-.hsk2 .nav button { background: #FFDAC1 !important; }
+.hsk2 .feature-card.active { border-color: #FED7AA !important; }
+.hsk2 .hsk-item.active { background: #FED7AA !important; }
+.hsk2 .tab-btn.active { background: #FFF7ED !important; }
+.hsk2 .tab-btn.active::after { background: #FED7AA !important; }
+.hsk2 .grammar { border-left-color: #FED7AA !important; }
+.hsk2 .subcard { border-left-color: #FED7AA !important; background: #FFFBF0 !important; }
+.hsk2 .audio-btn { background: #FED7AA !important; }
+.hsk2 .nav button { background: #FED7AA !important; }
 
-/* HSK 3 - Cam hồng pastel */
-.hsk3 .feature-card.active { border-color: #FFB7B2 !important; background: #FFF5F5 !important; }
-.hsk3 .hsk-item.active { background: #FFB7B2 !important; border-color: #FFB7B2 !important; }
-.hsk3 .tab-btn.active { background: #FFF5F5 !important; color: #E88FAC !important; }
+.hsk3 .feature-card.active { border-color: #FFB7B2 !important; }
+.hsk3 .hsk-item.active { background: #FFB7B2 !important; }
+.hsk3 .tab-btn.active { background: #FFF5F5 !important; }
 .hsk3 .tab-btn.active::after { background: #FFB7B2 !important; }
 .hsk3 .grammar { border-left-color: #FFB7B2 !important; }
 .hsk3 .subcard { border-left-color: #FFB7B2 !important; background: #FFF8F8 !important; }
-.hsk3 .subcard .label { color: #E88FAC !important; }
 .hsk3 .audio-btn { background: #FFB7B2 !important; }
 .hsk3 .nav button { background: #FFB7B2 !important; }
 
+.hsk4 .feature-card.active { border-color: #E9D5FF !important; background: #FAF5FF !important; }
+.hsk4 .hsk-item.active { background: #E9D5FF !important; border-color: #E9D5FF !important; }
+.hsk4 .tab-btn.active { background: #FAF5FF !important; color: #A78BFA !important; }
+.hsk4 .tab-btn.active::after { background: #E9D5FF !important; }
+.hsk4 .grammar { border-left-color: #E9D5FF !important; }
+.hsk4 .subcard { border-left-color: #E9D5FF !important; background: #FDFBFE !important; }
+.hsk4 .subcard .label { color: #A78BFA !important; }
+.hsk4 .audio-btn { background: #E9D5FF !important; }
+.hsk4 .nav button { background: #E9D5FF !important; }
+
+.hsk5 .feature-card.active { border-color: #BAE6FD !important; background: #F0F9FE !important; }
+.hsk5 .hsk-item.active { background: #BAE6FD !important; border-color: #BAE6FD !important; }
+.hsk5 .tab-btn.active { background: #F0F9FE !important; color: #0284C7 !important; }
+.hsk5 .tab-btn.active::after { background: #BAE6FD !important; }
+.hsk5 .grammar { border-left-color: #BAE6FD !important; }
+.hsk5 .subcard { border-left-color: #BAE6FD !important; background: #F5FCFF !important; }
+.hsk5 .subcard .label { color: #0284C7 !important; }
+.hsk5 .audio-btn { background: #BAE6FD !important; }
+.hsk5 .nav button { background: #BAE6FD !important; }
+
+.hsk6 .feature-card.active { border-color: #F5AACE !important; background: #FEF2FF !important; }
+.hsk6 .hsk-item.active { background: #F5AACE !important; border-color: #F5AACE !important; }
+.hsk6 .tab-btn.active { background: #FEF2FF !important; color: #D97BD0 !important; }
+.hsk6 .tab-btn.active::after { background: #F5AACE !important; }
+.hsk6 .grammar { border-left-color: #F5AACE !important; }
+.hsk6 .subcard { border-left-color: #F5AACE !important; background: #FEF7FC !important; }
+.hsk6 .subcard .label { color: #D97BD0 !important; }
+.hsk6 .audio-btn { background: #F5AACE !important; }
+.hsk6 .nav button { background: #F5AACE !important; }
         /* ===== RESPONSIVE ===== */
       /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
