@@ -2237,7 +2237,7 @@ sidebar.appendChild(lessonItem);
 
             // về bài trước
             if (lessonNum > 1) {
-                showLesson(hskLevel, lessonNum - 1, "1");
+showLesson(hskLevel, lessonNum - 1, "999");  // ✅ CHỈ ĐẾN TAB BÀI TẬP
                 return;
             }
 
@@ -2252,7 +2252,9 @@ sidebar.appendChild(lessonItem);
                 }, 300);
             }
         }
-
+function goToTab(level, lessonId, tabId) {
+    showLesson(level, lessonId, tabId);
+}
         // ================================================================
         // AUDIO
         // ================================================================
@@ -2764,14 +2766,18 @@ if (highlight) {
         });
       
 // ================================================================
-// XỬ LÝ TOOLTIP - DÙNG MOUSEENTER/MOUSELEAVE
+// XỬ LÝ TOOLTIP - DÙNG MOUSEENTER/MOUSELEAVE - ĐÃ SỬA
 // ================================================================
+let currentTooltip = null;
+
 document.addEventListener('mouseenter', function(e) {
     const lessonItem = e.target.closest('.lesson-item');
     if (!lessonItem) return;
     
     const tooltip = lessonItem.querySelector('.lesson-item-tooltip');
     if (!tooltip) return;
+    
+    currentTooltip = tooltip;
     
     // Khi hover vào lesson-item, hiển thị tooltip
     const rect = lessonItem.getBoundingClientRect();
@@ -2791,8 +2797,10 @@ document.addEventListener('mouseenter', function(e) {
     
     tooltip.style.left = left + 'px';
     tooltip.style.top = top + 'px';
+    tooltip.style.display = 'block';
 }, true);
 
+// ✅ KHÔNG ẨNNGAY KHI RỜI - CHỈ ẨNKHI HOVER VÀO LESSON-ITEM KHÁC
 document.addEventListener('mouseleave', function(e) {
     const lessonItem = e.target.closest('.lesson-item');
     if (!lessonItem) return;
@@ -2800,8 +2808,31 @@ document.addEventListener('mouseleave', function(e) {
     const tooltip = lessonItem.querySelector('.lesson-item-tooltip');
     if (!tooltip) return;
     
-    // Khi rời khỏi lesson-item, ẩn tooltip
-    tooltip.style.display = 'none';
+    // Delay ẩn để cho phép hover vào tooltip
+    setTimeout(() => {
+        if (currentTooltip === tooltip) {
+            tooltip.style.display = 'none';
+            currentTooltip = null;
+        }
+    }, 100);
+}, true);
+
+// ✅ THÊM: Khi hover vào tooltip, giữ nó hiển thị
+document.addEventListener('mouseenter', function(e) {
+    const tooltip = e.target.closest('.lesson-item-tooltip');
+    if (tooltip) {
+        tooltip.style.display = 'block !important';
+        clearTimeout(tooltip._hideTimeout);
+    }
+}, true);
+
+document.addEventListener('mouseleave', function(e) {
+    const tooltip = e.target.closest('.lesson-item-tooltip');
+    if (tooltip) {
+        tooltip._hideTimeout = setTimeout(() => {
+            tooltip.style.display = 'none';
+        }, 100);
+    }
 }, true);
     </script>
 
