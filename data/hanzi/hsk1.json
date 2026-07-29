@@ -1,0 +1,4810 @@
+{
+  "hsk1_chars_3.0": {
+    "title": "300 CHỮ HÁN HSK 3.0 - CẤP 1",
+    "color": "hsk1",
+    "total_chars": 300,
+    "source": "HSK 3.0 - Cấp độ 1",
+    "chars": [
+      {
+        "hanzi": "爱",
+        "pinyin": "ài",
+        "meaning": "yêu, thích",
+        "radical": "爪",
+        "radical_meaning": "móng vuốt",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["撇", "点", "点", "撇", "点", "横撇", "竖", "横折", "横", "撇", "横撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 爫 (tay) và 冖 (che chở) và 友 (bạn) - dùng tay che chở cho bạn, thể hiện tình yêu thương.",
+        "examples": [
+          {"cn": "我爱你", "py": "wǒ ài nǐ", "vi": "Tôi yêu bạn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "八",
+        "pinyin": "bā",
+        "meaning": "tám",
+        "radical": "八",
+        "radical_meaning": "tám",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hai nét tách ra tượng trưng cho sự phân chia, sau được mượn làm số 8.",
+        "examples": [
+          {"cn": "八点", "py": "bā diǎn", "vi": "8 giờ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "爸",
+        "pinyin": "bà",
+        "meaning": "bố, cha",
+        "radical": "父",
+        "radical_meaning": "cha",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["撇", "点", "撇", "捺", "横折", "竖", "横", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 父 (cha) và 巴 (ba) - người cha.",
+        "examples": [
+          {"cn": "爸爸", "py": "bàba", "vi": "bố"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "吧",
+        "pinyin": "ba",
+        "meaning": "nhé, đi (trợ từ đề nghị)",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["竖", "横折", "横", "横折", "竖", "横", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 巴 (ba), dùng để đưa ra đề nghị hoặc gợi ý.",
+        "examples": [
+          {"cn": "走吧", "py": "zǒu ba", "vi": "đi thôi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "白",
+        "pinyin": "bái",
+        "meaning": "trắng",
+        "radical": "白",
+        "radical_meaning": "trắng",
+        "structure": "độc thể",
+        "strokes": 5,
+        "stroke_order": ["撇", "竖", "横折", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh ánh sáng mặt trời chiếu xuống (ngọn lửa), tượng trưng cho màu trắng sáng.",
+        "examples": [
+          {"cn": "白色", "py": "báisè", "vi": "màu trắng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "百",
+        "pinyin": "bǎi",
+        "meaning": "trăm",
+        "radical": "白",
+        "radical_meaning": "trắng",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["横", "撇", "竖", "横折", "横", "横"],
+        "type": "hội ý",
+        "story": "Kết hợp của '一' (một) và '白' (trắng), nghĩa là một trăm.",
+        "examples": [
+          {"cn": "一百", "py": "yī bǎi", "vi": "một trăm"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "班",
+        "pinyin": "bān",
+        "meaning": "lớp, ca",
+        "radical": "王",
+        "radical_meaning": "ngọc",
+        "structure": "hội ý",
+        "strokes": 10,
+        "stroke_order": ["横", "横", "竖", "提", "点", "撇", "横", "横", "竖", "横"],
+        "type": "hội ý",
+        "story": "Gồm hai chữ 王 (vua) ở hai bên và 刀 (dao) ở giữa - ý nói chia cắt, phân công, chỉ lớp học/ca làm.",
+        "examples": [
+          {"cn": "班级", "py": "bānjí", "vi": "lớp học"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "半",
+        "pinyin": "bàn",
+        "meaning": "nửa, một nửa",
+        "radical": "十",
+        "radical_meaning": "mười",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["点", "撇", "横", "横", "竖"],
+        "type": "hội ý",
+        "story": "Kết hợp 八 (chia) và 十 (mười) - chia mười thành hai phần, mỗi phần là một nửa.",
+        "examples": [
+          {"cn": "一半", "py": "yī bàn", "vi": "một nửa"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "帮",
+        "pinyin": "bāng",
+        "meaning": "giúp đỡ",
+        "radical": "巾",
+        "radical_meaning": "khăn",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["横", "横", "横", "撇", "横折钩", "竖", "横折钩", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 巾 (khăn) và 邦 (báng) - ý nói giúp đỡ như chiếc khăn che chở.",
+        "examples": [
+          {"cn": "帮忙", "py": "bāngmáng", "vi": "giúp đỡ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "包",
+        "pinyin": "bāo",
+        "meaning": "gói, túi",
+        "radical": "勹",
+        "radical_meaning": "gói",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["撇", "横折钩", "横折", "横", "竖弯钩"],
+        "type": "hội ý",
+        "story": "Hình ảnh người mẹ bế con trong bụng (勹) và 巳 (thai nhi) - gói bọc, bao bọc.",
+        "examples": [
+          {"cn": "书包", "py": "shūbāo", "vi": "cặp sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "杯",
+        "pinyin": "bēi",
+        "meaning": "cốc, ly",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["横", "竖", "撇", "点", "横", "撇", "竖", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 木 (gỗ) và 不 (không) - ban đầu cốc làm bằng gỗ.",
+        "examples": [
+          {"cn": "一杯水", "py": "yī bēi shuǐ", "vi": "một cốc nước"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "北",
+        "pinyin": "běi",
+        "meaning": "phía bắc",
+        "radical": "匕",
+        "radical_meaning": "cái thìa",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["竖", "横", "提", "撇", "竖弯钩"],
+        "type": "hội ý",
+        "story": "Hình ảnh hai người ngồi quay lưng vào nhau - hướng về phía bắc (quay lưng về phía mặt trời ở bán cầu bắc).",
+        "examples": [
+          {"cn": "北方", "py": "běifāng", "vi": "phương bắc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "备",
+        "pinyin": "bèi",
+        "meaning": "chuẩn bị, sẵn sàng",
+        "radical": "夂",
+        "radical_meaning": "đi chậm",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["撇", "横撇", "捺", "竖", "横折", "横", "横", "竖"],
+        "type": "hội ý",
+        "story": "Hình ảnh cái túi đựng (备) để sẵn sàng khi cần - chuẩn bị.",
+        "examples": [
+          {"cn": "准备", "py": "zhǔnbèi", "vi": "chuẩn bị"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "本",
+        "pinyin": "běn",
+        "meaning": "gốc, quyển (lượng từ)",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chỉ sự",
+        "strokes": 5,
+        "stroke_order": ["横", "竖", "撇", "捺", "横"],
+        "type": "chỉ sự",
+        "story": "Một nét ngang ở gốc cây chỉ rõ 'gốc' của cây (木) - nghĩa gốc, căn bản.",
+        "examples": [
+          {"cn": "一本书", "py": "yī běn shū", "vi": "một quyển sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "比",
+        "pinyin": "bǐ",
+        "meaning": "so sánh, hơn",
+        "radical": "比",
+        "radical_meaning": "so sánh",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["横", "竖提", "撇", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh hai người đứng cạnh nhau để so sánh chiều cao.",
+        "examples": [
+          {"cn": "比...高", "py": "bǐ...gāo", "vi": "cao hơn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "边",
+        "pinyin": "biān",
+        "meaning": "bên, cạnh",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["横折钩", "撇", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 力 (sức) - bên cạnh nơi di chuyển.",
+        "examples": [
+          {"cn": "旁边", "py": "pángbiān", "vi": "bên cạnh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "别",
+        "pinyin": "bié",
+        "meaning": "đừng, khác",
+        "radical": "刂",
+        "radical_meaning": "dao",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["竖", "横折", "横", "横折钩", "撇", "竖", "竖钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 刂 (dao) và 另 (khác) - dùng dao phân tách, nghĩa là khác biệt hoặc 'đừng' (ngăn cấm).",
+        "examples": [
+          {"cn": "别走", "py": "bié zǒu", "vi": "đừng đi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "病",
+        "pinyin": "bìng",
+        "meaning": "bệnh, ốm",
+        "radical": "疒",
+        "radical_meaning": "bệnh",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "横", "撇", "点", "提", "横", "竖", "横折钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 疒 (giường bệnh) và 丙 (bính) - nằm trên giường vì ốm.",
+        "examples": [
+          {"cn": "生病", "py": "shēngbìng", "vi": "bị ốm"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "不",
+        "pinyin": "bù",
+        "meaning": "không",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["横", "撇", "竖", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một bông hoa với đài hoa (không nở) - nghĩa phủ định.",
+        "examples": [
+          {"cn": "不是", "py": "bù shì", "vi": "không phải"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "菜",
+        "pinyin": "cài",
+        "meaning": "rau, món ăn",
+        "radical": "艹",
+        "radical_meaning": "cỏ",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["横", "竖", "竖", "撇", "点", "撇", "横", "竖", "撇", "捺", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 艹 (cỏ) và 采 (hái) - rau được hái từ cỏ.",
+        "examples": [
+          {"cn": "中国菜", "py": "Zhōngguó cài", "vi": "món Trung Quốc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "茶",
+        "pinyin": "chá",
+        "meaning": "trà",
+        "radical": "艹",
+        "radical_meaning": "cỏ",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["横", "竖", "竖", "撇", "捺", "横", "竖钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 艹 (cỏ) và 余 (dư) - cây trà, thức uống từ lá cây.",
+        "examples": [
+          {"cn": "喝茶", "py": "hē chá", "vi": "uống trà"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "差",
+        "pinyin": "chà",
+        "meaning": "kém, sai, thiếu",
+        "radical": "工",
+        "radical_meaning": "công việc",
+        "structure": "hội ý",
+        "strokes": 9,
+        "stroke_order": ["点", "撇", "横", "横", "横", "竖", "横", "横", "横"],
+        "type": "hội ý",
+        "story": "Kết hợp 羊 (dê) và 工 (công) - công việc chăn dê, nếu không cẩn thận sẽ sai sót.",
+        "examples": [
+          {"cn": "差不多", "py": "chàbuduō", "vi": "gần như"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "常",
+        "pinyin": "cháng",
+        "meaning": "thường, luôn",
+        "radical": "巾",
+        "radical_meaning": "khăn",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["竖", "点", "撇", "竖", "横折", "竖", "竖", "横折", "横", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 巾 (khăn) và 尚 (cao thượng) - thường xuyên, luôn luôn.",
+        "examples": [
+          {"cn": "常常", "py": "chángcháng", "vi": "thường xuyên"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "场",
+        "pinyin": "chǎng",
+        "meaning": "sân, trận, buổi",
+        "radical": "土",
+        "radical_meaning": "đất",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横", "竖", "提", "横折折折钩", "撇", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 土 (đất) và 昜 (dương) - bãi đất rộng, sân.",
+        "examples": [
+          {"cn": "一场电影", "py": "yī chǎng diànyǐng", "vi": "một buổi chiếu phim"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "唱",
+        "pinyin": "chàng",
+        "meaning": "hát",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["竖", "横折", "横", "竖", "横折", "横", "横", "横", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 昌 (xương) - dùng miệng hát.",
+        "examples": [
+          {"cn": "唱歌", "py": "chànggē", "vi": "hát"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "车",
+        "pinyin": "chē",
+        "meaning": "xe",
+        "radical": "车",
+        "radical_meaning": "xe",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["横", "撇折", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái xe nhìn từ trên xuống, tượng trưng cho phương tiện.",
+        "examples": [
+          {"cn": "汽车", "py": "qìchē", "vi": "ô tô"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "吃",
+        "pinyin": "chī",
+        "meaning": "ăn",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["竖", "横折", "横", "撇", "横", "横折弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 乞 (xin) - đưa thức ăn vào miệng.",
+        "examples": [
+          {"cn": "吃饭", "py": "chīfàn", "vi": "ăn cơm"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "出",
+        "pinyin": "chū",
+        "meaning": "ra, đi ra",
+        "radical": "凵",
+        "radical_meaning": "hố",
+        "structure": "chỉ sự",
+        "strokes": 5,
+        "stroke_order": ["竖折", "竖", "竖", "竖折", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một cái hố với hai chân bước ra khỏi hố - nghĩa là đi ra.",
+        "examples": [
+          {"cn": "出去", "py": "chūqù", "vi": "đi ra ngoài"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "穿",
+        "pinyin": "chuān",
+        "meaning": "mặc (quần áo)",
+        "radical": "穴",
+        "radical_meaning": "hang",
+        "structure": "hội ý",
+        "strokes": 9,
+        "stroke_order": ["点", "点", "横撇", "点", "撇", "横", "竖折折钩", "横", "竖"],
+        "type": "hội ý",
+        "story": "Gồm bộ 穴 (hang) và 牙 (răng) - đưa vật qua lỗ hẹp như xỏ áo.",
+        "examples": [
+          {"cn": "穿衣服", "py": "chuān yīfu", "vi": "mặc quần áo"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "床",
+        "pinyin": "chuáng",
+        "meaning": "giường",
+        "radical": "广",
+        "radical_meaning": "mái nhà",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "横", "撇", "横", "竖", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 广 (mái nhà) và 木 (gỗ) - giường làm bằng gỗ dưới mái nhà.",
+        "examples": [
+          {"cn": "上床", "py": "shàngchuáng", "vi": "lên giường"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "次",
+        "pinyin": "cì",
+        "meaning": "lần, thứ",
+        "radical": "欠",
+        "radical_meaning": "thiếu",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["点", "提", "撇", "横撇", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 冫 (nước đá) và 欠 (thiếu) - nghĩa là thứ yếu, kém hơn.",
+        "examples": [
+          {"cn": "两次", "py": "liǎng cì", "vi": "hai lần"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "从",
+        "pinyin": "cóng",
+        "meaning": "từ, qua",
+        "radical": "人",
+        "radical_meaning": "người",
+        "structure": "hội ý",
+        "strokes": 4,
+        "stroke_order": ["撇", "捺", "撇", "点"],
+        "type": "hội ý",
+        "story": "Hai người đi theo nhau - nghĩa là từ, qua (người này theo người kia).",
+        "examples": [
+          {"cn": "从北京来", "py": "cóng Běijīng lái", "vi": "đến từ Bắc Kinh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "错",
+        "pinyin": "cuò",
+        "meaning": "sai, lỗi",
+        "radical": "钅",
+        "radical_meaning": "kim loại",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["撇", "横", "横", "横", "竖提", "横", "竖", "竖", "横折", "横", "横", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 钅 (kim loại) và 昔 (xưa) - nghĩa là sai lệch như kim loại bị mài mòn.",
+        "examples": [
+          {"cn": "错了", "py": "cuò le", "vi": "sai rồi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "答",
+        "pinyin": "dá",
+        "meaning": "trả lời",
+        "radical": "竹",
+        "radical_meaning": "tre",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["撇", "横", "点", "撇", "横", "点", "横", "撇", "点", "横", "竖", "横折"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 竹 (tre) và 合 (hợp) - trả lời bằng cách gõ tre tạo âm thanh hòa hợp.",
+        "examples": [
+          {"cn": "回答", "py": "huídá", "vi": "trả lời"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "打",
+        "pinyin": "dǎ",
+        "meaning": "đánh, gọi (điện thoại)",
+        "radical": "扌",
+        "radical_meaning": "tay",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["横", "竖钩", "提", "横", "竖钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 扌 (tay) và 丁 (đinh) - dùng tay đánh/đập.",
+        "examples": [
+          {"cn": "打电话", "py": "dǎ diànhuà", "vi": "gọi điện thoại"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "大",
+        "pinyin": "dà",
+        "meaning": "to, lớn",
+        "radical": "大",
+        "radical_meaning": "lớn",
+        "structure": "chỉ sự",
+        "strokes": 3,
+        "stroke_order": ["横", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một người dang rộng hai tay, thể hiện sự lớn lao.",
+        "examples": [
+          {"cn": "大学", "py": "dàxué", "vi": "đại học"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "蛋",
+        "pinyin": "dàn",
+        "meaning": "trứng",
+        "radical": "虫",
+        "radical_meaning": "sâu bọ",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["横撇", "点", "撇", "竖", "横折", "横", "竖", "横", "点", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 虫 (sâu) và 延 (diên) - trứng của côn trùng có hình dạng tròn.",
+        "examples": [
+          {"cn": "鸡蛋", "py": "jīdàn", "vi": "trứng gà"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "到",
+        "pinyin": "dào",
+        "meaning": "đến, tới",
+        "radical": "至",
+        "radical_meaning": "đến",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["横", "撇折", "点", "横", "竖", "提", "竖", "竖钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 至 (đến) và 刂 (dao) - đến nơi cần đến.",
+        "examples": [
+          {"cn": "到了", "py": "dào le", "vi": "đã đến"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "道",
+        "pinyin": "dào",
+        "meaning": "đường, đạo lý, nói",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["点", "撇", "横", "撇", "竖", "横折", "横", "横", "横", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 首 (đầu) - con đường dẫn đến cái đầu (sự suy nghĩ, đạo lý).",
+        "examples": [
+          {"cn": "知道", "py": "zhīdào", "vi": "biết"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "得",
+        "pinyin": "de/dé/děi",
+        "meaning": "được, phải (trợ từ)",
+        "radical": "彳",
+        "radical_meaning": "bước",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["撇", "撇", "竖", "竖", "横折", "横", "横", "横", "横", "竖钩", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 彳 (bước) và 㝵 (đắc) - bước đi để đạt được.",
+        "examples": [
+          {"cn": "跑得快", "py": "pǎo de kuài", "vi": "chạy nhanh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "地",
+        "pinyin": "dì",
+        "meaning": "đất, nơi",
+        "radical": "土",
+        "radical_meaning": "đất",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横", "竖", "提", "横折钩", "竖", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 土 (đất) và 也 (cũng) - đất là nền tảng của vạn vật.",
+        "examples": [
+          {"cn": "地方", "py": "dìfang", "vi": "nơi chốn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "的",
+        "pinyin": "de",
+        "meaning": "(trợ từ sở hữu)",
+        "radical": "白",
+        "radical_meaning": "trắng",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["撇", "竖", "横折", "横", "横", "撇", "横折钩", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 白 (trắng) và 勺 (muôi) - nghĩa là mục tiêu, sau chuyển thành trợ từ sở hữu.",
+        "examples": [
+          {"cn": "我的书", "py": "wǒ de shū", "vi": "sách của tôi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "等",
+        "pinyin": "děng",
+        "meaning": "đợi, chờ",
+        "radical": "竹",
+        "radical_meaning": "tre",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["撇", "横", "点", "撇", "横", "点", "横", "竖", "横", "横", "竖钩", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 竹 (tre) và 寺 (chùa) - chờ đợi dưới bóng tre trước chùa.",
+        "examples": [
+          {"cn": "等一下", "py": "děng yīxià", "vi": "đợi một chút"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "弟",
+        "pinyin": "dì",
+        "meaning": "em trai",
+        "radical": "弓",
+        "radical_meaning": "cung",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "撇", "横折", "横", "竖折折钩", "竖", "撇"],
+        "type": "hình thanh",
+        "story": "Hình ảnh một cậu bé đang cúi mình, thể hiện sự khiêm nhường của người em.",
+        "examples": [
+          {"cn": "弟弟", "py": "dìdi", "vi": "em trai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "第",
+        "pinyin": "dì",
+        "meaning": "thứ (số thứ tự)",
+        "radical": "竹",
+        "radical_meaning": "tre",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["撇", "横", "点", "撇", "横", "点", "横折", "横", "竖折折钩", "竖", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 竹 (tre) và 弟 (em) - ngày xưa dùng que tre để đánh dấu thứ tự.",
+        "examples": [
+          {"cn": "第一", "py": "dì-yī", "vi": "thứ nhất"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "点",
+        "pinyin": "diǎn",
+        "meaning": "điểm, chút, giờ",
+        "radical": "灬",
+        "radical_meaning": "lửa",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["竖", "横", "竖", "横折", "横", "点", "点", "点", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 灬 (lửa) và 占 (chiếm) - một chút lửa, một điểm nhỏ.",
+        "examples": [
+          {"cn": "一点", "py": "yī diǎn", "vi": "một chút"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "电",
+        "pinyin": "diàn",
+        "meaning": "điện",
+        "radical": "电",
+        "radical_meaning": "sét",
+        "structure": "chỉ sự",
+        "strokes": 5,
+        "stroke_order": ["竖", "横折", "横", "横", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh tia sét trên bầu trời, tượng trưng cho điện.",
+        "examples": [
+          {"cn": "电话", "py": "diànhuà", "vi": "điện thoại"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "店",
+        "pinyin": "diàn",
+        "meaning": "cửa hàng, tiệm",
+        "radical": "广",
+        "radical_meaning": "mái nhà",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["点", "横", "撇", "竖", "横", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 广 (mái nhà) và 占 (chiếm) - nơi chiếm giữ để buôn bán.",
+        "examples": [
+          {"cn": "商店", "py": "shāngdiàn", "vi": "cửa hàng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "东",
+        "pinyin": "dōng",
+        "meaning": "phía đông",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["横", "撇折", "竖钩", "撇", "点"],
+        "type": "hội ý",
+        "story": "Hình ảnh mặt trời (日) mọc ở phía đông, giữa hai cái cây (木).",
+        "examples": [
+          {"cn": "东方", "py": "dōngfāng", "vi": "phương đông"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "动",
+        "pinyin": "dòng",
+        "meaning": "động, di chuyển",
+        "radical": "力",
+        "radical_meaning": "sức mạnh",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横", "横", "撇折", "点", "横折钩", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 力 (sức) và 云 (mây) - sức mạnh làm mây di chuyển.",
+        "examples": [
+          {"cn": "运动", "py": "yùndòng", "vi": "vận động"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "都",
+        "pinyin": "dōu",
+        "meaning": "đều, tất cả",
+        "radical": "阝",
+        "radical_meaning": "thành phố",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["横", "竖", "横", "撇", "竖", "横折", "横", "横", "横折折折钩", "竖"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 阝 (thành) và 者 (người) - tất cả người trong thành phố đều (có mặt).",
+        "examples": [
+          {"cn": "都是", "py": "dōu shì", "vi": "đều là"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "读",
+        "pinyin": "dú",
+        "meaning": "đọc",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "横折提", "横", "竖", "横", "撇", "点", "横", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 卖 (bán) - đọc to như người bán hàng rao hàng.",
+        "examples": [
+          {"cn": "读书", "py": "dúshū", "vi": "đọc sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "对",
+        "pinyin": "duì",
+        "meaning": "đúng, đối với",
+        "radical": "寸",
+        "radical_meaning": "tấc",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["横撇", "点", "横", "竖钩", "点"],
+        "type": "hội ý",
+        "story": "Gồm 又 (tay) và 寸 (tấc) - tay đo đúng tấc (chuẩn mực) -> đúng.",
+        "examples": [
+          {"cn": "你说得对", "py": "nǐ shuō de duì", "vi": "bạn nói đúng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "多",
+        "pinyin": "duō",
+        "meaning": "nhiều",
+        "radical": "夕",
+        "radical_meaning": "chiều tối",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇", "横撇", "点", "撇", "横撇", "点"],
+        "type": "hội ý",
+        "story": "Hai chữ 夕 (chiều tối) xếp chồng lên nhau - nhiều buổi tối, nghĩa là nhiều.",
+        "examples": [
+          {"cn": "多少人", "py": "duōshao rén", "vi": "bao nhiêu người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "饿",
+        "pinyin": "è",
+        "meaning": "đói",
+        "radical": "饣",
+        "radical_meaning": "thức ăn",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["撇", "横钩", "竖提", "撇", "横", "竖钩", "提", "斜钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 饣 (thức ăn) và 我 (tôi) - tôi cần thức ăn -> đói.",
+        "examples": [
+          {"cn": "我饿了", "py": "wǒ è le", "vi": "tôi đói rồi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "儿",
+        "pinyin": "ér",
+        "meaning": "con trai",
+        "radical": "儿",
+        "radical_meaning": "con",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["撇", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một đứa trẻ với cái đầu to và hai chân đang bước đi.",
+        "examples": [
+          {"cn": "儿子", "py": "érzi", "vi": "con trai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "二",
+        "pinyin": "èr",
+        "meaning": "hai",
+        "radical": "二",
+        "radical_meaning": "hai",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["横", "横"],
+        "type": "chỉ sự",
+        "story": "Hai nét ngang tượng trưng cho số 2.",
+        "examples": [
+          {"cn": "二月份", "py": "èr yuèfèn", "vi": "tháng hai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "饭",
+        "pinyin": "fàn",
+        "meaning": "cơm, bữa ăn",
+        "radical": "饣",
+        "radical_meaning": "thức ăn",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["撇", "横钩", "竖提", "撇", "捺", "撇", "横撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 饣 (thức ăn) và 反 (trở lại) - thức ăn được ăn hàng ngày.",
+        "examples": [
+          {"cn": "吃饭", "py": "chīfàn", "vi": "ăn cơm"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "方",
+        "pinyin": "fāng",
+        "meaning": "phương, vuông",
+        "radical": "方",
+        "radical_meaning": "vuông",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["点", "横", "横折钩", "撇"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một con tàu (phương tiện) hoặc hình vuông.",
+        "examples": [
+          {"cn": "地方", "py": "dìfang", "vi": "nơi, địa phương"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "房",
+        "pinyin": "fáng",
+        "meaning": "phòng, nhà",
+        "radical": "户",
+        "radical_meaning": "cửa",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["点", "横折", "横", "撇", "点", "横", "横折钩", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 户 (cửa) và 方 (vuông) - nhà có cửa hình vuông.",
+        "examples": [
+          {"cn": "房间", "py": "fángjiān", "vi": "phòng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "放",
+        "pinyin": "fàng",
+        "meaning": "đặt, để",
+        "radical": "攵",
+        "radical_meaning": "gõ",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["点", "横", "横折钩", "撇", "撇", "横", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 方 (vuông) và 攵 (gõ) - đặt vật xuống một cách nhẹ nhàng.",
+        "examples": [
+          {"cn": "放书", "py": "fàng shū", "vi": "đặt sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "飞",
+        "pinyin": "fēi",
+        "meaning": "bay",
+        "radical": "飞",
+        "radical_meaning": "bay",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["横折弯钩", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một con chim đang bay lên với đôi cánh xòe ra.",
+        "examples": [
+          {"cn": "飞机", "py": "fēijī", "vi": "máy bay"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "非",
+        "pinyin": "fēi",
+        "meaning": "không phải, sai",
+        "radical": "非",
+        "radical_meaning": "không",
+        "structure": "chỉ sự",
+        "strokes": 8,
+        "stroke_order": ["竖", "横", "横", "横", "竖", "横", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh hai cánh chim bay ngược chiều nhau, nghĩa là không, sai.",
+        "examples": [
+          {"cn": "非常", "py": "fēicháng", "vi": "rất, phi thường"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "分",
+        "pinyin": "fēn",
+        "meaning": "phân, phút",
+        "radical": "刀",
+        "radical_meaning": "dao",
+        "structure": "hội ý",
+        "strokes": 4,
+        "stroke_order": ["撇", "捺", "横折钩", "撇"],
+        "type": "hội ý",
+        "story": "Gồm 八 (chia) và 刀 (dao) - dùng dao để chia tách.",
+        "examples": [
+          {"cn": "分钟", "py": "fēnzhōng", "vi": "phút"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "风",
+        "pinyin": "fēng",
+        "meaning": "gió",
+        "radical": "风",
+        "radical_meaning": "gió",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["撇", "横折弯钩", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cánh buồm đang bay trong gió.",
+        "examples": [
+          {"cn": "大风", "py": "dàfēng", "vi": "gió lớn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "服",
+        "pinyin": "fú",
+        "meaning": "quần áo, phục vụ",
+        "radical": "月",
+        "radical_meaning": "thịt",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["撇", "横折钩", "横", "横", "横折钩", "竖", "横撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 月 (thịt) và 卩 (người quỳ) - người quỳ phục vụ, mặc quần áo.",
+        "examples": [
+          {"cn": "衣服", "py": "yīfu", "vi": "quần áo"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "干",
+        "pinyin": "gān/gàn",
+        "meaning": "khô, làm",
+        "radical": "干",
+        "radical_meaning": "cái khiên",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["横", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái khiên (che chắn, khô ráo) hoặc hành động làm việc.",
+        "examples": [
+          {"cn": "干什么", "py": "gàn shénme", "vi": "làm gì"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "高",
+        "pinyin": "gāo",
+        "meaning": "cao",
+        "radical": "高",
+        "radical_meaning": "cao",
+        "structure": "chỉ sự",
+        "strokes": 10,
+        "stroke_order": ["点", "横", "竖", "横折", "横", "竖", "横折钩", "竖", "横折", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một tòa nhà cao tầng với nhiều tầng.",
+        "examples": [
+          {"cn": "高兴", "py": "gāoxìng", "vi": "vui vẻ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "告",
+        "pinyin": "gào",
+        "meaning": "nói, thông báo",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 7,
+        "stroke_order": ["撇", "横", "竖", "横", "竖", "横折", "横"],
+        "type": "hội ý",
+        "story": "Gồm bộ 口 (miệng) và 牛 (bò) - thông báo bằng cách hét lên.",
+        "examples": [
+          {"cn": "告诉", "py": "gàosu", "vi": "cho biết"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "哥",
+        "pinyin": "gē",
+        "meaning": "anh trai",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 10,
+        "stroke_order": ["横", "竖", "横折", "横", "竖", "横", "竖", "横折", "横", "竖钩"],
+        "type": "hội ý",
+        "story": "Hai chữ 可 (có thể) đứng cạnh nhau, tượng trưng cho anh em.",
+        "examples": [
+          {"cn": "哥哥", "py": "gēge", "vi": "anh trai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "歌",
+        "pinyin": "gē",
+        "meaning": "bài hát, hát",
+        "radical": "欠",
+        "radical_meaning": "thiếu",
+        "structure": "chữ hình thanh",
+        "strokes": 14,
+        "stroke_order": ["横", "竖", "横折", "横", "竖", "横", "竖", "横折", "横", "横", "撇", "横撇", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 欠 (ngáp) và 哥 (anh) - anh hát (thiếu hơi).",
+        "examples": [
+          {"cn": "唱歌", "py": "chànggē", "vi": "hát"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "个",
+        "pinyin": "gè",
+        "meaning": "cái (lượng từ)",
+        "radical": "丨",
+        "radical_meaning": "nét dọc",
+        "structure": "chỉ sự",
+        "strokes": 3,
+        "stroke_order": ["撇", "捺", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một cây tre hoặc một cái cây đơn lẻ - lượng từ chỉ vật riêng lẻ.",
+        "examples": [
+          {"cn": "一个人", "py": "yī gè rén", "vi": "một người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "给",
+        "pinyin": "gěi",
+        "meaning": "cho, tặng",
+        "radical": "纟",
+        "radical_meaning": "tơ",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["撇折", "撇折", "提", "横", "竖", "横折", "横", "横", "竖钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 纟 (tơ) và 合 (hợp) - trao tặng như sợi tơ kết nối.",
+        "examples": [
+          {"cn": "给你", "py": "gěi nǐ", "vi": "cho bạn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "跟",
+        "pinyin": "gēn",
+        "meaning": "cùng, với, theo",
+        "radical": "足",
+        "radical_meaning": "chân",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "提", "横折", "横", "横", "竖提", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 足 (chân) và 艮 (cứng) - bước theo, cùng đi.",
+        "examples": [
+          {"cn": "跟我来", "py": "gēn wǒ lái", "vi": "đi theo tôi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "工",
+        "pinyin": "gōng",
+        "meaning": "công việc",
+        "radical": "工",
+        "radical_meaning": "công",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["横", "竖", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh công cụ lao động (thước đo) của người thợ.",
+        "examples": [
+          {"cn": "工作", "py": "gōngzuò", "vi": "công việc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "关",
+        "pinyin": "guān",
+        "meaning": "đóng, tắt",
+        "radical": "丷",
+        "radical_meaning": "hai chấm",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["点", "撇", "横", "横", "撇", "捺"],
+        "type": "hội ý",
+        "story": "Hình ảnh đóng cửa bằng then cài (关) - đóng lại.",
+        "examples": [
+          {"cn": "关门", "py": "guān mén", "vi": "đóng cửa"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "馆",
+        "pinyin": "guǎn",
+        "meaning": "quán, viện, nhà",
+        "radical": "饣",
+        "radical_meaning": "thức ăn",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["撇", "横钩", "竖提", "点", "点", "横撇", "竖", "横折", "横", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 饣 (thức ăn) và 官 (quan) - nơi quan lại đến ăn uống, nghỉ ngơi.",
+        "examples": [
+          {"cn": "图书馆", "py": "túshūguǎn", "vi": "thư viện"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "贵",
+        "pinyin": "guì",
+        "meaning": "đắt, quý",
+        "radical": "贝",
+        "radical_meaning": "vỏ sò (tiền)",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "横折", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 贝 (tiền) và 臾 (một lát) - tiền bạc quý giá.",
+        "examples": [
+          {"cn": "贵吗？", "py": "guì ma?", "vi": "đắt không?"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "国",
+        "pinyin": "guó",
+        "meaning": "nước, quốc gia",
+        "radical": "囗",
+        "radical_meaning": "bao vây",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["竖", "横折", "横", "横", "竖", "横", "点", "横"],
+        "type": "hội ý",
+        "story": "Bên ngoài là bộ 囗 (lãnh thổ), bên trong là 玉 (ngọc) - vật quý giá của quốc gia.",
+        "examples": [
+          {"cn": "中国", "py": "Zhōngguó", "vi": "Trung Quốc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "果",
+        "pinyin": "guǒ",
+        "meaning": "quả, trái",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["竖", "横折", "横", "横", "横", "竖", "撇", "捺"],
+        "type": "hội ý",
+        "story": "Quả (田) trên cây (木) - hình ảnh trái cây trên cây.",
+        "examples": [
+          {"cn": "水果", "py": "shuǐguǒ", "vi": "trái cây"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "过",
+        "pinyin": "guò",
+        "meaning": "đi qua, đã từng",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横", "竖钩", "点", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 寸 (tấc) - đi qua một tấc - di chuyển, vượt qua.",
+        "examples": [
+          {"cn": "去过", "py": "qùguo", "vi": "đã từng đi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "还",
+        "pinyin": "hái",
+        "meaning": "vẫn, còn",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横", "撇", "竖", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 不 (không) - vẫn chưa đi, vẫn còn.",
+        "examples": [
+          {"cn": "还没来", "py": "hái méi lái", "vi": "vẫn chưa đến"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "孩",
+        "pinyin": "hái",
+        "meaning": "đứa trẻ",
+        "radical": "子",
+        "radical_meaning": "con",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["横撇", "竖钩", "提", "点", "横", "撇折", "撇", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 子 (con) và 亥 (hợi) - đứa trẻ.",
+        "examples": [
+          {"cn": "孩子", "py": "háizi", "vi": "đứa trẻ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "汉",
+        "pinyin": "hàn",
+        "meaning": "Hán, tiếng Trung",
+        "radical": "氵",
+        "radical_meaning": "nước",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["点", "点", "提", "横撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 氵 (nước) và 又 (lại) - tên dân tộc Hán (gần sông).",
+        "examples": [
+          {"cn": "汉语", "py": "Hànyǔ", "vi": "tiếng Hán"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "好",
+        "pinyin": "hǎo",
+        "meaning": "tốt",
+        "radical": "女",
+        "radical_meaning": "nữ",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇点", "撇", "横", "横撇", "竖钩", "横"],
+        "type": "hội ý",
+        "story": "Kết hợp 女 (người phụ nữ) và 子 (đứa trẻ) - người phụ nữ có con là điều tốt đẹp.",
+        "examples": [
+          {"cn": "你好", "py": "nǐ hǎo", "vi": "xin chào"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "号",
+        "pinyin": "hào",
+        "meaning": "số, ngày",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["竖", "横折", "横", "横", "竖折折钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 丂 (khảo) - tiếng kêu, số hiệu.",
+        "examples": [
+          {"cn": "几号", "py": "jǐ hào", "vi": "mấy ngày"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "喝",
+        "pinyin": "hē",
+        "meaning": "uống",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["竖", "横折", "横", "竖", "横折", "横", "横", "撇", "横折钩", "撇", "点", "竖折"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 曷 (cái gì) - dùng miệng uống.",
+        "examples": [
+          {"cn": "喝水", "py": "hē shuǐ", "vi": "uống nước"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "和",
+        "pinyin": "hé",
+        "meaning": "và, với",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["撇", "横", "竖", "撇", "点", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 禾 (lúa) - miệng ăn lúa -> hòa hợp, cùng nhau.",
+        "examples": [
+          {"cn": "我和你", "py": "wǒ hé nǐ", "vi": "tôi và bạn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "很",
+        "pinyin": "hěn",
+        "meaning": "rất",
+        "radical": "彳",
+        "radical_meaning": "bước",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["撇", "撇", "竖", "横折", "横", "横", "竖提", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 彳 (bước) và 艮 (cứng) - bước đi rất cứng rắn -> rất.",
+        "examples": [
+          {"cn": "很好", "py": "hěn hǎo", "vi": "rất tốt"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "后",
+        "pinyin": "hòu",
+        "meaning": "sau, phía sau",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇", "撇", "横", "竖", "横折", "横"],
+        "type": "hội ý",
+        "story": "Người đi sau người phía trước, ở phía sau.",
+        "examples": [
+          {"cn": "后面", "py": "hòumiàn", "vi": "phía sau"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "候",
+        "pinyin": "hòu",
+        "meaning": "chờ, hầu",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["撇", "竖", "竖", "横折", "横", "横", "撇", "横", "横", "撇点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 侯 (hầu) - người đứng chờ đợi.",
+        "examples": [
+          {"cn": "等候", "py": "děnghòu", "vi": "chờ đợi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "花",
+        "pinyin": "huā",
+        "meaning": "hoa, tiêu (tiền)",
+        "radical": "艹",
+        "radical_meaning": "cỏ",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横", "竖", "竖", "撇", "竖", "撇", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 艹 (cỏ) và 化 (biến hóa) - cỏ nở hoa, biến hóa thành hoa.",
+        "examples": [
+          {"cn": "花钱", "py": "huā qián", "vi": "tiêu tiền"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "话",
+        "pinyin": "huà",
+        "meaning": "lời nói, nói chuyện",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["点", "横折提", "撇", "横", "竖", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 舌 (lưỡi) - lời nói từ lưỡi.",
+        "examples": [
+          {"cn": "说话", "py": "shuōhuà", "vi": "nói chuyện"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "坏",
+        "pinyin": "huài",
+        "meaning": "xấu, hư, hỏng",
+        "radical": "土",
+        "radical_meaning": "đất",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横", "竖", "提", "横", "撇", "竖", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 土 (đất) và 不 (không) - đất không tốt -> xấu.",
+        "examples": [
+          {"cn": "坏了", "py": "huài le", "vi": "hỏng rồi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "欢",
+        "pinyin": "huān",
+        "meaning": "vui, thích",
+        "radical": "欠",
+        "radical_meaning": "thiếu",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横撇", "点", "撇", "横钩", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 欠 (thiếu) và 雚 (quán) - vui vẻ như chim hót.",
+        "examples": [
+          {"cn": "欢迎", "py": "huānyíng", "vi": "hoan nghênh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "回",
+        "pinyin": "huí",
+        "meaning": "trở về, lần (lượng từ)",
+        "radical": "囗",
+        "radical_meaning": "bao vây",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["竖", "横折", "竖", "横折", "横", "横"],
+        "type": "hội ý",
+        "story": "Hình ảnh con đường vòng trở lại, quay về.",
+        "examples": [
+          {"cn": "回家", "py": "huíjiā", "vi": "về nhà"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "会",
+        "pinyin": "huì",
+        "meaning": "biết, sẽ, hội",
+        "radical": "人",
+        "radical_meaning": "người",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇", "捺", "横", "横", "撇折", "点"],
+        "type": "hội ý",
+        "story": "Người (人) và mây (云) - gặp gỡ, hội họp, biết nhau.",
+        "examples": [
+          {"cn": "会中文", "py": "huì Zhōngwén", "vi": "biết tiếng Trung"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "火",
+        "pinyin": "huǒ",
+        "meaning": "lửa",
+        "radical": "火",
+        "radical_meaning": "lửa",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["点", "撇", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh ngọn lửa đang cháy với các tia lửa.",
+        "examples": [
+          {"cn": "火车", "py": "huǒchē", "vi": "tàu hỏa"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "机",
+        "pinyin": "jī",
+        "meaning": "máy, cơ hội",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横", "竖", "撇", "点", "撇", "横折弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 木 (gỗ) và 几 (mấy) - máy móc làm từ gỗ.",
+        "examples": [
+          {"cn": "飞机", "py": "fēijī", "vi": "máy bay"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "鸡",
+        "pinyin": "jī",
+        "meaning": "con gà",
+        "radical": "又",
+        "radical_meaning": "lại",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横撇", "点", "撇", "横折钩", "点", "撇", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 又 (tay) và 奚 (hề) - con gà (tiếng kêu).",
+        "examples": [
+          {"cn": "鸡蛋", "py": "jīdàn", "vi": "trứng gà"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "几",
+        "pinyin": "jǐ",
+        "meaning": "mấy, vài",
+        "radical": "几",
+        "radical_meaning": "cái bàn",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["撇", "横折弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái bàn nhỏ, sau dùng để hỏi số lượng.",
+        "examples": [
+          {"cn": "几个人", "py": "jǐ gè rén", "vi": "mấy người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "记",
+        "pinyin": "jì",
+        "meaning": "nhớ, ghi lại",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["点", "横折提", "横折", "横", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 己 (mình) - ghi nhớ vào lòng.",
+        "examples": [
+          {"cn": "记得", "py": "jìde", "vi": "nhớ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "家",
+        "pinyin": "jiā",
+        "meaning": "nhà, gia đình",
+        "radical": "宀",
+        "radical_meaning": "mái nhà",
+        "structure": "hội ý",
+        "strokes": 10,
+        "stroke_order": ["点", "点", "横钩", "横", "撇", "弯钩", "撇", "撇", "撇", "捺"],
+        "type": "hội ý",
+        "story": "Mái nhà (宀) che chở cho đàn lợn (豕) - của cải trong nhà.",
+        "examples": [
+          {"cn": "家庭", "py": "jiātíng", "vi": "gia đình"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "假",
+        "pinyin": "jiǎ",
+        "meaning": "giả, nghỉ",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["撇", "竖", "横折", "横", "竖", "横", "横", "横折", "横", "横撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 叚 (giả) - người giả mạo, hoặc kỳ nghỉ (giả).",
+        "examples": [
+          {"cn": "放假", "py": "fàngjià", "vi": "nghỉ lễ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "间",
+        "pinyin": "jiān",
+        "meaning": "giữa, phòng",
+        "radical": "门",
+        "radical_meaning": "cửa",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "竖", "横折钩", "横", "横", "撇", "横折钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 门 (cửa) và 日 (mặt trời) - ánh sáng qua khe cửa, ở giữa.",
+        "examples": [
+          {"cn": "房间", "py": "fángjiān", "vi": "phòng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "见",
+        "pinyin": "jiàn",
+        "meaning": "thấy, gặp",
+        "radical": "见",
+        "radical_meaning": "thấy",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["竖", "横折", "撇", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh đôi mắt to đang nhìn, tượng trưng cho việc nhìn thấy.",
+        "examples": [
+          {"cn": "再见", "py": "zàijiàn", "vi": "tạm biệt"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "教",
+        "pinyin": "jiāo",
+        "meaning": "dạy",
+        "radical": "攵",
+        "radical_meaning": "gõ",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["横", "竖", "横", "撇", "点", "撇", "横", "撇", "捺", "撇", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 攵 (gõ) và 孝 (hiếu) - dùng roi gõ để dạy dỗ.",
+        "examples": [
+          {"cn": "教学", "py": "jiàoxué", "vi": "giảng dạy"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "叫",
+        "pinyin": "jiào",
+        "meaning": "gọi, tên là",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["竖", "横折", "横", "竖提", "竖"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 丩 (cái móc) - gọi to, kêu gọi.",
+        "examples": [
+          {"cn": "你叫什么", "py": "nǐ jiào shénme", "vi": "bạn tên là gì"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "觉",
+        "pinyin": "jué/jiào",
+        "meaning": "cảm giác, giấc ngủ",
+        "radical": "见",
+        "radical_meaning": "thấy",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["点", "点", "撇", "点", "横撇", "竖", "横折", "撇", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 见 (thấy) và 寉 (hạc) - cảm nhận, thức tỉnh hoặc ngủ.",
+        "examples": [
+          {"cn": "觉得", "py": "juéde", "vi": "cảm thấy"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "姐",
+        "pinyin": "jiě",
+        "meaning": "chị gái",
+        "radical": "女",
+        "radical_meaning": "nữ",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["撇点", "撇", "横", "竖", "横折", "横", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 女 (nữ) và 且 (còn) - người chị gái.",
+        "examples": [
+          {"cn": "姐姐", "py": "jiějie", "vi": "chị gái"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "介",
+        "pinyin": "jiè",
+        "meaning": "giới thiệu, ở giữa",
+        "radical": "人",
+        "radical_meaning": "người",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["撇", "捺", "撇", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người đứng ở giữa để giới thiệu hai bên.",
+        "examples": [
+          {"cn": "介绍", "py": "jièshào", "vi": "giới thiệu"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "今",
+        "pinyin": "jīn",
+        "meaning": "bây giờ, hôm nay",
+        "radical": "人",
+        "radical_meaning": "người",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["撇", "捺", "点", "横撇"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người đang nói, chỉ thời điểm hiện tại.",
+        "examples": [
+          {"cn": "今天", "py": "jīntiān", "vi": "hôm nay"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "进",
+        "pinyin": "jìn",
+        "meaning": "vào, tiến vào",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横", "横", "撇", "竖", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 井 (giếng) - đi vào giếng -> tiến vào.",
+        "examples": [
+          {"cn": "进来", "py": "jìnlái", "vi": "đi vào"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "京",
+        "pinyin": "jīng",
+        "meaning": "thủ đô, kinh đô",
+        "radical": "亠",
+        "radical_meaning": "trên",
+        "structure": "chỉ sự",
+        "strokes": 8,
+        "stroke_order": ["点", "横", "竖", "横折", "横", "竖钩", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh tòa thành cao lớn, nơi vua ở.",
+        "examples": [
+          {"cn": "北京", "py": "Běijīng", "vi": "Bắc Kinh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "净",
+        "pinyin": "jìng",
+        "meaning": "sạch, thuần túy",
+        "radical": "冫",
+        "radical_meaning": "nước đá",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["点", "提", "横折", "横", "横", "竖钩", "点", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 冫 (nước đá) và 争 (tranh) - nước trong sạch.",
+        "examples": [
+          {"cn": "干净", "py": "gānjìng", "vi": "sạch sẽ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "九",
+        "pinyin": "jiǔ",
+        "meaning": "chín",
+        "radical": "丿",
+        "radical_meaning": "nét phẩy",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["撇", "横折弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cánh tay cong, sau được mượn làm số 9.",
+        "examples": [
+          {"cn": "九点", "py": "jiǔ diǎn", "vi": "9 giờ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "就",
+        "pinyin": "jiù",
+        "meaning": "thì, ngay lập tức",
+        "radical": "尢",
+        "radical_meaning": "què",
+        "structure": "hội ý",
+        "strokes": 12,
+        "stroke_order": ["点", "横", "竖", "横折", "横", "竖钩", "点", "提", "横折", "横", "横", "撇点"],
+        "type": "hội ý",
+        "story": "Gồm 京 (thành) và 尤 (đặc biệt) - ngay lập tức, thì là.",
+        "examples": [
+          {"cn": "就来", "py": "jiù lái", "vi": "đến ngay"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "开",
+        "pinyin": "kāi",
+        "meaning": "mở, lái (xe)",
+        "radical": "廾",
+        "radical_meaning": "hai tay",
+        "structure": "hội ý",
+        "strokes": 4,
+        "stroke_order": ["横", "横", "撇", "竖"],
+        "type": "hội ý",
+        "story": "Hai bàn tay (廾) mở cửa (一) - mở ra, khởi động.",
+        "examples": [
+          {"cn": "开门", "py": "kāi mén", "vi": "mở cửa"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "看",
+        "pinyin": "kàn",
+        "meaning": "xem, nhìn",
+        "radical": "目",
+        "radical_meaning": "mắt",
+        "structure": "hội ý",
+        "strokes": 9,
+        "stroke_order": ["撇", "横", "横", "撇", "竖", "横折", "横", "横", "横"],
+        "type": "hội ý",
+        "story": "Đưa tay (手) lên che mắt (目) để nhìn xa.",
+        "examples": [
+          {"cn": "看书", "py": "kàn shū", "vi": "đọc sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "考",
+        "pinyin": "kǎo",
+        "meaning": "thi, kiểm tra",
+        "radical": "老",
+        "radical_meaning": "già",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横", "竖", "横", "撇", "横", "竖折折钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 老 (già) và 丂 (khảo) - người già kiểm tra, thi cử.",
+        "examples": [
+          {"cn": "考试", "py": "kǎoshì", "vi": "thi cử"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "渴",
+        "pinyin": "kě",
+        "meaning": "khát",
+        "radical": "氵",
+        "radical_meaning": "nước",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["点", "点", "提", "竖", "横折", "横", "横", "撇", "横折钩", "撇", "点", "竖折"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 氵 (nước) và 曷 (cái gì) - cần nước -> khát.",
+        "examples": [
+          {"cn": "口渴", "py": "kǒukě", "vi": "khát nước"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "客",
+        "pinyin": "kè",
+        "meaning": "khách",
+        "radical": "宀",
+        "radical_meaning": "mái nhà",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["点", "点", "横钩", "撇", "横撇", "捺", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 宀 (nhà) và 各 (mỗi) - người đến nhà từ nơi khác -> khách.",
+        "examples": [
+          {"cn": "客人", "py": "kèrén", "vi": "khách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "课",
+        "pinyin": "kè",
+        "meaning": "bài học",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "横折提", "竖", "横折", "横", "横", "横", "竖", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 果 (quả) - nội dung bài học như trái cây cần được hấp thụ.",
+        "examples": [
+          {"cn": "上课", "py": "shàngkè", "vi": "lên lớp"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "口",
+        "pinyin": "kǒu",
+        "meaning": "miệng",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["竖", "横折", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái miệng đang mở.",
+        "examples": [
+          {"cn": "人口", "py": "rénkǒu", "vi": "dân số"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "块",
+        "pinyin": "kuài",
+        "meaning": "miếng, đồng (tiền)",
+        "radical": "土",
+        "radical_meaning": "đất",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横", "竖", "提", "横折", "横", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 土 (đất) và 夬 (quyết định) - một miếng đất.",
+        "examples": [
+          {"cn": "一块钱", "py": "yī kuài qián", "vi": "một đồng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "快",
+        "pinyin": "kuài",
+        "meaning": "nhanh, vui vẻ",
+        "radical": "忄",
+        "radical_meaning": "tâm",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "点", "竖", "横折", "横", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 忄 (tâm) và 夬 (quyết) - cảm thấy vui vẻ, nhanh nhẹn.",
+        "examples": [
+          {"cn": "快乐", "py": "kuàilè", "vi": "vui vẻ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "来",
+        "pinyin": "lái",
+        "meaning": "đến",
+        "radical": "木",
+        "radical_meaning": "cây",
+        "structure": "chỉ sự",
+        "strokes": 7,
+        "stroke_order": ["横", "点", "撇", "横", "竖", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một bông lúa đến (mùa màng) - đến.",
+        "examples": [
+          {"cn": "来这里", "py": "lái zhèlǐ", "vi": "đến đây"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "老",
+        "pinyin": "lǎo",
+        "meaning": "già, cũ",
+        "radical": "老",
+        "radical_meaning": "già",
+        "structure": "chỉ sự",
+        "strokes": 6,
+        "stroke_order": ["横", "竖", "横", "撇", "撇", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người già tóc bạc, đi bằng gậy.",
+        "examples": [
+          {"cn": "老师", "py": "lǎoshī", "vi": "giáo viên"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "了",
+        "pinyin": "le",
+        "meaning": "(trợ từ hoàn thành)",
+        "radical": "亅",
+        "radical_meaning": "móc",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["横撇", "竖钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh kết thúc, đã hoàn thành.",
+        "examples": [
+          {"cn": "吃了", "py": "chī le", "vi": "đã ăn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "累",
+        "pinyin": "lèi",
+        "meaning": "mệt",
+        "radical": "糸",
+        "radical_meaning": "tơ",
+        "structure": "hội ý",
+        "strokes": 11,
+        "stroke_order": ["竖", "横折", "横", "横", "横", "撇折", "撇折", "点", "竖钩", "点", "点"],
+        "type": "hội ý",
+        "story": "Gồm 田 (ruộng) và 糸 (tơ) - làm việc trên ruộng, rất mệt.",
+        "examples": [
+          {"cn": "很累", "py": "hěn lèi", "vi": "rất mệt"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "冷",
+        "pinyin": "lěng",
+        "meaning": "lạnh",
+        "radical": "冫",
+        "radical_meaning": "nước đá",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "提", "撇", "捺", "点", "横撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 冫 (nước đá) và 令 (lệnh) - nước đá làm lạnh.",
+        "examples": [
+          {"cn": "冷天", "py": "lěngtiān", "vi": "ngày lạnh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "里",
+        "pinyin": "lǐ",
+        "meaning": "trong, bên trong",
+        "radical": "里",
+        "radical_meaning": "bên trong",
+        "structure": "chỉ sự",
+        "strokes": 7,
+        "stroke_order": ["竖", "横折", "横", "横", "竖", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh khu vực có ranh giới, bên trong.",
+        "examples": [
+          {"cn": "里面", "py": "lǐmiàn", "vi": "bên trong"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "两",
+        "pinyin": "liǎng",
+        "meaning": "hai",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "chỉ sự",
+        "strokes": 7,
+        "stroke_order": ["横", "竖", "横折钩", "撇", "点", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh hai vật đứng cạnh nhau.",
+        "examples": [
+          {"cn": "两个人", "py": "liǎng gè rén", "vi": "hai người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "零",
+        "pinyin": "líng",
+        "meaning": "không",
+        "radical": "雨",
+        "radical_meaning": "mưa",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["横", "点", "横撇", "竖", "点", "点", "点", "点", "撇", "捺", "点", "横撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 雨 (mưa) và 令 (lệnh) - mưa nhỏ, số không.",
+        "examples": [
+          {"cn": "零钱", "py": "língqián", "vi": "tiền lẻ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "六",
+        "pinyin": "liù",
+        "meaning": "sáu",
+        "radical": "八",
+        "radical_meaning": "tám",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["点", "横", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái lều (nhà), sau được mượn làm số 6.",
+        "examples": [
+          {"cn": "六点", "py": "liù diǎn", "vi": "6 giờ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "楼",
+        "pinyin": "lóu",
+        "meaning": "tầng, tòa nhà",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["横", "竖", "撇", "点", "横", "竖", "横折", "横", "横", "竖", "横折", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 木 (gỗ) và 娄 (lâu) - nhà nhiều tầng bằng gỗ.",
+        "examples": [
+          {"cn": "楼上", "py": "lóushàng", "vi": "trên lầu"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "路",
+        "pinyin": "lù",
+        "meaning": "đường",
+        "radical": "足",
+        "radical_meaning": "chân",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "提", "横折", "横", "竖", "横折", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 足 (chân) và 各 (mỗi) - con đường để đi.",
+        "examples": [
+          {"cn": "路上", "py": "lùshang", "vi": "trên đường"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "妈",
+        "pinyin": "mā",
+        "meaning": "mẹ",
+        "radical": "女",
+        "radical_meaning": "nữ",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["撇点", "撇", "横", "横折", "竖折折钩", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 女 (nữ) và 马 (mã) - người mẹ.",
+        "examples": [
+          {"cn": "妈妈", "py": "māma", "vi": "mẹ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "马",
+        "pinyin": "mǎ",
+        "meaning": "ngựa",
+        "radical": "马",
+        "radical_meaning": "ngựa",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["横折", "竖折折钩", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh con ngựa đang chạy.",
+        "examples": [
+          {"cn": "马上", "py": "mǎshàng", "vi": "ngay lập tức"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "吗",
+        "pinyin": "ma",
+        "meaning": "(trợ từ hỏi)",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["竖", "横折", "横", "横折", "竖折折钩", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 马 (mã) - âm đệm tạo câu hỏi.",
+        "examples": [
+          {"cn": "你好吗", "py": "nǐ hǎo ma", "vi": "bạn khỏe không"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "买",
+        "pinyin": "mǎi",
+        "meaning": "mua",
+        "radical": "乛",
+        "radical_meaning": "móc",
+        "structure": "chỉ sự",
+        "strokes": 6,
+        "stroke_order": ["横撇", "点", "点", "横", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh tay cầm tiền (买) để mua hàng.",
+        "examples": [
+          {"cn": "买东西", "py": "mǎi dōngxi", "vi": "mua đồ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "慢",
+        "pinyin": "màn",
+        "meaning": "chậm",
+        "radical": "忄",
+        "radical_meaning": "tâm",
+        "structure": "chữ hình thanh",
+        "strokes": 14,
+        "stroke_order": ["点", "点", "竖", "竖", "横折", "横", "横", "竖", "横折", "横", "横", "撇", "横撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 忄 (tâm) và 曼 (mạn) - tâm trạng chậm rãi, bình tĩnh.",
+        "examples": [
+          {"cn": "慢点", "py": "màn diǎn", "vi": "chậm một chút"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "忙",
+        "pinyin": "máng",
+        "meaning": "bận",
+        "radical": "忄",
+        "radical_meaning": "tâm",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "点", "竖", "点", "横", "竖折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 忄 (tâm) và 亡 (vong) - tâm trí vội vã, bận rộn.",
+        "examples": [
+          {"cn": "很忙", "py": "hěn máng", "vi": "rất bận"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "毛",
+        "pinyin": "máo",
+        "meaning": "lông, tóc",
+        "radical": "毛",
+        "radical_meaning": "lông",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["撇", "横", "横", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh sợi lông hoặc tóc.",
+        "examples": [
+          {"cn": "毛毛虫", "py": "máomaochóng", "vi": "sâu bướm"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "么",
+        "pinyin": "me",
+        "meaning": "gì, cái gì",
+        "radical": "丿",
+        "radical_meaning": "nét phẩy",
+        "structure": "chỉ sự",
+        "strokes": 3,
+        "stroke_order": ["撇", "撇折", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh sợi tơ nhỏ, nghĩa là 'gì' trong từ 什么.",
+        "examples": [
+          {"cn": "什么", "py": "shénme", "vi": "cái gì"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "没",
+        "pinyin": "méi",
+        "meaning": "không có, chưa",
+        "radical": "氵",
+        "radical_meaning": "nước",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "点", "提", "撇", "横折弯", "横撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 氵 (nước) và 殳 (vũ khí) - chìm trong nước, không thấy.",
+        "examples": [
+          {"cn": "没有", "py": "méiyǒu", "vi": "không có"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "妹",
+        "pinyin": "mèi",
+        "meaning": "em gái",
+        "radical": "女",
+        "radical_meaning": "nữ",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["撇点", "撇", "横", "横", "横", "竖", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 女 (nữ) và 未 (chưa) - em gái chưa lập gia đình.",
+        "examples": [
+          {"cn": "妹妹", "py": "mèimei", "vi": "em gái"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "门",
+        "pinyin": "mén",
+        "meaning": "cửa",
+        "radical": "门",
+        "radical_meaning": "cửa",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["点", "竖", "横折钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cánh cửa hai cánh.",
+        "examples": [
+          {"cn": "开门", "py": "kāi mén", "vi": "mở cửa"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "们",
+        "pinyin": "men",
+        "meaning": "(hậu tố số nhiều)",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["撇", "竖", "点", "竖", "横折钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 门 (cửa) - nhiều người trước cửa.",
+        "examples": [
+          {"cn": "我们", "py": "wǒmen", "vi": "chúng tôi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "米",
+        "pinyin": "mǐ",
+        "meaning": "gạo, mét",
+        "radical": "米",
+        "radical_meaning": "gạo",
+        "structure": "độc thể",
+        "strokes": 6,
+        "stroke_order": ["点", "撇", "横", "竖", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh hạt gạo với các hạt nhỏ xung quanh.",
+        "examples": [
+          {"cn": "米饭", "py": "mǐfàn", "vi": "cơm"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "面",
+        "pinyin": "miàn",
+        "meaning": "mặt, bề mặt, phía",
+        "radical": "面",
+        "radical_meaning": "mặt",
+        "structure": "độc thể",
+        "strokes": 9,
+        "stroke_order": ["横", "撇", "竖", "横折", "竖", "竖", "横", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh khuôn mặt với hai mắt, mũi và miệng.",
+        "examples": [
+          {"cn": "前面", "py": "qiánmiàn", "vi": "phía trước"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "名",
+        "pinyin": "míng",
+        "meaning": "tên",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇", "横撇", "点", "竖", "横折", "横"],
+        "type": "hội ý",
+        "story": "Gồm 夕 (tối) và 口 (miệng) - gọi tên vào buổi tối (không nhìn rõ).",
+        "examples": [
+          {"cn": "名字", "py": "míngzi", "vi": "tên"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "明",
+        "pinyin": "míng",
+        "meaning": "sáng, ngày mai",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["竖", "横折", "横", "横", "撇", "横折钩", "横", "横"],
+        "type": "hội ý",
+        "story": "Kết hợp 日 (mặt trời) và 月 (mặt trăng) - cả hai đều sáng.",
+        "examples": [
+          {"cn": "明天", "py": "míngtiān", "vi": "ngày mai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "拿",
+        "pinyin": "ná",
+        "meaning": "cầm, lấy",
+        "radical": "手",
+        "radical_meaning": "tay",
+        "structure": "hội ý",
+        "strokes": 10,
+        "stroke_order": ["撇", "捺", "横", "竖", "横折", "横", "横", "横", "撇", "捺"],
+        "type": "hội ý",
+        "story": "Gồm 合 (hợp) và 手 (tay) - tay cầm, nắm lấy.",
+        "examples": [
+          {"cn": "拿书", "py": "ná shū", "vi": "cầm sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "哪",
+        "pinyin": "nǎ",
+        "meaning": "nào, đâu",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["竖", "横折", "横", "横折钩", "撇", "撇", "横", "横", "竖钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 那 (nà) - hỏi về vị trí, lựa chọn.",
+        "examples": [
+          {"cn": "哪里", "py": "nǎlǐ", "vi": "ở đâu"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "那",
+        "pinyin": "nà",
+        "meaning": "đó, kia",
+        "radical": "阝",
+        "radical_meaning": "thành phố",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横折钩", "撇", "横", "横", "横折折折钩", "竖"],
+        "type": "hình thanh",
+        "story": "Chỉ người/vật ở xa người nói.",
+        "examples": [
+          {"cn": "那个人", "py": "nà gè rén", "vi": "người đó"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "奶",
+        "pinyin": "nǎi",
+        "meaning": "sữa, vú",
+        "radical": "女",
+        "radical_meaning": "nữ",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["撇点", "撇", "横", "横折折折钩", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 女 (nữ) và 乃 (nãi) - người mẹ cho con bú.",
+        "examples": [
+          {"cn": "牛奶", "py": "niúnǎi", "vi": "sữa bò"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "男",
+        "pinyin": "nán",
+        "meaning": "nam, con trai",
+        "radical": "田",
+        "radical_meaning": "ruộng",
+        "structure": "hội ý",
+        "strokes": 7,
+        "stroke_order": ["竖", "横折", "横", "竖", "横", "横折钩", "撇"],
+        "type": "hội ý",
+        "story": "Gồm 田 (ruộng) và 力 (sức) - người đàn ông làm việc ở ruộng.",
+        "examples": [
+          {"cn": "男孩", "py": "nánhái", "vi": "con trai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "南",
+        "pinyin": "nán",
+        "meaning": "phía nam",
+        "radical": "十",
+        "radical_meaning": "mười",
+        "structure": "chỉ sự",
+        "strokes": 9,
+        "stroke_order": ["横", "竖", "竖", "横折", "横", "横", "横", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cây cối ở phía nam (ấm áp, nhiều cây).",
+        "examples": [
+          {"cn": "南方", "py": "nánfāng", "vi": "phương nam"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "难",
+        "pinyin": "nán",
+        "meaning": "khó",
+        "radical": "又",
+        "radical_meaning": "lại",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["横撇", "点", "撇", "竖", "点", "横", "横", "横", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 又 (tay) và 隹 (chim) - bắt chim khó khăn.",
+        "examples": [
+          {"cn": "很难", "py": "hěn nán", "vi": "rất khó"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "脑",
+        "pinyin": "nǎo",
+        "meaning": "não, đầu óc",
+        "radical": "月",
+        "radical_meaning": "thịt",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["撇", "横折钩", "横", "横", "点", "横", "撇", "点", "竖折", "竖"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 月 (thịt) và 囟 (hộp sọ) - bộ não.",
+        "examples": [
+          {"cn": "电脑", "py": "diànnǎo", "vi": "máy tính"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "呢",
+        "pinyin": "ne",
+        "meaning": "(trợ từ hỏi)",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["竖", "横折", "横", "横折", "横", "撇", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 尼 (ni) - dùng để hỏi lại hoặc nhấn mạnh.",
+        "examples": [
+          {"cn": "你呢", "py": "nǐ ne", "vi": "còn bạn thì sao"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "能",
+        "pinyin": "néng",
+        "meaning": "có thể",
+        "radical": "月",
+        "radical_meaning": "thịt",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["横撇", "点", "竖", "横折钩", "横", "横", "撇", "竖弯钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 月 (thịt) và 能 (năng) - sức mạnh, khả năng.",
+        "examples": [
+          {"cn": "能来", "py": "néng lái", "vi": "có thể đến"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "你",
+        "pinyin": "nǐ",
+        "meaning": "bạn",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["撇", "竖", "撇", "横钩", "竖钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 尔 (như thế) - người đối diện.",
+        "examples": [
+          {"cn": "你好", "py": "nǐ hǎo", "vi": "xin chào"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "年",
+        "pinyin": "nián",
+        "meaning": "năm",
+        "radical": "干",
+        "radical_meaning": "khô",
+        "structure": "chỉ sự",
+        "strokes": 6,
+        "stroke_order": ["撇", "横", "横", "竖", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người cõng lúa - tượng trưng cho mùa màng và năm.",
+        "examples": [
+          {"cn": "今年", "py": "jīnnián", "vi": "năm nay"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "您",
+        "pinyin": "nín",
+        "meaning": "ngài, ông/bà (kính ngữ)",
+        "radical": "心",
+        "radical_meaning": "tâm",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["撇", "竖", "撇", "横钩", "竖钩", "撇", "点", "点", "斜钩", "点", "点"],
+        "type": "hình thanh",
+        "story": "Gồm 你 (bạn) và 心 (tâm) - để bày tỏ sự tôn trọng từ đáy lòng.",
+        "examples": [
+          {"cn": "您好", "py": "nín hǎo", "vi": "xin chào (kính ngữ)"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "牛",
+        "pinyin": "niú",
+        "meaning": "con bò",
+        "radical": "牛",
+        "radical_meaning": "bò",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["撇", "横", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh đầu con bò với hai sừng.",
+        "examples": [
+          {"cn": "牛奶", "py": "niúnǎi", "vi": "sữa bò"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "女",
+        "pinyin": "nǚ",
+        "meaning": "nữ, con gái",
+        "radical": "女",
+        "radical_meaning": "nữ",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["撇点", "撇", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người phụ nữ đang quỳ, hai tay đan vào nhau.",
+        "examples": [
+          {"cn": "女儿", "py": "nǚ'ér", "vi": "con gái"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "旁",
+        "pinyin": "páng",
+        "meaning": "bên, phía",
+        "radical": "方",
+        "radical_meaning": "vuông",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "横", "点", "撇", "点", "横", "横折钩", "撇", "点", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 方 (vuông) và 亠 (trên) - ở bên cạnh.",
+        "examples": [
+          {"cn": "旁边", "py": "pángbiān", "vi": "bên cạnh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "跑",
+        "pinyin": "pǎo",
+        "meaning": "chạy",
+        "radical": "足",
+        "radical_meaning": "chân",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "提", "撇", "横折钩", "横折", "横", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 足 (chân) và 包 (bao) - chân chạy nhanh như gói.",
+        "examples": [
+          {"cn": "跑步", "py": "pǎobù", "vi": "chạy bộ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "朋",
+        "pinyin": "péng",
+        "meaning": "bạn",
+        "radical": "月",
+        "radical_meaning": "thịt",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["撇", "横折钩", "横", "横", "撇", "横折钩", "横", "横"],
+        "type": "hội ý",
+        "story": "Hai chữ 月 (thịt) - hai người cùng chia sẻ thức ăn -> bạn bè.",
+        "examples": [
+          {"cn": "朋友", "py": "péngyou", "vi": "bạn bè"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "票",
+        "pinyin": "piào",
+        "meaning": "vé",
+        "radical": "示",
+        "radical_meaning": "thần",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["横", "竖", "横折", "竖", "竖", "横", "横", "横", "竖钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 示 (thần) và 要 (yếu) - tờ giấy có giá trị, vé.",
+        "examples": [
+          {"cn": "车票", "py": "chēpiào", "vi": "vé xe"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "七",
+        "pinyin": "qī",
+        "meaning": "bảy",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["横", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cắt đứt, sau được mượn làm số 7.",
+        "examples": [
+          {"cn": "七点", "py": "qī diǎn", "vi": "7 giờ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "期",
+        "pinyin": "qī",
+        "meaning": "thời kỳ, kỳ",
+        "radical": "月",
+        "radical_meaning": "thịt",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["横", "竖", "横", "横", "横", "撇", "点", "撇", "横折钩", "横", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 月 (thời gian) và 其 (kỳ) - thời kỳ, giai đoạn.",
+        "examples": [
+          {"cn": "星期", "py": "xīngqī", "vi": "tuần"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "起",
+        "pinyin": "qǐ",
+        "meaning": "dậy, bắt đầu",
+        "radical": "走",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["横", "竖", "横", "竖", "横", "撇", "捺", "横折", "横", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 走 (đi) và 己 (mình) - tự mình đứng dậy, bắt đầu.",
+        "examples": [
+          {"cn": "起床", "py": "qǐchuáng", "vi": "ngủ dậy"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "气",
+        "pinyin": "qì",
+        "meaning": "khí, không khí",
+        "radical": "气",
+        "radical_meaning": "khí",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["撇", "横", "横", "横折弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh hơi thở, không khí đang di chuyển.",
+        "examples": [
+          {"cn": "天气", "py": "tiānqì", "vi": "thời tiết"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "汽",
+        "pinyin": "qì",
+        "meaning": "hơi, xăng",
+        "radical": "氵",
+        "radical_meaning": "nước",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "点", "提", "横", "横", "横折弯钩", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 氵 (nước) và 气 (khí) - hơi nước, xăng.",
+        "examples": [
+          {"cn": "汽车", "py": "qìchē", "vi": "ô tô"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "前",
+        "pinyin": "qián",
+        "meaning": "phía trước, trước",
+        "radical": "刀",
+        "radical_meaning": "dao",
+        "structure": "hội ý",
+        "strokes": 9,
+        "stroke_order": ["点", "撇", "横", "竖", "横折钩", "横", "横", "竖", "竖钩"],
+        "type": "hội ý",
+        "story": "Gồm 止 (chân) và 刂 (dao) - bước về phía trước.",
+        "examples": [
+          {"cn": "前面", "py": "qiánmiàn", "vi": "phía trước"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "钱",
+        "pinyin": "qián",
+        "meaning": "tiền",
+        "radical": "钅",
+        "radical_meaning": "kim loại",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["撇", "横", "横", "横", "竖提", "横", "横", "撇", "点", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 钅 (kim loại) và 戋 (nhỏ) - tiền xu bằng kim loại.",
+        "examples": [
+          {"cn": "多少钱", "py": "duōshao qián", "vi": "bao nhiêu tiền"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "请",
+        "pinyin": "qǐng",
+        "meaning": "mời, xin",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "横折提", "横", "横", "竖", "横折钩", "竖", "横折", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 青 (xanh) - lời mời một cách lịch sự.",
+        "examples": [
+          {"cn": "请进", "py": "qǐng jìn", "vi": "mời vào"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "球",
+        "pinyin": "qiú",
+        "meaning": "bóng",
+        "radical": "王",
+        "radical_meaning": "ngọc",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["横", "横", "竖", "提", "横", "竖钩", "提", "点", "撇", "点", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 王 (ngọc) và 求 (cầu) - quả bóng tròn như ngọc.",
+        "examples": [
+          {"cn": "足球", "py": "zúqiú", "vi": "bóng đá"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "去",
+        "pinyin": "qù",
+        "meaning": "đi",
+        "radical": "厶",
+        "radical_meaning": "riêng",
+        "structure": "chỉ sự",
+        "strokes": 5,
+        "stroke_order": ["横", "竖", "横", "撇折", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người rời khỏi một nơi -> đi.",
+        "examples": [
+          {"cn": "去学校", "py": "qù xuéxiào", "vi": "đến trường"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "热",
+        "pinyin": "rè",
+        "meaning": "nóng",
+        "radical": "灬",
+        "radical_meaning": "lửa",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["横", "竖钩", "提", "撇", "点", "撇", "横撇", "撇", "点", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 灬 (lửa) và 执 (chấp) - nóng bức như có lửa.",
+        "examples": [
+          {"cn": "热天", "py": "rètiān", "vi": "ngày nóng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "人",
+        "pinyin": "rén",
+        "meaning": "người",
+        "radical": "人",
+        "radical_meaning": "người",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người đang đứng, hai chân trên mặt đất.",
+        "examples": [
+          {"cn": "中国人", "py": "Zhōngguó rén", "vi": "người Trung Quốc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "认",
+        "pinyin": "rèn",
+        "meaning": "nhận ra, biết",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 4,
+        "stroke_order": ["点", "横折提", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 人 (người) - nhận ra người quen.",
+        "examples": [
+          {"cn": "认识", "py": "rènshi", "vi": "quen biết"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "日",
+        "pinyin": "rì",
+        "meaning": "ngày, mặt trời",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["竖", "横折", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh mặt trời với vệt sáng ở giữa.",
+        "examples": [
+          {"cn": "星期日", "py": "xīngqīrì", "vi": "chủ nhật"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "肉",
+        "pinyin": "ròu",
+        "meaning": "thịt",
+        "radical": "肉",
+        "radical_meaning": "thịt",
+        "structure": "độc thể",
+        "strokes": 6,
+        "stroke_order": ["竖", "横折", "撇", "点", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh miếng thịt có gân và mỡ.",
+        "examples": [
+          {"cn": "吃肉", "py": "chī ròu", "vi": "ăn thịt"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "三",
+        "pinyin": "sān",
+        "meaning": "ba",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["横", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Ba nét ngang tượng trưng cho số 3.",
+        "examples": [
+          {"cn": "三个人", "py": "sān gè rén", "vi": "ba người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "山",
+        "pinyin": "shān",
+        "meaning": "núi",
+        "radical": "山",
+        "radical_meaning": "núi",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["竖", "竖折", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh ba ngọn núi đứng cạnh nhau.",
+        "examples": [
+          {"cn": "爬山", "py": "pá shān", "vi": "leo núi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "商",
+        "pinyin": "shāng",
+        "meaning": "buôn bán, thương mại",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 11,
+        "stroke_order": ["点", "横", "点", "撇", "横", "撇", "点", "竖", "横折", "横", "横"],
+        "type": "hội ý",
+        "story": "Hai người đang nói chuyện buôn bán.",
+        "examples": [
+          {"cn": "商店", "py": "shāngdiàn", "vi": "cửa hàng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "上",
+        "pinyin": "shàng",
+        "meaning": "trên, lên",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "chỉ sự",
+        "strokes": 3,
+        "stroke_order": ["竖", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Nét ngang làm mốc, nét dọc và nét ngang ở phía trên chỉ hướng 'trên'.",
+        "examples": [
+          {"cn": "上面", "py": "shàngmiàn", "vi": "phía trên"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "少",
+        "pinyin": "shǎo",
+        "meaning": "ít",
+        "radical": "小",
+        "radical_meaning": "nhỏ",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["竖", "点", "点", "撇"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh vài hạt cát nhỏ -> số lượng ít.",
+        "examples": [
+          {"cn": "很少", "py": "hěn shǎo", "vi": "rất ít"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "绍",
+        "pinyin": "shào",
+        "meaning": "giới thiệu",
+        "radical": "纟",
+        "radical_meaning": "tơ",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["撇折", "撇折", "提", "横折钩", "撇", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 纟 (tơ) và 召 (triệu) - kết nối, giới thiệu.",
+        "examples": [
+          {"cn": "介绍", "py": "jièshào", "vi": "giới thiệu"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "身",
+        "pinyin": "shēn",
+        "meaning": "thân thể",
+        "radical": "身",
+        "radical_meaning": "thân",
+        "structure": "chỉ sự",
+        "strokes": 7,
+        "stroke_order": ["撇", "竖", "横折钩", "横", "横", "横", "撇"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh thân người với đầu và hai chân.",
+        "examples": [
+          {"cn": "身体", "py": "shēntǐ", "vi": "sức khỏe"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "什",
+        "pinyin": "shén",
+        "meaning": "gì (trong 什么)",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 4,
+        "stroke_order": ["撇", "竖", "横", "竖"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 十 (mười) - từ để hỏi.",
+        "examples": [
+          {"cn": "什么", "py": "shénme", "vi": "cái gì"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "生",
+        "pinyin": "shēng",
+        "meaning": "sinh, sống",
+        "radical": "生",
+        "radical_meaning": "sinh",
+        "structure": "độc thể",
+        "strokes": 5,
+        "stroke_order": ["撇", "横", "横", "竖", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cây cỏ mọc lên từ đất - sự sống.",
+        "examples": [
+          {"cn": "学生", "py": "xuéshēng", "vi": "học sinh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "师",
+        "pinyin": "shī",
+        "meaning": "thầy, giáo viên",
+        "radical": "巾",
+        "radical_meaning": "khăn",
+        "structure": "chỉ sự",
+        "strokes": 6,
+        "stroke_order": ["竖", "撇", "横", "竖", "横折钩", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một đội quân (với cờ) - người chỉ huy, thầy.",
+        "examples": [
+          {"cn": "老师", "py": "lǎoshī", "vi": "giáo viên"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "十",
+        "pinyin": "shí",
+        "meaning": "mười",
+        "radical": "十",
+        "radical_meaning": "mười",
+        "structure": "độc thể",
+        "strokes": 2,
+        "stroke_order": ["横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cây gậy đếm - tượng trưng cho số 10.",
+        "examples": [
+          {"cn": "十个人", "py": "shí gè rén", "vi": "mười người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "时",
+        "pinyin": "shí",
+        "meaning": "thời gian, giờ",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["竖", "横折", "横", "横", "横", "竖钩", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 日 (mặt trời) và 寸 (tấc) - đo thời gian bằng bóng mặt trời.",
+        "examples": [
+          {"cn": "时间", "py": "shíjiān", "vi": "thời gian"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "识",
+        "pinyin": "shí",
+        "meaning": "biết, kiến thức",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "横折提", "横折", "横", "撇", "点", "斜钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 只 (chỉ) - biết, nhận thức.",
+        "examples": [
+          {"cn": "认识", "py": "rènshi", "vi": "quen biết"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "事",
+        "pinyin": "shì",
+        "meaning": "việc, chuyện",
+        "radical": "亅",
+        "radical_meaning": "móc",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["横", "竖", "横折", "横", "横折", "横", "横", "竖钩"],
+        "type": "hội ý",
+        "story": "Hình ảnh một bàn tay cầm bút - công việc, sự việc.",
+        "examples": [
+          {"cn": "事情", "py": "shìqíng", "vi": "việc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "试",
+        "pinyin": "shì",
+        "meaning": "thử, kiểm tra",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["点", "横折提", "横", "竖钩", "提", "斜钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 式 (thức) - thử nghiệm.",
+        "examples": [
+          {"cn": "考试", "py": "kǎoshì", "vi": "thi cử"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "视",
+        "pinyin": "shì",
+        "meaning": "nhìn, xem",
+        "radical": "礻",
+        "radical_meaning": "thần",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["点", "横撇", "竖", "点", "点", "撇", "竖弯钩", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 礻 (thần) và 见 (thấy) - nhìn thấy.",
+        "examples": [
+          {"cn": "电视", "py": "diànshì", "vi": "tivi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "是",
+        "pinyin": "shì",
+        "meaning": "là",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "hội ý",
+        "strokes": 9,
+        "stroke_order": ["竖", "横折", "横", "横", "横", "竖", "横", "撇", "捺"],
+        "type": "hội ý",
+        "story": "Gồm 日 (mặt trời) và 正 (đúng) - đúng như mặt trời chiếu sáng.",
+        "examples": [
+          {"cn": "我是学生", "py": "wǒ shì xuéshēng", "vi": "tôi là học sinh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "手",
+        "pinyin": "shǒu",
+        "meaning": "tay",
+        "radical": "手",
+        "radical_meaning": "tay",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["撇", "横", "横", "竖钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh bàn tay đang xòe ra.",
+        "examples": [
+          {"cn": "手机", "py": "shǒujī", "vi": "điện thoại"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "书",
+        "pinyin": "shū",
+        "meaning": "sách",
+        "radical": "乛",
+        "radical_meaning": "móc",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["横折", "横折钩", "竖", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh những trang sách xếp chồng lên nhau.",
+        "examples": [
+          {"cn": "书包", "py": "shūbāo", "vi": "cặp sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "树",
+        "pinyin": "shù",
+        "meaning": "cây",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["横", "竖", "撇", "点", "横撇", "点", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 木 (gỗ) và 对 (đối) - cây có thân và cành đối xứng.",
+        "examples": [
+          {"cn": "大树", "py": "dà shù", "vi": "cây lớn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "谁",
+        "pinyin": "shuí",
+        "meaning": "ai",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "横折提", "撇", "竖", "点", "横", "横", "横", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 隹 (chim) - hỏi về người.",
+        "examples": [
+          {"cn": "你是谁", "py": "nǐ shì shuí", "vi": "bạn là ai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "水",
+        "pinyin": "shuǐ",
+        "meaning": "nước",
+        "radical": "水",
+        "radical_meaning": "nước",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["竖钩", "横撇", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh dòng nước đang chảy.",
+        "examples": [
+          {"cn": "喝水", "py": "hē shuǐ", "vi": "uống nước"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "睡",
+        "pinyin": "shuì",
+        "meaning": "ngủ",
+        "radical": "目",
+        "radical_meaning": "mắt",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["竖", "横折", "横", "横", "横", "撇", "横", "竖", "横折", "横", "横", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 目 (mắt) và 垂 (thùy) - mắt rũ xuống -> ngủ.",
+        "examples": [
+          {"cn": "睡觉", "py": "shuìjiào", "vi": "ngủ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "说",
+        "pinyin": "shuō",
+        "meaning": "nói",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["点", "横折提", "点", "撇", "竖", "横折", "横", "撇", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 兑 (đổi) - nói chuyện để trao đổi.",
+        "examples": [
+          {"cn": "说话", "py": "shuōhuà", "vi": "nói chuyện"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "四",
+        "pinyin": "sì",
+        "meaning": "bốn",
+        "radical": "囗",
+        "radical_meaning": "bao vây",
+        "structure": "độc thể",
+        "strokes": 5,
+        "stroke_order": ["竖", "横折", "撇", "竖弯", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái miệng đang thở, sau được mượn làm số 4.",
+        "examples": [
+          {"cn": "四本书", "py": "sì běn shū", "vi": "bốn quyển sách"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "送",
+        "pinyin": "sòng",
+        "meaning": "tặng, tiễn",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["点", "撇", "横", "横", "撇", "点", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 关 (quan) - tiễn đưa, tặng quà.",
+        "examples": [
+          {"cn": "送礼物", "py": "sòng lǐwù", "vi": "tặng quà"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "诉",
+        "pinyin": "sù",
+        "meaning": "kể, tố cáo",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "横折提", "撇", "横", "竖钩", "点", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 斥 (xích) - kể lể, tố cáo.",
+        "examples": [
+          {"cn": "告诉", "py": "gàosu", "vi": "cho biết"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "岁",
+        "pinyin": "suì",
+        "meaning": "tuổi",
+        "radical": "山",
+        "radical_meaning": "núi",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["竖", "竖折", "竖", "撇", "横撇", "点"],
+        "type": "hội ý",
+        "story": "Gồm 山 (núi) và 夕 (tối) - năm tháng trôi qua như núi và hoàng hôn.",
+        "examples": [
+          {"cn": "几岁", "py": "jǐ suì", "vi": "mấy tuổi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "他",
+        "pinyin": "tā",
+        "meaning": "anh ấy",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["撇", "竖", "横折钩", "竖", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 也 (cũng) - người khác (nam).",
+        "examples": [
+          {"cn": "他是老师", "py": "tā shì lǎoshī", "vi": "anh ấy là giáo viên"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "她",
+        "pinyin": "tā",
+        "meaning": "cô ấy",
+        "radical": "女",
+        "radical_meaning": "nữ",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["撇点", "撇", "横", "横折钩", "竖", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 女 (nữ) và 也 (cũng) - người phụ nữ khác.",
+        "examples": [
+          {"cn": "她是医生", "py": "tā shì yīshēng", "vi": "cô ấy là bác sĩ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "太",
+        "pinyin": "tài",
+        "meaning": "quá, rất",
+        "radical": "大",
+        "radical_meaning": "lớn",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["横", "撇", "捺", "点"],
+        "type": "chỉ sự",
+        "story": "Người lớn (大) với một chấm nhỏ - quá lớn, rất.",
+        "examples": [
+          {"cn": "太大", "py": "tài dà", "vi": "quá to"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "体",
+        "pinyin": "tǐ",
+        "meaning": "thân thể",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["撇", "竖", "横", "竖", "撇", "捺", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 本 (gốc) - thân thể con người.",
+        "examples": [
+          {"cn": "身体", "py": "shēntǐ", "vi": "sức khỏe"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "天",
+        "pinyin": "tiān",
+        "meaning": "trời, ngày",
+        "radical": "大",
+        "radical_meaning": "lớn",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["横", "横", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Nét ngang phía trên chỉ trời, người (大) ở dưới.",
+        "examples": [
+          {"cn": "今天", "py": "jīntiān", "vi": "hôm nay"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "条",
+        "pinyin": "tiáo",
+        "meaning": "cái, con (lượng từ)",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "hội ý",
+        "strokes": 7,
+        "stroke_order": ["撇", "横撇", "捺", "横", "竖钩", "撇", "点"],
+        "type": "hội ý",
+        "story": "Hình ảnh một cành cây dài - lượng từ cho vật dài.",
+        "examples": [
+          {"cn": "一条鱼", "py": "yī tiáo yú", "vi": "một con cá"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "听",
+        "pinyin": "tīng",
+        "meaning": "nghe",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["竖", "横折", "横", "撇", "横", "竖钩", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 口 (miệng) và 斤 (rìu) - nghe tiếng rìu chặt.",
+        "examples": [
+          {"cn": "听音乐", "py": "tīng yīnyuè", "vi": "nghe nhạc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "同",
+        "pinyin": "tóng",
+        "meaning": "cùng, giống nhau",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["竖", "横折钩", "横", "竖", "横折", "横"],
+        "type": "hội ý",
+        "story": "Gồm 口 (miệng) và 一 (một) - cùng nói một lời -> giống nhau.",
+        "examples": [
+          {"cn": "同学", "py": "tóngxué", "vi": "bạn cùng lớp"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "图",
+        "pinyin": "tú",
+        "meaning": "hình, bản đồ",
+        "radical": "囗",
+        "radical_meaning": "bao vây",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["竖", "横折", "横", "撇", "捺", "点", "点", "横"],
+        "type": "hội ý",
+        "story": "Bên ngoài là bộ 囗 (bao vây), bên trong là 冬 (đông) - hình vẽ, bản đồ.",
+        "examples": [
+          {"cn": "地图", "py": "dìtú", "vi": "bản đồ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "外",
+        "pinyin": "wài",
+        "meaning": "bên ngoài, ngoài",
+        "radical": "夕",
+        "radical_meaning": "chiều tối",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["撇", "横撇", "点", "竖", "点"],
+        "type": "hội ý",
+        "story": "Gồm 夕 (tối) và 卜 (bói) - bên ngoài, ở ngoài.",
+        "examples": [
+          {"cn": "外面", "py": "wàimiàn", "vi": "bên ngoài"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "玩",
+        "pinyin": "wán",
+        "meaning": "chơi",
+        "radical": "王",
+        "radical_meaning": "ngọc",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["横", "横", "竖", "提", "横", "横", "撇", "竖弯钩"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 王 (ngọc) và 元 (nguyên) - chơi đồ ngọc -> vui chơi.",
+        "examples": [
+          {"cn": "好玩", "py": "hǎowán", "vi": "vui"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "晚",
+        "pinyin": "wǎn",
+        "meaning": "tối, muộn",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["竖", "横折", "横", "横", "撇", "横撇", "竖", "横折", "横", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 日 (mặt trời) và 免 (tránh) - mặt trời tránh -> tối.",
+        "examples": [
+          {"cn": "晚上", "py": "wǎnshang", "vi": "buổi tối"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "网",
+        "pinyin": "wǎng",
+        "meaning": "mạng, lưới",
+        "radical": "网",
+        "radical_meaning": "lưới",
+        "structure": "độc thể",
+        "strokes": 6,
+        "stroke_order": ["竖", "横折钩", "撇", "点", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh tấm lưới.",
+        "examples": [
+          {"cn": "上网", "py": "shàngwǎng", "vi": "lên mạng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "忘",
+        "pinyin": "wàng",
+        "meaning": "quên",
+        "radical": "心",
+        "radical_meaning": "tâm",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "横", "竖折", "点", "斜钩", "点", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 心 (tâm) và 亡 (vong) - tâm trí mất đi -> quên.",
+        "examples": [
+          {"cn": "忘记", "py": "wàngjì", "vi": "quên"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "文",
+        "pinyin": "wén",
+        "meaning": "văn, chữ viết",
+        "radical": "文",
+        "radical_meaning": "văn",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["点", "横", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh hoa văn, chữ viết.",
+        "examples": [
+          {"cn": "中文", "py": "Zhōngwén", "vi": "tiếng Trung"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "问",
+        "pinyin": "wèn",
+        "meaning": "hỏi",
+        "radical": "门",
+        "radical_meaning": "cửa",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["点", "竖", "横折钩", "竖", "横折", "横"],
+        "type": "hội ý",
+        "story": "Miệng (口) ở trước cửa (门) đang hỏi.",
+        "examples": [
+          {"cn": "问题", "py": "wèntí", "vi": "câu hỏi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "我",
+        "pinyin": "wǒ",
+        "meaning": "tôi",
+        "radical": "戈",
+        "radical_meaning": "giáo",
+        "structure": "hội ý",
+        "strokes": 7,
+        "stroke_order": ["撇", "横", "竖钩", "提", "斜钩", "撇", "点"],
+        "type": "hội ý",
+        "story": "Tay cầm giáo (戈) để tự vệ - 'tôi'.",
+        "examples": [
+          {"cn": "我是", "py": "wǒ shì", "vi": "tôi là"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "五",
+        "pinyin": "wǔ",
+        "meaning": "năm",
+        "radical": "二",
+        "radical_meaning": "hai",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["横", "竖", "横折", "横"],
+        "type": "chỉ sự",
+        "story": "Kết hợp thiên can và địa chi, tượng trưng cho số 5.",
+        "examples": [
+          {"cn": "五个人", "py": "wǔ gè rén", "vi": "năm người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "午",
+        "pinyin": "wǔ",
+        "meaning": "buổi trưa",
+        "radical": "十",
+        "radical_meaning": "mười",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["撇", "横", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh mặt trời ở đỉnh đầu - buổi trưa.",
+        "examples": [
+          {"cn": "中午", "py": "zhōngwǔ", "vi": "buổi trưa"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "西",
+        "pinyin": "xī",
+        "meaning": "phía tây",
+        "radical": "西",
+        "radical_meaning": "tây",
+        "structure": "chỉ sự",
+        "strokes": 6,
+        "stroke_order": ["横", "竖", "横折", "撇", "竖折", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh mặt trời lặn ở phía tây.",
+        "examples": [
+          {"cn": "西方", "py": "xīfāng", "vi": "phương tây"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "息",
+        "pinyin": "xī",
+        "meaning": "hơi thở, nghỉ ngơi",
+        "radical": "心",
+        "radical_meaning": "tâm",
+        "structure": "hội ý",
+        "strokes": 10,
+        "stroke_order": ["撇", "竖", "横折", "横", "横", "横", "横", "点", "斜钩", "点"],
+        "type": "hội ý",
+        "story": "Gồm 自 (mũi) và 心 (tim) - hơi thở từ mũi đến tim.",
+        "examples": [
+          {"cn": "休息", "py": "xiūxi", "vi": "nghỉ ngơi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "习",
+        "pinyin": "xí",
+        "meaning": "học tập, tập luyện",
+        "radical": "乛",
+        "radical_meaning": "móc",
+        "structure": "chỉ sự",
+        "strokes": 3,
+        "stroke_order": ["横折钩", "点", "提"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh con chim non tập bay - lặp đi lặp lại.",
+        "examples": [
+          {"cn": "学习", "py": "xuéxí", "vi": "học tập"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "洗",
+        "pinyin": "xǐ",
+        "meaning": "rửa, giặt",
+        "radical": "氵",
+        "radical_meaning": "nước",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["点", "点", "提", "撇", "横", "竖", "横折", "横", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 氵 (nước) và 先 (trước) - dùng nước để rửa.",
+        "examples": [
+          {"cn": "洗手", "py": "xǐ shǒu", "vi": "rửa tay"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "喜",
+        "pinyin": "xǐ",
+        "meaning": "thích, vui mừng",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 12,
+        "stroke_order": ["横", "竖", "横折", "横", "点", "撇", "横", "竖", "横折", "横", "横", "横"],
+        "type": "hội ý",
+        "story": "Gồm 士 (sĩ), 口 (miệng) và 口 (miệng) - vui mừng thể hiện qua lời nói.",
+        "examples": [
+          {"cn": "喜欢", "py": "xǐhuān", "vi": "thích"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "系",
+        "pinyin": "xì",
+        "meaning": "khoa, liên kết",
+        "radical": "糸",
+        "radical_meaning": "tơ",
+        "structure": "hội ý",
+        "strokes": 7,
+        "stroke_order": ["撇", "撇", "撇", "点", "点", "点", "点"],
+        "type": "hội ý",
+        "story": "Sợi tơ (糸) buộc lại - hệ thống, liên kết.",
+        "examples": [
+          {"cn": "关系", "py": "guānxì", "vi": "quan hệ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "下",
+        "pinyin": "xià",
+        "meaning": "dưới, xuống",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "chỉ sự",
+        "strokes": 3,
+        "stroke_order": ["横", "竖", "点"],
+        "type": "chỉ sự",
+        "story": "Nét ngang làm mốc, nét dọc ở phía dưới chỉ hướng 'dưới'.",
+        "examples": [
+          {"cn": "下面", "py": "xiàmiàn", "vi": "bên dưới"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "先",
+        "pinyin": "xiān",
+        "meaning": "trước, trước tiên",
+        "radical": "儿",
+        "radical_meaning": "con",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇", "横", "竖", "横", "撇", "竖弯钩"],
+        "type": "hội ý",
+        "story": "Người (儿) đi trước, ở phía trước.",
+        "examples": [
+          {"cn": "先走", "py": "xiān zǒu", "vi": "đi trước"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "现",
+        "pinyin": "xiàn",
+        "meaning": "hiện tại, xuất hiện",
+        "radical": "王",
+        "radical_meaning": "ngọc",
+        "structure": "chữ hình thanh",
+        "strokes": 8,
+        "stroke_order": ["横", "横", "竖", "提", "竖", "横折", "横", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 王 (ngọc) và 见 (thấy) - ngọc hiện ra, hiện tại.",
+        "examples": [
+          {"cn": "现在", "py": "xiànzài", "vi": "bây giờ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "想",
+        "pinyin": "xiǎng",
+        "meaning": "muốn, nghĩ, nhớ",
+        "radical": "心",
+        "radical_meaning": "tâm",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["横", "竖", "撇", "点", "竖", "横折", "横", "横", "横", "点", "斜钩", "点", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 心 (tâm) và 相 (tướng) - suy nghĩ trong tâm trí.",
+        "examples": [
+          {"cn": "我想你", "py": "wǒ xiǎng nǐ", "vi": "tôi nhớ bạn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "小",
+        "pinyin": "xiǎo",
+        "meaning": "nhỏ, bé",
+        "radical": "小",
+        "radical_meaning": "nhỏ",
+        "structure": "chỉ sự",
+        "strokes": 3,
+        "stroke_order": ["竖钩", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh ba hạt cát nhỏ - sự nhỏ bé.",
+        "examples": [
+          {"cn": "小学", "py": "xiǎoxué", "vi": "tiểu học"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "校",
+        "pinyin": "xiào",
+        "meaning": "trường học",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["横", "竖", "撇", "点", "点", "横", "撇", "点", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 木 (gỗ) và 交 (giao) - nơi giao lưu dưới tán cây.",
+        "examples": [
+          {"cn": "学校", "py": "xuéxiào", "vi": "trường học"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "笑",
+        "pinyin": "xiào",
+        "meaning": "cười",
+        "radical": "竹",
+        "radical_meaning": "tre",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["撇", "横", "点", "撇", "横", "点", "撇", "横", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 竹 (tre) và 夭 (yểu) - cây tre đung đưa như đang cười.",
+        "examples": [
+          {"cn": "微笑", "py": "wēixiào", "vi": "mỉm cười"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "些",
+        "pinyin": "xiē",
+        "meaning": "một số, vài",
+        "radical": "止",
+        "radical_meaning": "dừng",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["竖", "横", "竖", "提", "撇", "横", "横", "横"],
+        "type": "hội ý",
+        "story": "Gồm 此 (này) và 二 (hai) - một vài, một số.",
+        "examples": [
+          {"cn": "一些", "py": "yìxiē", "vi": "một vài"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "写",
+        "pinyin": "xiě",
+        "meaning": "viết",
+        "radical": "冖",
+        "radical_meaning": "mái nhà",
+        "structure": "chữ hình thanh",
+        "strokes": 5,
+        "stroke_order": ["点", "横钩", "横", "竖折折钩", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 冖 (mái nhà) và 与 (cho) - viết dưới mái nhà.",
+        "examples": [
+          {"cn": "写字", "py": "xiě zì", "vi": "viết chữ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "谢",
+        "pinyin": "xiè",
+        "meaning": "cảm ơn",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 12,
+        "stroke_order": ["点", "横折提", "撇", "横", "横", "横", "撇", "点", "撇", "点", "点", "撇"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 射 (bắn) - nói lời cảm ơn.",
+        "examples": [
+          {"cn": "谢谢", "py": "xièxie", "vi": "cảm ơn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "新",
+        "pinyin": "xīn",
+        "meaning": "mới",
+        "radical": "斤",
+        "radical_meaning": "rìu",
+        "structure": "chữ hình thanh",
+        "strokes": 13,
+        "stroke_order": ["点", "横", "点", "撇", "横", "竖", "撇", "点", "撇", "横", "横", "竖钩", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 斤 (rìu) và 亲 (thân) - chặt cây mới (tươi).",
+        "examples": [
+          {"cn": "新年", "py": "xīnnián", "vi": "năm mới"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "星",
+        "pinyin": "xīng",
+        "meaning": "sao, ngôi sao",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["竖", "横折", "横", "横", "撇", "横", "横", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 日 (mặt trời) và 生 (sinh) - ngôi sao sinh ra từ mặt trời.",
+        "examples": [
+          {"cn": "星期", "py": "xīngqī", "vi": "tuần"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "行",
+        "pinyin": "xíng",
+        "meaning": "đi, được (ok)",
+        "radical": "彳",
+        "radical_meaning": "bước",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇", "撇", "竖", "横", "横", "竖钩"],
+        "type": "hội ý",
+        "story": "Gồm 彳 (bước) và 亍 (bước) - bước đi, hành động.",
+        "examples": [
+          {"cn": "行吗", "py": "xíng ma", "vi": "được không"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "兴",
+        "pinyin": "xīng/xìng",
+        "meaning": "hưng thịnh, hào hứng",
+        "radical": "八",
+        "radical_meaning": "tám",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["点", "点", "撇", "横", "横", "撇折"],
+        "type": "hội ý",
+        "story": "Gồm 八 (chia) và 同 (cùng) - cùng nhau hưng thịnh.",
+        "examples": [
+          {"cn": "高兴", "py": "gāoxìng", "vi": "vui vẻ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "休",
+        "pinyin": "xiū",
+        "meaning": "nghỉ ngơi",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["撇", "竖", "横", "竖", "撇", "捺"],
+        "type": "hội ý",
+        "story": "Người (亻) dựa vào cây (木) - nghỉ ngơi.",
+        "examples": [
+          {"cn": "休息", "py": "xiūxi", "vi": "nghỉ ngơi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "学",
+        "pinyin": "xué",
+        "meaning": "học",
+        "radical": "子",
+        "radical_meaning": "con",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["点", "点", "撇", "点", "横钩", "横撇", "竖钩", "横"],
+        "type": "hội ý",
+        "story": "Đứa trẻ (子) dưới mái nhà (宀) đang học.",
+        "examples": [
+          {"cn": "学习", "py": "xuéxí", "vi": "học tập"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "样",
+        "pinyin": "yàng",
+        "meaning": "dáng vẻ, kiểu",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["横", "竖", "撇", "点", "点", "撇", "横", "横", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 木 (gỗ) và 羊 (dê) - hình dáng, kiểu mẫu.",
+        "examples": [
+          {"cn": "这样", "py": "zhèyàng", "vi": "như vậy"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "要",
+        "pinyin": "yào",
+        "meaning": "muốn, cần, sẽ",
+        "radical": "覀",
+        "radical_meaning": "che",
+        "structure": "hội ý",
+        "strokes": 9,
+        "stroke_order": ["横", "竖", "横折", "竖", "竖", "横", "横", "撇", "横"],
+        "type": "hội ý",
+        "story": "Gồm 覀 (che) và 女 (nữ) - muốn, cần, sẽ.",
+        "examples": [
+          {"cn": "要去", "py": "yào qù", "vi": "sẽ đi"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "爷",
+        "pinyin": "yé",
+        "meaning": "ông",
+        "radical": "父",
+        "radical_meaning": "cha",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["撇", "点", "撇", "捺", "横折钩", "竖"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 父 (cha) và 卩 (người) - ông (bố của bố).",
+        "examples": [
+          {"cn": "爷爷", "py": "yéye", "vi": "ông nội"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "也",
+        "pinyin": "yě",
+        "meaning": "cũng",
+        "radical": "乚",
+        "radical_meaning": "móc",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["横折钩", "竖", "竖弯钩"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái rìu hoặc cái móc - sau dùng chỉ 'cũng'.",
+        "examples": [
+          {"cn": "我也是", "py": "wǒ yě shì", "vi": "tôi cũng là"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "页",
+        "pinyin": "yè",
+        "meaning": "trang (sách)",
+        "radical": "页",
+        "radical_meaning": "trang",
+        "structure": "chỉ sự",
+        "strokes": 6,
+        "stroke_order": ["横", "撇", "竖", "横折", "撇", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh một trang sách hoặc tờ giấy.",
+        "examples": [
+          {"cn": "一页", "py": "yī yè", "vi": "một trang"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "一",
+        "pinyin": "yī",
+        "meaning": "một",
+        "radical": "一",
+        "radical_meaning": "một",
+        "structure": "độc thể",
+        "strokes": 1,
+        "stroke_order": ["横"],
+        "type": "chỉ sự",
+        "story": "Một nét ngang đơn giản tượng trưng cho số 1.",
+        "examples": [
+          {"cn": "一个人", "py": "yī gè rén", "vi": "một người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "衣",
+        "pinyin": "yī",
+        "meaning": "quần áo",
+        "radical": "衣",
+        "radical_meaning": "áo",
+        "structure": "độc thể",
+        "strokes": 6,
+        "stroke_order": ["点", "横", "撇", "竖提", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh chiếc áo choàng có cổ và tay.",
+        "examples": [
+          {"cn": "衣服", "py": "yīfu", "vi": "quần áo"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "医",
+        "pinyin": "yī",
+        "meaning": "bác sĩ, y học",
+        "radical": "匚",
+        "radical_meaning": "hộp",
+        "structure": "hội ý",
+        "strokes": 7,
+        "stroke_order": ["横", "撇", "横", "撇", "点", "竖折", "竖"],
+        "type": "hội ý",
+        "story": "Gồm 匚 (hộp) và 矢 (tên) - chữa bệnh, y học.",
+        "examples": [
+          {"cn": "医生", "py": "yīshēng", "vi": "bác sĩ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "影",
+        "pinyin": "yǐng",
+        "meaning": "bóng, hình ảnh",
+        "radical": "彡",
+        "radical_meaning": "lông",
+        "structure": "chữ hình thanh",
+        "strokes": 15,
+        "stroke_order": ["竖", "横折", "横", "横", "竖", "横折", "横", "横", "点", "横", "竖钩", "撇", "点", "撇", "撇撇"],
+        "type": "hình thanh",
+        "story": "Gồm 景 (cảnh) và 彡 (bóng) - bóng của cảnh vật.",
+        "examples": [
+          {"cn": "电影", "py": "diànyǐng", "vi": "phim"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "用",
+        "pinyin": "yòng",
+        "meaning": "dùng",
+        "radical": "用",
+        "radical_meaning": "dùng",
+        "structure": "chỉ sự",
+        "strokes": 5,
+        "stroke_order": ["撇", "横折钩", "横", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh vật dụng, công cụ để sử dụng.",
+        "examples": [
+          {"cn": "使用", "py": "shǐyòng", "vi": "sử dụng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "友",
+        "pinyin": "yǒu",
+        "meaning": "bạn",
+        "radical": "又",
+        "radical_meaning": "lại",
+        "structure": "hội ý",
+        "strokes": 4,
+        "stroke_order": ["横", "撇", "横撇", "捺"],
+        "type": "hội ý",
+        "story": "Hai bàn tay (又) bắt lấy nhau - tình bạn.",
+        "examples": [
+          {"cn": "朋友", "py": "péngyou", "vi": "bạn bè"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "有",
+        "pinyin": "yǒu",
+        "meaning": "có",
+        "radical": "月",
+        "radical_meaning": "thịt",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["横", "撇", "竖", "横折钩", "横", "横"],
+        "type": "hội ý",
+        "story": "Tay (又) cầm thịt (月) - có của cải.",
+        "examples": [
+          {"cn": "我有", "py": "wǒ yǒu", "vi": "tôi có"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "右",
+        "pinyin": "yòu",
+        "meaning": "bên phải",
+        "radical": "口",
+        "radical_meaning": "miệng",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["横", "撇", "竖", "横折", "横"],
+        "type": "hội ý",
+        "story": "Tay phải thường dùng để cầm thức ăn (口).",
+        "examples": [
+          {"cn": "右边", "py": "yòubiān", "vi": "bên phải"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "雨",
+        "pinyin": "yǔ",
+        "meaning": "mưa",
+        "radical": "雨",
+        "radical_meaning": "mưa",
+        "structure": "chỉ sự",
+        "strokes": 8,
+        "stroke_order": ["横", "点", "横撇", "竖", "点", "点", "点", "点"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh những giọt mưa đang rơi.",
+        "examples": [
+          {"cn": "下雨", "py": "xià yǔ", "vi": "trời mưa"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "语",
+        "pinyin": "yǔ",
+        "meaning": "ngôn ngữ",
+        "radical": "讠",
+        "radical_meaning": "nói",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["点", "横折提", "横折", "横", "横", "竖", "横折", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 讠 (nói) và 吾 (ta) - ngôn ngữ của chúng ta.",
+        "examples": [
+          {"cn": "汉语", "py": "Hànyǔ", "vi": "tiếng Hán"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "元",
+        "pinyin": "yuán",
+        "meaning": "nguyên, đồng (tiền)",
+        "radical": "二",
+        "radical_meaning": "hai",
+        "structure": "hội ý",
+        "strokes": 4,
+        "stroke_order": ["横", "横", "撇", "竖弯钩"],
+        "type": "hội ý",
+        "story": "Gồm 二 (hai) và 儿 (người) - đơn vị tiền tệ.",
+        "examples": [
+          {"cn": "一元", "py": "yī yuán", "vi": "một đồng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "远",
+        "pinyin": "yuǎn",
+        "meaning": "xa",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横", "横", "撇折", "点", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 元 (nguyên) - đi xa.",
+        "examples": [
+          {"cn": "远点", "py": "yuǎn diǎn", "vi": "xa một chút"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "院",
+        "pinyin": "yuàn",
+        "meaning": "viện, sân",
+        "radical": "阝",
+        "radical_meaning": "thành phố",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["横撇", "弯钩", "撇", "点", "横", "撇", "竖", "横折", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 阝 (thành) và 完 (hoàn) - nơi hoàn thành, viện.",
+        "examples": [
+          {"cn": "医院", "py": "yīyuàn", "vi": "bệnh viện"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "月",
+        "pinyin": "yuè",
+        "meaning": "tháng, mặt trăng",
+        "radical": "月",
+        "radical_meaning": "mặt trăng",
+        "structure": "độc thể",
+        "strokes": 4,
+        "stroke_order": ["撇", "横折钩", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh mặt trăng lưỡi liềm.",
+        "examples": [
+          {"cn": "一月", "py": "yī yuè", "vi": "tháng một"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "再",
+        "pinyin": "zài",
+        "meaning": "lại, một lần nữa",
+        "radical": "冂",
+        "radical_meaning": "khung",
+        "structure": "chỉ sự",
+        "strokes": 6,
+        "stroke_order": ["横", "竖", "横折钩", "竖", "横", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh cái vồ (lặp lại) - một lần nữa.",
+        "examples": [
+          {"cn": "再见", "py": "zàijiàn", "vi": "tạm biệt"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "在",
+        "pinyin": "zài",
+        "meaning": "ở, đang",
+        "radical": "土",
+        "radical_meaning": "đất",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["横", "撇", "竖", "横", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 土 (đất) và 才 (tài) - đang ở một nơi nào đó.",
+        "examples": [
+          {"cn": "在家", "py": "zài jiā", "vi": "ở nhà"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "早",
+        "pinyin": "zǎo",
+        "meaning": "sớm, buổi sáng",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "hội ý",
+        "strokes": 6,
+        "stroke_order": ["竖", "横折", "横", "横", "横", "竖"],
+        "type": "hội ý",
+        "story": "Mặt trời (日) vừa mọc - buổi sáng sớm.",
+        "examples": [
+          {"cn": "早上", "py": "zǎoshang", "vi": "buổi sáng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "怎",
+        "pinyin": "zěn",
+        "meaning": "thế nào",
+        "radical": "心",
+        "radical_meaning": "tâm",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["撇", "横", "竖", "横", "横", "点", "斜钩", "点", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 心 (tâm) và 乍 (chớ) - trong lòng nghĩ thế nào.",
+        "examples": [
+          {"cn": "怎么", "py": "zěnme", "vi": "thế nào"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "站",
+        "pinyin": "zhàn",
+        "meaning": "đứng, trạm",
+        "radical": "立",
+        "radical_meaning": "đứng",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "横", "点", "撇", "横", "竖", "横折", "横", "横", "竖"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 立 (đứng) và 占 (chiếm) - đứng tại vị trí.",
+        "examples": [
+          {"cn": "车站", "py": "chēzhàn", "vi": "trạm xe"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "找",
+        "pinyin": "zhǎo",
+        "meaning": "tìm",
+        "radical": "扌",
+        "radical_meaning": "tay",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["横", "竖钩", "提", "横", "斜钩", "撇", "点"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 扌 (tay) và 戈 (giáo) - dùng tay tìm kiếm.",
+        "examples": [
+          {"cn": "找人", "py": "zhǎo rén", "vi": "tìm người"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "这",
+        "pinyin": "zhè",
+        "meaning": "này",
+        "radical": "辶",
+        "radical_meaning": "đi",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["点", "横", "撇", "点", "点", "横折折撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 辶 (đi) và 文 (văn) - chỉ vật này.",
+        "examples": [
+          {"cn": "这个", "py": "zhège", "vi": "cái này"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "着",
+        "pinyin": "zhe",
+        "meaning": "(trợ từ tiếp diễn)",
+        "radical": "羊",
+        "radical_meaning": "dê",
+        "structure": "hội ý",
+        "strokes": 11,
+        "stroke_order": ["点", "撇", "横", "横", "横", "撇", "竖", "横折", "横", "横", "横"],
+        "type": "hội ý",
+        "story": "Gồm 羊 (dê) và 目 (mắt) - nhìn con dê, trạng thái đang diễn ra.",
+        "examples": [
+          {"cn": "看着", "py": "kàn zhe", "vi": "đang nhìn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "真",
+        "pinyin": "zhēn",
+        "meaning": "thật",
+        "radical": "目",
+        "radical_meaning": "mắt",
+        "structure": "hội ý",
+        "strokes": 10,
+        "stroke_order": ["横", "竖", "竖", "横折", "横", "横", "横", "横", "撇", "点"],
+        "type": "hội ý",
+        "story": "Gồm 匕 (thìa) và 目 (mắt) - nhìn thấy sự thật.",
+        "examples": [
+          {"cn": "真的", "py": "zhēn de", "vi": "thật sự"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "正",
+        "pinyin": "zhèng",
+        "meaning": "đúng, chính",
+        "radical": "止",
+        "radical_meaning": "dừng",
+        "structure": "chỉ sự",
+        "strokes": 5,
+        "stroke_order": ["横", "竖", "横", "竖", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh bàn chân đứng thẳng - đúng, chính xác.",
+        "examples": [
+          {"cn": "正确", "py": "zhèngquè", "vi": "đúng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "知",
+        "pinyin": "zhī",
+        "meaning": "biết",
+        "radical": "矢",
+        "radical_meaning": "tên",
+        "structure": "hội ý",
+        "strokes": 8,
+        "stroke_order": ["撇", "横", "横", "撇", "点", "竖", "横折", "横"],
+        "type": "hội ý",
+        "story": "Gồm 矢 (tên) và 口 (miệng) - lời nói như tên bắn, truyền đạt kiến thức.",
+        "examples": [
+          {"cn": "知道", "py": "zhīdào", "vi": "biết"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "中",
+        "pinyin": "zhōng",
+        "meaning": "giữa, trong",
+        "radical": "丨",
+        "radical_meaning": "nét dọc",
+        "structure": "chỉ sự",
+        "strokes": 4,
+        "stroke_order": ["竖", "横折", "横", "竖"],
+        "type": "chỉ sự",
+        "story": "Một vật bị xuyên qua ở giữa - vị trí ở giữa.",
+        "examples": [
+          {"cn": "中国", "py": "Zhōngguó", "vi": "Trung Quốc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "重",
+        "pinyin": "zhòng",
+        "meaning": "nặng",
+        "radical": "里",
+        "radical_meaning": "bên trong",
+        "structure": "hội ý",
+        "strokes": 9,
+        "stroke_order": ["撇", "横", "竖", "横折", "横", "横", "竖", "横", "横"],
+        "type": "hội ý",
+        "story": "Gồm 千 (nghìn) và 里 (dặm) - ngàn dặm nặng nề.",
+        "examples": [
+          {"cn": "很重", "py": "hěn zhòng", "vi": "rất nặng"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "住",
+        "pinyin": "zhù",
+        "meaning": "ở, sống",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["撇", "竖", "点", "横", "横", "竖", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 主 (chủ) - người chủ của ngôi nhà -> ở.",
+        "examples": [
+          {"cn": "住在北京", "py": "zhù zài Běijīng", "vi": "sống ở Bắc Kinh"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "准",
+        "pinyin": "zhǔn",
+        "meaning": "chuẩn, cho phép",
+        "radical": "冫",
+        "radical_meaning": "nước đá",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["点", "提", "点", "撇", "横", "竖", "横折", "横", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 冫 (nước đá) và 隹 (chim) - chuẩn xác.",
+        "examples": [
+          {"cn": "准备", "py": "zhǔnbèi", "vi": "chuẩn bị"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "桌",
+        "pinyin": "zhuō",
+        "meaning": "bàn",
+        "radical": "木",
+        "radical_meaning": "gỗ",
+        "structure": "chữ hình thanh",
+        "strokes": 10,
+        "stroke_order": ["竖", "横", "竖", "横折", "横", "横", "横", "竖", "撇", "捺"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 木 (gỗ) và 卓 (trác) - bàn làm từ gỗ.",
+        "examples": [
+          {"cn": "桌子", "py": "zhuōzi", "vi": "cái bàn"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "子",
+        "pinyin": "zǐ",
+        "meaning": "con (trai), hậu tố",
+        "radical": "子",
+        "radical_meaning": "con",
+        "structure": "độc thể",
+        "strokes": 3,
+        "stroke_order": ["横撇", "竖钩", "横"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh đứa trẻ với cái đầu to, hai tay giơ lên.",
+        "examples": [
+          {"cn": "儿子", "py": "érzi", "vi": "con trai"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "字",
+        "pinyin": "zì",
+        "meaning": "chữ",
+        "radical": "宀",
+        "radical_meaning": "mái nhà",
+        "structure": "chữ hình thanh",
+        "strokes": 6,
+        "stroke_order": ["点", "点", "横钩", "横撇", "竖钩", "横"],
+        "type": "hình thanh",
+        "story": "Đứa trẻ (子) học chữ trong nhà (宀).",
+        "examples": [
+          {"cn": "汉字", "py": "Hànzì", "vi": "chữ Hán"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "走",
+        "pinyin": "zǒu",
+        "meaning": "đi bộ",
+        "radical": "走",
+        "radical_meaning": "đi",
+        "structure": "chỉ sự",
+        "strokes": 7,
+        "stroke_order": ["横", "竖", "横", "竖", "横", "撇", "捺"],
+        "type": "chỉ sự",
+        "story": "Hình ảnh người đang bước đi.",
+        "examples": [
+          {"cn": "走路", "py": "zǒulù", "vi": "đi bộ"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "最",
+        "pinyin": "zuì",
+        "meaning": "nhất (so sánh nhất)",
+        "radical": "曰",
+        "radical_meaning": "nói",
+        "structure": "hội ý",
+        "strokes": 12,
+        "stroke_order": ["竖", "横折", "横", "横", "横", "竖", "横", "横", "横", "横", "横", "撇"],
+        "type": "hội ý",
+        "story": "Gồm 曰 (nói) và 取 (lấy) - lấy cái tốt nhất.",
+        "examples": [
+          {"cn": "最好", "py": "zuì hǎo", "vi": "tốt nhất"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "昨",
+        "pinyin": "zuó",
+        "meaning": "hôm qua",
+        "radical": "日",
+        "radical_meaning": "mặt trời",
+        "structure": "chữ hình thanh",
+        "strokes": 9,
+        "stroke_order": ["竖", "横折", "横", "横", "撇", "横", "竖", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 日 (mặt trời) và 乍 (chớ) - mặt trời vừa qua.",
+        "examples": [
+          {"cn": "昨天", "py": "zuótiān", "vi": "hôm qua"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "左",
+        "pinyin": "zuǒ",
+        "meaning": "bên trái",
+        "radical": "工",
+        "radical_meaning": "công",
+        "structure": "hội ý",
+        "strokes": 5,
+        "stroke_order": ["横", "撇", "横", "竖", "横"],
+        "type": "hội ý",
+        "story": "Tay trái (工) cầm công cụ, bên trái.",
+        "examples": [
+          {"cn": "左边", "py": "zuǒbiān", "vi": "bên trái"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "作",
+        "pinyin": "zuò",
+        "meaning": "làm, tác phẩm",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 7,
+        "stroke_order": ["撇", "竖", "撇", "横", "竖", "横", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 乍 (chớ) - người làm việc.",
+        "examples": [
+          {"cn": "工作", "py": "gōngzuò", "vi": "công việc"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "坐",
+        "pinyin": "zuò",
+        "meaning": "ngồi",
+        "radical": "土",
+        "radical_meaning": "đất",
+        "structure": "hội ý",
+        "strokes": 7,
+        "stroke_order": ["撇", "点", "撇", "点", "横", "竖", "横"],
+        "type": "hội ý",
+        "story": "Hai người (人) ngồi trên mặt đất (土).",
+        "examples": [
+          {"cn": "坐下", "py": "zuòxià", "vi": "ngồi xuống"}
+        ],
+        "practice": "________"
+      },
+      {
+        "hanzi": "做",
+        "pinyin": "zuò",
+        "meaning": "làm",
+        "radical": "亻",
+        "radical_meaning": "người",
+        "structure": "chữ hình thanh",
+        "strokes": 11,
+        "stroke_order": ["撇", "竖", "横", "竖", "横折", "横", "撇", "横", "撇", "捺", "横"],
+        "type": "hình thanh",
+        "story": "Gồm bộ 亻 (người) và 故 (cũ) - con người làm việc.",
+        "examples": [
+          {"cn": "做饭", "py": "zuò fàn", "vi": "nấu cơm"}
+        ],
+        "practice": "________"
+      }
+    ]
+  }
+}
