@@ -8,25 +8,44 @@
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Quicksand:wght@500;700&family=Noto+Sans+SC:wght@400;700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
         rel="stylesheet"
     />
-    <style>        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Be Vietnam Pro", "Noto Sans SC", sans-serif; }
-        body { background: #FFFAFC; display: flex; flex-direction: column; min-height: 100vh; }
-        
-        :root {
-            --primary-dark: #D97BD0;
-            --primary-light: #F5AACE;
-            --primary-very-light: #FEF2FF;
-            --red-600: #dc2626;
-            --red-500: #ef4444;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --text-muted: #a0526a;
-            --border: #F5DFFE;
-            --shadow-sm: 0 2px 12px rgba(212, 165, 255, 0.08);
-            --shadow-md: 0 8px 30px rgba(212, 165, 255, 0.15);
-            --success: #10b981;
-            --warning: #f59e0b;
-            --error: #ef4444;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Be Vietnam Pro", "Noto Sans SC", sans-serif;
         }
+        body {
+            background: #FFFAFC;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+      :root {
+    /* PRIMARY - Hồng chính */
+    --primary-dark: #D97BD0;      /* ← Sửa dòng này */
+    --primary-light: #F5AACE;     /* ← Sửa dòng này */
+    --primary-very-light: #FEF2FF; /* ← Sửa dòng này */
+    
+    /* SECONDARY - Red */
+    --red-600: #dc2626;
+    --red-500: #ef4444;
+    
+    /* NEUTRAL */
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #a0526a;
+    --border: #F5DFFE;
+    
+    /* SHADOWS - THÊM VÀO */
+    --shadow-sm: 0 2px 12px rgba(212, 165, 255, 0.08);
+    --shadow-md: 0 8px 30px rgba(212, 165, 255, 0.15);
+    
+    /* FEEDBACK */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+}
 
         /* ===== LOGIN ===== */
         #login-overlay {
@@ -73,6 +92,275 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* ===== LESSON TOOLTIP ===== */
+        .lesson-item {
+            position: relative; /* QUAN TRỌNG: để tooltip hoạt động */
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: #4a5568;
+            border-left: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+                z-index: 20; /* ← THÊM DÒNG NÀY */
+        }
+        .lesson-item:hover {
+            background: #fdf2f8;
+            color: var(--primary-dark);
+        }
+        .lesson-item.active {
+    background: #fdf2f8;
+    color: var(--primary-dark);
+    font-weight: 600;
+    border-left-color: var(--primary-dark);
+}
+        .lesson-item .lesson-num {
+            background: #fce7f3;
+            color: var(--primary-dark);
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 10px;
+            min-width: 28px;
+            text-align: center;
+        }
+        .lesson-item.active .lesson-num {
+            background: #F8BBD0;
+            color: white;
+        }
+        /* ===== TOOLTIP SHOW ON HOVER ===== */
+.lesson-item:hover .lesson-item-tooltip {
+    display: block !important;
+    animation: fadeIn 0.3s ease;
+}
+
+.lesson-item-tooltip:hover {
+    display: block !important;
+}
+        .lesson-item-tooltip .tooltip-title {
+            padding: 8px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+                        letter-spacing: 0.5px;
+        }
+        .lesson-item-tooltip .tooltip-item {
+            padding: 6px 14px;
+            font-size: 12px;
+            color: #4a5568;
+            border-left: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lesson-item-tooltip .tooltip-item:hover {
+            background: #fdf2f8;
+            color: var(--primary-dark);
+            border-left-color: #ec4899;
+            padding-left: 18px;
+        }
+
+        /* ===== HIGHLIGHT ===== */
+        .highlighted {
+            background-color: #ffe0b2 !important;
+            padding: 2px 4px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .highlighted:hover { opacity: 0.8; box-shadow: 0 0 0 2px rgba(0,0,0,0.1); }
+        .highlighted::after {
+            content: '✖';
+            position: absolute;
+            top: -12px;
+            right: -8px;
+            font-size: 10px;
+            color: #f44336;
+            background: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .highlighted:hover::after { display: flex; }
+
+        .highlight-menu {
+               width: 80px; /* Đặt width cố định để tính toán dễ hơn */
+                text-align: center;
+            position: fixed;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            padding: 8px;
+            z-index: 100000;
+            display: none;
+            border: 1px solid #e0e0e0;
+            gap: 6px;
+            flex-wrap: wrap;
+            max-width: 200px;
+        }
+        .highlight-menu .delete-option {
+                width: 100%;
+            padding: 4px 10px;
+            border: none;
+            border-radius: 8px;
+            background: #f44336;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .highlight-menu .delete-option:hover {
+            background: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        .highlight-toolbar {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            z-index: 99999;
+            border: 1px solid #e0e0e0;
+            display: none;
+            max-width: 280px;
+            flex-wrap: wrap;
+            gap: 3px;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+        .highlight-toolbar>div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+        .highlight-toolbar button {
+    background: #F5AACE; /* Hồng pastel */
+            font-size: 11px !important;
+            padding: 4px 10px !important;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .highlight-toolbar button:hover { transform: scale(1.05); }
+#highlightToggle {
+    background: #F5AACE; /* Hồng pastel */
+}
+        #toggleToolbarBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+    background: #F5AACE; /* Hồng pastel */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+            z-index: 100000;
+            transition: all 0.3s ease;
+        }
+        #toggleToolbarBtn:hover { transform: scale(1.1); }
+
+        /* ===== FLASHCARD ===== */
+        .flashcard-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .flashcard-modal.active { display: flex; }
+        .flashcard-box {
+            perspective: 1000px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            min-height: 280px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .flashcard-face {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flashcard-face.flipped {
+    transform: rotateY(180deg);
+}
+.flashcard-front {
+    backface-visibility: hidden;
+}
+.flashcard-back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+        .flashcard-box .card-face {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 20px 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flashcard-box .card-face .cn { font-size: 40px; }
+        .flashcard-box .card-face .vi { font-size: 28px; color: #388e3c; }
+        .flashcard-box .card-count { color: #999; font-size: 13px; margin-top: 10px; }
+        .flashcard-box .flashcard-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .flashcard-box .flashcard-actions button {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .flashcard-box .flashcard-actions .btn-show { background: #4caf50; color: white; }
+        .flashcard-box .flashcard-actions .btn-close { background: #f44336; color: white; }
+        .flashcard-box .flashcard-actions button:hover { transform: scale(1.05); }
 
             /* ===== USER INFO ===== */
         .user-info {
@@ -101,7 +389,6 @@
             font-size: 13px;
             transition: all 0.3s ease;
         }
-
 
         /* ===== HEADER ===== */
         .header {
@@ -155,6 +442,7 @@
             border: 1.5px solid #fbcfe8;
             transition: all 0.3s ease;
             position: relative;
+                z-index: 1001; /* ← THÊM DÒNG NÀY */
         }
         .search-box:focus-within {
             border-color: #ec4899;
@@ -185,6 +473,13 @@
         .search-box button:hover {       background: var(--primary-dark) !important;  }
 
         .search-results-dropdown {
+   position: fixed; /* ← SỬA THÀNH fixed */
+    top: auto; /* ← SỬA */
+    right: auto; /* ← SỬA */
+    left: auto; /* ← SỬA */
+    width: 350px; /* ← SỬA: width cố định */
+    max-width: 350px; /* ← SỬA: max-width cố định */
+    min-width: 280px; /* ← THÊM: min-width */
     background: white;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
@@ -232,7 +527,6 @@
     color: #64748b;
     margin-top: 2px;
 }
-
 
         /* ===== HERO ===== */
         .hero-section {
@@ -324,7 +618,6 @@
         .hero-info .achievement-item .icon { font-size: 13px; }
         .hero-info .achievement-item strong { color: var(--primary-dark); }
 
-
         /* ===== FEATURES ===== */
         .features-section {
             padding: 30px 40px 15px;
@@ -408,7 +701,6 @@
             font-weight: 700;
         }
 
-
         /* ===== HSK NAV ===== */
         .hsk-nav-wrapper {
             max-width: 1200px;
@@ -451,7 +743,6 @@ background: white;
             box-shadow: 0 2px 12px rgba(236, 72, 153, 0.3);
         }
 
-
         /* ===== CONTENT ===== */
         .content-area {
             max-width: 1200px;
@@ -482,43 +773,291 @@ background: white;
             color: var(--primary-dark);
         }
 
-
-        /* ===== LESSON TOOLTIP ===== */
-        .lesson-item {
-            position: relative; /* QUAN TRỌNG: để tooltip hoạt động */
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            color: #4a5568;
-            border-left: 3px solid transparent;
+        /* ===== LESSON ===== */
+        .lesson-wrapper {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            gap: 24px;
+            align-items: flex-start;
         }
-        .lesson-item:hover {
+
+    .lesson-sidebar {
+    width: 280px;
+            min-width: 240px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #fce7f3;
+    box-shadow: 0 2px 12px rgba(212, 165, 255, 0.08);
+    padding: 12px 0;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden; /* Ẩn thanh ngang */
+    z-index: 10;
+}
+
+/* CUỘN ĐẸP */
+.lesson-sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+.lesson-sidebar::-webkit-scrollbar-track {
+    background: #fce7f3;
+    border-radius: 4px;
+}
+.lesson-sidebar::-webkit-scrollbar-thumb {
+    background: #ec4899;
+    border-radius: 4px;
+}
+
+.lesson-sidebar .sidebar-title {
+    padding: 8px 20px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+        .lesson-sidebar .lesson-item {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #4a5568;
+    border-left: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 20;
+            pointer-events: auto;
+}
+.lesson-sidebar .lesson-item:hover {
+    background: #fdf2f8;
+    color: #ec4899;
+}
+
+.lesson-sidebar .lesson-item.active {
+    background: #fdf2f8;
+    color: #ec4899;
+    font-weight: 600;
+    border-left-color: #ec4899;
+}
+
+.lesson-sidebar .lesson-item .lesson-num {
+    background: #fce7f3;
+    color: #ec4899;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    min-width: 28px;
+    text-align: center;
+}
+
+.lesson-sidebar .lesson-item.active .lesson-num {
+    background: #ec4899;
+    color: white;
+}
+
+/* TOOLTIP */
+/* TOOLTIP - ĐỊNH NGHĨA DUY NHẤT */
+.lesson-sidebar .lesson-item-tooltip {
+    position: fixed;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    border: 1px solid #fce7f3;
+    z-index: 999999;
+    display: none;
+    min-width: 150px;
+    max-width: 200px;
+    word-wrap: break-word;
+    pointer-events: auto;
+}
+
+.lesson-sidebar .lesson-item:hover .lesson-item-tooltip {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+        /* Khi tooltip đang hiển thị, vẫn giữ hover trên lesson-item */
+.lesson-sidebar .lesson-item-tooltip:hover {
+    display: block;
+}
+        .lesson-main { flex: 1; min-width: 0; max-width: 100%;}
+
+        .lesson {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .lesson.active { display: block; }
+
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #FFD1DC;
+    box-shadow: 0 2px 12px rgba(212, 165, 255, 0.06);
+        }
+
+        .tab-nav {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 0;
+            background: white;
+            padding: 8px 12px 0 12px;
+            border-radius: 14px 14px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .tab-btn:hover {
             background: #fdf2f8;
             color: var(--primary-dark);
         }
-        .lesson-item.active {
-    background: #fdf2f8;
+        .tab-btn.active {
+            background: #FFF5FF;
     color: var(--primary-dark);
-    font-weight: 600;
-    border-left-color: var(--primary-dark);
-}
-        .lesson-item .lesson-num {
-            background: #fce7f3;
-            color: var(--primary-dark);
-            font-size: 10px;
             font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 10px;
-            min-width: 28px;
-            text-align: center;
         }
-        .lesson-item.active .lesson-num {
-            background: #F8BBD0;
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15%;
+            width: 70%;
+            height: 3px;
+    background: var(--primary-light) !important; /* ← Sửa CSS var */
+            border-radius: 3px 3px 0 0;
+        }
+
+        .tab-content {
+            background: white;
+            border-radius: 0 0 14px 14px;
+            border: 1px solid var(--border);
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+        .tab-pane {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .tab-pane.active { display: block; }
+
+        .grammar {
+                   border-left-color: #E9D5FF !important;  /* Tím pastel */
+            padding-left: 16px;
+            margin-bottom: 20px;
+        }
+        .grammar h3 {
+            color: var(--primary-dark);
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .subcard {
+              background: #FEF2FF;            /* Hồng bg nhạt */
+    border-left: 4px solid #E9D5FF; /* Tím pastel */
+            border-left: 4px solid #ec4899;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 14px 0;
+        }
+        .subcard .label {
+            font-weight: 600;
+            color: var(--primary-dark);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+        .subcard p { margin-top: 4px; line-height: 1.6; font-size: 14px; }
+
+        .example {
+background: #FFFAFC;
+    border: 1px solid #FFD1DC;            
+            padding: 16px;
+            border-radius: 10px;
+            margin-top: 12px;
+            line-height: 1.8;
+        }
+        .example-label {
+            color: var(--primary-dark);
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 4px;
+            font-size: 14px;
+        }
+
+        .example-with-audio {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+ background: #FFFAFC;
+    border: 1px solid #FFD1DC;
+            border-radius: 8px;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+        .example-with-audio:hover {
+            background: #FFF0F5;
+    border-color: #F8BBD0;
+        }
+        .example-with-audio .text-group { flex: 1; }
+        .example-with-audio .text-group .cn {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            font-family: "Kaiti", "SimSun", sans-serif;
+        }
+        .example-with-audio .text-group .py {
+            display: block;
+            font-size: 13px;
+            color: #db2777;
+            margin: 2px 0;
+        }
+        .example-with-audio .text-group .vi {
+            display: block;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .audio-btn {
+    background: var(--primary-light) !important; /* Sử dụng var cũ */
+            border: none;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
             color: white;
+    box-shadow: 0 4px 14px rgba(212, 165, 255, 0.4) !important;
+        }
+        .audio-btn:hover {
+    background: #C084FC !important;
+            transform: scale(1.1);
         }
 
         /* ===== EXERCISE ===== */
@@ -654,209 +1193,6 @@ background: white;
         .vocab-item .cn { font-size: 16px; display: block; }
         .vocab-item .py { font-size: 10px; color: #db2777; }
 
-
-        /* ===== HIGHLIGHT ===== */
-        .highlighted {
-            background-color: #ffe0b2 !important;
-            padding: 2px 4px;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        .highlighted:hover { opacity: 0.8; box-shadow: 0 0 0 2px rgba(0,0,0,0.1); }
-        .highlighted::after {
-            content: '✖';
-            position: absolute;
-            top: -12px;
-            right: -8px;
-            font-size: 10px;
-            color: #f44336;
-            background: white;
-            border-radius: 50%;
-            width: 16px;
-            height: 16px;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .highlighted:hover::after { display: flex; }
-
-        .highlight-menu {
-               width: 80px; /* Đặt width cố định để tính toán dễ hơn */
-                text-align: center;
-            position: fixed;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            padding: 8px;
-            z-index: 100000;
-            display: none;
-            border: 1px solid #e0e0e0;
-            gap: 6px;
-            flex-wrap: wrap;
-            max-width: 200px;
-        }
-        .highlight-menu .delete-option {
-                width: 100%;
-            padding: 4px 10px;
-            border: none;
-            border-radius: 8px;
-            background: #f44336;
-            color: white;
-            cursor: pointer;
-            font-size: 12px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        .highlight-menu .delete-option:hover {
-            background: #d32f2f;
-            transform: scale(1.05);
-        }
-
-        .highlight-toolbar {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: white;
-            padding: 8px 12px;
-            border-radius: 14px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            z-index: 99999;
-            border: 1px solid #e0e0e0;
-            display: none;
-            max-width: 280px;
-            flex-wrap: wrap;
-            gap: 3px;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-        }
-        .highlight-toolbar>div {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: center;
-        }
-        .highlight-toolbar button {
-    background: #F5AACE; /* Hồng pastel */
-            font-size: 11px !important;
-            padding: 4px 10px !important;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .highlight-toolbar button:hover { transform: scale(1.05); }
-#highlightToggle {
-    background: #F5AACE; /* Hồng pastel */
-}
-        #toggleToolbarBtn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-    background: #F5AACE; /* Hồng pastel */
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
-            z-index: 100000;
-            transition: all 0.3s ease;
-        }
-        #toggleToolbarBtn:hover { transform: scale(1.1); }
-
-
-        /* ===== FLASHCARD ===== */
-        .flashcard-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 999999;
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        .flashcard-modal.active { display: flex; }
-        .flashcard-box {
-            perspective: 1000px;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            min-height: 280px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            position: relative;
-        }
-        .flashcard-face {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.flashcard-face.flipped {
-    transform: rotateY(180deg);
-}
-.flashcard-front {
-    backface-visibility: hidden;
-}
-.flashcard-back {
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    position: absolute;
-    width: 100%;
-    text-align: center;
-}
-        .flashcard-box .card-face {
-            font-size: 36px;
-            font-weight: 700;
-            margin: 20px 0;
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .flashcard-box .card-face .cn { font-size: 40px; }
-        .flashcard-box .card-face .vi { font-size: 28px; color: #388e3c; }
-        .flashcard-box .card-count { color: #999; font-size: 13px; margin-top: 10px; }
-        .flashcard-box .flashcard-actions {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        .flashcard-box .flashcard-actions button {
-            padding: 10px 24px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        .flashcard-box .flashcard-actions .btn-show { background: #4caf50; color: white; }
-        .flashcard-box .flashcard-actions .btn-close { background: #f44336; color: white; }
-        .flashcard-box .flashcard-actions button:hover { transform: scale(1.05); }
-
-
         /* ===== LOADING ===== */
         #loading {
             text-align: center;
@@ -879,7 +1215,6 @@ background: white;
             from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
 
         /* ===== HSK COLORS - ĐỒNG BỘ MÀU ===== */
 .hsk1 .feature-card.active { border-color: #C8E6C9 !important; }
@@ -935,7 +1270,92 @@ background: white;
 .hsk6 .subcard .label { color: #D97BD0 !important; }
 .hsk6 .audio-btn { background: #F5AACE !important; }
 .hsk6 .nav button { background: #E892BE !important; }
+        /* ===== TITLE & BORDER OVERRIDE ===== */
+/* HSK 1 */
+.hsk1 .grammar { border-left: 4px solid #C8E6C9 !important; }
+.hsk1 .grammar h3 { color: #059669 !important; }
+.hsk1 .exercise-item { border-left: 4px solid #C8E6C9 !important; }
 
+/* HSK 2 */
+.hsk2 .grammar { border-left: 4px solid #FED7AA !important; }
+.hsk2 .grammar h3 { color: #D97706 !important; }
+.hsk2 .exercise-item { border-left: 4px solid #FED7AA !important; }
+
+/* HSK 3 */
+.hsk3 .grammar { border-left: 4px solid #FBCFE8 !important; }
+.hsk3 .grammar h3 { color: #BE185D !important; }
+.hsk3 .exercise-item { border-left: 4px solid #FBCFE8 !important; }
+
+/* HSK 4 */
+.hsk4 .grammar { border-left: 4px solid #E9D5FF !important; }
+.hsk4 .grammar h3 { color: #7C3AED !important; }
+.hsk4 .exercise-item { border-left: 4px solid #E9D5FF !important; }
+
+/* HSK 5 */
+.hsk5 .grammar { border-left: 4px solid #BAE6FD !important; }
+.hsk5 .grammar h3 { color: #0369A1 !important; }
+.hsk5 .exercise-item { border-left: 4px solid #BAE6FD !important; }
+
+/* HSK 6 */
+.hsk6 .grammar { border-left: 4px solid #F5AACE !important; }
+.hsk6 .grammar h3 { color: #D97BD0 !important; }
+.hsk6 .exercise-item { border-left: 4px solid #F5AACE !important; }
+        /* ===== TAB BUTTON ACTIVE TITLE COLOR ===== */
+/* HSK 1 */
+.hsk1 .tab-btn.active { color: #059669 !important; }
+
+/* HSK 2 */
+.hsk2 .tab-btn.active { color: #D97706 !important; }
+
+/* HSK 3 */
+.hsk3 .tab-btn.active { color: #BE185D !important; }
+
+/* HSK 4 */
+.hsk4 .tab-btn.active { color: #7C3AED !important; }
+
+/* HSK 5 */
+.hsk5 .tab-btn.active { color: #0369A1 !important; }
+
+/* HSK 6 */
+.hsk6 .tab-btn.active { color: #D97BD0 !important; }
+
+        /* ===== TAB BUTTON HOVER TITLE COLOR ===== */
+/* HSK 1 */
+.hsk1 .tab-btn:hover { color: #059669 !important; }
+
+/* HSK 2 */
+.hsk2 .tab-btn:hover { color: #D97706 !important; }
+
+/* HSK 3 */
+.hsk3 .tab-btn:hover { color: #BE185D !important; }
+
+/* HSK 4 */
+.hsk4 .tab-btn:hover { color: #7C3AED !important; }
+
+/* HSK 5 */
+.hsk5 .tab-btn:hover { color: #0369A1 !important; }
+
+/* HSK 6 */
+.hsk6 .tab-btn:hover { color: #D97BD0 !important; }
+
+        /* ===== EXAMPLE LABEL COLOR ===== */
+/* HSK 1 */
+.hsk1 .example-label { color: #059669 !important; }
+
+/* HSK 2 */
+.hsk2 .example-label { color: #D97706 !important; }
+
+/* HSK 3 */
+.hsk3 .example-label { color: #BE185D !important; }
+
+/* HSK 4 */
+.hsk4 .example-label { color: #7C3AED !important; }
+
+/* HSK 5 */
+.hsk5 .example-label { color: #0369A1 !important; }
+
+/* HSK 6 */
+.hsk6 .example-label { color: #D97BD0 !important; }
     /* ===== RESPONSIVE DESIGN ===== */
 
 /* TABLET & MOBILE (max 1024px) */
@@ -946,74 +1366,80 @@ background: white;
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     
     .lesson-wrapper {
-        flex-direction: column;
-        gap: 16px;
-         width: 100%;
+        flex-direction: column !important;
+        gap: 16px !important;
+        display: flex !important; /* ← THÊM DÒNG NÀY */
+         width: 100% !important;
     }
     
     .lesson-sidebar {
-        width: 100%;
-        min-width: unset;
-        max-height: 200px;
-        position: relative;
-        top: auto;
-        display: flex;
-        flex-wrap: wrap;
+        width: 100% !important;
+        min-width: unset !important;
+        max-height: 200px !important;
+        position: relative !important;
+        top: auto !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
         padding: 8px !important;
-        gap: 4px;
-        overflow-y: auto;
-        border: 1px solid #fce7f3;
-        order: 1;
+        gap: 4px !important;
+        overflow-y: auto !important;
+        border: 1px solid #fce7f3 !important;
+        order: 1 !important;
+        flex-shrink: 1 !important; /* ← THÊM DÒNG NÀY */
+        flex: 0 1 100% !important; /* ← THÊM DÒNG NÀY */
+        box-sizing: border-box !important; /* ← THÊM DÒNG NÀY */
     }
     
     .lesson-main {
-        order: 2;
-        flex: 1 1 100%;
-        min-width: 0;
-        max-width: 100%;  
-        width: 100%; 
+        order: 2 !important;
+        flex: 1 1 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;  
+        width: 100% !important; 
+                box-sizing: border-box !important; /* ← THÊM DÒNG NÀY */
+        overflow: hidden !important; /* ← THÊM DÒNG NÀY - tránh tràn nội dung */
     }
     
-    .lesson-sidebar .sidebar-title { display: none; }
+    .lesson-sidebar .sidebar-title { display: none !important; }
     
     .lesson-sidebar .lesson-item {
-        flex: 0 0 auto;
-        width: auto;
-        border-left: none;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        border-left: none !important;
         padding: 6px 14px !important;
-        position: relative;
+        position: relative !important;
         margin: 0 !important;
         background: #f8f9fa !important;
         border-radius: 6px !important;
-        pointer-events: auto;
+        pointer-events: auto !important;
     }
     
     .lesson-sidebar .lesson-item .lesson-num,
     .lesson-sidebar .lesson-item > span {
-        pointer-events: auto;
+        pointer-events: auto !important;
     }
     
     .lesson-sidebar .lesson-item.active {
-        border-left: none;
-        border-bottom: 2px solid #ec4899;
+        border-left: none !important;
+        border-bottom: 2px solid #ec4899 !important;
         background: #fdf2f8 !important;
     }
     
     .lesson-sidebar .lesson-item .lesson-num { 
-        display: none; 
+        display: none !important; 
     }
     
     .lesson-sidebar .lesson-item .lesson-item-tooltip {
-        left: auto;
-        right: 0;
-        top: 100%;
-        margin-left: 0;
-        margin-top: 4px;
-        min-width: 200px;
-        max-height: 300px;
-        overflow-y: auto;
+        left: auto !important;
+        right: 0 !important;
+        top: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 4px !important;
+        min-width: 200px !important;
+        max-height: 300px !important;
+        overflow-y: auto !important;
         background: white !important;
-        border: 1px solid #fce7f3;
+        border: 1px solid #fce7f3 !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
     }
     
@@ -1052,9 +1478,9 @@ background: white;
     
     /* ✅ GỘP VÀO ĐÂY - KHÔNG LỒNG MEDIA QUERY */
     .lesson-sidebar { 
-        max-height: 180px; 
-        display: flex; 
-        flex-wrap: wrap; 
+        max-height: 180px !important; 
+        display: flex !important; 
+        flex-wrap: wrap !important; 
     }
     .lesson-sidebar .lesson-item { 
         padding: 6px 12px !important; 
@@ -1075,7 +1501,7 @@ background: white;
     
     #toggleToolbarBtn { bottom: 16px; right: 16px; width: 48px; height: 48px; font-size: 20px; }
     .user-info, .logout-btn { top: 70px !important; right: 16px !important; font-size: 11px; }
-    .logout-btn { right: 100px; }
+    .logout-btn { right: 100px !important; }
 }
     
 /* SMALL PHONE (max 480px) */
@@ -1091,624 +1517,355 @@ background: white;
     .lesson-sidebar .lesson-item-tooltip { width: calc(100vw - 24px); max-width: 220px; }
 }
 
+/* ===== PORTRAIT MODE OPTIMIZATION ===== */
+/* iPad & Tablet trong chế độ PORTRAIT (max 900px chiều ngang) */
+@media (max-width: 900px) and (orientation: portrait) {
+    /* Tăng font size cho dễ đọc */
+    body { font-size: 16px; line-height: 1.6; }
+    
+    /* Header tối ưu */
+    .header {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+    }
+    .logo-area h1 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .logo-area h1 span {
+        font-size: 13px;
+    }
+    .avatar {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    /* Search box fullwidth */
+    .search-box {
+        width: calc(100% - 20px);
+        max-width: 300px;
+    }
+    .search-box input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    .search-box button {
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+    
+    /* Hero section tối ưu */
+    .hero-section {
+        padding: 16px 12px;
+    }
+    .hero-section .container {
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    .hero-avatar img {
+        width: 100%;
+        height: 100%;
+    }
+    .hero-info {
+        text-align: center;
+        width: 100%;
+    }
+    .hero-info h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    .hero-info .desc {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+    .achievements {
+        gap: 8px;
+    }
+    .achievement-item {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    /* Features section */
+    .features-section {
+        padding: 16px 12px;
+    }
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+    .section-title small {
+        font-size: 14px;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .feature-card {
+        padding: 16px;
+        font-size: 15px;
+    }
+    .feature-icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+    
+    /* Navigation tối ưu */
+    .hsk-nav-wrapper {
+        max-width: 100%;
+        padding: 0 12px 8px;
+        width: 100%;
+    }
+    .hsk-nav {
+        padding: 10px 12px;
+        gap: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 12px;
+    }
+    .hsk-item {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    /* Content area tối ưu */
+    .content-area {
+        max-width: 100%;
+        padding: 12px 12px 24px;
+        width: 100%;
+    }
+    
+    /* Back button */
+    .back-home {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Lesson sidebar - horizontal scroll trên mobile */
+    .lesson-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: stretch !important;
+    }
+    .lesson-sidebar {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        max-height: none !important;
+        width: 100% !important;
+        position: relative !important;
+        top: auto !important;
+    }
+    .lesson-item {
+        padding: 12px 16px;
+        font-size: 14px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .lesson-item .lesson-num {
+        min-width: 32px;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 16px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+    }
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    /* Tabs */
+    .tab-nav {
+        padding: 8px 8px 0;
+        gap: 4px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tab-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+        min-height: 40px;
+        border-radius: 10px 10px 0 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .tab-content {
+        padding: 14px;
+        font-size: 14px;
+    }
+    
+    /* Text content */
+    .cn {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .vi {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .pinyin {
+        font-size: 12px;
+    }
+    
+    /* Examples */
+    .example-with-audio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+    .example-with-audio .text-group .cn {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .example-with-audio .text-group .vi {
+        font-size: 13px;
+    }
+    
+    /* Buttons */
+    button, input[type="button"], input[type="submit"] {
+        min-height: 44px;
+        font-size: 14px;
+        padding: 10px 16px !important;
+    }
+    
+    /* Audio button */
+    .btn-audio {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 8px !important;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    
+    /* Toolbar */
+    #toggleToolbarBtn {
+        bottom: 16px;
+        right: 16px;
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+    .highlight-toolbar {
+        padding: 12px !important;
+        border-radius: 14px;
+    }
+    .toolbar-row button {
+        padding: 8px 12px !important;
+        font-size: 12px;
+        min-height: 36px;
+    }
+    
+    /* Login modal */
+    .login-box {
+        padding: 32px 20px;
+        max-width: 90%;
+        border-radius: 16px;
+    }
+    .login-box h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .login-box p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .google-btn {
+        padding: 14px 16px !important;
+        font-size: 14px;
+    }
+    
+    /* User info */
+    .user-info, .logout-btn {
+        font-size: 12px;
+        padding: 8px 12px !important;
+        min-height: auto;
+    }
+}
 
-        /* ===== INLINE STYLES (MOVED FROM HTML) ===== */
-        ._s0 {
-            display:flex
-        }
-        ._s1 {
-            display:flex
-            align-items:center
-            gap:6px
-            justify-content:center
-            width:100%
-        }
-        ._s10 {
-            display:flex
-            flex-direction:column
-            gap:8px
-        }
-        ._s11 {
-            padding:12px
-            border:none
-            border-radius:8px
-            background:#9c27b0
-            color:white
-            font-weight:600
-            cursor:pointer
-            transition:all 0.2s
-        }
-        ._s12 {
-            padding:12px
-            border:none
-            border-radius:8px
-            background:#673ab7
-            color:white
-            font-weight:600
-            cursor:pointer
-            transition:all 0.2s
-        }
-        ._s13 {
-            width:100%
-            margin-top:12px
-            padding:8px
-            border:1px solid #ddd
-            border-radius:8px
-            background:white
-            cursor:pointer
-            color:#666
-            font-weight:600
-        }
-        ._s14 {
-            text-align:center
-            margin-bottom:10px
-            font-size:13px
-            color:#666
-        }
-        ._s15 {
-            font-size:24px
-            margin-bottom:8px
-        }
-        ._s16 {
-            color:#db2777
-            font-size:14px
-            margin-bottom:6px
-        }
-        ._s17 {
-            color:#64748b
-            font-size:16px
-        }
-        ._s18 {
-            padding:8px 16px
-            border:none
-            border-radius:8px
-            background:#2196F3
-            color:white
-            font-weight:600
-            cursor:pointer
-            margin-top:10px
-        }
-        ._s19 {
-            display:flex
-            gap:10px
-            margin-top:15px
-            justify-content:center
-        }
-        ._s2 {
-            padding:4px 10px
-            border:none
-            border-radius:12px
-            background:#ec4899
-            color:white
-            font-size:11px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s20 {
-            padding:8px 16px
-            border:none
-            border-radius:8px
-            background:#4caf50
-            color:white
-            font-weight:600
-            cursor:pointer
-        }
-        ._s21 {
-            padding:8px 16px
-            border:none
-            border-radius:8px
-            background:#ff9800
-            color:white
-            font-weight:600
-            cursor:pointer
-        }
-        ._s22 {
-            color: #a0526a
-        }
-        ._s23 {
-            text-align: center
-            padding: 20px 20px 14px
-            color: #a0526a
-            border-top: 1px solid #fce7f3
-            font-size: 12px
-            background: #fff9f9
-            margin-top: auto
-        }
-        ._s24 {
-            font-weight: 500
-        }
-        ._s25 {
-            font-size: 11px
-            margin-top: 4px
-            color: #c0a0a0
-        }
-        ._s26 {
-            color: #a0526a
-        }
-        ._s27 {
-            text-align:center
-            padding:40px
-            color:#a0526a
-        }
-        ._s28 {
-            font-size:24px
-        }
-        ._s29 {
-            color:#a0526a
-            text-align:center
-            padding:40px
-        }
-        ._s3 {
-            padding:4px 10px
-            border:none
-            border-radius:12px
-            background:#f44336
-            color:white
-            font-size:11px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s30 {
-            color:#a0526a
-            text-align:center
-            padding:40px
-        }
-        ._s31 {
-            display:inline-block
-            background:rgba(255,255,255,0.6)
-            padding:4px 16px
-            border-radius:20px
-            font-size:12px
-            font-weight:700
-            color:#be185d
-            border:1px solid rgba(236,72,153,0.2)
-            margin-bottom:8px
-        }
-        ._s32 {
-            font-family:'Lexend',sans-serif
-            font-size:28px
-            color:#be185d
-        }
-        ._s33 {
-            font-size:16px
-            color:#db2777
-            font-weight:500
-        }
-        ._s34 {
-            background:${index === 0 ? '#ec4899' : '#fce7f3'}
-            color:${index === 0 ? 'white' : '#be185d'}
-            font-size:10px
-            font-weight:700
-            padding:2px 8px
-            border-radius:10px
-            min-width:28px
-            text-align:center
-        }
-        ._s35 {
-            display:flex
-            align-items:center
-            justify-content:space-between
-            padding:8px 12px
-            background:#FFFAFC
-            border:1px solid #FFD1DC
-            border-radius:8px
-            margin:4px 0
-            transition:all 0.3s ease
-        }
-        ._s36 {
-            flex:1
-        }
-        ._s37 {
-            display:flex
-            align-items:center
-            gap:10px
-            flex-wrap:wrap
-            margin-bottom:4px
-        }
-        ._s38 {
-            font-size:20px
-            font-weight:700
-            color:#1e293b
-            font-family:'Kaiti','SimSun',sans-serif
-        }
-        ._s39 {
-            padding:3px 10px
-            border:none
-            border-radius:8px
-            background:#ec4899
-            color:white
-            font-size:10px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s4 {
-            display:flex
-            align-items:center
-            gap:6px
-            justify-content:center
-            width:100%
-            margin-top:6px
-        }
-        ._s40 {
-            padding:3px 10px
-            border:none
-            border-radius:8px
-            background:#db2777
-            color:white
-            font-size:10px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s41 {
-            display:none
-            font-size:12px
-            color:#db2777
-            margin:2px 0
-        }
-        ._s42 {
-            display:none
-            font-size:13px
-            color:#64748b
-            margin-top:3px
-        }
-        ._s43 {
-            background:#F5AACE
-            border:none
-            border-radius:50%
-            width:34px
-            height:34px
-            font-size:14px
-            cursor:pointer
-            transition:all 0.3s ease
-            display:flex
-            align-items:center
-            justify-content:center
-            flex-shrink:0
-            color:white
-            box-shadow:0 4px 14px rgba(212,165,255,0.4)
-            margin-left:8px
-        }
-        ._s44 {
-            display:flex
-            align-items:center
-            gap:12px
-            flex-wrap:wrap
-        }
-        ._s45 {
-            font-size:22px
-            font-weight:700
-            color:#1e293b
-        }
-        ._s46 {
-            color:#db2777
-            font-size:14px
-        }
-        ._s47 {
-            background:#fce7f3
-            padding:2px 10px
-            border-radius:12px
-            font-size:11px
-            color:#be185d
-        }
-        ._s48 {
-            color:#64748b
-            font-size:15px
-            margin-top:4px
-        }
-        ._s49 {
-            color:#888
-            font-size:13px
-            margin-top:4px
-            font-style:italic
-        }
-        ._s5 {
-            padding:4px 10px
-            border:none
-            border-radius:12px
-            background:#9c27b0
-            color:white
-            font-size:11px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s50 {
-            margin-top:8px
-        }
-        ._s51 {
-            color:#999
-            text-align:center
-            padding:20px
-        }
-        ._s52 {
-            font-size:12px
-            background:#fce7f3
-            padding:2px 12px
-            border-radius:12px
-            color:#be185d
-            font-weight:600
-        }
-        ._s53 {
-            font-size:13px
-            color:#64748b
-        }
-        ._s54 {
-            font-size:28px
-            font-weight:700
-            color:#1e293b
-            margin-bottom:8px
-        }
-        ._s55 {
-            font-size:14px
-            color:#db2777
-        }
-        ._s56 {
-            font-size:11px
-            color:#888
-            margin-top:6px
-        }
-        ._s57 {
-            font-size:14px
-            color:#64748b
-            font-weight:600
-        }
-        ._s58 {
-            font-size:11px
-            color:#888
-            margin-top:6px
-        }
-        ._s59 {
-            display:inline-block
-            background:rgba(255,255,255,0.6)
-            padding:4px 16px
-            border-radius:20px
-            font-size:12px
-            font-weight:700
-            color:#be185d
-            border:1px solid rgba(236,72,153,0.2)
-            margin-bottom:8px
-        }
-        ._s6 {
-            padding:4px 10px
-            border:none
-            border-radius:12px
-            background:#e91e63
-            color:white
-            font-size:11px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s60 {
-            font-family:'Lexend',sans-serif
-            font-size:28px
-            color:#be185d
-        }
-        ._s61 {
-            font-size:16px
-            color:#db2777
-            font-weight:500
-        }
-        ._s62 {
-            background:${index === 0 ? '#ec4899' : '#fce7f3'}
-            color:${index === 0 ? 'white' : '#be185d'}
-            font-size:10px
-            font-weight:700
-            padding:2px 8px
-            border-radius:10px
-            min-width:28px
-            text-align:center
-        }
-        ._s63 {
-            border-top: 1px solid #fce7f3
-            margin-top: 4px
-            padding-top: 10px
-        }
-        ._s64 {
-            display:flex
-            align-items:center
-            gap:10px
-            flex-wrap:wrap
-        }
-        ._s65 {
-            padding:3px 12px
-            border:none
-            border-radius:12px
-            background:#ec4899
-            color:white
-            font-size:11px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s66 {
-            padding:3px 12px
-            border:none
-            border-radius:12px
-            background:#ec4899
-            color:white
-            font-size:11px
-            font-weight:600
-            cursor:pointer
-        }
-        ._s67 {
-            display:none
-        }
-        ._s68 {
-            display:none
-        }
-        ._s69 {
-            color:#999
-            text-align:center
-            padding:20px
-        }
-        ._s7 {
-            display:none
-            position:fixed
-            top:0
-            left:0
-            width:100%
-            height:100%
-            background:rgba(0,0,0,0.5)
-            z-index:9999
-            justify-content:center
-            align-items:center
-        }
-        ._s70 {
-            font-size:24px
-            color:#be185d
-            font-family:'Lexend',sans-serif
-        }
-        ._s71 {
-            font-size:15px
-            font-weight:400
-            color:#a0526a
-            margin-left:10px
-        }
-        ._s72 {
-            width:44px
-            height:44px
-            border-radius:12px
-            background:#fdf2f8
-            display:flex
-            align-items:center
-            justify-content:center
-            font-size:22px
-            margin-bottom:12px
-            color:#db2777
-        }
-        ._s73 {
-            font-size:17px
-            color:#1e1e2a
-            margin-bottom:6px
-        }
-        ._s74 {
-            color:#6a5a6a
-            font-size:13px
-            line-height:1.5
-            margin-bottom:12px
-        }
-        ._s75 {
-            display:flex
-            justify-content:space-between
-            align-items:center
-            font-size:12px
-            color:#a0526a
-            border-top:1px solid #fce7f3
-            padding-top:12px
-        }
-        ._s76 {
-            background:#fdf2f8
-            color:#db2777
-            padding:2px 12px
-            border-radius:20px
-            font-size:11px
-            font-weight:600
-        }
-        ._s77 {
-            color:#be185d
-            font-size:19px
-            margin-bottom:18px
-        }
-        ._s78 {
-            font-weight:600
-            color:#1e1e2a
-            margin-bottom:10px
-            font-size:15px
-        }
-        ._s79 {
-            display:flex
-            flex-direction:column
-            gap:5px
-            padding-left:10px
-        }
-        ._s8 {
-            background:white
-            border-radius:16px
-            padding:20px
-            max-width:350px
-            width:90%
-            box-shadow:0 10px 40px rgba(0,0,0,0.2)
-        }
-        ._s80 {
-            display:flex
-            align-items:center
-            gap:12px
-            padding:5px 12px
-            border-radius:8px
-            cursor:pointer
-            font-size:14px
-        }
-        ._s81 {
-            accent-color:#ec4899
-            width:16px
-            height:16px
-            cursor:pointer
-        }
-        ._s82 {
-            color:#16a34a
-        }
-        ._s83 {
-            color:#dc2626
-        }
-        ._s84 {
-            margin-top:10px
-        }
-        ._s85 {
-            font-size:40px
-        }
-        ._s86 {
-            padding:12px
-            text-align:center
-            color:#888
-        }
-        ._s87 {
-            padding:16px
-            text-align:center
-            color:#888
-        }
-        ._s88 {
-            font-size:24px
-            margin-bottom:8px
-        }
-        ._s89 {
-            font-size:12px
-            color:#aaa
-            margin-top:4px
-        }
-        ._s9 {
-            font-size:18px
-            font-weight:700
-            margin-bottom:15px
-            color:#1e293b
-        }
-        ._s90 {
-            display:flex
-            align-items:center
-            gap:8px
-            flex-wrap:wrap
-            margin-bottom:4px
-        }
-        ._s91 {
-            background:${result.color}
-            color:white
-            padding:2px 10px
-            border-radius:4px
-            font-size:10px
-            font-weight:700
-        }
-        ._s92 {
-            font-size:11px
-            color:#888
-        }
-        ._s93 {
-            font-size:13px
-            font-weight:600
-            color:#1e293b
-        }
-        ._s94 {
-            font-size:12px
-            color:#64748b
-            margin-top:2px
-        }
-</style>
+/* SMALL PHONE PORTRAIT (max 480px) */
+@media (max-width: 480px) and (orientation: portrait) {
+    /* Thêm optimize cho phone nhỏ */
+    body { font-size: 15px; }
+    
+    .header {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+    .logo-area h1 {
+        font-size: 16px;
+    }
+    .logo-area h1 span {
+        font-size: 11px;
+    }
+    
+    .hero-section { padding: 12px 10px; }
+    .hero-info h2 { font-size: 18px; }
+    .hero-info .desc { font-size: 13px; }
+    .achievement-item { font-size: 12px; }
+    
+    .section-title { font-size: 18px; }
+    .feature-card { padding: 14px; font-size: 14px; }
+    
+    .hsk-item { padding: 6px 10px; font-size: 11px; }
+    .lesson-item { padding: 10px 12px; font-size: 13px; }
+    
+    .card { padding: 14px; }
+    .card h3 { font-size: 15px; }
+    
+    .cn { font-size: 18px; }
+    .vi { font-size: 12px; }
+}
+
+/* LANDSCAPE MODE - Giữ layout original */
+@media (orientation: landscape) {
+    /* Reduce padding trong landscape để tránh scroll nhiều */
+    .header { padding: 8px 20px; }
+    .hero-section { padding: 12px 20px; }
+    .features-section { padding: 12px 20px; }
+    .content-area { padding: 8px 20px 16px; }
+}
+    </style>
 </head>
 <body>
     <!-- ===== DECORATIONS ===== -->
@@ -1716,7 +1873,7 @@ background: white;
     <div class="bg-decoration-2"></div>
 
     <!-- ===== LOGIN ===== -->
-    <div id="login-overlay" class="_s0">
+    <div id="login-overlay" style="display:flex;">
         <div class="login-box">
             <h2>学赢中文 | XueYing Chinese</h2>
             <p>Đăng nhập để học ngữ pháp và từ vựng HSK</p>
@@ -1736,52 +1893,52 @@ background: white;
     <button id="toggleToolbarBtn" onclick="toggleToolbar()">✏️</button>
    <div class="highlight-toolbar" id="highlightToolbar">
     <!-- Hàng 1: Highlight + Xóa tất cả -->
-    <div class="toolbar-row" class="_s1">
-        <button onclick="toggleHighlightMode()" id="highlightToggle" class="_s2">Highlight</button>
-        <button onclick="clearAllHighlights()" class="_s3">Xóa tất cả</button>
+    <div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;">
+        <button onclick="toggleHighlightMode()" id="highlightToggle" style="padding:4px 10px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Highlight</button>
+        <button onclick="clearAllHighlights()" style="padding:4px 10px;border:none;border-radius:12px;background:#f44336;color:white;font-size:11px;font-weight:600;cursor:pointer;">Xóa tất cả</button>
     </div>
     
     <!-- Hàng 2: Ôn tập (mở modal chọn) + Chưa nắm -->
-    <div class="toolbar-row" class="_s4">
-        <button onclick="openFlashcardSelector()" class="_s5">📚 Ôn tập</button>
-        <button onclick="reviewUndefinedWords()" class="_s6">⏳ Chưa nắm</button>
+    <div class="toolbar-row" style="display:flex;align-items:center;gap:6px;justify-content:center;width:100%;margin-top:6px;">
+        <button onclick="openFlashcardSelector()" style="padding:4px 10px;border:none;border-radius:12px;background:#9c27b0;color:white;font-size:11px;font-weight:600;cursor:pointer;">📚 Ôn tập</button>
+        <button onclick="reviewUndefinedWords()" style="padding:4px 10px;border:none;border-radius:12px;background:#e91e63;color:white;font-size:11px;font-weight:600;cursor:pointer;">⏳ Chưa nắm</button>
     </div>
 </div>
     <!-- Modal chọn loại ôn tập -->
-<div id="flashcardSelectorModal" class="_s7">
-    <div class="_s8">
-        <h3 class="_s9">Chọn loại ôn tập</h3>
-        <div class="_s10">
-            <button onclick="startFlashcard();closeSelectorModal()" class="_s11">📚 Flashcard Ngữ pháp</button>
-            <button onclick="startVocabFlashcard();closeSelectorModal()" class="_s12">📝 Flashcard Từ vựng</button>
+<div id="flashcardSelectorModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;">
+    <div style="background:white;border-radius:16px;padding:20px;max-width:350px;width:90%;box-shadow:0 10px 40px rgba(0,0,0,0.2);">
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:15px;color:#1e293b;">Chọn loại ôn tập</h3>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+            <button onclick="startFlashcard();closeSelectorModal()" style="padding:12px;border:none;border-radius:8px;background:#9c27b0;color:white;font-weight:600;cursor:pointer;transition:all 0.2s;">📚 Flashcard Ngữ pháp</button>
+            <button onclick="startVocabFlashcard();closeSelectorModal()" style="padding:12px;border:none;border-radius:8px;background:#673ab7;color:white;font-weight:600;cursor:pointer;transition:all 0.2s;">📝 Flashcard Từ vựng</button>
         </div>
-        <button onclick="closeSelectorModal()" class="_s13">Đóng</button>
+        <button onclick="closeSelectorModal()" style="width:100%;margin-top:12px;padding:8px;border:1px solid #ddd;border-radius:8px;background:white;cursor:pointer;color:#666;font-weight:600;">Đóng</button>
     </div>
 </div>
     
     <!-- ===== FLASHCARD ===== -->
     <div class="flashcard-modal" id="flashcardModal">
         <div class="flashcard-box">
-            <div class="_s14">Ôn tập lại các ví dụ</div>
+            <div style="text-align:center;margin-bottom:10px;font-size:13px;color:#666;">Ôn tập lại các ví dụ</div>
             <div class="card-count" id="flashcardCount">1/10</div>
 <div class="flashcard-face" id="flashcardFace">
     <div class="flashcard-front" id="flashcardFront">
         <span class="cn">你好</span>
     </div>
     <div class="flashcard-back" id="flashcardBack">
-        <div class="cn" class="_s15"></div>
-        <div class="py" class="_s16"></div>
-        <div class="vi" class="_s17"></div>
+        <div class="cn" style="font-size:24px;margin-bottom:8px;"></div>
+        <div class="py" style="color:#db2777;font-size:14px;margin-bottom:6px;"></div>
+        <div class="vi" style="color:#64748b;font-size:16px;"></div>
     </div>
 </div>         
-            <button onclick="shuffleFlashcards()" class="_s18">🔀 Xáo trộn</button>
+            <button onclick="shuffleFlashcards()" style="padding:8px 16px;border:none;border-radius:8px;background:#2196F3;color:white;font-weight:600;cursor:pointer;margin-top:10px;">🔀 Xáo trộn</button>
             <div class="flashcard-actions">
 <button class="btn-show" onclick="document.getElementById('flashcardFace').classList.toggle('flipped')">🔄 Lật thẻ</button>
     <button class="btn-close" onclick="closeFlashcard()">Đóng</button>
             </div>
-            <div class="_s19">
-                <button onclick="markAsUnderstood()" class="_s20">✅ Đã nắm được</button>
-                <button onclick="markAsNotUnderstood()" class="_s21">⏳ Chưa nắm được</button>
+            <div style="display:flex;gap:10px;margin-top:15px;justify-content:center;">
+                <button onclick="markAsUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#4caf50;color:white;font-weight:600;cursor:pointer;">✅ Đã nắm được</button>
+                <button onclick="markAsNotUnderstood()" style="padding:8px 16px;border:none;border-radius:8px;background:#ff9800;color:white;font-weight:600;cursor:pointer;">⏳ Chưa nắm được</button>
             </div>
         </div>
     </div>
@@ -1881,15 +2038,15 @@ Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề d
         <div id="contentInner">
             <div id="loading">
                 <div class="spinner"></div>
-                <p class="_s22">Đang tải dữ liệu...</p>
+                <p style="color: #a0526a;">Đang tải dữ liệu...</p>
             </div>
         </div>
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="_s23">
-        <p class="_s24">学赢中文 | XueYing Chinese</p>
-        <p class="_s25">
+    <footer style="text-align: center; padding: 20px 20px 14px; color: #a0526a; border-top: 1px solid #fce7f3; font-size: 12px; background: #fff9f9; margin-top: auto;">
+        <p style="font-weight: 500;">学赢中文 | XueYing Chinese</p>
+        <p style="font-size: 11px; margin-top: 4px; color: #c0a0a0;">
             <strong>学得快乐，赢得轻松</strong> - Học trong mê say, Bứt phá mỗi ngày
         </p>
     </footer>
@@ -2095,7 +2252,7 @@ function clearFlashcardProgress(level, lessonNum) {
     contentInner.innerHTML = `
         <div id="loading">
             <div class="spinner"></div>
-            <p class="_s26">Đang tải dữ liệu...</p>
+            <p style="color: #a0526a;">Đang tải dữ liệu...</p>
         </div>
     `;
 
@@ -2104,8 +2261,8 @@ function clearFlashcardProgress(level, lessonNum) {
         renderContent(module, level, data);
     } catch (error) {
         contentInner.innerHTML = `
-            <div class="_s27">
-                <p class="_s28">😅</p>
+            <div style="text-align:center;padding:40px;color:#a0526a;">
+                <p style="font-size:24px;">😅</p>
                 <p>Không thể tải dữ liệu. Vui lòng thử lại sau.</p>
             </div>
         `;
@@ -2121,7 +2278,7 @@ function clearFlashcardProgress(level, lessonNum) {
     contentInner.innerHTML = '';
     
     if (!data) {
-        contentInner.innerHTML = `<p class="_s29">Dữ liệu trống!</p>`;
+        contentInner.innerHTML = `<p style="color:#a0526a;text-align:center;padding:40px;">Dữ liệu trống!</p>`;
         return;
     }
     
@@ -2136,7 +2293,7 @@ function clearFlashcardProgress(level, lessonNum) {
         renderPractice(data);
     } else {
         contentInner.innerHTML = `
-            <p class="_s30">
+            <p style="color:#a0526a;text-align:center;padding:40px;">
                 Chưa có dữ liệu cho phần này.<br>
                 Module: ${module} | Level: ${level}
             </p>
@@ -2179,9 +2336,9 @@ layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;
         border: 1px solid #fbcfe8;
     `;
     banner.innerHTML = `
-        <div class="_s31">${data.badge || level.toUpperCase()}</div>
-        <h1 class="_s32">${data.title}</h1>
-        ${data.subtitle ? `<div class="_s33">${data.subtitle}</div>` : ''}
+        <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
+        <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
+        ${data.subtitle ? `<div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>` : ''}
     `;
     mainContent.appendChild(banner);
 
@@ -2200,7 +2357,7 @@ layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;
             lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
         }
         lessonItem.innerHTML = `
-            <span class="lesson-num" class="_s34">${lesson.id}</span>
+            <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
             <span>${lesson.title}</span>
         `;
         lessonItem.dataset.level = level;
@@ -2283,35 +2440,35 @@ if (word.examples && word.examples.length > 0) {
         const viText = typeof ex === 'object' ? (ex.vi || ex.meaning || '') : '';
         
         return `
-            <div class="example-with-audio" class="_s35">
-                <div class="text-group" class="_s36">
-                    <div class="_s37">
-                        <span class="cn" class="_s38">${cnText}</span>
-                        <button onclick="togglePinyinForThis(event)" class="_s39">Phiên âm</button>
-                        <button onclick="toggleNghiaForThis(event)" class="_s40">Nghĩa</button>
+            <div class="example-with-audio" style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:#FFFAFC;border:1px solid #FFD1DC;border-radius:8px;margin:4px 0;transition:all 0.3s ease;">
+                <div class="text-group" style="flex:1;">
+                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px;">
+                        <span class="cn" style="font-size:20px;font-weight:700;color:#1e293b;font-family:'Kaiti','SimSun',sans-serif;">${cnText}</span>
+                        <button onclick="togglePinyinForThis(event)" style="padding:3px 10px;border:none;border-radius:8px;background:#ec4899;color:white;font-size:10px;font-weight:600;cursor:pointer;">Phiên âm</button>
+                        <button onclick="toggleNghiaForThis(event)" style="padding:3px 10px;border:none;border-radius:8px;background:#db2777;color:white;font-size:10px;font-weight:600;cursor:pointer;">Nghĩa</button>
                     </div>
-                    <span class="py" class="_s41">${pyText}</span>
-                    <span class="vi" class="_s42">${viText}</span>
+                    <span class="py" style="display:none;font-size:12px;color:#db2777;margin:2px 0;">${pyText}</span>
+                    <span class="vi" style="display:none;font-size:13px;color:#64748b;margin-top:3px;">${viText}</span>
                 </div>
-                <button class="audio-btn" onclick="playAudio('${cnText}')" class="_s43">🔊</button>
+                <button class="audio-btn" onclick="playAudio('${cnText}')" style="background:#F5AACE;border:none;border-radius:50%;width:34px;height:34px;font-size:14px;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;box-shadow:0 4px 14px rgba(212,165,255,0.4);margin-left:8px;">🔊</button>
             </div>
         `;
     }).join('');
 }
                 wordDiv.innerHTML = `
-                    <div class="_s44">
-                        <span class="_s45">${word.hanzi}</span>
-                        <span class="_s46">${word.pinyin}</span>
-                        <span class="_s47">${word.word_type || ''}</span>
+                    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                        <span style="font-size:22px;font-weight:700;color:#1e293b;">${word.hanzi}</span>
+                        <span style="color:#db2777;font-size:14px;">${word.pinyin}</span>
+                        <span style="background:#fce7f3;padding:2px 10px;border-radius:12px;font-size:11px;color:#be185d;">${word.word_type || ''}</span>
                     </div>
-                    <div class="_s48">${word.meaning}</div>
-                    ${word.note ? `<div class="_s49">💡 ${word.note}</div>` : ''}
-                    ${examplesHtml ? `<div class="_s50">${examplesHtml}</div>` : ''}
+                    <div style="color:#64748b;font-size:15px;margin-top:4px;">${word.meaning}</div>
+                    ${word.note ? `<div style="color:#888;font-size:13px;margin-top:4px;font-style:italic;">💡 ${word.note}</div>` : ''}
+                    ${examplesHtml ? `<div style="margin-top:8px;">${examplesHtml}</div>` : ''}
                 `;
                 vocabCard.appendChild(wordDiv);
             });
         } else {
-            vocabCard.innerHTML = `<p class="_s51">Chưa có từ vựng cho bài này.</p>`;
+            vocabCard.innerHTML = `<p style="color:#999;text-align:center;padding:20px;">Chưa có từ vựng cho bài này.</p>`;
         }
 
         vocabPane.appendChild(vocabCard);
@@ -2374,8 +2531,8 @@ if (word.examples && word.examples.length > 0) {
                     margin-bottom:10px;flex-wrap:wrap;gap:4px;
                 `;
                 headerDiv.innerHTML = `
-                    <span class="_s52">${typeLabel}</span>
-                    <span class="_s53">${idx + 1}/${lesson.exercises.length}</span>
+                    <span style="font-size:12px;background:#fce7f3;padding:2px 12px;border-radius:12px;color:#be185d;font-weight:600;">${typeLabel}</span>
+                    <span style="font-size:13px;color:#64748b;">${idx + 1}/${lesson.exercises.length}</span>
                 `;
                 exDiv.appendChild(headerDiv);
 
@@ -2467,9 +2624,9 @@ else if (exerciseType === 'flashcard' && ex.pairs) {
         countDiv.textContent = `${exerciseState.currentIndex + 1}/${exerciseState.pairs.length}`;
         exerciseState.showing = false;
         cardDiv.innerHTML = `
-            <div class="_s54">${pair.hanzi}</div>
-            <div class="_s55">${pair.pinyin}</div>
-            <div class="_s56">👆 Click để xem nghĩa</div>
+            <div style="font-size:28px;font-weight:700;color:#1e293b;margin-bottom:8px;">${pair.hanzi}</div>
+            <div style="font-size:14px;color:#db2777;">${pair.pinyin}</div>
+            <div style="font-size:11px;color:#888;margin-top:6px;">👆 Click để xem nghĩa</div>
         `;
     };
     
@@ -2477,8 +2634,8 @@ else if (exerciseType === 'flashcard' && ex.pairs) {
         if (!exerciseState.showing) {
             const pair = exerciseState.pairs[exerciseState.currentIndex];
             cardDiv.innerHTML = `
-                <div class="_s57">${pair.meaning}</div>
-                <div class="_s58">👆 Click để quay lại</div>
+                <div style="font-size:14px;color:#64748b;font-weight:600;">${pair.meaning}</div>
+                <div style="font-size:11px;color:#888;margin-top:6px;">👆 Click để quay lại</div>
             `;
             exerciseState.showing = true;
         } else {
@@ -2853,9 +3010,9 @@ sidebar.appendChild(sidebarTitle);
                 border: 1px solid #fbcfe8;
             `;
             banner.innerHTML = `
-                <div class="_s59">${data.badge || level.toUpperCase()}</div>
-                <h1 class="_s60">${data.title}</h1>
-                ${data.subtitle ? `<div class="_s61">${data.subtitle}</div>` : ''}
+                <div style="display:inline-block;background:rgba(255,255,255,0.6);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:700;color:#be185d;border:1px solid rgba(236,72,153,0.2);margin-bottom:8px;">${data.badge || level.toUpperCase()}</div>
+                <h1 style="font-family:'Lexend',sans-serif;font-size:28px;color:#be185d;">${data.title}</h1>
+                ${data.subtitle ? `<div style="font-size:16px;color:#db2777;font-weight:500;">${data.subtitle}</div>` : ''}
             `;
             mainContent.appendChild(banner);
 
@@ -2874,7 +3031,7 @@ sidebar.appendChild(sidebarTitle);
                     lessonItem.style.cssText += 'background:#fdf2f8;color:#be185d;font-weight:600;border-left-color:#ec4899;';
                 }
                 lessonItem.innerHTML = `
-    <span class="lesson-num" class="_s62">${lesson.id}</span>
+    <span class="lesson-num" style="background:${index === 0 ? '#ec4899' : '#fce7f3'};color:${index === 0 ? 'white' : '#be185d'};font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;min-width:28px;text-align:center;">${lesson.id}</span>
     <span>${lesson.title}</span>
     <div class="lesson-item-tooltip">
         <div class="tooltip-title">Các phần trong bài</div>
@@ -2883,7 +3040,7 @@ sidebar.appendChild(sidebarTitle);
                 ${tab.title}
             </div>
         `).join('')}
-        <div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="999" class="_s63">
+        <div class="tooltip-item" data-level="${level}" data-lesson="${lesson.id}" data-tab="999" style="border-top: 1px solid #fce7f3; margin-top: 4px; padding-top: 10px;">
             Bài Tập
         </div>
     </div>
@@ -2990,13 +3147,13 @@ sidebar.appendChild(lessonItem);
                             audioDiv.className = 'example-with-audio';
                             audioDiv.innerHTML = `
                                 <div class="text-group">
-                                    <div class="_s64">
+                                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                                         <span class="cn">${ex.cn}</span>
-                                        <button onclick="togglePinyinForThis(event)" class="_s65">Phiên âm</button>
-                                        <button onclick="toggleNghiaForThis(event)" class="_s66">Nghĩa</button>
+                                        <button onclick="togglePinyinForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Phiên âm</button>
+                                        <button onclick="toggleNghiaForThis(event)" style="padding:3px 12px;border:none;border-radius:12px;background:#ec4899;color:white;font-size:11px;font-weight:600;cursor:pointer;">Nghĩa</button>
                                     </div>
-                                    <span class="py" class="_s67">${ex.py}</span>
-                                    <span class="vi" class="_s68">${ex.vi}</span>
+                                    <span class="py" style="display:none;">${ex.py}</span>
+                                    <span class="vi" style="display:none;">${ex.vi}</span>
                                 </div>
                                 <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn}')">🔊</button>
                             `;
@@ -3065,7 +3222,7 @@ sidebar.appendChild(lessonItem);
                         exContainer.appendChild(exDiv);
                     });
                 } else {
-                    exContainer.innerHTML = '<p class="_s69">Chưa có bài tập.</p>';
+                    exContainer.innerHTML = '<p style="color:#999;text-align:center;padding:20px;">Chưa có bài tập.</p>';
                 }
 
                 exerciseHtml.appendChild(exContainer);
@@ -3105,9 +3262,9 @@ sidebar.appendChild(lessonItem);
             header.className = 'section-header';
             header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;';
             header.innerHTML = `
-                <h2 class="_s70">
+                <h2 style="font-size:24px;color:#be185d;font-family:'Lexend',sans-serif;">
                     ${MODULES[module].icon} ${data.title} 
-                    ${data.subtitle ? `<small class="_s71">${data.subtitle}</small>` : ''}
+                    ${data.subtitle ? `<small style="font-size:15px;font-weight:400;color:#a0526a;margin-left:10px;">${data.subtitle}</small>` : ''}
                 </h2>
             `;
             contentInner.appendChild(header);
@@ -3119,11 +3276,11 @@ sidebar.appendChild(lessonItem);
                 const card = document.createElement('div');
                 card.style.cssText = 'background:white;border-radius:20px;padding:22px 20px 18px;box-shadow:var(--shadow-sm);border:1px solid #fce7f3;transition:all 0.35s ease;cursor:pointer;';
                 card.innerHTML = `
-                    <div class="_s72">${item.icon || '📌'}</div>
-                    <h3 class="_s73">${item.title}</h3>
-                    <p class="_s74">${item.desc}</p>
-                    <div class="_s75">
-                        <span class="_s76">${item.tag}</span>
+                    <div style="width:44px;height:44px;border-radius:12px;background:#fdf2f8;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px;color:#db2777;">${item.icon || '📌'}</div>
+                    <h3 style="font-size:17px;color:#1e1e2a;margin-bottom:6px;">${item.title}</h3>
+                    <p style="color:#6a5a6a;font-size:13px;line-height:1.5;margin-bottom:12px;">${item.desc}</p>
+                    <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#a0526a;border-top:1px solid #fce7f3;padding-top:12px;">
+                        <span style="background:#fdf2f8;color:#db2777;padding:2px 12px;border-radius:20px;font-size:11px;font-weight:600;">${item.tag}</span>
                         <span>❤️ ${item.likes || 0}</span>
                     </div>
                 `;
@@ -3138,17 +3295,17 @@ sidebar.appendChild(lessonItem);
         function renderPractice(data) {
             const block = document.createElement('div');
             block.style.cssText = 'background:white;border-radius:20px;padding:28px;border:1px solid #fce7f3;box-shadow:var(--shadow-sm);';
-            block.innerHTML = `<h3 class="_s77">🧠 Luyện tập</h3>`;
+            block.innerHTML = `<h3 style="color:#be185d;font-size:19px;margin-bottom:18px;">🧠 Luyện tập</h3>`;
 
             data.exercises.forEach((ex, idx) => {
                 const qDiv = document.createElement('div');
                 qDiv.style.cssText = 'padding:16px 0;border-bottom:1px solid #fce7f3;';
                 qDiv.innerHTML = `
-                    <div class="_s78">${idx + 1}. ${ex.question}</div>
-                    <div class="_s79">
+                    <div style="font-weight:600;color:#1e1e2a;margin-bottom:10px;font-size:15px;">${idx + 1}. ${ex.question}</div>
+                    <div style="display:flex;flex-direction:column;gap:5px;padding-left:10px;">
                         ${ex.options.map((opt, oi) => `
-                            <label class="_s80">
-                                <input type="radio" name="q${idx}" value="${oi}" class="_s81" />
+                            <label style="display:flex;align-items:center;gap:12px;padding:5px 12px;border-radius:8px;cursor:pointer;font-size:14px;">
+                                <input type="radio" name="q${idx}" value="${oi}" style="accent-color:#ec4899;width:16px;height:16px;cursor:pointer;" />
                                 ${opt}
                             </label>
                         `).join('')}
@@ -3180,12 +3337,12 @@ sidebar.appendChild(lessonItem);
                 const selected = document.querySelector(`input[name="q${idx}"]:checked`);
                 const userAnswer = selected ? parseInt(selected.value) : null;
                 const correct = ex.answer;
-                if (userAnswer === correct) { score++; resultHtml += `<p class="_s82">✅ Câu ${idx + 1} — Đúng</p>`; } 
-                else { resultHtml += `<p class="_s83">❌ Câu ${idx + 1} — Sai. Đáp án đúng: ${ex.options[correct]}</p>`; }
+                if (userAnswer === correct) { score++; resultHtml += `<p style="color:#16a34a;">✅ Câu ${idx + 1} — Đúng</p>`; } 
+                else { resultHtml += `<p style="color:#dc2626;">❌ Câu ${idx + 1} — Sai. Đáp án đúng: ${ex.options[correct]}</p>`; }
             });
             const resultDiv = document.getElementById('quizResult');
             if (resultDiv) {
-                resultDiv.innerHTML = `<strong>📊 Kết quả: ${score}/${exercises.length}</strong><div class="_s84">${resultHtml}</div>`;
+                resultDiv.innerHTML = `<strong>📊 Kết quả: ${score}/${exercises.length}</strong><div style="margin-top:10px;">${resultHtml}</div>`;
                 resultDiv.style.display = 'block';
                 resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
@@ -3666,7 +3823,7 @@ range.insertNode(span);
     face.classList.remove('flipped');
     
     // Hiển thị mặt trước (chữ Hán)
-    document.getElementById('flashcardFront').innerHTML = `<span class="cn" class="_s85">${data.cn}</span>`;
+    document.getElementById('flashcardFront').innerHTML = `<span class="cn" style="font-size:40px;">${data.cn}</span>`;
     
     // Chuẩn bị mặt sau (phiên âm + nghĩa)
     document.querySelector('.flashcard-back .cn').textContent = data.cn;
@@ -3772,7 +3929,7 @@ function universalSearch() {
         dropdown.style.minWidth = '280px';
     }
     
-    dropdown.innerHTML = '<div class="_s86">🔍 Đang tìm kiếm...</div>';
+    dropdown.innerHTML = '<div style="padding:12px;text-align:center;color:#888;">🔍 Đang tìm kiếm...</div>';
     dropdown.style.display = 'block';
     
     // Load tất cả dữ liệu
@@ -3949,10 +4106,10 @@ function universalSearch() {
         // Hiển thị kết quả
         if (resultsMap.size === 0) {
             dropdown.innerHTML = `
-                <div class="_s87">
-                    <div class="_s88">🔍</div>
+                <div style="padding:16px;text-align:center;color:#888;">
+                    <div style="font-size:24px;margin-bottom:8px;">🔍</div>
                     <div>Không tìm thấy kết quả cho "<strong>${query}</strong>"</div>
-                    <div class="_s89">Hãy thử từ khóa khác</div>
+                    <div style="font-size:12px;color:#aaa;margin-top:4px;">Hãy thử từ khóa khác</div>
                 </div>
             `;
         } else {
@@ -3978,12 +4135,12 @@ function universalSearch() {
                 const levelLabel = result.level.toUpperCase();
                 
                 item.innerHTML = `
-                    <div class="_s90">
-                        <span class="hsk-tag" class="_s91">${levelLabel}</span>
-                        <span class="_s92">${result.moduleLabel}</span>
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+                        <span class="hsk-tag" style="background:${result.color};color:white;padding:2px 10px;border-radius:4px;font-size:10px;font-weight:700;">${levelLabel}</span>
+                        <span style="font-size:11px;color:#888;">${result.moduleLabel}</span>
                     </div>
-                    <div class="title" class="_s93">${result.title}</div>
-                    ${result.desc ? `<div class="desc" class="_s94">${result.desc}</div>` : ''}
+                    <div class="title" style="font-size:13px;font-weight:600;color:#1e293b;">${result.title}</div>
+                    ${result.desc ? `<div class="desc" style="font-size:12px;color:#64748b;margin-top:2px;">${result.desc}</div>` : ''}
                 `;
                 
 item.onclick = function() {
