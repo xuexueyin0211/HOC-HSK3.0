@@ -3407,7 +3407,7 @@ function clearFlashcardProgress(level, lessonNum) {
                         ` : ''}
 
                         <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid #f1f5f9;">
-                            <button class="hanzi-page-btn" ${!prevChar ? 'disabled' : ''} onclick="openHanziDetailModal('${escapeQuotes(prevChar)}')">⏮ Chữ trước</button>
+                            <button class="hanzi-page-btn" ${!prevChar ? 'disabled' : ''} onclick="openHanziDetailModal('${escapeQuotes(prevChar)}')">◀ Chữ trước</button>
                             <span style="font-size:13px;font-weight:700;color:#64748b;">${index + 1} / ${list.length}</span>
                             <button class="hanzi-page-btn" ${!nextChar ? 'disabled' : ''} onclick="openHanziDetailModal('${escapeQuotes(nextChar)}')">Chữ tiếp ▶</button>
                         </div>
