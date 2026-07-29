@@ -2523,7 +2523,7 @@ background: #FFFAFC;
         <div style="background:white;border-radius:24px;padding:32px 28px;max-width:450px;width:100%;box-shadow:0 25px 60px rgba(0,0,0,0.3);border:1px solid #fbcfe8;animation:fadeInModal 0.3s ease-out;">
             <div style="text-align:center;margin-bottom:24px;">
                 <div style="width:64px;height:64px;background:#fdf2f8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:32px;border:2px solid #fbcfe8;">📝</div>
-                <h2 style="font-size:22px;color:#be185d;font-weight:700;margin-bottom:8px;">Đăng Ký Tài Khoản Web</h2>
+                <h2 style="font-size:22px;color:#be185d;font-weight:700;margin-bottom:8px;">Đăng Ký Tài Khoản</h2>
                 <p style="font-size:14px;color:#64748b;line-height:1.5;">Vui lòng cập nhật Tên và Tuổi của bạn để hệ thống lưu hồ sơ và ghi nhận tiến độ học tập cá nhân.</p>
             </div>
             
@@ -2643,7 +2643,7 @@ background: #FFFAFC;
                 Đăng xuất
             </button>
             <div class="search-box">
-                <input type="text" placeholder="🔍 Tìm kiếm ngữ pháp, từ vựng, chữ Hán, bài tập (HSK 1 - 6)..." id="globalGrammarSearch" oninput="universalSearch()" />
+                <input type="text" placeholder="🔍 Tìm kiếm tổng quát..." id="globalGrammarSearch" oninput="universalSearch()" />
                 <button id="searchBtn">🔍 Tìm</button>
             </div>
         </div>
@@ -3077,20 +3077,14 @@ function clearFlashcardProgress(level, lessonNum) {
             const wrapper = document.createElement('div');
             wrapper.className = 'hanzi-module-wrapper';
 
-            const bannerTitle = hanziState.data.title || `300 CHỮ HÁN HSK 3.0 - ${hanziState.level.toUpperCase()}`;
+            const bannerTitle = hanziState.data.title || `TỔNG HỢP CHỮ HÁN HSK - ${hanziState.level.toUpperCase()}`;
             const totalCount = hanziState.allChars.length;
 
             wrapper.innerHTML = `
                 <div class="hanzi-banner">
                     <div>
-                        <div style="display:inline-block;background:rgba(255,255,255,0.7);color:#9333ea;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;border:1px solid #e9d5ff;margin-bottom:6px;">
-                            🀄 ${hanziState.data.source || 'HSK 3.0 Cấp 1'}
-                        </div>
                         <div class="hanzi-banner-title">${escapeHtml(bannerTitle)}</div>
-                        <div class="hanzi-banner-stats">
-                            <span class="hanzi-stat-badge">📊 Tổng số: <b>${totalCount} chữ</b></span>
-                        </div>
-                    </div>
+                                            </div>
                     <div class="hanzi-banner-actions">
                         <button class="hanzi-btn-action" onclick="startHanziFlashcards()">
                             🎴 Flashcard (${totalCount} chữ)
@@ -3103,7 +3097,7 @@ function clearFlashcardProgress(level, lessonNum) {
 
                 <div class="hanzi-filter-bar">
                     <input type="text" id="hanziSearchInput" class="hanzi-search-input" 
-                        placeholder="🔍 Tìm theo chữ (爱), phiên âm (ai), nghĩa (yêu)..." 
+                        placeholder="🔍 Tìm kiếm chữ Hán trong cấp độ ${hanziState.level.toUpperCase()}..." 
                         value="${escapeHtml(hanziState.searchQuery)}"
                         oninput="onHanziSearchInput(this.value)" />
 
@@ -3116,7 +3110,7 @@ function clearFlashcardProgress(level, lessonNum) {
                     </select>
 
                     <select id="hanziTypeSelect" class="hanzi-select-filter" onchange="onHanziTypeChange(this.value)">
-                        <option value="all" ${hanziState.typeFilter === 'all' ? 'selected' : ''}>Tất cả cấu trúc</option>
+                        <option value="all" ${hanziState.typeFilter === 'all' ? 'selected' : ''}>Tất cả loại chữ</option>
                         <option value="hình thanh" ${hanziState.typeFilter === 'hình thanh' ? 'selected' : ''}>Hình thanh</option>
                         <option value="hội ý" ${hanziState.typeFilter === 'hội ý' ? 'selected' : ''}>Hội ý</option>
                         <option value="chỉ sự" ${hanziState.typeFilter === 'chỉ sự' ? 'selected' : ''}>Chỉ sự</option>
@@ -3124,10 +3118,10 @@ function clearFlashcardProgress(level, lessonNum) {
                     </select>
 
                     <select id="hanziSortSelect" class="hanzi-select-filter" onchange="onHanziSortChange(this.value)">
-                        <option value="default" ${hanziState.sortOrder === 'default' ? 'selected' : ''}>Mặc định (HSK 3.0)</option>
-                        <option value="strokes-asc" ${hanziState.sortOrder === 'strokes-asc' ? 'selected' : ''}>Số nét (Ít → Nhiều)</option>
-                        <option value="strokes-desc" ${hanziState.sortOrder === 'strokes-desc' ? 'selected' : ''}>Số nét (Nhiều → Ít)</option>
-                        <option value="pinyin" ${hanziState.sortOrder === 'pinyin' ? 'selected' : ''}>Pinyin (A - Z)</option>
+                        <option value="default" ${hanziState.sortOrder === 'default' ? 'selected' : ''}>Mặc định</option>
+                        <option value="strokes-asc" ${hanziState.sortOrder === 'strokes-asc' ? 'selected' : ''}>Số nét (Ít ▶ Nhiều)</option>
+                        <option value="strokes-desc" ${hanziState.sortOrder === 'strokes-desc' ? 'selected' : ''}>Số nét (Nhiều ▶ Ít)</option>
+                        <option value="pinyin" ${hanziState.sortOrder === 'pinyin' ? 'selected' : ''}>Phiên âm (A - Z)</option>
                     </select>
                 </div>
 
@@ -3216,7 +3210,7 @@ function clearFlashcardProgress(level, lessonNum) {
                         <div class="hanzi-example-preview">
                             <span style="font-weight:700;color:#7e22ce;">${escapeHtml(ex.cn)}</span>
                             <span style="color:#64748b;">(${escapeHtml(ex.py)})</span>
-                            <span style="color:#334155;">— ${escapeHtml(ex.vi)}</span>
+                            <span style="color:#334155;">- ${escapeHtml(ex.vi)}</span>
                         </div>
                     ` : ''}
 
@@ -3670,10 +3664,9 @@ layout.style.cssText = 'display:flex;gap:24px;align-items:flex-start;width:100%;
     vocabSearchBox.style.cssText = 'margin-bottom:20px;display:flex;gap:10px;align-items:center;';
     vocabSearchBox.innerHTML = `
         <div style="position:relative;flex:1;display:flex;align-items:center;">
-            <input type="text" class="vocab-local-search-input" placeholder="🔍 Tìm từ vựng (chữ Hán, pinyin, nghĩa) trong cấp độ ${level.toUpperCase()}..." 
+            <input type="text" class="vocab-local-search-input" placeholder="🔍 Tìm kiếm từ vựng trong cấp độ ${level.toUpperCase()}..." 
                    style="width:100%;padding:10px 16px 10px 38px;border:1.5px solid #fbcfe8;border-radius:12px;font-size:14px;outline:none;background:white;box-shadow:0 2px 8px rgba(245,158,11,0.08);transition:all 0.2s;" 
                    oninput="window.filterLocalVocab(this.value, '${level}')" />
-            <span style="position:absolute;left:12px;color:#d97706;font-size:15px;pointer-events:none;">🔍</span>
         </div>
     `;
     mainContent.appendChild(vocabSearchBox);
@@ -3844,8 +3837,8 @@ if (word.examples && word.examples.length > 0) {
         const nav = document.createElement('div');
         nav.className = 'nav';
         nav.innerHTML = `
-            <button onclick="prevVocabTab('${level}', ${lesson.id})">⬅ Trước</button>
-            <button onclick="nextVocabTab('${level}', ${lesson.id})">Tiếp ➜</button>
+            <button onclick="prevVocabTab('${level}', ${lesson.id})">◀ Trước</button>
+            <button onclick="nextVocabTab('${level}', ${lesson.id})">Tiếp ▶</button>
         `;
         lessonDiv.appendChild(nav);
 
@@ -4028,7 +4021,7 @@ function renderExerciseItem(ex, idx, level, lessonId, totalCount, prefix = 'ex')
         const buttonsDiv = document.createElement('div');
         buttonsDiv.style.cssText = 'display:flex;gap:8px;justify-content:center;flex-wrap:wrap;';
         const prevBtn = document.createElement('button');
-        prevBtn.textContent = '⬅️ Trước';
+        prevBtn.textContent = '◀ Trước';
         prevBtn.style.cssText = 'padding:8px 16px;border:none;border-radius:8px;background:#ec4899;color:white;font-weight:600;cursor:pointer;';
         prevBtn.onclick = () => { if (exerciseState.currentIndex > 0) { exerciseState.currentIndex--; updateCard(); } };
         buttonsDiv.appendChild(prevBtn);
@@ -4047,7 +4040,7 @@ function renderExerciseItem(ex, idx, level, lessonId, totalCount, prefix = 'ex')
         buttonsDiv.appendChild(shuffleBtn);
 
         const nextBtn = document.createElement('button');
-        nextBtn.textContent = 'Tiếp ➜';
+        nextBtn.textContent = 'Tiếp ▶';
         nextBtn.style.cssText = 'padding:8px 16px;border:none;border-radius:8px;background:#ec4899;color:white;font-weight:600;cursor:pointer;';
         nextBtn.onclick = () => {
             if (exerciseState.currentIndex < exerciseState.pairs.length - 1) {
@@ -4776,10 +4769,9 @@ sidebar.appendChild(sidebarTitle);
             grammarSearchBox.style.cssText = 'margin-bottom:20px;display:flex;gap:10px;align-items:center;';
             grammarSearchBox.innerHTML = `
                 <div style="position:relative;flex:1;display:flex;align-items:center;">
-                    <input type="text" class="grammar-local-search-input" placeholder="🔍 Tìm kiếm bài học, ngữ pháp, cấu trúc trong cấp độ ${level.toUpperCase()}..." 
+                    <input type="text" class="grammar-local-search-input" placeholder="🔍 Tìm kiếm ngữ pháp trong cấp độ ${level.toUpperCase()}..." 
                            style="width:100%;padding:10px 16px 10px 38px;border:1.5px solid #fbcfe8;border-radius:12px;font-size:14px;outline:none;background:white;box-shadow:0 2px 8px rgba(236,72,153,0.06);transition:all 0.2s;" 
                            oninput="window.filterLocalGrammar(this.value, '${level}')" />
-                    <span style="position:absolute;left:12px;color:#db2777;font-size:15px;pointer-events:none;">🔍</span>
                 </div>
             `;
             mainContent.appendChild(grammarSearchBox);
@@ -4970,8 +4962,8 @@ sidebar.appendChild(lessonItem);
                 const nav = document.createElement('div');
                 nav.className = 'nav';
                 nav.innerHTML = `
-                    <button onclick="prevTab('${level}', ${lesson.id})">⬅ Trước</button>
-                    <button onclick="nextTab('${level}', ${lesson.id})">Tiếp ➜</button>
+                    <button onclick="prevTab('${level}', ${lesson.id})">◀ Trước</button>
+                    <button onclick="nextTab('${level}', ${lesson.id})">Tiếp ▶</button>
                 `;
                 lessonDiv.appendChild(nav);
 
@@ -5087,12 +5079,12 @@ sidebar.appendChild(lessonItem);
                 
                 if (userAnswer === correct) { 
                     score++; 
-                    resultHtml += `<p style="color:#16a34a;margin:4px 0;">✅ Câu ${idx + 1} — Đúng</p>`; 
+                    resultHtml += `<p style="color:#16a34a;margin:4px 0;">✅ Câu ${idx + 1} - Đúng</p>`; 
                 } else { 
                     const userOptText = (selected && ex.options) ? ex.options[userAnswer] : 'Chưa chọn';
                     const correctOptText = (ex.options && ex.options[correct] !== undefined) ? ex.options[correct] : ex.answer;
 
-                    resultHtml += `<p style="color:#dc2626;margin:4px 0;">❌ Câu ${idx + 1} — Sai. Đáp án đúng: ${correctOptText}</p>`;
+                    resultHtml += `<p style="color:#dc2626;margin:4px 0;">❌ Câu ${idx + 1} - Sai. Đáp án đúng: ${correctOptText}</p>`;
 
                     if (typeof recordWrongExercise === 'function') {
                         recordWrongExercise({
@@ -6506,7 +6498,7 @@ document.addEventListener('mouseleave', function(e) {
             window.closeRegistrationModal();
 
             window.updateUserHeaderUI(profile, user);
-            alert('🎉 Cập nhật thông tin thành công! Chào mừng ' + name + ' (' + age + ' tuổi) đến với Học Viện Tiếng Trung XueYing.');
+            alert('🎉 Cập nhật thông tin thành công! Chào mừng ' + name + ' (' + age + ' tuổi) đến với XueYing Chinese.');
         };
 
         // --- HEADER UI UPDATER ---
