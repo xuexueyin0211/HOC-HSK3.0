@@ -11,7 +11,7 @@
         "meaning": "yêu, thích",
         "radical": "爪",
         "radical_meaning": "móng vuốt",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["撇", "点", "点", "撇", "点", "横撇", "竖", "横折", "横", "撇", "横撇", "捺"],
         "type": "hình thanh",
@@ -43,7 +43,7 @@
         "meaning": "bố, cha",
         "radical": "父",
         "radical_meaning": "cha",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["撇", "点", "撇", "捺", "横折", "竖", "横", "竖弯钩"],
         "type": "hình thanh",
@@ -59,7 +59,7 @@
         "meaning": "nhé, đi (trợ từ đề nghị)",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["竖", "横折", "横", "横折", "竖", "横", "竖弯钩"],
         "type": "hình thanh",
@@ -139,7 +139,7 @@
         "meaning": "giúp đỡ",
         "radical": "巾",
         "radical_meaning": "khăn",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["横", "横", "横", "撇", "横折钩", "竖", "横折钩", "竖", "横"],
         "type": "hình thanh",
@@ -171,7 +171,7 @@
         "meaning": "cốc, ly",
         "radical": "木",
         "radical_meaning": "gỗ",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["横", "竖", "撇", "点", "横", "撇", "竖", "点"],
         "type": "hình thanh",
@@ -251,7 +251,7 @@
         "meaning": "bên, cạnh",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["横折钩", "撇", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -267,7 +267,7 @@
         "meaning": "đừng, khác",
         "radical": "刂",
         "radical_meaning": "dao",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["竖", "横折", "横", "横折钩", "撇", "竖", "竖钩"],
         "type": "hình thanh",
@@ -283,7 +283,7 @@
         "meaning": "bệnh, ốm",
         "radical": "疒",
         "radical_meaning": "bệnh",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "横", "撇", "点", "提", "横", "竖", "横折钩", "撇", "点"],
         "type": "hình thanh",
@@ -315,7 +315,7 @@
         "meaning": "rau, món ăn",
         "radical": "艹",
         "radical_meaning": "cỏ",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["横", "竖", "竖", "撇", "点", "撇", "横", "竖", "撇", "捺", "点"],
         "type": "hình thanh",
@@ -331,7 +331,7 @@
         "meaning": "trà",
         "radical": "艹",
         "radical_meaning": "cỏ",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["横", "竖", "竖", "撇", "捺", "横", "竖钩", "撇", "点"],
         "type": "hình thanh",
@@ -363,7 +363,7 @@
         "meaning": "thường, luôn",
         "radical": "巾",
         "radical_meaning": "khăn",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["竖", "点", "撇", "竖", "横折", "竖", "竖", "横折", "横", "横", "横"],
         "type": "hình thanh",
@@ -379,7 +379,7 @@
         "meaning": "sân, trận, buổi",
         "radical": "土",
         "radical_meaning": "đất",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横", "竖", "提", "横折折折钩", "撇", "撇"],
         "type": "hình thanh",
@@ -395,7 +395,7 @@
         "meaning": "hát",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["竖", "横折", "横", "竖", "横折", "横", "横", "横", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -427,7 +427,7 @@
         "meaning": "ăn",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["竖", "横折", "横", "撇", "横", "横折弯钩"],
         "type": "hình thanh",
@@ -475,7 +475,7 @@
         "meaning": "giường",
         "radical": "广",
         "radical_meaning": "mái nhà",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "横", "撇", "横", "竖", "撇", "捺"],
         "type": "hình thanh",
@@ -491,7 +491,7 @@
         "meaning": "lần, thứ",
         "radical": "欠",
         "radical_meaning": "thiếu",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["点", "提", "撇", "横撇", "撇", "捺"],
         "type": "hình thanh",
@@ -523,7 +523,7 @@
         "meaning": "sai, lỗi",
         "radical": "钅",
         "radical_meaning": "kim loại",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["撇", "横", "横", "横", "竖提", "横", "竖", "竖", "横折", "横", "横", "横", "横"],
         "type": "hình thanh",
@@ -539,7 +539,7 @@
         "meaning": "trả lời",
         "radical": "竹",
         "radical_meaning": "tre",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["撇", "横", "点", "撇", "横", "点", "横", "撇", "点", "横", "竖", "横折"],
         "type": "hình thanh",
@@ -555,7 +555,7 @@
         "meaning": "đánh, gọi (điện thoại)",
         "radical": "扌",
         "radical_meaning": "tay",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["横", "竖钩", "提", "横", "竖钩"],
         "type": "hình thanh",
@@ -587,7 +587,7 @@
         "meaning": "trứng",
         "radical": "虫",
         "radical_meaning": "sâu bọ",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["横撇", "点", "撇", "竖", "横折", "横", "竖", "横", "点", "竖", "横"],
         "type": "hình thanh",
@@ -603,7 +603,7 @@
         "meaning": "đến, tới",
         "radical": "至",
         "radical_meaning": "đến",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["横", "撇折", "点", "横", "竖", "提", "竖", "竖钩"],
         "type": "hình thanh",
@@ -619,7 +619,7 @@
         "meaning": "đường, đạo lý, nói",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["点", "撇", "横", "撇", "竖", "横折", "横", "横", "横", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -635,7 +635,7 @@
         "meaning": "được, phải (trợ từ)",
         "radical": "彳",
         "radical_meaning": "bước",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["撇", "撇", "竖", "竖", "横折", "横", "横", "横", "横", "竖钩", "点"],
         "type": "hình thanh",
@@ -651,7 +651,7 @@
         "meaning": "đất, nơi",
         "radical": "土",
         "radical_meaning": "đất",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横", "竖", "提", "横折钩", "竖", "竖弯钩"],
         "type": "hình thanh",
@@ -667,7 +667,7 @@
         "meaning": "(trợ từ sở hữu)",
         "radical": "白",
         "radical_meaning": "trắng",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["撇", "竖", "横折", "横", "横", "撇", "横折钩", "点"],
         "type": "hình thanh",
@@ -683,7 +683,7 @@
         "meaning": "đợi, chờ",
         "radical": "竹",
         "radical_meaning": "tre",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["撇", "横", "点", "撇", "横", "点", "横", "竖", "横", "横", "竖钩", "点"],
         "type": "hình thanh",
@@ -699,7 +699,7 @@
         "meaning": "em trai",
         "radical": "弓",
         "radical_meaning": "cung",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "撇", "横折", "横", "竖折折钩", "竖", "撇"],
         "type": "hình thanh",
@@ -715,7 +715,7 @@
         "meaning": "thứ (số thứ tự)",
         "radical": "竹",
         "radical_meaning": "tre",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["撇", "横", "点", "撇", "横", "点", "横折", "横", "竖折折钩", "竖", "撇"],
         "type": "hình thanh",
@@ -731,7 +731,7 @@
         "meaning": "điểm, chút, giờ",
         "radical": "灬",
         "radical_meaning": "lửa",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["竖", "横", "竖", "横折", "横", "点", "点", "点", "点"],
         "type": "hình thanh",
@@ -763,7 +763,7 @@
         "meaning": "cửa hàng, tiệm",
         "radical": "广",
         "radical_meaning": "mái nhà",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["点", "横", "撇", "竖", "横", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -795,7 +795,7 @@
         "meaning": "động, di chuyển",
         "radical": "力",
         "radical_meaning": "sức mạnh",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横", "横", "撇折", "点", "横折钩", "撇"],
         "type": "hình thanh",
@@ -811,7 +811,7 @@
         "meaning": "đều, tất cả",
         "radical": "阝",
         "radical_meaning": "thành phố",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["横", "竖", "横", "撇", "竖", "横折", "横", "横", "横折折折钩", "竖"],
         "type": "hình thanh",
@@ -827,7 +827,7 @@
         "meaning": "đọc",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "横折提", "横", "竖", "横", "撇", "点", "横", "撇", "点"],
         "type": "hình thanh",
@@ -875,7 +875,7 @@
         "meaning": "đói",
         "radical": "饣",
         "radical_meaning": "thức ăn",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["撇", "横钩", "竖提", "撇", "横", "竖钩", "提", "斜钩", "撇", "点"],
         "type": "hình thanh",
@@ -923,7 +923,7 @@
         "meaning": "cơm, bữa ăn",
         "radical": "饣",
         "radical_meaning": "thức ăn",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["撇", "横钩", "竖提", "撇", "捺", "撇", "横撇"],
         "type": "hình thanh",
@@ -955,7 +955,7 @@
         "meaning": "phòng, nhà",
         "radical": "户",
         "radical_meaning": "cửa",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["点", "横折", "横", "撇", "点", "横", "横折钩", "撇"],
         "type": "hình thanh",
@@ -971,7 +971,7 @@
         "meaning": "đặt, để",
         "radical": "攵",
         "radical_meaning": "gõ",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["点", "横", "横折钩", "撇", "撇", "横", "撇", "捺"],
         "type": "hình thanh",
@@ -1051,7 +1051,7 @@
         "meaning": "quần áo, phục vụ",
         "radical": "月",
         "radical_meaning": "thịt",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["撇", "横折钩", "横", "横", "横折钩", "竖", "横撇", "捺"],
         "type": "hình thanh",
@@ -1131,7 +1131,7 @@
         "meaning": "bài hát, hát",
         "radical": "欠",
         "radical_meaning": "thiếu",
-        "structure": "chữ hình thanh",
+
         "strokes": 14,
         "stroke_order": ["横", "竖", "横折", "横", "竖", "横", "竖", "横折", "横", "横", "撇", "横撇", "撇", "捺"],
         "type": "hình thanh",
@@ -1163,7 +1163,7 @@
         "meaning": "cho, tặng",
         "radical": "纟",
         "radical_meaning": "tơ",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["撇折", "撇折", "提", "横", "竖", "横折", "横", "横", "竖钩"],
         "type": "hình thanh",
@@ -1179,7 +1179,7 @@
         "meaning": "cùng, với, theo",
         "radical": "足",
         "radical_meaning": "chân",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "提", "横折", "横", "横", "竖提", "撇", "捺"],
         "type": "hình thanh",
@@ -1227,7 +1227,7 @@
         "meaning": "quán, viện, nhà",
         "radical": "饣",
         "radical_meaning": "thức ăn",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["撇", "横钩", "竖提", "点", "点", "横撇", "竖", "横折", "横", "横", "横"],
         "type": "hình thanh",
@@ -1243,7 +1243,7 @@
         "meaning": "đắt, quý",
         "radical": "贝",
         "radical_meaning": "vỏ sò (tiền)",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "横折", "撇", "点"],
         "type": "hình thanh",
@@ -1291,7 +1291,7 @@
         "meaning": "đi qua, đã từng",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横", "竖钩", "点", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -1307,7 +1307,7 @@
         "meaning": "vẫn, còn",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横", "撇", "竖", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -1323,7 +1323,7 @@
         "meaning": "đứa trẻ",
         "radical": "子",
         "radical_meaning": "con",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["横撇", "竖钩", "提", "点", "横", "撇折", "撇", "撇", "点"],
         "type": "hình thanh",
@@ -1339,7 +1339,7 @@
         "meaning": "Hán, tiếng Trung",
         "radical": "氵",
         "radical_meaning": "nước",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["点", "点", "提", "横撇", "捺"],
         "type": "hình thanh",
@@ -1371,7 +1371,7 @@
         "meaning": "số, ngày",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["竖", "横折", "横", "横", "竖折折钩"],
         "type": "hình thanh",
@@ -1387,7 +1387,7 @@
         "meaning": "uống",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["竖", "横折", "横", "竖", "横折", "横", "横", "撇", "横折钩", "撇", "点", "竖折"],
         "type": "hình thanh",
@@ -1403,7 +1403,7 @@
         "meaning": "và, với",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["撇", "横", "竖", "撇", "点", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -1419,7 +1419,7 @@
         "meaning": "rất",
         "radical": "彳",
         "radical_meaning": "bước",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["撇", "撇", "竖", "横折", "横", "横", "竖提", "撇", "捺"],
         "type": "hình thanh",
@@ -1451,7 +1451,7 @@
         "meaning": "chờ, hầu",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["撇", "竖", "竖", "横折", "横", "横", "撇", "横", "横", "撇点"],
         "type": "hình thanh",
@@ -1467,7 +1467,7 @@
         "meaning": "hoa, tiêu (tiền)",
         "radical": "艹",
         "radical_meaning": "cỏ",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横", "竖", "竖", "撇", "竖", "撇", "竖弯钩"],
         "type": "hình thanh",
@@ -1483,7 +1483,7 @@
         "meaning": "lời nói, nói chuyện",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["点", "横折提", "撇", "横", "竖", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -1499,7 +1499,7 @@
         "meaning": "xấu, hư, hỏng",
         "radical": "土",
         "radical_meaning": "đất",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横", "竖", "提", "横", "撇", "竖", "点"],
         "type": "hình thanh",
@@ -1515,7 +1515,7 @@
         "meaning": "vui, thích",
         "radical": "欠",
         "radical_meaning": "thiếu",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横撇", "点", "撇", "横钩", "撇", "捺"],
         "type": "hình thanh",
@@ -1579,7 +1579,7 @@
         "meaning": "máy, cơ hội",
         "radical": "木",
         "radical_meaning": "gỗ",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横", "竖", "撇", "点", "撇", "横折弯钩"],
         "type": "hình thanh",
@@ -1595,7 +1595,7 @@
         "meaning": "con gà",
         "radical": "又",
         "radical_meaning": "lại",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横撇", "点", "撇", "横折钩", "点", "撇", "横"],
         "type": "hình thanh",
@@ -1627,7 +1627,7 @@
         "meaning": "nhớ, ghi lại",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["点", "横折提", "横折", "横", "竖弯钩"],
         "type": "hình thanh",
@@ -1659,7 +1659,7 @@
         "meaning": "giả, nghỉ",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["撇", "竖", "横折", "横", "竖", "横", "横", "横折", "横", "横撇", "捺"],
         "type": "hình thanh",
@@ -1675,7 +1675,7 @@
         "meaning": "giữa, phòng",
         "radical": "门",
         "radical_meaning": "cửa",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "竖", "横折钩", "横", "横", "撇", "横折钩"],
         "type": "hình thanh",
@@ -1707,7 +1707,7 @@
         "meaning": "dạy",
         "radical": "攵",
         "radical_meaning": "gõ",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["横", "竖", "横", "撇", "点", "撇", "横", "撇", "捺", "撇", "横"],
         "type": "hình thanh",
@@ -1723,7 +1723,7 @@
         "meaning": "gọi, tên là",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["竖", "横折", "横", "竖提", "竖"],
         "type": "hình thanh",
@@ -1739,7 +1739,7 @@
         "meaning": "cảm giác, giấc ngủ",
         "radical": "见",
         "radical_meaning": "thấy",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["点", "点", "撇", "点", "横撇", "竖", "横折", "撇", "竖弯钩"],
         "type": "hình thanh",
@@ -1755,7 +1755,7 @@
         "meaning": "chị gái",
         "radical": "女",
         "radical_meaning": "nữ",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["撇点", "撇", "横", "竖", "横折", "横", "横", "横"],
         "type": "hình thanh",
@@ -1803,7 +1803,7 @@
         "meaning": "vào, tiến vào",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横", "横", "撇", "竖", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -1835,7 +1835,7 @@
         "meaning": "sạch, thuần túy",
         "radical": "冫",
         "radical_meaning": "nước đá",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["点", "提", "横折", "横", "横", "竖钩", "点", "横"],
         "type": "hình thanh",
@@ -1915,7 +1915,7 @@
         "meaning": "thi, kiểm tra",
         "radical": "老",
         "radical_meaning": "già",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横", "竖", "横", "撇", "横", "竖折折钩"],
         "type": "hình thanh",
@@ -1931,7 +1931,7 @@
         "meaning": "khát",
         "radical": "氵",
         "radical_meaning": "nước",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["点", "点", "提", "竖", "横折", "横", "横", "撇", "横折钩", "撇", "点", "竖折"],
         "type": "hình thanh",
@@ -1947,7 +1947,7 @@
         "meaning": "khách",
         "radical": "宀",
         "radical_meaning": "mái nhà",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["点", "点", "横钩", "撇", "横撇", "捺", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -1963,7 +1963,7 @@
         "meaning": "bài học",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "横折提", "竖", "横折", "横", "横", "横", "竖", "撇", "点"],
         "type": "hình thanh",
@@ -1995,7 +1995,7 @@
         "meaning": "miếng, đồng (tiền)",
         "radical": "土",
         "radical_meaning": "đất",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横", "竖", "提", "横折", "横", "撇", "捺"],
         "type": "hình thanh",
@@ -2011,7 +2011,7 @@
         "meaning": "nhanh, vui vẻ",
         "radical": "忄",
         "radical_meaning": "tâm",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "点", "竖", "横折", "横", "撇", "捺"],
         "type": "hình thanh",
@@ -2091,7 +2091,7 @@
         "meaning": "lạnh",
         "radical": "冫",
         "radical_meaning": "nước đá",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "提", "撇", "捺", "点", "横撇", "点"],
         "type": "hình thanh",
@@ -2139,7 +2139,7 @@
         "meaning": "không",
         "radical": "雨",
         "radical_meaning": "mưa",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["横", "点", "横撇", "竖", "点", "点", "点", "点", "撇", "捺", "点", "横撇", "点"],
         "type": "hình thanh",
@@ -2171,7 +2171,7 @@
         "meaning": "tầng, tòa nhà",
         "radical": "木",
         "radical_meaning": "gỗ",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["横", "竖", "撇", "点", "横", "竖", "横折", "横", "横", "竖", "横折", "横", "横"],
         "type": "hình thanh",
@@ -2187,7 +2187,7 @@
         "meaning": "đường",
         "radical": "足",
         "radical_meaning": "chân",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "提", "横折", "横", "竖", "横折", "横", "横"],
         "type": "hình thanh",
@@ -2203,7 +2203,7 @@
         "meaning": "mẹ",
         "radical": "女",
         "radical_meaning": "nữ",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["撇点", "撇", "横", "横折", "竖折折钩", "横"],
         "type": "hình thanh",
@@ -2235,7 +2235,7 @@
         "meaning": "(trợ từ hỏi)",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["竖", "横折", "横", "横折", "竖折折钩", "横"],
         "type": "hình thanh",
@@ -2267,7 +2267,7 @@
         "meaning": "chậm",
         "radical": "忄",
         "radical_meaning": "tâm",
-        "structure": "chữ hình thanh",
+
         "strokes": 14,
         "stroke_order": ["点", "点", "竖", "竖", "横折", "横", "横", "竖", "横折", "横", "横", "撇", "横撇", "捺"],
         "type": "hình thanh",
@@ -2283,7 +2283,7 @@
         "meaning": "bận",
         "radical": "忄",
         "radical_meaning": "tâm",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "点", "竖", "点", "横", "竖折", "横"],
         "type": "hình thanh",
@@ -2331,7 +2331,7 @@
         "meaning": "không có, chưa",
         "radical": "氵",
         "radical_meaning": "nước",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "点", "提", "撇", "横折弯", "横撇", "捺"],
         "type": "hình thanh",
@@ -2347,7 +2347,7 @@
         "meaning": "em gái",
         "radical": "女",
         "radical_meaning": "nữ",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["撇点", "撇", "横", "横", "横", "竖", "撇", "捺"],
         "type": "hình thanh",
@@ -2379,7 +2379,7 @@
         "meaning": "(hậu tố số nhiều)",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["撇", "竖", "点", "竖", "横折钩"],
         "type": "hình thanh",
@@ -2475,7 +2475,7 @@
         "meaning": "nào, đâu",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["竖", "横折", "横", "横折钩", "撇", "撇", "横", "横", "竖钩"],
         "type": "hình thanh",
@@ -2491,7 +2491,7 @@
         "meaning": "đó, kia",
         "radical": "阝",
         "radical_meaning": "thành phố",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横折钩", "撇", "横", "横", "横折折折钩", "竖"],
         "type": "hình thanh",
@@ -2507,7 +2507,7 @@
         "meaning": "sữa, vú",
         "radical": "女",
         "radical_meaning": "nữ",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["撇点", "撇", "横", "横折折折钩", "撇"],
         "type": "hình thanh",
@@ -2555,7 +2555,7 @@
         "meaning": "khó",
         "radical": "又",
         "radical_meaning": "lại",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["横撇", "点", "撇", "竖", "点", "横", "横", "横", "竖", "横"],
         "type": "hình thanh",
@@ -2571,7 +2571,7 @@
         "meaning": "não, đầu óc",
         "radical": "月",
         "radical_meaning": "thịt",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["撇", "横折钩", "横", "横", "点", "横", "撇", "点", "竖折", "竖"],
         "type": "hình thanh",
@@ -2587,7 +2587,7 @@
         "meaning": "(trợ từ hỏi)",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["竖", "横折", "横", "横折", "横", "撇", "竖弯钩"],
         "type": "hình thanh",
@@ -2603,7 +2603,7 @@
         "meaning": "có thể",
         "radical": "月",
         "radical_meaning": "thịt",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["横撇", "点", "竖", "横折钩", "横", "横", "撇", "竖弯钩", "撇", "点"],
         "type": "hình thanh",
@@ -2619,7 +2619,7 @@
         "meaning": "bạn",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["撇", "竖", "撇", "横钩", "竖钩", "撇", "点"],
         "type": "hình thanh",
@@ -2651,7 +2651,7 @@
         "meaning": "ngài, ông/bà (kính ngữ)",
         "radical": "心",
         "radical_meaning": "tâm",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["撇", "竖", "撇", "横钩", "竖钩", "撇", "点", "点", "斜钩", "点", "点"],
         "type": "hình thanh",
@@ -2699,7 +2699,7 @@
         "meaning": "bên, phía",
         "radical": "方",
         "radical_meaning": "vuông",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "横", "点", "撇", "点", "横", "横折钩", "撇", "点", "横"],
         "type": "hình thanh",
@@ -2715,7 +2715,7 @@
         "meaning": "chạy",
         "radical": "足",
         "radical_meaning": "chân",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["竖", "横折", "横", "竖", "横", "竖", "提", "撇", "横折钩", "横折", "横", "竖弯钩"],
         "type": "hình thanh",
@@ -2747,7 +2747,7 @@
         "meaning": "vé",
         "radical": "示",
         "radical_meaning": "thần",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["横", "竖", "横折", "竖", "竖", "横", "横", "横", "竖钩", "撇", "点"],
         "type": "hình thanh",
@@ -2779,7 +2779,7 @@
         "meaning": "thời kỳ, kỳ",
         "radical": "月",
         "radical_meaning": "thịt",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["横", "竖", "横", "横", "横", "撇", "点", "撇", "横折钩", "横", "横", "横"],
         "type": "hình thanh",
@@ -2795,7 +2795,7 @@
         "meaning": "dậy, bắt đầu",
         "radical": "走",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["横", "竖", "横", "竖", "横", "撇", "捺", "横折", "横", "竖弯钩"],
         "type": "hình thanh",
@@ -2827,7 +2827,7 @@
         "meaning": "hơi, xăng",
         "radical": "氵",
         "radical_meaning": "nước",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "点", "提", "横", "横", "横折弯钩", "横"],
         "type": "hình thanh",
@@ -2859,7 +2859,7 @@
         "meaning": "tiền",
         "radical": "钅",
         "radical_meaning": "kim loại",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["撇", "横", "横", "横", "竖提", "横", "横", "撇", "点", "撇"],
         "type": "hình thanh",
@@ -2875,7 +2875,7 @@
         "meaning": "mời, xin",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "横折提", "横", "横", "竖", "横折钩", "竖", "横折", "横", "横"],
         "type": "hình thanh",
@@ -2891,7 +2891,7 @@
         "meaning": "bóng",
         "radical": "王",
         "radical_meaning": "ngọc",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["横", "横", "竖", "提", "横", "竖钩", "提", "点", "撇", "点", "撇"],
         "type": "hình thanh",
@@ -2923,7 +2923,7 @@
         "meaning": "nóng",
         "radical": "灬",
         "radical_meaning": "lửa",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["横", "竖钩", "提", "撇", "点", "撇", "横撇", "撇", "点", "点"],
         "type": "hình thanh",
@@ -2955,7 +2955,7 @@
         "meaning": "nhận ra, biết",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 4,
         "stroke_order": ["点", "横折提", "撇", "捺"],
         "type": "hình thanh",
@@ -3083,7 +3083,7 @@
         "meaning": "giới thiệu",
         "radical": "纟",
         "radical_meaning": "tơ",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["撇折", "撇折", "提", "横折钩", "撇", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -3115,7 +3115,7 @@
         "meaning": "gì (trong 什么)",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 4,
         "stroke_order": ["撇", "竖", "横", "竖"],
         "type": "hình thanh",
@@ -3179,7 +3179,7 @@
         "meaning": "thời gian, giờ",
         "radical": "日",
         "radical_meaning": "mặt trời",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["竖", "横折", "横", "横", "横", "竖钩", "点"],
         "type": "hình thanh",
@@ -3195,7 +3195,7 @@
         "meaning": "biết, kiến thức",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "横折提", "横折", "横", "撇", "点", "斜钩"],
         "type": "hình thanh",
@@ -3227,7 +3227,7 @@
         "meaning": "thử, kiểm tra",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["点", "横折提", "横", "竖钩", "提", "斜钩", "撇", "点"],
         "type": "hình thanh",
@@ -3243,7 +3243,7 @@
         "meaning": "nhìn, xem",
         "radical": "礻",
         "radical_meaning": "thần",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["点", "横撇", "竖", "点", "点", "撇", "竖弯钩", "点"],
         "type": "hình thanh",
@@ -3307,7 +3307,7 @@
         "meaning": "cây",
         "radical": "木",
         "radical_meaning": "gỗ",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["横", "竖", "撇", "点", "横撇", "点", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -3323,7 +3323,7 @@
         "meaning": "ai",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "横折提", "撇", "竖", "点", "横", "横", "横", "竖", "横"],
         "type": "hình thanh",
@@ -3355,7 +3355,7 @@
         "meaning": "ngủ",
         "radical": "目",
         "radical_meaning": "mắt",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["竖", "横折", "横", "横", "横", "撇", "横", "竖", "横折", "横", "横", "竖", "横"],
         "type": "hình thanh",
@@ -3371,7 +3371,7 @@
         "meaning": "nói",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["点", "横折提", "点", "撇", "竖", "横折", "横", "撇", "竖弯钩"],
         "type": "hình thanh",
@@ -3403,7 +3403,7 @@
         "meaning": "tặng, tiễn",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["点", "撇", "横", "横", "撇", "点", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -3419,7 +3419,7 @@
         "meaning": "kể, tố cáo",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "横折提", "撇", "横", "竖钩", "点", "点"],
         "type": "hình thanh",
@@ -3451,7 +3451,7 @@
         "meaning": "anh ấy",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["撇", "竖", "横折钩", "竖", "竖弯钩"],
         "type": "hình thanh",
@@ -3467,7 +3467,7 @@
         "meaning": "cô ấy",
         "radical": "女",
         "radical_meaning": "nữ",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["撇点", "撇", "横", "横折钩", "竖", "竖弯钩"],
         "type": "hình thanh",
@@ -3499,7 +3499,7 @@
         "meaning": "thân thể",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["撇", "竖", "横", "竖", "撇", "捺", "横"],
         "type": "hình thanh",
@@ -3547,7 +3547,7 @@
         "meaning": "nghe",
         "radical": "口",
         "radical_meaning": "miệng",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["竖", "横折", "横", "撇", "横", "竖钩", "点"],
         "type": "hình thanh",
@@ -3611,7 +3611,7 @@
         "meaning": "chơi",
         "radical": "王",
         "radical_meaning": "ngọc",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["横", "横", "竖", "提", "横", "横", "撇", "竖弯钩"],
         "type": "hình thanh",
@@ -3627,7 +3627,7 @@
         "meaning": "tối, muộn",
         "radical": "日",
         "radical_meaning": "mặt trời",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["竖", "横折", "横", "横", "撇", "横撇", "竖", "横折", "横", "横", "横"],
         "type": "hình thanh",
@@ -3659,7 +3659,7 @@
         "meaning": "quên",
         "radical": "心",
         "radical_meaning": "tâm",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "横", "竖折", "点", "斜钩", "点", "点"],
         "type": "hình thanh",
@@ -3803,7 +3803,7 @@
         "meaning": "rửa, giặt",
         "radical": "氵",
         "radical_meaning": "nước",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["点", "点", "提", "撇", "横", "竖", "横折", "横", "撇"],
         "type": "hình thanh",
@@ -3883,7 +3883,7 @@
         "meaning": "hiện tại, xuất hiện",
         "radical": "王",
         "radical_meaning": "ngọc",
-        "structure": "chữ hình thanh",
+
         "strokes": 8,
         "stroke_order": ["横", "横", "竖", "提", "竖", "横折", "横", "撇"],
         "type": "hình thanh",
@@ -3899,7 +3899,7 @@
         "meaning": "muốn, nghĩ, nhớ",
         "radical": "心",
         "radical_meaning": "tâm",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["横", "竖", "撇", "点", "竖", "横折", "横", "横", "横", "点", "斜钩", "点", "点"],
         "type": "hình thanh",
@@ -3931,7 +3931,7 @@
         "meaning": "trường học",
         "radical": "木",
         "radical_meaning": "gỗ",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["横", "竖", "撇", "点", "点", "横", "撇", "点", "撇", "捺"],
         "type": "hình thanh",
@@ -3947,7 +3947,7 @@
         "meaning": "cười",
         "radical": "竹",
         "radical_meaning": "tre",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["撇", "横", "点", "撇", "横", "点", "撇", "横", "撇", "捺"],
         "type": "hình thanh",
@@ -3979,7 +3979,7 @@
         "meaning": "viết",
         "radical": "冖",
         "radical_meaning": "mái nhà",
-        "structure": "chữ hình thanh",
+
         "strokes": 5,
         "stroke_order": ["点", "横钩", "横", "竖折折钩", "横"],
         "type": "hình thanh",
@@ -3995,7 +3995,7 @@
         "meaning": "cảm ơn",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 12,
         "stroke_order": ["点", "横折提", "撇", "横", "横", "横", "撇", "点", "撇", "点", "点", "撇"],
         "type": "hình thanh",
@@ -4011,7 +4011,7 @@
         "meaning": "mới",
         "radical": "斤",
         "radical_meaning": "rìu",
-        "structure": "chữ hình thanh",
+
         "strokes": 13,
         "stroke_order": ["点", "横", "点", "撇", "横", "竖", "撇", "点", "撇", "横", "横", "竖钩", "点"],
         "type": "hình thanh",
@@ -4027,7 +4027,7 @@
         "meaning": "sao, ngôi sao",
         "radical": "日",
         "radical_meaning": "mặt trời",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["竖", "横折", "横", "横", "撇", "横", "横", "竖", "横"],
         "type": "hình thanh",
@@ -4107,7 +4107,7 @@
         "meaning": "dáng vẻ, kiểu",
         "radical": "木",
         "radical_meaning": "gỗ",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["横", "竖", "撇", "点", "点", "撇", "横", "横", "竖", "横"],
         "type": "hình thanh",
@@ -4139,7 +4139,7 @@
         "meaning": "ông",
         "radical": "父",
         "radical_meaning": "cha",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["撇", "点", "撇", "捺", "横折钩", "竖"],
         "type": "hình thanh",
@@ -4235,7 +4235,7 @@
         "meaning": "bóng, hình ảnh",
         "radical": "彡",
         "radical_meaning": "lông",
-        "structure": "chữ hình thanh",
+
         "strokes": 15,
         "stroke_order": ["竖", "横折", "横", "横", "竖", "横折", "横", "横", "点", "横", "竖钩", "撇", "点", "撇", "撇撇"],
         "type": "hình thanh",
@@ -4331,7 +4331,7 @@
         "meaning": "ngôn ngữ",
         "radical": "讠",
         "radical_meaning": "nói",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["点", "横折提", "横折", "横", "横", "竖", "横折", "横", "横"],
         "type": "hình thanh",
@@ -4363,7 +4363,7 @@
         "meaning": "xa",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横", "横", "撇折", "点", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -4379,7 +4379,7 @@
         "meaning": "viện, sân",
         "radical": "阝",
         "radical_meaning": "thành phố",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["横撇", "弯钩", "撇", "点", "横", "撇", "竖", "横折", "横"],
         "type": "hình thanh",
@@ -4427,7 +4427,7 @@
         "meaning": "ở, đang",
         "radical": "土",
         "radical_meaning": "đất",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["横", "撇", "竖", "横", "竖", "横"],
         "type": "hình thanh",
@@ -4459,7 +4459,7 @@
         "meaning": "thế nào",
         "radical": "心",
         "radical_meaning": "tâm",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["撇", "横", "竖", "横", "横", "点", "斜钩", "点", "点"],
         "type": "hình thanh",
@@ -4475,7 +4475,7 @@
         "meaning": "đứng, trạm",
         "radical": "立",
         "radical_meaning": "đứng",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "横", "点", "撇", "横", "竖", "横折", "横", "横", "竖"],
         "type": "hình thanh",
@@ -4491,7 +4491,7 @@
         "meaning": "tìm",
         "radical": "扌",
         "radical_meaning": "tay",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["横", "竖钩", "提", "横", "斜钩", "撇", "点"],
         "type": "hình thanh",
@@ -4507,7 +4507,7 @@
         "meaning": "này",
         "radical": "辶",
         "radical_meaning": "đi",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["点", "横", "撇", "点", "点", "横折折撇", "捺"],
         "type": "hình thanh",
@@ -4619,7 +4619,7 @@
         "meaning": "ở, sống",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["撇", "竖", "点", "横", "横", "竖", "横"],
         "type": "hình thanh",
@@ -4635,7 +4635,7 @@
         "meaning": "chuẩn, cho phép",
         "radical": "冫",
         "radical_meaning": "nước đá",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["点", "提", "点", "撇", "横", "竖", "横折", "横", "横", "横"],
         "type": "hình thanh",
@@ -4651,7 +4651,7 @@
         "meaning": "bàn",
         "radical": "木",
         "radical_meaning": "gỗ",
-        "structure": "chữ hình thanh",
+
         "strokes": 10,
         "stroke_order": ["竖", "横", "竖", "横折", "横", "横", "横", "竖", "撇", "捺"],
         "type": "hình thanh",
@@ -4683,7 +4683,7 @@
         "meaning": "chữ",
         "radical": "宀",
         "radical_meaning": "mái nhà",
-        "structure": "chữ hình thanh",
+
         "strokes": 6,
         "stroke_order": ["点", "点", "横钩", "横撇", "竖钩", "横"],
         "type": "hình thanh",
@@ -4731,7 +4731,7 @@
         "meaning": "hôm qua",
         "radical": "日",
         "radical_meaning": "mặt trời",
-        "structure": "chữ hình thanh",
+
         "strokes": 9,
         "stroke_order": ["竖", "横折", "横", "横", "撇", "横", "竖", "横", "横"],
         "type": "hình thanh",
@@ -4763,7 +4763,7 @@
         "meaning": "làm, tác phẩm",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 7,
         "stroke_order": ["撇", "竖", "撇", "横", "竖", "横", "横"],
         "type": "hình thanh",
@@ -4795,7 +4795,7 @@
         "meaning": "làm",
         "radical": "亻",
         "radical_meaning": "người",
-        "structure": "chữ hình thanh",
+
         "strokes": 11,
         "stroke_order": ["撇", "竖", "横", "竖", "横折", "横", "撇", "横", "撇", "捺", "横"],
         "type": "hình thanh",
