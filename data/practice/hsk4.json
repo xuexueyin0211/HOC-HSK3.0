@@ -1,0 +1,13 @@
+{
+  "badge": "📖 HSK 4",
+  "title": "Luyện Đề Thi Thử HSK 4",
+  "subtitle": "Đề thi thử trung cấp HSK 4",
+  "exercises": [
+    {
+      "question": "Câu 1: Chọn từ thích hợp: 成功往往属于那些有准备并且不轻言___的人。",
+      "options": ["A. 放弃 (Fàngqì)", "B. 丢掉 (Diūdiào)", "C. 离开 (Líkāi)", "D. 忘记 (Wàngjì)"],
+      "answer": 0,
+      "explanation": "放弃 (Fàngqì) = từ bỏ."
+    }
+  ]
+}

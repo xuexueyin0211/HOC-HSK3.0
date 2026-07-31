@@ -1,0 +1,63 @@
+{
+  "title": "Luyện Phát Âm & Pinyin HSK 1",
+  "subtitle": "Thanh mẫu, Vận mẫu, Thanh điệu & Quy tắc biến điệu Pinyin chuẩn",
+  "categories": [
+    {
+      "id": "initials",
+      "name": "1. Thanh Mẫu (Phụ Âm)",
+      "desc": "21 thanh mẫu chính trong tiếng Trung",
+      "items": [
+        { "pinyin": "b", "ipa": "[p]", "sample": "爸爸 (bàba - bố)", "tip": "Âm môi, không bật hơi, đọc nhẹ như 'p'." },
+        { "pinyin": "p", "ipa": "[pʰ]", "sample": "苹果 (píngguǒ - táo)", "tip": "Âm môi, bật hơi mạnh." },
+        { "pinyin": "m", "ipa": "[m]", "sample": "妈妈 (māma - mẹ)", "tip": "Âm môi, đọc như 'm' tiếng Việt." },
+        { "pinyin": "f", "ipa": "[f]", "sample": "飞机 (fēijī - máy bay)", "tip": "Âm răng môi, đọc như 'ph'." },
+        { "pinyin": "d", "ipa": "[t]", "sample": "弟弟 (dìdi - em trai)", "tip": "Âm đầu lưỡi, không bật hơi, đọc như 't'." },
+        { "pinyin": "t", "ipa": "[tʰ]", "sample": "天气 (tiānqì - thời tiết)", "tip": "Âm đầu lưỡi, bật hơi mạnh, đọc như 'th'." },
+        { "pinyin": "n", "ipa": "[n]", "sample": "你好 (nǐhǎo - xin chào)", "tip": "Đọc như 'n' tiếng Việt." },
+        { "pinyin": "l", "ipa": "[l]", "sample": "老师 (lǎoshī - thầy cô)", "tip": "Đọc như 'l' tiếng Việt." },
+        { "pinyin": "g", "ipa": "[k]", "sample": "哥哥 (gēge - anh trai)", "tip": "Đọc như 'c/k' tiếng Việt." },
+        { "pinyin": "k", "ipa": "[kʰ]", "sample": "咖啡 (kāfēi - cà phê)", "tip": "Bật hơi mạnh, đọc như 'kh'." },
+        { "pinyin": "h", "ipa": "[x]", "sample": "喝水 (hēshuǐ - uống nước)", "tip": "Đọc vừa như 'h' vừa như 'kh' nhẹ." },
+        { "pinyin": "j", "ipa": "[tɕ]", "sample": "家 (jiā - nhà)", "tip": "Đọc như 'ch' nhẹ." },
+        { "pinyin": "q", "ipa": "[tɕʰ]", "sample": "去 (qù - đi)", "tip": "Bật hơi mạnh khè ra kẽ răng." },
+        { "pinyin": "x", "ipa": "[ɕ]", "sample": "谢谢 (xièxie - cảm ơn)", "tip": "Đọc như 'x' nhẹ." },
+        { "pinyin": "zh", "ipa": "[tʂ]", "sample": "中国 (zhōngguó - Trung Quốc)", "tip": "Cong lưỡi, đọc như 'tr'." },
+        { "pinyin": "ch", "ipa": "[tʂʰ]", "sample": "吃 (chī - ăn)", "tip": "Cong lưỡi, bật hơi mạnh." },
+        { "pinyin": "sh", "ipa": "[ʂ]", "sample": "书 (shū - sách)", "tip": "Cong lưỡi xát nhẹ." },
+        { "pinyin": "r", "ipa": "[ʐ]", "sample": "热 (rè - nóng)", "tip": "Cong lưỡi, đọc như 'r'." },
+        { "pinyin": "z", "ipa": "[ts]", "sample": "再见 (zàijiàn - tạm biệt)", "tip": "Thẳng lưỡi, đọc như 'tr' không cong lưỡi." },
+        { "pinyin": "c", "ipa": "[tsʰ]", "sample": "菜 (cài - món ăn)", "tip": "Thẳng lưỡi, bật hơi mạnh." },
+        { "pinyin": "s", "ipa": "[s]", "sample": "三 (sān - số 3)", "tip": "Thẳng lưỡi, đọc như 'x'." }
+      ]
+    },
+    {
+      "id": "finals",
+      "name": "2. Vận Mẫu (Nguyên Âm)",
+      "desc": "Các nguyên âm chính trong HSK 1",
+      "items": [
+        { "pinyin": "a", "sample": "阿姨 (āyí)", "tip": "Đọc như 'a'." },
+        { "pinyin": "o", "sample": "我 (wǒ)", "tip": "Tròn môi, giữa 'o' và 'ô'." },
+        { "pinyin": "e", "sample": "喝 (hē)", "tip": "Đọc như 'ơ' hoặc 'ưa'." },
+        { "pinyin": "i", "sample": "你 (nǐ)", "tip": "Đọc như 'i'." },
+        { "pinyin": "u", "sample": "不 (bù)", "tip": "Tròn môi, đọc như 'u'." },
+        { "pinyin": "ü", "sample": "去 (qù)", "tip": "Tròn môi tròn nhọn, đọc giữa 'uy' và 'ư'." },
+        { "pinyin": "ai", "sample": "爱 (ài)", "tip": "Đọc như 'ai'." },
+        { "pinyin": "ei", "sample": "黑 (hēi)", "tip": "Đọc như 'ây'." },
+        { "pinyin": "ao", "sample": "好 (hǎo)", "tip": "Đọc như 'ao'." },
+        { "pinyin": "ou", "sample": "走 (zǒu)", "tip": "Đọc như 'âu'." }
+      ]
+    },
+    {
+      "id": "tones",
+      "name": "3. Thanh Điệu",
+      "desc": "4 thanh điệu chính và thanh nhẹ",
+      "items": [
+        { "pinyin": "ā (Thanh 1)", "pitch": "55 (Cao bằng)", "sample": "妈 (mā - mẹ)", "tip": "Giữ giọng cao bằng phẳng." },
+        { "pinyin": "á (Thanh 2)", "pitch": "35 (Sắc vút lên)", "sample": "麻 (má - vút lên)", "tip": "Giống dấu sắc tiếng Việt." },
+        { "pinyin": "ǎ (Thanh 3)", "pitch": "214 (Xuống rồi lên)", "sample": "马 (mǎ - con ngựa)", "tip": "Trầm xuống rồi hếch lên." },
+        { "pinyin": "à (Thanh 4)", "pitch": "51 (Giật xuống)", "sample": "骂 (mà - mắng)", "tip": "Giật mạnh dứt khoát từ cao xuống thấp." },
+        { "pinyin": "a (Thanh nhẹ)", "pitch": "Nhẹ, ngắn", "sample": "吗 (ma - không?)", "tip": "Đọc nhẹ ngắn không nhấn." }
+      ]
+    }
+  ]
+}

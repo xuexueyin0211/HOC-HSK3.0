@@ -1,0 +1,28 @@
+{
+  "title": "Luyện Dịch HSK 3",
+  "subtitle": "Luyện dịch các cấu trúc câu phức HSK 3",
+  "items": [
+    {
+      "chinese": "为了提高汉语水平，我每天坚持听半个小时新闻。",
+      "pinyin": "Wèile tígāo Hànyǔ shuǐpíng, wǒ měitiān jiānchí tīng bàn gè xiǎoshí xīnwén.",
+      "vietnamese": "Để nâng cao trình độ tiếng Trung, tôi kiên trì nghe tin tức nửa tiếng mỗi ngày.",
+      "hints": [
+        { "cn": "为了", "py": "wèile", "vi": "để, nhằm mục đích" },
+        { "cn": "提高", "py": "tígāo", "vi": "nâng cao" },
+        { "cn": "坚持", "py": "jiānchí", "vi": "kiên trì" },
+        { "cn": "新闻", "py": "xīnwén", "vi": "tin tức" }
+      ]
+    },
+    {
+      "chinese": "如果不及时解决这个问题，后果可能会非常严重。",
+      "pinyin": "Rúguǒ bù jíshí jiějué zhè gè wèntí, hòuguǒ kěnéng huì fēicháng yánzhòng.",
+      "vietnamese": "Nếu không giải quyết vấn đề này kịp thời, hậu quả có thể sẽ vô cùng nghiêm trọng.",
+      "hints": [
+        { "cn": "及时", "py": "jíshí", "vi": "kịp thời" },
+        { "cn": "解决", "py": "jiějué", "vi": "giải quyết" },
+        { "cn": "后果", "py": "hòuguǒ", "vi": "hậu quả" },
+        { "cn": "严重", "py": "yánzhòng", "vi": "nghiêm trọng" }
+      ]
+    }
+  ]
+}

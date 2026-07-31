@@ -1,0 +1,26 @@
+{
+  "title": "Góc Giải Trí HSK 2",
+  "items": [
+    {
+      "id": "song-tian-mi-mi",
+      "level": "hsk2",
+      "category": "music",
+      "categoryLabel": "🎵 Nhạc & Song",
+      "title": "Bài Hát: Ngọt Ngào (甜蜜蜜 - Đặng Lệ Quân)",
+      "chineseTitle": "甜蜜蜜 (Tián Mì Mì)",
+      "synopsis": "Ca khúc bất hủ tiếng Trung với giai điệu nhẹ nhàng, từ vựng vô cùng trong sáng và dễ hát theo.",
+      "embedUrl": "https://www.youtube.com/embed/3y3FhEfl3X8",
+      "vocab": [
+        { "cn": "甜蜜蜜", "py": "tiánmìmì", "vi": "ngọt ngào" },
+        { "cn": "笑", "py": "xiào", "vi": "cười" },
+        { "cn": "花朵", "py": "huāduǒ", "vi": "bông hoa" },
+        { "cn": "梦里", "py": "mènglǐ", "vi": "trong giấc mơ" }
+      ],
+      "contentLines": [
+        { "cn": "甜蜜蜜，你笑得甜蜜蜜。", "py": "Tiánmìmì, nǐ xiào de tiánmìmì.", "vi": "Ngọt ngào làm sao, nụ cười em ngọt ngào làm sao." },
+        { "cn": "好像花儿开在春风里。", "py": "Hǎoxiàng huāer kāi zài chūnfēng lǐ.", "vi": "Tựa như bông hoa nở trong gió xuân." },
+        { "cn": "在哪里，在哪里见过你？", "py": "Zài nǎlǐ, zài nǎlǐ jiànguò nǐ?", "vi": "Ở đâu, em đã từng gặp anh ở đâu nhỉ?" }
+      ]
+    }
+  ]
+}

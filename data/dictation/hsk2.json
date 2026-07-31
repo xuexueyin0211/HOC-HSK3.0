@@ -1,0 +1,20 @@
+{
+  "title": "Nghe Chép Chính Tả HSK 2",
+  "subtitle": "Luyện nghe câu ngắn giao tiếp HSK 2",
+  "items": [
+    {
+      "id": "dict_2_1",
+      "chinese": "虽然在下雨，但他去跑步了",
+      "pinyin": "suī rán zài xià yǔ, dàn tā qù pǎo bù le",
+      "vietnamese": "Tuy đang mưa, nhưng anh ấy đi chạy bộ",
+      "audioText": "虽然在下雨，但他去跑步了"
+    },
+    {
+      "id": "dict_2_2",
+      "chinese": "我的手机不见了",
+      "pinyin": "wǒ de shǒu jī bù jiàn le",
+      "vietnamese": "Điện thoại của tôi mất rồi",
+      "audioText": "我的手机不见了"
+    }
+  ]
+}

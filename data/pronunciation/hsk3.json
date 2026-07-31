@@ -1,0 +1,15 @@
+{
+  "title": "Luyện Phát Âm Nâng Cao HSK 3",
+  "subtitle": "Ngắt câu, ngữ điệu nghi vấn và nhấn âm từ ghép HSK 3",
+  "categories": [
+    {
+      "id": "intonation",
+      "name": "1. Ngữ Điệu Câu & Nhấn Âm",
+      "desc": "Cách nhấn âm giọng chuẩn để diễn tả cảm xúc và nghi vấn",
+      "items": [
+        { "pinyin": "Nǐ shì bú shì zhēn de xiǎng qù?", "sample": "你是不是真的想去？", "tip": "Nhấn giọng ở 'zhēn de' để thể hiện sự xác nhận." },
+        { "pinyin": "Tā suīrán shènbìng, dànshì hái jiānchí gōngzuò.", "sample": "他虽然生病，但是还坚持工作。", "tip": "Tạm dừng ngắn sau 'suīrán shènbìng' để tăng tính liên kết." }
+      ]
+    }
+  ]
+}
