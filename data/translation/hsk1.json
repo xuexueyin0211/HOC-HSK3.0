@@ -1,0 +1,46 @@
+{
+  "title": "Luyện Dịch HSK 1",
+  "subtitle": "Thực hành dịch câu mẫu chuẩn HSK 1 với từ vựng gợi ý & kiểm tra tức thì",
+  "items": [
+    {
+      "chinese": "你好，请问你叫什么名字？",
+      "pinyin": "Nǐ hǎo, qǐng wèn nǐ jiào shén me míng zi?",
+      "vietnamese": "Xin chào, xin hỏi bạn tên là gì?",
+      "hints": [
+        { "cn": "请问", "py": "qǐngwèn", "vi": "xin hỏi" },
+        { "cn": "叫", "py": "jiào", "vi": "tên là, gọi là" },
+        { "cn": "名字", "py": "míngzi", "vi": "tên" }
+      ]
+    },
+    {
+      "chinese": "我是留学生，我在中国学习汉语。",
+      "pinyin": "Wǒ shì liúxuéshēng, wǒ zài Zhōngguó xuéxí Hànyǔ.",
+      "vietnamese": "Tôi là du học sinh, tôi học tiếng Trung ở Trung Quốc.",
+      "hints": [
+        { "cn": "留学生", "py": "liúxuéshēng", "vi": "du học sinh" },
+        { "cn": "学习", "py": "xuéxí", "vi": "học tập" },
+        { "cn": "汉语", "py": "Hànyǔ", "vi": "tiếng Trung" }
+      ]
+    },
+    {
+      "chinese": "今天天气很好，我们去商店买东西吧。",
+      "pinyin": "Jīntiān tiānqì hěn hǎo, wǒmen qù shāngdiàn mǎi dōngxi ba.",
+      "vietnamese": "Hôm nay thời tiết rất tốt, chúng ta đi cửa hàng mua đồ đi.",
+      "hints": [
+        { "cn": "天气", "py": "tiānqì", "vi": "thời tiết" },
+        { "cn": "商店", "py": "shāngdiàn", "vi": "cửa hàng" },
+        { "cn": "买东西", "py": "mǎi dōngxi", "vi": "mua đồ" }
+      ]
+    },
+    {
+      "chinese": "你想喝茶还是喝咖啡？",
+      "pinyin": "Nǐ xiǎng hē chá háishì hē kāfēi?",
+      "vietnamese": "Bạn muốn uống trà hay là uống cà phê?",
+      "hints": [
+        { "cn": "想", "py": "xiǎng", "vi": "muốn, nghĩ" },
+        { "cn": "还是", "py": "háishì", "vi": "hay là" },
+        { "cn": "咖啡", "py": "kāfēi", "vi": "cà phê" }
+      ]
+    }
+  ]
+}

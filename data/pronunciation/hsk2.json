@@ -1,0 +1,27 @@
+{
+  "title": "Luyện Phát Âm & Biến Điệu HSK 2",
+  "subtitle": "Quy tắc biến điệu hai thanh 3, biến điệu '一' (yī) và '不' (bù)",
+  "categories": [
+    {
+      "id": "tone_rules",
+      "name": "1. Biến Điệu Hai Thanh 3 (3 + 3 ➔ 2 + 3)",
+      "desc": "Khi hai âm tiết mang thanh 3 đi liền nhau, âm tiết thứ nhất đổi thành thanh 2",
+      "items": [
+        { "pinyin": "nǐ hǎo ➔ ní hǎo", "sample": "你好 (ní hǎo)", "tip": "Viết là nǐ hǎo, đọc biến điệu là ní hǎo." },
+        { "pinyin": "wǒ hěn ➔ wó hěn", "sample": "我很 (wó hěn)", "tip": "Tôi rất... đọc thành wó hěn." },
+        { "pinyin": "fǔ dǎo ➔ fú dǎo", "sample": "辅导 (fú dǎo)", "tip": "Phụ đạo / Hướng dẫn." }
+      ]
+    },
+    {
+      "id": "yi_bu_rules",
+      "name": "2. Biến Điệu Của '不' (bù) & '一' (yī)",
+      "desc": "'不' trước thanh 4 đọc thành thanh 2 (bú). '一' trước thanh 4 đọc thành (yí)",
+      "items": [
+        { "pinyin": "bù shì ➔ bú shì", "sample": "不是 (bú shì)", "tip": "Không phải (bù ghép với thanh 4 shì ➔ bú shì)." },
+        { "pinyin": "bù duì ➔ bú duì", "sample": "不对 (bú duì)", "tip": "Không đúng (bù ghép với duì ➔ bú duì)." },
+        { "pinyin": "yī yàng ➔ yí yàng", "sample": "一样 (yí yàng)", "tip": "Giống nhau (yī ghép với thanh 4 yàng ➔ yí yàng)." },
+        { "pinyin": "yī kuài ➔ yí kuài", "sample": "一块 (yí kuài)", "tip": "Cùng nhau / 1 đồng (yī ➔ yí)." }
+      ]
+    }
+  ]
+}

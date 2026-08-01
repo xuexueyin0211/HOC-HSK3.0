@@ -1,0 +1,65 @@
+[
+  {
+    "level": "HSK4",
+    "title": "合适 (héshì) VS 适合 (shìhé)",
+    "type": "Tính từ & Động từ nhầm lẫn",
+    "desc": "合适 là Tính từ (phù hợp, vừa vặn), 适合 là Động từ (thích hợp với ai/cái gì).",
+    "table": [
+      {
+        "item": "Từ loại & Cấu trúc",
+        "er": "Tính từ (Không mang tân ngữ, đi với 很/非常)",
+        "liang": "Động từ (Mang tân ngữ phía sau)"
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "这件衣服很合适。 (Bộ quần áo này rất hợp.)",
+        "liang": "这件衣服适合你。 (Bộ quần áo này hợp với bạn.)"
+      }
+    ],
+    "wrong": "❌ 这件衣服合适你。 (Sai vì 合适 là tính từ không mang tân ngữ 你)",
+    "correct": "✅ 这件衣服适合你。 (Đúng khi mang tân ngữ phía sau)",
+    "tip": "💡 Mẹo nhớ: Có tân ngữ chỉ người/vật phía sau ➔ Dùng 适合! Đứng cuối câu hay có 很 ➔ Dùng 合适!"
+  },
+  {
+    "level": "HSK4",
+    "title": "本来 (běnlái) VS 原来 (yuánlái)",
+    "type": "Phó từ & Tính từ nhầm lẫn",
+    "desc": "Phân biệt 本来 (vốn dĩ, lẽ ra) và 原来 (hóa ra, vốn dĩ trước đây).",
+    "table": [
+      {
+        "item": "Sắc thái ý nghĩa",
+        "er": "本来: Lẽ ra/vốn dĩ (Ý định ban đầu nhưng đã thay đổi)",
+        "liang": "原来: Hóa ra/phát hiện ra sự thật (Trước không biết, giờ mới biết)"
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "我本来打算去，但是下雨了。(Lẽ ra định đi nhưng mưa)",
+        "liang": "原来是你啊！(Hóa ra là bạn à!)"
+      }
+    ],
+    "wrong": "❌ 本来是你啊！ (Sai vì phát hiện bất ngờ phải dùng 原来)",
+    "correct": "✅ 原来是你啊！ (Đúng khi biểu thị phát hiện bất ngờ)",
+    "tip": "💡 Mẹo nhớ: Phát hiện ra bí mật/sự thật ➔ Dùng 原来! Ý định ban đầu nhưng bị đổi ➔ Dùng 本来!"
+  },
+  {
+    "level": "HSK4",
+    "title": "往往 (wǎngwǎng) VS 经常 (jīngcháng)",
+    "type": "Phó từ so sánh",
+    "desc": "Cả hai đều biểu thị tần suất lặp lại, nhưng 往往 nhấn mạnh quy luật/kinh nghiệm quá khứ, 经常 mang nghĩa thường xuyên.",
+    "table": [
+      {
+        "item": "Sắc thái & Phạm vi",
+        "er": "Quy luật mang tính kinh nghiệm, dùng cho sự việc đã lặp lại",
+        "liang": "Thường xuyên, dùng cho cả quá khứ, hiện tại và tương lai"
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "周末我往往去图书馆。 (Thói quen quy luật)",
+        "liang": "以后你要经常来玩。 (Tương lai - Thường xuyên)"
+      }
+    ],
+    "wrong": "❌ 以后你要往往来玩。 (Sai vì 往往 không dùng cho câu yêu cầu tương lai)",
+    "correct": "✅ 以后你要经常来玩。 (Đúng khi mời gọi hoặc dặn dò tương lai)",
+    "tip": "💡 Mẹo nhớ: Dặn dò tương lai hoặc đi với 要/会 ➔ Dùng 经常!"
+  }
+]

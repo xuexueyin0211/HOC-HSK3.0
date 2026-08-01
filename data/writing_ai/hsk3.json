@@ -1,0 +1,15 @@
+{
+  "level": "HSK3",
+  "title": "Luyện Viết Với AI - Cấp Độ HSK 3",
+  "topics": [
+    {
+      "id": "w3_1",
+      "title": "Chủ đề 1: Kế hoạch du lịch (旅行计划)",
+      "prompt": "Viết đoạn văn từ 6-8 câu nói về chuyến đi du lịch gần nhất hoặc dự định sắp tới.",
+      "keywords": ["打算", "旅游", "飞机", "风景", "准备"],
+      "sample": "下个月我打算去北京旅游。我已经买好了机票。我想去参观长城和故宫，尝尝北京烤鸭。",
+      "sample_py": "Xià gè yuè wǒ dǎsuàn qù Běijīng lǚyóu. Wǒ yǐjīng mǎi hǎo le jīpiào. Wǒ xiǎng qù cānguān Chángchéng hé Gùgōng, chángchang Běijīng kǎoyā.",
+      "sample_vi": "Tháng sau tôi dự định đi Bắc Kinh du lịch. Tôi đã mua xong vé máy bay. Tôi muốn tham quan Vạn Lý Trường Thành và Cố Cung, nếm thử vịt quay Bắc Kinh."
+    }
+  ]
+}

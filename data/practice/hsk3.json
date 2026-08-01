@@ -1,0 +1,13 @@
+{
+  "badge": "📖 HSK 3",
+  "title": "Luyện Đề Thi Thử HSK 3",
+  "subtitle": "Đề thi thử HSK 3 chuẩn cấu trúc",
+  "exercises": [
+    {
+      "question": "Câu 1: Điền từ thích hợp: 为了提高汉语水平，我每天___听半个小时新闻。",
+      "options": ["A. 坚持 (Jiānchí)", "B. 支持 (Zhīchí)", "C. 保持 (Bǎochí)", "D. 保证 (Bǎozhèng)"],
+      "answer": 0,
+      "explanation": "坚持 (Jiānchí) = kiên trì."
+    }
+  ]
+}

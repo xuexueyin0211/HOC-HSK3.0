@@ -1,0 +1,17 @@
+{
+  "title": "Luyện Dịch HSK 5",
+  "subtitle": "Thực hành dịch câu phân tích xã hội HSK 5",
+  "items": [
+    {
+      "chinese": "随着经济的快速发展，人们的生活方式发生了巨大的变化。",
+      "pinyin": "Suízhe jīngjì de kuàisù fāzhǎn, rénmen de shēnghuó fāngshì fāshēng le jùdà de biànhuà.",
+      "vietnamese": "Cùng với sự phát triển nhanh chóng của kinh tế, lối sống của con người đã có những thay đổi to lớn.",
+      "hints": [
+        { "cn": "随着", "py": "suízhe", "vi": "cùng với, theo sự" },
+        { "cn": "快速", "py": "kuàisù", "vi": "nhanh chóng" },
+        { "cn": "方式", "py": "fāngshì", "vi": "phương thức, lối" },
+        { "cn": "巨大", "py": "jùdà", "vi": "to lớn, vĩ đại" }
+      ]
+    }
+  ]
+}

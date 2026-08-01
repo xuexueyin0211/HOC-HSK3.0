@@ -1,0 +1,25 @@
+{
+  "badge": "📖 HSK 1",
+  "title": "Luyện Đề Thi Thử HSK 1",
+  "subtitle": "Đề thi thử tổng hợp chuẩn cấu trúc HSK 1 kèm đáp án và giải thích chi tiết",
+  "exercises": [
+    {
+      "question": "Câu 1: Từ nào sau đây có nghĩa là 'Xin chào'?",
+      "options": ["A. 再见 (Zàijiàn)", "B. 你好 (Nǐhǎo)", "C. 谢谢 (Xièxie)", "D. 不客气 (Bú kèqi)"],
+      "answer": 1,
+      "explanation": "你好 (Nǐhǎo) có nghĩa là 'Xin chào'."
+    },
+    {
+      "question": "Câu 2: Điền từ thích hợp: 我___中国学习汉语。(Tôi học tiếng Trung ở Trung Quốc)",
+      "options": ["A. 在 (Zài)", "B. 是 (Shì)", "C. 去 (Qù)", "D. 有 (Yǒu)"],
+      "answer": 0,
+      "explanation": "Cấu trúc '在 + địa điểm + làm gì': 我在中国学习汉语."
+    },
+    {
+      "question": "Câu 3: Chọn câu có nghĩa 'Hôm nay thời tiết rất tốt':",
+      "options": ["A. 今天天气很好", "B. 昨天天气很好", "C. 明天天气很好", "D. 天气不太好"],
+      "answer": 0,
+      "explanation": "今天 (Jīntiān) = Hôm nay, 天气很好 (tiānqì hěn hǎo) = thời tiết rất tốt."
+    }
+  ]
+}

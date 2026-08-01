@@ -1,0 +1,44 @@
+{
+  "title": "Góc Giải Trí HSK 1",
+  "items": [
+    {
+      "id": "peppa-pig-1",
+      "level": "hsk1",
+      "category": "video",
+      "categoryLabel": "🎥 Video & Phim",
+      "title": "Peppa Pig Tiếng Trung (小猪佩奇)",
+      "chineseTitle": "小猪佩奇 - 泥坑 (Muddy Puddles)",
+      "synopsis": "Hoạt hình Peppa Pig bản tiếng Trung giản thể, phát âm chuẩn, từ vựng siêu gần gũi và dễ học cho HSK 1-2.",
+      "embedUrl": "https://www.youtube.com/embed/g2J0X794lV0",
+      "vocab": [
+        { "cn": "泥坑", "py": "níkēng", "vi": "vũng bùn" },
+        { "cn": "喜欢", "py": "xǐhuan", "vi": "thích" },
+        { "cn": "跳", "py": "tiào", "vi": "nhảy" },
+        { "cn": "靴子", "py": "xuēzi", "vi": "đôi ủng" }
+      ],
+      "contentLines": [
+        { "cn": "佩奇喜欢在泥坑里跳。", "py": "Pèi qí xǐhuan zài níkēng lǐ tiào.", "vi": "Peppa thích nhảy trong vũng bùn." },
+        { "cn": "如果你要在泥坑里跳，你必须穿上靴子。", "py": "Rúguǒ nǐ yào zài níkēng lǐ tiào, nǐ bìxū chuān shàng xuēzi.", "vi": "Nếu con muốn nhảy vào vũng bùn, con phải đi ủng vào." }
+      ]
+    },
+    {
+      "id": "short-story-cats",
+      "level": "hsk1",
+      "category": "novel",
+      "categoryLabel": "📖 Tiểu thuyết & Truyện",
+      "title": "Truyện Ngắn: Mèo Con Tìm Mẹ (小猫找妈妈)",
+      "chineseTitle": "小猫找妈妈 (Graded Reader HSK1)",
+      "synopsis": "Truyện đọc giản yếu HSK1 về chú mèo nhỏ đi quanh trang trại tìm mẹ, học từ vựng về động vật và hỏi đường.",
+      "vocab": [
+        { "cn": "小猫", "py": "xiǎomāo", "vi": "mèo con" },
+        { "cn": "找到", "py": "zhǎodào", "vi": "tìm thấy" },
+        { "cn": "农场", "py": "nóngchǎng", "vi": "trang trại" }
+      ],
+      "contentLines": [
+        { "cn": "一只小猫在路上走。", "py": "Yì zhī xiǎomāo zài lùshang zǒu.", "vi": "Một chú mèo con đang đi trên đường." },
+        { "cn": "它问大牛：“请问，你看见我的妈妈了吗？”", "py": "Tā wèn dà niú: \"Qǐngwèn, nǐ kànjiàn wǒ de māma le ma?\"", "vi": "Nó hỏi bò lớn: \"Xin hỏi, bác có nhìn thấy mẹ của cháu không?\"" },
+        { "cn": "大牛说：“没有，你去前面问问小狗吧。”", "py": "Dà niú shuō: \"Méiyǒu, nǐ qù qiánmiàn wènwen xiǎogǒu ba.\"", "vi": "Bò lớn nói: \"Không có, cháu phía trước hỏi chú chó xem.\"" }
+      ]
+    }
+  ]
+}

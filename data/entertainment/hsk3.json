@@ -1,0 +1,23 @@
+{
+  "title": "Góc Giải Trí HSK 3",
+  "items": [
+    {
+      "id": "comic-fox-fairy",
+      "level": "hsk3",
+      "category": "comic",
+      "categoryLabel": "🎨 Truyện tranh & Manhua",
+      "title": "Truyện Tranh HSK3: Cáo Nhỏ Đi Học (小狐狸上学记)",
+      "chineseTitle": "小狐狸上学记 (Manhua HSK3)",
+      "synopsis": "Bộ truyện tranh hài hước lồng ghép đời sống học đường của các loài vật, phù hợp ôn tập ngữ pháp HSK3.",
+      "vocab": [
+        { "cn": "狐狸", "py": "húli", "vi": "con cáo" },
+        { "cn": "考试", "py": "kǎoshì", "vi": "thi cử" },
+        { "cn": "紧张", "py": "jǐnzhāng", "vi": "hồi hộp, căng thẳng" }
+      ],
+      "contentLines": [
+        { "cn": "今天小狐狸第一天去动物学校。", "py": "Jīntiān xiǎohúli dì-yī tiān qù dòngwù xuéxiào.", "vi": "Hôm nay là ngày đầu tiên cáo nhỏ đến trường học động vật." },
+        { "cn": "它心里非常紧张，因为今天有汉语听力测试。", "py": "Tā xīnlǐ fēicháng jǐnzhāng, yīnwèi jīntiān yǒu Hànyǔ tīnglì cèshì.", "vi": "Trong lòng nó vô cùng hồi hộp vì hôm nay có bài kiểm tra nghe tiếng Trung." }
+      ]
+    }
+  ]
+}

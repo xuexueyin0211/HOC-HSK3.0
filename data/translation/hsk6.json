@@ -1,0 +1,17 @@
+{
+  "title": "Luyện Dịch HSK 6",
+  "subtitle": "Thực hành dịch câu cao cấp HSK 6",
+  "items": [
+    {
+      "chinese": "在化解矛盾的过程中，沟通与理解起到了至关重要的作用。",
+      "pinyin": "Zài huàjiě máodùn de guòchéng zhōng, gōutōng yǔ lǐjiě qǐdào le zhìguān zhòngyào de zuòyòng.",
+      "vietnamese": "Trong quá trình hóa giải mâu thuẫn, giao tiếp và sự thấu hiểu đóng vai trò cực kỳ quan trọng.",
+      "hints": [
+        { "cn": "化解", "py": "huàjiě", "vi": "hóa giải" },
+        { "cn": "矛盾", "py": "máodùn", "vi": "mâu thuẫn" },
+        { "cn": "沟通", "py": "gōutōng", "vi": "giao tiếp, kết nối" },
+        { "cn": "至关重要", "py": "zhìguān zhòngyào", "vi": "cực kỳ quan trọng" }
+      ]
+    }
+  ]
+}
