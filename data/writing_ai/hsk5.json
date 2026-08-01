@@ -1,0 +1,15 @@
+{
+  "level": "HSK5",
+  "title": "Luyện Viết Với AI - Cấp Độ HSK 5",
+  "topics": [
+    {
+      "id": "w5_1",
+      "title": "Chủ đề 1: Quan điểm sống & Nghị lực vươn lên (人生观与议论文)",
+      "prompt": "Viết bài văn nghị luận ngắn 100-150 từ chia sẻ quan điểm của bạn về thái độ ứng xử trước áp lực cuộc sống.",
+      "keywords": ["面对", "压力", "心态", "挑战", "积极"],
+      "sample": "现代社会竞争激烈，人们常常感到巨大的压力。面对压力，保持积极乐观的心态至关重要。我们要学会把挑战转化为前进的动力。",
+      "sample_py": "Xiàndài shèhuì jìngzhēng jīliè, rénmen chángcháng gǎndào jùdà de yālì. Miànduì yālì, bǎochí jījí lèguān de xīntài zhìguān zhòngyào. Wǒmen yào xuéhuì bǎ tiǎozhàn zhuǎnhuà wéi qiánjìn de dònglì.",
+      "sample_vi": "Xã hội hiện đại cạnh tranh gay gắt, con người thường cảm thấy áp lực to lớn. Đối mặt với áp lực, giữ thái độ tích cực lạc quan là hết sức quan trọng. Chúng ta cần học cách biến thách thức thành động lực tiến bước."
+    }
+  ]
+}

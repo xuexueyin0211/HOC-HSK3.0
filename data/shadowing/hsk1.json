@@ -1,0 +1,30 @@
+{
+  "title": "Luyện Nói Nhại (Shadowing) HSK 1",
+  "subtitle": "Nghe người bản xứ đọc mẫu từng câu, đọc nhại theo để rèn phản xạ và ngữ điệu tự nhiên",
+  "items": [
+    {
+      "id": "shad_1_1",
+      "title": "Giao tiếp cơ bản - Chào hỏi",
+      "chinese": "你好，很高兴认识你！",
+      "pinyin": "Nǐ hǎo, hěn gāoxìng rènshi nǐ!",
+      "vietnamese": "Xin chào, rất vui được quen biết bạn!",
+      "speedTips": "Đọc nhịp nhàng, nhấn giọng nhẹ ở 'gāoxìng'"
+    },
+    {
+      "id": "shad_1_2",
+      "title": "Hỏi gia đình & quê hương",
+      "chinese": "你家有几口人？我家有四口人。",
+      "pinyin": "Nǐ jiā yǒu jǐ kǒu rén? Wǒ jiā yǒu sì kǒu rén.",
+      "vietnamese": "Nhà bạn có mấy người? Nhà tôi có 4 người.",
+      "speedTips": "Chú ý ngắt câu sau câu hỏi"
+    },
+    {
+      "id": "shad_1_3",
+      "title": "Rủ đi mua sắm",
+      "chinese": "今天下午我们一起去商店买水果吧。",
+      "pinyin": "Jīntiān xiàwǔ wǒmen yìqǐ qù shāngdiàn mǎi shuǐguǒ ba.",
+      "vietnamese": "Chiều nay chúng ta cùng đi cửa hàng mua hoa quả nhé.",
+      "speedTips": "Nhấn ngữ điệu rủ rê ở ngữ khí từ 'ba'"
+    }
+  ]
+}

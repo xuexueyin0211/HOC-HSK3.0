@@ -1,0 +1,1781 @@
+{
+  "hsk3": {
+    "title": "TỔNG HỢP TỪ VỰNG HSK3",
+    "color": "hsk3",
+    "total_lessons": 18,
+    "lessons": [
+      {
+        "id": 1,
+        "title": "第1课 你参加过什么比赛",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 1",
+            "subcards": [
+              {
+                "label": "📝 Danh sách từ vựng:",
+                "type": "vocab_list",
+                "words": [
+                  {"hanzi": "帮助", "pinyin": "bāngzhù", "word_type": "động từ/danh từ", "meaning": "giúp đỡ", "note": "", "examples": [{"cn": "他帮助了我很多。", "py": "Tā bāngzhù le wǒ hěnduō.", "vi": "Anh ấy đã giúp tôi rất nhiều."}]},
+                  {"hanzi": "不见", "pinyin": "bújiàn", "word_type": "động từ", "meaning": "không thấy, mất", "note": "", "examples": [{"cn": "我的书不见了。", "py": "Wǒ de shū bújiàn le.", "vi": "Sách của tôi không thấy đâu."}]},
+                  {"hanzi": "带", "pinyin": "dài", "word_type": "động từ", "meaning": "mang, đem theo", "note": "", "examples": [{"cn": "别忘了带护照。", "py": "Bié wàngle dài hùzhào.", "vi": "Đừng quên mang hộ chiếu."}]},
+                  {"hanzi": "发现", "pinyin": "fāxiàn", "word_type": "động từ", "meaning": "phát hiện", "note": "", "examples": [{"cn": "我发现了一个问题。", "py": "Wǒ fāxiàn le yīgè wèntí.", "vi": "Tôi phát hiện ra một vấn đề."}]},
+                  {"hanzi": "丢", "pinyin": "diū", "word_type": "động từ", "meaning": "mất, đánh rơi", "note": "", "examples": [{"cn": "我丢了钱包。", "py": "Wǒ diūle qiánbāo.", "vi": "Tôi đã đánh rơi ví."}]},
+                  {"hanzi": "短", "pinyin": "duǎn", "word_type": "tính từ", "meaning": "ngắn", "note": "Trái nghĩa với 长 (cháng)", "examples": [{"cn": "这条裤子太短了。", "py": "Zhè tiáo kùzi tài duǎn le.", "vi": "Cái quần này quá ngắn."}]},
+                  {"hanzi": "好像", "pinyin": "hǎoxiàng", "word_type": "phó từ", "meaning": "dường như, giống như", "note": "", "examples": [{"cn": "他好像很累。", "py": "Tā hǎoxiàng hěn lèi.", "vi": "Anh ấy dường như rất mệt."}]},
+                  {"hanzi": "号码", "pinyin": "hàomǎ", "word_type": "danh từ", "meaning": "số (điện thoại, chứng minh)", "note": "", "examples": [{"cn": "你的电话号码是多少？", "py": "Nǐ de diànhuà hàomǎ shì duōshao?", "vi": "Số điện thoại của bạn là bao nhiêu?"}]},
+                  {"hanzi": "护照", "pinyin": "hùzhào", "word_type": "danh từ", "meaning": "hộ chiếu", "note": "", "examples": [{"cn": "请出示您的护照。", "py": "Qǐng chūshì nín de hùzhào.", "vi": "Xin xuất trình hộ chiếu của bạn."}]},
+                  {"hanzi": "接", "pinyin": "jiē", "word_type": "động từ", "meaning": "đón, nhận", "note": "", "examples": [{"cn": "我去机场接你。", "py": "Wǒ qù jīchǎng jiē nǐ.", "vi": "Tôi đến sân bay đón bạn."}]},
+                  {"hanzi": "年轻", "pinyin": "niánqīng", "word_type": "tính từ", "meaning": "trẻ tuổi", "note": "", "examples": [{"cn": "他很年轻。", "py": "Tā hěn niánqīng.", "vi": "Anh ấy rất trẻ."}]},
+                  {"hanzi": "身高", "pinyin": "shēngāo", "word_type": "danh từ", "meaning": "chiều cao", "note": "", "examples": [{"cn": "我的身高是一米八。", "py": "Wǒ de shēngāo shì yī mǐ bā.", "vi": "Chiều cao của tôi là 1m80."}]},
+                  {"hanzi": "瘦", "pinyin": "shòu", "word_type": "tính từ", "meaning": "gầy", "note": "Trái nghĩa với 胖 (pàng)", "examples": [{"cn": "他太瘦了。", "py": "Tā tài shòu le.", "vi": "Anh ấy quá gầy."}]},
+                  {"hanzi": "头发", "pinyin": "tóufa", "word_type": "danh từ", "meaning": "tóc", "note": "", "examples": [{"cn": "她的头发很长。", "py": "Tā de tóufa hěn cháng.", "vi": "Tóc của cô ấy rất dài."}]},
+                  {"hanzi": "箱子", "pinyin": "xiāngzi", "word_type": "danh từ", "meaning": "vali, hộp", "note": "", "examples": [{"cn": "我有一个大箱子。", "py": "Wǒ yǒu yīgè dà xiāngzi.", "vi": "Tôi có một cái vali lớn."}]},
+                  {"hanzi": "像", "pinyin": "xiàng", "word_type": "động từ", "meaning": "giống", "note": "", "examples": [{"cn": "他像他爸爸。", "py": "Tā xiàng tā bàba.", "vi": "Anh ấy giống bố anh ấy."}]},
+                  {"hanzi": "行李", "pinyin": "xínglǐ", "word_type": "danh từ", "meaning": "hành lý", "note": "", "examples": [{"cn": "我的行李很重。", "py": "Wǒ de xínglǐ hěn zhòng.", "vi": "Hành lý của tôi rất nặng."}]},
+                  {"hanzi": "以为", "pinyin": "yǐwéi", "word_type": "động từ", "meaning": "tưởng rằng, nghĩ rằng", "note": "Thường chỉ suy nghĩ sai lệch.", "examples": [{"cn": "我以为你在家。", "py": "Wǒ yǐwéi nǐ zài jiā.", "vi": "Tôi tưởng bạn ở nhà."}]},
+                  {"hanzi": "应该", "pinyin": "yīnggāi", "word_type": "trợ động từ", "meaning": "nên, phải", "note": "", "examples": [{"cn": "你应该多运动。", "py": "Nǐ yīnggāi duō yùndòng.", "vi": "Bạn nên tập thể dục nhiều hơn."}]},
+                  {"hanzi": "站", "pinyin": "zhàn", "word_type": "động từ/danh từ", "meaning": "đứng; trạm, ga", "note": "", "examples": [{"cn": "我站在门口。", "py": "Wǒ zhàn zài ménkǒu.", "vi": "Tôi đứng ở cửa."}]},
+                  {"hanzi": "长", "pinyin": "zhǎng", "word_type": "động từ", "meaning": "lớn lên, dài ra", "note": "Khác với cháng (dài)", "examples": [{"cn": "孩子们都长高了。", "py": "Háizimen dōu zhǎng gāo le.", "vi": "Các con đều cao lên rồi."}]},
+                  {"hanzi": "着急", "pinyin": "zhāojí", "word_type": "tính từ/động từ", "meaning": "lo lắng, sốt ruột", "note": "", "examples": [{"cn": "别着急！", "py": "Bié zhāojí!", "vi": "Đừng lo lắng!"}]},
+                  {"hanzi": "照片", "pinyin": "zhàopiàn", "word_type": "danh từ", "meaning": "ảnh, bức ảnh", "note": "", "examples": [{"cn": "这张照片很漂亮。", "py": "Zhè zhāng zhàopiàn hěn piàoliang.", "vi": "Bức ảnh này rất đẹp."}]},
+                  {"hanzi": "中间", "pinyin": "zhōngjiān", "word_type": "danh từ", "meaning": "ở giữa", "note": "", "examples": [{"cn": "坐在中间。", "py": "Zuò zài zhōngjiān.", "vi": "Ngồi ở giữa."}]},
+                  {"hanzi": "重要", "pinyin": "zhòngyào", "word_type": "tính từ", "meaning": "quan trọng", "note": "", "examples": [{"cn": "这个问题很重要。", "py": "Zhège wèntí hěn zhòngyào.", "vi": "Vấn đề này rất quan trọng."}]},
+                  {"hanzi": "服务台", "pinyin": "fúwùtái", "word_type": "danh từ", "meaning": "quầy dịch vụ", "note": "(siêu cấp)", "examples": [{"cn": "服务台在哪儿？", "py": "Fúwùtái zài nǎr?", "vi": "Quầy dịch vụ ở đâu?"}]}
+                ]
+              }
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 1 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "帮助", "pinyin": "bāngzhù", "meaning": "giúp đỡ"},
+              {"hanzi": "带", "pinyin": "dài", "meaning": "mang theo"},
+              {"hanzi": "发现", "pinyin": "fāxiàn", "meaning": "phát hiện"},
+              {"hanzi": "丢", "pinyin": "diū", "meaning": "mất/đánh rơi"},
+              {"hanzi": "短", "pinyin": "duǎn", "meaning": "ngắn"},
+              {"hanzi": "好像", "pinyin": "hǎoxiàng", "meaning": "dường như"},
+              {"hanzi": "护照", "pinyin": "hùzhào", "meaning": "hộ chiếu"},
+              {"hanzi": "接", "pinyin": "jiē", "meaning": "đón"},
+              {"hanzi": "年轻", "pinyin": "niánqīng", "meaning": "trẻ tuổi"},
+              {"hanzi": "瘦", "pinyin": "shòu", "meaning": "gầy"},
+              {"hanzi": "头发", "pinyin": "tóufa", "meaning": "tóc"},
+              {"hanzi": "箱子", "pinyin": "xiāngzi", "meaning": "vali"},
+              {"hanzi": "像", "pinyin": "xiàng", "meaning": "giống"},
+              {"hanzi": "行李", "pinyin": "xínglǐ", "meaning": "hành lý"},
+              {"hanzi": "以为", "pinyin": "yǐwéi", "meaning": "tưởng rằng"},
+              {"hanzi": "应该", "pinyin": "yīnggāi", "meaning": "nên/phải"},
+              {"hanzi": "着急", "pinyin": "zhāojí", "meaning": "lo lắng"},
+              {"hanzi": "重要", "pinyin": "zhòngyào", "meaning": "quan trọng"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '帮助' có nghĩa là gì?",
+            "options": ["A. Giúp đỡ", "B. Hỗ trợ", "C. Cả A và B", "D. Xin lỗi"],
+            "answer": 2,
+            "explanation": "'帮助' nghĩa là giúp đỡ hoặc hỗ trợ."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '丢' có nghĩa là gì?",
+            "options": ["A. Tìm thấy", "B. Mất/đánh rơi", "C. Mua", "D. Bán"],
+            "answer": 1,
+            "explanation": "'丢' có nghĩa là mất hoặc đánh rơi."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "他 ___ 了很多。 (Anh ấy đã giúp đỡ rất nhiều)", "answer": "帮助"},
+              {"sentence": "我的书不 ___ 了。 (Sách của tôi không thấy đâu)", "answer": "见"},
+              {"sentence": "你 ___ 带护照。 (Bạn nên mang hộ chiếu)", "answer": "应该"},
+              {"sentence": "我 ___ 你在家。 (Tôi tưởng bạn ở nhà)", "answer": "以为"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi đã đánh rơi ví.", "chinese": "我丢了钱包。"},
+              {"vietnamese": "Bạn nên tập thể dục nhiều hơn.", "chinese": "你应该多运动。"}
+            ]
+          },
+          {
+            "type": "drag_drop",
+            "question": "6. Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+            "words": ["我", "以为", "你", "在", "家"],
+            "answer": "我以为你在家。",
+            "explanation": "Cấu trúc: 以为 + mệnh đề."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "第2课 服务员的饭菜很可口",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 2",
+            "subcards": [
+              {
+                "label": "📝 Danh sách từ vựng:",
+                "type": "vocab_list",
+                "words": [
+                  {"hanzi": "不用", "pinyin": "búyòng", "word_type": "phó từ", "meaning": "không cần", "note": "", "examples": [{"cn": "不用谢！", "py": "Búyòng xiè!", "vi": "Không cần cảm ơn!"}]},
+                  {"hanzi": "菜单", "pinyin": "càidān", "word_type": "danh từ", "meaning": "thực đơn", "note": "", "examples": [{"cn": "请给我菜单。", "py": "Qǐng gěi wǒ càidān.", "vi": "Xin cho tôi thực đơn."}]},
+                  {"hanzi": "尝", "pinyin": "cháng", "word_type": "động từ", "meaning": "nếm thử", "note": "", "examples": [{"cn": "你尝尝这个菜。", "py": "Nǐ chángchang zhège cài.", "vi": "Bạn nếm thử món này đi."}]},
+                  {"hanzi": "蛋糕", "pinyin": "dàngāo", "word_type": "danh từ", "meaning": "bánh ga-tô", "note": "", "examples": [{"cn": "生日快乐！吃蛋糕吧。", "py": "Shēngrì kuàilè! Chī dàngāo ba.", "vi": "Chúc mừng sinh nhật! Ăn bánh đi."}]},
+                  {"hanzi": "饿", "pinyin": "è", "word_type": "tính từ", "meaning": "đói", "note": "", "examples": [{"cn": "我饿了。", "py": "Wǒ è le.", "vi": "Tôi đói rồi."}]},
+                  {"hanzi": "方便", "pinyin": "fāngbiàn", "word_type": "tính từ", "meaning": "tiện lợi", "note": "", "examples": [{"cn": "网上买东西很方便。", "py": "Wǎngshang mǎi dōngxi hěn fāngbiàn.", "vi": "Mua đồ trên mạng rất tiện lợi."}]},
+                  {"hanzi": "方便面", "pinyin": "fāngbiànmiàn", "word_type": "danh từ", "meaning": "mì ăn liền", "note": "", "examples": [{"cn": "我吃方便面。", "py": "Wǒ chī fāngbiànmiàn.", "vi": "Tôi ăn mì ăn liền."}]},
+                  {"hanzi": "服务", "pinyin": "fúwù", "word_type": "động từ/danh từ", "meaning": "phục vụ, dịch vụ", "note": "", "examples": [{"cn": "这里的服务很好。", "py": "Zhèlǐ de fúwù hěn hǎo.", "vi": "Dịch vụ ở đây rất tốt."}]},
+                  {"hanzi": "好久", "pinyin": "hǎojiǔ", "word_type": "danh từ/phó từ", "meaning": "lâu (thời gian dài)", "note": "", "examples": [{"cn": "好久不见！", "py": "Hǎojiǔ bújiàn!", "vi": "Lâu không gặp!"}]},
+                  {"hanzi": "鸡", "pinyin": "jī", "word_type": "danh từ", "meaning": "con gà", "note": "", "examples": [{"cn": "我喜欢吃鸡肉。", "py": "Wǒ xǐhuān chī jīròu.", "vi": "Tôi thích ăn thịt gà."}]},
+                  {"hanzi": "记", "pinyin": "jì", "word_type": "động từ", "meaning": "nhớ, ghi chép", "note": "", "examples": [{"cn": "我记不住他的电话。", "py": "Wǒ jì bù zhù tā de diànhuà.", "vi": "Tôi không nhớ số điện thoại của anh ấy."}]},
+                  {"hanzi": "简单", "pinyin": "jiǎndān", "word_type": "tính từ", "meaning": "đơn giản", "note": "", "examples": [{"cn": "这个问题很简单。", "py": "Zhège wèntí hěn jiǎndān.", "vi": "Vấn đề này rất đơn giản."}]},
+                  {"hanzi": "客气", "pinyin": "kèqì", "word_type": "tính từ", "meaning": "khách khí, lịch sự", "note": "", "examples": [{"cn": "你太客气了。", "py": "Nǐ tài kèqì le.", "vi": "Bạn quá khách khí rồi."}]},
+                  {"hanzi": "渴", "pinyin": "kě", "word_type": "tính từ", "meaning": "khát", "note": "", "examples": [{"cn": "我渴了，想喝水。", "py": "Wǒ kě le, xiǎng hē shuǐ.", "vi": "Tôi khát rồi, muốn uống nước."}]},
+                  {"hanzi": "热情", "pinyin": "rèqíng", "word_type": "tính từ", "meaning": "nhiệt tình, niềm nở", "note": "", "examples": [{"cn": "她对人很热情。", "py": "Tā duì rén hěn rèqíng.", "vi": "Cô ấy rất nhiệt tình với mọi người."}]},
+                  {"hanzi": "勺子", "pinyin": "sháozi", "word_type": "danh từ", "meaning": "cái thìa", "note": "", "examples": [{"cn": "请给我一把勺子。", "py": "Qǐng gěi wǒ yī bǎ sháozi.", "vi": "Xin cho tôi một cái thìa."}]},
+                  {"hanzi": "双", "pinyin": "shuāng", "word_type": "lượng từ", "meaning": "đôi, cặp", "note": "Dùng cho giày, tất, đũa...", "examples": [{"cn": "一双鞋", "py": "yī shuāng xié", "vi": "một đôi giày"}]},
+                  {"hanzi": "碗", "pinyin": "wǎn", "word_type": "danh từ/lượng từ", "meaning": "cái bát", "note": "", "examples": [{"cn": "一碗米饭", "py": "yī wǎn mǐfàn", "vi": "một bát cơm"}]},
+                  {"hanzi": "选", "pinyin": "xuǎn", "word_type": "động từ", "meaning": "chọn", "note": "", "examples": [{"cn": "你选哪个？", "py": "Nǐ xuǎn nǎge?", "vi": "Bạn chọn cái nào?"}]},
+                  {"hanzi": "饮料", "pinyin": "yǐnliào", "word_type": "danh từ", "meaning": "đồ uống", "note": "", "examples": [{"cn": "你想要什么饮料？", "py": "Nǐ xiǎng yào shénme yǐnliào?", "vi": "Bạn muốn đồ uống gì?"}]},
+                  {"hanzi": "用", "pinyin": "yòng", "word_type": "động từ", "meaning": "dùng", "note": "", "examples": [{"cn": "我用筷子吃饭。", "py": "Wǒ yòng kuàizi chīfàn.", "vi": "Tôi dùng đũa ăn cơm."}]},
+                  {"hanzi": "又", "pinyin": "yòu", "word_type": "phó từ", "meaning": "lại (thêm nữa)", "note": "", "examples": [{"cn": "他又来了。", "py": "Tā yòu lái le.", "vi": "Anh ấy lại đến nữa."}]},
+                  {"hanzi": "员", "pinyin": "yuán", "word_type": "danh từ", "meaning": "người (thành viên)", "note": "Thường đứng sau danh từ chỉ chức vụ.", "examples": [{"cn": "服务员", "py": "fúwùyuán", "vi": "nhân viên phục vụ"}]},
+                  {"hanzi": "张", "pinyin": "zhāng", "word_type": "lượng từ", "meaning": "tờ, cái (giấy, bàn)", "note": "Dùng cho giấy, bàn, ảnh...", "examples": [{"cn": "一张纸", "py": "yī zhāng zhǐ", "vi": "một tờ giấy"}]},
+                  {"hanzi": "只", "pinyin": "zhǐ", "word_type": "phó từ/lượng từ", "meaning": "chỉ; con (động vật)", "note": "", "examples": [{"cn": "一只猫", "py": "yī zhī māo", "vi": "một con mèo"}]}
+                ]
+              }
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 2 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "菜单", "pinyin": "càidān", "meaning": "thực đơn"},
+              {"hanzi": "尝", "pinyin": "cháng", "meaning": "nếm thử"},
+              {"hanzi": "蛋糕", "pinyin": "dàngāo", "meaning": "bánh ga-tô"},
+              {"hanzi": "饿", "pinyin": "è", "meaning": "đói"},
+              {"hanzi": "方便", "pinyin": "fāngbiàn", "meaning": "tiện lợi"},
+              {"hanzi": "服务", "pinyin": "fúwù", "meaning": "phục vụ"},
+              {"hanzi": "好久", "pinyin": "hǎojiǔ", "meaning": "lâu"},
+              {"hanzi": "鸡", "pinyin": "jī", "meaning": "gà"},
+              {"hanzi": "记", "pinyin": "jì", "meaning": "nhớ/ghi"},
+              {"hanzi": "简单", "pinyin": "jiǎndān", "meaning": "đơn giản"},
+              {"hanzi": "客气", "pinyin": "kèqì", "meaning": "khách khí"},
+              {"hanzi": "渴", "pinyin": "kě", "meaning": "khát"},
+              {"hanzi": "热情", "pinyin": "rèqíng", "meaning": "nhiệt tình"},
+              {"hanzi": "勺子", "pinyin": "sháozi", "meaning": "thìa"},
+              {"hanzi": "双", "pinyin": "shuāng", "meaning": "đôi/cặp"},
+              {"hanzi": "碗", "pinyin": "wǎn", "meaning": "bát"},
+              {"hanzi": "选", "pinyin": "xuǎn", "meaning": "chọn"},
+              {"hanzi": "饮料", "pinyin": "yǐnliào", "meaning": "đồ uống"},
+              {"hanzi": "用", "pinyin": "yòng", "meaning": "dùng"},
+              {"hanzi": "又", "pinyin": "yòu", "meaning": "lại"},
+              {"hanzi": "张", "pinyin": "zhāng", "meaning": "tờ/cái (lượng từ)"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '方便' có nghĩa là gì?",
+            "options": ["A. Tiện lợi", "B. Ngon", "C. Đắt", "D. Rẻ"],
+            "answer": 0,
+            "explanation": "'方便' nghĩa là tiện lợi."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '一双鞋' có nghĩa là gì?",
+            "options": ["A. Một cái giày", "B. Một đôi giày", "C. Một quyển sách", "D. Một cái bát"],
+            "answer": 1,
+            "explanation": "'双' là lượng từ cho đôi/cặp."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "我 ___ 了，想喝水。 (Tôi khát rồi, muốn uống nước)", "answer": "渴"},
+              {"sentence": "你 ___ 哪个？ (Bạn chọn cái nào?)", "answer": "选"},
+              {"sentence": "一 ___ 纸 (Một tờ giấy)", "answer": "张"},
+              {"sentence": "___ 不见！ (Lâu không gặp!)", "answer": "好久"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi đói rồi.", "chinese": "我饿了。"},
+              {"vietnamese": "Xin cho tôi thực đơn.", "chinese": "请给我菜单。"}
+            ]
+          },
+          {
+            "type": "match",
+            "question": "6. Nối từ vựng với nghĩa tiếng Việt:",
+            "pairs": [
+              {"left": "蛋糕", "right": "bánh ga-tô"},
+              {"left": "方便面", "right": "mì ăn liền"},
+              {"left": "饮料", "right": "đồ uống"},
+              {"left": "菜单", "right": "thực đơn"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "第3课 搬家很累",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 3",
+            "subcards": [
+              {"hanzi": "搬", "pinyin": "bān", "word_type": "động từ", "meaning": "chuyển, di dời", "note": "", "examples": [{"cn": "搬桌子", "py": "bān zhuōzi", "vi": "chuyển bàn"}]},
+              {"hanzi": "搬家", "pinyin": "bānjiā", "word_type": "động từ", "meaning": "chuyển nhà", "note": "", "examples": [{"cn": "我下个月搬家。", "py": "Wǒ xià gè yuè bānjiā.", "vi": "Tháng sau tôi chuyển nhà."}]},
+              {"hanzi": "办", "pinyin": "bàn", "word_type": "động từ", "meaning": "làm, tổ chức", "note": "", "examples": [{"cn": "怎么办？", "py": "Zěnme bàn?", "vi": "Làm thế nào?"}]},
+              {"hanzi": "冰箱", "pinyin": "bīngxiāng", "word_type": "danh từ", "meaning": "tủ lạnh", "note": "", "examples": [{"cn": "冰箱里有水果。", "py": "Bīngxiāng lǐ yǒu shuǐguǒ.", "vi": "Trong tủ lạnh có trái cây."}]},
+              {"hanzi": "才", "pinyin": "cái", "word_type": "phó từ", "meaning": "mới chỉ, vừa mới", "note": "", "examples": [{"cn": "我才来。", "py": "Wǒ cái lái.", "vi": "Tôi vừa mới đến."}]},
+              {"hanzi": "层", "pinyin": "céng", "word_type": "lượng từ", "meaning": "tầng (nhà)", "note": "", "examples": [{"cn": "住在五层。", "py": "Zhù zài wǔ céng.", "vi": "Ở tầng năm."}]},
+              {"hanzi": "初中", "pinyin": "chūzhōng", "word_type": "danh từ", "meaning": "trung học cơ sở", "note": "", "examples": [{"cn": "我是初中生。", "py": "Wǒ shì chūzhōngshēng.", "vi": "Tôi là học sinh cấp 2."}]},
+              {"hanzi": "打扫", "pinyin": "dǎsǎo", "word_type": "động từ", "meaning": "quét dọn, dọn dẹp", "note": "", "examples": [{"cn": "打扫房间", "py": "dǎsǎo fángjiān", "vi": "dọn phòng"}]},
+              {"hanzi": "灯", "pinyin": "dēng", "word_type": "danh từ", "meaning": "đèn", "note": "", "examples": [{"cn": "开灯", "py": "kāi dēng", "vi": "bật đèn"}]},
+              {"hanzi": "房子", "pinyin": "fángzi", "word_type": "danh từ", "meaning": "ngôi nhà", "note": "", "examples": [{"cn": "我买了一栋房子。", "py": "Wǒ mǎile yī dòng fángzi.", "vi": "Tôi mua một ngôi nhà."}]},
+              {"hanzi": "关", "pinyin": "guān", "word_type": "động từ", "meaning": "đóng", "note": "Trái nghĩa với 开 (kāi)", "examples": [{"cn": "关门", "py": "guān mén", "vi": "đóng cửa"}]},
+              {"hanzi": "花园", "pinyin": "huāyuán", "word_type": "danh từ", "meaning": "vườn hoa", "note": "", "examples": [{"cn": "花园很美。", "py": "Huāyuán hěn měi.", "vi": "Vườn hoa rất đẹp."}]},
+              {"hanzi": "还", "pinyin": "huán", "word_type": "động từ", "meaning": "trả lại", "note": "", "examples": [{"cn": "还书", "py": "huán shū", "vi": "trả sách"}]},
+              {"hanzi": "环境", "pinyin": "huánjìng", "word_type": "danh từ", "meaning": "môi trường", "note": "", "examples": [{"cn": "这里的环境很好。", "py": "Zhèlǐ de huánjìng hěn hǎo.", "vi": "Môi trường ở đây rất tốt."}]},
+              {"hanzi": "换", "pinyin": "huàn", "word_type": "động từ", "meaning": "đổi, thay", "note": "", "examples": [{"cn": "换衣服", "py": "huàn yīfu", "vi": "thay quần áo"}]},
+              {"hanzi": "听说", "pinyin": "tīngshuō", "word_type": "động từ", "meaning": "nghe nói", "note": "", "examples": [{"cn": "听说他要来。", "py": "Tīngshuō tā yào lái.", "vi": "Nghe nói anh ấy sắp đến."}]},
+              {"hanzi": "挺", "pinyin": "tǐng", "word_type": "phó từ", "meaning": "khá, tương đối", "note": "", "examples": [{"cn": "挺好的。", "py": "Tǐng hǎo de.", "vi": "Khá tốt."}]},
+              {"hanzi": "卫生间", "pinyin": "wèishēngjiān", "word_type": "danh từ", "meaning": "phòng vệ sinh", "note": "", "examples": [{"cn": "卫生间在哪儿？", "py": "Wèishēngjiān zài nǎr?", "vi": "Phòng vệ sinh ở đâu?"}]},
+              {"hanzi": "洗衣机", "pinyin": "xǐyījī", "word_type": "danh từ", "meaning": "máy giặt", "note": "", "examples": [{"cn": "用洗衣机洗衣服。", "py": "Yòng xǐyījī xǐ yīfu.", "vi": "Dùng máy giặt giặt quần áo."}]},
+              {"hanzi": "小区", "pinyin": "xiǎoqū", "word_type": "danh từ", "meaning": "khu dân cư", "note": "", "examples": [{"cn": "这个小区很安静。", "py": "Zhège xiǎoqū hěn ānjìng.", "vi": "Khu dân cư này rất yên tĩnh."}]},
+              {"hanzi": "信用卡", "pinyin": "xìnyòngkǎ", "word_type": "danh từ", "meaning": "thẻ tín dụng", "note": "", "examples": [{"cn": "我用信用卡付钱。", "py": "Wǒ yòng xìnyòngkǎ fù qián.", "vi": "Tôi dùng thẻ tín dụng để trả tiền."}]},
+              {"hanzi": "需要", "pinyin": "xūyào", "word_type": "động từ", "meaning": "cần", "note": "", "examples": [{"cn": "我需要帮助。", "py": "Wǒ xūyào bāngzhù.", "vi": "Tôi cần giúp đỡ."}]},
+              {"hanzi": "银行", "pinyin": "yínháng", "word_type": "danh từ", "meaning": "ngân hàng", "note": "", "examples": [{"cn": "我去银行取钱。", "py": "Wǒ qù yínháng qǔ qián.", "vi": "Tôi đi ngân hàng rút tiền."}]},
+              {"hanzi": "咱们", "pinyin": "zánmen", "word_type": "đại từ", "meaning": "chúng ta (thân mật)", "note": "", "examples": [{"cn": "咱们走吧。", "py": "Zánmen zǒu ba.", "vi": "Chúng ta đi thôi."}]},
+              {"hanzi": "纸", "pinyin": "zhǐ", "word_type": "danh từ", "meaning": "giấy", "note": "", "examples": [{"cn": "一张纸", "py": "yī zhāng zhǐ", "vi": "một tờ giấy"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 3 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "搬", "pinyin": "bān", "meaning": "chuyển/di dời"},
+              {"hanzi": "搬家", "pinyin": "bānjiā", "meaning": "chuyển nhà"},
+              {"hanzi": "办", "pinyin": "bàn", "meaning": "làm/tổ chức"},
+              {"hanzi": "冰箱", "pinyin": "bīngxiāng", "meaning": "tủ lạnh"},
+              {"hanzi": "才", "pinyin": "cái", "meaning": "vừa mới"},
+              {"hanzi": "层", "pinyin": "céng", "meaning": "tầng"},
+              {"hanzi": "打扫", "pinyin": "dǎsǎo", "meaning": "dọn dẹp"},
+              {"hanzi": "灯", "pinyin": "dēng", "meaning": "đèn"},
+              {"hanzi": "关", "pinyin": "guān", "meaning": "đóng"},
+              {"hanzi": "花园", "pinyin": "huāyuán", "meaning": "vườn hoa"},
+              {"hanzi": "环境", "pinyin": "huánjìng", "meaning": "môi trường"},
+              {"hanzi": "换", "pinyin": "huàn", "meaning": "đổi/thay"},
+              {"hanzi": "听说", "pinyin": "tīngshuō", "meaning": "nghe nói"},
+              {"hanzi": "挺", "pinyin": "tǐng", "meaning": "khá/tương đối"},
+              {"hanzi": "卫生间", "pinyin": "wèishēngjiān", "meaning": "phòng vệ sinh"},
+              {"hanzi": "洗衣机", "pinyin": "xǐyījī", "meaning": "máy giặt"},
+              {"hanzi": "小区", "pinyin": "xiǎoqū", "meaning": "khu dân cư"},
+              {"hanzi": "信用卡", "pinyin": "xìnyòngkǎ", "meaning": "thẻ tín dụng"},
+              {"hanzi": "需要", "pinyin": "xūyào", "meaning": "cần"},
+              {"hanzi": "银行", "pinyin": "yínháng", "meaning": "ngân hàng"},
+              {"hanzi": "咱们", "pinyin": "zánmen", "meaning": "chúng ta"},
+              {"hanzi": "纸", "pinyin": "zhǐ", "meaning": "giấy"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '打扫' có nghĩa là gì?",
+            "options": ["A. Dọn dẹp", "B. Lau chùi", "C. Cả A và B", "D. Sắp xếp"],
+            "answer": 2,
+            "explanation": "'打扫' nghĩa là quét dọn/dọn dẹp."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '听说' có nghĩa là gì?",
+            "options": ["A. Nghe nói", "B. Nghe thấy", "C. Nói", "D. Hỏi"],
+            "answer": 0,
+            "explanation": "'听说' nghĩa là nghe người khác nói."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "我下个月 ___ 家。 (Tháng sau tôi chuyển nhà)", "answer": "搬"},
+              {"sentence": "怎么 ___？ (Làm thế nào?)", "answer": "办"},
+              {"sentence": "开 ___ (Bật đèn)", "answer": "灯"},
+              {"sentence": "我 ___ 帮助。 (Tôi cần giúp đỡ)", "answer": "需要"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Phòng vệ sinh ở đâu?", "chinese": "卫生间在哪儿？"},
+              {"vietnamese": "Môi trường ở đây rất tốt.", "chinese": "这里的环境很好。"}
+            ]
+          },
+          {
+            "type": "drag_drop",
+            "question": "6. Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+            "words": ["我", "需要", "帮助"],
+            "answer": "我需要帮助。",
+            "explanation": "Cấu trúc: 需要 + danh từ/động từ."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "第4课 我说汉语说得越来越流利了",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 4",
+            "subcards": [
+              {"hanzi": "别的", "pinyin": "biéde", "word_type": "đại từ", "meaning": "cái khác", "note": "", "examples": [{"cn": "别的我都不喜欢。", "py": "Biéde wǒ dōu bù xǐhuān.", "vi": "Những cái khác tôi đều không thích."}]},
+              {"hanzi": "宾馆", "pinyin": "bīnguǎn", "word_type": "danh từ", "meaning": "khách sạn", "note": "", "examples": [{"cn": "我住在宾馆。", "py": "Wǒ zhù zài bīnguǎn.", "vi": "Tôi ở khách sạn."}]},
+              {"hanzi": "草原", "pinyin": "cǎoyuán", "word_type": "danh từ", "meaning": "thảo nguyên", "note": "", "examples": [{"cn": "草原很美。", "py": "Cǎoyuán hěn měi.", "vi": "Thảo nguyên rất đẹp."}]},
+              {"hanzi": "除了", "pinyin": "chúle", "word_type": "giới từ", "meaning": "ngoài ra, trừ", "note": "", "examples": [{"cn": "除了他，没人去。", "py": "Chúle tā, méi rén qù.", "vi": "Ngoài anh ấy ra, không ai đi."}]},
+              {"hanzi": "海", "pinyin": "hǎi", "word_type": "danh từ", "meaning": "biển", "note": "", "examples": [{"cn": "我喜欢海。", "py": "Wǒ xǐhuān hǎi.", "vi": "Tôi thích biển."}]},
+              {"hanzi": "欢迎", "pinyin": "huānyíng", "word_type": "động từ", "meaning": "hoan nghênh, chào đón", "note": "", "examples": [{"cn": "欢迎来中国！", "py": "Huānyíng lái Zhōngguó!", "vi": "Chào mừng đến Trung Quốc!"}]},
+              {"hanzi": "假期", "pinyin": "jiàqī", "word_type": "danh từ", "meaning": "kỳ nghỉ", "note": "", "examples": [{"cn": "假期你去哪儿？", "py": "Jiàqī nǐ qù nǎr?", "vi": "Kỳ nghỉ bạn đi đâu?"}]},
+              {"hanzi": "旧", "pinyin": "jiù", "word_type": "tính từ", "meaning": "cũ", "note": "Trái nghĩa với 新 (xīn)", "examples": [{"cn": "这件衣服太旧了。", "py": "Zhè jiàn yīfu tài jiù le.", "vi": "Cái áo này quá cũ."}]},
+              {"hanzi": "刻", "pinyin": "kè", "word_type": "danh từ", "meaning": "khắc, giờ (đơn vị thời gian)", "note": "", "examples": [{"cn": "一刻钟", "py": "yī kè zhōng", "vi": "15 phút"}]},
+              {"hanzi": "牛", "pinyin": "niú", "word_type": "danh từ", "meaning": "con bò", "note": "", "examples": [{"cn": "一头牛", "py": "yī tóu niú", "vi": "một con bò"}]},
+              {"hanzi": "骑", "pinyin": "qí", "word_type": "động từ", "meaning": "cưỡi (xe, ngựa)", "note": "", "examples": [{"cn": "骑自行车", "py": "qí zìxíngchē", "vi": "đạp xe đạp"}]},
+              {"hanzi": "起飞", "pinyin": "qǐfēi", "word_type": "động từ", "meaning": "cất cánh", "note": "", "examples": [{"cn": "飞机起飞了。", "py": "Fēijī qǐfēi le.", "vi": "Máy bay đã cất cánh."}]},
+              {"hanzi": "司机", "pinyin": "sījī", "word_type": "danh từ", "meaning": "tài xế", "note": "", "examples": [{"cn": "出租车司机", "py": "chūzūchē sījī", "vi": "tài xế taxi"}]},
+              {"hanzi": "特别", "pinyin": "tèbié", "word_type": "phó từ/tính từ", "meaning": "đặc biệt", "note": "", "examples": [{"cn": "他特别喜欢音乐。", "py": "Tā tèbié xǐhuān yīnyuè.", "vi": "Anh ấy đặc biệt thích âm nhạc."}]},
+              {"hanzi": "晚点", "pinyin": "wǎndiǎn", "word_type": "động từ", "meaning": "chậm giờ", "note": "", "examples": [{"cn": "火车晚点了。", "py": "Huǒchē wǎndiǎn le.", "vi": "Tàu hỏa bị chậm giờ."}]},
+              {"hanzi": "先", "pinyin": "xiān", "word_type": "phó từ", "meaning": "trước tiên", "note": "", "examples": [{"cn": "你先走吧。", "py": "Nǐ xiān zǒu ba.", "vi": "Bạn đi trước đi."}]},
+              {"hanzi": "相机", "pinyin": "xiàngjī", "word_type": "danh từ", "meaning": "máy ảnh", "note": "", "examples": [{"cn": "我有一个相机。", "py": "Wǒ yǒu yīgè xiàngjī.", "vi": "Tôi có một máy ảnh."}]},
+              {"hanzi": "羊", "pinyin": "yáng", "word_type": "danh từ", "meaning": "con dê/cừu", "note": "", "examples": [{"cn": "一只羊", "py": "yī zhī yáng", "vi": "một con dê"}]},
+              {"hanzi": "一定", "pinyin": "yídìng", "word_type": "phó từ", "meaning": "nhất định", "note": "", "examples": [{"cn": "我一定来。", "py": "Wǒ yídìng lái.", "vi": "Tôi nhất định đến."}]},
+              {"hanzi": "一样", "pinyin": "yíyàng", "word_type": "tính từ", "meaning": "giống nhau", "note": "", "examples": [{"cn": "我们一样高。", "py": "Wǒmen yíyàng gāo.", "vi": "Chúng tôi cao bằng nhau."}]},
+              {"hanzi": "以前", "pinyin": "yǐqián", "word_type": "danh từ", "meaning": "trước đây", "note": "", "examples": [{"cn": "以前我住在这里。", "py": "Yǐqián wǒ zhù zài zhèlǐ.", "vi": "Trước đây tôi sống ở đây."}]},
+              {"hanzi": "以外", "pinyin": "yǐwài", "word_type": "danh từ", "meaning": "ngoài ra", "note": "", "examples": [{"cn": "除了以外...", "py": "Chúle yǐwài...", "vi": "Ngoài... ra..."}]},
+              {"hanzi": "一直", "pinyin": "yìzhí", "word_type": "phó từ", "meaning": "vẫn luôn, suốt", "note": "", "examples": [{"cn": "我一直在这里。", "py": "Wǒ yìzhí zài zhèlǐ.", "vi": "Tôi vẫn luôn ở đây."}]},
+              {"hanzi": "月亮", "pinyin": "yuèliang", "word_type": "danh từ", "meaning": "mặt trăng", "note": "", "examples": [{"cn": "月亮很圆。", "py": "Yuèliang hěn yuán.", "vi": "Mặt trăng rất tròn."}]},
+              {"hanzi": "主意", "pinyin": "zhǔyi", "word_type": "danh từ", "meaning": "ý kiến, ý tưởng", "note": "", "examples": [{"cn": "我有一个主意。", "py": "Wǒ yǒu yīgè zhǔyi.", "vi": "Tôi có một ý tưởng."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 4 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "除了", "pinyin": "chúle", "meaning": "ngoài ra/trừ"},
+              {"hanzi": "海", "pinyin": "hǎi", "meaning": "biển"},
+              {"hanzi": "欢迎", "pinyin": "huānyíng", "meaning": "hoan nghênh"},
+              {"hanzi": "假期", "pinyin": "jiàqī", "meaning": "kỳ nghỉ"},
+              {"hanzi": "旧", "pinyin": "jiù", "meaning": "cũ"},
+              {"hanzi": "牛", "pinyin": "niú", "meaning": "bò"},
+              {"hanzi": "骑", "pinyin": "qí", "meaning": "cưỡi"},
+              {"hanzi": "起飞", "pinyin": "qǐfēi", "meaning": "cất cánh"},
+              {"hanzi": "司机", "pinyin": "sījī", "meaning": "tài xế"},
+              {"hanzi": "特别", "pinyin": "tèbié", "meaning": "đặc biệt"},
+              {"hanzi": "晚点", "pinyin": "wǎndiǎn", "meaning": "chậm giờ"},
+              {"hanzi": "先", "pinyin": "xiān", "meaning": "trước tiên"},
+              {"hanzi": "相机", "pinyin": "xiàngjī", "meaning": "máy ảnh"},
+              {"hanzi": "羊", "pinyin": "yáng", "meaning": "dê/cừu"},
+              {"hanzi": "一定", "pinyin": "yídìng", "meaning": "nhất định"},
+              {"hanzi": "一样", "pinyin": "yíyàng", "meaning": "giống nhau"},
+              {"hanzi": "一直", "pinyin": "yìzhí", "meaning": "vẫn luôn"},
+              {"hanzi": "月亮", "pinyin": "yuèliang", "meaning": "mặt trăng"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '特别' có nghĩa là gì?",
+            "options": ["A. Đặc biệt", "B. Bình thường", "C. Cũ", "D. Mới"],
+            "answer": 0,
+            "explanation": "'特别' nghĩa là đặc biệt."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '一直' có nghĩa là gì?",
+            "options": ["A. Luôn luôn", "B. Thỉnh thoảng", "C. Không bao giờ", "D. Một lần"],
+            "answer": 0,
+            "explanation": "'一直' nghĩa là vẫn luôn, suốt."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "___ 他，没人去。 (Ngoài anh ấy, không ai đi)", "answer": "除了"},
+              {"sentence": "欢迎来 ___！ (Chào mừng đến Trung Quốc!)", "answer": "中国"},
+              {"sentence": "飞机 ___ 了。 (Máy bay đã cất cánh)", "answer": "起飞"},
+              {"sentence": "我 ___ 来。 (Tôi nhất định đến)", "answer": "一定"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi đặc biệt thích âm nhạc.", "chinese": "我特别喜欢音乐。"},
+              {"vietnamese": "Bạn đi trước đi.", "chinese": "你先走吧。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "第5课 我来北京已经两年了",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 5",
+            "subcards": [
+              {"hanzi": "比较", "pinyin": "bǐjiào", "word_type": "phó từ", "meaning": "tương đối, khá", "note": "", "examples": [{"cn": "中文比较难。", "py": "Zhōngwén bǐjiào nán.", "vi": "Tiếng Trung tương đối khó."}]},
+              {"hanzi": "大衣", "pinyin": "dàyī", "word_type": "danh từ", "meaning": "áo khoác dài", "note": "", "examples": [{"cn": "我穿大衣。", "py": "Wǒ chuān dàyī.", "vi": "Tôi mặc áo khoác dài."}]},
+              {"hanzi": "锻炼", "pinyin": "duànliàn", "word_type": "động từ", "meaning": "tập thể dục, rèn luyện", "note": "", "examples": [{"cn": "每天锻炼身体。", "py": "Měitiān duànliàn shēntǐ.", "vi": "Tập thể dục mỗi ngày."}]},
+              {"hanzi": "结束", "pinyin": "jiéshù", "word_type": "động từ", "meaning": "kết thúc", "note": "", "examples": [{"cn": "会议结束了。", "py": "Huìyì jiéshù le.", "vi": "Cuộc họp đã kết thúc."}]},
+              {"hanzi": "开心", "pinyin": "kāixīn", "word_type": "tính từ", "meaning": "vui vẻ, hạnh phúc", "note": "", "examples": [{"cn": "我很开心。", "py": "Wǒ hěn kāixīn.", "vi": "Tôi rất vui."}]},
+              {"hanzi": "难过", "pinyin": "nánguò", "word_type": "tính từ", "meaning": "buồn, khó chịu", "note": "", "examples": [{"cn": "他很难过。", "py": "Tā hěn nánguò.", "vi": "Anh ấy rất buồn."}]},
+              {"hanzi": "难看", "pinyin": "nánkàn", "word_type": "tính từ", "meaning": "xấu (nhìn)", "note": "", "examples": [{"cn": "这件衣服很难看。", "py": "Zhè jiàn yīfu hěn nánkàn.", "vi": "Cái áo này rất xấu."}]},
+              {"hanzi": "爬", "pinyin": "pá", "word_type": "động từ", "meaning": "leo, bò", "note": "", "examples": [{"cn": "爬山", "py": "pá shān", "vi": "leo núi"}]},
+              {"hanzi": "拍照", "pinyin": "pāizhào", "word_type": "động từ", "meaning": "chụp ảnh", "note": "", "examples": [{"cn": "拍照留念。", "py": "Pāizhào liúniàn.", "vi": "Chụp ảnh kỷ niệm."}]},
+              {"hanzi": "山", "pinyin": "shān", "word_type": "danh từ", "meaning": "núi", "note": "", "examples": [{"cn": "我喜欢爬山。", "py": "Wǒ xǐhuān pá shān.", "vi": "Tôi thích leo núi."}]},
+              {"hanzi": "收到", "pinyin": "shōudào", "word_type": "động từ", "meaning": "nhận được", "note": "", "examples": [{"cn": "我收到了你的信。", "py": "Wǒ shōudào le nǐ de xìn.", "vi": "Tôi đã nhận được thư của bạn."}]},
+              {"hanzi": "树", "pinyin": "shù", "word_type": "danh từ", "meaning": "cây (cối)", "note": "", "examples": [{"cn": "树很高。", "py": "Shù hěn gāo.", "vi": "Cây rất cao."}]},
+              {"hanzi": "水平", "pinyin": "shuǐpíng", "word_type": "danh từ", "meaning": "trình độ", "note": "", "examples": [{"cn": "他的水平很高。", "py": "Tā de shuǐpíng hěn gāo.", "vi": "Trình độ của anh ấy rất cao."}]},
+              {"hanzi": "太阳", "pinyin": "tàiyáng", "word_type": "danh từ", "meaning": "mặt trời", "note": "", "examples": [{"cn": "太阳出来了。", "py": "Tàiyáng chūlái le.", "vi": "Mặt trời đã lên."}]},
+              {"hanzi": "鞋", "pinyin": "xié", "word_type": "danh từ", "meaning": "giày", "note": "", "examples": [{"cn": "一双鞋", "py": "yī shuāng xié", "vi": "một đôi giày"}]},
+              {"hanzi": "兴趣", "pinyin": "xìngqù", "word_type": "danh từ", "meaning": "sở thích, hứng thú", "note": "", "examples": [{"cn": "我对音乐有兴趣。", "py": "Wǒ duì yīnyuè yǒu xìngqù.", "vi": "Tôi có hứng thú với âm nhạc."}]},
+              {"hanzi": "音乐", "pinyin": "yīnyuè", "word_type": "danh từ", "meaning": "âm nhạc", "note": "", "examples": [{"cn": "我喜欢听音乐。", "py": "Wǒ xǐhuān tīng yīnyuè.", "vi": "Tôi thích nghe nhạc."}]},
+              {"hanzi": "邮件", "pinyin": "yóujiàn", "word_type": "danh từ", "meaning": "thư điện tử", "note": "", "examples": [{"cn": "我发邮件给你。", "py": "Wǒ fā yóujiàn gěi nǐ.", "vi": "Tôi gửi email cho bạn."}]},
+              {"hanzi": "终于", "pinyin": "zhōngyú", "word_type": "phó từ", "meaning": "cuối cùng", "note": "", "examples": [{"cn": "我终于完成了。", "py": "Wǒ zhōngyú wánchéng le.", "vi": "Cuối cùng tôi đã hoàn thành."}]},
+              {"hanzi": "总是", "pinyin": "zǒngshì", "word_type": "phó từ", "meaning": "luôn luôn", "note": "", "examples": [{"cn": "他总是迟到。", "py": "Tā zǒngshì chídào.", "vi": "Anh ấy luôn đến muộn."}]},
+              {"hanzi": "照", "pinyin": "zhào", "word_type": "động từ", "meaning": "chiếu, chụp", "note": "", "examples": [{"cn": "照相", "py": "zhàoxiàng", "vi": "chụp ảnh"}]},
+              {"hanzi": "照相", "pinyin": "zhàoxiàng", "word_type": "động từ", "meaning": "chụp ảnh", "note": "", "examples": [{"cn": "我们照相吧。", "py": "Wǒmen zhàoxiàng ba.", "vi": "Chúng ta chụp ảnh đi."}]},
+              {"hanzi": "哈哈", "pinyin": "hāhā", "word_type": "cảm thán", "meaning": "ha ha", "note": "Tiếng cười", "examples": [{"cn": "哈哈，真好笑！", "py": "Hāhā, zhēn hǎoxiào!", "vi": "Ha ha, buồn cười quá!"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 5 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "比较", "pinyin": "bǐjiào", "meaning": "tương đối"},
+              {"hanzi": "锻炼", "pinyin": "duànliàn", "meaning": "tập thể dục"},
+              {"hanzi": "结束", "pinyin": "jiéshù", "meaning": "kết thúc"},
+              {"hanzi": "开心", "pinyin": "kāixīn", "meaning": "vui vẻ"},
+              {"hanzi": "难过", "pinyin": "nánguò", "meaning": "buồn"},
+              {"hanzi": "爬", "pinyin": "pá", "meaning": "leo"},
+              {"hanzi": "拍照", "pinyin": "pāizhào", "meaning": "chụp ảnh"},
+              {"hanzi": "山", "pinyin": "shān", "meaning": "núi"},
+              {"hanzi": "收到", "pinyin": "shōudào", "meaning": "nhận được"},
+              {"hanzi": "树", "pinyin": "shù", "meaning": "cây"},
+              {"hanzi": "水平", "pinyin": "shuǐpíng", "meaning": "trình độ"},
+              {"hanzi": "太阳", "pinyin": "tàiyáng", "meaning": "mặt trời"},
+              {"hanzi": "兴趣", "pinyin": "xìngqù", "meaning": "sở thích"},
+              {"hanzi": "音乐", "pinyin": "yīnyuè", "meaning": "âm nhạc"},
+              {"hanzi": "邮件", "pinyin": "yóujiàn", "meaning": "email"},
+              {"hanzi": "终于", "pinyin": "zhōngyú", "meaning": "cuối cùng"},
+              {"hanzi": "总是", "pinyin": "zǒngshì", "meaning": "luôn luôn"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '比较' có nghĩa là gì?",
+            "options": ["A. So sánh", "B. Tương đối", "C. Cả A và B", "D. Rất"],
+            "answer": 2,
+            "explanation": "'比较' vừa có nghĩa là 'so sánh', vừa có nghĩa là 'tương đối'."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '终于' có nghĩa là gì?",
+            "options": ["A. Cuối cùng", "B. Bắt đầu", "C. Giữa chừng", "D. Luôn luôn"],
+            "answer": 0,
+            "explanation": "'终于' nghĩa là cuối cùng, sau một thời gian dài."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "中文 ___ 难。 (Tiếng Trung tương đối khó)", "answer": "比较"},
+              {"sentence": "每天 ___ 身体。 (Tập thể dục mỗi ngày)", "answer": "锻炼"},
+              {"sentence": "会议 ___ 了。 (Cuộc họp đã kết thúc)", "answer": "结束"},
+              {"sentence": "我 ___ 开心。 (Tôi rất vui)", "answer": "很"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi thích leo núi.", "chinese": "我喜欢爬山。"},
+              {"vietnamese": "Cuối cùng tôi đã hoàn thành.", "chinese": "我终于完成了。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "第6课 坐着高铁去旅行",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 6",
+            "subcards": [
+              {"hanzi": "安静", "pinyin": "ānjìng", "word_type": "tính từ", "meaning": "yên tĩnh", "note": "", "examples": [{"cn": "图书馆很安静。", "py": "Túshūguǎn hěn ānjìng.", "vi": "Thư viện rất yên tĩnh."}]},
+              {"hanzi": "必须", "pinyin": "bìxū", "word_type": "trợ động từ", "meaning": "phải (bắt buộc)", "note": "", "examples": [{"cn": "你必须来。", "py": "Nǐ bìxū lái.", "vi": "Bạn phải đến."}]},
+              {"hanzi": "常用", "pinyin": "cháng yòng", "word_type": "tính từ", "meaning": "thường dùng", "note": "", "examples": [{"cn": "这是常用词。", "py": "Zhè shì chángyòng cí.", "vi": "Đây là từ thường dùng."}]},
+              {"hanzi": "迟到", "pinyin": "chídào", "word_type": "động từ", "meaning": "đến muộn", "note": "", "examples": [{"cn": "他迟到了。", "py": "Tā chídào le.", "vi": "Anh ấy đến muộn."}]},
+              {"hanzi": "充电宝", "pinyin": "chōngdiànbǎo", "word_type": "danh từ", "meaning": "sạc dự phòng", "note": "(siêu cấp)", "examples": [{"cn": "我带充电宝了。", "py": "Wǒ dài chōngdiànbǎo le.", "vi": "Tôi đã mang sạc dự phòng."}]},
+              {"hanzi": "打算", "pinyin": "dǎsuàn", "word_type": "động từ", "meaning": "dự định, tính", "note": "", "examples": [{"cn": "我打算去北京。", "py": "Wǒ dǎsuàn qù Běijīng.", "vi": "Tôi dự định đi Bắc Kinh."}]},
+              {"hanzi": "电梯", "pinyin": "diàntī", "word_type": "danh từ", "meaning": "thang máy", "note": "", "examples": [{"cn": "坐电梯上去。", "py": "Zuò diàntī shàngqù.", "vi": "Đi thang máy lên."}]},
+              {"hanzi": "分开", "pinyin": "fēn kāi", "word_type": "động từ", "meaning": "tách ra, chia ra", "note": "", "examples": [{"cn": "我们分开走吧。", "py": "Wǒmen fēn kāi zǒu ba.", "vi": "Chúng ta đi riêng đi."}]},
+              {"hanzi": "放假", "pinyin": "fàngjià", "word_type": "động từ", "meaning": "nghỉ (học, làm)", "note": "", "examples": [{"cn": "下个月放假。", "py": "Xià gè yuè fàngjià.", "vi": "Tháng sau nghỉ."}]},
+              {"hanzi": "高铁", "pinyin": "gāotiě", "word_type": "danh từ", "meaning": "đường sắt cao tốc", "note": "", "examples": [{"cn": "我坐高铁去。", "py": "Wǒ zuò gāotiě qù.", "vi": "Tôi đi tàu cao tốc."}]},
+              {"hanzi": "红绿灯", "pinyin": "hóng-lǜdēng", "word_type": "danh từ", "meaning": "đèn giao thông", "note": "", "examples": [{"cn": "前面有红绿灯。", "py": "Qiánmiàn yǒu hóng-lǜdēng.", "vi": "Phía trước có đèn giao thông."}]},
+              {"hanzi": "后来", "pinyin": "hòulái", "word_type": "danh từ/phó từ", "meaning": "sau đó", "note": "", "examples": [{"cn": "后来他走了。", "py": "Hòulái tā zǒu le.", "vi": "Sau đó anh ấy đi rồi."}]},
+              {"hanzi": "急", "pinyin": "jí", "word_type": "tính từ", "meaning": "vội vàng, gấp", "note": "", "examples": [{"cn": "别急！", "py": "Bié jí!", "vi": "Đừng vội!"}]},
+              {"hanzi": "检查", "pinyin": "jiǎnchá", "word_type": "động từ", "meaning": "kiểm tra", "note": "", "examples": [{"cn": "检查身体。", "py": "Jiǎnchá shēntǐ.", "vi": "Kiểm tra sức khỏe."}]},
+              {"hanzi": "检票", "pinyin": "jiǎnpiào", "word_type": "động từ", "meaning": "soát vé", "note": "", "examples": [{"cn": "排队检票。", "py": "Páiduì jiǎnpiào.", "vi": "Xếp hàng soát vé."}]},
+              {"hanzi": "离开", "pinyin": "líkāi", "word_type": "động từ", "meaning": "rời khỏi", "note": "", "examples": [{"cn": "他离开了。", "py": "Tā líkāi le.", "vi": "Anh ấy đã rời đi."}]},
+              {"hanzi": "如果", "pinyin": "rúguǒ", "word_type": "liên từ", "meaning": "nếu", "note": "", "examples": [{"cn": "如果下雨，我就不去。", "py": "Rúguǒ xiàyǔ, wǒ jiù bù qù.", "vi": "Nếu trời mưa, tôi sẽ không đi."}]},
+              {"hanzi": "沙发", "pinyin": "shāfā", "word_type": "danh từ", "meaning": "ghế sofa", "note": "", "examples": [{"cn": "坐在沙发上。", "py": "Zuò zài shāfā shàng.", "vi": "Ngồi trên ghế sofa."}]},
+              {"hanzi": "刷", "pinyin": "shuā", "word_type": "động từ", "meaning": "quét, chải", "note": "", "examples": [{"cn": "刷卡", "py": "shuā kǎ", "vi": "quẹt thẻ"}]},
+              {"hanzi": "小心", "pinyin": "xiǎoxīn", "word_type": "tính từ", "meaning": "cẩn thận", "note": "", "examples": [{"cn": "小心！", "py": "Xiǎoxīn!", "vi": "Cẩn thận!"}]},
+              {"hanzi": "行", "pinyin": "xíng", "word_type": "động từ/tính từ", "meaning": "được, okay", "note": "", "examples": [{"cn": "行，我去。", "py": "Xíng, wǒ qù.", "vi": "Được, tôi đi."}]},
+              {"hanzi": "选择", "pinyin": "xuǎnzé", "word_type": "động từ", "meaning": "lựa chọn", "note": "", "examples": [{"cn": "选择困难。", "py": "Xuǎnzé kùnnán.", "vi": "Khó lựa chọn."}]},
+              {"hanzi": "越", "pinyin": "yuè", "word_type": "phó từ", "meaning": "càng (so sánh)", "note": "", "examples": [{"cn": "越来越好。", "py": "Yuè lái yuè hǎo.", "vi": "Càng ngày càng tốt."}]},
+              {"hanzi": "北京南站", "pinyin": "Běijīng Nán Zhàn", "word_type": "danh từ riêng", "meaning": "Ga Nam Bắc Kinh", "note": "", "examples": [{"cn": "我在北京南站。", "py": "Wǒ zài Běijīng Nán Zhàn.", "vi": "Tôi ở ga Nam Bắc Kinh."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 6 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "安静", "pinyin": "ānjìng", "meaning": "yên tĩnh"},
+              {"hanzi": "必须", "pinyin": "bìxū", "meaning": "phải (bắt buộc)"},
+              {"hanzi": "迟到", "pinyin": "chídào", "meaning": "đến muộn"},
+              {"hanzi": "打算", "pinyin": "dǎsuàn", "meaning": "dự định"},
+              {"hanzi": "电梯", "pinyin": "diàntī", "meaning": "thang máy"},
+              {"hanzi": "分开", "pinyin": "fēn kāi", "meaning": "tách ra"},
+              {"hanzi": "放假", "pinyin": "fàngjià", "meaning": "nghỉ"},
+              {"hanzi": "高铁", "pinyin": "gāotiě", "meaning": "đường sắt cao tốc"},
+              {"hanzi": "红绿灯", "pinyin": "hóng-lǜdēng", "meaning": "đèn giao thông"},
+              {"hanzi": "后来", "pinyin": "hòulái", "meaning": "sau đó"},
+              {"hanzi": "急", "pinyin": "jí", "meaning": "vội"},
+              {"hanzi": "检查", "pinyin": "jiǎnchá", "meaning": "kiểm tra"},
+              {"hanzi": "离开", "pinyin": "líkāi", "meaning": "rời khỏi"},
+              {"hanzi": "如果", "pinyin": "rúguǒ", "meaning": "nếu"},
+              {"hanzi": "沙发", "pinyin": "shāfā", "meaning": "ghế sofa"},
+              {"hanzi": "刷", "pinyin": "shuā", "meaning": "quét/chải"},
+              {"hanzi": "小心", "pinyin": "xiǎoxīn", "meaning": "cẩn thận"},
+              {"hanzi": "行", "pinyin": "xíng", "meaning": "được"},
+              {"hanzi": "选择", "pinyin": "xuǎnzé", "meaning": "lựa chọn"},
+              {"hanzi": "越", "pinyin": "yuè", "meaning": "càng"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '必须' có nghĩa là gì?",
+            "options": ["A. Có thể", "B. Phải (bắt buộc)", "C. Nên", "D. Muốn"],
+            "answer": 1,
+            "explanation": "'必须' chỉ sự bắt buộc, phải làm."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '如果' có nghĩa là gì?",
+            "options": ["A. Vì vậy", "B. Nếu", "C. Tuy nhiên", "D. Bởi vì"],
+            "answer": 1,
+            "explanation": "'如果' có nghĩa là nếu (giả định)."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "图书馆很 ___。 (Thư viện rất yên tĩnh)", "answer": "安静"},
+              {"sentence": "我 ___ 去北京。 (Tôi dự định đi Bắc Kinh)", "answer": "打算"},
+              {"sentence": "坐 ___ 上去。 (Đi thang máy lên)", "answer": "电梯"},
+              {"sentence": "你 ___ 来。 (Bạn phải đến)", "answer": "必须"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Càng ngày càng tốt.", "chinese": "越来越好。"},
+              {"vietnamese": "Nếu trời mưa, tôi sẽ không đi.", "chinese": "如果下雨，我就不去。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "第7课 同事之间",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 7",
+            "subcards": [
+              {"hanzi": "矮", "pinyin": "ǎi", "word_type": "tính từ", "meaning": "thấp (chiều cao)", "note": "Trái nghĩa với 高 (gāo)", "examples": [{"cn": "他个子很矮。", "py": "Tā gèzi hěn ǎi.", "vi": "Anh ấy rất thấp."}]},
+              {"hanzi": "冰", "pinyin": "bīng", "word_type": "danh từ", "meaning": "đá, băng", "note": "(siêu cấp)", "examples": [{"cn": "冰块", "py": "bīng kuài", "vi": "cục đá"}]},
+              {"hanzi": "不但", "pinyin": "búdàn", "word_type": "liên từ", "meaning": "không những", "note": "", "examples": [{"cn": "他不但会说中文，还会说法语。", "py": "Tā búdàn huì shuō Zhōngwén, hái huì shuō Fǎyǔ.", "vi": "Anh ấy không những nói được tiếng Trung mà còn nói được tiếng Pháp."}]},
+              {"hanzi": "大小", "pinyin": "dàxiǎo", "word_type": "danh từ", "meaning": "kích thước", "note": "", "examples": [{"cn": "大小合适。", "py": "Dàxiǎo héshì.", "vi": "Kích thước vừa vặn."}]},
+              {"hanzi": "短裤", "pinyin": "duǎnkù", "word_type": "danh từ", "meaning": "quần soóc", "note": "", "examples": [{"cn": "夏天穿短裤。", "py": "Xiàtiān chuān duǎnkù.", "vi": "Mùa hè mặc quần soóc."}]},
+              {"hanzi": "而且", "pinyin": "érqiě", "word_type": "liên từ", "meaning": "hơn nữa, mà còn", "note": "", "examples": [{"cn": "他聪明而且努力。", "py": "Tā cōngmíng érqiě nǔlì.", "vi": "Anh ấy thông minh mà còn chăm chỉ."}]},
+              {"hanzi": "更", "pinyin": "gèng", "word_type": "phó từ", "meaning": "càng, hơn", "note": "", "examples": [{"cn": "今天比昨天更冷。", "py": "Jīntiān bǐ zuótiān gèng lěng.", "vi": "Hôm nay lạnh hơn hôm qua."}]},
+              {"hanzi": "公斤", "pinyin": "gōngjīn", "word_type": "danh từ", "meaning": "kilôgam", "note": "", "examples": [{"cn": "五公斤", "py": "wǔ gōngjīn", "vi": "5 kg"}]},
+              {"hanzi": "合适", "pinyin": "héshì", "word_type": "tính từ", "meaning": "phù hợp, vừa vặn", "note": "", "examples": [{"cn": "这件衣服很合适。", "py": "Zhè jiàn yīfu hěn héshì.", "vi": "Cái áo này rất vừa vặn."}]},
+              {"hanzi": "黄色", "pinyin": "huángsè", "word_type": "danh từ/tính từ", "meaning": "màu vàng", "note": "", "examples": [{"cn": "我喜欢黄色。", "py": "Wǒ xǐhuān huángsè.", "vi": "Tôi thích màu vàng."}]},
+              {"hanzi": "结婚", "pinyin": "jiéhūn", "word_type": "động từ", "meaning": "kết hôn", "note": "", "examples": [{"cn": "他们结婚了。", "py": "Tāmen jiéhūn le.", "vi": "Họ đã kết hôn."}]},
+              {"hanzi": "斤", "pinyin": "jīn", "word_type": "danh từ", "meaning": "cân (500g)", "note": "", "examples": [{"cn": "一斤苹果", "py": "yī jīn píngguǒ", "vi": "nửa cân táo"}]},
+              {"hanzi": "紧张", "pinyin": "jǐnzhāng", "word_type": "tính từ", "meaning": "căng thẳng", "note": "", "examples": [{"cn": "考试前很紧张。", "py": "Kǎoshì qián hěn jǐnzhāng.", "vi": "Trước kỳ thi rất căng thẳng."}]},
+              {"hanzi": "旧", "pinyin": "jiù", "word_type": "tính từ", "meaning": "cũ", "note": "", "examples": [{"cn": "这件衣服太旧了。", "py": "Zhè jiàn yīfu tài jiù le.", "vi": "Cái áo này quá cũ."}]},
+              {"hanzi": "句子", "pinyin": "jùzi", "word_type": "danh từ", "meaning": "câu (văn)", "note": "", "examples": [{"cn": "这个句子很简单。", "py": "Zhège jùzi hěn jiǎndān.", "vi": "Câu này rất đơn giản."}]},
+              {"hanzi": "卡", "pinyin": "kǎ", "word_type": "danh từ", "meaning": "thẻ", "note": "", "examples": [{"cn": "一张卡", "py": "yī zhāng kǎ", "vi": "một cái thẻ"}]},
+              {"hanzi": "可", "pinyin": "kě", "word_type": "liên từ", "meaning": "nhưng, nhưng mà", "note": "", "examples": [{"cn": "我想去，可没时间。", "py": "Wǒ xiǎng qù, kě méi shíjiān.", "vi": "Tôi muốn đi, nhưng không có thời gian."}]},
+              {"hanzi": "裙子", "pinyin": "qúnzi", "word_type": "danh từ", "meaning": "váy", "note": "", "examples": [{"cn": "她穿着一条红裙子。", "py": "Tā chuān zhe yī tiáo hóng qúnzi.", "vi": "Cô ấy mặc một chiếc váy đỏ."}]},
+              {"hanzi": "声", "pinyin": "shēng", "word_type": "lượng từ", "meaning": "tiếng (âm thanh)", "note": "", "examples": [{"cn": "一声", "py": "yī shēng", "vi": "một tiếng"}]},
+              {"hanzi": "试", "pinyin": "shì", "word_type": "động từ", "meaning": "thử", "note": "", "examples": [{"cn": "试试看。", "py": "Shìshi kàn.", "vi": "Thử xem."}]},
+              {"hanzi": "甜", "pinyin": "tián", "word_type": "tính từ", "meaning": "ngọt", "note": "", "examples": [{"cn": "西瓜很甜。", "py": "Xīguā hěn tián.", "vi": "Dưa hấu rất ngọt."}]},
+              {"hanzi": "西瓜", "pinyin": "xīguā", "word_type": "danh từ", "meaning": "dưa hấu", "note": "", "examples": [{"cn": "我喜欢吃西瓜。", "py": "Wǒ xǐhuān chī xīguā.", "vi": "Tôi thích ăn dưa hấu."}]},
+              {"hanzi": "新鲜", "pinyin": "xīnxiān", "word_type": "tính từ", "meaning": "tươi mới", "note": "", "examples": [{"cn": "这个水果很新鲜。", "py": "Zhège shuǐguǒ hěn xīnxiān.", "vi": "Trái cây này rất tươi."}]},
+              {"hanzi": "香蕉", "pinyin": "xiāngjiāo", "word_type": "danh từ", "meaning": "chuối", "note": "", "examples": [{"cn": "我喜欢吃香蕉。", "py": "Wǒ xǐhuān chī xiāngjiāo.", "vi": "Tôi thích ăn chuối."}]},
+              {"hanzi": "一共", "pinyin": "yígòng", "word_type": "phó từ", "meaning": "tổng cộng", "note": "", "examples": [{"cn": "一共十块钱。", "py": "Yígòng shí kuài qián.", "vi": "Tổng cộng 10 đồng."}]},
+              {"hanzi": "自行车", "pinyin": "zìxíngchē", "word_type": "danh từ", "meaning": "xe đạp", "note": "", "examples": [{"cn": "骑自行车", "py": "qí zìxíngchē", "vi": "đạp xe đạp"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 7 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "矮", "pinyin": "ǎi", "meaning": "thấp"},
+              {"hanzi": "不但", "pinyin": "búdàn", "meaning": "không những"},
+              {"hanzi": "而且", "pinyin": "érqiě", "meaning": "hơn nữa"},
+              {"hanzi": "更", "pinyin": "gèng", "meaning": "càng/hơn"},
+              {"hanzi": "公斤", "pinyin": "gōngjīn", "meaning": "kg"},
+              {"hanzi": "合适", "pinyin": "héshì", "meaning": "phù hợp"},
+              {"hanzi": "黄色", "pinyin": "huángsè", "meaning": "màu vàng"},
+              {"hanzi": "结婚", "pinyin": "jiéhūn", "meaning": "kết hôn"},
+              {"hanzi": "紧张", "pinyin": "jǐnzhāng", "meaning": "căng thẳng"},
+              {"hanzi": "句子", "pinyin": "jùzi", "meaning": "câu"},
+              {"hanzi": "裙子", "pinyin": "qúnzi", "meaning": "váy"},
+              {"hanzi": "试", "pinyin": "shì", "meaning": "thử"},
+              {"hanzi": "甜", "pinyin": "tián", "meaning": "ngọt"},
+              {"hanzi": "西瓜", "pinyin": "xīguā", "meaning": "dưa hấu"},
+              {"hanzi": "新鲜", "pinyin": "xīnxiān", "meaning": "tươi mới"},
+              {"hanzi": "香蕉", "pinyin": "xiāngjiāo", "meaning": "chuối"},
+              {"hanzi": "一共", "pinyin": "yígòng", "meaning": "tổng cộng"},
+              {"hanzi": "自行车", "pinyin": "zìxíngchē", "meaning": "xe đạp"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '不但...而且' có nghĩa là gì?",
+            "options": ["A. Không những...mà còn", "B. Mặc dù...nhưng", "C. Vì...nên", "D. Nếu...thì"],
+            "answer": 0,
+            "explanation": "Cấu trúc '不但...而且' nghĩa là 'không những...mà còn'."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '合适' có nghĩa là gì?",
+            "options": ["A. Vừa vặn", "B. Phù hợp", "C. Cả A và B", "D. Cũ"],
+            "answer": 2,
+            "explanation": "'合适' nghĩa là phù hợp hoặc vừa vặn."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "他不但会说中文，___ 会说法语。 (mà còn)", "answer": "而且"},
+              {"sentence": "这件衣服很 ___。 (phù hợp)", "answer": "合适"},
+              {"sentence": "今天比昨天 ___ 冷。 (hơn)", "answer": "更"},
+              {"sentence": "总共10块钱。 (Tổng cộng 10 đồng)", "answer": "一共"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Anh ấy không những nói được tiếng Trung mà còn nói được tiếng Pháp.", "chinese": "他不但会说中文，而且会说法语。"},
+              {"vietnamese": "Tổng cộng là 10 đồng.", "chinese": "一共十块钱。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "第8课 我也很喜欢喝茶",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 8",
+            "subcards": [
+              {"hanzi": "差不多", "pinyin": "chàbuduō", "word_type": "tính từ/phó từ", "meaning": "gần như, khoảng", "note": "", "examples": [{"cn": "我们差不多高。", "py": "Wǒmen chàbuduō gāo.", "vi": "Chúng tôi gần như cao bằng nhau."}]},
+              {"hanzi": "常", "pinyin": "cháng", "word_type": "phó từ", "meaning": "thường xuyên", "note": "", "examples": [{"cn": "他常来这儿。", "py": "Tā cháng lái zhèr.", "vi": "Anh ấy thường đến đây."}]},
+              {"hanzi": "出院", "pinyin": "chūyuàn", "word_type": "động từ", "meaning": "xuất viện", "note": "", "examples": [{"cn": "他明天出院。", "py": "Tā míngtiān chūyuàn.", "vi": "Ngày mai anh ấy xuất viện."}]},
+              {"hanzi": "低", "pinyin": "dī", "word_type": "tính từ", "meaning": "thấp", "note": "(siêu cấp)", "examples": [{"cn": "价格很低。", "py": "Jiàgé hěn dī.", "vi": "Giá rất thấp."}]},
+              {"hanzi": "得", "pinyin": "déi", "word_type": "trợ động từ", "meaning": "phải (cần phải)", "note": "", "examples": [{"cn": "我得走了。", "py": "Wǒ déi zǒu le.", "vi": "Tôi phải đi rồi."}]},
+              {"hanzi": "耳朵", "pinyin": "ěrduo", "word_type": "danh từ", "meaning": "tai", "note": "", "examples": [{"cn": "我的耳朵疼。", "py": "Wǒ de ěrduo téng.", "vi": "Tai tôi đau."}]},
+              {"hanzi": "方法", "pinyin": "fāngfǎ", "word_type": "danh từ", "meaning": "phương pháp, cách", "note": "", "examples": [{"cn": "这是个好方法。", "py": "Zhè shì gè hǎo fāngfǎ.", "vi": "Đây là một cách hay."}]},
+              {"hanzi": "发烧", "pinyin": "fāshāo", "word_type": "động từ", "meaning": "sốt", "note": "", "examples": [{"cn": "我发烧了。", "py": "Wǒ fāshāo le.", "vi": "Tôi bị sốt rồi."}]},
+              {"hanzi": "关心", "pinyin": "guānxīn", "word_type": "động từ", "meaning": "quan tâm", "note": "", "examples": [{"cn": "他关心大家。", "py": "Tā guānxīn dàjiā.", "vi": "Anh ấy quan tâm đến mọi người."}]},
+              {"hanzi": "健康", "pinyin": "jiànkāng", "word_type": "tính từ/danh từ", "meaning": "khỏe mạnh, sức khỏe", "note": "", "examples": [{"cn": "祝您健康！", "py": "Zhù nín jiànkāng!", "vi": "Chúc bạn sức khỏe!"}]},
+              {"hanzi": "开花", "pinyin": "kāihuā", "word_type": "động từ", "meaning": "nở hoa", "note": "", "examples": [{"cn": "春天花开了。", "py": "Chūntiān huā kāi le.", "vi": "Mùa xuân hoa nở."}]},
+              {"hanzi": "看来", "pinyin": "kànlái", "word_type": "phó từ", "meaning": "xem ra, có vẻ như", "note": "", "examples": [{"cn": "看来要下雨了。", "py": "Kànlái yào xià yǔ le.", "vi": "Có vẻ như trời sắp mưa."}]},
+              {"hanzi": "可爱", "pinyin": "kě'ài", "word_type": "tính từ", "meaning": "dễ thương", "note": "", "examples": [{"cn": "小狗很可爱。", "py": "Xiǎo gǒu hěn kě'ài.", "vi": "Chó con rất dễ thương."}]},
+              {"hanzi": "客气", "pinyin": "kèqì", "word_type": "tính từ", "meaning": "lịch sự, khách khí", "note": "", "examples": [{"cn": "你太客气了。", "py": "Nǐ tài kèqì le.", "vi": "Bạn quá khách khí rồi."}]},
+              {"hanzi": "胖", "pinyin": "pàng", "word_type": "tính từ", "meaning": "béo", "note": "", "examples": [{"cn": "他有点胖。", "py": "Tā yǒudiǎn pàng.", "vi": "Anh ấy hơi béo."}]},
+              {"hanzi": "其他", "pinyin": "qítā", "word_type": "đại từ", "meaning": "cái khác, người khác", "note": "", "examples": [{"cn": "其他人呢？", "py": "Qítā rén ne?", "vi": "Những người khác đâu?"}]},
+              {"hanzi": "体育馆", "pinyin": "tǐyùguǎn", "word_type": "danh từ", "meaning": "nhà thi đấu", "note": "", "examples": [{"cn": "去体育馆打球。", "py": "Qù tǐyùguǎn dǎ qiú.", "vi": "Đến nhà thi đấu chơi bóng."}]},
+              {"hanzi": "突然", "pinyin": "tūrán", "word_type": "phó từ", "meaning": "đột nhiên", "note": "", "examples": [{"cn": "突然下雨了。", "py": "Tūrán xià yǔ le.", "vi": "Đột nhiên trời mưa."}]},
+              {"hanzi": "腿", "pinyin": "tuǐ", "word_type": "danh từ", "meaning": "chân", "note": "", "examples": [{"cn": "我腿疼。", "py": "Wǒ tuǐ téng.", "vi": "Chân tôi đau."}]},
+              {"hanzi": "习惯", "pinyin": "xíguàn", "word_type": "động từ/danh từ", "meaning": "thói quen, quen", "note": "", "examples": [{"cn": "我习惯了。", "py": "Wǒ xíguàn le.", "vi": "Tôi đã quen rồi."}]},
+              {"hanzi": "心里", "pinyin": "xīnlǐ", "word_type": "danh từ", "meaning": "trong lòng", "note": "", "examples": [{"cn": "我心里很高兴。", "py": "Wǒ xīnlǐ hěn gāoxìng.", "vi": "Trong lòng tôi rất vui."}]},
+              {"hanzi": "以后", "pinyin": "yǐhòu", "word_type": "danh từ", "meaning": "sau này", "note": "", "examples": [{"cn": "以后再说。", "py": "Yǐhòu zài shuō.", "vi": "Sau này hãy nói."}]},
+              {"hanzi": "羽毛球", "pinyin": "yǔmáoqiú", "word_type": "danh từ", "meaning": "cầu lông", "note": "", "examples": [{"cn": "打羽毛球", "py": "dǎ yǔmáoqiú", "vi": "chơi cầu lông"}]},
+              {"hanzi": "种", "pinyin": "zhǒng", "word_type": "lượng từ", "meaning": "loại (thể loại)", "note": "", "examples": [{"cn": "一种水果", "py": "yī zhǒng shuǐguǒ", "vi": "một loại trái cây"}]},
+              {"hanzi": "住院", "pinyin": "zhùyuàn", "word_type": "động từ", "meaning": "nhập viện", "note": "", "examples": [{"cn": "他住院了。", "py": "Tā zhùyuàn le.", "vi": "Anh ấy nhập viện rồi."}]},
+              {"hanzi": "注意", "pinyin": "zhùyì", "word_type": "động từ", "meaning": "chú ý", "note": "", "examples": [{"cn": "注意安全！", "py": "Zhùyì ānquán!", "vi": "Chú ý an toàn!"}]},
+              {"hanzi": "最近", "pinyin": "zuìjìn", "word_type": "danh từ/phó từ", "meaning": "gần đây", "note": "", "examples": [{"cn": "最近很忙。", "py": "Zuìjìn hěn máng.", "vi": "Gần đây rất bận."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 8 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "差不多", "pinyin": "chàbuduō", "meaning": "gần như"},
+              {"hanzi": "常", "pinyin": "cháng", "meaning": "thường"},
+              {"hanzi": "得", "pinyin": "déi", "meaning": "phải"},
+              {"hanzi": "耳朵", "pinyin": "ěrduo", "meaning": "tai"},
+              {"hanzi": "方法", "pinyin": "fāngfǎ", "meaning": "phương pháp"},
+              {"hanzi": "发烧", "pinyin": "fāshāo", "meaning": "sốt"},
+              {"hanzi": "关心", "pinyin": "guānxīn", "meaning": "quan tâm"},
+              {"hanzi": "健康", "pinyin": "jiànkāng", "meaning": "sức khỏe"},
+              {"hanzi": "可爱", "pinyin": "kě'ài", "meaning": "dễ thương"},
+              {"hanzi": "胖", "pinyin": "pàng", "meaning": "béo"},
+              {"hanzi": "其他", "pinyin": "qítā", "meaning": "cái khác"},
+              {"hanzi": "突然", "pinyin": "tūrán", "meaning": "đột nhiên"},
+              {"hanzi": "腿", "pinyin": "tuǐ", "meaning": "chân"},
+              {"hanzi": "习惯", "pinyin": "xíguàn", "meaning": "thói quen"},
+              {"hanzi": "心里", "pinyin": "xīnlǐ", "meaning": "trong lòng"},
+              {"hanzi": "以后", "pinyin": "yǐhòu", "meaning": "sau này"},
+              {"hanzi": "种", "pinyin": "zhǒng", "meaning": "loại"},
+              {"hanzi": "注意", "pinyin": "zhùyì", "meaning": "chú ý"},
+              {"hanzi": "最近", "pinyin": "zuìjìn", "meaning": "gần đây"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '差不多' có nghĩa là gì?",
+            "options": ["A. Khoảng", "B. Gần như", "C. Cả A và B", "D. Hoàn toàn"],
+            "answer": 2,
+            "explanation": "'差不多' nghĩa là gần như hoặc khoảng."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '得' (déi) có nghĩa là gì?",
+            "options": ["A. Có thể", "B. Phải", "C. Nên", "D. Muốn"],
+            "answer": 1,
+            "explanation": "'得' (déi) chỉ sự cần phải làm, có nghĩa là 'phải'."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "我们 ___ 高。 (Chúng tôi gần như cao bằng nhau)", "answer": "差不多"},
+              {"sentence": "我 ___ 走了。 (Tôi phải đi rồi)", "answer": "得"},
+              {"sentence": "春天花 ___ 了。 (Mùa xuân hoa nở)", "answer": "开"},
+              {"sentence": "注意 ___！ (Chú ý an toàn!)", "answer": "安全"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Đột nhiên trời mưa.", "chinese": "突然下雨了。"},
+              {"vietnamese": "Chó con rất dễ thương.", "chinese": "小狗很可爱。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "第9课 我和运动员一起比赛",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 9",
+            "subcards": [
+              {"hanzi": "比赛", "pinyin": "bǐsài", "word_type": "động từ/danh từ", "meaning": "thi đấu, trận đấu", "note": "", "examples": [{"cn": "参加比赛", "py": "cānjiā bǐsài", "vi": "tham gia thi đấu"}]},
+              {"hanzi": "参加", "pinyin": "cānjiā", "word_type": "động từ", "meaning": "tham gia", "note": "", "examples": [{"cn": "参加活动", "py": "cānjiā huódòng", "vi": "tham gia hoạt động"}]},
+              {"hanzi": "成绩", "pinyin": "chéngjì", "word_type": "danh từ", "meaning": "thành tích, điểm số", "note": "", "examples": [{"cn": "成绩很好。", "py": "Chéngjì hěn hǎo.", "vi": "Thành tích rất tốt."}]},
+              {"hanzi": "得到", "pinyin": "dédào", "word_type": "động từ", "meaning": "nhận được, đạt được", "note": "", "examples": [{"cn": "我得到了奖品。", "py": "Wǒ dédào le jiǎngpǐn.", "vi": "Tôi nhận được giải thưởng."}]},
+              {"hanzi": "得分", "pinyin": "défēn", "word_type": "động từ", "meaning": "ghi điểm", "note": "", "examples": [{"cn": "他得了十分。", "py": "Tā déle shí fēn.", "vi": "Anh ấy được 10 điểm."}]},
+              {"hanzi": "好多", "pinyin": "hǎoduō", "word_type": "tính từ", "meaning": "rất nhiều", "note": "", "examples": [{"cn": "好多人", "py": "hǎoduō rén", "vi": "rất nhiều người"}]},
+              {"hanzi": "回", "pinyin": "huí", "word_type": "lượng từ", "meaning": "lần (số lần)", "note": "", "examples": [{"cn": "去了一回", "py": "qùle yī huí", "vi": "đi một lần"}]},
+              {"hanzi": "几乎", "pinyin": "jīhū", "word_type": "phó từ", "meaning": "hầu như", "note": "", "examples": [{"cn": "几乎都来了。", "py": "Jīhū dōu lái le.", "vi": "Hầu như đều đến rồi."}]},
+              {"hanzi": "经过", "pinyin": "jīngguò", "word_type": "động từ", "meaning": "trải qua", "note": "", "examples": [{"cn": "经过了很多事。", "py": "Jīngguò le hěnduō shì.", "vi": "Đã trải qua nhiều chuyện."}]},
+              {"hanzi": "开", "pinyin": "kāi", "word_type": "động từ", "meaning": "khai, mở, tổ chức", "note": "", "examples": [{"cn": "开会", "py": "kāihuì", "vi": "họp"}]},
+              {"hanzi": "男生", "pinyin": "nánshēng", "word_type": "danh từ", "meaning": "học sinh nam", "note": "", "examples": [{"cn": "我是男生。", "py": "Wǒ shì nánshēng.", "vi": "Tôi là học sinh nam."}]},
+              {"hanzi": "啤酒", "pinyin": "píjiǔ", "word_type": "danh từ", "meaning": "bia", "note": "", "examples": [{"cn": "喜欢喝啤酒。", "py": "Xǐhuān hē píjiǔ.", "vi": "Thích uống bia."}]},
+              {"hanzi": "球场", "pinyin": "qiúchǎng", "word_type": "danh từ", "meaning": "sân bóng", "note": "", "examples": [{"cn": "去球场打球。", "py": "Qù qiúchǎng dǎ qiú.", "vi": "Đến sân bóng chơi bóng."}]},
+              {"hanzi": "受到", "pinyin": "shòudào", "word_type": "động từ", "meaning": "được, nhận được", "note": "", "examples": [{"cn": "受到了欢迎。", "py": "Shòudào le huānyíng.", "vi": "Đã được chào đón."}]},
+              {"hanzi": "世界", "pinyin": "shìjiè", "word_type": "danh từ", "meaning": "thế giới", "note": "", "examples": [{"cn": "世界很精彩。", "py": "Shìjiè hěn jīngcǎi.", "vi": "Thế giới rất tuyệt vời."}]},
+              {"hanzi": "体育", "pinyin": "tǐyù", "word_type": "danh từ", "meaning": "thể dục thể thao", "note": "", "examples": [{"cn": "体育课", "py": "tǐyù kè", "vi": "tiết thể dục"}]},
+              {"hanzi": "网球", "pinyin": "wǎngqiú", "word_type": "danh từ", "meaning": "quần vợt", "note": "", "examples": [{"cn": "打网球", "py": "dǎ wǎngqiú", "vi": "chơi tennis"}]},
+              {"hanzi": "为了", "pinyin": "wèile", "word_type": "giới từ", "meaning": "để (mục đích)", "note": "", "examples": [{"cn": "为了健康，每天锻炼。", "py": "Wèile jiànkāng, měitiān duànliàn.", "vi": "Để có sức khỏe, tập thể dục mỗi ngày."}]},
+              {"hanzi": "校园", "pinyin": "xiàoyuán", "word_type": "danh từ", "meaning": "khuôn viên trường", "note": "", "examples": [{"cn": "校园很大。", "py": "Xiàoyuán hěn dà.", "vi": "Khuôn viên trường rất lớn."}]},
+              {"hanzi": "影响", "pinyin": "yǐngxiǎng", "word_type": "động từ/danh từ", "meaning": "ảnh hưởng", "note": "", "examples": [{"cn": "影响健康。", "py": "Yǐngxiǎng jiànkāng.", "vi": "Ảnh hưởng đến sức khỏe."}]},
+              {"hanzi": "运动会", "pinyin": "yùndònghuì", "word_type": "danh từ", "meaning": "đại hội thể thao", "note": "", "examples": [{"cn": "参加运动会。", "py": "Cānjiā yùndònghuì.", "vi": "Tham gia đại hội thể thao."}]},
+              {"hanzi": "运动员", "pinyin": "yùndòngyuán", "word_type": "danh từ", "meaning": "vận động viên", "note": "", "examples": [{"cn": "他是运动员。", "py": "Tā shì yùndòngyuán.", "vi": "Anh ấy là vận động viên."}]},
+              {"hanzi": "只是", "pinyin": "zhǐshì", "word_type": "phó từ", "meaning": "chỉ là", "note": "", "examples": [{"cn": "只是开个玩笑。", "py": "Zhǐshì kāi gè wánxiào.", "vi": "Chỉ là đùa một chút."}]},
+              {"hanzi": "主要", "pinyin": "zhǔyào", "word_type": "tính từ", "meaning": "chủ yếu", "note": "", "examples": [{"cn": "主要问题", "py": "zhǔyào wèntí", "vi": "vấn đề chính"}]},
+              {"hanzi": "奥运会", "pinyin": "Àoyùnhuì", "word_type": "danh từ riêng", "meaning": "Thế vận hội", "note": "", "examples": [{"cn": "北京奥运会", "py": "Běijīng Àoyùnhuì", "vi": "Thế vận hội Bắc Kinh"}]},
+              {"hanzi": "刘长春", "pinyin": "Liú Chángchūn", "word_type": "danh từ riêng", "meaning": "Lưu Trường Xuân", "note": "", "examples": [{"cn": "刘长春是运动员。", "py": "Liú Chángchūn shì yùndòngyuán.", "vi": "Lưu Trường Xuân là vận động viên."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 9 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "比赛", "pinyin": "bǐsài", "meaning": "thi đấu"},
+              {"hanzi": "参加", "pinyin": "cānjiā", "meaning": "tham gia"},
+              {"hanzi": "成绩", "pinyin": "chéngjì", "meaning": "thành tích"},
+              {"hanzi": "得到", "pinyin": "dédào", "meaning": "nhận được"},
+              {"hanzi": "得分", "pinyin": "défēn", "meaning": "ghi điểm"},
+              {"hanzi": "好多", "pinyin": "hǎoduō", "meaning": "rất nhiều"},
+              {"hanzi": "几乎", "pinyin": "jīhū", "meaning": "hầu như"},
+              {"hanzi": "经过", "pinyin": "jīngguò", "meaning": "trải qua"},
+              {"hanzi": "体育", "pinyin": "tǐyù", "meaning": "thể thao"},
+              {"hanzi": "网球", "pinyin": "wǎngqiú", "meaning": "quần vợt"},
+              {"hanzi": "为了", "pinyin": "wèile", "meaning": "để (mục đích)"},
+              {"hanzi": "影响", "pinyin": "yǐngxiǎng", "meaning": "ảnh hưởng"},
+              {"hanzi": "运动会", "pinyin": "yùndònghuì", "meaning": "đại hội thể thao"},
+              {"hanzi": "运动员", "pinyin": "yùndòngyuán", "meaning": "vận động viên"},
+              {"hanzi": "主要", "pinyin": "zhǔyào", "meaning": "chủ yếu"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '参加' có nghĩa là gì?",
+            "options": ["A. Tổ chức", "B. Tham gia", "C. Rời khỏi", "D. Xem"],
+            "answer": 1,
+            "explanation": "'参加' nghĩa là tham gia."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '为了' có nghĩa là gì?",
+            "options": ["A. Vì vậy", "B. Để (mục đích)", "C. Bởi vì", "D. Tuy nhiên"],
+            "answer": 1,
+            "explanation": "'为了' chỉ mục đích của hành động."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "我 ___ 了奖品。 (Tôi nhận được giải thưởng)", "answer": "得到"},
+              {"sentence": "___ 健康，每天锻炼。 (Để sức khỏe, tập thể dục mỗi ngày)", "answer": "为了"},
+              {"sentence": "他是 ___ 员。 (Anh ấy là vận động viên)", "answer": "运动员"},
+              {"sentence": "参加 ___ 会。 (Tham gia đại hội thể thao)", "answer": "运动"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi nhận được giải thưởng.", "chinese": "我得到了奖品。"},
+              {"vietnamese": "Để có sức khỏe, tôi tập thể dục mỗi ngày.", "chinese": "为了健康，我每天锻炼。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "第10课 会议室里的尴尬",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 10",
+            "subcards": [
+              {"hanzi": "办公室", "pinyin": "bàngōngshì", "word_type": "danh từ", "meaning": "văn phòng", "note": "", "examples": [{"cn": "我在办公室工作。", "py": "Wǒ zài bàngōngshì gōngzuò.", "vi": "Tôi làm việc ở văn phòng."}]},
+              {"hanzi": "笔记本", "pinyin": "bǐjìběn", "word_type": "danh từ", "meaning": "sổ tay, máy tính xách tay", "note": "", "examples": [{"cn": "我用笔记本电脑。", "py": "Wǒ yòng bǐjìběn diànnǎo.", "vi": "Tôi dùng máy tính xách tay."}]},
+              {"hanzi": "笔记", "pinyin": "bǐjì", "word_type": "danh từ", "meaning": "ghi chép", "note": "", "examples": [{"cn": "记笔记", "py": "jì bǐjì", "vi": "ghi chép"}]},
+              {"hanzi": "遍", "pinyin": "biàn", "word_type": "lượng từ", "meaning": "lần (toàn bộ)", "note": "", "examples": [{"cn": "读了一遍", "py": "dúle yī biàn", "vi": "đọc một lần (từ đầu đến cuối)"}]},
+              {"hanzi": "差", "pinyin": "chà", "word_type": "tính từ", "meaning": "kém, xấu", "note": "", "examples": [{"cn": "成绩很差。", "py": "Chéngjì hěn chà.", "vi": "Thành tích rất kém."}]},
+              {"hanzi": "当然", "pinyin": "dāngrán", "word_type": "phó từ", "meaning": "tất nhiên", "note": "", "examples": [{"cn": "当然可以。", "py": "Dāngrán kěyǐ.", "vi": "Tất nhiên là có thể."}]},
+              {"hanzi": "对话", "pinyin": "duìhuà", "word_type": "danh từ", "meaning": "đối thoại", "note": "", "examples": [{"cn": "一段对话", "py": "yī duàn duìhuà", "vi": "một đoạn đối thoại"}]},
+              {"hanzi": "复习", "pinyin": "fùxí", "word_type": "động từ", "meaning": "ôn tập", "note": "", "examples": [{"cn": "复习功课", "py": "fùxí gōngkè", "vi": "ôn bài"}]},
+              {"hanzi": "黑板", "pinyin": "hēibǎn", "word_type": "danh từ", "meaning": "bảng đen", "note": "", "examples": [{"cn": "老师在黑板上写字。", "py": "Lǎoshī zài hēibǎn shàng xiě zì.", "vi": "Giáo viên viết chữ trên bảng đen."}]},
+              {"hanzi": "后年", "pinyin": "hòunián", "word_type": "danh từ", "meaning": "năm sau nữa", "note": "", "examples": [{"cn": "后年我上大学。", "py": "Hòunián wǒ shàng dàxué.", "vi": "Năm sau nữa tôi vào đại học."}]},
+              {"hanzi": "讲", "pinyin": "jiǎng", "word_type": "động từ", "meaning": "nói, giảng", "note": "", "examples": [{"cn": "讲课", "py": "jiǎng kè", "vi": "giảng bài"}]},
+              {"hanzi": "句子", "pinyin": "jùzi", "word_type": "danh từ", "meaning": "câu", "note": "", "examples": [{"cn": "造句子", "py": "zào jùzi", "vi": "đặt câu"}]},
+              {"hanzi": "明白", "pinyin": "míngbai", "word_type": "động từ/tính từ", "meaning": "hiểu, rõ ràng", "note": "", "examples": [{"cn": "我明白了。", "py": "Wǒ míngbai le.", "vi": "Tôi hiểu rồi."}]},
+              {"hanzi": "难", "pinyin": "nán", "word_type": "tính từ", "meaning": "khó", "note": "", "examples": [{"cn": "太难了！", "py": "Tài nán le!", "vi": "Quá khó!"}]},
+              {"hanzi": "年级", "pinyin": "niánjí", "word_type": "danh từ", "meaning": "khối lớp", "note": "", "examples": [{"cn": "我在三年级。", "py": "Wǒ zài sān niánjí.", "vi": "Tôi ở lớp 3 (khối 3)."}]},
+              {"hanzi": "努力", "pinyin": "nǔlì", "word_type": "tính từ/động từ", "meaning": "cố gắng, nỗ lực", "note": "", "examples": [{"cn": "努力学习", "py": "nǔlì xuéxí", "vi": "học tập chăm chỉ"}]},
+              {"hanzi": "清楚", "pinyin": "qīngchu", "word_type": "tính từ", "meaning": "rõ ràng", "note": "", "examples": [{"cn": "听清楚了吗？", "py": "Tīng qīngchu le ma?", "vi": "Nghe rõ chưa?"}]},
+              {"hanzi": "数学", "pinyin": "shùxué", "word_type": "danh từ", "meaning": "toán học", "note": "", "examples": [{"cn": "我喜欢数学。", "py": "Wǒ xǐhuān shùxué.", "vi": "Tôi thích toán học."}]},
+              {"hanzi": "提高", "pinyin": "tígāo", "word_type": "động từ", "meaning": "nâng cao", "note": "", "examples": [{"cn": "提高水平", "py": "tígāo shuǐpíng", "vi": "nâng cao trình độ"}]},
+              {"hanzi": "外语", "pinyin": "wàiyǔ", "word_type": "danh từ", "meaning": "ngoại ngữ", "note": "", "examples": [{"cn": "学习外语", "py": "xuéxí wàiyǔ", "vi": "học ngoại ngữ"}]},
+              {"hanzi": "要求", "pinyin": "yāoqiú", "word_type": "động từ/danh từ", "meaning": "yêu cầu", "note": "", "examples": [{"cn": "老师的要求很高。", "py": "Lǎoshī de yāoqiú hěn gāo.", "vi": "Yêu cầu của giáo viên rất cao."}]},
+              {"hanzi": "页", "pinyin": "yè", "word_type": "lượng từ", "meaning": "trang (sách)", "note": "", "examples": [{"cn": "翻到第五页。", "py": "Fān dào dì-wǔ yè.", "vi": "Lật đến trang 5."}]},
+              {"hanzi": "一般", "pinyin": "yìbān", "word_type": "tính từ/phó từ", "meaning": "nói chung, bình thường", "note": "", "examples": [{"cn": "一般我八点起床。", "py": "Yìbān wǒ bā diǎn qǐchuáng.", "vi": "Thường tôi 8 giờ dậy."}]},
+              {"hanzi": "遇到", "pinyin": "yùdào", "word_type": "động từ", "meaning": "gặp phải", "note": "", "examples": [{"cn": "遇到了麻烦", "py": "yùdào le máfan", "vi": "gặp phải rắc rối"}]},
+              {"hanzi": "认真", "pinyin": "rènzhēn", "word_type": "tính từ", "meaning": "nghiêm túc", "note": "", "examples": [{"cn": "认真工作", "py": "rènzhēn gōngzuò", "vi": "làm việc nghiêm túc"}]},
+              {"hanzi": "作业", "pinyin": "zuòyè", "word_type": "danh từ", "meaning": "bài tập", "note": "", "examples": [{"cn": "写作业", "py": "xiě zuòyè", "vi": "làm bài tập"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 10 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "办公室", "pinyin": "bàngōngshì", "meaning": "văn phòng"},
+              {"hanzi": "笔记", "pinyin": "bǐjì", "meaning": "ghi chép"},
+              {"hanzi": "遍", "pinyin": "biàn", "meaning": "lần (toàn bộ)"},
+              {"hanzi": "差", "pinyin": "chà", "meaning": "kém"},
+              {"hanzi": "当然", "pinyin": "dāngrán", "meaning": "tất nhiên"},
+              {"hanzi": "对话", "pinyin": "duìhuà", "meaning": "đối thoại"},
+              {"hanzi": "复习", "pinyin": "fùxí", "meaning": "ôn tập"},
+              {"hanzi": "黑板", "pinyin": "hēibǎn", "meaning": "bảng đen"},
+              {"hanzi": "讲", "pinyin": "jiǎng", "meaning": "nói/giảng"},
+              {"hanzi": "明白", "pinyin": "míngbai", "meaning": "hiểu"},
+              {"hanzi": "难", "pinyin": "nán", "meaning": "khó"},
+              {"hanzi": "年级", "pinyin": "niánjí", "meaning": "khối lớp"},
+              {"hanzi": "努力", "pinyin": "nǔlì", "meaning": "cố gắng"},
+              {"hanzi": "清楚", "pinyin": "qīngchu", "meaning": "rõ ràng"},
+              {"hanzi": "数学", "pinyin": "shùxué", "meaning": "toán"},
+              {"hanzi": "提高", "pinyin": "tígāo", "meaning": "nâng cao"},
+              {"hanzi": "外语", "pinyin": "wàiyǔ", "meaning": "ngoại ngữ"},
+              {"hanzi": "要求", "pinyin": "yāoqiú", "meaning": "yêu cầu"},
+              {"hanzi": "页", "pinyin": "yè", "meaning": "trang"},
+              {"hanzi": "一般", "pinyin": "yìbān", "meaning": "nói chung"},
+              {"hanzi": "遇到", "pinyin": "yùdào", "meaning": "gặp phải"},
+              {"hanzi": "认真", "pinyin": "rènzhēn", "meaning": "nghiêm túc"},
+              {"hanzi": "作业", "pinyin": "zuòyè", "meaning": "bài tập"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '认真' có nghĩa là gì?",
+            "options": ["A. Thoải mái", "B. Nghiêm túc", "C. Nhanh", "D. Lười biếng"],
+            "answer": 1,
+            "explanation": "'认真' nghĩa là nghiêm túc, cẩn thận."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '当然' có nghĩa là gì?",
+            "options": ["A. Tất nhiên", "B. Có lẽ", "C. Không chắc", "D. Không bao giờ"],
+            "answer": 0,
+            "explanation": "'当然' nghĩa là tất nhiên."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "我在 ___ 工作。 (Văn phòng)", "answer": "办公室"},
+              {"sentence": "老师 ___ 课。 (Giáo viên giảng bài)", "answer": "讲"},
+              {"sentence": "我 ___ 了。 (Tôi hiểu rồi)", "answer": "明白"},
+              {"sentence": "努力 ___。 (Học tập chăm chỉ)", "answer": "学习"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi hiểu rồi.", "chinese": "我明白了。"},
+              {"vietnamese": "Nâng cao trình độ.", "chinese": "提高水平。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "第11课 谁在城里工作",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 11",
+            "subcards": [
+              {"hanzi": "办法", "pinyin": "bànfǎ", "word_type": "danh từ", "meaning": "biện pháp, cách", "note": "", "examples": [{"cn": "想一个办法。", "py": "Xiǎng yīgè bànfǎ.", "vi": "Nghĩ ra một cách."}]},
+              {"hanzi": "别人", "pinyin": "biérén", "word_type": "đại từ", "meaning": "người khác", "note": "", "examples": [{"cn": "不要管别人。", "py": "Bùyào guǎn biérén.", "vi": "Đừng quan tâm đến người khác."}]},
+              {"hanzi": "城市", "pinyin": "chéngshì", "word_type": "danh từ", "meaning": "thành phố", "note": "", "examples": [{"cn": "大城市", "py": "dà chéngshì", "vi": "thành phố lớn"}]},
+              {"hanzi": "地点", "pinyin": "dìdiǎn", "word_type": "danh từ", "meaning": "địa điểm", "note": "", "examples": [{"cn": "见面的地点", "py": "jiànmiàn de dìdiǎn", "vi": "địa điểm gặp mặt"}]},
+              {"hanzi": "发", "pinyin": "fā", "word_type": "động từ", "meaning": "gửi, phát", "note": "", "examples": [{"cn": "发邮件", "py": "fā yóujiàn", "vi": "gửi email"}]},
+              {"hanzi": "会议", "pinyin": "huìyì", "word_type": "danh từ", "meaning": "cuộc họp", "note": "", "examples": [{"cn": "开会", "py": "kāi huì", "vi": "họp"}]},
+              {"hanzi": "机会", "pinyin": "jīhuì", "word_type": "danh từ", "meaning": "cơ hội", "note": "", "examples": [{"cn": "抓住机会", "py": "zhuāzhù jīhuì", "vi": "nắm bắt cơ hội"}]},
+              {"hanzi": "解决", "pinyin": "jiějué", "word_type": "động từ", "meaning": "giải quyết", "note": "", "examples": [{"cn": "解决问题", "py": "jiějué wèntí", "vi": "giải quyết vấn đề"}]},
+              {"hanzi": "景点", "pinyin": "jǐngdiǎn", "word_type": "danh từ", "meaning": "điểm tham quan", "note": "", "examples": [{"cn": "旅游景点", "py": "lǚyóu jǐngdiǎn", "vi": "điểm du lịch"}]},
+              {"hanzi": "开会", "pinyin": "kāihuì", "word_type": "động từ", "meaning": "họp", "note": "", "examples": [{"cn": "正在开会", "py": "zhèngzài kāihuì", "vi": "đang họp"}]},
+              {"hanzi": "开机", "pinyin": "kāijī", "word_type": "động từ", "meaning": "bật máy", "note": "", "examples": [{"cn": "开机了。", "py": "Kāijī le.", "vi": "Đã bật máy."}]},
+              {"hanzi": "可", "pinyin": "kě", "word_type": "liên từ", "meaning": "nhưng", "note": "", "examples": [{"cn": "我想去，可没时间。", "py": "Wǒ xiǎng qù, kě méi shíjiān.", "vi": "Tôi muốn đi, nhưng không có thời gian."}]},
+              {"hanzi": "联系", "pinyin": "liánxì", "word_type": "động từ", "meaning": "liên lạc", "note": "", "examples": [{"cn": "联系朋友", "py": "liánxì péngyou", "vi": "liên lạc với bạn"}]},
+              {"hanzi": "麻烦", "pinyin": "máfan", "word_type": "tính từ/danh từ", "meaning": "phiền phức, rắc rối", "note": "", "examples": [{"cn": "不好意思，麻烦你了。", "py": "Bù hǎoyìsi, máfan nǐ le.", "vi": "Xin lỗi, làm phiền bạn rồi."}]},
+              {"hanzi": "怕", "pinyin": "pà", "word_type": "động từ", "meaning": "sợ", "note": "", "examples": [{"cn": "我怕狗。", "py": "Wǒ pà gǒu.", "vi": "Tôi sợ chó."}]},
+              {"hanzi": "请假", "pinyin": "qǐngjià", "word_type": "động từ", "meaning": "xin nghỉ", "note": "", "examples": [{"cn": "请假一天", "py": "qǐngjià yī tiān", "vi": "xin nghỉ một ngày"}]},
+              {"hanzi": "生活", "pinyin": "shēnghuó", "word_type": "động từ/danh từ", "meaning": "cuộc sống, sống", "note": "", "examples": [{"cn": "城市生活", "py": "chéngshì shēnghuó", "vi": "cuộc sống thành phố"}]},
+              {"hanzi": "声音", "pinyin": "shēngyīn", "word_type": "danh từ", "meaning": "âm thanh, giọng nói", "note": "", "examples": [{"cn": "声音很大", "py": "shēngyīn hěn dà", "vi": "âm thanh rất to"}]},
+              {"hanzi": "室", "pinyin": "shì", "word_type": "danh từ", "meaning": "phòng", "note": "", "examples": [{"cn": "办公室", "py": "bàngōngshì", "vi": "phòng làm việc"}]},
+              {"hanzi": "同事", "pinyin": "tóngshì", "word_type": "danh từ", "meaning": "đồng nghiệp", "note": "", "examples": [{"cn": "我的同事", "py": "wǒ de tóngshì", "vi": "đồng nghiệp của tôi"}]},
+              {"hanzi": "为", "pinyin": "wèi", "word_type": "giới từ", "meaning": "vì, cho", "note": "", "examples": [{"cn": "为人民服务", "py": "wèi rénmín fúwù", "vi": "phục vụ nhân dân"}]},
+              {"hanzi": "箱", "pinyin": "xiāng", "word_type": "danh từ", "meaning": "hộp, thùng", "note": "", "examples": [{"cn": "箱子", "py": "xiāngzi", "vi": "cái hộp"}]},
+              {"hanzi": "休假", "pinyin": "xiūjià", "word_type": "động từ", "meaning": "nghỉ phép", "note": "", "examples": [{"cn": "休假一周", "py": "xiūjià yī zhōu", "vi": "nghỉ một tuần"}]},
+              {"hanzi": "邮箱", "pinyin": "yóuxiāng", "word_type": "danh từ", "meaning": "hộp thư", "note": "", "examples": [{"cn": "电子邮箱", "py": "diànzǐ yóuxiāng", "vi": "hộp thư điện tử"}]},
+              {"hanzi": "愿意", "pinyin": "yuànyì", "word_type": "trợ động từ", "meaning": "sẵn sàng, muốn", "note": "", "examples": [{"cn": "愿意帮忙", "py": "yuànyì bāngmáng", "vi": "sẵn sàng giúp đỡ"}]},
+              {"hanzi": "只能", "pinyin": "zhǐnéng", "word_type": "phó từ", "meaning": "chỉ có thể", "note": "", "examples": [{"cn": "只能这样", "py": "zhǐnéng zhèyàng", "vi": "chỉ có thể như vậy"}]},
+              {"hanzi": "老张", "pinyin": "Lǎo Zhāng", "word_type": "danh từ riêng", "meaning": "Lão Trương (ông Trương)", "note": "", "examples": [{"cn": "老张来了。", "py": "Lǎo Zhāng lái le.", "vi": "Ông Trương đến rồi."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 11 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "办法", "pinyin": "bànfǎ", "meaning": "cách/biện pháp"},
+              {"hanzi": "别人", "pinyin": "biérén", "meaning": "người khác"},
+              {"hanzi": "城市", "pinyin": "chéngshì", "meaning": "thành phố"},
+              {"hanzi": "地点", "pinyin": "dìdiǎn", "meaning": "địa điểm"},
+              {"hanzi": "发", "pinyin": "fā", "meaning": "gửi/phát"},
+              {"hanzi": "会议", "pinyin": "huìyì", "meaning": "cuộc họp"},
+              {"hanzi": "机会", "pinyin": "jīhuì", "meaning": "cơ hội"},
+              {"hanzi": "解决", "pinyin": "jiějué", "meaning": "giải quyết"},
+              {"hanzi": "景点", "pinyin": "jǐngdiǎn", "meaning": "điểm tham quan"},
+              {"hanzi": "联系", "pinyin": "liánxì", "meaning": "liên lạc"},
+              {"hanzi": "麻烦", "pinyin": "máfan", "meaning": "phiền phức"},
+              {"hanzi": "怕", "pinyin": "pà", "meaning": "sợ"},
+              {"hanzi": "请假", "pinyin": "qǐngjià", "meaning": "xin nghỉ"},
+              {"hanzi": "生活", "pinyin": "shēnghuó", "meaning": "cuộc sống"},
+              {"hanzi": "声音", "pinyin": "shēngyīn", "meaning": "âm thanh"},
+              {"hanzi": "同事", "pinyin": "tóngshì", "meaning": "đồng nghiệp"},
+              {"hanzi": "为", "pinyin": "wèi", "meaning": "vì/cho"},
+              {"hanzi": "休假", "pinyin": "xiūjià", "meaning": "nghỉ phép"},
+              {"hanzi": "邮箱", "pinyin": "yóuxiāng", "meaning": "hộp thư"},
+              {"hanzi": "愿意", "pinyin": "yuànyì", "meaning": "sẵn sàng"},
+              {"hanzi": "只能", "pinyin": "zhǐnéng", "meaning": "chỉ có thể"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '办法' có nghĩa là gì?",
+            "options": ["A. Cách thức", "B. Biện pháp", "C. Cả A và B", "D. Vấn đề"],
+            "answer": 2,
+            "explanation": "'办法' nghĩa là cách thức hoặc biện pháp."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '愿意' có nghĩa là gì?",
+            "options": ["A. Muốn", "B. Sẵn sàng", "C. Cả A và B", "D. Phải"],
+            "answer": 2,
+            "explanation": "'愿意' nghĩa là sẵn sàng hoặc muốn."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "想一个 ___。 (Nghĩ ra một cách)", "answer": "办法"},
+              {"sentence": "解决 ___。 (Giải quyết vấn đề)", "answer": "问题"},
+              {"sentence": "___ 朋友 (Liên lạc với bạn)", "answer": "联系"},
+              {"sentence": "我 ___ 狗。 (Tôi sợ chó)", "answer": "怕"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi sợ chó.", "chinese": "我怕狗。"},
+              {"vietnamese": "Đồng nghiệp của tôi.", "chinese": "我的同事。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "第12课 一场美丽的大雪",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 12",
+            "subcards": [
+              {"hanzi": "把", "pinyin": "bǎ", "word_type": "giới từ", "meaning": "(cấu trúc đưa tân ngữ lên trước)", "note": "Cấu trúc câu '把'", "examples": [{"cn": "把书放在桌子上。", "py": "Bǎ shū fàng zài zhuōzi shàng.", "vi": "Đặt sách lên bàn."}]},
+              {"hanzi": "变", "pinyin": "biàn", "word_type": "động từ", "meaning": "thay đổi, biến đổi", "note": "", "examples": [{"cn": "天气变了。", "py": "Tiānqì biàn le.", "vi": "Thời tiết thay đổi rồi."}]},
+              {"hanzi": "变成", "pinyin": "biànchéng", "word_type": "động từ", "meaning": "trở thành, biến thành", "note": "", "examples": [{"cn": "雪变成了水。", "py": "Xuě biànchéng le shuǐ.", "vi": "Tuyết biến thành nước."}]},
+              {"hanzi": "变化", "pinyin": "biànhuà", "word_type": "động từ/danh từ", "meaning": "thay đổi, biến đổi", "note": "", "examples": [{"cn": "很大的变化。", "py": "Hěn dà de biànhuà.", "vi": "Sự thay đổi lớn."}]},
+              {"hanzi": "常常", "pinyin": "chángcháng", "word_type": "phó từ", "meaning": "thường xuyên", "note": "", "examples": [{"cn": "我常常去图书馆。", "py": "Wǒ chángcháng qù túshūguǎn.", "vi": "Tôi thường xuyên đến thư viện."}]},
+              {"hanzi": "船", "pinyin": "chuán", "word_type": "danh từ", "meaning": "tàu, thuyền", "note": "", "examples": [{"cn": "坐船去。", "py": "Zuò chuán qù.", "vi": "Đi thuyền."}]},
+              {"hanzi": "春天", "pinyin": "chūntiān", "word_type": "danh từ", "meaning": "mùa xuân", "note": "", "examples": [{"cn": "春天来了。", "py": "Chūntiān lái le.", "vi": "Mùa xuân đã đến."}]},
+              {"hanzi": "地方", "pinyin": "dìfang", "word_type": "danh từ", "meaning": "nơi, chỗ", "note": "", "examples": [{"cn": "一个好地方", "py": "yīgè hǎo dìfang", "vi": "một nơi tốt"}]},
+              {"hanzi": "冬天", "pinyin": "dōngtiān", "word_type": "danh từ", "meaning": "mùa đông", "note": "", "examples": [{"cn": "冬天很冷。", "py": "Dōngtiān hěn lěng.", "vi": "Mùa đông rất lạnh."}]},
+              {"hanzi": "风", "pinyin": "fēng", "word_type": "danh từ", "meaning": "gió", "note": "", "examples": [{"cn": "刮风了。", "py": "Guā fēng le.", "vi": "Trời đang có gió."}]},
+              {"hanzi": "刚才", "pinyin": "gāngcái", "word_type": "danh từ", "meaning": "vừa mới, lúc nãy", "note": "", "examples": [{"cn": "刚才他来了。", "py": "Gāngcái tā lái le.", "vi": "Lúc nãy anh ấy đã đến."}]},
+              {"hanzi": "工作日", "pinyin": "gōngzuòrì", "word_type": "danh từ", "meaning": "ngày làm việc", "note": "", "examples": [{"cn": "今天是工作日。", "py": "Jīntiān shì gōngzuòrì.", "vi": "Hôm nay là ngày làm việc."}]},
+              {"hanzi": "公园", "pinyin": "gōngyuán", "word_type": "danh từ", "meaning": "công viên", "note": "", "examples": [{"cn": "去公园散步。", "py": "Qù gōngyuán sànbù.", "vi": "Đến công viên đi dạo."}]},
+              {"hanzi": "刮", "pinyin": "guā", "word_type": "động từ", "meaning": "quạt, thổi (gió)", "note": "", "examples": [{"cn": "刮风", "py": "guā fēng", "vi": "có gió"}]},
+              {"hanzi": "关注", "pinyin": "guānzhù", "word_type": "động từ", "meaning": "quan tâm, theo dõi", "note": "", "examples": [{"cn": "关注微博", "py": "guānzhù wēibó", "vi": "theo dõi Weibo"}]},
+              {"hanzi": "季节", "pinyin": "jìjié", "word_type": "danh từ", "meaning": "mùa (trong năm)", "note": "", "examples": [{"cn": "四季", "py": "sì jì", "vi": "bốn mùa"}]},
+              {"hanzi": "街", "pinyin": "jiē", "word_type": "danh từ", "meaning": "đường phố", "note": "", "examples": [{"cn": "逛街", "py": "guàng jiē", "vi": "đi dạo phố"}]},
+              {"hanzi": "来自", "pinyin": "láizì", "word_type": "động từ", "meaning": "đến từ", "note": "", "examples": [{"cn": "我来自中国。", "py": "Wǒ láizì Zhōngguó.", "vi": "Tôi đến từ Trung Quốc."}]},
+              {"hanzi": "蓝", "pinyin": "lán", "word_type": "tính từ", "meaning": "xanh (da trời)", "note": "", "examples": [{"cn": "蓝色的天空", "py": "lánsè de tiānkōng", "vi": "bầu trời xanh"}]},
+              {"hanzi": "秋天", "pinyin": "qiūtiān", "word_type": "danh từ", "meaning": "mùa thu", "note": "", "examples": [{"cn": "秋天很凉快。", "py": "Qiūtiān hěn liángkuài.", "vi": "Mùa thu rất mát mẻ."}]},
+              {"hanzi": "伞", "pinyin": "sǎn", "word_type": "danh từ", "meaning": "ô, dù", "note": "", "examples": [{"cn": "带伞", "py": "dài sǎn", "vi": "mang ô"}]},
+              {"hanzi": "四季", "pinyin": "sìjì", "word_type": "danh từ", "meaning": "bốn mùa", "note": "", "examples": [{"cn": "四季如春", "py": "sìjì rú chūn", "vi": "bốn mùa như xuân"}]},
+              {"hanzi": "夏天", "pinyin": "xiàtiān", "word_type": "danh từ", "meaning": "mùa hè", "note": "", "examples": [{"cn": "夏天很热。", "py": "Xiàtiān hěn rè.", "vi": "Mùa hè rất nóng."}]},
+              {"hanzi": "新闻", "pinyin": "xīnwén", "word_type": "danh từ", "meaning": "tin tức", "note": "", "examples": [{"cn": "看新闻", "py": "kàn xīnwén", "vi": "xem tin tức"}]},
+              {"hanzi": "叶子", "pinyin": "yèzi", "word_type": "danh từ", "meaning": "lá cây", "note": "(siêu cấp)", "examples": [{"cn": "叶子变黄了。", "py": "Yèzi biàn huáng le.", "vi": "Lá cây đã chuyển sang màu vàng."}]},
+              {"hanzi": "雨衣", "pinyin": "yǔyī", "word_type": "danh từ", "meaning": "áo mưa", "note": "", "examples": [{"cn": "穿雨衣", "py": "chuān yǔyī", "vi": "mặc áo mưa"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 12 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "把", "pinyin": "bǎ", "meaning": "(cấu trúc đưa tân ngữ lên)"},
+              {"hanzi": "变", "pinyin": "biàn", "meaning": "thay đổi"},
+              {"hanzi": "变成", "pinyin": "biànchéng", "meaning": "trở thành"},
+              {"hanzi": "变化", "pinyin": "biànhuà", "meaning": "sự thay đổi"},
+              {"hanzi": "常常", "pinyin": "chángcháng", "meaning": "thường xuyên"},
+              {"hanzi": "船", "pinyin": "chuán", "meaning": "tàu/thuyền"},
+              {"hanzi": "春天", "pinyin": "chūntiān", "meaning": "mùa xuân"},
+              {"hanzi": "地方", "pinyin": "dìfang", "meaning": "nơi/chỗ"},
+              {"hanzi": "冬天", "pinyin": "dōngtiān", "meaning": "mùa đông"},
+              {"hanzi": "风", "pinyin": "fēng", "meaning": "gió"},
+              {"hanzi": "刚才", "pinyin": "gāngcái", "meaning": "vừa mới"},
+              {"hanzi": "公园", "pinyin": "gōngyuán", "meaning": "công viên"},
+              {"hanzi": "刮", "pinyin": "guā", "meaning": "thổi (gió)"},
+              {"hanzi": "季节", "pinyin": "jìjié", "meaning": "mùa"},
+              {"hanzi": "街", "pinyin": "jiē", "meaning": "đường phố"},
+              {"hanzi": "来自", "pinyin": "láizì", "meaning": "đến từ"},
+              {"hanzi": "秋天", "pinyin": "qiūtiān", "meaning": "mùa thu"},
+              {"hanzi": "伞", "pinyin": "sǎn", "meaning": "ô/dù"},
+              {"hanzi": "四季", "pinyin": "sìjì", "meaning": "bốn mùa"},
+              {"hanzi": "夏天", "pinyin": "xiàtiān", "meaning": "mùa hè"},
+              {"hanzi": "新闻", "pinyin": "xīnwén", "meaning": "tin tức"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '把' trong câu '把书放在桌子上' có tác dụng gì?",
+            "options": ["A. Chỉ sở hữu", "B. Đưa tân ngữ lên trước động từ", "C. Chỉ số nhiều", "D. Chỉ thời gian"],
+            "answer": 1,
+            "explanation": "'把' đưa tân ngữ lên trước động từ trong cấu trúc câu '把'."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '常常' có nghĩa là gì?",
+            "options": ["A. Thỉnh thoảng", "B. Thường xuyên", "C. Hiếm khi", "D. Không bao giờ"],
+            "answer": 1,
+            "explanation": "'常常' nghĩa là thường xuyên."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "___ 书放在桌子上。 (Đặt sách lên bàn)", "answer": "把"},
+              {"sentence": "天气 ___ 了。 (Thời tiết thay đổi rồi)", "answer": "变"},
+              {"sentence": "春天 ___ 了。 (Mùa xuân đã đến)", "answer": "来"},
+              {"sentence": "我 ___ 中国。 (Tôi đến từ Trung Quốc)", "answer": "来自"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Đặt sách lên bàn.", "chinese": "把书放在桌子上。"},
+              {"vietnamese": "Mùa thu rất mát mẻ.", "chinese": "秋天很凉快。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "第13课 微笑的力量",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 13",
+            "subcards": [
+              {"hanzi": "北方", "pinyin": "běifāng", "word_type": "danh từ", "meaning": "phương Bắc", "note": "", "examples": [{"cn": "北方很冷。", "py": "Běifāng hěn lěng.", "vi": "Phương Bắc rất lạnh."}]},
+              {"hanzi": "不同", "pinyin": "bù tóng", "word_type": "tính từ", "meaning": "khác nhau", "note": "", "examples": [{"cn": "我们不同。", "py": "Wǒmen bù tóng.", "vi": "Chúng tôi khác nhau."}]},
+              {"hanzi": "的话", "pinyin": "dehuà", "word_type": "trợ từ", "meaning": "(dùng trong câu giả định)", "note": "Thường đi với nếu (如果)", "examples": [{"cn": "如果明天不下雨的话，我们就去公园。", "py": "Rúguǒ míngtiān bù xià yǔ dehuà, wǒmen jiù qù gōngyuán.", "vi": "Nếu mai trời không mưa, chúng ta sẽ đi công viên."}]},
+              {"hanzi": "地图", "pinyin": "dìtú", "word_type": "danh từ", "meaning": "bản đồ", "note": "", "examples": [{"cn": "看地图", "py": "kàn dìtú", "vi": "xem bản đồ"}]},
+              {"hanzi": "点", "pinyin": "diǎn", "word_type": "động từ", "meaning": "điểm, chọn", "note": "", "examples": [{"cn": "点菜", "py": "diǎn cài", "vi": "gọi món"}]},
+              {"hanzi": "东方", "pinyin": "dōngfāng", "word_type": "danh từ", "meaning": "phương Đông", "note": "", "examples": [{"cn": "东方国家", "py": "dōngfāng guójiā", "vi": "các nước phương Đông"}]},
+              {"hanzi": "放", "pinyin": "fàng", "word_type": "động từ", "meaning": "đặt, để", "note": "", "examples": [{"cn": "放桌上", "py": "fàng zhuō shàng", "vi": "để lên bàn"}]},
+              {"hanzi": "放心", "pinyin": "fàngxīn", "word_type": "động từ", "meaning": "yên tâm", "note": "", "examples": [{"cn": "你放心。", "py": "Nǐ fàngxīn.", "vi": "Bạn cứ yên tâm."}]},
+              {"hanzi": "夫妻", "pinyin": "fūqī", "word_type": "danh từ", "meaning": "vợ chồng", "note": "", "examples": [{"cn": "一对夫妻", "py": "yī duì fūqī", "vi": "một cặp vợ chồng"}]},
+              {"hanzi": "画家", "pinyin": "huàjiā", "word_type": "danh từ", "meaning": "họa sĩ", "note": "", "examples": [{"cn": "他是画家。", "py": "Tā shì huàjiā.", "vi": "Anh ấy là họa sĩ."}]},
+              {"hanzi": "加", "pinyin": "jiā", "word_type": "động từ", "meaning": "thêm, cộng", "note": "", "examples": [{"cn": "加糖", "py": "jiā táng", "vi": "thêm đường"}]},
+              {"hanzi": "南方", "pinyin": "nánfāng", "word_type": "danh từ", "meaning": "phương Nam", "note": "", "examples": [{"cn": "南方很暖和。", "py": "Nánfāng hěn nuǎnhuo.", "vi": "Phương Nam rất ấm áp."}]},
+              {"hanzi": "盘子", "pinyin": "pánzi", "word_type": "danh từ", "meaning": "đĩa", "note": "", "examples": [{"cn": "一盘菜", "py": "yī pán cài", "vi": "một đĩa món ăn"}]},
+              {"hanzi": "请客", "pinyin": "qǐngkè", "word_type": "động từ", "meaning": "mời khách, bao", "note": "", "examples": [{"cn": "我请客。", "py": "Wǒ qǐngkè.", "vi": "Tôi mời."}]},
+              {"hanzi": "晚会", "pinyin": "wǎnhuì", "word_type": "danh từ", "meaning": "buổi tối hội", "note": "", "examples": [{"cn": "晚会很精彩。", "py": "Wǎnhuì hěn jīngcǎi.", "vi": "Buổi tối hội rất tuyệt vời."}]},
+              {"hanzi": "文化", "pinyin": "wénhuà", "word_type": "danh từ", "meaning": "văn hóa", "note": "", "examples": [{"cn": "中国文化", "py": "Zhōngguó wénhuà", "vi": "văn hóa Trung Quốc"}]},
+              {"hanzi": "西北", "pinyin": "xīběi", "word_type": "danh từ", "meaning": "Tây Bắc", "note": "", "examples": [{"cn": "西北地区", "py": "xīběi dìqū", "vi": "khu vực Tây Bắc"}]},
+              {"hanzi": "一边", "pinyin": "yībiān", "word_type": "liên từ", "meaning": "vừa...vừa", "note": "", "examples": [{"cn": "一边听音乐，一边看书。", "py": "Yībiān tīng yīnyuè, yībiān kàn shū.", "vi": "Vừa nghe nhạc, vừa đọc sách."}]},
+              {"hanzi": "英国", "pinyin": "Yīngguó", "word_type": "danh từ riêng", "meaning": "Anh Quốc", "note": "", "examples": [{"cn": "我来自英国。", "py": "Wǒ láizì Yīngguó.", "vi": "Tôi đến từ Anh Quốc."}]},
+              {"hanzi": "直到", "pinyin": "zhídào", "word_type": "giới từ", "meaning": "cho đến khi", "note": "", "examples": [{"cn": "直到晚上", "py": "zhídào wǎnshang", "vi": "cho đến tối"}]},
+              {"hanzi": "做法", "pinyin": "zuòfǎ", "word_type": "danh từ", "meaning": "cách làm", "note": "(siêu cấp)", "examples": [{"cn": "不同的做法", "py": "bùtóng de zuòfǎ", "vi": "cách làm khác nhau"}]},
+              {"hanzi": "做客", "pinyin": "zuòkè", "word_type": "động từ", "meaning": "làm khách", "note": "", "examples": [{"cn": "去朋友家做客。", "py": "Qù péngyou jiā zuòkè.", "vi": "Đến nhà bạn làm khách."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 13 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "北方", "pinyin": "běifāng", "meaning": "phương Bắc"},
+              {"hanzi": "不同", "pinyin": "bù tóng", "meaning": "khác nhau"},
+              {"hanzi": "地图", "pinyin": "dìtú", "meaning": "bản đồ"},
+              {"hanzi": "东方", "pinyin": "dōngfāng", "meaning": "phương Đông"},
+              {"hanzi": "放", "pinyin": "fàng", "meaning": "đặt"},
+              {"hanzi": "放心", "pinyin": "fàngxīn", "meaning": "yên tâm"},
+              {"hanzi": "夫妻", "pinyin": "fūqī", "meaning": "vợ chồng"},
+              {"hanzi": "画家", "pinyin": "huàjiā", "meaning": "họa sĩ"},
+              {"hanzi": "加", "pinyin": "jiā", "meaning": "thêm/cộng"},
+              {"hanzi": "南方", "pinyin": "nánfāng", "meaning": "phương Nam"},
+              {"hanzi": "盘子", "pinyin": "pánzi", "meaning": "đĩa"},
+              {"hanzi": "请客", "pinyin": "qǐngkè", "meaning": "mời khách"},
+              {"hanzi": "晚会", "pinyin": "wǎnhuì", "meaning": "buổi tối hội"},
+              {"hanzi": "文化", "pinyin": "wénhuà", "meaning": "văn hóa"},
+              {"hanzi": "一边", "pinyin": "yībiān", "meaning": "vừa...vừa"},
+              {"hanzi": "直到", "pinyin": "zhídào", "meaning": "cho đến khi"},
+              {"hanzi": "做客", "pinyin": "zuòkè", "meaning": "làm khách"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '一边...一边' có nghĩa là gì?",
+            "options": ["A. Một bên...một bên", "B. Vừa...vừa", "C. Từ...đến", "D. Nếu...thì"],
+            "answer": 1,
+            "explanation": "'一边...一边' nghĩa là vừa làm việc này vừa làm việc kia."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '请客' có nghĩa là gì?",
+            "options": ["A. Mời khách", "B. Bao (trả tiền)", "C. Cả A và B", "D. Xin lỗi"],
+            "answer": 2,
+            "explanation": "'请客' nghĩa là mời khách (và thường là người mời trả tiền)."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "___ 听音乐，___ 看书。 (Vừa nghe nhạc, vừa đọc sách)", "answer": "一边"},
+              {"sentence": "你去朋友家 ___。 (Bạn đến nhà bạn làm khách)", "answer": "做客"},
+              {"sentence": "你 ___ 吧。 (Bạn cứ yên tâm)", "answer": "放心"},
+              {"sentence": "中 ___ 文化 (Văn hóa Trung Quốc)", "answer": "国"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Vừa nghe nhạc, vừa đọc sách.", "chinese": "一边听音乐，一边看书。"},
+              {"vietnamese": "Tôi mời.", "chinese": "我请客。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "第14课 我该怎么做",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 14",
+            "subcards": [
+              {"hanzi": "班级", "pinyin": "bānjí", "word_type": "danh từ", "meaning": "lớp học (tập thể)", "note": "", "examples": [{"cn": "我们班级有30人。", "py": "Wǒmen bānjí yǒu sānshí rén.", "vi": "Lớp chúng tôi có 30 người."}]},
+              {"hanzi": "报纸", "pinyin": "bàozhǐ", "word_type": "danh từ", "meaning": "báo", "note": "", "examples": [{"cn": "看报纸", "py": "kàn bàozhǐ", "vi": "đọc báo"}]},
+              {"hanzi": "被", "pinyin": "bèi", "word_type": "giới từ", "meaning": "(cấu trúc bị động)", "note": "Cấu trúc bị động", "examples": [{"cn": "书被借走了。", "py": "Shū bèi jiè zǒu le.", "vi": "Sách đã bị mượn đi."}]},
+              {"hanzi": "表演", "pinyin": "biǎoyǎn", "word_type": "động từ/danh từ", "meaning": "biểu diễn", "note": "", "examples": [{"cn": "表演节目", "py": "biǎoyǎn jiémù", "vi": "biểu diễn tiết mục"}]},
+              {"hanzi": "词典", "pinyin": "cídiǎn", "word_type": "danh từ", "meaning": "từ điển", "note": "", "examples": [{"cn": "查词典", "py": "chá cídiǎn", "vi": "tra từ điển"}]},
+              {"hanzi": "电子书", "pinyin": "diànzǐshū", "word_type": "danh từ", "meaning": "sách điện tử", "note": "", "examples": [{"cn": "用电子书阅读。", "py": "Yòng diànzǐshū yuèdú.", "vi": "Dùng sách điện tử đọc."}]},
+              {"hanzi": "故事", "pinyin": "gùshi", "word_type": "danh từ", "meaning": "câu chuyện", "note": "", "examples": [{"cn": "讲故事", "py": "jiǎng gùshi", "vi": "kể chuyện"}]},
+              {"hanzi": "节目", "pinyin": "jiémù", "word_type": "danh từ", "meaning": "tiết mục, chương trình", "note": "", "examples": [{"cn": "电视节目", "py": "diànshì jiémù", "vi": "chương trình truyền hình"}]},
+              {"hanzi": "块", "pinyin": "kuài", "word_type": "lượng từ", "meaning": "miếng, cục", "note": "", "examples": [{"cn": "一块蛋糕", "py": "yī kuài dàngāo", "vi": "một miếng bánh"}]},
+              {"hanzi": "邻居", "pinyin": "línjū", "word_type": "danh từ", "meaning": "hàng xóm", "note": "", "examples": [{"cn": "我的邻居", "py": "wǒ de línjū", "vi": "hàng xóm của tôi"}]},
+              {"hanzi": "女生", "pinyin": "nǚshēng", "word_type": "danh từ", "meaning": "học sinh nữ", "note": "", "examples": [{"cn": "我是女生。", "py": "Wǒ shì nǚshēng.", "vi": "Tôi là học sinh nữ."}]},
+              {"hanzi": "然后", "pinyin": "ránhòu", "word_type": "liên từ", "meaning": "sau đó", "note": "", "examples": [{"cn": "先吃饭，然后看电影。", "py": "Xiān chīfàn, ránhòu kàn diànyǐng.", "vi": "Ăn cơm trước, sau đó xem phim."}]},
+              {"hanzi": "视频", "pinyin": "shìpín", "word_type": "danh từ", "meaning": "video", "note": "(siêu cấp)", "examples": [{"cn": "看视频", "py": "kàn shìpín", "vi": "xem video"}]},
+              {"hanzi": "图书馆", "pinyin": "túshūguǎn", "word_type": "danh từ", "meaning": "thư viện", "note": "", "examples": [{"cn": "去图书馆", "py": "qù túshūguǎn", "vi": "đến thư viện"}]},
+              {"hanzi": "网站", "pinyin": "wǎngzhàn", "word_type": "danh từ", "meaning": "trang web", "note": "", "examples": [{"cn": "网站很好。", "py": "Wǎngzhàn hěn hǎo.", "vi": "Trang web rất tốt."}]},
+              {"hanzi": "忘记", "pinyin": "wàngjì", "word_type": "động từ", "meaning": "quên", "note": "", "examples": [{"cn": "忘记带钥匙", "py": "wàngjì dài yàoshi", "vi": "quên mang chìa khóa"}]},
+              {"hanzi": "相信", "pinyin": "xiāngxìn", "word_type": "động từ", "meaning": "tin tưởng", "note": "", "examples": [{"cn": "我相信你。", "py": "Wǒ xiāngxìn nǐ.", "vi": "Tôi tin bạn."}]},
+              {"hanzi": "校长", "pinyin": "xiàozhǎng", "word_type": "danh từ", "meaning": "hiệu trưởng", "note": "", "examples": [{"cn": "校长来了。", "py": "Xiàozhǎng lái le.", "vi": "Hiệu trưởng đến rồi."}]},
+              {"hanzi": "新年", "pinyin": "xīnnián", "word_type": "danh từ", "meaning": "năm mới", "note": "", "examples": [{"cn": "新年快乐！", "py": "Xīnnián kuàilè!", "vi": "Chúc mừng năm mới!"}]},
+              {"hanzi": "一块儿", "pinyin": "yíkuàir", "word_type": "phó từ", "meaning": "cùng nhau", "note": "", "examples": [{"cn": "一块儿去", "py": "yíkuàir qù", "vi": "cùng đi"}]},
+              {"hanzi": "有些", "pinyin": "yǒuxiē", "word_type": "đại từ", "meaning": "một số", "note": "", "examples": [{"cn": "有些人", "py": "yǒuxiē rén", "vi": "một số người"}]},
+              {"hanzi": "怎么办", "pinyin": "zěnmebàn", "word_type": "cụm từ", "meaning": "làm thế nào", "note": "", "examples": [{"cn": "怎么办？", "py": "Zěnmebàn?", "vi": "Làm thế nào?"}]},
+              {"hanzi": "最好", "pinyin": "zuìhǎo", "word_type": "phó từ", "meaning": "tốt nhất", "note": "", "examples": [{"cn": "最好早点来。", "py": "Zuìhǎo zǎodiǎn lái.", "vi": "Tốt nhất đến sớm một chút."}]},
+              {"hanzi": "最后", "pinyin": "zuìhòu", "word_type": "danh từ/phó từ", "meaning": "cuối cùng", "note": "", "examples": [{"cn": "最后的结果", "py": "zuìhòu de jiéguǒ", "vi": "kết quả cuối cùng"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 14 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "班级", "pinyin": "bānjí", "meaning": "lớp học"},
+              {"hanzi": "报纸", "pinyin": "bàozhǐ", "meaning": "báo"},
+              {"hanzi": "被", "pinyin": "bèi", "meaning": "(cấu trúc bị động)"},
+              {"hanzi": "表演", "pinyin": "biǎoyǎn", "meaning": "biểu diễn"},
+              {"hanzi": "词典", "pinyin": "cídiǎn", "meaning": "từ điển"},
+              {"hanzi": "故事", "pinyin": "gùshi", "meaning": "câu chuyện"},
+              {"hanzi": "节目", "pinyin": "jiémù", "meaning": "tiết mục"},
+              {"hanzi": "邻居", "pinyin": "línjū", "meaning": "hàng xóm"},
+              {"hanzi": "女生", "pinyin": "nǚshēng", "meaning": "học sinh nữ"},
+              {"hanzi": "然后", "pinyin": "ránhòu", "meaning": "sau đó"},
+              {"hanzi": "图书馆", "pinyin": "túshūguǎn", "meaning": "thư viện"},
+              {"hanzi": "网站", "pinyin": "wǎngzhàn", "meaning": "trang web"},
+              {"hanzi": "忘记", "pinyin": "wàngjì", "meaning": "quên"},
+              {"hanzi": "相信", "pinyin": "xiāngxìn", "meaning": "tin tưởng"},
+              {"hanzi": "校长", "pinyin": "xiàozhǎng", "meaning": "hiệu trưởng"},
+              {"hanzi": "新年", "pinyin": "xīnnián", "meaning": "năm mới"},
+              {"hanzi": "一块儿", "pinyin": "yíkuàir", "meaning": "cùng nhau"},
+              {"hanzi": "有些", "pinyin": "yǒuxiē", "meaning": "một số"},
+              {"hanzi": "最好", "pinyin": "zuìhǎo", "meaning": "tốt nhất"},
+              {"hanzi": "最后", "pinyin": "zuìhòu", "meaning": "cuối cùng"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '被' trong tiếng Trung dùng để làm gì?",
+            "options": ["A. Chỉ chủ động", "B. Chỉ bị động", "C. Chỉ sở hữu", "D. Chỉ thời gian"],
+            "answer": 1,
+            "explanation": "'被' được dùng trong cấu trúc câu bị động."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '然后' có nghĩa là gì?",
+            "options": ["A. Trước khi", "B. Sau đó", "C. Trong khi", "D. Mặc dù"],
+            "answer": 1,
+            "explanation": "'然后' nghĩa là sau đó."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "书 ___ 借走了。 (Sách đã bị mượn đi)", "answer": "被"},
+              {"sentence": "先吃饭，___ 看电影。 (Ăn cơm trước, sau đó xem phim)", "answer": "然后"},
+              {"sentence": "我 ___ 你。 (Tôi tin bạn)", "answer": "相信"},
+              {"sentence": "___ 来。 (Tốt nhất đến sớm)", "answer": "最好"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Sách đã bị mượn đi.", "chinese": "书被借走了。"},
+              {"vietnamese": "Tôi tin bạn.", "chinese": "我相信你。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "第15课 古老的黄河",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 15",
+            "subcards": [
+              {"hanzi": "草地", "pinyin": "cǎodì", "word_type": "danh từ", "meaning": "bãi cỏ", "note": "", "examples": [{"cn": "草地上有很多花。", "py": "Cǎodì shàng yǒu hěnduō huā.", "vi": "Trên bãi cỏ có rất nhiều hoa."}]},
+              {"hanzi": "段", "pinyin": "duàn", "word_type": "lượng từ", "meaning": "đoạn", "note": "", "examples": [{"cn": "一段路", "py": "yī duàn lù", "vi": "một đoạn đường"}]},
+              {"hanzi": "附近", "pinyin": "fùjìn", "word_type": "danh từ", "meaning": "gần, xung quanh", "note": "", "examples": [{"cn": "学校附近", "py": "xuéxiào fùjìn", "vi": "gần trường"}]},
+              {"hanzi": "根据", "pinyin": "gēnjù", "word_type": "giới từ", "meaning": "căn cứ vào, theo", "note": "", "examples": [{"cn": "根据调查", "py": "gēnjù diàochá", "vi": "theo điều tra"}]},
+              {"hanzi": "关系", "pinyin": "guānxi", "word_type": "danh từ", "meaning": "quan hệ", "note": "", "examples": [{"cn": "朋友关系", "py": "péngyou guānxi", "vi": "quan hệ bạn bèi"}]},
+              {"hanzi": "河", "pinyin": "hé", "word_type": "danh từ", "meaning": "sông", "note": "", "examples": [{"cn": "黄河", "py": "Huáng Hé", "vi": "Sông Hoàng Hà"}]},
+              {"hanzi": "经理", "pinyin": "jīnglǐ", "word_type": "danh từ", "meaning": "giám đốc", "note": "", "examples": [{"cn": "他是经理。", "py": "Tā shì jīnglǐ.", "vi": "Anh ấy là giám đốc."}]},
+              {"hanzi": "马", "pinyin": "mǎ", "word_type": "danh từ", "meaning": "con ngựa", "note": "", "examples": [{"cn": "骑马", "py": "qí mǎ", "vi": "cưỡi ngựa"}]},
+              {"hanzi": "马路", "pinyin": "mǎlù", "word_type": "danh từ", "meaning": "đường phố, đường lớn", "note": "", "examples": [{"cn": "马路上有很多车。", "py": "Mǎlù shàng yǒu hěnduō chē.", "vi": "Trên đường có rất nhiều xe."}]},
+              {"hanzi": "马上", "pinyin": "mǎshàng", "word_type": "phó từ", "meaning": "ngay lập tức", "note": "", "examples": [{"cn": "马上来", "py": "mǎshàng lái", "vi": "đến ngay"}]},
+              {"hanzi": "面前", "pinyin": "miànqián", "word_type": "danh từ", "meaning": "trước mặt", "note": "", "examples": [{"cn": "在面前", "py": "zài miànqián", "vi": "ở trước mặt"}]},
+              {"hanzi": "平时", "pinyin": "píngshí", "word_type": "danh từ", "meaning": "bình thường, thường ngày", "note": "", "examples": [{"cn": "平时我很忙。", "py": "Píngshí wǒ hěn máng.", "vi": "Ngày thường tôi rất bận."}]},
+              {"hanzi": "养", "pinyin": "yǎng", "word_type": "động từ", "meaning": "nuôi (vật nuôi)", "note": "", "examples": [{"cn": "养狗", "py": "yǎng gǒu", "vi": "nuôi chó"}]},
+              {"hanzi": "以上", "pinyin": "yǐshàng", "word_type": "danh từ", "meaning": "trên (đây)", "note": "", "examples": [{"cn": "18岁以上", "py": "18 suì yǐshàng", "vi": "trên 18 tuổi"}]},
+              {"hanzi": "以外", "pinyin": "yǐwài", "word_type": "danh từ", "meaning": "ngoài ra", "note": "", "examples": [{"cn": "除此以外", "py": "chúcǐ yǐwài", "vi": "ngoài ra"}]},
+              {"hanzi": "游客", "pinyin": "yóukè", "word_type": "danh từ", "meaning": "du khách", "note": "", "examples": [{"cn": "很多游客", "py": "hěnduō yóukè", "vi": "rất nhiều du khách"}]},
+              {"hanzi": "游戏", "pinyin": "yóuxì", "word_type": "danh từ", "meaning": "trò chơi", "note": "", "examples": [{"cn": "玩游戏", "py": "wán yóuxì", "vi": "chơi trò chơi"}]},
+              {"hanzi": "有名", "pinyin": "yǒumíng", "word_type": "tính từ", "meaning": "nổi tiếng", "note": "", "examples": [{"cn": "有名的地方", "py": "yǒumíng de dìfang", "vi": "địa điểm nổi tiếng"}]},
+              {"hanzi": "遇见", "pinyin": "yùjiàn", "word_type": "động từ", "meaning": "gặp", "note": "", "examples": [{"cn": "遇见朋友", "py": "yùjiàn péngyou", "vi": "gặp bạn"}]},
+              {"hanzi": "南京", "pinyin": "Nánjīng", "word_type": "danh từ riêng", "meaning": "Nam Kinh", "note": "", "examples": [{"cn": "南京是城市。", "py": "Nánjīng shì chéngshì.", "vi": "Nam Kinh là thành phố."}]},
+              {"hanzi": "黄河", "pinyin": "Huáng Hé", "word_type": "danh từ riêng", "meaning": "Sông Hoàng Hà", "note": "", "examples": [{"cn": "黄河很长。", "py": "Huáng Hé hěn cháng.", "vi": "Sông Hoàng Hà rất dài."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 15 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "草地", "pinyin": "cǎodì", "meaning": "bãi cỏ"},
+              {"hanzi": "段", "pinyin": "duàn", "meaning": "đoạn"},
+              {"hanzi": "附近", "pinyin": "fùjìn", "meaning": "gần"},
+              {"hanzi": "根据", "pinyin": "gēnjù", "meaning": "theo/căn cứ"},
+              {"hanzi": "关系", "pinyin": "guānxi", "meaning": "quan hệ"},
+              {"hanzi": "河", "pinyin": "hé", "meaning": "sông"},
+              {"hanzi": "经理", "pinyin": "jīnglǐ", "meaning": "giám đốc"},
+              {"hanzi": "马", "pinyin": "mǎ", "meaning": "ngựa"},
+              {"hanzi": "马路", "pinyin": "mǎlù", "meaning": "đường phố"},
+              {"hanzi": "马上", "pinyin": "mǎshàng", "meaning": "ngay lập tức"},
+              {"hanzi": "面前", "pinyin": "miànqián", "meaning": "trước mặt"},
+              {"hanzi": "平时", "pinyin": "píngshí", "meaning": "thường ngày"},
+              {"hanzi": "养", "pinyin": "yǎng", "meaning": "nuôi"},
+              {"hanzi": "以上", "pinyin": "yǐshàng", "meaning": "trên"},
+              {"hanzi": "游客", "pinyin": "yóukè", "meaning": "du khách"},
+              {"hanzi": "游戏", "pinyin": "yóuxì", "meaning": "trò chơi"},
+              {"hanzi": "有名", "pinyin": "yǒumíng", "meaning": "nổi tiếng"},
+              {"hanzi": "遇见", "pinyin": "yùjiàn", "meaning": "gặp"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '马上' có nghĩa là gì?",
+            "options": ["A. Trên ngựa", "B. Ngay lập tức", "C. Gần", "D. Sau đó"],
+            "answer": 1,
+            "explanation": "'马上' nghĩa là ngay lập tức."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '有名' có nghĩa là gì?",
+            "options": ["A. Nổi tiếng", "B. Giàu có", "C. Vô danh", "D. Mới"],
+            "answer": 0,
+            "explanation": "'有名' nghĩa là nổi tiếng."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "学校 ___ (gần trường)", "answer": "附近"},
+              {"sentence": "___ 调查 (theo điều tra)", "answer": "根据"},
+              {"sentence": "朋友 ___ (quan hệ bạn bèi)", "answer": "关系"},
+              {"sentence": "___ 来 (Đến ngay)", "answer": "马上"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi đến ngay.", "chinese": "我马上来。"},
+              {"vietnamese": "Địa điểm nổi tiếng.", "chinese": "有名的地方。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "title": "第16课 可爱的动物",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 16",
+            "subcards": [
+              {"hanzi": "半天", "pinyin": "bàntiān", "word_type": "danh từ", "meaning": "nửa ngày, lâu", "note": "", "examples": [{"cn": "等了半天", "py": "děng le bàntiān", "vi": "đợi nửa ngày"}]},
+              {"hanzi": "饱", "pinyin": "bǎo", "word_type": "tính từ", "meaning": "no", "note": "", "examples": [{"cn": "吃饱了", "py": "chī bǎo le", "vi": "ăn no rồi"}]},
+              {"hanzi": "大熊猫", "pinyin": "dàxióngmāo", "word_type": "danh từ", "meaning": "gấu trúc lớn", "note": "", "examples": [{"cn": "大熊猫很可爱。", "py": "Dàxióngmāo hěn kě'ài.", "vi": "Gấu trúc rất dễ thương."}]},
+              {"hanzi": "动物", "pinyin": "dòngwù", "word_type": "danh từ", "meaning": "động vật", "note": "", "examples": [{"cn": "我喜欢动物。", "py": "Wǒ xǐhuān dòngwù.", "vi": "Tôi thích động vật."}]},
+              {"hanzi": "动物园", "pinyin": "dòngwùyuán", "word_type": "danh từ", "meaning": "sở thú", "note": "", "examples": [{"cn": "去动物园", "py": "qù dòngwùyuán", "vi": "đến sở thú"}]},
+              {"hanzi": "关于", "pinyin": "guānyú", "word_type": "giới từ", "meaning": "về (chủ đề)", "note": "", "examples": [{"cn": "关于这个问题", "py": "guānyú zhège wèntí", "vi": "về vấn đề này"}]},
+              {"hanzi": "国宝", "pinyin": "guóbǎo", "word_type": "danh từ", "meaning": "bảo vật quốc gia", "note": "(siêu cấp)", "examples": [{"cn": "大熊猫是国宝。", "py": "Dàxióngmāo shì guóbǎo.", "vi": "Gấu trúc là bảo vật quốc gia."}]},
+              {"hanzi": "好像", "pinyin": "hǎoxiàng", "word_type": "phó từ", "meaning": "dường như", "note": "", "examples": [{"cn": "他好像很高兴。", "py": "Tā hǎoxiàng hěn gāoxìng.", "vi": "Anh ấy dường như rất vui."}]},
+              {"hanzi": "脚", "pinyin": "jiǎo", "word_type": "danh từ", "meaning": "chân (bàn chân)", "note": "", "examples": [{"cn": "脚疼", "py": "jiǎo téng", "vi": "đau chân"}]},
+              {"hanzi": "可爱", "pinyin": "kě'ài", "word_type": "tính từ", "meaning": "dễ thương", "note": "", "examples": [{"cn": "小猫很可爱。", "py": "Xiǎo māo hěn kě'ài.", "vi": "Mèo con rất dễ thương."}]},
+              {"hanzi": "老人", "pinyin": "lǎorén", "word_type": "danh từ", "meaning": "người già", "note": "", "examples": [{"cn": "老人需要帮助。", "py": "Lǎorén xūyào bāngzhù.", "vi": "Người già cần được giúp đỡ."}]},
+              {"hanzi": "毛", "pinyin": "máo", "word_type": "danh từ", "meaning": "lông", "note": "", "examples": [{"cn": "猫的毛", "py": "māo de máo", "vi": "lông của mèo"}]},
+              {"hanzi": "其实", "pinyin": "qíshí", "word_type": "phó từ", "meaning": "thực ra", "note": "", "examples": [{"cn": "其实他不知道。", "py": "Qíshí tā bù zhīdào.", "vi": "Thực ra anh ấy không biết."}]},
+              {"hanzi": "奇怪", "pinyin": "qíguài", "word_type": "tính từ", "meaning": "kỳ lạ", "note": "", "examples": [{"cn": "真奇怪！", "py": "Zhēn qíguài!", "vi": "Thật kỳ lạ!"}]},
+              {"hanzi": "全", "pinyin": "quán", "word_type": "tính từ", "meaning": "toàn bộ", "note": "(siêu cấp)", "examples": [{"cn": "全世界", "py": "quán shìjiè", "vi": "toàn thế giới"}]},
+              {"hanzi": "认得", "pinyin": "rènde", "word_type": "động từ", "meaning": "nhận ra, biết", "note": "", "examples": [{"cn": "我认得他。", "py": "Wǒ rènde tā.", "vi": "Tôi nhận ra anh ấy."}]},
+              {"hanzi": "身边", "pinyin": "shēnbiān", "word_type": "danh từ", "meaning": "bên cạnh", "note": "", "examples": [{"cn": "在身边", "py": "zài shēnbiān", "vi": "ở bên cạnh"}]},
+              {"hanzi": "野生", "pinyin": "yěshēng", "word_type": "tính từ", "meaning": "hoang dã", "note": "(siêu cấp)", "examples": [{"cn": "野生动物", "py": "yěshēng dòngwù", "vi": "động vật hoang dã"}]},
+              {"hanzi": "一会儿", "pinyin": "yíhuìr", "word_type": "danh từ", "meaning": "một lát", "note": "", "examples": [{"cn": "等一会儿", "py": "děng yíhuìr", "vi": "đợi một lát"}]},
+              {"hanzi": "脏", "pinyin": "zāng", "word_type": "tính từ", "meaning": "bẩn", "note": "", "examples": [{"cn": "衣服脏了。", "py": "Yīfu zāng le.", "vi": "Quần áo bị bẩn."}]},
+              {"hanzi": "照顾", "pinyin": "zhàogù", "word_type": "động từ", "meaning": "chăm sóc", "note": "", "examples": [{"cn": "照顾老人", "py": "zhàogù lǎorén", "vi": "chăm sóc người già"}]},
+              {"hanzi": "周末", "pinyin": "zhōumò", "word_type": "danh từ", "meaning": "cuối tuần", "note": "", "examples": [{"cn": "周末快乐！", "py": "Zhōumò kuàilè!", "vi": "Cuối tuần vui vẻ!"}]},
+              {"hanzi": "竹子", "pinyin": "zhúzi", "word_type": "danh từ", "meaning": "cây tre", "note": "(siêu cấp)", "examples": [{"cn": "熊猫吃竹子。", "py": "Xióngmāo chī zhúzi.", "vi": "Gấu trúc ăn tre."}]},
+              {"hanzi": "嘴", "pinyin": "zuǐ", "word_type": "danh từ", "meaning": "miệng", "note": "", "examples": [{"cn": "嘴巴", "py": "zuǐba", "vi": "miệng"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 16 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "半天", "pinyin": "bàntiān", "meaning": "nửa ngày"},
+              {"hanzi": "饱", "pinyin": "bǎo", "meaning": "no"},
+              {"hanzi": "大熊猫", "pinyin": "dàxióngmāo", "meaning": "gấu trúc"},
+              {"hanzi": "动物", "pinyin": "dòngwù", "meaning": "động vật"},
+              {"hanzi": "动物园", "pinyin": "dòngwùyuán", "meaning": "sở thú"},
+              {"hanzi": "关于", "pinyin": "guānyú", "meaning": "về (chủ đề)"},
+              {"hanzi": "脚", "pinyin": "jiǎo", "meaning": "chân"},
+              {"hanzi": "可爱", "pinyin": "kě'ài", "meaning": "dễ thương"},
+              {"hanzi": "老人", "pinyin": "lǎorén", "meaning": "người già"},
+              {"hanzi": "毛", "pinyin": "máo", "meaning": "lông"},
+              {"hanzi": "其实", "pinyin": "qíshí", "meaning": "thực ra"},
+              {"hanzi": "奇怪", "pinyin": "qíguài", "meaning": "kỳ lạ"},
+              {"hanzi": "认得", "pinyin": "rènde", "meaning": "nhận ra"},
+              {"hanzi": "身边", "pinyin": "shēnbiān", "meaning": "bên cạnh"},
+              {"hanzi": "一会儿", "pinyin": "yíhuìr", "meaning": "một lát"},
+              {"hanzi": "脏", "pinyin": "zāng", "meaning": "bẩn"},
+              {"hanzi": "照顾", "pinyin": "zhàogù", "meaning": "chăm sóc"},
+              {"hanzi": "周末", "pinyin": "zhōumò", "meaning": "cuối tuần"},
+              {"hanzi": "嘴", "pinyin": "zuǐ", "meaning": "miệng"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '照顾' có nghĩa là gì?",
+            "options": ["A. Chăm sóc", "B. Quan tâm", "C. Cả A và B", "D. Nhìn"],
+            "answer": 2,
+            "explanation": "'照顾' nghĩa là chăm sóc hoặc quan tâm."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '其实' có nghĩa là gì?",
+            "options": ["A. Thực ra", "B. Thực tế", "C. Cả A và B", "D. Thường"],
+            "answer": 2,
+            "explanation": "'其实' nghĩa là thực ra hoặc thực tế."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "大熊猫是国宝。 (Gấu trúc là bảo vật quốc gia)", "answer": "大熊猫"},
+              {"sentence": "我去 ___ 看动物。 (Tôi đến sở thú xem động vật)", "answer": "动物园"},
+              {"sentence": "___ 他不知道。 (Thực ra anh ấy không biết)", "answer": "其实"},
+              {"sentence": "___ 快乐！ (Cuối tuần vui vẻ!)", "answer": "周末"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi thích động vật.", "chinese": "我喜欢动物。"},
+              {"vietnamese": "Quần áo bị bẩn.", "chinese": "衣服脏了。"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "title": "第17课 一次野营活动",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 17",
+            "subcards": [
+              {"hanzi": "比如", "pinyin": "bǐrú", "word_type": "động từ", "meaning": "ví dụ như", "note": "", "examples": [{"cn": "比如，我喜欢吃苹果。", "py": "Bǐrú, wǒ xǐhuān chī píngguǒ.", "vi": "Ví dụ, tôi thích ăn táo."}]},
+              {"hanzi": "查", "pinyin": "chá", "word_type": "động từ", "meaning": "tra cứu, kiểm tra", "note": "", "examples": [{"cn": "查资料", "py": "chá zīliào", "vi": "tra tư liệu"}]},
+              {"hanzi": "常见", "pinyin": "cháng jiàn", "word_type": "tính từ", "meaning": "thường gặp", "note": "", "examples": [{"cn": "常见的问题", "py": "cháng jiàn de wèntí", "vi": "vấn đề thường gặp"}]},
+              {"hanzi": "聪明", "pinyin": "cóngmíng", "word_type": "tính từ", "meaning": "thông minh", "note": "", "examples": [{"cn": "他很聪明。", "py": "Tā hěn cóngmíng.", "vi": "Anh ấy rất thông minh."}]},
+              {"hanzi": "错", "pinyin": "cuò", "word_type": "tính từ", "meaning": "sai", "note": "", "examples": [{"cn": "你错了。", "py": "Nǐ cuò le.", "vi": "Bạn sai rồi."}]},
+              {"hanzi": "到处", "pinyin": "dàochù", "word_type": "phó từ", "meaning": "khắp nơi", "note": "", "examples": [{"cn": "到处是人。", "py": "Dàochù shì rén.", "vi": "Khắp nơi đều là người."}]},
+              {"hanzi": "方向", "pinyin": "fāngxiàng", "word_type": "danh từ", "meaning": "phương hướng", "note": "", "examples": [{"cn": "找方向", "py": "zhǎo fāngxiàng", "vi": "tìm phương hướng"}]},
+              {"hanzi": "关机", "pinyin": "guānjī", "word_type": "động từ", "meaning": "tắt máy", "note": "", "examples": [{"cn": "关机了。", "py": "Guānjī le.", "vi": "Đã tắt máy."}]},
+              {"hanzi": "国家", "pinyin": "guójiā", "word_type": "danh từ", "meaning": "quốc gia", "note": "", "examples": [{"cn": "我的国家", "py": "wǒ de guójiā", "vi": "đất nước của tôi"}]},
+              {"hanzi": "害怕", "pinyin": "hàipà", "word_type": "động từ", "meaning": "sợ hãi", "note": "", "examples": [{"cn": "我害怕一个人。", "py": "Wǒ hàipà yīgèrén.", "vi": "Tôi sợ một mình."}]},
+              {"hanzi": "回答", "pinyin": "huídá", "word_type": "động từ/danh từ", "meaning": "trả lời", "note": "", "examples": [{"cn": "回答问题", "py": "huídá wèntí", "vi": "trả lời câu hỏi"}]},
+              {"hanzi": "继续", "pinyin": "jìxù", "word_type": "động từ", "meaning": "tiếp tục", "note": "(siêu cấp)", "examples": [{"cn": "继续学习", "py": "jìxù xuéxí", "vi": "tiếp tục học"}]},
+              {"hanzi": "难题", "pinyin": "nántí", "word_type": "danh từ", "meaning": "vấn đề khó", "note": "", "examples": [{"cn": "这是个难题。", "py": "Zhè shì gè nántí.", "vi": "Đây là một vấn đề khó."}]},
+              {"hanzi": "前天", "pinyin": "qiántiān", "word_type": "danh từ", "meaning": "ngày kia (hôm trước hôm qua)", "note": "", "examples": [{"cn": "前天我去了。", "py": "Qiántiān wǒ qù le.", "vi": "Ngày kia tôi đã đi."}]},
+              {"hanzi": "认为", "pinyin": "rènwéi", "word_type": "động từ", "meaning": "cho rằng", "note": "", "examples": [{"cn": "我认为他说得对。", "py": "Wǒ rènwéi tā shuō de duì.", "vi": "Tôi cho rằng anh ấy nói đúng."}]},
+              {"hanzi": "容易", "pinyin": "róngyì", "word_type": "tính từ", "meaning": "dễ dàng", "note": "", "examples": [{"cn": "这个问题很容易。", "py": "Zhège wèntí hěn róngyì.", "vi": "Vấn đề này rất dễ."}]},
+              {"hanzi": "生气", "pinyin": "shēngqì", "word_type": "động từ", "meaning": "tức giận", "note": "", "examples": [{"cn": "别生气！", "py": "Bié shēngqì!", "vi": "Đừng giận!"}]},
+              {"hanzi": "同意", "pinyin": "tóngyì", "word_type": "động từ", "meaning": "đồng ý", "note": "", "examples": [{"cn": "我同意。", "py": "Wǒ tóngyì.", "vi": "Tôi đồng ý."}]},
+              {"hanzi": "屋子", "pinyin": "wūzi", "word_type": "danh từ", "meaning": "căn nhà (nhỏ)", "note": "", "examples": [{"cn": "屋子不大。", "py": "Wūzi bù dà.", "vi": "Căn nhà không lớn."}]},
+              {"hanzi": "向", "pinyin": "xiàng", "word_type": "giới từ", "meaning": "hướng về phía", "note": "", "examples": [{"cn": "向前走", "py": "xiàng qián zǒu", "vi": "đi về phía trước"}]},
+              {"hanzi": "有关", "pinyin": "yǒuguān", "word_type": "động từ", "meaning": "có liên quan", "note": "", "examples": [{"cn": "有关问题", "py": "yǒuguān wèntí", "vi": "vấn đề liên quan"}]},
+              {"hanzi": "有用", "pinyin": "yǒuyòng", "word_type": "tính từ", "meaning": "có ích", "note": "", "examples": [{"cn": "这本书很有用。", "py": "Zhè běn shū hěn yǒuyòng.", "vi": "Quyển sách này rất có ích."}]},
+              {"hanzi": "真正", "pinyin": "zhēnzhèng", "word_type": "tính từ", "meaning": "thực sự, chính thức", "note": "(siêu cấp)", "examples": [{"cn": "真正的朋友", "py": "zhēnzhèng de péngyou", "vi": "người bạn thực sự"}]},
+              {"hanzi": "只有", "pinyin": "zhǐyǒu", "word_type": "phó từ", "meaning": "chỉ có", "note": "", "examples": [{"cn": "只有他知道。", "py": "Zhǐyǒu tā zhīdào.", "vi": "Chỉ có anh ấy biết."}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 17 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "比如", "pinyin": "bǐrú", "meaning": "ví dụ như"},
+              {"hanzi": "查", "pinyin": "chá", "meaning": "tra cứu"},
+              {"hanzi": "常见", "pinyin": "cháng jiàn", "meaning": "thường gặp"},
+              {"hanzi": "聪明", "pinyin": "cóngmíng", "meaning": "thông minh"},
+              {"hanzi": "错", "pinyin": "cuò", "meaning": "sai"},
+              {"hanzi": "到处", "pinyin": "dàochù", "meaning": "khắp nơi"},
+              {"hanzi": "方向", "pinyin": "fāngxiàng", "meaning": "phương hướng"},
+              {"hanzi": "关机", "pinyin": "guānjī", "meaning": "tắt máy"},
+              {"hanzi": "国家", "pinyin": "guójiā", "meaning": "quốc gia"},
+              {"hanzi": "害怕", "pinyin": "hàipà", "meaning": "sợ hãi"},
+              {"hanzi": "回答", "pinyin": "huídá", "meaning": "trả lời"},
+              {"hanzi": "难题", "pinyin": "nántí", "meaning": "vấn đề khó"},
+              {"hanzi": "前天", "pinyin": "qiántiān", "meaning": "ngày kia"},
+              {"hanzi": "认为", "pinyin": "rènwéi", "meaning": "cho rằng"},
+              {"hanzi": "容易", "pinyin": "róngyì", "meaning": "dễ dàng"},
+              {"hanzi": "生气", "pinyin": "shēngqì", "meaning": "tức giận"},
+              {"hanzi": "同意", "pinyin": "tóngyì", "meaning": "đồng ý"},
+              {"hanzi": "向", "pinyin": "xiàng", "meaning": "hướng về"},
+              {"hanzi": "有关", "pinyin": "yǒuguān", "meaning": "có liên quan"},
+              {"hanzi": "有用", "pinyin": "yǒuyòng", "meaning": "có ích"},
+              {"hanzi": "只有", "pinyin": "zhǐyǒu", "meaning": "chỉ có"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '认为' có nghĩa là gì?",
+            "options": ["A. Cho rằng", "B. Nghĩ rằng", "C. Cả A và B", "D. Biết"],
+            "answer": 2,
+            "explanation": "'认为' nghĩa là cho rằng hoặc nghĩ rằng."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '同意' có nghĩa là gì?",
+            "options": ["A. Không đồng ý", "B. Đồng ý", "C. Phản đối", "D. Hỏi"],
+            "answer": 1,
+            "explanation": "'同意' nghĩa là đồng ý."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "___ 我喜欢吃苹果。 (Ví dụ, tôi thích ăn táo)", "answer": "比如"},
+              {"sentence": "我 ___ 他说得对。 (Tôi cho rằng anh ấy nói đúng)", "answer": "认为"},
+              {"sentence": "别 ___！ (Đừng giận!)", "answer": "生气"},
+              {"sentence": "我 ___。 (Tôi đồng ý)", "answer": "同意"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi cho rằng anh ấy nói đúng.", "chinese": "我认为他说得对。"},
+              {"vietnamese": "Đừng giận!", "chinese": "别生气！"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "title": "第18课 告别校园",
+        "tabs": [
+          {
+            "id": 1,
+            "title": "Từ vựng bài 18",
+            "subcards": [
+              {"hanzi": "阿姨", "pinyin": "āyí", "word_type": "danh từ", "meaning": "cô, dì", "note": "", "examples": [{"cn": "阿姨好！", "py": "Āyí hǎo!", "vi": "Chào cô!"}]},
+              {"hanzi": "毕业", "pinyin": "bìyè", "word_type": "động từ", "meaning": "tốt nghiệp", "note": "(siêu cấp)", "examples": [{"cn": "我毕业了。", "py": "Wǒ bìyè le.", "vi": "Tôi đã tốt nghiệp."}]},
+              {"hanzi": "不久", "pinyin": "bùjiǔ", "word_type": "phó từ", "meaning": "không lâu", "note": "", "examples": [{"cn": "不久我就回来。", "py": "Bùjiǔ wǒ jiù huílái.", "vi": "Không lâu tôi sẽ quay lại."}]},
+              {"hanzi": "出发", "pinyin": "chūfā", "word_type": "động từ", "meaning": "xuất phát", "note": "", "examples": [{"cn": "我们出发吧。", "py": "Wǒmen chūfā ba.", "vi": "Chúng ta xuất phát đi."}]},
+              {"hanzi": "出生", "pinyin": "chūshēng", "word_type": "động từ", "meaning": "sinh ra", "note": "", "examples": [{"cn": "我出生在北京。", "py": "Wǒ chūshēng zài Běijīng.", "vi": "Tôi sinh ra ở Bắc Kinh."}]},
+              {"hanzi": "大概", "pinyin": "dàgài", "word_type": "phó từ", "meaning": "khoảng, đại khái", "note": "", "examples": [{"cn": "大概十点。", "py": "Dàgài shí diǎn.", "vi": "Khoảng 10 giờ."}]},
+              {"hanzi": "懂得", "pinyin": "dǒngde", "word_type": "động từ", "meaning": "hiểu (sâu sắc)", "note": "", "examples": [{"cn": "我懂得这个道理。", "py": "Wǒ dǒngde zhège dàolǐ.", "vi": "Tôi hiểu đạo lý này."}]},
+              {"hanzi": "发生", "pinyin": "fāshēng", "word_type": "động từ", "meaning": "xảy ra", "note": "", "examples": [{"cn": "发生了什么？", "py": "Fāshēng le shénme?", "vi": "Đã xảy ra chuyện gì?"}]},
+              {"hanzi": "发展", "pinyin": "fāzhǎn", "word_type": "động từ/danh từ", "meaning": "phát triển", "note": "", "examples": [{"cn": "发展很快", "py": "fāzhǎn hěn kuài", "vi": "phát triển rất nhanh"}]},
+              {"hanzi": "刚刚", "pinyin": "gānggāng", "word_type": "phó từ", "meaning": "vừa mới", "note": "", "examples": [{"cn": "他刚刚走了。", "py": "Tā gānggāng zǒu le.", "vi": "Anh ấy vừa mới đi."}]},
+              {"hanzi": "过节", "pinyin": "guòjié", "word_type": "động từ", "meaning": "đón lễ, ăn Tết", "note": "", "examples": [{"cn": "过节很开心。", "py": "Guòjié hěn kāixīn.", "vi": "Đón lễ rất vui."}]},
+              {"hanzi": "过去", "pinyin": "guòqù", "word_type": "danh từ", "meaning": "quá khứ", "note": "", "examples": [{"cn": "过去的时光", "py": "guòqù de shíguāng", "vi": "thời gian đã qua"}]},
+              {"hanzi": "坚持", "pinyin": "jiānchí", "word_type": "động từ", "meaning": "kiên trì", "note": "", "examples": [{"cn": "坚持努力", "py": "jiānchí nǔlì", "vi": "kiên trì cố gắng"}]},
+              {"hanzi": "见面", "pinyin": "jiànmiàn", "word_type": "động từ", "meaning": "gặp mặt", "note": "", "examples": [{"cn": "我们见面吧。", "py": "Wǒmen jiànmiàn ba.", "vi": "Chúng ta gặp mặt đi."}]},
+              {"hanzi": "节日", "pinyin": "jiérì", "word_type": "danh từ", "meaning": "ngày lễ", "note": "", "examples": [{"cn": "节日快乐！", "py": "Jiérì kuàilè!", "vi": "Chúc mừng ngày lễ!"}]},
+              {"hanzi": "结婚", "pinyin": "jiéhūn", "word_type": "động từ", "meaning": "kết hôn", "note": "", "examples": [{"cn": "他们要结婚了。", "py": "Tāmen yào jiéhūn le.", "vi": "Họ sắp kết hôn."}]},
+              {"hanzi": "节目", "pinyin": "jiémù", "word_type": "danh từ", "meaning": "tiết mục, chương trình", "note": "", "examples": [{"cn": "精彩的节目", "py": "jīngcǎi de jiémù", "vi": "tiết mục tuyệt vời"}]},
+              {"hanzi": "目标", "pinyin": "mùbiāo", "word_type": "danh từ", "meaning": "mục tiêu", "note": "(siêu cấp)", "examples": [{"cn": "我的目标", "py": "wǒ de mùbiāo", "vi": "mục tiêu của tôi"}]},
+              {"hanzi": "起", "pinyin": "qǐ", "word_type": "động từ", "meaning": "đứng dậy", "note": "", "examples": [{"cn": "起床", "py": "qǐchuáng", "vi": "dậy"}]},
+              {"hanzi": "收", "pinyin": "shōu", "word_type": "động từ", "meaning": "nhận, thu", "note": "", "examples": [{"cn": "收到", "py": "shōudào", "vi": "nhận được"}]},
+              {"hanzi": "叔叔", "pinyin": "shūshu", "word_type": "danh từ", "meaning": "chú, bác", "note": "", "examples": [{"cn": "叔叔好！", "py": "Shūshu hǎo!", "vi": "Chào chú!"}]},
+              {"hanzi": "完成", "pinyin": "wánchéng", "word_type": "động từ", "meaning": "hoàn thành", "note": "", "examples": [{"cn": "完成了任务。", "py": "Wánchéng le rènwù.", "vi": "Đã hoàn thành nhiệm vụ."}]},
+              {"hanzi": "学期", "pinyin": "xuéqī", "word_type": "danh từ", "meaning": "học kỳ", "note": "", "examples": [{"cn": "新的学期", "py": "xīn de xuéqī", "vi": "học kỳ mới"}]},
+              {"hanzi": "怎样", "pinyin": "zěnyàng", "word_type": "đại từ nghi vấn", "meaning": "thế nào", "note": "", "examples": [{"cn": "你怎样？", "py": "Nǐ zěnyàng?", "vi": "Bạn thế nào?"}]},
+              {"hanzi": "只要", "pinyin": "zhǐyào", "word_type": "liên từ", "meaning": "chỉ cần", "note": "", "examples": [{"cn": "只要努力，就能成功。", "py": "Zhǐyào nǔlì, jiù néng chénggōng.", "vi": "Chỉ cần cố gắng, là có thể thành công."}]},
+              {"hanzi": "总", "pinyin": "zǒng", "word_type": "phó từ", "meaning": "luôn luôn, tổng", "note": "", "examples": [{"cn": "我总是忘记。", "py": "Wǒ zǒng shì wàngjì.", "vi": "Tôi luôn luôn quên."}]},
+              {"hanzi": "春节", "pinyin": "Chūnjié", "word_type": "danh từ riêng", "meaning": "Tết Nguyên Đán", "note": "", "examples": [{"cn": "春节快乐！", "py": "Chūnjié kuàilè!", "vi": "Chúc mừng Tết Nguyên Đán!"}]}
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "flashcard",
+            "question": "Ôn tập từ vựng bài 18 bằng thẻ ghi nhớ.",
+            "pairs": [
+              {"hanzi": "阿姨", "pinyin": "āyí", "meaning": "cô/dì"},
+              {"hanzi": "毕业", "pinyin": "bìyè", "meaning": "tốt nghiệp"},
+              {"hanzi": "不久", "pinyin": "bùjiǔ", "meaning": "không lâu"},
+              {"hanzi": "出发", "pinyin": "chūfā", "meaning": "xuất phát"},
+              {"hanzi": "出生", "pinyin": "chūshēng", "meaning": "sinh ra"},
+              {"hanzi": "大概", "pinyin": "dàgài", "meaning": "khoảng"},
+              {"hanzi": "懂得", "pinyin": "dǒngde", "meaning": "hiểu sâu sắc"},
+              {"hanzi": "发生", "pinyin": "fāshēng", "meaning": "xảy ra"},
+              {"hanzi": "发展", "pinyin": "fāzhǎn", "meaning": "phát triển"},
+              {"hanzi": "刚刚", "pinyin": "gānggāng", "meaning": "vừa mới"},
+              {"hanzi": "过节", "pinyin": "guòjié", "meaning": "đón lễ"},
+              {"hanzi": "过去", "pinyin": "guòqù", "meaning": "quá khứ"},
+              {"hanzi": "坚持", "pinyin": "jiānchí", "meaning": "kiên trì"},
+              {"hanzi": "见面", "pinyin": "jiànmiàn", "meaning": "gặp mặt"},
+              {"hanzi": "节日", "pinyin": "jiérì", "meaning": "ngày lễ"},
+              {"hanzi": "结婚", "pinyin": "jiéhūn", "meaning": "kết hôn"},
+              {"hanzi": "起", "pinyin": "qǐ", "meaning": "đứng dậy"},
+              {"hanzi": "收", "pinyin": "shōu", "meaning": "nhận/thu"},
+              {"hanzi": "叔叔", "pinyin": "shūshu", "meaning": "chú/bác"},
+              {"hanzi": "完成", "pinyin": "wánchéng", "meaning": "hoàn thành"},
+              {"hanzi": "学期", "pinyin": "xuéqī", "meaning": "học kỳ"},
+              {"hanzi": "怎样", "pinyin": "zěnyàng", "meaning": "thế nào"},
+              {"hanzi": "只要", "pinyin": "zhǐyào", "meaning": "chỉ cần"},
+              {"hanzi": "总", "pinyin": "zǒng", "meaning": "luôn luôn"}
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "question": "1. '只要' có nghĩa là gì?",
+            "options": ["A. Chỉ cần", "B. Chỉ có", "C. Chỉ là", "D. Chỉ khi"],
+            "answer": 0,
+            "explanation": "'只要' nghĩa là chỉ cần (điều kiện)."
+          },
+          {
+            "type": "multiple_choice",
+            "question": "2. '坚持' có nghĩa là gì?",
+            "options": ["A. Từ bỏ", "B. Kiên trì", "C. Thay đổi", "D. Nghỉ ngơi"],
+            "answer": 1,
+            "explanation": "'坚持' nghĩa là kiên trì."
+          },
+          {
+            "type": "fill_blank",
+            "question": "3. Điền từ thích hợp vào chỗ trống:",
+            "items": [
+              {"sentence": "我 ___ 了。 (Tôi đã tốt nghiệp)", "answer": "毕业"},
+              {"sentence": "我们 ___ 吧。 (Chúng ta xuất phát đi)", "answer": "出发"},
+              {"sentence": "发生了 ___？ (Đã xảy ra chuyện gì?)", "answer": "什么"},
+              {"sentence": "___ 努力，就能成功。 (Chỉ cần cố gắng, là có thể thành công)", "answer": "只要"}
+            ]
+          },
+          {
+            "type": "translation",
+            "question": "4-5. Dịch các câu sau sang tiếng Trung:",
+            "items": [
+              {"vietnamese": "Tôi đã tốt nghiệp.", "chinese": "我毕业了。"},
+              {"vietnamese": "Chỉ cần cố gắng, là có thể thành công.", "chinese": "只要努力，就能成功。"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

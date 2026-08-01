@@ -1,0 +1,86 @@
+[
+  {
+    "level": "HSK3",
+    "title": "刚才 (gāngcái) VS 刚刚 (gānggāng)",
+    "type": "Từ vựng nhầm lẫn",
+    "desc": "Phân biệt Danh từ chỉ thời gian (刚才) và Phó từ (刚刚).",
+    "table": [
+      {
+        "item": "Từ loại",
+        "er": "Danh từ thời gian (Thời điểm ngay trước khi nói)",
+        "liang": "Phó từ (Vừa mới)"
+      },
+      {
+        "item": "Khả năng kết hợp",
+        "er": "Đứng làm chủ ngữ, Đứng sau 的 (刚才的电话)",
+        "liang": "Không đứng làm chủ ngữ, Không đứng sau 的, Có thể chỉ thời gian xa"
+      }
+    ],
+    "wrong": "❌ 刚刚的电话是妈妈打来的。 (Sai vì 刚刚 không đi với 的)",
+    "correct": "✅ 刚才的电话是妈妈打来的。 (Đúng khi bổ nghĩa cho danh từ 电话)",
+    "tip": "💡 Mẹo nhớ: Có chữ 的 đứng sau ➔ Bắt buộc dùng 刚才!"
+  },
+  {
+    "level": "HSK3",
+    "title": "的 (de) VS 地 (de) VS 得 (de)",
+    "type": "Trợ từ bộ ba",
+    "desc": "Ba trợ từ 'de' có phát âm giống nhau nhưng vị trí ngữ pháp khác nhau hoàn toàn.",
+    "table": [
+      {
+        "item": "Cấu trúc ngữ pháp",
+        "er": "Định ngữ + 的 + Danh từ (của/mà)",
+        "liang": "Trạng ngữ + 地 + Động từ (một cách)<br>Động từ + 得 + Bổ ngữ (đến mức/được)"
+      },
+      {
+        "item": "Ví dụ mẫu",
+        "er": "漂亮的衣服 (Quần áo đẹp)",
+        "liang": "高兴地笑 (Cười một cách vui vẻ)<br>跑得很快 (Chạy rất nhanh)"
+      }
+    ],
+    "wrong": "❌ 他跑的很快。 (Sai vì sau động từ 跑 miêu tả mức độ phải dùng 得)",
+    "correct": "✅ 他跑得很快。 (Đúng khi đi kèm bổ ngữ trạng thái)",
+    "tip": "💡 Mẹo nhớ: Trước Danh từ ➔ 的! Trước Động từ ➔ 地! Sau Động từ ➔ 得!"
+  },
+  {
+    "level": "HSK3",
+    "title": "了解 (liǎojiě) VS 理解 (lǐjiě)",
+    "type": "Động từ nhầm lẫn",
+    "desc": "Phân biệt 了解 (biết rõ, nắm rõ tình hình) và 理解 (thấu hiểu, cảm thông tư tưởng/lý do).",
+    "table": [
+      {
+        "item": "Đối tượng & Bản chất",
+        "er": "了解: Nắm rõ thông tin, tình hình, văn hóa (Ngoại cảnh)",
+        "liang": "理解: Thấu hiểu nguyên nhân, tâm tư, tư tưởng (Nội tâm/Lý do)"
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "我很了解这里的风俗。(Tôi rất nắm rõ phong tục ở đây)",
+        "liang": "我非常理解你的心情。(Tôi rất thấu hiểu tâm trạng của bạn)"
+      }
+    ],
+    "wrong": "❌ 我很理解这里的风俗。(Phong tục là thông tin thực tế, dùng 了解)",
+    "correct": "✅ 我很了解这里的风俗。(Đúng khi biết rõ tình hình)",
+    "tip": "💡 Mẹo nhớ: Biết thông tin/tình hình ➔ 了解! Thấu hiểu tâm tư/lý do ➔ 理解!"
+  },
+  {
+    "level": "HSK3",
+    "title": "突然 (tūrán) VS 忽然 (hūrán)",
+    "type": "Tính từ & Phó từ nhầm lẫn",
+    "desc": "突然 là tính từ (có thể làm vị ngữ/bổ nghĩa), 忽然 chỉ là phó từ.",
+    "table": [
+      {
+        "item": "Từ loại & Cấu trúc",
+        "er": "突然: Tính từ (Có thể đi với 太/很: 太突然了)",
+        "liang": "忽然: Phó từ (Chỉ đứng trước động từ: 忽然下雨了)"
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "这个决定太突然了。(Quá đột ngột)",
+        "liang": "他忽然站了起来。(Anh ấy đột nhiên đứng dậy)"
+      }
+    ],
+    "wrong": "❌ 这个决定太忽然了。(Sai vì 忽然 không đứng sau 太)",
+    "correct": "✅ 这个决定太突然了。(Đúng vì 太 + Tính từ 突然)",
+    "tip": "💡 Mẹo nhớ: Đứng sau 很/太 ➔ Bắt buộc chọn 突然!"
+  }
+]

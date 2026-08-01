@@ -1,0 +1,86 @@
+[
+  {
+    "level": "HSK1",
+    "title": "二 (èr) VS 两 (liǎng)",
+    "type": "Từ vựng nhầm lẫn",
+    "desc": "Cả hai đều mang nghĩa là 2, nhưng cách dùng đứng trước Lượng từ hay Đếm số hoàn toàn khác nhau.",
+    "table": [
+      {
+        "item": "Cách dùng chính",
+        "er": "Đếm số (1, 2, 3), Số thứ tự (第一, 第二), Số nhà, Số điện thoại, Hàng đơn vị/chục.",
+        "liang": "Đứng trước LƯỢNG TỪ đếm số lượng (2 cái/người), Đứng trước 百, 千, 万."
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "二月 (Tháng 2), 第二名 (Hạng 2), 二十 (20)",
+        "liang": "两个人 (2 người), 两本书 (2 cuốn sách), 两百 (200)"
+      }
+    ],
+    "wrong": "❌ 二个人 (Sai vì 二 không đứng trực tiếp trước lượng từ 个)",
+    "correct": "✅ 两个人 (Đúng khi đếm số lượng người)",
+    "tip": "💡 Mẹo nhớ: Cứ thấy LƯỢNG TỪ (个, 本, 只, 张...) hay tiền hàng trăm/nghìn thì chọn 两 (liǎng)!"
+  },
+  {
+    "level": "HSK1",
+    "title": "想 (xiǎng) VS 要 (yào)",
+    "type": "Trợ động từ nhầm lẫn",
+    "desc": "Đều dịch là 'muốn', nhưng 想 nghiêng về suy nghĩ/dự định, 要 nghiêng về quyết tâm/kế hoạch cụ thể.",
+    "table": [
+      {
+        "item": "Mức độ quyết tâm",
+        "er": "Muốn (Chủ quan, ước muốn, có thể chưa làm)",
+        "liang": "Muốn / Cần / Sẽ (Kế hoạch cụ thể, quyết tâm cao)"
+      },
+      {
+        "item": "Dạng phủ định",
+        "er": "不想 (Không muốn)",
+        "liang": "不想 (Không muốn) / 不要 (Đừng làm!)"
+      }
+    ],
+    "wrong": "❌ 我不要去中国。(Lưu ý: 不要 mang nghĩa là 'Đừng/Không cần', không phải 'Không muốn')",
+    "correct": "✅ 我不想去中国。(Đúng khi phủ định ý muốn)",
+    "tip": "💡 Mẹo nhớ: Phủ định 'Không muốn làm gì' luôn luôn dùng 不想!"
+  },
+  {
+    "level": "HSK1",
+    "title": "不 (bù) VS 没 / 没有 (méi / méiyǒu)",
+    "type": "Phủ định từ",
+    "desc": "Phủ định hiện tại/thói quen (不) và phủ định quá khứ/sự thật đã xảy ra (没).",
+    "table": [
+      {
+        "item": "Thời gian & Thái độ",
+        "er": "Hiện tại, tương lai, thói quen, ý chí chủ quan",
+        "liang": "Quá khứ, sự việc đã/chưa xảy ra, phủ định 有"
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "我不去学校。(Tôi không đi học - Ý chí/Thói quen)",
+        "liang": "我昨天没去学校。(Hôm qua tôi chưa/không đi học)"
+      }
+    ],
+    "wrong": "❌ 我昨天不去学校。(Sai vì dùng 不 cho thời gian quá khứ 昨天)",
+    "correct": "✅ 我昨天没去学校。(Đúng khi phủ định hành động trong quá khứ)",
+    "tip": "💡 Mẹo nhớ: Quá khứ / Đã xảy ra / Đi với 有 ➔ Luôn luôn dùng 没 (méi)!"
+  },
+  {
+    "level": "HSK1",
+    "title": "那 (nà) VS 哪 (nǎ)",
+    "type": "Đại từ chỉ định & nghi vấn",
+    "desc": "Phân biệt 那 (kia, đó - đại từ chỉ định) và 哪 (nào - đại từ nghi vấn trong câu hỏi).",
+    "table": [
+      {
+        "item": "Ý nghĩa & Bộ thủ",
+        "er": "那 (nà): Kia, đó (Chỉ vị trí xa người nói)",
+        "liang": "哪 (nǎ): Nào (Có bộ Khẩu 𠮁, dùng trong câu hỏi)"
+      },
+      {
+        "item": "Ví dụ câu",
+        "er": "那是我的书。(Đó là sách của tôi)",
+        "liang": "你是哪国人？(Bạn là người nước nào?)"
+      }
+    ],
+    "wrong": "❌ 你是那国人？ (Sai vì câu hỏi tìm quốc tịch phải dùng 哪)",
+    "correct": "✅ 你是哪国人？ (Đúng khi hỏi quốc tịch/vị trí)",
+    "tip": "💡 Mẹo nhớ: Trong câu hỏi 'Nào?' có chữ 哪 (có bộ 口)! 'Kia/Đó' dùng 那!"
+  }
+]

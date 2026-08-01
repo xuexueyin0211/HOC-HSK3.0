@@ -1,0 +1,15 @@
+{
+  "level": "HSK4",
+  "title": "Luyện Viết Với AI - Cấp Độ HSK 4",
+  "topics": [
+    {
+      "id": "w4_1",
+      "title": "Chủ đề 1: Trải nghiệm công việc & Bảo vệ môi trường (工作经验与环保)",
+      "prompt": "Viết bài luận ngắn (80-100 từ) về tầm quan trọng của việc học tập tích lũy kinh nghiệm hoặc bảo vệ môi trường.",
+      "keywords": ["积累", "经验", "环境保护", "成功", "坚持"],
+      "sample": "在工作中，积累经验非常重要。无论遇到什么困难，我们都要坚持努力，这样才能获得成功。",
+      "sample_py": "Zài gōngzuò zhōng, jīlěi jīngyàn fēicháng zhòngyào. Wúlùn yùdào shénme kùnnan, wǒmen dōu yào jiānchí nǔlì, zhèyàng cái néng huòdé chénggōng.",
+      "sample_vi": "Trong công việc, tích lũy kinh nghiệm rất quan trọng. Cho dù gặp khó khăn gì, chúng ta đều phải kiên trì nỗ lực, như vậy mới có thể gặt hái thành công."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "badge": "📖 HSK 5",
+  "title": "Luyện Đề Thi Thử HSK 5",
+  "subtitle": "Đề thi thử cao cấp HSK 5",
+  "exercises": [
+    {
+      "question": "Câu 1: Chọn từ thích hợp: 随着经济的快速发展，人们的生活___发生了巨大的变化。",
+      "options": ["A. 方式 (Fāngshì)", "B. 形式 (Xíngshì)", "C. 态度 (Tàidu)", "D. 状态 (Zhuàngtài)"],
+      "answer": 0,
+      "explanation": "生活方式 (Shēnghuó fāngshì) = lối sống / phương thức sinh hoạt."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "badge": "📖 HSK 2",
+  "title": "Luyện Đề Thi Thử HSK 2",
+  "subtitle": "Đề thi thử HSK 2 tổng hợp",
+  "exercises": [
+    {
+      "question": "Câu 1: Cặp liên từ nào mang nghĩa 'Tuy... nhưng...'?",
+      "options": ["A. 因为...所以...", "B. 虽然...但是...", "C. 不但...而且...", "D. 如果...就..."],
+      "answer": 1,
+      "explanation": "虽然...但是... biểu thị quan hệ nhượng bộ (Tuy... nhưng...)."
+    },
+    {
+      "question": "Câu 2: Dịch câu: 'Điện thoại của tôi mất rồi' sang tiếng Trung:",
+      "options": ["A. 我的手机不看到了", "B. 我的手机不见了", "C. 我的手机不找了", "D. 我的手机不开了"],
+      "answer": 1,
+      "explanation": "不见了 (bù jiàn le) có nghĩa là biến mất / không thấy nữa / mất rồi."
+    }
+  ]
+}

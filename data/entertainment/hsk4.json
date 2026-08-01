@@ -1,0 +1,24 @@
+{
+  "title": "Góc Giải Trí HSK 4",
+  "items": [
+    {
+      "id": "video-scenery-guilin",
+      "level": "hsk4",
+      "category": "video",
+      "categoryLabel": "🎥 Video & Phim",
+      "title": "Phim Ngắn Du Lịch: Sơn Thủy Quế Lâm (桂林山水)",
+      "chineseTitle": "桂林山水甲天下 (Vlog HSK4)",
+      "synopsis": "Khám phá thắng cảnh Quế Lâm qua phim tư liệu ngắn có phụ đề Pinyin và từ vựng du lịch HSK4.",
+      "embedUrl": "https://www.youtube.com/embed/7X8I-S6JpM0",
+      "vocab": [
+        { "cn": "山水", "py": "shānshuǐ", "vi": "sơn thủy, cảnh sông núi" },
+        { "cn": "风景", "py": "fēngjǐng", "vi": "phong cảnh" },
+        { "cn": "吸引", "py": "xīyǐn", "vi": "thu hút" }
+      ],
+      "contentLines": [
+        { "cn": "人们常说：“桂林山水甲天下”。", "py": "Rénmen cháng shuō: \"Guìlín shānshuǐ jiǎ tiānxià\".", "vi": "Người ta thường nói: \"Cảnh đẹp Quế Lâm nhất thiên hạ\"." },
+        { "cn": "这里的江水清澈见底，吸引了世界各地的游客。", "py": "Zhèlǐ de jiāngshuǐ qīngchè jiàn dǐ, xīyǐn le shìjiè gèdì de yóukè.", "vi": "Nước sông ở đây trong veo nhìn thấy đáy, thu hút du khách từ khắp thế giới." }
+      ]
+    }
+  ]
+}
