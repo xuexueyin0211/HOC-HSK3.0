@@ -5710,7 +5710,7 @@ sidebar.appendChild(lessonItem);
             const timeStr = `⏱️ ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 
             const hasAudio = Boolean(currentQ.audioUrl || currentQ.audio);
-            const audioSrc = currentQ.audioUrl || (currentQ.audio ? `/audio/${st.level ? st.level.toUpperCase() : 'HSK1'}/${currentQ.audio}.mp3` : '');
+            const audioSrc = currentQ.audioUrl || (currentQ.audio ? `audio/${st.level ? st.level.toUpperCase() : 'HSK1'}/${currentQ.audio}.mp3` : '');
 
             overlay.innerHTML = `
                 <!-- Header -->
@@ -9878,15 +9878,15 @@ window.playPronunciationAudio = function(category, soundKey) {
     const key = soundKey.trim();
 
     if (category === 'thanh_mau' || category === 'consonant') {
-        rawPath = `/audio/thanh mẫu/${key}.mp3`;
+        rawPath = `audio/thanh mẫu/${key}.mp3`;
     } else if (category === 'van_mau' || category === 'vowel') {
         if (key === 'a') {
-            rawPath = `/audio/vận mẫu/a.m4a`;
+            rawPath = `audio/vận mẫu/a.m4a`;
         } else {
-            rawPath = `/audio/vận mẫu/${key}.mp3`;
+            rawPath = `audio/vận mẫu/${key}.mp3`;
         }
     } else if (category === 'thanh_dieu' || category === 'tone') {
-        rawPath = `/audio/thanh điệu/${key}.mp3`;
+        rawPath = `audio/thanh điệu/${key}.mp3`;
     }
 
     if (rawPath) {
@@ -11068,7 +11068,7 @@ window.playPronunciationAudio = function(type, val) {
         else if (val === '4' || val === 'à') filename = 'à.mp3';
     }
 
-    const path = `/audio/${folder}/${filename}`;
+    const path = `audio/${folder}/${filename}`;
     const audio = new Audio(encodeURI(path));
     audio.play().catch(err => {
         console.warn('Audio play error, falling back to TTS for:', val, err);
@@ -12101,7 +12101,7 @@ window.renderGuidedLessonPipeline = async function(level, lessonId, activeCompon
                                     </div>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 14px; flex-grow: 1; max-width: 550px; justify-content: flex-end; flex-wrap: wrap;">
-                                    <audio id="hsk-audio-${level.toLowerCase()}-${numId}-${sec.section_number}" src="/audio/${level.toLowerCase()}/L${numId}_${sec.section_number}.mp3" controls onplay="document.querySelectorAll('audio').forEach(a => { if(a !== this) a.pause(); }); if(window.currentAudioPlayer) { try { window.currentAudioPlayer.pause(); } catch(e){} }" style="height: 36px; border-radius: 12px; outline: none; max-width: 300px; flex-grow: 1;"></audio>
+                                    <audio id="hsk-audio-${level.toLowerCase()}-${numId}-${sec.section_number}" src="audio/${level.toLowerCase()}/L${numId}_${sec.section_number}.mp3" controls onplay="document.querySelectorAll('audio').forEach(a => { if(a !== this) a.pause(); }); if(window.currentAudioPlayer) { try { window.currentAudioPlayer.pause(); } catch(e){} }" style="height: 36px; border-radius: 12px; outline: none; max-width: 300px; flex-grow: 1;"></audio>
                                     <div style="display: flex; align-items: center; gap: 4px; background: white; padding: 3px; border-radius: 10px; border: 1px solid #fbcfe8;">
                                         <span style="font-size: 11px; font-weight: 800; color: #be185d; padding: 0 6px;">Tốc độ:</span>
                                         <button onclick="document.getElementById('hsk-audio-${level.toLowerCase()}-${numId}-${sec.section_number}').playbackRate=0.8; this.parentNode.querySelectorAll('button').forEach(b => {b.style.background='none'; b.style.color='#be185d'}); this.style.background='#be185d'; this.style.color='white';" style="background:none; color:#be185d; border:none; padding:4px 8px; border-radius:6px; font-size:11px; font-weight:800; cursor:pointer; transition: all 0.1s;">0.8x</button>
