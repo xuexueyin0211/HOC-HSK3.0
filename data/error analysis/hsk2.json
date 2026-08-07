@@ -1,0 +1,537 @@
+{
+  "hsk2_error_analysis": {
+    "title": "PHÂN TÍCH LỖI SAI, PHÂN BIỆT TỪ HSK2",
+    "color": "hsk2",
+    "lessons": [
+      {
+        "id": 1,
+        "title": "第1课 她请我们吃了北京烤鸭",
+        "errors": [
+          {
+            "error_type": "Thiếu 的 trong cấu trúc 是...的",
+            "description": "Quên 的 ở cuối câu nhấn mạnh",
+            "wrong": "我们是来旅游。",
+            "correct": "我们是来旅游的。",
+            "explanation": "Câu nhấn mạnh với 是...的 nhất định phải có 的 ở cuối hoặc ngay trước tân ngữ, có thể lược bỏ 是 (ở câu khẳng định) nhưng tuyệt đối không được bỏ 的"
+          },
+          {
+            "error_type": "Lỗi thêm tân ngữ sau từ 旅游",
+            "description": "旅游 không mang tân ngữ ở sau, phải dùng cấu trúc \"在 + nơi chốn + 旅游\" hoặc \"去 + nơi chốn + 旅游\"",
+            "wrong": "他帮忙我很多。",
+            "correct": "他帮我很多忙。"
+        },
+          {
+            "error_type": "Lỗi thêm tân ngữ sau từ 帮忙",
+            "description": "帮忙 là động từ ly hợp, đã có 忙 đóng vai trò tân ngữ rồi nên không mang tân ngữ ở sau nữa, phải dùng cấu trúc \"帮 + ... + 忙\"",
+            "wrong": "我去旅游中国。",
+            "correct": "我去中国旅游。"
+        }        ],
+        "word_distinctions": [
+          {
+            "word_pair": "给 (giới từ) - 给 (động từ)",
+            "usage": "Giới từ: A 给 B + V + O; Động từ: A 给 B + O"
+          },
+          {
+            "word_pair": "次 (lượng từ - lần) - 遍 (lượng từ - lần)",
+            "usage": "次: lần (phổ biến); 遍: lần (làm trọn vẹn từ đầu đến cuối)"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "第2课 还是打车去北大吧",
+        "word_distinctions": [
+          {
+            "word_pair": "外国 (nước ngoài) - 国外 (nước ngoài)",
+            "usage": "外国 đứng trước danh từ để biểu thị danh từ đó thuộc về nước ngoài, ví dụ 外国公司 (công ty nước ngoài); 国外 đứng một mình chỉ vị trí một đất nước khác, ví dụ 去国外 (đi nước ngoài)"
+          },
+          {
+            "word_pair": "别 (đừng) - 不要 (đừng)",
+            "usage": "别 mang sắc thái nhẹ nhàng, an ủi, khuyên nhủ; 不要 mang tính cấm đoán, ngăn cản"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "第3课 我想去西安旅游",
+        "word_distinctions": [
+          {
+            "word_pair": "完 - 好 (bổ ngữ kết quả)",
+            "usage": "完: hoàn thành; 好: hoàn thành tốt",
+            "note": "完 chỉ kết thúc, 好 nhấn mạnh chất lượng"
+          },
+          {
+            "word_pair": "自己 + V - 一个人 + V",
+            "usage": "自己 + V biểu thị \"tự mình làm\" mà không cần ai đó giúp; 一个人 + V nói về số lượng \"làm một mình\""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "第4课 你穿红色的很好看",
+        "errors": [
+          {
+            "error_type": "Nhầm 过 với 了",
+            "description": "了 nhấn mạnh \"hoàn thành\", 过 nhấn mạnh \"trải nghiệm\""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "第5课 第一次去中国朋友家",
+        "errors": [
+          {
+            "error_type": "Sai vị trí tân ngữ nơi chốn với BNXH đơn",
+            "description": "Đặt tân ngữ nơi chốn sai vị trí",
+            "wrong": "我上去楼。",
+            "correct": "我上楼去。",
+            "explanation": "Tân ngữ nơi chốn: V + O nơi chốn + 来/去"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "一会 - 一下",
+            "usage": "一会 nhấn mạnh thời gian ngắn, chỉ dùng được với những động từ có thể kéo dài, duy trì lâu (vd: ngủ, nghỉ ngơi, chờ đợi,...);  一下 nhấn mạnh hành động làm một lần, làm thử, không mất sức lực\n 一会 còn có thể làm danh từ chỉ thời gian, nằm đầu câu hoặc sau chủ ngữ với nghĩa \"lát nữa\""
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "第6课 小雪，生日快乐！",
+        "word_distinctions": [
+          {
+            "word_pair": "快乐 - 高兴",
+            "usage": "快乐: vui vẻ (trạng thái bên trong - có thể duy trì lâu dài); 高兴: vui (cảm xúc bộc lộ ra ngoài - mang tính tạm thời)",
+            "note": "快乐 thường dùng trong lời chúc"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "第7课 他篮球打得很好",
+        "errors": [
+          {
+            "error_type": "Sai vị trí tân ngữ với bổ ngữ trạng thái",
+            "description": "Đặt tân ngữ sai vị trí",
+            "wrong": "我打篮球得很好。",
+            "correct": "我打篮球打得很好。",
+            "explanation": "Tân ngữ đưa lên trước động từ: S + O + V + 得 + Adj hoặc Lặp lại động từ: S + V + O + V + 得 + Adj"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "打 - 踢",
+            "usage": "打: dùng tay (bóng rổ, tennis); 踢: dùng chân (bóng đá)",
+            "note": "Cách dùng khác nhau dựa vào bộ phận cơ thể"
+          }
+        ],
+          "comparison": [
+            {
+              "tro_tu": "的",
+              "vi_tri": "Định ngữ + 的 + Danh từ trung tâm",
+              "y_nghia": "Chỉ mối quan hệ sở hữu, đặc điểm, tính chất của danh từ",
+              "vi_du": [
+                {
+                  "cn": "打篮球的学生",
+                  "phan_tich": "Cụm động từ (打篮球) + 的 + Danh từ (学生)",
+                  "note": "Cụm động từ làm định ngữ cần có 的"
+                }
+              ]
+            },
+            {
+              "tro_tu": "地",
+              "vi_tri": "Trạng ngữ + 地 + Động từ",
+              "y_nghia": "Diễn tả trạng thái thực hiện hành động (làm việc gì đó một cách như thế nào)",
+              "vi_du": [
+                {
+                  "cn": "他高兴地打篮球",
+                  "phan_tich": "Tính từ (高兴) + 地 + Động từ (打篮球)",
+                  "note": "Miêu tả trạng thái chơi bóng rổ, chơi một cách như thế nào"
+                }
+              ]
+            },
+            {
+              "tro_tu": "得",
+              "vi_tri": "Động từ/Tính từ + 得 + Bổ ngữ",
+              "y_nghia": "Diễn tả mức độ, trạng thái, đánh giá hành động",
+              "vi_du": [
+                {
+                  "cn": "他篮球打得很好",
+                  "phan_tich": "Tân ngữ (篮球) + Động từ (打) + 得 + Bổ ngữ (很好)"
+                }
+            ]
+            }
+          ]
+      },
+      {
+        "id": 8,
+        "title": "第8课 虽然你忘了，但是我记得",
+        "errors": [
+          {
+            "error_type": "Dùng 很/非常 sau 比",
+            "description": "Dùng phó từ chỉ mức độ để miêu tả mức độ cao của tính chất trong câu chữ 比",
+            "wrong": "左边比右边很好看。",
+            "correct": "左边比右边好看。"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "第9课 我去买杯奶茶",
+        "errors": [
+          {
+            "error_type": "Không dùng 离 khi nói khoảng cách",
+            "description": "Trực tiếp dùng 近/远 + nơi chốn mà không dùng giới từ 离",
+            "wrong": "学校很近医院。",
+            "correct": "学校离医院很近。",
+            "explanation": "近/远 là tính từ, không thể trực tiếp kết hợp với tân ngữ nơi chốn ở sau, cần dùng cấu trúc A离B+ khoảng cách"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "周 - 星期",
+            "usage": "周 mang sắc thái trang trọng, dùng trong văn viết, 星期 trung tính (cả nói và viết)"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "第10课 就要考试了",
+        "word_distinctions": [
+          {
+            "word_pair": "门 - 门口",
+            "usage": "门: cái cửa; 门口: vị trí chỗ cửa",
+            "example_wrong": "你放门吧。",
+            "example_correct": "你放门口吧。"
+          },
+          {
+            "word_pair": "考试 - 考",
+            "usage": "考试: bài thi (danh từ), thi (động từ ly hợp); 考: thi (động từ)",
+            "example_wrong": "我考试中文。",
+            "example_correct": "我考中文。/ 考什么试？"
+          },
+          {
+            "word_pair": "帮 - 帮忙",
+            "usage": "帮: giúp (động từ); 帮忙: giúp đỡ (động từ ly hợp)",
+            "example_wrong": "帮忙我",
+            "example_correct": "帮我 vs 帮我个忙"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "第11课 我最喜欢吃中国菜",
+        "errors": [
+          {
+            "error_type": "Sai vị trí của 最",
+            "description": "Đặt 最 sai vị trí trong câu, 最 phải đứng trước tính từ/động từ tâm lý",
+            "wrong": "他喜欢吃苹果最。",
+            "correct": "他最喜欢吃苹果。"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "着 - 在/正在",
+            "usage": "着: trợ từ động thái (sau V); 在: phó từ (trước V)\n着 nhấn mạnh một hành động, trạng thái được duy trì, tiếp diễn; 在 nhấn mạnh một hành động đang diễn ra"
+          },
+          {
+            "word_pair": "经常 - 常常",
+            "usage": "经常: thường xuyên (tần suất cao hơn, có thể có quy luật); 常常: thường (tần suất thấp hơn, không có quy luật)"
+          }
+        ],
+          "comparison": [
+            {
+              "tro_tu": "着",
+              "y_nghia": "Nhấn mạnh một hành động, trạng thái được duy trì, tiếp diễn",
+              "cong_thuc_phu_dinh": "没 + V + 着",
+              "vi_du": [
+                {
+                  "cn": "他穿着一件红色的衣服。"
+                }
+              ]
+            },
+            {
+              "tro_tu": "了",
+              "y_nghia": "Nhấn mạnh một hành động đã xong, đã hoàn thành",
+              "cong_thuc_phu_dinh": "没 + V",
+              "vi_du": [
+                {
+                  "cn": "我喝了很多奶茶。"
+                }
+              ]
+            },
+            {
+              "tro_tu": "过",
+              "y_nghia": "Nhấn mạnh một trải nghiệm trong quá khứ",
+              "cong_thuc_phu_dinh": "没 + V + 过",
+              "vi_du": [
+                {
+                  "cn": "我吃过北京烤鸭。"
+                }
+            ]
+        }
+    ]
+      },
+      {
+        "id": 12,
+        "title": "第12课 这里比北京冷多了",
+        "errors": [
+          {
+            "error_type": "Nhầm 多了 vs 得多",
+            "description": "Dùng sai 多了/得多",
+            "wrong": "冷得多 (sai? đều đúng)",
+            "correct": "冷多了 / 冷得多",
+            "explanation": "Cả hai đều đúng, 多了 thông dụng hơn"
+          },
+          {
+            "error_type": "Sai vị trí bổ ngữ trạng thái trong câu so sánh",
+            "description": "Đặt bổ ngữ trạng thái sai vị trí",
+            "wrong": "他比跑得快我。",
+            "correct": "他比我跑得快。",
+            "explanation": "A 比 B + V + 得 + Adj"
+          },
+          {
+            "error_type": "Sai vị trí tân ngữ khi có bổ ngữ trạng thái",
+            "description": "Quên lặp lại động từ khi có tân ngữ",
+            "wrong": "他踢足球比我得好。",
+            "correct": "他踢足球比我踢得好。",
+            "explanation": "Cần lặp lại động từ"
+          },
+          {
+            "error_type": "Thiếu 得 trong bổ ngữ trạng thái",
+            "description": "Quên 得 trong câu so sánh",
+            "wrong": "妈妈比我睡晚。",
+            "correct": "妈妈比我睡得晚。",
+            "explanation": "Bổ ngữ trạng thái cần có 得"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "多了 - 一点儿",
+            "usage": "多了: nhiều (chênh lệch lớn); 一点儿: một chút (chênh lệch nhỏ)",
+            "example_wrong": "大一点儿 (chênh lệch lớn)",
+            "example_correct": "大多了 vs 大一点儿",
+            "note": "Mức độ chênh lệch"
+          },
+          {
+            "word_pair": "阴 - 晴",
+            "usage": "阴: âm u (có mây); 晴: nắng, trong",
+            "example_wrong": "今天很阴 (trời nắng)",
+            "example_correct": "阴天 vs 晴天",
+            "note": "Thời tiết trái ngược"
+          },
+          {
+            "word_pair": "从小 - 小时候",
+            "usage": "从小: từ nhỏ (phó từ); 小时候: lúc nhỏ (danh từ)",
+            "example_wrong": "小时候学习 (phó từ)",
+            "example_correct": "从小学习 vs 小时候的事",
+            "note": "从小 + V, 小时候 + 的 + N"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "第13课 我们爱上中文课",
+        "errors": [
+          {
+            "error_type": "Sai vị trí tân ngữ trong câu hai tân ngữ",
+            "description": "Đảo thứ tự tân ngữ",
+            "wrong": "我送一本书给他。",
+            "correct": "我送给他一本书。",
+            "explanation": "S + V + O1 (người) + O2 (vật)"
+          },
+          {
+            "error_type": "Nhầm thứ tự tân ngữ với 给",
+            "description": "Đặt tân ngữ người sau vật",
+            "wrong": "我给一杯水你。",
+            "correct": "我给你一杯水。",
+            "explanation": "O người luôn đứng trước O vật"
+          },
+          {
+            "error_type": "Thiếu 给 trong câu hai tân ngữ",
+            "description": "Có thể có hoặc không 给 với 送",
+            "wrong": "我送他花。 (đúng)",
+            "correct": "我送给他花。 (cũng đúng)",
+            "explanation": "Với 送, có thể có hoặc không 给"
+          },
+          {
+            "error_type": "Sai vị trí số lượng trong so sánh",
+            "description": "Đặt số lượng sai trong câu so sánh",
+            "wrong": "我比大三岁他。",
+            "correct": "我比他大三岁。",
+            "explanation": "A 比 B + Adj + số lượng"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "教 - 学习",
+            "usage": "教: dạy (người khác); 学习: học (bản thân)",
+            "example_wrong": "老师学习中文",
+            "example_correct": "老师教中文 vs 我学习中文",
+            "note": "Hướng hành động khác nhau"
+          },
+          {
+            "word_pair": "希望 - 想",
+            "usage": "希望: hy vọng (khả năng thấp); 想: muốn (khả năng cao)",
+            "example_wrong": "想能实现 (hy vọng)",
+            "example_correct": "希望能实现 vs 想去中国",
+            "note": "Mức độ chắc chắn khác nhau"
+          },
+          {
+            "word_pair": "告诉 - 说",
+            "usage": "告诉: nói với (ai); 说: nói (điều gì)",
+            "example_wrong": "说给他",
+            "example_correct": "告诉他 vs 说中文",
+            "note": "告诉 + người, 说 + nội dung"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "第14课 一个人过年多没意思啊",
+        "errors": [
+          {
+            "error_type": "Thiếu 啊 trong câu cảm thán với 多",
+            "description": "Quên 啊 trong câu cảm thán",
+            "wrong": "多没意思！",
+            "correct": "多没意思啊！",
+            "explanation": "Câu cảm thán với 多 thường có 啊"
+          },
+          {
+            "error_type": "Sai vị trí của 多 trong câu cảm thán",
+            "description": "Đặt 多 sai vị trí",
+            "wrong": "没意思多啊！",
+            "correct": "多没意思啊！",
+            "explanation": "多 đứng trước tính từ"
+          },
+          {
+            "error_type": "Sai cấu trúc câu tồn hiện",
+            "description": "Đảo vị trí trong câu tồn hiện",
+            "wrong": "一个人站着楼下。",
+            "correct": "楼下站着一个人。",
+            "explanation": "Nơi chốn + V + 着 + N người/vật"
+          },
+          {
+            "error_type": "Sai vị trí tân ngữ với bổ ngữ xu hướng kép",
+            "description": "Nhầm vị trí tân ngữ",
+            "wrong": "带回一本书来 (đúng) / 带回来一本书 (đúng)",
+            "correct": "带回一本书来 / 带回来一本书",
+            "explanation": "Cả hai cách đều đúng"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "站 - 坐",
+            "usage": "站: đứng; 坐: ngồi",
+            "example_wrong": "坐着 (đứng)",
+            "example_correct": "站着 vs 坐着",
+            "note": "Tư thế khác nhau"
+          },
+          {
+            "word_pair": "过年 - 过生日",
+            "usage": "过年: đón Tết; 过生日: đón sinh nhật",
+            "example_wrong": "过中国生日",
+            "example_correct": "过中国年 vs 过生日",
+            "note": "Dịp lễ khác nhau"
+          },
+          {
+            "word_pair": "跳舞 - 跳",
+            "usage": "跳舞: nhảy múa (động từ ly hợp); 跳: nhảy (động từ)",
+            "example_wrong": "跳高 (nhảy múa)",
+            "example_correct": "跳舞 vs 跳高",
+            "note": "跳舞 là hoạt động, 跳 là động tác"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "第15课 我想再去一次中国",
+        "errors": [
+          {
+            "error_type": "Sai vị trí bổ ngữ động lượng",
+            "description": "Đặt bổ ngữ động lượng sai vị trí",
+            "wrong": "我去一次北京。",
+            "correct": "我去过一次北京。",
+            "explanation": "Có thể đặt trước hoặc sau tân ngữ tên người"
+          },
+          {
+            "error_type": "Nhầm 次 với 遍",
+            "description": "Dùng sai lượng từ",
+            "wrong": "看一次 (xem một lần)",
+            "correct": "看一遍 (xem một lượt) / 去一次 (đi một lần)",
+            "note": "次 cho số lần, 遍 cho lượt đọc/xem"
+          },
+          {
+            "error_type": "Thiếu 有 trong cấu trúc 有...没...",
+            "description": "Quên 有 trong cấu trúc thời gian chưa thực hiện",
+            "wrong": "一年没回国了。",
+            "correct": "有一年没回国了。",
+            "explanation": "有 + số lượng + 没 + V + 了"
+          },
+          {
+            "error_type": "Sai vị trí của 再",
+            "description": "Đặt 再 sai vị trí",
+            "wrong": "再去一次中国。 (đúng)",
+            "correct": "再去一次中国。",
+            "explanation": "再 đứng trước động từ"
+          }
+        ],
+        "word_distinctions": [
+          {
+            "word_pair": "次 - 遍 - 回 - 趟",
+            "usage": "次: lần (phổ biến); 遍: lượt (đọc/xem); 回: lần (khẩu ngữ); 趟: chuyến",
+            "example_wrong": "去一遍",
+            "example_correct": "去一次 vs 看一遍 vs 去一回 vs 去一趟",
+            "note": "HSK2 chủ yếu dùng 次"
+          },
+          {
+            "word_pair": "再 - 又",
+            "usage": "再: lại (tương lai); 又: lại (quá khứ)",
+            "example_wrong": "又去一次 (tương lai)",
+            "example_correct": "再去一次 vs 又去了一次",
+            "note": "再 chỉ hành động chưa xảy ra"
+          },
+          {
+            "word_pair": "出国 - 出门",
+            "usage": "出国: ra nước ngoài; 出门: ra khỏi nhà",
+            "example_wrong": "出门留学",
+            "example_correct": "出国留学 vs 出门买东西",
+            "note": "Phạm vi khác nhau"
+          }
+        ]
+      }
+    ],
+    "common_patterns": {
+      "trợ_từ": {
+        "description": "Lỗi về 的-地-得",
+        "rule": {
+          "的": "的 + Danh từ (của ai/cái gì)",
+          "地": "地 + Động từ (làm thế nào)",
+          "得": "Động từ/Tính từ + 得 (kết quả thế nào)"
+        }
+      },
+      "trợ_từ_động_thái": {
+        "description": "Lỗi về 了-过-着",
+        "rule": {
+          "了": "đã hoàn thành, thay đổi",
+          "过": "đã từng (kinh nghiệm)",
+          "着": "đang duy trì (trạng thái)"
+        }
+      },
+      "so_sánh": {
+        "description": "Lỗi về 比-没有",
+        "rule": {
+          "比": "A ... hơn B",
+          "没有": "A không ... bằng B"
+        }
+      },
+      "hướng": {
+        "description": "Lỗi về 来-去",
+        "rule": {
+          "来": "hướng về phía người nói",
+          "去": "hướng ra xa người nói"
+        }
+      }
+    }
+  }
+}

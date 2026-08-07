@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "version": "3.0",
+    "level": "HSK3",
+    "book": "新HSK教程3 学练手册",
+    "totalLessons": 15,
+    "difficulty": "intermediate",
+    "createdAt": "2026-08-05",
+    "structure": "organized_by_lesson"
+  },
+  "lessons": [
+    {
+      "id": 1,
+      "title": "周末你有什么打算？",
+      "title_en": "What's your plan for the weekend?",
+      "topics": ["weekend", "plans", "entertainment"],
+      "questions": [
+        {
+          "id": "L1_Q01",
+          "type": "multiple_choice",
+          "question": "Chọn từ đúng điền vào chỗ trống: 周末你有什么___？(Cuối tuần bạn có dự định gì?)",
+          "options": ["打算", "决定", "关系", "影响"],
+          "correct": 0,
+          "explanation": "打算 (dǎsuàn) có nghĩa là dự định, kế hoạch."
+        },
+        {
+          "id": "L1_Q02",
+          "type": "multiple_choice",
+          "question": "Điền bổ ngữ kết quả: 我已经写___作业了。(Tôi đã viết xong bài tập rồi).",
+          "options": ["完", "见", "懂", "开"],
+          "correct": 0,
+          "explanation": "写完 (xiě wán) có nghĩa là viết xong."
+        }
+      ]
+    }
+  ]
+}

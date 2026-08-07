@@ -1,0 +1,32 @@
+{
+  "hsk1": [
+    { "q": "1. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "2. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "3. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" }
+  ],
+  "hsk2": [
+    { "q": "1. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "2. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "3. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" }
+  ],
+  "hsk3": [
+    { "q": "1. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "2. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "3. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" }
+  ],
+  "hsk4": [
+    { "q": "1. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "2. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "3. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" }
+  ],
+  "hsk5": [
+    { "q": "1. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "2. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "3. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" }
+  ],
+  "hsk6": [
+    { "q": "1. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "2. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" },
+    { "q": "3. Hiện chưa có câu hỏi kiểm tra đầu vào, vui lòng chọn đáp án A để bỏ qua", "opts": ["A", "B", "C", "D"], "ans": "0" }
+  ]
+}

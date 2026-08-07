@@ -1,0 +1,1682 @@
+{
+  "hsk2": {
+    "title": "TỔNG HỢP TỪ VỰNG HSK2 - THEO BÀI KHÓA",
+    "color": "hsk2",
+    "lessons": [
+      {
+    "id": 1,
+    "title": "第1课 她请我们吃了北京烤鸭",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "就",
+            "pinyin": "jiù",
+            "meaning": "thì, là, ngay (nhấn mạnh tính chính xác của hành động)",
+            "word_type": "phó từ"
+          },
+          {
+            "hanzi": "给",
+            "pinyin": "gěi",
+            "meaning": "cho, đưa (giới từ chỉ đối tượng nhận)",
+            "word_type": "giới từ"
+          },
+          {
+            "hanzi": "让",
+            "pinyin": "ràng",
+            "meaning": "để cho, nhường",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "接",
+            "pinyin": "jiē",
+            "meaning": "đón (người), nhận (đồ vật)",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "次",
+            "pinyin": "cì",
+            "meaning": "lần",
+            "word_type": "lượng từ"
+          },
+          {
+            "hanzi": "旅游",
+            "pinyin": "lǚyóu",
+            "meaning": "du lịch",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "帮忙",
+            "pinyin": "bāngmáng",
+            "meaning": "giúp đỡ",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "不好意思",
+            "pinyin": "bù hǎoyìsi",
+            "meaning": "ngại, xin lỗi",
+            "word_type": "cụm từ"
+          },
+          {
+            "hanzi": "已经",
+            "pinyin": "yǐjīng",
+            "meaning": "đã (chỉ hành động đã hoàn thành)",
+            "word_type": "phó từ"
+          },
+          {
+            "hanzi": "那",
+            "pinyin": "nà",
+            "meaning": "vậy thì, thế thì",
+            "word_type": "liên từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "介绍",
+            "pinyin": "jièshào",
+            "meaning": "giới thiệu",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "有时",
+            "pinyin": "yǒushí",
+            "meaning": "thỉnh thoảng, đôi khi",
+            "word_type": "phó từ"
+          },
+          {
+            "hanzi": "懂",
+            "pinyin": "dǒng",
+            "meaning": "hiểu",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "意思",
+            "pinyin": "yìsi",
+            "meaning": "ý nghĩa, ý, nghĩa",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "北京烤鸭",
+            "pinyin": "Běijīng Kǎoyā",
+            "meaning": "Vịt quay Bắc Kinh",
+            "word_type": "danh từ riêng"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 2,
+    "title": "第2课 还是打车去北大吧",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "公交车",
+            "pinyin": "gōngjiāochē",
+            "meaning": "xe buýt",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "但",
+            "pinyin": "dàn",
+            "meaning": "nhưng",
+            "word_type": "liên từ"
+          },
+          {
+            "hanzi": "车站",
+            "pinyin": "chēzhàn",
+            "meaning": "trạm xe, bến xe",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "远",
+            "pinyin": "yuǎn",
+            "meaning": "xa",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "打车",
+            "pinyin": "dǎchē",
+            "meaning": "gọi taxi, bắt xe",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "还是",
+            "pinyin": "háishi",
+            "meaning": "vẫn nên, vẫn là (đề xuất)",
+            "word_type": "phó từ"
+          },
+          {
+            "hanzi": "北京大学",
+            "pinyin": "Běijīng Dàxué",
+            "meaning": "Đại học Bắc Kinh",
+            "word_type": "danh từ riêng"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "啊",
+            "pinyin": "a",
+            "meaning": "à, ư, nhỉ",
+            "word_type": "trợ từ"
+          },
+          {
+            "hanzi": "万",
+            "pinyin": "wàn",
+            "meaning": "vạn, mười nghìn",
+            "word_type": "số từ"
+          },
+          {
+            "hanzi": "名",
+            "pinyin": "míng",
+            "meaning": "người (lượng từ trang trọng)",
+            "word_type": "lượng từ"
+          },
+          {
+            "hanzi": "网上",
+            "pinyin": "wǎngshang",
+            "meaning": "trên mạng",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "外国",
+            "pinyin": "wàiguó",
+            "meaning": "(thuộc về) nước ngoài",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "间",
+            "pinyin": "jiān",
+            "meaning": "căn, phòng",
+            "word_type": "lượng từ"
+          },
+          {
+            "hanzi": "教室",
+            "pinyin": "jiàoshì",
+            "meaning": "phòng học",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "票",
+            "pinyin": "piào",
+            "meaning": "vé",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "别",
+            "pinyin": "bié",
+            "meaning": "đừng",
+            "word_type": "phó từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "过来",
+            "pinyin": "guòlái",
+            "meaning": "lại đây, đi qua (hướng về phía người nói)",
+            "word_type": "động từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 3,
+    "title": "第3课 我想去西安旅游",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "回来",
+            "pinyin": "huílái",
+            "meaning": "quay về đây (hướng về phía người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "这么",
+            "pinyin": "zhème",
+            "meaning": "như thế này, thế này",
+            "word_type": "đại từ"
+          },
+          {
+            "hanzi": "完",
+            "pinyin": "wán",
+            "meaning": "hoàn thành, xong",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "一起",
+            "pinyin": "yìqǐ",
+            "meaning": "cùng nhau",
+            "word_type": "phó từ"
+          },
+          {
+            "hanzi": "出去",
+            "pinyin": "chūqù",
+            "meaning": "đi ra ngoài kia (hướng ra xa người nói)",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "洗",
+            "pinyin": "xǐ",
+            "meaning": "rửa, giặt, gội,... (dùng nước làm sạch)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "自己",
+            "pinyin": "zìjǐ",
+            "meaning": "tự mình, chính mình",
+            "word_type": "đại từ"
+          },
+          {
+            "hanzi": "拿",
+            "pinyin": "ná",
+            "meaning": "cầm, lấy",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "手",
+            "pinyin": "shǒu",
+            "meaning": "tay",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "为什么",
+            "pinyin": "wèi shénme",
+            "meaning": "tại sao",
+            "word_type": "đại từ nghi vấn"
+          },
+          {
+            "hanzi": "不错",
+            "pinyin": "búcuò",
+            "meaning": "không tồi, khá tốt",
+            "word_type": "tính từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "送",
+            "pinyin": "sòng",
+            "meaning": "tiễn, đưa (chở ai đó đến nơi); tặng",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "回去",
+            "pinyin": "huíqù",
+            "meaning": "quay về đó (hướng ra xa người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "每",
+            "pinyin": "měi",
+            "meaning": "mỗi",
+            "word_type": "đại từ"
+          },
+          {
+            "hanzi": "累",
+            "pinyin": "lèi",
+            "meaning": "mệt",
+            "word_type": "tính từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+     "id": 4,
+    "title": "第4课 你穿红色的很好看",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "过",
+            "pinyin": "guo",
+            "meaning": "đã từng,...qua (nhấn mạnh trải nghiệm)",
+            "word_type": "trợ động từ"
+          },
+          {
+            "hanzi": "商场",
+            "pinyin": "shāngchǎng",
+            "meaning": "trung tâm thương mại",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "进去",
+            "pinyin": "jìnqù",
+            "meaning": "đi vào kia (hướng ra xa người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "条",
+            "pinyin": "tiáo",
+            "meaning": "cái, con, chiếc (lượng từ cho vật dài)",
+            "word_type": "lượng từ"
+          },
+          {
+            "hanzi": "裤子",
+            "pinyin": "kùzi",
+            "meaning": "quần",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "白色",
+            "pinyin": "báisè",
+            "meaning": "màu trắng",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "因为",
+            "pinyin": "yīnwèi",
+            "meaning": "bởi vì",
+            "word_type": "liên từ"
+          },
+          {
+            "hanzi": "试",
+            "pinyin": "shì",
+            "meaning": "thử",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "红色",
+            "pinyin": "hóngsè",
+            "meaning": "màu đỏ",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "所以",
+            "pinyin": "suǒyǐ",
+            "meaning": "vì vậy, cho nên",
+            "word_type": "liên từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "书包",
+            "pinyin": "shūbāo",
+            "meaning": "cặp sách",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "过去",
+            "pinyin": "guòqù",
+            "meaning": "đi qua kia (hướng ra xa người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "绿色",
+            "pinyin": "lǜsè",
+            "meaning": "màu xanh lá",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "黑色",
+            "pinyin": "hēisè",
+            "meaning": "màu đen",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "更",
+            "pinyin": "gèng",
+            "meaning": "hơn, càng... hơn",
+            "word_type": "phó từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "颜色",
+            "pinyin": "yánsè",
+            "meaning": "màu sắc",
+            "word_type": "danh từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 5,
+    "title": "第5课 第一次去中国朋友家",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "快",
+            "pinyin": "kuài",
+            "meaning": "nhanh, mau",
+            "word_type": "phó từ/tính từ"
+          },
+          {
+            "hanzi": "下来",
+            "pinyin": "xiàlái",
+            "meaning": "xuống đây (hướng về phía người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "上来",
+            "pinyin": "shànglái",
+            "meaning": "lên đây (hướng về phía người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "上去",
+            "pinyin": "shàngqù",
+            "meaning": "lên đó (hướng ra xa người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "下面",
+            "pinyin": "xiàmiàn",
+            "meaning": "bên dưới, phía dưới",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "面",
+            "pinyin": "miàn",
+            "meaning": "phía (hậu tố tạo danh từ chỉ nơi chốn)",
+            "word_type": "hậu tố"
+          },
+          {
+            "hanzi": "等",
+            "pinyin": "děng",
+            "meaning": "đợi, chờ",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "一会儿",
+            "pinyin": "yíhuìr",
+            "meaning": "một lát, một chút",
+            "word_type": "danh từ/số từ"
+          },
+          {
+            "hanzi": "下去",
+            "pinyin": "xiàqù",
+            "meaning": "xuống đó (hướng ra xa người nói)",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "进来",
+            "pinyin": "jìnlái",
+            "meaning": "đi vào (hướng về phía người nói)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "爷爷",
+            "pinyin": "yéye",
+            "meaning": "ông nội, ông",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "奶奶",
+            "pinyin": "nǎinai",
+            "meaning": "bà nội, bà",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "礼物",
+            "pinyin": "lǐwù",
+            "meaning": "quà tặng",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "准备",
+            "pinyin": "zhǔnbèi",
+            "meaning": "chuẩn bị",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "奶茶",
+            "pinyin": "nǎichá",
+            "meaning": "trà sữa",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "跟",
+            "pinyin": "gēn",
+            "meaning": "với, cùng với",
+            "word_type": "giới từ/liên từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "走",
+            "pinyin": "zǒu",
+            "meaning": "đi bộ; rời đi",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "酒店",
+            "pinyin": "jiǔdiàn",
+            "meaning": "khách sạn",
+            "word_type": "danh từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 6,
+    "title": "第6课 小雪，生日快乐！",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "生日",
+            "pinyin": "shēngrì",
+            "meaning": "sinh nhật",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "忘",
+            "pinyin": "wàng",
+            "meaning": "quên",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "画",
+            "pinyin": "huà",
+            "meaning": "vẽ; bức tranh",
+            "word_type": "động từ/danh từ"
+          },
+          {
+            "hanzi": "画笔",
+            "pinyin": "huàbǐ",
+            "meaning": "bút vẽ",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "蛋糕",
+            "pinyin": "dàngāo",
+            "meaning": "bánh ga-tô, bánh ngọt",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "快乐",
+            "pinyin": "kuàilè",
+            "meaning": "vui vẻ, hạnh phúc",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "打开",
+            "pinyin": "dǎkāi",
+            "meaning": "mở (cửa, sách, hộp...)",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "长",
+            "pinyin": "cháng",
+            "meaning": "dài",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "鱼",
+            "pinyin": "yú",
+            "meaning": "con cá",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "肉",
+            "pinyin": "ròu",
+            "meaning": "thịt",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "过",
+            "pinyin": "guò",
+            "meaning": "trải qua, đón (Lễ, Tết, sinh nhật)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "地",
+            "pinyin": "de",
+            "meaning": "trợ từ cấu tạo trạng ngữ",
+            "word_type": "trợ từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "床",
+            "pinyin": "chuáng",
+            "meaning": "giường",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "舒服",
+            "pinyin": "shūfu",
+            "meaning": "thoải mái, dễ chịu",
+            "word_type": "tính từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 7,
+    "title": "第7课 他篮球打得很好",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "从",
+            "pinyin": "cóng",
+            "meaning": "từ (điểm bắt đầu của nơi chốn, thời gian)",
+            "word_type": "giới từ"
+          },
+          {
+            "hanzi": "往",
+            "pinyin": "wǎng",
+            "meaning": "về phía, hướng về",
+            "word_type": "giới từ"
+          },
+          {
+            "hanzi": "跑",
+            "pinyin": "pǎo",
+            "meaning": "chạy",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "打",
+            "pinyin": "dǎ",
+            "meaning": "chơi (thể thao bằng tay), gọi (điện thoại)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "篮球",
+            "pinyin": "lánqiú",
+            "meaning": "bóng rổ",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "运动",
+            "pinyin": "yùndòng",
+            "meaning": "thể thao; vận động",
+            "word_type": "danh từ/động từ"
+          },
+          {
+            "hanzi": "踢",
+            "pinyin": "tī",
+            "meaning": "đá (bóng)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "足球",
+            "pinyin": "zúqiú",
+            "meaning": "bóng đá",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "球",
+            "pinyin": "qiú",
+            "meaning": "quả bóng",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "得",
+            "pinyin": "de",
+            "meaning": "trợ từ cấu tạo bổ ngữ",
+            "word_type": "trợ từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "跑步",
+            "pinyin": "pǎobù",
+            "meaning": "chạy bộ",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "游泳",
+            "pinyin": "yóuyǒng",
+            "meaning": "bơi lội",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "游",
+            "pinyin": "yóu",
+            "meaning": "bơi",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "爱好",
+            "pinyin": "àihào",
+            "meaning": "sở thích, thích",
+            "word_type": "danh từ/động từ"
+          },
+          {
+            "hanzi": "开始",
+            "pinyin": "kāishǐ",
+            "meaning": "bắt đầu",
+            "word_type": "động từ/danh từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 8,
+    "title": "第8课 虽然你忘了，但是我记得",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "手表",
+            "pinyin": "shǒubiǎo",
+            "meaning": "đồng hồ đeo tay",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "左边",
+            "pinyin": "zuǒbian",
+            "meaning": "bên trái",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "左",
+            "pinyin": "zuǒ",
+            "meaning": "bên trái",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "比",
+            "pinyin": "bǐ",
+            "meaning": "so với, hơn (dùng trong so sánh)",
+            "word_type": "giới từ/động từ"
+          },
+          {
+            "hanzi": "右边",
+            "pinyin": "yòubian",
+            "meaning": "bên phải",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "右",
+            "pinyin": "yòu",
+            "meaning": "bên phải",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "记得",
+            "pinyin": "jìde",
+            "meaning": "nhớ",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "爱情片",
+            "pinyin": "àiqíngpiàn",
+            "meaning": "phim tình cảm",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "有意思",
+            "pinyin": "yǒu yìsi",
+            "meaning": "thú vị, hay ho",
+            "word_type": "tính từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "点",
+            "pinyin": "diǎn",
+            "meaning": "chọn, gọi (món)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "虽然",
+            "pinyin": "suīrán",
+            "meaning": "mặc dù",
+            "word_type": "liên từ"
+          },
+          {
+            "hanzi": "但是",
+            "pinyin": "dànshì",
+            "meaning": "nhưng mà",
+            "word_type": "liên từ"
+          },
+          {
+            "hanzi": "花",
+            "pinyin": "huā",
+            "meaning": "tiêu (tiền, thời gian)",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "妻子",
+            "pinyin": "qīzi",
+            "meaning": "vợ",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "丈夫",
+            "pinyin": "zhàngfu",
+            "meaning": "chồng",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "饭馆",
+            "pinyin": "fànguǎn",
+            "meaning": "quán ăn, nhà hàng nhỏ",
+            "word_type": "danh từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 9,
+    "title": "第9课 我去买杯奶茶",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "坏",
+            "pinyin": "huài",
+            "meaning": "xấu, hỏng",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "旁边",
+            "pinyin": "pángbiān",
+            "meaning": "bên cạnh",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "男孩儿",
+            "pinyin": "nánháir",
+            "meaning": "con trai, bé trai",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "这样",
+            "pinyin": "zhèyàng",
+            "meaning": "như này, như vậy",
+            "word_type": "đại từ"
+          },
+          {
+            "hanzi": "个子",
+            "pinyin": "gèzi",
+            "meaning": "vóc dáng, chiều cao",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "那么",
+            "pinyin": "nàme",
+            "meaning": "như thế, như vậy",
+            "word_type": "đại từ"
+          },
+          {
+            "hanzi": "高",
+            "pinyin": "gāo",
+            "meaning": "cao",
+            "word_type": "tính từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "门口",
+            "pinyin": "ménkǒu",
+            "meaning": "cổng ra vào, cửa",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "咖啡",
+            "pinyin": "kāfēi",
+            "meaning": "cà phê",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "离",
+            "pinyin": "lí",
+            "meaning": "cách (khoảng cách)",
+            "word_type": "giới từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "近",
+            "pinyin": "jìn",
+            "meaning": "gần",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "走路",
+            "pinyin": "zǒulù",
+            "meaning": "đi bộ",
+            "word_type": "động từ ly hợp"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "周",
+            "pinyin": "zhōu",
+            "meaning": "tuần, thứ",
+            "word_type": "danh từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 10,
+    "title": "第10课 就要考试了",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "开学",
+            "pinyin": "kāixué",
+            "meaning": "khai giảng, bắt đầu năm học",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "门",
+            "pinyin": "mén",
+            "meaning": "(cái) cửa",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "后面",
+            "pinyin": "hòumiàn",
+            "meaning": "phía sau",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "笔",
+            "pinyin": "bǐ",
+            "meaning": "bút",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "帮",
+            "pinyin": "bāng",
+            "meaning": "giúp đỡ",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "考试",
+            "pinyin": "kǎoshì",
+            "meaning": "bài kiểm tra, thi cử",
+            "word_type": "danh từ/động từ ly hợp"
+          },
+          {
+            "hanzi": "词",
+            "pinyin": "cí",
+            "meaning": "từ",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "本子",
+            "pinyin": "běnzi",
+            "meaning": "vở",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "错",
+            "pinyin": "cuò",
+            "meaning": "sai",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "题",
+            "pinyin": "tí",
+            "meaning": "câu hỏi (trên đề thi)",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "还是",
+            "pinyin": "háishi",
+            "meaning": "hay là (lựa chọn)",
+            "word_type": "liên từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "考",
+            "pinyin": "kǎo",
+            "meaning": "thi, kiểm tra",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "快要",
+            "pinyin": "kuàiyào",
+            "meaning": "sắp, suýt",
+            "word_type": "phó từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "笑",
+            "pinyin": "xiào",
+            "meaning": "cười",
+            "word_type": "động từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 11,
+    "title": "第11课 我最喜欢吃中国菜",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "头",
+            "pinyin": "tóu",
+            "meaning": "đầu",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "疼",
+            "pinyin": "téng",
+            "meaning": "đau",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "经常",
+            "pinyin": "jīngcháng",
+            "meaning": "thường xuyên",
+            "word_type": "phó từ"
+          },
+          {
+            "hanzi": "动",
+            "pinyin": "dòng",
+            "meaning": "di chuyển, cử động",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "着",
+            "pinyin": "zhe",
+            "meaning": "đang (trợ từ chỉ trạng thái tiếp diễn)",
+            "word_type": "trợ từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "路上",
+            "pinyin": "lùshang",
+            "meaning": "trên đường, dọc đường",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "慢",
+            "pinyin": "màn",
+            "meaning": "chậm",
+            "word_type": "tính từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "进",
+            "pinyin": "jìn",
+            "meaning": "vào (bên trong)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "药",
+            "pinyin": "yào",
+            "meaning": "thuốc",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "身体",
+            "pinyin": "shēntǐ",
+            "meaning": "cơ thể, sức khỏe",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "时",
+            "pinyin": "shí",
+            "meaning": "lúc, khi, thời gian",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "最",
+            "pinyin": "zuì",
+            "meaning": "nhất (so sánh nhất)",
+            "word_type": "phó từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "药店",
+            "pinyin": "yàodiàn",
+            "meaning": "hiệu thuốc",
+            "word_type": "danh từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+   "id": 12,
+    "title": "第12课 这里比北京冷多了",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "事情",
+            "pinyin": "shìqing",
+            "meaning": "việc, sự việc",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "晴",
+            "pinyin": "qíng",
+            "meaning": "trời trong, nắng",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "正",
+            "pinyin": "zhèng",
+            "meaning": "đang",
+            "word_type": "phó từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "外面",
+            "pinyin": "wàimiàn",
+            "meaning": "bên ngoài",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "阴",
+            "pinyin": "yīn",
+            "meaning": "u ám, âm u (thời tiết)",
+            "word_type": "tính từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "从小",
+            "pinyin": "cóngxiǎo",
+            "meaning": "từ nhỏ, khi còn nhỏ",
+            "word_type": "phó từ"
+          },
+          {
+            "hanzi": "地铁",
+            "pinyin": "dìtiě",
+            "meaning": "tàu điện ngầm",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "楼",
+            "pinyin": "lóu",
+            "meaning": "tòa nhà",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "站",
+            "pinyin": "zhàn",
+            "meaning": "trạm, điểm dừng",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "小时候",
+            "pinyin": "xiǎoshíhou",
+            "meaning": "lúc nhỏ, hồi nhỏ",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "好",
+            "pinyin": "hǎo",
+            "meaning": "rất, quá (chỉ mức độ)",
+            "word_type": "phó từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 13,
+    "title": "第13课 我们爱上中文课",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "新年",
+            "pinyin": "xīnnián",
+            "meaning": "năm mới",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "教",
+            "pinyin": "jiāo",
+            "meaning": "dạy, chỉ dẫn",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "花",
+            "pinyin": "huā",
+            "meaning": "hoa",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "希望",
+            "pinyin": "xīwàng",
+            "meaning": "hy vọng",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "上面",
+            "pinyin": "shàngmiàn",
+            "meaning": "bên trên, phía trên",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "洗手间",
+            "pinyin": "xǐshǒujiān",
+            "meaning": "nhà vệ sinh",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "里面",
+            "pinyin": "lǐmiàn",
+            "meaning": "bên trong",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "笔",
+            "pinyin": "bǐ",
+            "meaning": "nét (chữ)",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "可能",
+            "pinyin": "kěnéng",
+            "meaning": "có lẽ (dự đoán khả năng)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "上网",
+            "pinyin": "shàngwǎng",
+            "meaning": "lên mạng",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "那样",
+            "pinyin": "nàyàng",
+            "meaning": "như vậy, như thế kia",
+            "word_type": "đại từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "告诉",
+            "pinyin": "gàosu",
+            "meaning": "nói với",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "班",
+            "pinyin": "bān",
+            "meaning": "lớp (class)",
+            "word_type": "danh từ"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 14,
+    "title": "第14课 一个人过年多没意思啊",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "站",
+            "pinyin": "zhàn",
+            "meaning": "đứng",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "包",
+            "pinyin": "bāo",
+            "meaning": "(cái) túi, (cái) bao; gói, bọc",
+            "word_type": "danh từ/động từ/lượng từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "过年",
+            "pinyin": "guònián",
+            "meaning": "đón Tết, ăn Tết",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "没意思",
+            "pinyin": "méi yìsi",
+            "meaning": "vô vị, nhàm chán",
+            "word_type": "tính từ"
+          },
+          {
+            "hanzi": "位",
+            "pinyin": "wèi",
+            "meaning": "người (lượng từ trang trọng)",
+            "word_type": "lượng từ"
+          },
+          {
+            "hanzi": "前面",
+            "pinyin": "qiánmiàn",
+            "meaning": "phía trước",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "房子",
+            "pinyin": "fángzi",
+            "meaning": "ngôi nhà",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "小孩儿",
+            "pinyin": "xiǎoháir",
+            "meaning": "trẻ con, trẻ em",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "女孩儿",
+            "pinyin": "nǚháir",
+            "meaning": "con gái, bé gái",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "姓",
+            "pinyin": "xìng",
+            "meaning": "họ (họ tên)",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "眼睛",
+            "pinyin": "yǎnjing",
+            "meaning": "mắt",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "跳舞",
+            "pinyin": "tiàowǔ",
+            "meaning": "nhảy múa, khiêu vũ",
+            "word_type": "động từ ly hợp"
+          }
+            ]
+          }
+        ]
+      },
+      {
+    "id": 15,
+    "title": "第15课 我想再去一次中国",
+    "texts": [
+      {
+        "text_number": 1,
+        "vocabulary": [
+          {
+            "hanzi": "姓名",
+            "pinyin": "xìngmíng",
+            "meaning": "họ và tên",
+            "word_type": "danh từ"
+          }
+        ]
+      },
+      {
+        "text_number": 2,
+        "vocabulary": [
+          {
+            "hanzi": "出国",
+            "pinyin": "chūguó",
+            "meaning": "ra nước ngoài, xuất ngoại",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "门票",
+            "pinyin": "ménpiào",
+            "meaning": "vé vào cửa",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "高中",
+            "pinyin": "gāozhōng",
+            "meaning": "trường cấp 3, trung học phổ thông",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "出门",
+            "pinyin": "chūmén",
+            "meaning": "ra khỏi nhà, đi ra ngoài",
+            "word_type": "động từ ly hợp"
+          },
+          {
+            "hanzi": "路",
+            "pinyin": "lù",
+            "meaning": "con đường, đường",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "颐和园",
+            "pinyin": "Yíhé Yuán",
+            "meaning": "Di Hòa Viên",
+            "word_type": "danh từ riêng"
+          }
+        ]
+      },
+      {
+        "text_number": 3,
+        "vocabulary": [
+          {
+            "hanzi": "机场",
+            "pinyin": "jīchǎng",
+            "meaning": "sân bay",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "机票",
+            "pinyin": "jīpiào",
+            "meaning": "vé máy bay",
+            "word_type": "danh từ"
+          },
+          {
+            "hanzi": "飞",
+            "pinyin": "fēi",
+            "meaning": "bay",
+            "word_type": "động từ"
+          }
+        ]
+      },
+      {
+        "text_number": 4,
+        "vocabulary": [
+          {
+            "hanzi": "好像",
+            "pinyin": "hǎoxiàng",
+            "meaning": "dường như, giống như",
+            "word_type": "động từ"
+          },
+          {
+            "hanzi": "鸟",
+            "pinyin": "niǎo",
+            "meaning": "chim",
+            "word_type": "danh từ"
+          }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "level": "HSK3",
+  "title": "Luyện Nói Với AI - Cấp Độ HSK 3",
+  "topics": [
+    {
+      "id": "s3_1",
+      "title": "Chủ đề 1: Thảo luận kế hoạch & Thời tiết (天气与计划)",
+      "question": "今天天气怎么样？你周末有什么打算？",
+      "question_py": "Jīntiān tiānqì zěnmeyàng? Nǐ zhōumò yǒu shénme dǎsuàn?",
+      "question_vi": "Thời tiết hôm nay như thế nào? Cuối tuần bạn có dự định gì?",
+      "prompt": "Trả lời câu hỏi bằng tiếng Trung phản xạ tự nhiên.",
+      "sample_answer": "今天天气非常晴朗。周末我打算和朋友一起去电影院看电影。",
+      "sample_py": "Jīntiān tiānqì fēicháng qínglǎng. Zhōumò wǒ dǎsuàn hé péngyou yìqǐ qù diànyǐngyuàn kàn diànyǐng.",
+      "sample_vi": "Thời tiết hôm nay rất đẹp. Cuối tuần tôi định cùng bạn đến rạp chiếu phim xem phim."
+    }
+  ]
+}

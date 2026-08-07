@@ -1,0 +1,34 @@
+{
+  "title": "Nghe Chép Chính Tả HSK 1",
+  "subtitle": "Luyện nghe âm thanh và gõ/chép lại câu tiếng Trung mẫu kèm kiểm tra tức thì",
+  "items": [
+    {
+      "id": "dict_1_1",
+      "chinese": "你好",
+      "pinyin": "nǐ hǎo",
+      "vietnamese": "Xin chào",
+      "audioText": "你好"
+    },
+    {
+      "id": "dict_1_2",
+      "chinese": "谢谢你",
+      "pinyin": "xiè xie nǐ",
+      "vietnamese": "Cảm ơn bạn",
+      "audioText": "谢谢你"
+    },
+    {
+      "id": "dict_1_3",
+      "chinese": "我是学生",
+      "pinyin": "wǒ shì xué shēng",
+      "vietnamese": "Tôi là học sinh",
+      "audioText": "我是学生"
+    },
+    {
+      "id": "dict_1_4",
+      "chinese": "今天天气很好",
+      "pinyin": "jīn tiān tiān qì hěn hǎo",
+      "vietnamese": "Hôm nay thời tiết rất tốt",
+      "audioText": "今天天气很好"
+    }
+  ]
+}

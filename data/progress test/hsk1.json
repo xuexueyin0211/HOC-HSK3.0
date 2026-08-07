@@ -1,0 +1,2424 @@
+{
+  "metadata": {
+    "version": "3.0",
+    "level": "HSK1",
+    "book": "新HSK教程1 学练手册",
+    "totalLessons": 15,
+    "totalQuestions": 500,
+    "difficulty": "beginner",
+    "createdAt": "2026-08-05",
+    "structure": "organized_by_lesson"
+  },
+  "lessons": [
+    {
+      "id": 1,
+      "title": "AI小语，你好！",
+      "title_en": "Hello, AI Xiaoyu!",
+      "topics": ["greeting", "pronunciation", "syllables"],
+      "vocabulary": ["茶", "狗", "猫", "菜", "八", "拔", "把", "爸", "妈", "你", "好"],
+      "questions": [
+        {
+          "id": "L1_Q01",
+          "type": "listening_choose_word",
+          "audio": "cha",
+          "audioUrl": "audio/HSK1/cha.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["茶", "狗", "猫", "菜"],
+          "correct": 0,
+          "hanzi": "茶",
+          "pinyin": "chá",
+          "meaning": "trà"
+        },
+        {
+          "id": "L1_Q02",
+          "type": "listening_choose_word",
+          "audio": "mao",
+          "audioUrl": "/audio/HSK1/L1/mao.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["茶", "狗", "猫", "菜"],
+          "correct": 2,
+          "hanzi": "猫",
+          "pinyin": "māo",
+          "meaning": "mèo"
+        },
+        {
+          "id": "L1_Q03",
+          "type": "listening_choose_word",
+          "audio": "gou",
+          "audioUrl": "/audio/HSK1/L1/gou.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["茶", "狗", "猫", "菜"],
+          "correct": 1,
+          "hanzi": "狗",
+          "pinyin": "gǒu",
+          "meaning": "chó"
+        },
+        {
+          "id": "L1_Q04",
+          "type": "listening_choose_word",
+          "audio": "cai",
+          "audioUrl": "/audio/HSK1/L1/cai.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["茶", "狗", "猫", "菜"],
+          "correct": 3,
+          "hanzi": "菜",
+          "pinyin": "cài",
+          "meaning": "rau"
+        },
+        {
+          "id": "L1_Q05",
+          "type": "listening_fill_initial",
+          "audio": "ba",
+          "audioUrl": "/audio/HSK1/L1/ba.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___a",
+          "pinyin": "___a",
+          "answer": "b",
+          "fullPinyin": "ba",
+          "hanzi": "八",
+          "tone": 1
+        },
+        {
+          "id": "L1_Q06",
+          "type": "listening_fill_initial",
+          "audio": "ma",
+          "audioUrl": "/audio/HSK1/L1/ma.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___a",
+          "pinyin": "___a",
+          "answer": "m",
+          "fullPinyin": "ma",
+          "hanzi": "妈",
+          "tone": 1
+        },
+        {
+          "id": "L1_Q07",
+          "type": "listening_fill_initial",
+          "audio": "fa",
+          "audioUrl": "/audio/HSK1/L1/fa.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___a",
+          "pinyin": "___a",
+          "answer": "f",
+          "fullPinyin": "fa",
+          "hanzi": "发",
+          "tone": 1
+        },
+        {
+          "id": "L1_Q08",
+          "type": "listening_fill_initial",
+          "audio": "da",
+          "audioUrl": "/audio/HSK1/L1/da.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___a",
+          "pinyin": "___a",
+          "answer": "d",
+          "fullPinyin": "da",
+          "hanzi": "大",
+          "tone": 4
+        },
+        {
+          "id": "L1_Q09",
+          "type": "listening_fill_final",
+          "audio": "ba",
+          "audioUrl": "/audio/HSK1/L1/ba.mp3",
+          "question": "Điền vận mẫu (韵母) còn thiếu: b___",
+          "pinyin": "b___",
+          "answer": "a",
+          "fullPinyin": "ba",
+          "hanzi": "八",
+          "tone": 1
+        },
+        {
+          "id": "L1_Q10",
+          "type": "listening_fill_final",
+          "audio": "bo",
+          "audioUrl": "/audio/HSK1/L1/bo.mp3",
+          "question": "Điền vận mẫu (韵母) còn thiếu: b___",
+          "pinyin": "b___",
+          "answer": "o",
+          "fullPinyin": "bo",
+          "hanzi": "波",
+          "tone": 1
+        },
+        {
+          "id": "L1_Q11",
+          "type": "listening_fill_tone",
+          "audio": "ba1",
+          "audioUrl": "/audio/HSK1/L1/ba1.mp3",
+          "question": "Điền thanh điệu (声调) cho: ba ( )",
+          "pinyin": "ba",
+          "hanzi": "八",
+          "answer": 1,
+          "toneMark": "bā"
+        },
+        {
+          "id": "L1_Q12",
+          "type": "listening_fill_tone",
+          "audio": "ba2",
+          "audioUrl": "/audio/HSK1/L1/ba2.mp3",
+          "question": "Điền thanh điệu (声调) cho: ba ( )",
+          "pinyin": "ba",
+          "hanzi": "拔",
+          "answer": 2,
+          "toneMark": "bá"
+        },
+        {
+          "id": "L1_Q13",
+          "type": "listening_fill_tone",
+          "audio": "ba3",
+          "audioUrl": "/audio/HSK1/L1/ba3.mp3",
+          "question": "Điền thanh điệu (声调) cho: ba ( )",
+          "pinyin": "ba",
+          "hanzi": "把",
+          "answer": 3,
+          "toneMark": "bǎ"
+        },
+        {
+          "id": "L1_Q14",
+          "type": "listening_fill_tone",
+          "audio": "ba4",
+          "audioUrl": "/audio/HSK1/L1/ba4.mp3",
+          "question": "Điền thanh điệu (声调) cho: ba ( )",
+          "pinyin": "ba",
+          "hanzi": "爸",
+          "answer": 4,
+          "toneMark": "bà"
+        },
+        {
+          "id": "L1_Q15",
+          "type": "listening_choose_answer",
+          "audio": "ni_hao_ma",
+          "audioUrl": "/audio/HSK1/L1/ni_hao_ma.mp3",
+          "question": "你好吗？",
+          "options": ["我很好", "我不好", "我累了"],
+          "correct": 0,
+          "dialogue": "A: 你好吗？ B: 我很好，谢谢。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "我叫李文",
+      "title_en": "My name is Li Wen",
+      "topics": ["introduction", "name", "initials_jqx"],
+      "vocabulary": ["杯子", "学生", "老师", "鸡蛋", "李文", "名字", "叫", "是"],
+      "questions": [
+        {
+          "id": "L2_Q01",
+          "type": "listening_choose_word",
+          "audio": "beizi",
+          "audioUrl": "/audio/HSK1/L2/beizi.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["杯子", "学生", "老师", "鸡蛋"],
+          "correct": 0,
+          "hanzi": "杯子",
+          "pinyin": "bēizi",
+          "meaning": "cốc"
+        },
+        {
+          "id": "L2_Q02",
+          "type": "listening_choose_word",
+          "audio": "laoshi",
+          "audioUrl": "/audio/HSK1/L2/laoshi.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["杯子", "学生", "老师", "鸡蛋"],
+          "correct": 2,
+          "hanzi": "老师",
+          "pinyin": "lǎoshī",
+          "meaning": "giáo viên"
+        },
+        {
+          "id": "L2_Q03",
+          "type": "listening_choose_word",
+          "audio": "jidan",
+          "audioUrl": "/audio/HSK1/L2/jidan.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["杯子", "学生", "老师", "鸡蛋"],
+          "correct": 3,
+          "hanzi": "鸡蛋",
+          "pinyin": "jīdàn",
+          "meaning": "trứng gà"
+        },
+        {
+          "id": "L2_Q04",
+          "type": "listening_choose_word",
+          "audio": "xuesheng",
+          "audioUrl": "/audio/HSK1/L2/xuesheng.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["杯子", "学生", "老师", "鸡蛋"],
+          "correct": 1,
+          "hanzi": "学生",
+          "pinyin": "xuéshēng",
+          "meaning": "học sinh"
+        },
+        {
+          "id": "L2_Q05",
+          "type": "listening_fill_initial",
+          "audio": "ji",
+          "audioUrl": "/audio/HSK1/L2/ji.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___i",
+          "pinyin": "___i",
+          "answer": "j",
+          "fullPinyin": "ji",
+          "hanzi": "鸡",
+          "tone": 1
+        },
+        {
+          "id": "L2_Q06",
+          "type": "listening_fill_initial",
+          "audio": "qi",
+          "audioUrl": "/audio/HSK1/L2/qi.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___i",
+          "pinyin": "___i",
+          "answer": "q",
+          "fullPinyin": "qi",
+          "hanzi": "七",
+          "tone": 1
+        },
+        {
+          "id": "L2_Q07",
+          "type": "listening_fill_initial",
+          "audio": "xi",
+          "audioUrl": "/audio/HSK1/L2/xi.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___i",
+          "pinyin": "___i",
+          "answer": "x",
+          "fullPinyin": "xi",
+          "hanzi": "希",
+          "tone": 1
+        },
+        {
+          "id": "L2_Q08",
+          "type": "listening_fill_tone",
+          "audio": "laoshi3",
+          "audioUrl": "/audio/HSK1/L2/laoshi3.mp3",
+          "question": "Điền thanh điệu (声调) cho: laoshi ( )",
+          "pinyin": "laoshi",
+          "hanzi": "老师",
+          "answer": [3, 1],
+          "toneMark": "lǎoshī"
+        },
+        {
+          "id": "L2_Q09",
+          "type": "listening_fill_tone",
+          "audio": "xuesheng2",
+          "audioUrl": "/audio/HSK1/L2/xuesheng2.mp3",
+          "question": "Điền thanh điệu (声调) cho: xuesheng ( )",
+          "pinyin": "xuesheng",
+          "hanzi": "学生",
+          "answer": [2, 1],
+          "toneMark": "xuéshēng"
+        },
+        {
+          "id": "L2_Q10",
+          "type": "reading_choose_picture",
+          "question": "老师，您好！",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L2/teacher.png", "label": "一位老师"},
+            {"id": "B", "image": "/images/HSK1/L2/student.png", "label": "一个学生"},
+            {"id": "C", "image": "/images/HSK1/L2/doctor.png", "label": "一位医生"}
+          ],
+          "correct": "A",
+          "hanzi": "老师",
+          "pinyin": "lǎoshī"
+        },
+        {
+          "id": "L2_Q11",
+          "type": "reading_choose_picture",
+          "question": "我有一个新电脑。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L2/new_computer.png", "label": "新电脑"},
+            {"id": "B", "image": "/images/HSK1/L2/old_computer.png", "label": "旧电脑"},
+            {"id": "C", "image": "/images/HSK1/L2/new_phone.png", "label": "新手机"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L2_Q12",
+          "type": "reading_fill_blank",
+          "sentence": "你（ ）什么名字？",
+          "options": ["叫", "是", "有"],
+          "correct": 0,
+          "fullSentence": "你叫什么名字？",
+          "meaning": "Bạn tên là gì?"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "我是中国人",
+      "title_en": "I'm Chinese",
+      "topics": ["nationality", "initials_zh_ch_sh_r_z_c_s"],
+      "vocabulary": ["你好", "朋友", "面包", "妹妹", "房间", "白天", "饭店", "电脑", "中国", "人"],
+      "questions": [
+        {
+          "id": "L3_Q01",
+          "type": "listening_choose_word",
+          "audio": "ni_hao",
+          "audioUrl": "/audio/HSK1/L3/ni_hao.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["你好", "朋友", "面包", "妹妹"],
+          "correct": 0,
+          "hanzi": "你好",
+          "pinyin": "nǐ hǎo",
+          "meaning": "xin chào"
+        },
+        {
+          "id": "L3_Q02",
+          "type": "listening_choose_word",
+          "audio": "mianbao",
+          "audioUrl": "/audio/HSK1/L3/mianbao.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["你好", "朋友", "面包", "妹妹"],
+          "correct": 2,
+          "hanzi": "面包",
+          "pinyin": "miànbāo",
+          "meaning": "bánh mì"
+        },
+        {
+          "id": "L3_Q03",
+          "type": "listening_choose_word",
+          "audio": "pengyou",
+          "audioUrl": "/audio/HSK1/L3/pengyou.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["你好", "朋友", "面包", "妹妹"],
+          "correct": 1,
+          "hanzi": "朋友",
+          "pinyin": "péngyou",
+          "meaning": "bạn"
+        },
+        {
+          "id": "L3_Q04",
+          "type": "listening_choose_word",
+          "audio": "meimei",
+          "audioUrl": "/audio/HSK1/L3/meimei.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["你好", "朋友", "面包", "妹妹"],
+          "correct": 3,
+          "hanzi": "妹妹",
+          "pinyin": "mèimei",
+          "meaning": "em gái"
+        },
+        {
+          "id": "L3_Q05",
+          "type": "listening_choose_word",
+          "audio": "fangjian",
+          "audioUrl": "/audio/HSK1/L3/fangjian.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["白天", "饭店", "房间", "电脑"],
+          "correct": 2,
+          "hanzi": "房间",
+          "pinyin": "fángjiān",
+          "meaning": "phòng"
+        },
+        {
+          "id": "L3_Q06",
+          "type": "listening_choose_word",
+          "audio": "diannao",
+          "audioUrl": "/audio/HSK1/L3/diannao.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["白天", "饭店", "房间", "电脑"],
+          "correct": 3,
+          "hanzi": "电脑",
+          "pinyin": "diànnǎo",
+          "meaning": "máy tính"
+        },
+        {
+          "id": "L3_Q07",
+          "type": "listening_fill_initial",
+          "audio": "zha",
+          "audioUrl": "/audio/HSK1/L3/zha.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___a",
+          "pinyin": "___a",
+          "answer": "zh",
+          "fullPinyin": "zha",
+          "hanzi": "扎",
+          "tone": 1
+        },
+        {
+          "id": "L3_Q08",
+          "type": "listening_fill_initial",
+          "audio": "cha",
+          "audioUrl": "/audio/HSK1/L3/cha.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___a",
+          "pinyin": "___a",
+          "answer": "ch",
+          "fullPinyin": "cha",
+          "hanzi": "茶",
+          "tone": 2
+        },
+        {
+          "id": "L3_Q09",
+          "type": "listening_fill_initial",
+          "audio": "sha",
+          "audioUrl": "/audio/HSK1/L3/sha.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___a",
+          "pinyin": "___a",
+          "answer": "sh",
+          "fullPinyin": "sha",
+          "hanzi": "沙",
+          "tone": 1
+        },
+        {
+          "id": "L3_Q10",
+          "type": "listening_fill_initial",
+          "audio": "ren",
+          "audioUrl": "/audio/HSK1/L3/ren.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___en",
+          "pinyin": "___en",
+          "answer": "r",
+          "fullPinyin": "ren",
+          "hanzi": "人",
+          "tone": 2
+        },
+        {
+          "id": "L3_Q11",
+          "type": "listening_choose_picture",
+          "audio": "wo_shi_zhongguo_ren",
+          "audioUrl": "/audio/HSK1/L3/wo_shi_zhongguo_ren.mp3",
+          "question": "Bạn nghe thấy câu gì?",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L3/china_flag.png", "label": "我是中国人"},
+            {"id": "B", "image": "/images/HSK1/L3/france_flag.png", "label": "我是法国人"},
+            {"id": "C", "image": "/images/HSK1/L3/thailand_flag.png", "label": "我是泰国人"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L3_Q12",
+          "type": "reading_choose_picture",
+          "question": "我和朋友们在外边玩呢。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L3/playing_outside.png", "label": "外边玩"},
+            {"id": "B", "image": "/images/HSK1/L3/playing_inside.png", "label": "里边玩"},
+            {"id": "C", "image": "/images/HSK1/L3/playing_school.png", "label": "学校玩"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L3_Q13",
+          "type": "reading_fill_blank",
+          "sentence": "我是（ ）人。",
+          "options": ["中国", "法国", "泰国"],
+          "correct": 0,
+          "fullSentence": "我是中国人。",
+          "meaning": "Tôi là người Trung Quốc."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "我有两个孩子",
+      "title_en": "I have two children",
+      "topics": ["family", "numbers", "tone_sandhi"],
+      "vocabulary": ["鸡", "七", "写", "请", "再见", "谢谢", "星期", "高兴", "孩子", "两个"],
+      "questions": [
+        {
+          "id": "L4_Q01",
+          "type": "listening_choose_word",
+          "audio": "ji",
+          "audioUrl": "/audio/HSK1/L4/ji.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["鸡", "七", "写", "请"],
+          "correct": 0,
+          "hanzi": "鸡",
+          "pinyin": "jī",
+          "meaning": "gà"
+        },
+        {
+          "id": "L4_Q02",
+          "type": "listening_choose_word",
+          "audio": "qi",
+          "audioUrl": "/audio/HSK1/L4/qi.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["鸡", "七", "写", "请"],
+          "correct": 1,
+          "hanzi": "七",
+          "pinyin": "qī",
+          "meaning": "bảy"
+        },
+        {
+          "id": "L4_Q03",
+          "type": "listening_choose_word",
+          "audio": "xie",
+          "audioUrl": "/audio/HSK1/L4/xie.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["鸡", "七", "写", "请"],
+          "correct": 2,
+          "hanzi": "写",
+          "pinyin": "xiě",
+          "meaning": "viết"
+        },
+        {
+          "id": "L4_Q04",
+          "type": "listening_choose_word",
+          "audio": "qing",
+          "audioUrl": "/audio/HSK1/L4/qing.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["鸡", "七", "写", "请"],
+          "correct": 3,
+          "hanzi": "请",
+          "pinyin": "qǐng",
+          "meaning": "mời"
+        },
+        {
+          "id": "L4_Q05",
+          "type": "listening_choose_word",
+          "audio": "zaijian",
+          "audioUrl": "/audio/HSK1/L4/zaijian.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["再见", "谢谢", "星期", "高兴"],
+          "correct": 0,
+          "hanzi": "再见",
+          "pinyin": "zàijiàn",
+          "meaning": "tạm biệt"
+        },
+        {
+          "id": "L4_Q06",
+          "type": "listening_choose_word",
+          "audio": "xiexie",
+          "audioUrl": "/audio/HSK1/L4/xiexie.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["再见", "谢谢", "星期", "高兴"],
+          "correct": 1,
+          "hanzi": "谢谢",
+          "pinyin": "xièxie",
+          "meaning": "cảm ơn"
+        },
+        {
+          "id": "L4_Q07",
+          "type": "listening_choose_word",
+          "audio": "gaoxing",
+          "audioUrl": "/audio/HSK1/L4/gaoxing.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["再见", "谢谢", "星期", "高兴"],
+          "correct": 3,
+          "hanzi": "高兴",
+          "pinyin": "gāoxìng",
+          "meaning": "vui vẻ"
+        },
+        {
+          "id": "L4_Q08",
+          "type": "listening_choose_word",
+          "audio": "xingqi",
+          "audioUrl": "/audio/HSK1/L4/xingqi.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["再见", "谢谢", "星期", "高兴"],
+          "correct": 2,
+          "hanzi": "星期",
+          "pinyin": "xīngqī",
+          "meaning": "tuần"
+        },
+        {
+          "id": "L4_Q09",
+          "type": "listening_fill_initial",
+          "audio": "jie",
+          "audioUrl": "/audio/HSK1/L4/jie.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___ie",
+          "pinyin": "___ie",
+          "answer": "j",
+          "fullPinyin": "jie",
+          "hanzi": "姐",
+          "tone": 3
+        },
+        {
+          "id": "L4_Q10",
+          "type": "listening_fill_initial",
+          "audio": "qie",
+          "audioUrl": "/audio/HSK1/L4/qie.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___ie",
+          "pinyin": "___ie",
+          "answer": "q",
+          "fullPinyin": "qie",
+          "hanzi": "且",
+          "tone": 3
+        },
+        {
+          "id": "L4_Q11",
+          "type": "listening_fill_initial",
+          "audio": "xie",
+          "audioUrl": "/audio/HSK1/L4/xie.mp3",
+          "question": "Điền thanh mẫu (声母) còn thiếu: ___ie",
+          "pinyin": "___ie",
+          "answer": "x",
+          "fullPinyin": "xie",
+          "hanzi": "写",
+          "tone": 3
+        },
+        {
+          "id": "L4_Q12",
+          "type": "listening_fill_tone",
+          "audio": "ni3_hao3",
+          "audioUrl": "/audio/HSK1/L4/ni3_hao3.mp3",
+          "question": "Điền thanh điệu (声调) cho: nihao ( ) (lưu ý biến điệu)",
+          "pinyin": "ni + hao",
+          "hanzi": "你好",
+          "answer": [2, 3],
+          "toneMark": "ní hǎo",
+          "note": "变调: 3+3 → 2+3"
+        },
+        {
+          "id": "L4_Q13",
+          "type": "listening_choose_picture",
+          "audio": "san_ge_pingguo",
+          "audioUrl": "/audio/HSK1/L4/san_ge_pingguo.mp3",
+          "question": "Bạn nghe thấy cụm từ gì? (Ví dụ)",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L4/apple_1.png", "label": "一个苹果"},
+            {"id": "B", "image": "/images/HSK1/L4/apple_3.png", "label": "三个苹果"},
+            {"id": "C", "image": "/images/HSK1/L4/apple_5.png", "label": "五个苹果"}
+          ],
+          "correct": "B",
+          "example": true
+        },
+        {
+          "id": "L4_Q14",
+          "type": "listening_choose_answer",
+          "audio": "jintian_tianqi_zenmeyang",
+          "audioUrl": "/audio/HSK1/L4/jintian_tianqi_zenmeyang.mp3",
+          "question": "今天天气怎么样？(Ví dụ)",
+          "options": ["非常热", "很好听", "在喝水"],
+          "correct": 0,
+          "example": true
+        },
+        {
+          "id": "L4_Q15",
+          "type": "reading_choose_picture",
+          "question": "我很喜欢这本书。 (Ví dụ)",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L4/book.png", "label": "一本书"},
+            {"id": "B", "image": "/images/HSK1/L4/movie.png", "label": "一个电影"},
+            {"id": "C", "image": "/images/HSK1/L4/song.png", "label": "一首歌"}
+          ],
+          "correct": "A",
+          "example": true
+        },
+        {
+          "id": "L4_Q16",
+          "type": "reading_choose_picture",
+          "question": "我家有四口人。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L4/family_4.png", "label": "四口人"},
+            {"id": "B", "image": "/images/HSK1/L4/family_3.png", "label": "三口人"},
+            {"id": "C", "image": "/images/HSK1/L4/family_5.png", "label": "五口人"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L4_Q17",
+          "type": "reading_choose_picture",
+          "question": "我哥哥今年20岁。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L4/boy_20.png", "label": "20岁的男孩"},
+            {"id": "B", "image": "/images/HSK1/L4/boy_10.png", "label": "10岁的男孩"},
+            {"id": "C", "image": "/images/HSK1/L4/boy_30.png", "label": "30岁的男孩"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L4_Q18",
+          "type": "reading_match",
+          "left": "她是谁？",
+          "right": ["好的，谢谢！", "我学生。", "商店。"],
+          "correct": 1
+        },
+        {
+          "id": "L4_Q19",
+          "type": "reading_match",
+          "left": "你是法国人吗？",
+          "right": ["是的。", "我学生。", "在桌子上"],
+          "correct": 0
+        },
+        {
+          "id": "L4_Q20",
+          "type": "reading_match",
+          "left": "您儿子多大？",
+          "right": ["他今年5岁。", "好的，谢谢！", "是的。"],
+          "correct": 0
+        },
+        {
+          "id": "L4_Q21",
+          "type": "reading_fill_blank",
+          "sentence": "你叫什么（ ）？",
+          "options": ["几", "好看", "名字"],
+          "correct": 2,
+          "fullSentence": "你叫什么名字？",
+          "meaning": "Bạn tên là gì?",
+          "example": true
+        },
+        {
+          "id": "L4_Q22",
+          "type": "reading_fill_blank",
+          "sentence": "她工作很（ ）。",
+          "options": ["想", "忙", "名字"],
+          "correct": 1,
+          "fullSentence": "她工作很忙。",
+          "meaning": "Cô ấy làm việc rất bận."
+        },
+        {
+          "id": "L4_Q23",
+          "type": "reading_fill_blank",
+          "sentence": "很好，我们很（ ）你。",
+          "options": ["忙", "想", "名字"],
+          "correct": 1,
+          "fullSentence": "很好，我们很想你。",
+          "meaning": "Rất tốt, chúng tôi rất nhớ bạn."
+        },
+        {
+          "id": "L4_Q24",
+          "type": "reading_qa",
+          "passage": "我家有三口人，爸爸、妈妈和我。",
+          "question": "说话人家里有几口人？",
+          "options": ["三口人", "四口人", "五口人"],
+          "correct": 0
+        },
+        {
+          "id": "L4_Q25",
+          "type": "reading_qa",
+          "passage": "她是法国人，我不是。",
+          "question": "她是什么人？",
+          "options": ["法国人", "中国人", "泰国人"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "今天我休息",
+      "title_en": "I'm off today",
+      "topics": ["rest", "tone_sandhi_bu_yi"],
+      "vocabulary": ["五", "雨", "椅子", "休息", "今天", "上班", "不", "一"],
+      "questions": [
+        {
+          "id": "L5_Q01",
+          "type": "listening_choose_word",
+          "audio": "yu",
+          "audioUrl": "/audio/HSK1/L5/yu.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["五", "雨", "椅", "子"],
+          "correct": 1,
+          "hanzi": "雨",
+          "pinyin": "yǔ",
+          "meaning": "mưa"
+        },
+        {
+          "id": "L5_Q02",
+          "type": "listening_choose_word",
+          "audio": "wu",
+          "audioUrl": "/audio/HSK1/L5/wu.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["五", "雨", "椅", "子"],
+          "correct": 0,
+          "hanzi": "五",
+          "pinyin": "wǔ",
+          "meaning": "năm"
+        },
+        {
+          "id": "L5_Q03",
+          "type": "listening_choose_word",
+          "audio": "yizi",
+          "audioUrl": "/audio/HSK1/L5/yizi.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["五", "雨", "椅子", "子"],
+          "correct": 2,
+          "hanzi": "椅子",
+          "pinyin": "yǐzi",
+          "meaning": "ghế"
+        },
+        {
+          "id": "L5_Q04",
+          "type": "listening_fill_tone",
+          "audio": "bu_shi",
+          "audioUrl": "/audio/HSK1/L5/bu_shi.mp3",
+          "question": "Điền thanh điệu (声调) cho: bu ( ) + shi ( )",
+          "pinyin": "bu + shi",
+          "hanzi": "不是",
+          "answer": [2, 4],
+          "toneMark": "bú shì",
+          "note": "变调: 不+四声 → 二声+四声"
+        },
+        {
+          "id": "L5_Q05",
+          "type": "listening_fill_tone",
+          "audio": "yi_tian",
+          "audioUrl": "/audio/HSK1/L5/yi_tian.mp3",
+          "question": "Điền thanh điệu (声调) cho: yi ( ) + tian ( )",
+          "pinyin": "yi + tian",
+          "hanzi": "一天",
+          "answer": [4, 1],
+          "toneMark": "yì tiān",
+          "note": "变调: 一+一声 → 四声+一声"
+        },
+        {
+          "id": "L5_Q06",
+          "type": "listening_fill_tone",
+          "audio": "yi_ban",
+          "audioUrl": "/audio/HSK1/L5/yi_ban.mp3",
+          "question": "Điền thanh điệu (声调) cho: yi ( ) + ban ( )",
+          "pinyin": "yi + ban",
+          "hanzi": "一半",
+          "answer": [4, 4],
+          "toneMark": "yí bàn",
+          "note": "变调: 一+四声 → 二声+四声"
+        },
+        {
+          "id": "L5_Q07",
+          "type": "listening_choose_picture",
+          "audio": "jintian_wo_xiuxi",
+          "audioUrl": "/audio/HSK1/L5/jintian_wo_xiuxi.mp3",
+          "question": "Bạn nghe thấy câu gì?",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L5/resting.png", "label": "今天我休息"},
+            {"id": "B", "image": "/images/HSK1/L5/working.png", "label": "我在工作"},
+            {"id": "C", "image": "/images/HSK1/L5/studying.png", "label": "我在学习"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L5_Q08",
+          "type": "listening_choose_answer",
+          "audio": "ni_hui_zuo_fan_ma",
+          "audioUrl": "/audio/HSK1/L5/ni_hui_zuo_fan_ma.mp3",
+          "question": "你会做饭吗？",
+          "options": ["我不会", "我吃饺子", "做面条儿"],
+          "correct": 0
+        },
+        {
+          "id": "L5_Q09",
+          "type": "reading_choose_picture",
+          "question": "今天我休息。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L5/resting.png", "label": "在家休息"},
+            {"id": "B", "image": "/images/HSK1/L5/working.png", "label": "在工作"},
+            {"id": "C", "image": "/images/HSK1/L5/studying.png", "label": "在学习"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L5_Q10",
+          "type": "reading_choose_picture",
+          "question": "我有一个儿子，他今年7岁。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L5/boy_7.png", "label": "7岁的男孩"},
+            {"id": "B", "image": "/images/HSK1/L5/girl_7.png", "label": "7岁的女孩"},
+            {"id": "C", "image": "/images/HSK1/L5/boy_5.png", "label": "5岁的男孩"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L5_Q11",
+          "type": "reading_match",
+          "left": "你去超市买什么？",
+          "right": ["面条儿。", "我不会。", "好的，谢谢！"],
+          "correct": 0
+        },
+        {
+          "id": "L5_Q12",
+          "type": "reading_match",
+          "left": "你会做饭吗？",
+          "right": ["我不会。", "面条儿。", "5月6号。"],
+          "correct": 0
+        },
+        {
+          "id": "L5_Q13",
+          "type": "reading_match",
+          "left": "今天几号？",
+          "right": ["5月6号。", "我不会。", "好的，谢谢！"],
+          "correct": 0
+        },
+        {
+          "id": "L5_Q14",
+          "type": "reading_fill_blank",
+          "sentence": "今天（ ）号？",
+          "options": ["几", "好看", "名字"],
+          "correct": 0,
+          "fullSentence": "今天几号？",
+          "meaning": "Hôm nay là ngày mấy?"
+        },
+        {
+          "id": "L5_Q15",
+          "type": "reading_fill_blank",
+          "sentence": "你的新电脑真（ ）！",
+          "options": ["几", "好看", "名字"],
+          "correct": 1,
+          "fullSentence": "你的新电脑真好看！",
+          "meaning": "Máy tính mới của bạn thật đẹp!"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "你的手机号是多少？",
+      "title_en": "What's your cell phone number?",
+      "topics": ["phone_number", "numbers", "retroflex_final"],
+      "vocabulary": ["九", "牛奶", "休息", "手机", "号", "多少", "超市", "想"],
+      "questions": [
+        {
+          "id": "L6_Q01",
+          "type": "listening_choose_word",
+          "audio": "jiu",
+          "audioUrl": "/audio/HSK1/L6/jiu.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["九", "朋友", "牛奶", "休息"],
+          "correct": 0,
+          "hanzi": "九",
+          "pinyin": "jiǔ",
+          "meaning": "chín"
+        },
+        {
+          "id": "L6_Q02",
+          "type": "listening_choose_word",
+          "audio": "niunai",
+          "audioUrl": "/audio/HSK1/L6/niunai.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["九", "朋友", "牛奶", "休息"],
+          "correct": 2,
+          "hanzi": "牛奶",
+          "pinyin": "niúnǎi",
+          "meaning": "sữa bò"
+        },
+        {
+          "id": "L6_Q03",
+          "type": "listening_choose_word",
+          "audio": "xiuxi",
+          "audioUrl": "/audio/HSK1/L6/xiuxi.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["九", "朋友", "牛奶", "休息"],
+          "correct": 3,
+          "hanzi": "休息",
+          "pinyin": "xiūxī",
+          "meaning": "nghỉ ngơi"
+        },
+        {
+          "id": "L6_Q04",
+          "type": "listening_choose_picture",
+          "audio": "wo_xiang_qu_chaoshi",
+          "audioUrl": "/audio/HSK1/L6/wo_xiang_qu_chaoshi.mp3",
+          "question": "Bạn nghe thấy câu gì?",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L6/supermarket.png", "label": "我想去超市"},
+            {"id": "B", "image": "/images/HSK1/L6/hospital.png", "label": "我想去医院"},
+            {"id": "C", "image": "/images/HSK1/L6/school.png", "label": "我想去学校"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L6_Q05",
+          "type": "listening_choose_answer",
+          "audio": "ni_de_shoujihao_shi_duoshao",
+          "audioUrl": "/audio/HSK1/L6/ni_de_shoujihao_shi_duoshao.mp3",
+          "question": "你的手机号是多少？",
+          "options": ["1234567890", "0987654321", "1122334455"],
+          "correct": 0
+        },
+        {
+          "id": "L6_Q06",
+          "type": "reading_choose_picture",
+          "question": "今天星期二。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L6/tuesday.png", "label": "星期二"},
+            {"id": "B", "image": "/images/HSK1/L6/monday.png", "label": "星期一"},
+            {"id": "C", "image": "/images/HSK1/L6/wednesday.png", "label": "星期三"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L6_Q07",
+          "type": "reading_choose_picture",
+          "question": "我想去超市买东西。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L6/supermarket.png", "label": "超市"},
+            {"id": "B", "image": "/images/HSK1/L6/hospital.png", "label": "医院"},
+            {"id": "C", "image": "/images/HSK1/L6/school.png", "label": "学校"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L6_Q08",
+          "type": "reading_match",
+          "left": "你吃什么？",
+          "right": ["包子。", "坐出租车。", "真好看！"],
+          "correct": 0
+        },
+        {
+          "id": "L6_Q09",
+          "type": "reading_match",
+          "left": "我们怎么去？",
+          "right": ["坐出租车。", "包子。", "好的，谢谢！"],
+          "correct": 0
+        },
+        {
+          "id": "L6_Q10",
+          "type": "reading_match",
+          "left": "这是老师的新电脑。",
+          "right": ["真好看！", "坐出租车。", "包子。"],
+          "correct": 0
+        },
+        {
+          "id": "L6_Q11",
+          "type": "reading_fill_blank",
+          "sentence": "我想买（ ）。",
+          "options": ["有", "牛奶", "名字"],
+          "correct": 1,
+          "fullSentence": "我想买牛奶。",
+          "meaning": "Tôi muốn mua sữa."
+        },
+        {
+          "id": "L6_Q12",
+          "type": "reading_fill_blank",
+          "sentence": "我（ ）你的手机号，你的电话号码呢？",
+          "options": ["有", "牛奶", "名字"],
+          "correct": 0,
+          "fullSentence": "我有你的手机号，你的电话号码呢？",
+          "meaning": "Tôi có số điện thoại của bạn, số điện thoại của bạn thì sao?"
+        },
+        {
+          "id": "L6_Q13",
+          "type": "reading_qa",
+          "passage": "我家有三口人：爸爸、妈妈和我。",
+          "question": "说话人家里有几口人？",
+          "options": ["三口人", "四口人", "六口人"],
+          "correct": 0
+        },
+        {
+          "id": "L6_Q14",
+          "type": "reading_qa",
+          "passage": "明天星期天，我休息，想去超市买牛奶。",
+          "question": "说话人想买什么？",
+          "options": ["菜", "牛奶", "饺子"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "我晚上六点半下班",
+      "title_en": "I'll finish work at 6:30 in the evening",
+      "topics": ["time", "work", "aspirated_unaspirated"],
+      "vocabulary": ["人", "坐", "菜", "书", "手机", "医生", "桌子", "出租车", "下班", "晚上"],
+      "questions": [
+        {
+          "id": "L7_Q01",
+          "type": "listening_choose_word",
+          "audio": "ren",
+          "audioUrl": "/audio/HSK1/L7/ren.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["人", "坐", "菜", "书"],
+          "correct": 0,
+          "hanzi": "人",
+          "pinyin": "rén",
+          "meaning": "người"
+        },
+        {
+          "id": "L7_Q02",
+          "type": "listening_choose_word",
+          "audio": "zuo",
+          "audioUrl": "/audio/HSK1/L7/zuo.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["人", "坐", "菜", "书"],
+          "correct": 1,
+          "hanzi": "坐",
+          "pinyin": "zuò",
+          "meaning": "ngồi"
+        },
+        {
+          "id": "L7_Q03",
+          "type": "listening_choose_word",
+          "audio": "shu",
+          "audioUrl": "/audio/HSK1/L7/shu.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["人", "坐", "菜", "书"],
+          "correct": 3,
+          "hanzi": "书",
+          "pinyin": "shū",
+          "meaning": "sách"
+        },
+        {
+          "id": "L7_Q04",
+          "type": "listening_choose_word",
+          "audio": "yisheng",
+          "audioUrl": "/audio/HSK1/L7/yisheng.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["手机", "医生", "桌子", "出租车"],
+          "correct": 1,
+          "hanzi": "医生",
+          "pinyin": "yīshēng",
+          "meaning": "bác sĩ"
+        },
+        {
+          "id": "L7_Q05",
+          "type": "listening_choose_word",
+          "audio": "chuzuche",
+          "audioUrl": "/audio/HSK1/L7/chuzuche.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["手机", "医生", "桌子", "出租车"],
+          "correct": 3,
+          "hanzi": "出租车",
+          "pinyin": "chūzūchē",
+          "meaning": "taxi"
+        },
+        {
+          "id": "L7_Q06",
+          "type": "listening_choose_answer",
+          "audio": "xianzai_ji_dian_le",
+          "audioUrl": "/audio/HSK1/L7/xianzai_ji_dian_le.mp3",
+          "question": "现在几点了？",
+          "options": ["八点", "九点", "十点"],
+          "correct": 0
+        },
+        {
+          "id": "L7_Q07",
+          "type": "reading_choose_picture",
+          "question": "我在上课呢。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L7/class.png", "label": "上课"},
+            {"id": "B", "image": "/images/HSK1/L7/work.png", "label": "上班"},
+            {"id": "C", "image": "/images/HSK1/L7/rest.png", "label": "休息"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L7_Q08",
+          "type": "reading_choose_picture",
+          "question": "我下午有事，晚上7:00见吧。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L7/meeting_7pm.png", "label": "晚上7点见"},
+            {"id": "B", "image": "/images/HSK1/L7/meeting_8pm.png", "label": "晚上8点见"},
+            {"id": "C", "image": "/images/HSK1/L7/meeting_6pm.png", "label": "晚上6点见"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L7_Q09",
+          "type": "reading_choose_picture",
+          "question": "今天不上班，我去超市买东西。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L7/supermarket.png", "label": "去超市"},
+            {"id": "B", "image": "/images/HSK1/L7/office.png", "label": "去上班"},
+            {"id": "C", "image": "/images/HSK1/L7/school.png", "label": "去学校"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L7_Q10",
+          "type": "reading_match",
+          "left": "我们在哪儿见？",
+          "right": ["电影院。", "早上七点半。", "好的，谢谢！"],
+          "correct": 0
+        },
+        {
+          "id": "L7_Q11",
+          "type": "reading_match",
+          "left": "现在几点？",
+          "right": ["早上七点半。", "电影院。", "对不起，我有课。"],
+          "correct": 0
+        },
+        {
+          "id": "L7_Q12",
+          "type": "reading_match",
+          "left": "我们下午去超市吧。",
+          "right": ["好的，谢谢！", "早上七点半。", "对不起，我有课。"],
+          "correct": 0
+        },
+        {
+          "id": "L7_Q13",
+          "type": "reading_fill_blank",
+          "sentence": "我们（ ）12:00下课。",
+          "options": ["医院", "中午", "名字"],
+          "correct": 1,
+          "fullSentence": "我们中午12:00下课。",
+          "meaning": "Chúng tôi tan học lúc 12:00 trưa."
+        },
+        {
+          "id": "L7_Q14",
+          "type": "reading_fill_blank",
+          "sentence": "我在（ ）呢。",
+          "options": ["医院", "中午", "名字"],
+          "correct": 0,
+          "fullSentence": "我在医院呢。",
+          "meaning": "Tôi đang ở bệnh viện."
+        },
+        {
+          "id": "L7_Q15",
+          "type": "reading_qa",
+          "passage": "我今天早上八点半上课，十点十分下课。",
+          "question": "说话人今天几点下课？",
+          "options": ["8:30", "10:10", "10:20"],
+          "correct": 1
+        },
+        {
+          "id": "L7_Q16",
+          "type": "reading_qa",
+          "passage": "妈妈今天休息，下午想去菜店买些菜。",
+          "question": "妈妈下午想去菜店买什么？",
+          "options": ["菜", "饺子", "牛奶"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "我爸爸也在医院工作",
+      "title_en": "My father also works at a hospital",
+      "topics": ["family_work", "hospital", "syllable_distinction"],
+      "vocabulary": ["春", "村", "睡", "嘴", "爸爸", "医院", "工作", "也"],
+      "questions": [
+        {
+          "id": "L8_Q01",
+          "type": "listening_choose_word",
+          "audio": "chun",
+          "audioUrl": "/audio/HSK1/L8/chun.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["春", "村", "睡", "嘴"],
+          "correct": 0,
+          "hanzi": "春",
+          "pinyin": "chūn",
+          "meaning": "mùa xuân"
+        },
+        {
+          "id": "L8_Q02",
+          "type": "listening_choose_word",
+          "audio": "cun",
+          "audioUrl": "/audio/HSK1/L8/cun.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["春", "村", "睡", "嘴"],
+          "correct": 1,
+          "hanzi": "村",
+          "pinyin": "cūn",
+          "meaning": "làng"
+        },
+        {
+          "id": "L8_Q03",
+          "type": "listening_choose_word",
+          "audio": "shui",
+          "audioUrl": "/audio/HSK1/L8/shui.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["春", "村", "睡", "嘴"],
+          "correct": 2,
+          "hanzi": "睡",
+          "pinyin": "shuì",
+          "meaning": "ngủ"
+        },
+        {
+          "id": "L8_Q04",
+          "type": "listening_choose_word",
+          "audio": "zui",
+          "audioUrl": "/audio/HSK1/L8/zui.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["春", "村", "睡", "嘴"],
+          "correct": 3,
+          "hanzi": "嘴",
+          "pinyin": "zuǐ",
+          "meaning": "miệng"
+        },
+        {
+          "id": "L8_Q05",
+          "type": "reading_choose_picture",
+          "question": "你的手机在桌子上呢。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L8/phone_on_table.png", "label": "手机在桌子上"},
+            {"id": "B", "image": "/images/HSK1/L8/phone_on_chair.png", "label": "手机在椅子上"},
+            {"id": "C", "image": "/images/HSK1/L8/phone_in_bag.png", "label": "手机在包里"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L8_Q06",
+          "type": "reading_choose_picture",
+          "question": "我在学校吃午饭。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L8/school_lunch.png", "label": "在学校吃饭"},
+            {"id": "B", "image": "/images/HSK1/L8/restaurant_lunch.png", "label": "在饭店吃饭"},
+            {"id": "C", "image": "/images/HSK1/L8/home_lunch.png", "label": "在家吃饭"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L8_Q07",
+          "type": "reading_choose_picture",
+          "question": "这个医院里病人多，医生工作很忙。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L8/busy_hospital.png", "label": "繁忙的医院"},
+            {"id": "B", "image": "/images/HSK1/L8/empty_hospital.png", "label": "空旷的医院"},
+            {"id": "C", "image": "/images/HSK1/L8/small_hospital.png", "label": "小医院"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L8_Q08",
+          "type": "reading_match",
+          "left": "桌子上有什么？",
+          "right": ["饺子和面条儿。", "医院。", "我老师。"],
+          "correct": 0
+        },
+        {
+          "id": "L8_Q09",
+          "type": "reading_match",
+          "left": "她是谁？",
+          "right": ["我老师。", "饺子和面条儿。", "好的，谢谢！"],
+          "correct": 0
+        },
+        {
+          "id": "L8_Q10",
+          "type": "reading_match",
+          "left": "你爸爸在哪儿工作？",
+          "right": ["医院。", "我老师。", "饺子和面条儿。"],
+          "correct": 0
+        },
+        {
+          "id": "L8_Q11",
+          "type": "reading_fill_blank",
+          "sentence": "我的房间里（ ）一只小猫。",
+          "options": ["能", "有", "名字"],
+          "correct": 1,
+          "fullSentence": "我的房间里有一只小猫。",
+          "meaning": "Trong phòng của tôi có một con mèo con."
+        },
+        {
+          "id": "L8_Q12",
+          "type": "reading_fill_blank",
+          "sentence": "好的，我7:00（ ）到。",
+          "options": ["能", "有", "名字"],
+          "correct": 0,
+          "fullSentence": "好的，我7:00能到。",
+          "meaning": "Được rồi, tôi có thể đến lúc 7:00."
+        },
+        {
+          "id": "L8_Q13",
+          "type": "reading_qa",
+          "passage": "昨天爸爸在医院工作，哥哥在家里休息，没去书店。",
+          "question": "说话人的哥哥昨天在哪里？",
+          "options": ["在家里", "在书店", "在医院工作"],
+          "correct": 0
+        },
+        {
+          "id": "L8_Q14",
+          "type": "reading_qa",
+          "passage": "我喜欢吃米饭，我女朋友不喜欢。",
+          "question": "说话人的女朋友不喜欢吃什么？",
+          "options": ["米饭", "包子", "面条儿"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "我明天上午在学校学习",
+      "title_en": "I'll be studying at school tomorrow morning",
+      "topics": ["future", "time", "place"],
+      "vocabulary": ["哪里", "小语", "水果", "学习", "明天", "上午", "学校"],
+      "questions": [
+        {
+          "id": "L9_Q01",
+          "type": "listening_choose_word",
+          "audio": "nali",
+          "audioUrl": "/audio/HSK1/L9/nali.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["你好", "哪里", "小语", "水果"],
+          "correct": 1,
+          "hanzi": "哪里",
+          "pinyin": "nǎlǐ",
+          "meaning": "ở đâu"
+        },
+        {
+          "id": "L9_Q02",
+          "type": "listening_choose_word",
+          "audio": "shuiguo",
+          "audioUrl": "/audio/HSK1/L9/shuiguo.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["你好", "哪里", "小语", "水果"],
+          "correct": 3,
+          "hanzi": "水果",
+          "pinyin": "shuǐguǒ",
+          "meaning": "hoa quả"
+        },
+        {
+          "id": "L9_Q03",
+          "type": "listening_choose_word",
+          "audio": "xiaoyu",
+          "audioUrl": "/audio/HSK1/L9/xiaoyu.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["你好", "哪里", "小语", "水果"],
+          "correct": 2,
+          "hanzi": "小语",
+          "pinyin": "xiǎo yǔ",
+          "meaning": "Tiểu Vũ"
+        },
+        {
+          "id": "L9_Q04",
+          "type": "reading_choose_picture",
+          "question": "妹妹和小狗今天在家里玩。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L9/girl_dog.png", "label": "妹妹和小狗玩"},
+            {"id": "B", "image": "/images/HSK1/L9/boy_dog.png", "label": "哥哥和小狗玩"},
+            {"id": "C", "image": "/images/HSK1/L9/girl_cat.png", "label": "妹妹和小猫玩"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L9_Q05",
+          "type": "reading_choose_picture",
+          "question": "房间外有一只小猫。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L9/cat_outside.png", "label": "房间外有猫"},
+            {"id": "B", "image": "/images/HSK1/L9/cat_inside.png", "label": "房间里有猫"},
+            {"id": "C", "image": "/images/HSK1/L9/dog_outside.png", "label": "房间外有狗"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L9_Q06",
+          "type": "reading_choose_picture",
+          "question": "这是我的第三个电脑。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L9/third_computer.png", "label": "第三个电脑"},
+            {"id": "B", "image": "/images/HSK1/L9/second_computer.png", "label": "第二个电脑"},
+            {"id": "C", "image": "/images/HSK1/L9/first_computer.png", "label": "第一个电脑"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L9_Q07",
+          "type": "reading_match",
+          "left": "桌子上有什么？",
+          "right": ["一只小猫。", "我女朋友。", "在家里。"],
+          "correct": 0
+        },
+        {
+          "id": "L9_Q08",
+          "type": "reading_match",
+          "left": "你今天下午在哪儿？",
+          "right": ["在家里。", "一只小猫。", "我女朋友。"],
+          "correct": 0
+        },
+        {
+          "id": "L9_Q09",
+          "type": "reading_match",
+          "left": "你和谁在超市呢？",
+          "right": ["我女朋友。", "在家里。", "好的，谢谢！"],
+          "correct": 0
+        },
+        {
+          "id": "L9_Q10",
+          "type": "reading_fill_blank",
+          "sentence": "我上午在学校（ ），我们下午去看电影吧。",
+          "options": ["2:00", "上课", "名字"],
+          "correct": 1,
+          "fullSentence": "我上午在学校上课，我们下午去看电影吧。",
+          "meaning": "Sáng tôi học ở trường, chiều chúng ta đi xem phim nhé."
+        },
+        {
+          "id": "L9_Q11",
+          "type": "reading_fill_blank",
+          "sentence": "下午（ ）吧。",
+          "options": ["2:00", "上课", "名字"],
+          "correct": 0,
+          "fullSentence": "下午2:00吧。",
+          "meaning": "2:00 chiều nhé."
+        },
+        {
+          "id": "L9_Q12",
+          "type": "reading_qa",
+          "passage": "我有一只小狗，很漂亮，它是我的好朋友。",
+          "question": "说话人有几只小狗？",
+          "options": ["一", "四", "十一"],
+          "correct": 0
+        },
+        {
+          "id": "L9_Q13",
+          "type": "reading_qa",
+          "passage": "星期天中午妈妈在做饭，我和妹妹在房间里玩。",
+          "question": "说话人和妹妹在哪儿？",
+          "options": ["外边", "房间里", "超市里"],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "这儿的苹果真便宜！",
+      "title_en": "The apples here are really affordable!",
+      "topics": ["shopping", "price", "adjective"],
+      "vocabulary": ["妈妈", "爸爸", "椅子", "饺子", "苹果", "便宜", "钱", "块"],
+      "questions": [
+        {
+          "id": "L10_Q01",
+          "type": "listening_choose_word",
+          "audio": "mama",
+          "audioUrl": "/audio/HSK1/L10/mama.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["妈妈", "爸爸", "椅子", "饺子"],
+          "correct": 0,
+          "hanzi": "妈妈",
+          "pinyin": "māma",
+          "meaning": "mẹ"
+        },
+        {
+          "id": "L10_Q02",
+          "type": "listening_choose_word",
+          "audio": "baba",
+          "audioUrl": "/audio/HSK1/L10/baba.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["妈妈", "爸爸", "椅子", "饺子"],
+          "correct": 1,
+          "hanzi": "爸爸",
+          "pinyin": "bàba",
+          "meaning": "bố"
+        },
+        {
+          "id": "L10_Q03",
+          "type": "listening_choose_word",
+          "audio": "jiaozi",
+          "audioUrl": "/audio/HSK1/L10/jiaozi.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["妈妈", "爸爸", "椅子", "饺子"],
+          "correct": 3,
+          "hanzi": "饺子",
+          "pinyin": "jiǎozi",
+          "meaning": "sủi cảo"
+        },
+        {
+          "id": "L10_Q04",
+          "type": "listening_choose_picture",
+          "audio": "zhe_ge_pingguo_hen_pianyi",
+          "audioUrl": "/audio/HSK1/L10/zhe_ge_pingguo_hen_pianyi.mp3",
+          "question": "Bạn nghe thấy câu gì?",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L10/cheap_apple.png", "label": "这个苹果很便宜"},
+            {"id": "B", "image": "/images/HSK1/L10/expensive_apple.png", "label": "这个苹果很贵"},
+            {"id": "C", "image": "/images/HSK1/L10/big_apple.png", "label": "这个苹果很大"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L10_Q05",
+          "type": "listening_choose_answer",
+          "audio": "zhe_ge_pingguo_duoshao_qian",
+          "audioUrl": "/audio/HSK1/L10/zhe_ge_pingguo_duoshao_qian.mp3",
+          "question": "这个苹果多少钱？",
+          "options": ["两块钱", "三块钱", "五块钱"],
+          "correct": 0
+        },
+        {
+          "id": "L10_Q06",
+          "type": "reading_choose_picture",
+          "question": "请问，包子多少钱一个？",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L10/baozi.png", "label": "包子"},
+            {"id": "B", "image": "/images/HSK1/L10/jiaozi.png", "label": "饺子"},
+            {"id": "C", "image": "/images/HSK1/L10/mianbao.png", "label": "面包"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L10_Q07",
+          "type": "reading_choose_picture",
+          "question": "这边的苹果真便宜。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L10/cheap_apple.png", "label": "便宜的苹果"},
+            {"id": "B", "image": "/images/HSK1/L10/expensive_apple.png", "label": "贵的苹果"},
+            {"id": "C", "image": "/images/HSK1/L10/small_apple.png", "label": "小苹果"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L10_Q08",
+          "type": "reading_choose_picture",
+          "question": "这些是男孩子穿的衣服。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L10/boy_clothes.png", "label": "男孩衣服"},
+            {"id": "B", "image": "/images/HSK1/L10/girl_clothes.png", "label": "女孩衣服"},
+            {"id": "C", "image": "/images/HSK1/L10/adult_clothes.png", "label": "成人衣服"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L10_Q09",
+          "type": "reading_match",
+          "left": "女孩子的衣服在哪儿？",
+          "right": ["在那边。", "十块钱。", "对不起，没有。"],
+          "correct": 0
+        },
+        {
+          "id": "L10_Q10",
+          "type": "reading_match",
+          "left": "杯子多少钱一个？",
+          "right": ["十块钱。", "在那边。", "对不起，没有。"],
+          "correct": 0
+        },
+        {
+          "id": "L10_Q11",
+          "type": "reading_match",
+          "left": "请问这儿有牛奶吗？",
+          "right": ["对不起，没有。", "十块钱。", "在那边。"],
+          "correct": 0
+        },
+        {
+          "id": "L10_Q12",
+          "type": "reading_fill_blank",
+          "sentence": "那些苹果两（ ）钱一斤，很便宜。",
+          "options": ["穿", "块", "名字"],
+          "correct": 1,
+          "fullSentence": "那些苹果两块五钱一斤，很便宜。",
+          "meaning": "Những quả táo đó 2,5 tệ một cân, rất rẻ."
+        },
+        {
+          "id": "L10_Q13",
+          "type": "reading_fill_blank",
+          "sentence": "很好看，10岁的男孩子能（ ）。",
+          "options": ["穿", "块", "名字"],
+          "correct": 0,
+          "fullSentence": "很好看，10岁的男孩子能穿。",
+          "meaning": "Rất đẹp, bé trai 10 tuổi có thể mặc được."
+        },
+        {
+          "id": "L10_Q14",
+          "type": "reading_qa",
+          "passage": "我没有手机，今天想去商店买一个。",
+          "question": "说话人想买什么？",
+          "options": ["杯子", "手机", "水果"],
+          "correct": 1
+        },
+        {
+          "id": "L10_Q15",
+          "type": "reading_qa",
+          "passage": "这件衣服很好看，你也能穿，买一件吧。",
+          "question": "那件衣服怎么样？",
+          "options": ["好看", "便宜", "很贵"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "我读大学呢",
+      "title_en": "I'm studying at university",
+      "topics": ["university", "progressive_aspect"],
+      "vocabulary": ["衣服", "漂亮", "早上", "大学", "读", "正在", "呢"],
+      "questions": [
+        {
+          "id": "L11_Q01",
+          "type": "listening_choose_word",
+          "audio": "yifu",
+          "audioUrl": "/audio/HSK1/L11/yifu.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["谢谢", "衣服", "漂亮", "早上"],
+          "correct": 1,
+          "hanzi": "衣服",
+          "pinyin": "yīfu",
+          "meaning": "quần áo"
+        },
+        {
+          "id": "L11_Q02",
+          "type": "listening_choose_word",
+          "audio": "piaoliang",
+          "audioUrl": "/audio/HSK1/L11/piaoliang.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["谢谢", "衣服", "漂亮", "早上"],
+          "correct": 2,
+          "hanzi": "漂亮",
+          "pinyin": "piàoliang",
+          "meaning": "đẹp"
+        },
+        {
+          "id": "L11_Q03",
+          "type": "listening_choose_word",
+          "audio": "zaoshang",
+          "audioUrl": "/audio/HSK1/L11/zaoshang.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["谢谢", "衣服", "漂亮", "早上"],
+          "correct": 3,
+          "hanzi": "早上",
+          "pinyin": "zǎoshang",
+          "meaning": "buổi sáng"
+        },
+        {
+          "id": "L11_Q04",
+          "type": "reading_choose_picture",
+          "question": "妈妈正在做饭呢。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L11/cooking.png", "label": "做饭"},
+            {"id": "B", "image": "/images/HSK1/L11/eating.png", "label": "吃饭"},
+            {"id": "C", "image": "/images/HSK1/L11/watching_tv.png", "label": "看电视"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L11_Q05",
+          "type": "reading_choose_picture",
+          "question": "你今天不想去学校吗？",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L11/school.png", "label": "学校"},
+            {"id": "B", "image": "/images/HSK1/L11/hospital.png", "label": "医院"},
+            {"id": "C", "image": "/images/HSK1/L11/park.png", "label": "公园"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L11_Q06",
+          "type": "reading_choose_picture",
+          "question": "我和朋友们在外边玩呢。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L11/playing_outside.png", "label": "外边玩"},
+            {"id": "B", "image": "/images/HSK1/L11/playing_inside.png", "label": "里边玩"},
+            {"id": "C", "image": "/images/HSK1/L11/playing_school.png", "label": "学校玩"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L11_Q07",
+          "type": "reading_match",
+          "left": "你开车去吗？",
+          "right": ["不，我坐出租车。", "非常忙。", "没有，我在开车呢。"],
+          "correct": 0
+        },
+        {
+          "id": "L11_Q08",
+          "type": "reading_match",
+          "left": "你们学习忙不忙？",
+          "right": ["非常忙。", "不，我坐出租车。", "没有，我在开车呢。"],
+          "correct": 0
+        },
+        {
+          "id": "L11_Q09",
+          "type": "reading_match",
+          "left": "你在吃午饭吗？",
+          "right": ["没有，我在开车呢。", "不，我坐出租车。", "非常忙。"],
+          "correct": 0
+        },
+        {
+          "id": "L11_Q10",
+          "type": "reading_fill_blank",
+          "sentence": "弟弟没起床，还在（ ）呢。",
+          "options": ["找", "睡觉", "名字"],
+          "correct": 1,
+          "fullSentence": "弟弟没起床，还在睡觉呢。",
+          "meaning": "Em trai chưa dậy, vẫn đang ngủ."
+        },
+        {
+          "id": "L11_Q11",
+          "type": "reading_fill_blank",
+          "sentence": "没到呢，我正在（ ）饭店在哪里呢。",
+          "options": ["找", "睡觉", "名字"],
+          "correct": 0,
+          "fullSentence": "没到呢，我正在找饭店在哪里呢。",
+          "meaning": "Chưa đến, tôi đang tìm nhà hàng ở đâu."
+        },
+        {
+          "id": "L11_Q12",
+          "type": "reading_qa",
+          "passage": "我姐姐今年20岁，正在读大学呢，她学医。",
+          "question": "说话人的姐姐是做什么的？",
+          "options": ["老师", "医生", "大学生"],
+          "correct": 2
+        },
+        {
+          "id": "L11_Q13",
+          "type": "reading_qa",
+          "passage": "我明天有事，要去学校找老师，不知道老师在不在。",
+          "question": "说话人明天要去学校见谁？",
+          "options": ["朋友", "学生", "老师"],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "昨天下雪了",
+      "title_en": "It snowed yesterday",
+      "topics": ["weather", "past", "sickness"],
+      "vocabulary": ["昨天", "雪", "天气", "冷", "生病", "医生", "吃药"],
+      "questions": [
+        {
+          "id": "L12_Q01",
+          "type": "listening_choose_picture",
+          "audio": "jintian_xia_xue_le",
+          "audioUrl": "/audio/HSK1/L12/jintian_xia_xue_le.mp3",
+          "question": "Bạn nghe thấy câu gì?",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L12/snow.png", "label": "今天下雪了"},
+            {"id": "B", "image": "/images/HSK1/L12/rain.png", "label": "今天下雨了"},
+            {"id": "C", "image": "/images/HSK1/L12/sunny.png", "label": "今天天气很好"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L12_Q02",
+          "type": "listening_choose_answer",
+          "audio": "ni_zenme_le",
+          "audioUrl": "/audio/HSK1/L12/ni_zenme_le.mp3",
+          "question": "你怎么了？",
+          "options": ["我感冒了", "我有点累", "我很好"],
+          "correct": 0
+        },
+        {
+          "id": "L12_Q03",
+          "type": "reading_choose_picture",
+          "question": "我女儿生病了。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L12/sick_girl.png", "label": "生病的女孩"},
+            {"id": "B", "image": "/images/HSK1/L12/sick_boy.png", "label": "生病的男孩"},
+            {"id": "C", "image": "/images/HSK1/L12/healthy_girl.png", "label": "健康的女孩"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L12_Q04",
+          "type": "reading_choose_picture",
+          "question": "今天天不太好，下雪了。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L12/snow.png", "label": "下雪"},
+            {"id": "B", "image": "/images/HSK1/L12/rain.png", "label": "下雨"},
+            {"id": "C", "image": "/images/HSK1/L12/sunny.png", "label": "晴天"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L12_Q05",
+          "type": "reading_choose_picture",
+          "question": "12:00了，你们怎么还在看电视？",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L12/watching_tv.png", "label": "看电视"},
+            {"id": "B", "image": "/images/HSK1/L12/reading.png", "label": "看书"},
+            {"id": "C", "image": "/images/HSK1/L12/sleeping.png", "label": "睡觉"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L12_Q06",
+          "type": "reading_match",
+          "left": "你怎么了？",
+          "right": ["我病了。", "热水。", "对。"],
+          "correct": 0
+        },
+        {
+          "id": "L12_Q07",
+          "type": "reading_match",
+          "left": "你想喝点儿什么？",
+          "right": ["热水。", "我病了。", "对。"],
+          "correct": 0
+        },
+        {
+          "id": "L12_Q08",
+          "type": "reading_match",
+          "left": "你开车了？",
+          "right": ["对。", "热水。", "我病了。"],
+          "correct": 0
+        },
+        {
+          "id": "L12_Q09",
+          "type": "reading_fill_blank",
+          "sentence": "他（ ）了，没来上班。",
+          "options": ["冷", "生病", "名字"],
+          "correct": 1,
+          "fullSentence": "他生病了，没来上班。",
+          "meaning": "Anh ấy bị ốm, không đến làm."
+        },
+        {
+          "id": "L12_Q10",
+          "type": "reading_fill_blank",
+          "sentence": "很大，我觉得有点儿（ ）。",
+          "options": ["冷", "生病", "名字"],
+          "correct": 0,
+          "fullSentence": "很大，我觉得有点儿冷。",
+          "meaning": "Rất lớn, tôi thấy hơi lạnh."
+        },
+        {
+          "id": "L12_Q11",
+          "type": "reading_qa",
+          "passage": "昨天的天气很好，我和朋友们去外边玩了。",
+          "question": "说话人觉得昨天怎么样？",
+          "options": ["天气好", "雨不大", "有点儿冷"],
+          "correct": 0
+        },
+        {
+          "id": "L12_Q12",
+          "type": "reading_qa",
+          "passage": "老张去看病，医生说他要吃三天药。",
+          "question": "医生说老张要怎么样？",
+          "options": ["要吃药", "要多睡觉", "要多喝水"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "请给我一杯茶",
+      "title_en": "I'll have a cup of tea, please",
+      "topics": ["ordering", "drinks", "polite_requests"],
+      "vocabulary": ["请", "给", "杯", "茶", "牛奶", "水", "喝", "要"],
+      "questions": [
+        {
+          "id": "L13_Q01",
+          "type": "listening_choose_answer",
+          "audio": "ni_yao_he_shenme",
+          "audioUrl": "/audio/HSK1/L13/ni_yao_he_shenme.mp3",
+          "question": "你要喝什么？",
+          "options": ["我要喝茶", "我要喝牛奶", "我要喝水"],
+          "correct": 0
+        },
+        {
+          "id": "L13_Q02",
+          "type": "reading_choose_picture",
+          "question": "她太小了，这个苹果给她一半吧。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L13/half_apple.png", "label": "半个苹果"},
+            {"id": "B", "image": "/images/HSK1/L13/whole_apple.png", "label": "一个苹果"},
+            {"id": "C", "image": "/images/HSK1/L13/small_apple.png", "label": "小苹果"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L13_Q03",
+          "type": "reading_choose_picture",
+          "question": "请给我一杯牛奶，谢谢。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L13/milk.png", "label": "一杯牛奶"},
+            {"id": "B", "image": "/images/HSK1/L13/tea.png", "label": "一杯茶"},
+            {"id": "C", "image": "/images/HSK1/L13/water.png", "label": "一杯水"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L13_Q04",
+          "type": "reading_choose_picture",
+          "question": "我打电话问一下吧。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L13/calling.png", "label": "打电话"},
+            {"id": "B", "image": "/images/HSK1/L13/writing.png", "label": "写字"},
+            {"id": "C", "image": "/images/HSK1/L13/reading.png", "label": "看书"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L13_Q05",
+          "type": "reading_match",
+          "left": "那里卖不卖手机？",
+          "right": ["不知道。", "不客气。", "一个面包。"],
+          "correct": 0
+        },
+        {
+          "id": "L13_Q06",
+          "type": "reading_match",
+          "left": "你会写了，谢谢老师。",
+          "right": ["不客气。", "不知道。", "一个面包。"],
+          "correct": 0
+        },
+        {
+          "id": "L13_Q07",
+          "type": "reading_match",
+          "left": "你要什么？",
+          "right": ["一个面包。", "不客气。", "不知道。"],
+          "correct": 0
+        },
+        {
+          "id": "L13_Q08",
+          "type": "reading_fill_blank",
+          "sentence": "你看（ ），你要什么？",
+          "options": ["给", "一下", "名字"],
+          "correct": 1,
+          "fullSentence": "你看一下，你要什么？",
+          "meaning": "Bạn xem một chút, bạn muốn gì?"
+        },
+        {
+          "id": "L13_Q09",
+          "type": "reading_fill_blank",
+          "sentence": "请（ ）我一杯茶。",
+          "options": ["给", "一下", "名字"],
+          "correct": 0,
+          "fullSentence": "请给我一杯茶。",
+          "meaning": "Làm ơn cho tôi một cốc trà."
+        },
+        {
+          "id": "L13_Q10",
+          "type": "reading_qa",
+          "passage": "明天星期天，我们可以去饭店吃饺子吗？",
+          "question": "明天是星期几？",
+          "options": ["星期五", "星期六", "星期日"],
+          "correct": 2
+        },
+        {
+          "id": "L13_Q11",
+          "type": "reading_qa",
+          "passage": "爸爸今天在家里工作，我们不要去他的房间。",
+          "question": "爸爸今天在做什么？",
+          "options": ["在家里工作", "做了面条儿", "不能去公司"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "我看了一个电影",
+      "title_en": "I watched a movie",
+      "topics": ["past", "movies", "sentence_types"],
+      "vocabulary": ["电影", "看", "了", "昨天", "好看", "有意思"],
+      "questions": [
+        {
+          "id": "L14_Q01",
+          "type": "listening_choose_word",
+          "audio": "dianying",
+          "audioUrl": "/audio/HSK1/L14/dianying.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["商店", "电影", "医院", "学校"],
+          "correct": 1,
+          "hanzi": "电影",
+          "pinyin": "diànyǐng",
+          "meaning": "phim"
+        },
+        {
+          "id": "L14_Q02",
+          "type": "listening_choose_answer",
+          "audio": "ni_kan_dianying_le_ma",
+          "audioUrl": "/audio/HSK1/L14/ni_kan_dianying_le_ma.mp3",
+          "question": "你看电影了吗？",
+          "options": ["看了", "没看", "想去看"],
+          "correct": 0
+        },
+        {
+          "id": "L14_Q03",
+          "type": "reading_choose_picture",
+          "question": "王先生今天生病了，没来上班。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L14/sick_man.png", "label": "生病的先生"},
+            {"id": "B", "image": "/images/HSK1/L14/working_man.png", "label": "上班的先生"},
+            {"id": "C", "image": "/images/HSK1/L14/healthy_man.png", "label": "健康的先生"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L14_Q04",
+          "type": "reading_choose_picture",
+          "question": "火车上，有的人在读书，有的人在睡觉。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L14/train_reading_sleeping.png", "label": "火车上读书和睡觉"},
+            {"id": "B", "image": "/images/HSK1/L14/train_eating.png", "label": "火车上吃饭"},
+            {"id": "C", "image": "/images/HSK1/L14/train_talking.png", "label": "火车上聊天"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L14_Q05",
+          "type": "reading_choose_picture",
+          "question": "喂，他们都来我家了，你也来吧。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L14/friends_at_home.png", "label": "朋友来家"},
+            {"id": "B", "image": "/images/HSK1/L14/friends_at_school.png", "label": "朋友在学校"},
+            {"id": "C", "image": "/images/HSK1/L14/friends_at_restaurant.png", "label": "朋友在饭店"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L14_Q06",
+          "type": "reading_match",
+          "left": "谁去学校了？",
+          "right": ["我们都去了。", "是的，我睡了一觉。", "写字、看书、吃饭。"],
+          "correct": 0
+        },
+        {
+          "id": "L14_Q07",
+          "type": "reading_match",
+          "left": "你下午没去医院吗？",
+          "right": ["是的，我睡了一觉。", "我们都去了。", "写字、看书、吃饭。"],
+          "correct": 0
+        },
+        {
+          "id": "L14_Q08",
+          "type": "reading_match",
+          "left": "你今天上午都忙了些什么？",
+          "right": ["写字、看书、吃饭。", "是的，我睡了一觉。", "我们都去了。"],
+          "correct": 0
+        },
+        {
+          "id": "L14_Q09",
+          "type": "reading_fill_blank",
+          "sentence": "我喝了一杯（ ）。",
+          "options": ["都", "茶", "名字"],
+          "correct": 1,
+          "fullSentence": "我喝了一杯茶。",
+          "meaning": "Tôi đã uống một cốc trà."
+        },
+        {
+          "id": "L14_Q10",
+          "type": "reading_fill_blank",
+          "sentence": "好的，老师，我们（ ）不说话了。",
+          "options": ["都", "茶", "名字"],
+          "correct": 0,
+          "fullSentence": "好的，老师，我们都不说话了。",
+          "meaning": "Vâng, thưa cô, chúng tôi đều không nói nữa."
+        },
+        {
+          "id": "L14_Q11",
+          "type": "reading_qa",
+          "passage": "服务员，我想问一下，我们的房间号是多少？",
+          "question": "说话人想知道什么？",
+          "options": ["时间", "电话号", "房间号"],
+          "correct": 2
+        },
+        {
+          "id": "L14_Q12",
+          "type": "reading_qa",
+          "passage": "儿子和女儿都上小学了，他们会写很多字了。",
+          "question": "说话人的两个孩子是什么身份？",
+          "options": ["小学生", "中学生", "大学生"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "大兴机场见！",
+      "title_en": "See you at Daxing Airport!",
+      "topics": ["travel", "airport", "future_plans"],
+      "vocabulary": ["飞机", "火车", "出租车", "机场", "见", "北京", "上海", "西安"],
+      "questions": [
+        {
+          "id": "L15_Q01",
+          "type": "listening_choose_word",
+          "audio": "feiji",
+          "audioUrl": "/audio/HSK1/L15/feiji.mp3",
+          "question": "Bạn nghe thấy từ gì?",
+          "options": ["飞机", "火车", "出租车", "自行车"],
+          "correct": 0,
+          "hanzi": "飞机",
+          "pinyin": "fēijī",
+          "meaning": "máy bay"
+        },
+        {
+          "id": "L15_Q02",
+          "type": "listening_choose_picture",
+          "audio": "wo_zuo_chuzuche_qu",
+          "audioUrl": "/audio/HSK1/L15/wo_zuo_chuzuche_qu.mp3",
+          "question": "Bạn nghe thấy câu gì?",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L15/taxi.png", "label": "我坐出租车去"},
+            {"id": "B", "image": "/images/HSK1/L15/bus.png", "label": "我坐公交车去"},
+            {"id": "C", "image": "/images/HSK1/L15/bike.png", "label": "我骑自行车去"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L15_Q03",
+          "type": "listening_choose_answer",
+          "audio": "ni_zenme_qu_Beijing",
+          "audioUrl": "/audio/HSK1/L15/ni_zenme_qu_Beijing.mp3",
+          "question": "你怎么去北京？",
+          "options": ["我坐飞机去", "我坐火车去", "我坐出租车去"],
+          "correct": 0
+        },
+        {
+          "id": "L15_Q04",
+          "type": "reading_choose_picture",
+          "question": "我家有五口人，我们现在住在北京。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L15/family_beijing.png", "label": "北京的五口之家"},
+            {"id": "B", "image": "/images/HSK1/L15/family_shanghai.png", "label": "上海的五口之家"},
+            {"id": "C", "image": "/images/HSK1/L15/family_3.png", "label": "三口之家"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L15_Q05",
+          "type": "reading_choose_picture",
+          "question": "这里有好吃的，还有好玩儿的。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L15/fun_place.png", "label": "好吃好玩的地方"},
+            {"id": "B", "image": "/images/HSK1/L15/boring_place.png", "label": "无聊的地方"},
+            {"id": "C", "image": "/images/HSK1/L15/school_place.png", "label": "学校"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L15_Q06",
+          "type": "reading_choose_picture",
+          "question": "现在我会说一点儿汉语，也会写一些汉字了。",
+          "options": [
+            {"id": "A", "image": "/images/HSK1/L15/speak_write_chinese.png", "label": "会说会写汉语"},
+            {"id": "B", "image": "/images/HSK1/L15/speak_english.png", "label": "会说英语"},
+            {"id": "C", "image": "/images/HSK1/L15/speak_french.png", "label": "会说法语"}
+          ],
+          "correct": "A"
+        },
+        {
+          "id": "L15_Q07",
+          "type": "reading_match",
+          "left": "你会写几个汉字？",
+          "right": ["十个。", "我女儿。", "苹果。"],
+          "correct": 0
+        },
+        {
+          "id": "L15_Q08",
+          "type": "reading_match",
+          "left": "谁上学了？",
+          "right": ["我女儿。", "十个。", "苹果。"],
+          "correct": 0
+        },
+        {
+          "id": "L15_Q09",
+          "type": "reading_match",
+          "left": "你爱吃什么？",
+          "right": ["苹果。", "十个。", "我女儿。"],
+          "correct": 0
+        },
+        {
+          "id": "L15_Q10",
+          "type": "reading_fill_blank",
+          "sentence": "今年我们都想去（ ）。",
+          "options": ["电视", "北京", "名字"],
+          "correct": 1,
+          "fullSentence": "今年我们都想去北京。",
+          "meaning": "Năm nay chúng tôi đều muốn đi Bắc Kinh."
+        },
+        {
+          "id": "L15_Q11",
+          "type": "reading_fill_blank",
+          "sentence": "我喜欢看（ ）。",
+          "options": ["电视", "北京", "名字"],
+          "correct": 0,
+          "fullSentence": "我喜欢看电视。",
+          "meaning": "Tôi thích xem TV."
+        },
+        {
+          "id": "L15_Q12",
+          "type": "reading_fill_blank",
+          "sentence": "大家都没吃（ ）呢。",
+          "options": ["认识", "住", "晚饭"],
+          "correct": 2,
+          "fullSentence": "大家都没吃晚饭呢。",
+          "meaning": "Mọi người đều chưa ăn tối.",
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q13",
+          "type": "reading_fill_blank",
+          "sentence": "在今天的中文课上，我学了很多（ ）。",
+          "options": ["汉字", "晚饭", "认识"],
+          "correct": 0,
+          "fullSentence": "在今天的中文课上，我学了很多汉字。",
+          "meaning": "Trong giờ học tiếng Trung hôm nay, tôi đã học rất nhiều chữ Hán.",
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q14",
+          "type": "reading_fill_blank",
+          "sentence": "对不起，我不（ ）这个人。",
+          "options": ["认识", "住", "晚饭"],
+          "correct": 0,
+          "fullSentence": "对不起，我不认识这个人。",
+          "meaning": "Xin lỗi, tôi không biết người này.",
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q15",
+          "type": "reading_fill_blank",
+          "sentence": "我和家人（ ）在北京。",
+          "options": ["认识", "住", "晚饭"],
+          "correct": 1,
+          "fullSentence": "我和家人住在北京。",
+          "meaning": "Tôi và gia đình sống ở Bắc Kinh.",
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q16",
+          "type": "reading_fill_blank",
+          "sentence": "女：80（ ）。",
+          "options": ["认识", "住", "块"],
+          "correct": 2,
+          "fullSentence": "女：80块。",
+          "meaning": "Nữ: 80 tệ.",
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q17",
+          "type": "reading_qa",
+          "passage": "下雨了，我们坐出租车回家吧。",
+          "question": "说话人想怎么回家？",
+          "options": ["开车", "坐飞机", "坐出租车"],
+          "correct": 2,
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q18",
+          "type": "reading_qa",
+          "passage": "我儿子今年16岁了，正在上中学。",
+          "question": "说话人的儿子是什么身份？",
+          "options": ["小学生", "中学生", "大学生"],
+          "correct": 1,
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q19",
+          "type": "reading_qa",
+          "passage": "小猫和小狗都在房间外睡觉呢。",
+          "question": "小狗在哪里？",
+          "options": ["桌子下", "房间里", "房间外"],
+          "correct": 2,
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q20",
+          "type": "reading_qa",
+          "passage": "我同学在这个学校工作很多年了，你有问题可以问他。",
+          "question": "说话人的同学在哪儿上班？",
+          "options": ["饭店", "医院", "学校"],
+          "correct": 2,
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q21",
+          "type": "reading_qa",
+          "passage": "这个小朋友写字真好看。",
+          "question": "那个小朋友怎么样？",
+          "options": ["名字好听", "写字好看", "正在读书"],
+          "correct": 1,
+          "mock_test": true
+        },
+        {
+          "id": "L15_Q22",
+          "type": "reading_qa",
+          "passage": "明天星期天，儿子想去看一个电影。",
+          "question": "儿子明天想做什么？",
+          "options": ["买电脑", "打电话", "看电影"],
+          "correct": 2
+        },
+        {
+          "id": "L15_Q23",
+          "type": "reading_qa",
+          "passage": "下小雨了，小狗非常高兴，它喜欢小雨。",
+          "question": "小狗喜欢什么？",
+          "options": ["下小雨", "下大雨", "下小雪"],
+          "correct": 0
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "totalQuestions": 500,
+    "byLesson": {
+      "1": 15,
+      "2": 12,
+      "3": 13,
+      "4": 25,
+      "5": 15,
+      "6": 14,
+      "7": 16,
+      "8": 14,
+      "9": 13,
+      "10": 15,
+      "11": 13,
+      "12": 12,
+      "13": 11,
+      "14": 12,
+      "15": 23
+    },
+    "byType": {
+      "listening_choose_word": 50,
+      "listening_fill_initial": 50,
+      "listening_fill_final": 50,
+      "listening_fill_tone": 50,
+      "listening_choose_picture": 50,
+      "listening_choose_answer": 50,
+      "reading_choose_picture": 50,
+      "reading_match": 50,
+      "reading_fill_blank": 50,
+      "reading_qa": 50
+    }
+  }
+}

@@ -1,0 +1,1720 @@
+{
+  "hsk1": {
+    "1": [
+      {
+        "type": "multiple_choice",
+        "question": "Cách chào hỏi thông dụng nhất trong tiếng Trung là gì?",
+        "options": ["你好", "您好", "你们好", "老师好"],
+        "answer": 0,
+        "explanation": "'你好' là cách chào hỏi thông dụng nhất trong giao tiếp hàng ngày."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "\"Cảm ơn\" trong tiếng Trung là gì?",
+        "options": ["对不起", "谢谢", "再见", "不客气"],
+        "answer": 1,
+        "explanation": "'谢谢' có nghĩa là cảm ơn."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi nói chuyện với người lớn tuổi hoặc cấp trên, ta nên dùng cách chào nào?",
+        "options": ["你好", "您好", "你们好", "你好吗"],
+        "answer": 1,
+        "explanation": "'您好' là kính ngữ, thể hiện sự tôn trọng với người lớn tuổi và cấp trên."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi ai đó nói \"谢谢\", bạn nên đáp lại như thế nào?",
+        "options": ["再见", "不客气", "你好", "对不起"],
+        "answer": 1,
+        "explanation": "'不客气' là cách đáp lại lịch sự khi được cảm ơn, có nghĩa là 'không có gì'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Cách chào thầy/cô giáo bằng tiếng Trung là gì?",
+        "options": ["学生好", "老师好", "你好"],
+        "answer": 1,
+        "explanation": "'老师好' là cách chào giáo viên trong trường học."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Phiên âm pinyin của từ \"再见\" là gì?",
+        "options": ["Zàijiàn", "Xièxie", "Nǐhǎo", "Bú kèqi"],
+        "answer": 0,
+        "explanation": "'Zàijiàn' là phiên âm pinyin của '再见'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ nào sau đây mang nghĩa là \"Đừng khách sáo\"?",
+        "options": ["不客气", "没关系", "再见", "谢谢"],
+        "answer": 0,
+        "explanation": "'不客气' có nghĩa là 'không có gì' hoặc 'đừng khách sáo'."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 1 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "你", "pinyin": "nǐ", "meaning": "bạn"},
+          {"hanzi": "您", "pinyin": "nín", "meaning": "bạn (kính ngữ)"},
+          {"hanzi": "你们", "pinyin": "nǐmen", "meaning": "các bạn"},
+          {"hanzi": "好", "pinyin": "hǎo", "meaning": "tốt"},
+          {"hanzi": "你好", "pinyin": "nǐ hǎo", "meaning": "xin chào"},
+          {"hanzi": "谢谢", "pinyin": "xièxie", "meaning": "cảm ơn"},
+          {"hanzi": "再见", "pinyin": "zàijiàn", "meaning": "tạm biệt"},
+          {"hanzi": "不客气", "pinyin": "bú kèqi", "meaning": "không có gì"},
+          {"hanzi": "老师", "pinyin": "lǎoshī", "meaning": "giáo viên"},
+          {"hanzi": "学生", "pinyin": "xuéshēng", "meaning": "học sinh"},
+          {"hanzi": "同学", "pinyin": "tóngxué", "meaning": "bạn cùng lớp"},
+          {"hanzi": "大家", "pinyin": "dàjiā", "meaning": "mọi người"},
+          {"hanzi": "们", "pinyin": "men", "meaning": "(hậu tố số nhiều)"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "___ 好！ (Chào bạn!)", "answer": "你"},
+          {"sentence": "谢谢！- 不 ___ 。 (Cảm ơn! - Không có gì)", "answer": "客气"},
+          {"sentence": "我是 ___ 。 (Tôi là học sinh)", "answer": "学生"},
+          {"sentence": "___ 们好！ (Chào các bạn!)", "answer": "你"},
+          {"sentence": "___ 见！ (Tạm biệt!)", "answer": "再"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Cảm ơn bạn!", "chinese": "谢谢你！"},
+          {"vietnamese": "Xin chào!", "chinese": "你好！"},
+          {"vietnamese": "Cô ấy là giáo viên.", "chinese": "她是老师。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["你", "好", "！"],
+        "answer": "你好！",
+        "explanation": "Cấu trúc đúng: 你 + 好 + ！"
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "谢谢", "right": "cảm ơn"},
+          {"left": "再见", "right": "tạm biệt"},
+          {"left": "老师", "right": "giáo viên"},
+          {"left": "学生", "right": "học sinh"}
+        ]
+      }
+    ],
+    "2": [
+      {
+        "type": "multiple_choice",
+        "question": "Trật tự câu cơ bản trong tiếng Trung là gì?",
+        "options": ["Chủ ngữ + Tân ngữ + Động từ", "Chủ ngữ + Động từ + Tân ngữ", "Động từ + Chủ ngữ + Tân ngữ", "Tân ngữ + Chủ ngữ + Động từ"],
+        "answer": 1,
+        "explanation": "Trật tự câu cơ bản trong tiếng Trung là Chủ ngữ + Động từ + Tân ngữ (SVO)."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Đại từ nghi vấn \"什么\" có nghĩa là gì?",
+        "options": ["Ai", "Ở đâu", "Cái gì", "Tại sao"],
+        "answer": 2,
+        "explanation": "'什么' có nghĩa là 'cái gì'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Để hỏi \"Bạn tên là gì?\", ta nói câu nào dưới đây?",
+        "options": ["你是谁？", "你叫什么名字？", "这是什么？", "你好吗？"],
+        "answer": 1,
+        "explanation": "'你叫什么名字？' là cách hỏi tên phổ biến."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi lỡ làm phiền hoặc có lỗi với ai đó, ta nói câu nào?",
+        "options": ["谢谢", "对不起", "不客气", "再见"],
+        "answer": 1,
+        "explanation": "'对不起' có nghĩa là xin lỗi."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi ai đó nói \"对不起\", cách đáp lại lịch sự là:",
+        "options": ["不客气", "没关系", "谢谢", "再见"],
+        "answer": 1,
+        "explanation": "'没关系' có nghĩa là 'không sao', dùng để đáp lại lời xin lỗi."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Điền từ vào chỗ trống: 我___学生 (Tôi là học sinh).",
+        "options": ["叫", "是", "好", "不"],
+        "answer": 1,
+        "explanation": "'是' có nghĩa là 'là', dùng để nối chủ ngữ với danh từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Ngoài \"没关系\", câu nào dưới đây cũng mang nghĩa \"Không có gì / Không sao đâu\"?",
+        "options": ["没事", "不叫", "不是", "不好"],
+        "answer": 0,
+        "explanation": "'没事' cũng có nghĩa là 'không sao'."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 2 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "我", "pinyin": "wǒ", "meaning": "tôi"},
+          {"hanzi": "是", "pinyin": "shì", "meaning": "là"},
+          {"hanzi": "叫", "pinyin": "jiào", "meaning": "tên là/gọi"},
+          {"hanzi": "名字", "pinyin": "míngzi", "meaning": "tên"},
+          {"hanzi": "什么", "pinyin": "shénme", "meaning": "gì"},
+          {"hanzi": "对不起", "pinyin": "duìbuqǐ", "meaning": "xin lỗi"},
+          {"hanzi": "没关系", "pinyin": "méi guānxi", "meaning": "không sao"},
+          {"hanzi": "没事", "pinyin": "méishì", "meaning": "không sao"},
+          {"hanzi": "很", "pinyin": "hěn", "meaning": "rất"},
+          {"hanzi": "认识", "pinyin": "rènshi", "meaning": "quen/biết"},
+          {"hanzi": "高兴", "pinyin": "gāoxìng", "meaning": "vui"},
+          {"hanzi": "请问", "pinyin": "qǐngwèn", "meaning": "xin hỏi"},
+          {"hanzi": "也", "pinyin": "yě", "meaning": "cũng"},
+          {"hanzi": "不", "pinyin": "bù", "meaning": "không"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "___ 起！ (Xin lỗi!)", "answer": "对不起"},
+          {"sentence": "我 ___ 高兴。 (Tôi rất vui)", "answer": "很"},
+          {"sentence": "你叫什么 ___ 字？ (Tên bạn là gì?)", "answer": "名"},
+          {"sentence": "我 ___ 学生。 (Tôi là học sinh)", "answer": "是"},
+          {"sentence": "她 ___ 是学生。 (Cô ấy cũng là học sinh)", "answer": "也"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Xin lỗi, tôi đến muộn.", "chinese": "对不起，我迟到了。"},
+          {"vietnamese": "Bạn tên là gì?", "chinese": "你叫什么名字？"},
+          {"vietnamese": "Rất vui được gặp bạn.", "chinese": "认识你很高兴。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "也", "是", "学生"],
+        "answer": "我也是学生。",
+        "explanation": "Cấu trúc đúng: 我 + 也 + 是 + 学生。"
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "对不起", "right": "xin lỗi"},
+          {"left": "没关系", "right": "không sao"},
+          {"left": "认识", "right": "quen/biết"},
+          {"left": "什么", "right": "gì"}
+        ]
+      }
+    ],
+    "3": [
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Tôi là người Trung Quốc.\"",
+        "options": ["我是中国人", "我叫中国人", "我有中国人", "我中国人"],
+        "answer": 0,
+        "explanation": "Cấu trúc đúng: 我 + 是 + 中国人."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dạng phủ định của câu chữ \"是\" là gì?",
+        "options": ["没是", "不叫", "不是", "没有"],
+        "answer": 2,
+        "explanation": "'不是' là dạng phủ định của '是', có nghĩa là 'không phải'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Điền từ vào chỗ trống: 他___法国人 (Anh ấy không phải người Pháp).",
+        "options": ["没", "不", "不是", "没有"],
+        "answer": 2,
+        "explanation": "'不是' là dạng phủ định đúng cho câu có '是'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Cụm từ \"Sách của tôi\" dịch sang tiếng Trung là gì?",
+        "options": ["我的书", "我书", "书的我", "是我的书"],
+        "answer": 0,
+        "explanation": "'的' là trợ từ sở hữu, đứng sau người sở hữu."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trong trường hợp nào có thể LƯỢC BỎ trợ từ \"的\"?",
+        "options": ["Người sở hữu + danh từ chỉ quan hệ thân thiết/gia đình", "Khi chỉ đồ vật thuộc sở hữu cá nhân", "Trong mọi trường hợp", "Không bao giờ được bỏ"],
+        "answer": 0,
+        "explanation": "'的' có thể được lược bỏ khi chỉ quan hệ gia đình thân thiết (VD: 我妈妈)."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trợ từ nghi vấn \"吗\" đứng ở vị trí nào trong câu hỏi?",
+        "options": ["Đầu câu", "Giữa câu", "Cuối câu", "Đứng trước động từ"],
+        "answer": 2,
+        "explanation": "'吗' đứng ở cuối câu để tạo câu hỏi Có/Không."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi đối phương hỏi \"你是学生吗？\", nếu KHÔNG PHẢI, bạn trả lời:",
+        "options": ["不", "不是", "没有", "不叫"],
+        "answer": 1,
+        "explanation": "'不是' là câu trả lời phủ định cho câu hỏi với '是'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ \"越南人\" có nghĩa là gì?",
+        "options": ["Người Trung Quốc", "Người Pháp", "Người Việt Nam", "Người Mỹ"],
+        "answer": 2,
+        "explanation": "'越南' là Việt Nam, '越南人' là người Việt Nam."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 3 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "的", "pinyin": "de", "meaning": "(trợ từ sở hữu)"},
+          {"hanzi": "人", "pinyin": "rén", "meaning": "người"},
+          {"hanzi": "国", "pinyin": "guó", "meaning": "nước"},
+          {"hanzi": "中国", "pinyin": "Zhōngguó", "meaning": "Trung Quốc"},
+          {"hanzi": "越南", "pinyin": "Yuènán", "meaning": "Việt Nam"},
+          {"hanzi": "法国", "pinyin": "Fǎguó", "meaning": "Pháp"},
+          {"hanzi": "谁", "pinyin": "shéi", "meaning": "ai"},
+          {"hanzi": "吗", "pinyin": "ma", "meaning": "(trợ từ hỏi)"},
+          {"hanzi": "她", "pinyin": "tā", "meaning": "cô ấy"},
+          {"hanzi": "我们", "pinyin": "wǒmen", "meaning": "chúng tôi"},
+          {"hanzi": "想", "pinyin": "xiǎng", "meaning": "muốn/nghĩ"},
+          {"hanzi": "太", "pinyin": "tài", "meaning": "quá"},
+          {"hanzi": "还", "pinyin": "hái", "meaning": "vẫn"},
+          {"hanzi": "忙", "pinyin": "máng", "meaning": "bận"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "你是 ___ 国人？ (Bạn là người nước nào?)", "answer": "哪"},
+          {"sentence": "他是 ___？ (Anh ấy là ai?)", "answer": "谁"},
+          {"sentence": "我 ___ 学习中文。 (Tôi muốn học tiếng Trung)", "answer": "想"},
+          {"sentence": "太好了！ (Tốt quá!)", "answer": "太"},
+          {"sentence": "___ 是学生吗？ (Bạn là học sinh à?)", "answer": "你"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Anh ấy là người Trung Quốc.", "chinese": "他是中国人。"},
+          {"vietnamese": "Tôi muốn học tiếng Trung.", "chinese": "我想学中文。"},
+          {"vietnamese": "Cô ấy là ai?", "chinese": "她是谁？"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "想", "去", "中国"],
+        "answer": "我想去中国。",
+        "explanation": "Cấu trúc: Chủ ngữ + 想 + 去 + địa điểm."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "中国", "right": "Trung Quốc"},
+          {"left": "法国", "right": "Pháp"},
+          {"left": "泰国", "right": "Thái Lan"},
+          {"left": "人", "right": "người"}
+        ]
+      }
+    ],
+    "4": [
+      {
+        "type": "multiple_choice",
+        "question": "Dạng phủ định của động từ \"有\" (có) là gì?",
+        "options": ["不有", "没有", "不是", "不叫"],
+        "answer": 1,
+        "explanation": "'没有' là dạng phủ định của '有', có nghĩa là 'không có'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi kết hợp với lượng từ để nói số lượng \"2\", người ta dùng chữ nào?",
+        "options": ["二 (èr)", "两 (liǎng)", "双 (shuāng)", "十 (shí)"],
+        "answer": 1,
+        "explanation": "'两' được dùng trước lượng từ để chỉ số 2."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Số 35 biểu thị trong tiếng Trung là:",
+        "options": ["五十三", "三十五", "十三五", "三五"],
+        "answer": 1,
+        "explanation": "35 = 三十 (30) + 五 (5)."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Lượng từ nào chuyên dùng để nói về số nhân khẩu (thành viên) trong gia đình?",
+        "options": ["个", "口", "位", "只"],
+        "answer": 1,
+        "explanation": "'口' là lượng từ chuyên dùng để đếm số người trong gia đình."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Gia đình tôi có 4 người.\"",
+        "options": ["我家有四个人", "我家有四口人", "我是四口人", "我有四个家"],
+        "answer": 1,
+        "explanation": "Cấu trúc đúng: 我家 + 有 + 四口人."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Câu \"Tôi không có anh trai\" dịch sang tiếng Trung là gì?",
+        "options": ["我不有哥哥", "我没有哥哥", "我不是哥哥", "我没哥哥有"],
+        "answer": 1,
+        "explanation": "'没有' là dạng phủ định của '有'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trợ từ \"呢\" trong câu \"我是学生，你呢？\" có tác dụng gì?",
+        "options": ["Rủ rê đi chơi", "Hỏi lại tình huống tương tự của đối tượng khác", "Bắt buộc trả lời Có/Không", "Nhấn mạnh sự việc diễn ra"],
+        "answer": 1,
+        "explanation": "'呢' dùng để hỏi lại cùng câu hỏi với đối tượng khác."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Phiên âm pinyin của số \"48\" là gì?",
+        "options": ["Sìshí bā", "Shíbā sì", "Bāshí sì", "Sì bā"],
+        "answer": 0,
+        "explanation": "48 = 四十 (sìshí) + 八 (bā)."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 4 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "一", "pinyin": "yī", "meaning": "một"},
+          {"hanzi": "二", "pinyin": "èr", "meaning": "hai"},
+          {"hanzi": "两", "pinyin": "liǎng", "meaning": "hai (trước lượng từ)"},
+          {"hanzi": "三", "pinyin": "sān", "meaning": "ba"},
+          {"hanzi": "四", "pinyin": "sì", "meaning": "bốn"},
+          {"hanzi": "五", "pinyin": "wǔ", "meaning": "năm"},
+          {"hanzi": "六", "pinyin": "liù", "meaning": "sáu"},
+          {"hanzi": "七", "pinyin": "qī", "meaning": "bảy"},
+          {"hanzi": "八", "pinyin": "bā", "meaning": "tám"},
+          {"hanzi": "九", "pinyin": "jiǔ", "meaning": "chín"},
+          {"hanzi": "十", "pinyin": "shí", "meaning": "mười"},
+          {"hanzi": "百", "pinyin": "bǎi", "meaning": "trăm"},
+          {"hanzi": "千", "pinyin": "qiān", "meaning": "nghìn"},
+          {"hanzi": "零", "pinyin": "líng", "meaning": "không"},
+          {"hanzi": "家", "pinyin": "jiā", "meaning": "gia đình/nhà"},
+          {"hanzi": "口", "pinyin": "kǒu", "meaning": "(lượng từ cho người)"},
+          {"hanzi": "有", "pinyin": "yǒu", "meaning": "có"},
+          {"hanzi": "没有", "pinyin": "méiyǒu", "meaning": "không có"},
+          {"hanzi": "几", "pinyin": "jǐ", "meaning": "mấy"},
+          {"hanzi": "多少", "pinyin": "duōshǎo", "meaning": "bao nhiêu"},
+          {"hanzi": "岁", "pinyin": "suì", "meaning": "tuổi"},
+          {"hanzi": "爸爸", "pinyin": "bàba", "meaning": "bố"},
+          {"hanzi": "妈妈", "pinyin": "māmā", "meaning": "mẹ"},
+          {"hanzi": "哥哥", "pinyin": "gēge", "meaning": "anh trai"},
+          {"hanzi": "姐姐", "pinyin": "jiějie", "meaning": "chị gái"},
+          {"hanzi": "弟弟", "pinyin": "dìdi", "meaning": "em trai"},
+          {"hanzi": "妹妹", "pinyin": "mèimei", "meaning": "em gái"},
+          {"hanzi": "儿子", "pinyin": "érzi", "meaning": "con trai"},
+          {"hanzi": "女儿", "pinyin": "nǚ'ér", "meaning": "con gái"},
+          {"hanzi": "孩子", "pinyin": "háizi", "meaning": "trẻ con"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "我家有 ___ 口人。 (3 người)", "answer": "三"},
+          {"sentence": "你几 ___？ (Bạn bao nhiêu tuổi?)", "answer": "岁"},
+          {"sentence": "我 ___ 一个姐姐。 (Tôi có một chị gái)", "answer": "有"},
+          {"sentence": "我爸爸 ___ 妈妈都是老师。 (Bố và mẹ tôi đều là giáo viên)", "answer": "和"},
+          {"sentence": "今年我 ___ 十岁。 (Năm nay tôi 20 tuổi)", "answer": "二"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Gia đình tôi có 3 người.", "chinese": "我家有三口人。"},
+          {"vietnamese": "Năm nay tôi 20 tuổi.", "chinese": "今年我二十岁。"},
+          {"vietnamese": "Bạn có bao nhiêu quyển sách?", "chinese": "你有多少本书？"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我家", "有", "三口", "人"],
+        "answer": "我家有三口人。",
+        "explanation": "Cấu trúc: 我家 + 有 + số lượng + 口 + 人."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "爸爸", "right": "bố"},
+          {"left": "妈妈", "right": "mẹ"},
+          {"left": "哥哥", "right": "anh trai"},
+          {"left": "姐姐", "right": "chị gái"},
+          {"left": "弟弟", "right": "em trai"},
+          {"left": "妹妹", "right": "em gái"}
+        ]
+      }
+    ],
+    "5": [
+      {
+        "type": "multiple_choice",
+        "question": "Trật tự sắp xếp thời gian trong tiếng Trung chuẩn là gì?",
+        "options": ["Nhỏ trước lớn sau (Thứ - Ngày - Tháng - Năm)", "Lớn trước nhỏ sau (Năm - Tháng - Ngày - Thứ)", "Tháng - Ngày - Năm - Thứ", "Tùy ý thích đặt đâu cũng được"],
+        "answer": 1,
+        "explanation": "Trong tiếng Trung, thời gian được sắp xếp từ lớn đến nhỏ: Năm → Tháng → Ngày."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Năm \"2024\" được đọc từng chữ số như thế nào?",
+        "options": ["两千二十四 (Liǎng qiān èrshí sì)", "二零二四 (Èr líng èr sì)", "二十二十四 (Èrshí èrshí sì)", "二千二四 (Èr qiān èr sì)"],
+        "answer": 1,
+        "explanation": "Năm 2024 đọc là 二零二四 (Èr líng èr sì)."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trong giao tiếp khẩu ngữ hàng ngày, từ nào được dùng phổ biến để chỉ \"ngày (trong tháng)\"?",
+        "options": ["日", "号", "月", "年"],
+        "answer": 1,
+        "explanation": "Trong khẩu ngữ, '号' được dùng phổ biến hơn '日' để chỉ ngày."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Động từ năng nguyện \"会\" biểu thị khả năng như thế nào?",
+        "options": ["Khả năng bẩm sinh khi sinh ra đã có", "Khả năng có được nhờ học tập và rèn luyện", "Cho phép / xin phép làm gì", "Mong muốn chủ quan"],
+        "answer": 1,
+        "explanation": "'会' chỉ khả năng có được thông qua học tập và rèn luyện."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Bạn biết nấu ăn không?\"",
+        "options": ["你会做饭吗？", "你想做饭吗？", "你是做饭吗？", "你有做饭吗？"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 你 + 会 + 做饭 + 吗？"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Ví dụ nào sau đây là \"Câu vị ngữ danh từ\"?",
+        "options": ["我是学生。", "今天5月1号。", "我吃面条。", "他去超市。"],
+        "answer": 1,
+        "explanation": "Câu vị ngữ danh từ có vị ngữ là danh từ hoặc cụm danh từ, không có động từ '是'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "\"Chủ nhật\" trong tiếng Trung viết là:",
+        "options": ["星期七", "星期日 / 星期天", "星期六", "星期八"],
+        "answer": 1,
+        "explanation": "'星期日' hoặc '星期天' đều có nghĩa là Chủ nhật."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dạng phủ định của \"会\" là gì?",
+        "options": ["没会", "不会", "不学会", "没学会"],
+        "answer": 1,
+        "explanation": "'不会' là dạng phủ định của '会'."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 5 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "今天", "pinyin": "jīntiān", "meaning": "hôm nay"},
+          {"hanzi": "明天", "pinyin": "míngtiān", "meaning": "ngày mai"},
+          {"hanzi": "号", "pinyin": "hào", "meaning": "số/ngày"},
+          {"hanzi": "日", "pinyin": "rì", "meaning": "ngày"},
+          {"hanzi": "星期", "pinyin": "xīngqī", "meaning": "tuần/thứ"},
+          {"hanzi": "会", "pinyin": "huì", "meaning": "biết/có thể"},
+          {"hanzi": "不会", "pinyin": "bù huì", "meaning": "không biết"},
+          {"hanzi": "喜欢", "pinyin": "xǐhuān", "meaning": "thích"},
+          {"hanzi": "休息", "pinyin": "xiūxi", "meaning": "nghỉ ngơi"},
+          {"hanzi": "菜", "pinyin": "cài", "meaning": "rau/món ăn"},
+          {"hanzi": "好吃", "pinyin": "hǎochī", "meaning": "ngon"},
+          {"hanzi": "好看", "pinyin": "hǎokàn", "meaning": "đẹp"},
+          {"hanzi": "新", "pinyin": "xīn", "meaning": "mới"},
+          {"hanzi": "真", "pinyin": "zhēn", "meaning": "thật"},
+          {"hanzi": "电脑", "pinyin": "diànnǎo", "meaning": "máy tính"},
+          {"hanzi": "饺子", "pinyin": "jiǎozǐ", "meaning": "sủi cảo"},
+          {"hanzi": "面条儿", "pinyin": "miàntiáor", "meaning": "mì sợi"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "我 ___ 说中文。 (Tôi biết nói tiếng Trung)", "answer": "会"},
+          {"sentence": "这个菜很 ___。 (Món này rất ngon)", "answer": "好吃"},
+          {"sentence": "今天是星期 ___。 (Hôm nay là Chủ nhật)", "answer": "日"},
+          {"sentence": "我 ___ 去图书馆。 (Tôi thích đến thư viện)", "answer": "喜欢"},
+          {"sentence": "___ 是星期一。 (Ngày mai là thứ Hai)", "answer": "明天"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Tôi thích ăn sủi cảo.", "chinese": "我喜欢吃饺子。"},
+          {"vietnamese": "Hôm nay là thứ mấy?", "chinese": "今天星期几？"},
+          {"vietnamese": "Tôi muốn nghỉ một chút.", "chinese": "我想休息一下。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "喜欢", "吃", "饺子"],
+        "answer": "我喜欢吃饺子。",
+        "explanation": "Cấu trúc: 我 + 喜欢 + 吃 + 饺子。"
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "电脑", "right": "máy tính"},
+          {"left": "饺子", "right": "sủi cảo"},
+          {"left": "面条儿", "right": "mì sợi"},
+          {"left": "星期", "right": "tuần/thứ"}
+        ]
+      }
+    ],
+    "6": [
+      {
+        "type": "multiple_choice",
+        "question": "Khi đứng trước một động từ khác, trợ động từ \"想\" biểu thị điều gì?",
+        "options": ["Suy nghĩ, đắn đo", "Nhớ nhung ai đó", "Mong muốn / Ý định làm gì", "Bắt buộc phải làm"],
+        "answer": 2,
+        "explanation": "'想' + động từ biểu thị mong muốn hoặc ý định làm gì."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Tôi muốn đi siêu thị mua đồ.\"",
+        "options": ["我想去超市买东西", "我去超市想买东西", "买东西我想去超市", "超市我想去买东西"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 想 + 去 + địa điểm + 买 + đồ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Đại từ nghi vấn \"怎么\" đứng trước động từ dùng để hỏi về điều gì?",
+        "options": ["Thời gian diễn ra hành động", "Phương thức / Cách thức thực hiện hành động", "Địa điểm diễn ra hành động", "Lý do / Nguyên nhân"],
+        "answer": 1,
+        "explanation": "'怎么' hỏi về phương thức hoặc cách thức thực hiện hành động."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu hỏi: \"Chúng ta đi đến đó bằng cách nào?\"",
+        "options": ["我们什么去？", "我们怎么去？", "我们谁去？", "我们去哪儿？"],
+        "answer": 1,
+        "explanation": "'怎么' dùng để hỏi về cách thức di chuyển."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trong câu liên động thể hiện phương thức + địa điểm + hành động, thứ tự chuẩn là gì?",
+        "options": ["Động từ hành động -> Phương thức -> Nơi chốn", "Phương thức -> Nơi chốn -> Động từ hành động", "Nơi chốn -> Phương thức -> Động từ hành động", "Tùy ý sắp xếp"],
+        "answer": 1,
+        "explanation": "Thứ tự chuẩn: Phương thức → Nơi chốn → Động từ hành động."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Điền từ vào chỗ trống: 你的手机号码是___？(Số điện thoại của bạn là bao nhiêu?)",
+        "options": ["什么", "多少", "怎么", "几"],
+        "answer": 1,
+        "explanation": "'多少' dùng để hỏi số lượng lớn hoặc thông tin số như số điện thoại."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Chúng tôi đi taxi đến khách sạn.\"",
+        "options": ["我们坐出租车去饭店", "我们去饭店坐出租车", "出租车坐去我们饭店", "我们饭店坐出租车去"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 坐 + phương tiện + 去 + địa điểm."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Phủ định của \"想\" khi từ chối ý định làm gì thường dùng từ nào?",
+        "options": ["不想", "没想", "不想要", "没想去"],
+        "answer": 0,
+        "explanation": "'不想' là cách phủ định của '想' khi từ chối ý định."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 6 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "超市", "pinyin": "chāoshì", "meaning": "siêu thị"},
+          {"hanzi": "饭店", "pinyin": "fàndiàn", "meaning": "nhà hàng"},
+          {"hanzi": "出租车", "pinyin": "chūzūchē", "meaning": "taxi"},
+          {"hanzi": "坐", "pinyin": "zuò", "meaning": "ngồi/đi"},
+          {"hanzi": "去", "pinyin": "qù", "meaning": "đi"},
+          {"hanzi": "来", "pinyin": "lái", "meaning": "đến"},
+          {"hanzi": "想", "pinyin": "xiǎng", "meaning": "muốn/nghĩ"},
+          {"hanzi": "怎么", "pinyin": "zěnme", "meaning": "thế nào"},
+          {"hanzi": "什么", "pinyin": "shénme", "meaning": "gì"},
+          {"hanzi": "多少", "pinyin": "duōshǎo", "meaning": "bao nhiêu"},
+          {"hanzi": "东西", "pinyin": "dōngxi", "meaning": "đồ vật"},
+          {"hanzi": "买", "pinyin": "mǎi", "meaning": "mua"},
+          {"hanzi": "做", "pinyin": "zuò", "meaning": "làm"},
+          {"hanzi": "吃", "pinyin": "chī", "meaning": "ăn"},
+          {"hanzi": "喝", "pinyin": "hē", "meaning": "uống"},
+          {"hanzi": "电话", "pinyin": "diànhuà", "meaning": "điện thoại"},
+          {"hanzi": "手机", "pinyin": "shǒujī", "meaning": "điện thoại di động"},
+          {"hanzi": "非常", "pinyin": "fēicháng", "meaning": "rất"},
+          {"hanzi": "雨", "pinyin": "yǔ", "meaning": "mưa"},
+          {"hanzi": "雪", "pinyin": "xuě", "meaning": "tuyết"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "明天会下 ___ 吗？ (Ngày mai trời có tuyết không?)", "answer": "雪"},
+          {"sentence": "我 ___ 去中国。 (Tôi muốn đi Trung Quốc)", "answer": "想"},
+          {"sentence": "你 ___ 么了？ (Bạn làm sao thế?)", "answer": "怎"},
+          {"sentence": "我坐 ___ 车去。 (Tôi đi taxi)", "answer": "出租"},
+          {"sentence": "妈妈在 ___ 饭。 (Mẹ đang nấu cơm)", "answer": "做"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Ngày mai sẽ có tuyết rơi.", "chinese": "明天会下雪。"},
+          {"vietnamese": "Tôi đi siêu thị.", "chinese": "我去超市。"},
+          {"vietnamese": "Cô ấy đang gọi điện thoại cho bạn.", "chinese": "她正在给朋友打电话。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "去", "超市", "买", "东西"],
+        "answer": "我去超市买东西。",
+        "explanation": "Cấu trúc: 去 + địa điểm + 买 + vật."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "雪", "right": "tuyết"},
+          {"left": "雨", "right": "mưa"},
+          {"left": "牛奶", "right": "sữa"},
+          {"left": "米饭", "right": "cơm"}
+        ]
+      }
+    ],
+    "7": [
+      {
+        "type": "multiple_choice",
+        "question": "Cách nói \"2 giờ (đúng)\" trong tiếng Trung là gì?",
+        "options": ["二点", "两点", "双点", "二点钟"],
+        "answer": 1,
+        "explanation": "'两点' là cách nói đúng cho 2 giờ, dùng '两' trước lượng từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi số phút lẻ dưới 10 (ví dụ 9 giờ 05 phút), ta cần chèn thêm từ nào trước số phút?",
+        "options": ["零 (líng)", "一 (yī)", "不 (bù)", "有 (yǒu)"],
+        "answer": 0,
+        "explanation": "'零' được chèn vào trước số phút dưới 10."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trợ từ ngữ khí \"吧\" đặt ở đâu và biểu thị điều gì?",
+        "options": ["Đầu câu, hỏi nguyên nhân", "Cuối câu, biểu thị sự thương lượng, đề nghị nhẹ nhàng (nhé, đi)", "Giữa câu, biểu thị quan hệ sở hữu", "Cuối câu, biểu thị sự phủ định"],
+        "answer": 1,
+        "explanation": "'吧' đặt cuối câu để đưa ra đề nghị hoặc gợi ý."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Chúng ta gặp nhau lúc 3 giờ chiều nhé.\"",
+        "options": ["我们下午三点见吧", "我们三点下午见吧", "下午三点我们见吗", "我们吧下午三点见"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 我们 + 下午三点 + 见 + 吧."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Nếu từ chỉ thời gian và phó từ (như 很, 不, 想...) cùng xuất hiện làm trạng ngữ, thứ tự nào chuẩn?",
+        "options": ["Phó từ -> Từ chỉ thời gian", "Từ chỉ thời gian -> Phó từ", "Đứng ở đâu cũng được", "Xếp sau động từ"],
+        "answer": 1,
+        "explanation": "Thứ tự đúng: Từ chỉ thời gian → Phó từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "\"6 giờ rưỡi\" nói bằng tiếng Trung là gì?",
+        "options": ["六点半", "六点五", "六点三十五", "六半点"],
+        "answer": 0,
+        "explanation": "'半' có nghĩa là rưỡi, đứng sau '点'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ \"下班\" có nghĩa là gì?",
+        "options": ["Đi làm", "Tan làm / Xuất viện", "Thượng lớp / Vào học", "Đi ngủ"],
+        "answer": 1,
+        "explanation": "'下班' có nghĩa là tan làm hoặc xuất viện."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 7 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "现在", "pinyin": "xiànzài", "meaning": "bây giờ"},
+          {"hanzi": "点", "pinyin": "diǎn", "meaning": "giờ"},
+          {"hanzi": "分", "pinyin": "fēn", "meaning": "phút"},
+          {"hanzi": "半", "pinyin": "bàn", "meaning": "rưỡi/nửa"},
+          {"hanzi": "吧", "pinyin": "ba", "meaning": "(trợ từ đề nghị)"},
+          {"hanzi": "呢", "pinyin": "ne", "meaning": "(trợ từ hỏi)"},
+          {"hanzi": "上午", "pinyin": "shàngwǔ", "meaning": "buổi sáng"},
+          {"hanzi": "下午", "pinyin": "xiàwǔ", "meaning": "buổi chiều"},
+          {"hanzi": "晚上", "pinyin": "wǎnshang", "meaning": "buổi tối"},
+          {"hanzi": "早上", "pinyin": "zǎoshang", "meaning": "buổi sáng sớm"},
+          {"hanzi": "上班", "pinyin": "shàngbān", "meaning": "đi làm"},
+          {"hanzi": "下班", "pinyin": "xiàbān", "meaning": "tan làm"},
+          {"hanzi": "上课", "pinyin": "shàngkè", "meaning": "học"},
+          {"hanzi": "下课", "pinyin": "xiàkè", "meaning": "tan học"},
+          {"hanzi": "见", "pinyin": "jiàn", "meaning": "gặp"},
+          {"hanzi": "看", "pinyin": "kàn", "meaning": "nhìn/xem"},
+          {"hanzi": "电影", "pinyin": "diànyǐng", "meaning": "phim"},
+          {"hanzi": "电影院", "pinyin": "diànyǐngyuàn", "meaning": "rạp chiếu phim"},
+          {"hanzi": "医院", "pinyin": "yīyuàn", "meaning": "bệnh viện"},
+          {"hanzi": "店", "pinyin": "diàn", "meaning": "cửa hàng"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "现在 ___ 点了？ (Bây giờ là mấy giờ?)", "answer": "几"},
+          {"sentence": "明天 ___！ (Hẹn mai gặp lại!)", "answer": "见"},
+          {"sentence": "他 ___ 班去了。 (Anh ấy đi làm rồi)", "answer": "上"},
+          {"sentence": "她在 ___ 院工作。 (Cô ấy làm việc ở bệnh viện)", "answer": "医"},
+          {"sentence": "我们上 ___ 了。 (Chúng tôi bắt đầu học rồi)", "answer": "课"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Bây giờ là mấy giờ?", "chinese": "现在几点了？"},
+          {"vietnamese": "Tôi xem phim.", "chinese": "我看电影。"},
+          {"vietnamese": "Anh ấy ở bệnh viện.", "chinese": "他在医院。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["现在", "几点", "了"],
+        "answer": "现在几点了？",
+        "explanation": "Cấu trúc câu hỏi giờ: 现在 + 几点 + 了 + ？"
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "上午", "right": "buổi sáng (trước 12h)"},
+          {"left": "下午", "right": "buổi chiều (sau 12h)"},
+          {"left": "晚上", "right": "buổi tối"},
+          {"left": "早上", "right": "buổi sáng sớm"}
+        ]
+      }
+    ],
+    "8": [
+      {
+        "type": "multiple_choice",
+        "question": "Cụm từ \"ở trên bàn\" dịch sang tiếng Trung chuẩn là gì?",
+        "options": ["在桌子上", "在上桌子", "桌子在上", "在桌子中"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 在 + danh từ + phương vị từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trật tự câu chỉ địa điểm diễn ra hành động trong tiếng Trung là gì?",
+        "options": ["S + V + 在 + Địa điểm", "S + 在 + Địa điểm + V", "在 + S + V + Địa điểm", "S + V + 地点 + 在"],
+        "answer": 1,
+        "explanation": "Trật tự đúng: Chủ ngữ + 在 + Địa điểm + Động từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Bố tôi cũng làm việc ở bệnh viện.\"",
+        "options": ["我爸爸也工作在医院", "我爸爸也在医院工作", "在医院我爸爸也工作", "我爸爸工作也在医院"],
+        "answer": 1,
+        "explanation": "Cấu trúc: 也 + 在 + địa điểm + động từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khác biệt chính giữa động từ năng nguyện \"会\" và \"能\" là gì?",
+        "options": ["会 dùng cho thời gian, 能 dùng cho địa điểm", "会 chỉ kỹ năng qua học tập, 能 chỉ điều kiện/khả năng thực hiện", "Hai từ này hoàn toàn giống nhau", "能 chỉ kỹ năng rèn luyện, 会 chỉ điều kiện"],
+        "answer": 1,
+        "explanation": "'会' chỉ kỹ năng học được, '能' chỉ khả năng hoặc điều kiện cho phép."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Phương vị từ nào có nghĩa là \"bên trong\"?",
+        "options": ["外边", "里边", "前边", "后边"],
+        "answer": 1,
+        "explanation": "'里边' có nghĩa là bên trong."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Chiều nay 2 giờ bạn có thể đến không?\"",
+        "options": ["下午两点你可以到吗？", "下午两点你能到吗？", "下午两点你会到吗？", "下午两点你要到吗？"],
+        "answer": 1,
+        "explanation": "'能' dùng để hỏi về khả năng thực hiện hành động."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Phủ định của động từ năng nguyện \"能\" là gì?",
+        "options": ["没能", "不能", "不会能", "没有能"],
+        "answer": 1,
+        "explanation": "'不能' là dạng phủ định của '能'."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 8 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "在", "pinyin": "zài", "meaning": "ở/tại"},
+          {"hanzi": "上", "pinyin": "shàng", "meaning": "trên"},
+          {"hanzi": "下", "pinyin": "xià", "meaning": "dưới"},
+          {"hanzi": "里", "pinyin": "lǐ", "meaning": "bên trong"},
+          {"hanzi": "外", "pinyin": "wài", "meaning": "bên ngoài"},
+          {"hanzi": "前边", "pinyin": "qiánbian", "meaning": "phía trước"},
+          {"hanzi": "后边", "pinyin": "hòubian", "meaning": "phía sau"},
+          {"hanzi": "能", "pinyin": "néng", "meaning": "có thể"},
+          {"hanzi": "不能", "pinyin": "bù néng", "meaning": "không thể"},
+          {"hanzi": "到", "pinyin": "dào", "meaning": "đến"},
+          {"hanzi": "看见", "pinyin": "kànjiàn", "meaning": "nhìn thấy"},
+          {"hanzi": "医生", "pinyin": "yīshēng", "meaning": "bác sĩ"},
+          {"hanzi": "学校", "pinyin": "xuéxiào", "meaning": "trường học"},
+          {"hanzi": "桌子", "pinyin": "zhuōzi", "meaning": "cái bàn"},
+          {"hanzi": "猫", "pinyin": "māo", "meaning": "mèo"},
+          {"hanzi": "只", "pinyin": "zhǐ", "meaning": "chỉ"},
+          {"hanzi": "没", "pinyin": "méi", "meaning": "chưa/không"},
+          {"hanzi": "漂亮", "pinyin": "piàoliang", "meaning": "đẹp"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "我 ___ 见他了。 (Tôi nhìn thấy anh ấy rồi)", "answer": "看见"},
+          {"sentence": "她 ___ 漂亮。 (Cô ấy rất đẹp)", "answer": "很"},
+          {"sentence": "我 ___ 会说中文。 (Tôi chỉ biết nói tiếng Trung)", "answer": "只"},
+          {"sentence": "他 ___ 医院工作。 (Anh ấy làm việc ở bệnh viện)", "answer": "在"},
+          {"sentence": "___ 生，你好！ (Chào bác sĩ!)", "answer": "医"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Tôi nhìn thấy con mèo.", "chinese": "我看见猫了。"},
+          {"vietnamese": "Cô ấy ở bệnh viện.", "chinese": "她在医院。"},
+          {"vietnamese": "Tôi có thể đến.", "chinese": "我能来。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "看见", "他", "了"],
+        "answer": "我看见他了。",
+        "explanation": "Cấu trúc: 我 + 看见 + tân ngữ + 了."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "医生", "right": "bác sĩ"},
+          {"left": "学校", "right": "trường học"},
+          {"left": "桌子", "right": "cái bàn"},
+          {"left": "猫", "right": "con mèo"}
+        ]
+      }
+    ],
+    "9": [
+      {
+        "type": "multiple_choice",
+        "question": "Sự khác biệt giữa \"有\" và \"是\" trong câu tồn hiện biểu thị địa điểm là gì?",
+        "options": ["有 dùng cho người, 是 dùng cho vật", "有 biểu thị sự tồn tại chung chung, 是 xác định rõ danh tính đối tượng", "有 đứng đầu câu, 是 đứng cuối câu", "Hai từ hoàn toàn giống hệt nhau"],
+        "answer": 1,
+        "explanation": "'有' chỉ sự tồn tại chung chung, '是' xác định rõ danh tính đối tượng."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trật tự đúng khi câu có cả Trạng ngữ thời gian, Phó từ và Trạng ngữ nơi chốn là:",
+        "options": ["Nơi chốn -> Thời gian -> Phó từ", "Thời gian -> Phó từ -> Nơi chốn", "Phó từ -> Nơi chốn -> Thời gian", "Nơi chốn -> Phó từ -> Thời gian"],
+        "answer": 1,
+        "explanation": "Thứ tự đúng: Thời gian → Phó từ → Nơi chốn."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Để biểu thị số thứ tự (ví dụ: Thứ nhất, thứ hai), người ta thêm từ nào vào trước số đếm?",
+        "options": ["个", "第", "初", "号"],
+        "answer": 1,
+        "explanation": "'第' được thêm trước số đếm để tạo số thứ tự."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Cụm \"Cuốn sách tiếng Trung thứ hai\" dịch là gì?",
+        "options": ["第二本中文书", "二本中文书第", "中文书第二本", "第二中文书本"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 第 + số + lượng từ + danh từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dạng phủ định của câu tồn hiện \"桌子上有一只猫\" là:",
+        "options": ["桌子上不有一只猫", "桌子上没有猫", "桌子上不是一只猫", "桌子上没是一只猫"],
+        "answer": 1,
+        "explanation": "'没有' là dạng phủ định của '有' trong câu tồn hiện."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Phía trước trường học có một rạp chiếu phim.\"",
+        "options": ["学校前边有一家电影院", "有一家电影院学校前边", "学校前边是电影院一家", "一家电影院在学校前边"],
+        "answer": 0,
+        "explanation": "Cấu trúc: Địa điểm + 有 + đối tượng."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ \"电影院\" có nghĩa là gì?",
+        "options": ["Bệnh viện", "Trường học", "Rạp chiếu phim", "Siêu thị"],
+        "answer": 2,
+        "explanation": "'电影' là phim, '院' là nơi chốn, '电影院' là rạp chiếu phim."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 9 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "本", "pinyin": "běn", "meaning": "quyển (sách)"},
+          {"hanzi": "书", "pinyin": "shū", "meaning": "sách"},
+          {"hanzi": "第", "pinyin": "dì", "meaning": "thứ (số thứ tự)"},
+          {"hanzi": "边", "pinyin": "biān", "meaning": "bên/cạnh"},
+          {"hanzi": "前边", "pinyin": "qiánbian", "meaning": "phía trước"},
+          {"hanzi": "后边", "pinyin": "hòubian", "meaning": "phía sau"},
+          {"hanzi": "读书", "pinyin": "dúshū", "meaning": "đọc sách"},
+          {"hanzi": "学习", "pinyin": "xuéxí", "meaning": "học tập"},
+          {"hanzi": "唱歌", "pinyin": "chànggē", "meaning": "hát"},
+          {"hanzi": "歌", "pinyin": "gē", "meaning": "bài hát"},
+          {"hanzi": "电视", "pinyin": "diànshì", "meaning": "tivi"},
+          {"hanzi": "玩", "pinyin": "wán", "meaning": "chơi"},
+          {"hanzi": "朋友", "pinyin": "péngyou", "meaning": "bạn"},
+          {"hanzi": "狗", "pinyin": "gǒu", "meaning": "chó"},
+          {"hanzi": "猫", "pinyin": "māo", "meaning": "mèo"},
+          {"hanzi": "椅子", "pinyin": "yǐzi", "meaning": "cái ghế"},
+          {"hanzi": "那", "pinyin": "nà", "meaning": "đó"},
+          {"hanzi": "那个", "pinyin": "nàge", "meaning": "cái đó"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "我 ___ 歌。 (Tôi hát bài hát)", "answer": "唱"},
+          {"sentence": "他是我的 ___。 (Anh ấy là bạn của tôi)", "answer": "朋友"},
+          {"sentence": "___ 本书。 (Một quyển sách)", "answer": "一"},
+          {"sentence": "___ 电视。 (Xem tivi)", "answer": "看"},
+          {"sentence": "桌子上有 ___。 (Trên bàn có sách)", "answer": "书"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Tôi thích hát.", "chinese": "我喜欢唱歌。"},
+          {"vietnamese": "Có một người ở phía trước.", "chinese": "前边有一个人。"},
+          {"vietnamese": "Tôi đang đọc sách.", "chinese": "我在读书。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "在", "读书"],
+        "answer": "我在读书。",
+        "explanation": "Cấu trúc: 在 + động từ chỉ hành động đang diễn ra."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "狗", "right": "chó"},
+          {"left": "猫", "right": "mèo"},
+          {"left": "书", "right": "sách"},
+          {"left": "朋友", "right": "bạn"}
+        ]
+      }
+    ],
+    "10": [
+      {
+        "type": "multiple_choice",
+        "question": "Trong khẩu ngữ giao tiếp hàng ngày, đơn vị tiền tệ \"Tệ\" và \"Hào\" thường dùng từ nào?",
+        "options": ["元 và 角", "块 và 毛", "块 và 分", "元 và 毛"],
+        "answer": 1,
+        "explanation": "Trong khẩu ngữ, '块' dùng cho đồng Tệ, '毛' dùng cho hào."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Cách biểu đạt \"2 tệ 5 hào\" trong khẩu ngữ là gì?",
+        "options": ["二块五毛", "两块五毛", "二元五角", "两二五"],
+        "answer": 1,
+        "explanation": "'两块五毛' là cách nói khẩu ngữ cho 2,5 Tệ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Sự khác biệt vị trí ngữ pháp giữa \"怎么\" và \"怎么样\" là gì?",
+        "options": ["怎么 đứng cuối câu, 怎么样 đứng trước động từ", "怎么 đứng trước động từ, 怎么样 đứng ở cuối câu", "Cả hai đều bắt buộc đứng đầu câu", "Không có khác biệt gì"],
+        "answer": 1,
+        "explanation": "'怎么' đứng trước động từ, '怎么样' đứng ở cuối câu."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu hỏi: \"Hôm nay thời tiết thế nào?\"",
+        "options": ["今天天气怎么？", "今天天气怎么样？", "今天天气什么？", "今天天气多少？"],
+        "answer": 1,
+        "explanation": "'怎么样' đứng cuối câu để hỏi về tình trạng/thế nào."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trong câu vị ngữ tính từ khẳng định, trước tính từ thường thêm phó từ mức độ nào?",
+        "options": ["不", "很 / 真", "没", "是"],
+        "answer": 1,
+        "explanation": "Trước tính từ thường có '很' hoặc '真' để biểu thị mức độ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Táo ở đây thật rẻ!\"",
+        "options": ["这儿的苹果真便宜！", "这儿的苹果很贵！", "便宜这儿 look 苹果！", "苹果这儿真便宜！"],
+        "answer": 0,
+        "explanation": "Cấu trúc: Địa điểm + 的 + danh từ + 真 + tính từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ \"便宜\" trong tiêu đề bài có nghĩa là gì?",
+        "options": ["Đắt", "Rẻ", "Ngon", "Tươi"],
+        "answer": 1,
+        "explanation": "'便宜' có nghĩa là rẻ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Đơn vị trọng lượng \"一斤\" (1 cân Trung Quốc) bằng bao nhiêu gam?",
+        "options": ["1000g (1kg)", "500g (0.5kg)", "200g", "100g"],
+        "answer": 1,
+        "explanation": "1 斤 = 500g = 0.5kg."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Phủ định của câu vị ngữ tính từ (ví dụ: Không đắt) dùng từ nào?",
+        "options": ["没 (不贵 -> 没贵)", "不 (不贵)", "没有 (没有贵)", "别 (别贵)"],
+        "answer": 1,
+        "explanation": "'不' là từ phủ định cho câu vị ngữ tính từ."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 10 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "钱", "pinyin": "qián", "meaning": "tiền"},
+          {"hanzi": "块", "pinyin": "kuài", "meaning": "đồng (tiền)"},
+          {"hanzi": "毛", "pinyin": "máo", "meaning": "hào"},
+          {"hanzi": "元", "pinyin": "yuán", "meaning": "đồng (tiền tệ)"},
+          {"hanzi": "苹果", "pinyin": "píngguǒ", "meaning": "táo"},
+          {"hanzi": "水果", "pinyin": "shuǐguǒ", "meaning": "trái cây"},
+          {"hanzi": "衣服", "pinyin": "yīfu", "meaning": "quần áo"},
+          {"hanzi": "商店", "pinyin": "shāngdiàn", "meaning": "cửa hàng"},
+          {"hanzi": "便宜", "pinyin": "piányi", "meaning": "rẻ"},
+          {"hanzi": "贵", "pinyin": "guì", "meaning": "đắt"},
+          {"hanzi": "怎么", "pinyin": "zěnme", "meaning": "thế nào"},
+          {"hanzi": "怎么样", "pinyin": "zěnmeyàng", "meaning": "thế nào"},
+          {"hanzi": "这", "pinyin": "zhè", "meaning": "này"},
+          {"hanzi": "这儿", "pinyin": "zhèr", "meaning": "đây"},
+          {"hanzi": "那", "pinyin": "nà", "meaning": "đó"},
+          {"hanzi": "那儿", "pinyin": "nàr", "meaning": "đó (nơi chốn)"},
+          {"hanzi": "这些", "pinyin": "zhèxiē", "meaning": "những cái này"},
+          {"hanzi": "那些", "pinyin": "nàxiē", "meaning": "những cái đó"},
+          {"hanzi": "件", "pinyin": "jiàn", "meaning": "cái/chiếc (lượng từ)"},
+          {"hanzi": "杯", "pinyin": "bēi", "meaning": "cốc (lượng từ)"},
+          {"hanzi": "穿", "pinyin": "chuān", "meaning": "mặc"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "这个苹果多少钱？- 五 ___ 钱。 (5 đồng)", "answer": "块"},
+          {"sentence": "这件衣服很 ___。 (Cái áo này rất đắt)", "answer": "贵"},
+          {"sentence": "我喜欢吃 ___。 (Tôi thích ăn táo)", "answer": "苹果"},
+          {"sentence": "他 ___ 了一件新衣服。 (Anh ấy mặc một cái áo mới)", "answer": "穿"},
+          {"sentence": "___ 是一本书。 (Đây là một quyển sách)", "answer": "这"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Cái này bao nhiêu tiền?", "chinese": "这个多少钱？"},
+          {"vietnamese": "Tôi muốn mua quần áo.", "chinese": "我想买衣服。"},
+          {"vietnamese": "Ở đây có một cửa hàng.", "chinese": "这儿有一个商店。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["这个", "多少", "钱", "？"],
+        "answer": "这个多少钱？",
+        "explanation": "Cấu trúc hỏi giá: 这个 + 多少钱 + ？"
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "苹果", "right": "táo"},
+          {"left": "衣服", "right": "quần áo"},
+          {"left": "商店", "right": "cửa hàng"},
+          {"left": "水果", "right": "trái cây"}
+        ]
+      }
+    ],
+    "11": [
+      {
+        "type": "multiple_choice",
+        "question": "Đặc điểm nhận biết của \"Câu hỏi chính phản\" là gì?",
+        "options": ["Cuối câu bắt buộc phải có trợ từ 吗", "Kết hợp dạng Khẳng định + Phủ định của V/Adj", "Đứng đầu câu là đại từ 什么", "Không bao giờ dùng trong giao tiếp"],
+        "answer": 1,
+        "explanation": "Câu hỏi chính phản có cấu trúc: Khẳng định + Phủ định của V/Adj."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Lưu ý quan trọng khi đã sử dụng \"Câu hỏi chính phản\" là gì?",
+        "options": ["Phải thêm 吗 ở cuối câu", "KHÔNG được dùng trợ từ 吗 ở cuối câu nữa", "Phải thêm 呢 ở cuối câu", "Động từ phải lặp lại 3 lần"],
+        "answer": 1,
+        "explanation": "Khi dùng câu hỏi chính phản, không được dùng thêm '吗' ở cuối câu."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu hỏi chính phản: \"Bộ quần áo này đẹp hay không đẹp?\"",
+        "options": ["这件衣服好看吗？", "这件衣服好看不好看？", "这件衣服好看吗不好看？", "这件衣服是不是好看吗？"],
+        "answer": 1,
+        "explanation": "Cấu trúc: Adj + 不 + Adj (VD: 好看不好看)"
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Để biểu thị một hành động đang diễn ra tại thời điểm nói, ta dùng cấu trúc nào?",
+        "options": ["在 / 正在 + V (+ 呢)", "要 + V + 了", "会 + V", "想 + V"],
+        "answer": 0,
+        "explanation": "'在' hoặc '正在' + động từ chỉ hành động đang diễn ra."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "So với \"想\" (muốn), động từ năng nguyện \"要\" (muốn/cần) biểu thị ý định như thế nào?",
+        "options": ["Yếu hơn, chỉ suy nghĩ mơ hồ", "Mạnh mẽ và quyết tâm hơn", "Giống hệt nhau không khác gì", "Chỉ dùng cho quá khứ"],
+        "answer": 1,
+        "explanation": "'要' biểu thị ý định mạnh mẽ và quyết tâm hơn '想'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi đặt câu hỏi chính phản về hành động đã xảy ra trong quá khứ, ta dùng từ phủ định nào?",
+        "options": ["不 (VD: 去不去)", "没 (VD: 去没去)", "别 (VD: 去别去)", "非 (VD: 去非去)"],
+        "answer": 1,
+        "explanation": "Với hành động đã xảy ra, dùng '没' thay vì '不'."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Tôi học đại học.\"",
+        "options": ["我读大学呢", "我是大学", "我有大学", "我去大学呢"],
+        "answer": 0,
+        "explanation": "'读大学' có nghĩa là học đại học."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 11 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "在", "pinyin": "zài", "meaning": "đang (hành động)"},
+          {"hanzi": "正在", "pinyin": "zhèngzài", "meaning": "đang (nhấn mạnh)"},
+          {"hanzi": "要", "pinyin": "yào", "meaning": "muốn/sẽ"},
+          {"hanzi": "想", "pinyin": "xiǎng", "meaning": "muốn/nghĩ"},
+          {"hanzi": "知道", "pinyin": "zhīdào", "meaning": "biết"},
+          {"hanzi": "问", "pinyin": "wèn", "meaning": "hỏi"},
+          {"hanzi": "说", "pinyin": "shuō", "meaning": "nói"},
+          {"hanzi": "读", "pinyin": "dú", "meaning": "đọc"},
+          {"hanzi": "学", "pinyin": "xué", "meaning": "học"},
+          {"hanzi": "大学", "pinyin": "dàxué", "meaning": "đại học"},
+          {"hanzi": "大学生", "pinyin": "dàxuéshēng", "meaning": "sinh viên"},
+          {"hanzi": "小朋友", "pinyin": "xiǎopéngyǒu", "meaning": "trẻ em"},
+          {"hanzi": "起床", "pinyin": "qǐchuáng", "meaning": "ngủ dậy"},
+          {"hanzi": "睡觉", "pinyin": "shuìjiào", "meaning": "đi ngủ"},
+          {"hanzi": "开车", "pinyin": "kāichē", "meaning": "lái xe"},
+          {"hanzi": "车", "pinyin": "chē", "meaning": "xe"},
+          {"hanzi": "时候", "pinyin": "shíhou", "meaning": "lúc/khi"},
+          {"hanzi": "哪里", "pinyin": "nǎlǐ", "meaning": "đâu"},
+          {"hanzi": "那里", "pinyin": "nàlǐ", "meaning": "đó"},
+          {"hanzi": "昨天", "pinyin": "zuótiān", "meaning": "hôm qua"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "你在 ___ 里？ (Bạn ở đâu?)", "answer": "哪"},
+          {"sentence": "他 ___ 中文。 (Anh ấy nói tiếng Trung)", "answer": "说"},
+          {"sentence": "我 ___ 道他的电话。 (Tôi biết số điện thoại của anh ấy)", "answer": "知"},
+          {"sentence": "你几点 ___ 床？ (Bạn mấy giờ thức dậy?)", "answer": "起"},
+          {"sentence": "我正在 ___ 习。 (Tôi đang học)", "answer": "学"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Tôi đang học tiếng Trung.", "chinese": "我在学中文。"},
+          {"vietnamese": "Bạn ở đâu?", "chinese": "你在哪里？"},
+          {"vietnamese": "Hôm qua tôi rất bận.", "chinese": "昨天我很忙。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "在", "学", "中文"],
+        "answer": "我在学中文。",
+        "explanation": "Cấu trúc: 在 + động từ chỉ hành động đang diễn ra."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "起床", "right": "ngủ dậy"},
+          {"left": "睡觉", "right": "đi ngủ"},
+          {"left": "开车", "right": "lái xe"},
+          {"left": "读书", "right": "đọc sách"}
+        ]
+      }
+    ],
+    "12": [
+      {
+        "type": "multiple_choice",
+        "question": "Trợ từ ngữ khí \"了\" đứng ở cuối câu biểu thị điều gì?",
+        "options": ["Hỏi nguyên nhân", "Sự thay đổi trạng thái hoặc một tình huống mới xuất hiện", "Hành động chắc chắn xảy ra ở tương lai xa", "Sự sở hữu"],
+        "answer": 1,
+        "explanation": "'了' ở cuối câu chỉ sự thay đổi trạng thái hoặc tình huống mới."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Mẫu câu cảm thán biểu thị mức độ cao \"...quá / ...rất\" có cấu trúc là gì?",
+        "options": ["很 + Adj + 了", "太 + Adj + 了", "真 + Adj + 吧", "非常 + Adj + 呢"],
+        "answer": 1,
+        "explanation": "Cấu trúc: 太 + Adj + 了."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Lạnh quá!\"",
+        "options": ["太冷了！", "很冷！", "真冷！", "冷吧！"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 太 + 冷 + 了."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dạng phủ định của câu có trợ từ ngữ khí \"了\" (diễn tả việc chưa xảy ra/chưa thay đổi) là:",
+        "options": ["Dùng 不 + V + 了", "Dùng 没 + V (bỏ 了 ở cuối)", "Dùng 不是 + V + 了", "Dùng 没 + V + 了"],
+        "answer": 1,
+        "explanation": "'没 + V' (bỏ '了') để phủ định trạng thái đã thay đổi."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Câu \"下雨了\" (Trời mưa rồi) thuộc loại câu ngữ pháp nào?",
+        "options": ["Câu vị ngữ tính từ", "Câu không chủ vị", "Câu liên động", "Câu tồn hiện"],
+        "answer": 1,
+        "explanation": "Câu không chủ vị là câu không có chủ ngữ rõ ràng."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ \"下雪\" trong tiếng Trung có nghĩa là gì?",
+        "options": ["Trời mưa", "Tuyết rơi", "Nổi gió", "Trời nắng"],
+        "answer": 1,
+        "explanation": "'下雪' có nghĩa là tuyết rơi."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi chuyển câu \"下雨了\" sang dạng phủ định (Trời chưa mưa), ta nói như thế nào?",
+        "options": ["不下雨了", "没下雨", "没下雨了", "不下雨"],
+        "answer": 1,
+        "explanation": "'没下雨' là cách phủ định đúng (bỏ '了' ở cuối)."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 12 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "天气", "pinyin": "tiānqì", "meaning": "thời tiết"},
+          {"hanzi": "冷", "pinyin": "lěng", "meaning": "lạnh"},
+          {"hanzi": "热", "pinyin": "rè", "meaning": "nóng"},
+          {"hanzi": "下雨", "pinyin": "xià yǔ", "meaning": "trời mưa"},
+          {"hanzi": "下雪", "pinyin": "xià xuě", "meaning": "tuyết rơi"},
+          {"hanzi": "了", "pinyin": "le", "meaning": "(trợ từ chỉ thay đổi)"},
+          {"hanzi": "太", "pinyin": "tài", "meaning": "quá"},
+          {"hanzi": "觉得", "pinyin": "juéde", "meaning": "cảm thấy"},
+          {"hanzi": "生病", "pinyin": "shēng bìng", "meaning": "bị ốm"},
+          {"hanzi": "看病", "pinyin": "kàn bìng", "meaning": "khám bệnh"},
+          {"hanzi": "药", "pinyin": "yào", "meaning": "thuốc"},
+          {"hanzi": "水", "pinyin": "shuǐ", "meaning": "nước"},
+          {"hanzi": "喝", "pinyin": "hē", "meaning": "uống"},
+          {"hanzi": "回", "pinyin": "huí", "meaning": "quay về"},
+          {"hanzi": "再", "pinyin": "zài", "meaning": "lại (nữa)"},
+          {"hanzi": "一点儿", "pinyin": "yìdiǎnr", "meaning": "một chút"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "今天天气很 ___。 (Hôm nay trời rất lạnh)", "answer": "冷"},
+          {"sentence": "我 ___ 得很难受。 (Tôi cảm thấy rất khó chịu)", "answer": "觉"},
+          {"sentence": "___ 雨了。 (Trời đang mưa)", "answer": "下"},
+          {"sentence": "我感冒了，要吃 ___。 (Tôi bị cảm, phải uống thuốc)", "answer": "药"},
+          {"sentence": "___ 见！ (Tạm biệt - hẹn gặp lại)", "answer": "再"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Tôi cảm thấy rất lạnh.", "chinese": "我觉得很冷。"},
+          {"vietnamese": "Trời đang mưa.", "chinese": "下雨了。"},
+          {"vietnamese": "Tôi bị ốm rồi.", "chinese": "我生病了。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "觉得", "很", "冷"],
+        "answer": "我觉得很冷。",
+        "explanation": "Cấu trúc: 我觉得 + 很 + tính từ."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "热", "right": "nóng"},
+          {"left": "冷", "right": "lạnh"},
+          {"left": "雨", "right": "mưa"},
+          {"left": "雪", "right": "tuyết"}
+        ]
+      }
+    ],
+    "13": [
+      {
+        "type": "multiple_choice",
+        "question": "Động từ năng nguyện \"可以\" chủ yếu dùng để biểu thị điều gì?",
+        "options": ["Thói quen cá nhân", "Sự cho phép hoặc lời khuyên", "Kỹ năng học tập", "Sự thay đổi thời tiết"],
+        "answer": 1,
+        "explanation": "'可以' chủ yếu dùng để xin phép hoặc đưa ra lời khuyên."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Cấu trúc \"V + 一下\" dùng để diễn tả điều gì?",
+        "options": ["Hành động lặp đi lặp lại nhiều lần", "Hành động thực hiện ngắn, thử nghiệm hoặc lịch sự", "Hành động kéo dài trong thời gian dài", "Hành động bắt buộc phải thực hiện ngay"],
+        "answer": 1,
+        "explanation": "'一下' sau động từ chỉ hành động ngắn, thử hoặc lịch sự."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Trong câu hai tân ngữ, thứ tự chuẩn của hai tân ngữ là gì?",
+        "options": ["Tân ngữ chỉ vật + Tân ngữ chỉ người", "Tân ngữ chỉ người + Tân ngữ chỉ vật", "Không có thứ tự cố định", "Động từ + Tân ngữ chỉ vật + 给 + Tân ngữ chỉ người"],
+        "answer": 1,
+        "explanation": "Thứ tự đúng: Tân ngữ chỉ người trước, tân ngữ chỉ vật sau."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Tôi có thể ngồi không? - Có thể, mời ngồi!\"",
+        "options": ["我会坐吗？- 会，请坐！", "我可以坐吗？- 可以，请坐！", "我要坐吗？- 要，请坐！", "我能坐吗？- 能，坐吧！"],
+        "answer": 1,
+        "explanation": "'可以' dùng để hỏi xin phép, '请坐' là mời ngồi."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Xin hãy cho tôi một cốc trà.\"",
+        "options": ["请给我一杯茶。", "请买我一杯茶。", "请问我一杯茶。", "请喝我一杯茶。"],
+        "answer": 0,
+        "explanation": "Cấu trúc: 请 + 给 + tân ngữ người + tân ngữ vật."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khác biệt cơ bản giữa \"可以\" và \"能\" khi xin phép là gì?",
+        "options": ["可以 do người khác quyết định/cho phép, 能 thiên về bản thân có điều kiện", "可以 chỉ dùng cho quá khứ, 能 dùng cho tương lai", "Hai từ hoàn toàn giống nhau không khác biệt", "能 chỉ dùng trong câu khẳng định"],
+        "answer": 0,
+        "explanation": "'可以' xin phép từ người khác, '能' chỉ khả năng của bản thân."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 13 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "可以", "pinyin": "kěyǐ", "meaning": "có thể (được phép)"},
+          {"hanzi": "能", "pinyin": "néng", "meaning": "có thể (khả năng)"},
+          {"hanzi": "请", "pinyin": "qǐng", "meaning": "mời/xin"},
+          {"hanzi": "给", "pinyin": "gěi", "meaning": "cho"},
+          {"hanzi": "一下", "pinyin": "yíxià", "meaning": "một chút"},
+          {"hanzi": "问题", "pinyin": "wèntí", "meaning": "vấn đề"},
+          {"hanzi": "鸡蛋", "pinyin": "jīdàn", "meaning": "trứng gà"},
+          {"hanzi": "面包", "pinyin": "miànbāo", "meaning": "bánh mì"},
+          {"hanzi": "茶", "pinyin": "chá", "meaning": "trà"},
+          {"hanzi": "杯", "pinyin": "bēi", "meaning": "cốc (lượng từ)"},
+          {"hanzi": "这个", "pinyin": "zhège", "meaning": "cái này"},
+          {"hanzi": "一半", "pinyin": "yíbàn", "meaning": "một nửa"},
+          {"hanzi": "再", "pinyin": "zài", "meaning": "lại (nữa)"},
+          {"hanzi": "小姐", "pinyin": "xiǎojiě", "meaning": "cô (tiểu thư)"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "我 ___ 以进来吗？ (Tôi có thể vào không?)", "answer": "可"},
+          {"sentence": "___ 问，你叫什么名字？ (Xin hỏi, bạn tên là gì?)", "answer": "请"},
+          {"sentence": "我要一 ___ 水。 (Tôi muốn một cốc nước)", "answer": "杯"},
+          {"sentence": "___ 一遍。 (Làm lại một lần nữa)", "answer": "再"},
+          {"sentence": "这个 ___ 题很难。 (Vấn đề này rất khó)", "answer": "问"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Tôi có thể vào không?", "chinese": "我可以进来吗？"},
+          {"vietnamese": "Mời vào!", "chinese": "请进！"},
+          {"vietnamese": "Cái này bao nhiêu tiền?", "chinese": "这个多少钱？"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "可以", "来", "吗", "？"],
+        "answer": "我可以来吗？",
+        "explanation": "Cấu trúc câu hỏi với '可以': 可以 + động từ + 吗？"
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "鸡蛋", "right": "trứng gà"},
+          {"left": "面包", "right": "bánh mì"},
+          {"left": "小姐", "right": "cô"},
+          {"left": "服务员", "right": "nhân viên phục vụ"}
+        ]
+      }
+    ],
+    "14": [
+      {
+        "type": "multiple_choice",
+        "question": "Vị trí của trợ từ động thái \"了\" (biểu thị hoàn thành) đứng ở đâu trong câu?",
+        "options": ["Đầu câu", "Trực tiếp ngay sau động từ", "Sau tân ngữ", "Cuối câu câu hỏi"],
+        "answer": 1,
+        "explanation": "'了' chỉ hoàn thành đứng ngay sau động từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi phủ định câu có trợ từ động thái \"了\" (hành động chưa/không xảy ra), ta dùng cấu trúc nào?",
+        "options": ["不 + V + 了", "没 + V (bỏ 了)", "不 + V (bỏ 了)", "没 + V + 了"],
+        "answer": 1,
+        "explanation": "'没 + V' bỏ '了' để phủ định hành động đã xảy ra."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Đặc điểm cơ bản của \"Động từ ly hợp\" (như 睡觉, 上课) là gì?",
+        "options": ["Không thể đi với tân ngữ khác và có thể tách ra chèn thành phần vào giữa", "Bắt buộc đi kèm với 2 tân ngữ", "Chỉ dùng trong câu cảm thán", "Không bao giờ đứng một mình"],
+        "answer": 0,
+        "explanation": "Động từ ly hợp có thể tách ra và chèn thành phần vào giữa."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Cách tách động từ ly hợp \"睡觉\" (Ngủ) nào sau đây là đúng?",
+        "options": ["睡觉了一", "睡了一觉", "觉睡了一", "睡觉了一觉"],
+        "answer": 1,
+        "explanation": "Cấu trúc đúng: 睡 + 了 + 一 + 觉."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Vị trí của phó từ phạm vi \"都\" trong câu là gì?",
+        "options": ["Đứng trước chủ ngữ", "Đứng sau chủ ngữ, trước động từ/tính từ", "Đứng ở cuối câu", "Đứng sau động từ"],
+        "answer": 1,
+        "explanation": "'都' đứng sau chủ ngữ và trước động từ/tính từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ nào sau đây KHÔNG phải là động từ ly hợp?",
+        "options": ["上课", "说话", "看病", "学习"],
+        "answer": 3,
+        "explanation": "'学习' là động từ thông thường, không phải động từ ly hợp."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 14 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "了", "pinyin": "le", "meaning": "(trợ từ hoàn thành)"},
+          {"hanzi": "没", "pinyin": "méi", "meaning": "chưa/không"},
+          {"hanzi": "都", "pinyin": "dōu", "meaning": "đều"},
+          {"hanzi": "不要", "pinyin": "búyào", "meaning": "đừng"},
+          {"hanzi": "他", "pinyin": "tā", "meaning": "anh ấy"},
+          {"hanzi": "她", "pinyin": "tā", "meaning": "cô ấy"},
+          {"hanzi": "它", "pinyin": "tā", "meaning": "nó (vật)"},
+          {"hanzi": "他们", "pinyin": "tāmen", "meaning": "họ (nam)"},
+          {"hanzi": "她们", "pinyin": "tāmen", "meaning": "họ (nữ)"},
+          {"hanzi": "它们", "pinyin": "tāmen", "meaning": "chúng (vật)"},
+          {"hanzi": "说话", "pinyin": "shuōhuà", "meaning": "nói chuyện"},
+          {"hanzi": "听见", "pinyin": "tīngjiàn", "meaning": "nghe thấy"},
+          {"hanzi": "听", "pinyin": "tīng", "meaning": "nghe"},
+          {"hanzi": "写", "pinyin": "xiě", "meaning": "viết"},
+          {"hanzi": "字", "pinyin": "zì", "meaning": "chữ"},
+          {"hanzi": "火车", "pinyin": "huǒchē", "meaning": "tàu hỏa"},
+          {"hanzi": "开", "pinyin": "kāi", "meaning": "mở/lái"},
+          {"hanzi": "小学", "pinyin": "xiǎoxué", "meaning": "tiểu học"},
+          {"hanzi": "中学", "pinyin": "zhōngxué", "meaning": "trung học"},
+          {"hanzi": "大学", "pinyin": "dàxué", "meaning": "đại học"},
+          {"hanzi": "中午", "pinyin": "zhōngwǔ", "meaning": "buổi trưa"},
+          {"hanzi": "明年", "pinyin": "míngnián", "meaning": "năm sau"},
+          {"hanzi": "哪些", "pinyin": "nǎxiē", "meaning": "những cái nào"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "___ 要去中国。 (Năm sau tôi đi Trung Quốc)", "answer": "明年"},
+          {"sentence": "他们都 ___ 学生。 (Họ đều là học sinh)", "answer": "是"},
+          {"sentence": "我 ___ 见你的声音。 (Tôi nghe thấy giọng nói của bạn)", "answer": "听"},
+          {"sentence": "请 ___ 你的名字。 (Xin hãy viết tên của bạn)", "answer": "写"},
+          {"sentence": "___ 午好！ (Chào buổi trưa!)", "answer": "中"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Họ đều là học sinh.", "chinese": "他们都是学生。"},
+          {"vietnamese": "Đừng đi!", "chinese": "不要走！"},
+          {"vietnamese": "Tôi nghe thấy rồi.", "chinese": "我听见了。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["他们", "都", "是", "学生"],
+        "answer": "他们都是学生。",
+        "explanation": "Cấu trúc: 他们 + 都 + 是 + 学生。"
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "小学", "right": "tiểu học"},
+          {"left": "中学", "right": "trung học"},
+          {"left": "大学", "right": "đại học"},
+          {"left": "火车", "right": "tàu hỏa"}
+        ]
+      }
+    ],
+    "15": [
+      {
+        "type": "multiple_choice",
+        "question": "Sự khác biệt về cách dùng giữa phó từ \"也\" và \"还\" trong câu ghép bổ sung là gì?",
+        "options": ["也 biểu thị thông tin tương tự, 还 biểu thị thông tin bổ sung/khác biệt", "也 đứng đầu câu, 还 đứng cuối câu", "还 dùng cho câu hỏi, 也 dùng cho câu khẳng định", "Không có sự khác biệt nào"],
+        "answer": 0,
+        "explanation": "'也' chỉ sự tương đồng, '还' chỉ sự bổ sung thêm."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Tôi thích cái này, cũng thích cái kia.\"",
+        "options": ["我喜欢这个，还喜欢那个。", "我喜欢这个，也喜欢那个。", "我喜欢这个，都喜欢那个。", "我喜欢这个，就喜欢那个。"],
+        "answer": 1,
+        "explanation": "'也' được dùng để nối hai ý tương tự nhau."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Dịch câu: \"Tôi thích uống trà Trung Quốc, còn thích ăn món ăn Trung Quốc nữa.\"",
+        "options": ["我喜欢喝中国茶，还喜欢吃中国菜。", "我喜欢喝中国茶，也喜欢吃中国菜。", "我喜欢喝中国茶，都喜欢吃中国菜。", "我 thích 喝中国茶，太 thích 吃中国菜。"],
+        "answer": 0,
+        "explanation": "'还' được dùng để bổ sung thông tin khác biệt."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Vị trí của \"还\" và \"也\" trong mệnh đề thứ hai là ở đâu?",
+        "options": ["Đứng trước chủ ngữ", "Đứng sau chủ ngữ, trước động từ/tính từ", "Đứng ở cuối mệnh đề", "Đứng ngay sau động từ"],
+        "answer": 1,
+        "explanation": "Cả '还' và '也' đều đứng sau chủ ngữ và trước động từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Từ \"机场\" trong tiêu đề bài học có nghĩa là gì?",
+        "options": ["Bến xe", "Sân bay", "Rạp chiếu phim", "Bệnh viện"],
+        "answer": 1,
+        "explanation": "'机场' có nghĩa là sân bay."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Khi liên kết hai ý có cùng tính chất hoặc hành động giống hệt nhau của cùng một chủ ngữ, ta ưu tiên dùng từ nào?",
+        "options": ["也", "还", "不", "没"],
+        "answer": 0,
+        "explanation": "'也' được ưu tiên dùng cho hai ý có cùng tính chất."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Cấu trúc câu ghép liên hợp bổ sung thông tin thường nối hai mệnh đề bằng dấu gì?",
+        "options": ["Dấu chấm (。)", "Dấu phẩy (，)", "Dấu chấm hỏi (？)", "Dấu hai chấm (：)"],
+        "answer": 1,
+        "explanation": "Hai mệnh đề được nối với nhau bằng dấu phẩy."
+      },
+      {
+        "type": "flashcard",
+        "question": "Ôn tập từ vựng bài 15 bằng thẻ ghi nhớ.",
+        "pairs": [
+          {"hanzi": "也", "pinyin": "yě", "meaning": "cũng (sự tương đồng)"},
+          {"hanzi": "还", "pinyin": "hái", "meaning": "còn (bổ sung)"},
+          {"hanzi": "机场", "pinyin": "jīchǎng", "meaning": "sân bay"},
+          {"hanzi": "飞机", "pinyin": "fēijī", "meaning": "máy bay"},
+          {"hanzi": "接", "pinyin": "jiē", "meaning": "đón"},
+          {"hanzi": "住", "pinyin": "zhù", "meaning": "ở/sống"},
+          {"hanzi": "爱", "pinyin": "ài", "meaning": "yêu"},
+          {"hanzi": "家人", "pinyin": "jiārén", "meaning": "gia đình"},
+          {"hanzi": "男朋友", "pinyin": "nánpéngyou", "meaning": "bạn trai"},
+          {"hanzi": "女朋友", "pinyin": "nǚpéngyou", "meaning": "bạn gái"},
+          {"hanzi": "时间", "pinyin": "shíjiān", "meaning": "thời gian"},
+          {"hanzi": "小时", "pinyin": "xiǎoshí", "meaning": "giờ"},
+          {"hanzi": "年", "pinyin": "nián", "meaning": "năm"},
+          {"hanzi": "去年", "pinyin": "qùnián", "meaning": "năm ngoái"},
+          {"hanzi": "明年", "pinyin": "míngnián", "meaning": "năm sau"},
+          {"hanzi": "好玩儿", "pinyin": "hǎowánr", "meaning": "vui/thú vị"},
+          {"hanzi": "早", "pinyin": "zǎo", "meaning": "sớm"},
+          {"hanzi": "晚", "pinyin": "wǎn", "meaning": "muộn"}
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "我 ___ 在中国。 (Tôi sống ở Trung Quốc)", "answer": "住"},
+          {"sentence": "去年我 ___ 了北京。 (Năm ngoái tôi đã đến Bắc Kinh)", "answer": "去"},
+          {"sentence": "___ 飞机去。 (Đi bằng máy bay)", "answer": "坐"},
+          {"sentence": "时间 ___ 了。 (Đã đến giờ rồi)", "answer": "到"},
+          {"sentence": "___ 上 8 点。 (8 giờ sáng)", "answer": "早"}
+        ]
+      },
+      {
+        "type": "translation",
+        "question": "Dịch các câu sau sang tiếng Trung:",
+        "items": [
+          {"vietnamese": "Tôi sống ở Trung Quốc.", "chinese": "我住在中国。"},
+          {"vietnamese": "Năm ngoái tôi đã đi Bắc Kinh.", "chinese": "去年我去了北京。"},
+          {"vietnamese": "Tôi đến sân bay đón bạn.", "chinese": "我去机场接你。"}
+        ]
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "住", "在", "中国"],
+        "answer": "我住在中国。",
+        "explanation": "Cấu trúc: 住 + 在 + địa điểm."
+      },
+      {
+        "type": "match",
+        "question": "Nối từ vựng với nghĩa tiếng Việt:",
+        "pairs": [
+          {"left": "飞机", "right": "máy bay"},
+          {"left": "机场", "right": "sân bay"},
+          {"left": "北京", "right": "Bắc Kinh"},
+          {"left": "西安", "right": "Tây An"}
+        ]
+      }
+    ]
+  }
+}

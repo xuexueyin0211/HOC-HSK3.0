@@ -1,0 +1,2318 @@
+{
+ "lessons": [
+      {
+        "lesson": 1,
+        "title": "第1课 她请我们吃了北京烤鸭",
+        "title_pinyin": "Tā qǐng wǒmen chīle Běijīng Kǎoyā",
+        "title_meaning": "Cô ấy đã mời chúng tôi ăn vịt quay Bắc Kinh",
+        "texts": [
+          {
+      "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "白家月",
+        "text": "请问，您是王一飞老师的姐姐吗？",
+        "pinyin": "Qǐngwèn, nín shì Wáng Yīfēi lǎoshī de jiějie ma?",
+        "meaning": "Xin hỏi, chị có phải là chị gái của cô Vương Nhất Phi không ạ?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "是的，你们就是她的学生吧？",
+        "pinyin": "Shì de, nǐmen jiù shì tā de xuéshēng ba?",
+        "meaning": "Đúng vậy, các bạn chính là học sinh của em ấy phải không?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "对。我是白家月，她是安妮。",
+        "pinyin": "Duì. Wǒ shì Bái Jiāyuè, tā shì Ānnī.",
+        "meaning": "Đúng ạ. Em là Bạch Gia Nguyệt, còn bạn ấy là Annie."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "你们好，我叫王一雪。一飞给我打电话了，让我来接你们。",
+        "pinyin": "Nǐmen hǎo, wǒ jiào Wáng Yīxuě. Yīfēi gěi wǒ dǎ diànhuà le, ràng wǒ lái jiē nǐmen.",
+        "meaning": "Các bạn chào các bạn, tôi tên là Vương Nhất Tuyết. Nhất Phi đã gọi điện cho tôi, bảo tôi ra đón các bạn."
+      },
+      {
+        "speaker": "白家月",
+        "text": "谢谢您。",
+        "pinyin": "Xièxie nín.",
+        "meaning": "Cảm ơn chị ạ."
+      },
+      {
+        "speaker": "安妮",
+        "text": "谢谢您。",
+        "pinyin": "Xièxie nín.",
+        "meaning": "Cảm ơn chị ạ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "不客气。",
+        "pinyin": "Bú kèqi.",
+        "meaning": "Không có gì."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "你们是第一次来北京吗？",
+        "pinyin": "Nǐmen shì dì-yī cì lái Běijīng ma?",
+        "meaning": "Các bạn đến Bắc Kinh lần đầu à?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "是的，我们都是第一次来。",
+        "pinyin": "Shì de, wǒmen dōu shì dì-yī cì lái.",
+        "meaning": "Vâng ạ, chúng em đều là lần đầu đến ạ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "你们是来学中文的吗？",
+        "pinyin": "Nǐmen shì lái xué Zhōngwén de ma?",
+        "meaning": "Các bạn đến để học tiếng Trung phải không?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "不是，我们是来旅游的。",
+        "pinyin": "Bú shì, wǒmen shì lái lǚyóu de.",
+        "meaning": "Không ạ, chúng em đến để du lịch ạ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "我这几天都不忙，你们有事就找我。",
+        "pinyin": "Wǒ zhè jǐ tiān dōu bù máng, nǐmen yǒu shì jiù zhǎo wǒ.",
+        "meaning": "Mấy ngày nay tôi đều không bận, các bạn có việc gì cứ tìm tôi."
+      },
+      {
+        "speaker": "白家月",
+        "text": "好的，谢谢您。",
+        "pinyin": "Hǎo de, xièxie nín.",
+        "meaning": "Vâng ạ, cảm ơn chị."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "陈天中",
+        "text": "喂，家月，你明天有时间吗？我想请你帮个忙。",
+        "pinyin": "Wèi, Jiāyuè, nǐ míngtiān yǒu shíjiān ma? Wǒ xiǎng qǐng nǐ bāng gè máng.",
+        "meaning": "Alo, Gia Nguyệt, ngày mai bạn có thời gian không? Tôi muốn nhờ bạn giúp một việc."
+      },
+      {
+        "speaker": "白家月",
+        "text": "不好意思，天中，我已经到北京了。",
+        "pinyin": "Bù hǎoyìsi, Tiānzhōng, wǒ yǐjīng dào Běijīng le.",
+        "meaning": "Xin lỗi nhé, Thiên Trung, tôi đã đến Bắc Kinh rồi."
+      },
+      {
+        "speaker": "陈天中",
+        "text": "你是什么时候到的？",
+        "pinyin": "Nǐ shì shénme shíhou dào de?",
+        "meaning": "Bạn đến khi nào vậy?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "我是今天早上到的。你有事可以叫李文帮忙，他还在学校呢。",
+        "pinyin": "Wǒ shì jīntiān zǎoshang dào de. Nǐ yǒu shì kěyǐ jiào Lǐ Wén bāngmáng, tā hái zài xuéxiào ne.",
+        "meaning": "Tôi đến sáng nay. Bạn có việc gì có thể nhờ Lý Văn giúp, cậu ấy vẫn ở trường á."
+      },
+      {
+        "speaker": "陈天中",
+        "text": "好的，那我给他打个电话。",
+        "pinyin": "Hǎo de, nà wǒ gěi tā dǎ gè diànhuà.",
+        "meaning": "Được, vậy tôi gọi cho cậu ấy một cuộc."
+      },
+      {
+        "speaker": "白家月",
+        "text": "好，再见！",
+        "pinyin": "Hǎo, zàijiàn!",
+        "meaning": "Được, tạm biệt nhé!"
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "王老师，我们已经到北京了，是您姐姐来接的我们。她请我们吃了北京烤鸭，还给我们介绍了很\n多东西。我们的中文不太好有时不太懂她的意思。",
+        "pinyin": "Wáng lǎoshī, wǒmen yǐjīng dào Běijīng le, shì nín jiějie lái jiē de wǒmen. Tā qǐng wǒmen chī le Běijīng kǎoyā, hái gěi wǒmen jièshào le hěnduō dōngxi. Wǒmen de Zhōngwén bú tài hǎo yǒushí bù tài dǒng tā de yìsi.",
+        "meaning": "Thưa cô Vương, chúng em đã đến Bắc Kinh rồi ạ, là chị gái của cô ra đón chúng em. Chị ấy đã mời chúng em ăn vịt quay Bắc Kinh, còn giới thiệu cho chúng em rất nhiều thứ. Tiếng Trung của chúng em không được tốt, có lúc không hiểu rõ ý của chị ấy."}
+        ]
+      }
+    ]
+      },
+      {
+        "lesson": 2,
+        "title": "第2课 还是打车去北大吧",
+        "title_pinyin": "Háishi dǎchē qù Běidà ba",
+        "title_meaning": "Vẫn nên gọi taxi đến Bắc Đại đi",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "白家月",
+        "text": "请问，这儿有到北京大学的公交车吗？",
+        "pinyin": "Qǐngwèn, zhèr yǒu dào Běijīng Dàxué de gōngjiāochē ma?",
+        "meaning": "Xin hỏi, ở đây có xe buýt đến Đại học Bắc Kinh không ạ?"
+      },
+      {
+        "speaker": "服务员",
+        "text": "有，但车站有点儿远。",
+        "pinyin": "Yǒu, dàn chēzhàn yǒudiǎnr yuǎn.",
+        "meaning": "Có, nhưng bến xe hơi xa một chút."
+      },
+      {
+        "speaker": "白家月",
+        "text": "这儿好打车吗？",
+        "pinyin": "Zhèr hǎo dǎchē ma?",
+        "meaning": "Ở đây gọi taxi có dễ không ạ?"
+      },
+      {
+        "speaker": "服务员",
+        "text": "好打车。",
+        "pinyin": "Hǎo dǎchē.",
+        "meaning": "Gọi taxi dễ ạ."
+      },
+      {
+        "speaker": "白家月",
+        "text": "谢谢。安妮，我们还是打车去吧。",
+        "pinyin": "Xièxie. Ānní, wǒmen háishì dǎchē qù ba.",
+        "meaning": "Cảm ơn. Annie, chúng ta vẫn là đi taxi đi."
+      },
+      {
+        "speaker": "安妮",
+        "text": "好，没问题。",
+        "pinyin": "Hǎo, méi wèntí.",
+        "meaning": "Được, không vấn đề gì."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "白家月",
+        "text": "学校里人真多啊！",
+        "pinyin": "Xuéxiào li rén zhēn duō a!",
+        "meaning": "Trong trường người thật đông nhỉ!"
+      },
+      {
+        "speaker": "安妮",
+        "text": "是啊，北京大学有四万多名学生呢！",
+        "pinyin": "Shì a, Běijīng Dàxué yǒu sìwàn duō míng xuéshēng ne!",
+        "meaning": "Ừ nhỉ, Đại học Bắc Kinh có hơn bốn vạn sinh viên đấy!"
+      },
+      {
+        "speaker": "白家月",
+        "text": "你是怎么知道的？",
+        "pinyin": "Nǐ shì zěnme zhīdào de?",
+        "meaning": "Bạn làm sao biết thế?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "是网上说的，网上还说北京大学有三千多名外国学生。",
+        "pinyin": "Shì wǎngshang shuō de, wǎngshang hái shuō Běijīng Dàxué yǒu sānqiān duō míng wàiguó xuéshēng.",
+        "meaning": "Trên mạng nói đấy, trên mạng còn nói Đại học Bắc Kinh có hơn ba nghìn sinh viên nước ngoài."
+      },
+      {
+        "speaker": "白家月",
+        "text": "我也想来这儿学习。",
+        "pinyin": "Wǒ yě xiǎng lái zhèr xuéxí.",
+        "meaning": "Tôi cũng muốn đến đây học."
+      },
+      {
+        "speaker": "安妮",
+        "text": "那边就有一间教室，我们去看一下吧。",
+        "pinyin": "Nà biān jiù yǒu yī jiān jiàoshì, wǒmen qù kàn yíxià ba.",
+        "meaning": "Đằng kia có một phòng học, chúng ta qua xem thử đi."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "安妮",
+        "text": "家月，你看，学校里有家电影院！",
+        "pinyin": "Jiāyuè, nǐ kàn, xuéxiào li yǒu jiā diànyǐngyuàn!",
+        "meaning": "Gia Nguyệt, bạn xem, trong trường có một rạp chiếu phim kìa!"
+      },
+      {
+        "speaker": "白家月",
+        "text": "是啊，电影院还不小。",
+        "pinyin": "Shì a, diànyǐngyuàn hái bù xiǎo.",
+        "meaning": "Ừ nhỉ, rạp chiếu phim cũng không nhỏ."
+      },
+      {
+        "speaker": "安妮",
+        "text": "他们卖的电影票也很便宜。",
+        "pinyin": "Tāmen mài de diànyǐngpiào yě hěn piányi.",
+        "meaning": "Vé phim họ bán cũng rất rẻ."
+      },
+      {
+        "speaker": "白家月",
+        "text": "天啊！有的还不到二十块钱。",
+        "pinyin": "Tiān a! Yǒude hái bú dào èrshí kuài qián.",
+        "meaning": "Trời ơi! Có vé còn chưa đến hai mươi tệ."
+      },
+      {
+        "speaker": "安妮",
+        "text": "那你想不想去看个电影？",
+        "pinyin": "Nà nǐ xiǎng bu xiǎng qù kàn gè diànyǐng?",
+        "meaning": "Thế bạn có muốn đi xem một bộ phim không?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "还是别看电影了，北京大学就很好看！",
+        "pinyin": "Háishi bié kàn diànyǐng le, Běijīng Dàxué jiù hěn hǎokàn!",
+        "meaning": "Thôi đừng xem phim nữa, Đại học Bắc Kinh đã rất đẹp rồi!"
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "北京大学很大，有四万多名学生。学校很漂亮，里边还有家电影院，电影票也不贵，我们有时间还想再过来看个电影。",
+        "pinyin": "Běijīng Dàxué hěn dà, yǒu sìwàn duō míng xuéshēng. Xuéxiào hěn piàoliang, lǐbian hái yǒu jiā diànyǐngyuàn, diànyǐngpiào yě bú guì, wǒmen yǒu shíjiān hái xiǎng zài guòlái kàn gè diànyǐng.",
+        "meaning": "Đại học Bắc Kinh rất lớn, có hơn bốn vạn sinh viên. Trường rất đẹp, bên trong còn có một rạp chiếu phim, vé phim cũng không đắt, nếu có thời gian chúng tôi còn muốn quay lại xem một bộ phim."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 3,
+        "title": "第3课 我想去西安旅游",
+        "title_pinyin": "Wǒ xiǎng qù Xī'ān lǚyóu",
+        "title_meaning": "Tôi muốn đi du lịch Tây An",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "今天回来这么晚啊！",
+        "pinyin": "Jīntiān huílái zhème wǎn a!",
+        "meaning": "Hôm nay anh về muộn thế!"
+      },
+      {
+        "speaker": "刘明",
+        "text": "工作太多了，下班的时候没做完。",
+        "pinyin": "Gōngzuò tài duō le, xiàbān de shíhou méi zuò wán.",
+        "meaning": "Công việc nhiều quá, lúc tan làm vẫn chưa làm xong."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "菜都做好了，过来吃饭吧。",
+        "pinyin": "Cài dōu zuò hǎo le, guòlái chī fàn ba.",
+        "meaning": "Đồ ăn đều làm xong rồi, qua ăn cơm đi."
+      },
+      {
+        "speaker": "刘明",
+        "text": "我想休息一下，喝杯水。",
+        "pinyin": "Wǒ xiǎng xiūxi yīxià, hē bēi shuǐ.",
+        "meaning": "Anh muốn nghỉ một chút, uống cốc nước."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好的。",
+        "pinyin": "Hǎo de.",
+        "meaning": "Vâng."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "刘明",
+        "text": "我们找个时间去旅游，怎么样？",
+        "pinyin": "Wǒmen zhǎo gè shíjiān qù lǚyóu, zěnmeyàng?",
+        "meaning": "Chúng ta tìm thời gian đi du lịch nhé, thế nào?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好啊，我也很想一起出去玩。",
+        "pinyin": "Hǎo a, wǒ yě hěn xiǎng yìqǐ chūqu wán.",
+        "meaning": "Được đấy, em cũng rất muốn cùng đi chơi."
+      },
+      {
+        "speaker": "刘明",
+        "text": "你想去哪儿？",
+        "pinyin": "Nǐ xiǎng qù nǎr?",
+        "meaning": "Em muốn đi đâu?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "我还没想好呢。",
+        "pinyin": "Wǒ hái méi xiǎnghǎo ne.",
+        "meaning": "Em vẫn chưa nghĩ ra."
+      },
+      {
+        "speaker": "刘明",
+        "text": "那你再想一想，你想好了，我来买票。",
+        "pinyin": "Nà nǐ zài xiǎng yi xiǎng, nǐ xiǎnghǎo le, wǒ lái mǎi piào.",
+        "meaning": "Thế em nghĩ thêm đi, khi nào em nghĩ ra, anh sẽ mua vé."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "刘明",
+        "text": "吃个苹果吧，我都洗好了。",
+        "pinyin": "Chī gè píngguǒ ba, wǒ dōu xǐhǎo le.",
+        "meaning": "Ăn quả táo đi, anh đều rửa sạch rồi."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好的。",
+        "pinyin": "Hǎo de.",
+        "meaning": "Vâng."
+      },
+      {
+        "speaker": "刘明",
+        "text": "就在桌子上，你自己拿。",
+        "pinyin": "Jiù zài zhuōzi shang, nǐ zìjǐ ná.",
+        "meaning": "Ngay trên bàn ấy, em tự lấy nhé."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "我去洗洗手。对了，我们去西安旅游，怎么样？",
+        "pinyin": "Wǒ qù xǐxi shǒu. Duìle, wǒmen qù Xī'ān lǚyóu, zěnmeyàng?",
+        "meaning": "Em đi rửa tay đã. À này, chúng ta đi Tây An du lịch nhé, thế nào?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "为什么想去西安？",
+        "pinyin": "Wèi shénme xiǎng qù Xī'ān?",
+        "meaning": "Tại sao lại muốn đi Tây An?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "我看了看网上的介绍，这个时候去西安很不错！",
+        "pinyin": "Wǒ kànle kan wǎngshang de jièshào, zhège shíhou qù Xī'ān hěn bùcuò!",
+        "meaning": "Em xem giới thiệu trên mạng, thời điểm này đi Tây An rất tuyệt!"
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "早上，刘明开车送孩子去学校，送完孩子回家后，医院就来电话了，让他回去上班。我觉得他这个月每天都很累，真想让他休息休息。",
+        "pinyin": "Zǎoshang, Liú Míng kāichē sòng háizi qù xuéxiào, sòngwán háizi huí jiā hòu, yīyuàn jiù lái diànhuà le, ràng tā huíqù shàngbān. Wǒ juéde tā zhège yuè měi tiān dōu hěn lèi, zhēn xiǎng ràng tā xiūxi xiūxi.",
+        "meaning": "Sáng nay, Lưu Minh lái xe đưa con đến trường, sau khi đưa con xong về nhà, bệnh viện liền gọi điện bảo anh ấy quay lại làm việc. Tôi thấy anh ấy tháng này ngày nào cũng rất mệt, thực sự muốn bảo anh ấy nghỉ ngơi một chút."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 4,
+        "title": "第4课 你穿红色的很好看",
+        "title_pinyin": "Nǐ chuān hóngsè de hěn hǎokàn",
+        "title_meaning": "Bạn mặc màu đỏ trông rất đẹp",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "刘小雪",
+        "text": "妈妈，我们来过这家商场吗？",
+        "pinyin": "Māma, wǒmen láiguò zhè jiā shāngchǎng ma?",
+        "meaning": "Mẹ ơi, chúng ta đã từng đến trung tâm thương mại này chưa?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "没来过，这是新开的。",
+        "pinyin": "Méi láiguò, zhè shì xīn kāi de.",
+        "meaning": "Chưa đến, đây là cái mới mở."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "我们进去看看吧。",
+        "pinyin": "Wǒmen jìnqu kànkan ba.",
+        "meaning": "Chúng ta vào xem đi mẹ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好啊！你想买点儿什么？",
+        "pinyin": "Hǎo a! Nǐ xiǎng mǎi diǎnr shénme?",
+        "meaning": "Được thôi! Con muốn mua gì nào?"
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "我想买条裤子。",
+        "pinyin": "Wǒ xiǎng mǎi tiáo kùzi.",
+        "meaning": "Con muốn mua một cái quần."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "没问题。",
+        "pinyin": "Méi wèntí.",
+        "meaning": "Không vấn đề gì."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "刘小雪",
+        "text": "妈妈，我想买这条白色的裤子。",
+        "pinyin": "Māma, wǒ xiǎng mǎi zhè tiáo báisè de kùzi.",
+        "meaning": "Mẹ ơi, con muốn mua cái quần màu trắng này."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "你有很多白色的衣服，为什么还买白色的？",
+        "pinyin": "Nǐ yǒu hěn duō báisè de yīfu, wèi shénme hái mǎi báisè de?",
+        "meaning": "Con có rất nhiều quần áo màu trắng rồi, sao còn mua màu trắng nữa?"
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "因为我喜欢白色啊！",
+        "pinyin": "Yīnwèi wǒ xǐhuān báisè a!",
+        "meaning": "Vì con thích màu trắng mà!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "我觉得这条白色的不太好看，你试试那条红色的吧。",
+        "pinyin": "Wǒ juéde zhè tiáo báisè de bú tài hǎokàn, nǐ shìshi nà tiáo hóngsè de ba.",
+        "meaning": "Mẹ thấy cái màu trắng này không được đẹp lắm, con thử cái màu đỏ kia đi."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "我没穿过红色的，红色的好看吗？",
+        "pinyin": "Wǒ méi chuānguò hóngsè de, hóngsè de hǎokàn ma?",
+        "meaning": "Con chưa từng mặc màu đỏ, màu đỏ có đẹp không mẹ?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "就是因为没穿过，所以要试试啊！",
+        "pinyin": "Jiù shì yīnwèi méi chuānguò, suǒyǐ yào shìshi a!",
+        "meaning": "Chính vì chưa từng mặc, nên mới phải thử chứ!"
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "刘小雪",
+        "text": "妈妈，我想买个新书包。",
+        "pinyin": "Māma, wǒ xiǎng mǎi ge xīn shūbāo.",
+        "meaning": "Mẹ ơi, con muốn mua một cái cặp sách mới."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好，那边卖书包，我们过去看看吧。",
+        "pinyin": "Hǎo, nà biān mài shūbāo, wǒmen guòqu kànkan ba.",
+        "meaning": "Được, bên kia bán cặp sách, chúng ta qua xem đi."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "这么多漂亮的书包！",
+        "pinyin": "Zhème duō piàoliang de shūbāo!",
+        "meaning": "Nhiều cặp sách đẹp quá!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "红色的、绿色的、黑色的，你想买哪个？",
+        "pinyin": "Hóngsè de, lǜsè de, hēisè de, nǐ xiǎng mǎi nǎge?",
+        "meaning": "Màu đỏ, màu xanh, màu đen, con muốn mua cái nào?"
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "绿色的吧。",
+        "pinyin": "Lǜsè de ba.",
+        "meaning": "Màu xanh lá đi mẹ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "不错，我也觉得绿色的更好看。",
+        "pinyin": "Bùcuò, wǒ yě juéde lǜsè de gèng hǎokàn.",
+        "meaning": "Được đấy, mẹ cũng thấy màu xanh lá đẹp hơn."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "speaker": "刘小雪",
+        "text": "我和妈妈去了一家商场。因为是新开的，所以这几天东西很便宜。商场里的衣服颜色很多。我没穿过红色的裤子，妈妈让我试了试，我觉得我穿红色的也很好看。",
+        "pinyin": "Wǒ hé māmā qùle yì jiā shāngchǎng. Yīnwèi shì xīn kāi de, suǒyǐ zhè jǐ tiān dōngxi hěn piányi. Shāngchǎng li de yīfu yánsè hěn duō. Wǒ méi chuānguò hóngsè de kùzi, māmā ràng wǒ shìle shì, wǒ juéde wǒ chuān hóngsè de yě hěn hǎokàn.",
+        "meaning": "Hôm nay con và mẹ đi một trung tâm thương mại. Vì mới mở nên mấy hôm nay đồ rất rẻ. Quần áo trong trung tâm có nhiều màu. Con chưa từng mặc quần màu đỏ, mẹ bảo con thử, con thấy con mặc màu đỏ cũng rất đẹp."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 5,
+        "title": "第5课 第一次去中国朋友家",
+        "title_pinyin": "Dì-yī cì qù Zhōngguó péngyou jiā",
+        "title_meaning": "Lần đầu tiên đến nhà bạn người Trung Quốc",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "安妮",
+        "text": "家月，快下来吧，第一次去中国朋友家，别晚了。",
+        "pinyin": "Jiāyuè, kuài xiàlai ba, dì-yī cì qù Zhōngguó péngyou jiā, bié wǎn le.",
+        "meaning": "Gia Nguyệt, xuống nhanh đi, lần đầu đến nhà bạn Trung Quốc, đừng đến muộn."
+      },
+      {
+        "speaker": "白家月",
+        "text": "还有时间，你上来吧。",
+        "pinyin": "Hái yǒu shíjiān, nǐ shànglai ba.",
+        "meaning": "Vẫn còn thời gian, bạn lên đây đi."
+      },
+      {
+        "speaker": "安妮",
+        "text": "我不上去了，就在下面等你。",
+        "pinyin": "Wǒ bú shàngqu le, jiù zài xiàmian děng nǐ.",
+        "meaning": "Tôi không lên đâu, ở dưới này đợi bạn."
+      },
+      {
+        "speaker": "白家月",
+        "text": "那我一会儿就下去。",
+        "pinyin": "Nà wǒ yíhuìr jiù xiàqu.",
+        "meaning": "Vậy tí nữa tôi xuống ngay."
+      },
+      {
+        "speaker": "安妮",
+        "text": "你快点儿吧。",
+        "pinyin": "Nǐ kuài diǎnr ba.",
+        "meaning": "Bạn nhanh lên nhé."
+      },
+      {
+        "speaker": "白家月",
+        "text": "没事，一雪姐说11点前到就可以。",
+        "pinyin": "Méishì, Yīxuě jiě shuō shíyī diǎn qián dào jiù kěyǐ.",
+        "meaning": "Không sao, chị Nhất Tuyết nói 11 giờ trước đến là được."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "家月、安妮，快进来！我给你们介绍一下，这是孩子们的爷爷、奶奶。",
+        "pinyin": "Jiāyuè, Ānnī, kuài jìnlái! Wǒ gěi nǐmen jièshào yīxià, zhè shì háizimen de yéye, nǎinai.",
+        "meaning": "Gia Nguyệt, Annie, mau vào đi! Chị giới thiệu với các em, đây là ông nội, bà nội của bọn trẻ."
+      },
+      {
+        "speaker": "白家月、安妮",
+        "text": "你们好！",
+        "pinyin": "Nǐmen hǎo!",
+        "meaning": "Chào ông bà ạ!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "爸，妈，这是白家月，这是安妮。她们都是一飞的学生。",
+        "pinyin": "Bà, mā, zhè shì Bái Jiāyuè, zhè shì Ānnī. Tāmen dōu shì Yīfēi de xuéshēng.",
+        "meaning": "Bố, mẹ, đây là Bạch Gia Nguyệt, đây là Annie. Các em ấy đều là học sinh của Nhất Phi."
+      },
+      {
+        "speaker": "刘爷爷",
+        "text": "家月、安妮，你们好！",
+        "pinyin": "Jiāyuè, Ānnī, nǐmen hǎo!",
+        "meaning": "Gia Nguyệt, Annie, chào các cháu!"
+      },
+      {
+        "speaker": "白家月",
+        "text": "这是送你们的礼物。",
+        "pinyin": "Zhè shì sòng nǐmen de lǐwù.",
+        "meaning": "Đây là quà tặng cho ông bà ạ."
+      },
+      {
+        "speaker": "刘爷爷",
+        "text": "你们太客气了，还拿这么多礼物来！",
+        "pinyin": "Nǐmen tài kèqi le, hái ná zhème duō lǐwù lái!",
+        "meaning": "Các cháu khách sáo quá, còn mang nhiều quà đến thế!"
+      },
+      {
+        "speaker": "安妮",
+        "text": "一雪姐，这是给孩子们准备的礼物。",
+        "pinyin": "Yīxuě jiě, zhè shì gěi háizimen zhǔnbèi de lǐwù.",
+        "meaning": "Chị Nhất Tuyết, đây là quà chuẩn bị cho các bé ạ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "谢谢！你们别客气，快坐吧！",
+        "pinyin": "Xièxie! Nǐmen bié kèqi, kuài zuò ba!",
+        "meaning": "Cảm ơn! Các em đừng khách sáo, mau ngồi đi!"
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "都12点了，我们吃饭吧。",
+        "pinyin": "Dōu shí'èr diǎn le, wǒmen chī fàn ba.",
+        "meaning": "Đã 12 giờ rồi, chúng ta ăn cơm nhé."
+      },
+      {
+        "speaker": "白家月",
+        "text": "这么多好吃的，您太客气了！",
+        "pinyin": "Zhème duō hǎochī de, nín tài kèqi le!",
+        "meaning": "Nhiều món ngon thế này, chị khách sáo quá!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "都是我自己做的，你们多吃点儿。",
+        "pinyin": "Dōu shì wǒ zìjǐ zuò de, nǐmen duō chī diǎnr.",
+        "meaning": "Đều do chị tự nấu đấy, các em ăn nhiều một chút nhé."
+      },
+      {
+        "speaker": "安妮",
+        "text": "奶茶也很好喝，是您自己做的吗？",
+        "pinyin": "Nǎichá yě hěn hǎohē, shì nín zìjǐ zuò de ma?",
+        "meaning": "Trà sữa cũng rất ngon, chị tự làm à?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "不是，奶茶是爷爷买的。",
+        "pinyin": "Bú shì, nǎichá shì yéye mǎi de.",
+        "meaning": "Không, trà sữa là ông nội mua đấy."
+      },
+      {
+        "speaker": "白家月",
+        "text": "在哪儿买的？我还没喝过这么好喝的奶茶。",
+        "pinyin": "Zài nǎr mǎi de? Wǒ hái méi hēguo zhème hǎohē de nǎichá.",
+        "meaning": "Mua ở đâu vậy ạ? Em chưa từng uống trà sữa nào ngon thế này."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "就在前边的商场，吃完饭你们可以跟我去看看。",
+        "pinyin": "Jiù zài qiánbian de shāngchǎng, chīwán fàn nǐmen kěyǐ gēn wǒ qù kànkan.",
+        "meaning": "Ngay siêu thị phía trước ấy, ăn xong các em có thể đi với chị xem."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "回国前一天，我们去一雪姐家了。到她家的时候，饭菜都做好了。刘爷爷还准备了奶茶。因为吃了太多东西，我们吃完饭后是走回酒店的。",
+        "pinyin": "Huí guó qián yì tiān, wǒmen qù Yīxuě jiě jiā le. Dào tā jiā de shíhou, fàn cài dōu zuò hǎo le. Liú yéye hái zhǔnbèile nǎichá. Yīnwèi chī le tài duō dōngxi, wǒmen chīwán fàn shì zǒuhuí jiǔdiàn de.",
+        "meaning": "Một ngày trước khi về nước, chúng tôi đến nhà chị Nhất Tuyết. Khi đến nhà chị ấy, cơm canh đều đã được làm xong. Ông Lưu còn chuẩn bị trà sữa. Vì ăn quá nhiều, sau bữa ăn chúng tôi đi bộ về khách sạn."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 6,
+        "title": "第6课 小雪，生日快乐！",
+        "title_pinyin": "Xiǎoxuě, shēngrì kuàilè!",
+        "title_meaning": "Tiểu Tuyết, sinh nhật vui vẻ!",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "明天就是女儿的生日了。",
+        "pinyin": "Míngtiān jiù shì nǚ'ér de shēngrì le.",
+        "meaning": "Ngày mai là sinh nhật con gái rồi."
+      },
+      {
+        "speaker": "刘明",
+        "text": "你不说，我还真忘了。我们给她准备个什么礼物呢？",
+        "pinyin": "Nǐ bù shuō, wǒ hái zhēn wàng le. Wǒmen gěi tā zhǔnbèi ge shénme lǐwù ne?",
+        "meaning": "Em không nói, anh suýt quên mất. Chúng ta chuẩn bị món quà gì cho con đây?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "她喜欢画画，你觉得画笔怎么样？",
+        "pinyin": "Tā xǐhuān huà huà, nǐ juéde huàbǐ zěnmeyàng?",
+        "meaning": "Con thích vẽ, anh thấy bút vẽ thế nào?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "就送画笔吧！",
+        "pinyin": "Jiù sòng huàbǐ ba!",
+        "meaning": "Cứ tặng bút vẽ đi!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "那我明天上午就去买。",
+        "pinyin": "Nà wǒ míngtiān shàngwǔ jiù qù mǎi.",
+        "meaning": "Vậy sáng mai em đi mua."
+      },
+      {
+        "speaker": "刘明",
+        "text": "好的！我再给她买个大大的生日蛋糕。",
+        "pinyin": "Hǎo de! Wǒ zài gěi tā mǎi ge dàdà de shēngrì dàngāo.",
+        "meaning": "Được rồi! Anh mua cho con một cái bánh sinh nhật thật to nữa."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "刘小雪",
+        "text": "小雪，生日快乐！",
+        "pinyin": "Xiǎoxuě, shēngrì kuàilè!",
+        "meaning": "Tiểu Tuyết, sinh nhật vui vẻ!"
+      },
+      {
+        "speaker": "刘明",
+        "text": "姐姐，生日快乐！",
+        "pinyin": "Jiějie, shēngrì kuàilè!",
+        "meaning": "Chị gái, sinh nhật vui vẻ nhé!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "小雪，这是爸爸、妈妈送你的礼物。你打开看看喜欢不喜欢。",
+        "pinyin": "Xiǎoxuě, zhè shì bàba, māma sòng nǐ de lǐwù. Nǐ dǎkāi kànkan xǐhuān bu xǐhuān.",
+        "meaning": "Tiểu Tuyết, đây là quà của bố mẹ tặng con. Con mở ra xem có thích không nhé."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "画笔！我很喜欢！",
+        "pinyin": "Huàbǐ! Wǒ hěn xǐhuān!",
+        "meaning": "Bút vẽ! Con rất thích!"
+      },
+      {
+        "speaker": "刘明",
+        "text": "那你想画点儿什么？",
+        "pinyin": "Nà nǐ xiǎng huà diǎnr shénme?",
+        "meaning": "Thế con muốn vẽ gì nào?"
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "画我们的家！有爸爸、妈妈、弟弟，还有黑色的狗、白色的猫什么的。",
+        "pinyin": "Huà wǒmen de jiā! Yǒu bàba, māma, dìdi, hái yǒu hēisè de gǒu, báisè de māo shénmede.",
+        "meaning": "Vẽ gia đình mình! Có bố, mẹ, em trai, còn có chú chó đen, chú mèo trắng các thứ nữa."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "那我要画一个穿白色衣服的姐姐。",
+        "pinyin": "Nà wǒ yào huà yī gè chuān báisè yīfu de jiějie.",
+        "meaning": "Con sẽ vẽ một chị gái mặc quần áo trắng."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "刘明",
+        "text": "小雪，看看今天有什么好吃的。",
+        "pinyin": "Xiǎoxuě, kànkan jīntiān yǒu shénme hǎochī de.",
+        "meaning": "Tiểu Tuyết, xem thử hôm nay có gì ngon nào."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "长长的面条儿，大大的蛋糕。",
+        "pinyin": "Chángcháng de miàntiáor, dàdà de dàngāo.",
+        "meaning": "Mì sợi dài, bánh ga tô to."
+      },
+      {
+        "speaker": "刘明",
+        "text": "你看，还有鱼啊肉啊什么的，都是你喜欢吃的。",
+        "pinyin": "Nǐ kàn, hái yǒu yú a ròu a shénme de, dōu shì nǐ xǐhuān chī de.",
+        "meaning": "Con xem, còn có cá, thịt các thứ nữa, đều là những món con thích ăn đấy."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "谢谢爸爸、妈妈！",
+        "pinyin": "Xièxie bàba, māma!",
+        "meaning": "Con cảm ơn bố mẹ!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "快去叫弟弟过来吃饭吧，吃完饭我们还要出去玩呢。",
+        "pinyin": "Kuài qù jiào dìdi guòlái chīfàn ba, chīwán fàn wǒmen hái yào chūqù wán ne.",
+        "meaning": "Mau vào gọi em trai ra ăn cơm đi, ăn xong chúng ta còn đi chơi nữa đấy."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "过生日真好啊！",
+        "pinyin": "Guò shēngrì zhēn hǎo a!",
+        "meaning": "Sinh nhật thật là tuyệt!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "是的，过生日就要吃好吃的，还要高高兴兴地玩。",
+        "pinyin": "Shì de, guò shēngrì jiù yào chī hǎochī de, hái yào gāogāoxìngxìng de wán.",
+        "meaning": "Đúng đấy, sinh nhật thì phải ăn ngon, còn phải chơi thật vui vẻ."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "今天是女儿的生日。我们买了蛋糕，做了面条儿，还做了鱼啊肉啊什么的。吃完晚饭，一家人去看了个电影。回家后，孩子们早早地就上床了。明天不上学，他们说要舒舒服服地睡一觉，让我们晚点儿叫他们起床。这是很忙、很累，但很快乐的一天。",
+        "pinyin": "Jīntiān shì nǚ'ér de shēngrì. Wǒmen mǎi le dàngāo, zuò le miàntiáor, hái zuò le yú a ròu a shénme de. Chīwán wǎnfàn, yījiā rén qù kàn le gè diànyǐng. Huí jiā hòu, háizimen zǎozǎo de jiù shàng chuáng le. Míngtiān bú shàngxué, tāmen shuō yào shūshūfúfu de shuì yī jiào, ràng wǒmen wǎn diǎnr jiào tāmen qǐchuáng. Zhè shì hěn máng, hěn lèi, dàn hěn kuàilè de yī tiān.",
+        "meaning": "Hôm nay là sinh nhật con gái. Chúng tôi mua bánh ga tô, nấu mì sợi, còn nấu cá, thịt các thứ. Ăn tối xong, cả nhà đi xem một bộ phim. Về nhà, bọn trẻ lên giường rất sớm. Ngày mai không phải đi học, chúng bảo muốn ngủ một giấc thật thoải mái, bảo chúng tôi gọi chúng dậy muộn một chút. Đó là một ngày rất bận rộn, rất mệt mỏi, nhưng rất vui vẻ."
+      }
+        ]
+      }
+    ]
+      },
+      {
+        "lesson": 7,
+        "title": "第7课 他篮球打得很好",
+        "title_pinyin": "Tā lánqiú dǎ de hěn hǎo",
+        "title_meaning": "Anh ấy chơi bóng rổ rất giỏi",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "陈天中",
+        "text": "安妮，你是什么时候从北京回来的？",
+        "pinyin": "Ānnī, nǐ shì shénme shíhou cóng Běijīng huílái de?",
+        "meaning": "Annie, bạn từ Bắc Kinh về khi nào thế?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "昨天下午。天中，你怎么一下课就往外跑？",
+        "pinyin": "Zuótiān xiàwǔ. Tiānzhōng, nǐ zěnme yí xiàkè jiù wǎng wài pǎo?",
+        "meaning": "Chiều hôm qua. Thiên Trung, sao cậu vừa tan học đã chạy ra ngoài thế?"
+      },
+      {
+        "speaker": "陈天中",
+        "text": "我跟同学说好了，一起去打篮球。",
+        "pinyin": "Wǒ gēn tóngxué shuōhǎo le, yìqǐ qù dǎ lánqiú.",
+        "meaning": "Tớ đã hẹn với các bạn cùng đi chơi bóng rổ."
+      },
+      {
+        "speaker": "安妮",
+        "text": "我也想跟你们一起玩。",
+        "pinyin": "Wǒ yě xiǎng gēn nǐmen yīqǐ wán.",
+        "meaning": "Tớ cũng muốn đi chơi cùng các cậu."
+      },
+      {
+        "speaker": "陈天中",
+        "text": "没问题，走吧。",
+        "pinyin": "Méi wèntí, zǒu ba.",
+        "meaning": "Không vấn đề gì, đi thôi."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "安妮",
+        "text": "天中，你是不是很喜欢打篮球？",
+        "pinyin": "Tiānzhōng, nǐ shì bu shì hěn xǐhuān dǎ lánqiú?",
+        "meaning": "Thiên Trung, cậu có phải rất thích chơi bóng rổ không?"
+      },
+      {
+        "speaker": "陈天中",
+        "text": "没错。",
+        "pinyin": "Méi cuò.",
+        "meaning": "Đúng vậy."
+      },
+      {
+        "speaker": "安妮",
+        "text": "你还喜欢什么运动？",
+        "pinyin": "Nǐ hái xǐhuān shénme yùndòng?",
+        "meaning": "Cậu còn thích môn thể thao nào nữa?"
+      },
+      {
+        "speaker": "陈天中",
+        "text": "我还喜欢踢足球，一到星期天就跟朋友们去踢球。",
+        "pinyin": "Wǒ hái xǐhuān tī zúqiú, yí dào Xīngqītiān jiù gēn péngyoumen qù tī qiú.",
+        "meaning": "Tớ còn thích đá bóng, cứ đến Chủ nhật là lại đi đá bóng với bạn bè."
+      },
+      {
+        "speaker": "安妮",
+        "text": "你踢得怎么样？",
+        "pinyin": "Nǐ tī de zěnmeyàng?",
+        "meaning": "Cậu đá thế nào?"
+      },
+      {
+        "speaker": "陈天中",
+        "text": "我踢得还可以。",
+        "pinyin": "Wǒ tī de hái kéyǐ.",
+        "meaning": "Tớ đá cũng tạm được."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "陈天中",
+        "text": "你篮球打得怎么样？",
+        "pinyin": "Nǐ lánqiú dǎ de zěnmeyàng?",
+        "meaning": "Cậu chơi bóng rổ thế nào?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "打得还可以。",
+        "pinyin": "Dǎ de hái kéyǐ.",
+        "meaning": "Chơi cũng tạm được."
+      },
+      {
+        "speaker": "陈天中",
+        "text": "跑步呢？你跑得快不快？",
+        "pinyin": "Pǎobù ne? Nǐ pǎo de kuài bu kuài?",
+        "meaning": "Còn chạy bộ thì sao? Cậu chạy có nhanh không?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "我跑得不快，也不太喜欢跑步。",
+        "pinyin": "Wǒ pǎo de bú kuài, yě bú tài xǐhuān pǎobù.",
+        "meaning": "Tớ chạy không nhanh, cũng không thích chạy bộ lắm."
+      },
+      {
+        "speaker": "陈天中",
+        "text": "那你喜欢游泳吗？",
+        "pinyin": "Nà nǐ xǐhuān yóuyǒng ma?",
+        "meaning": "Vậy cậu có thích bơi lội không?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "喜欢，但我游泳游得不快。",
+        "pinyin": "Xǐhuān, dàn wǒ yóuyǒng yóu de bú kuài.",
+        "meaning": "Có thích, nhưng tớ bơi không nhanh."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "我的爱好是运动。从上小学开始，我每天都跟爸爸去运动。现在我篮球打得很好，足球踢得不错，游泳游得也很快。我一有时间就去运动。",
+        "pinyin": "Wǒ de àihào shì yùndòng. Cóng shàng xiǎoxué kāishǐ, wǒ měi tiān dōu gēn bàba qù yùndòng. Xiànzài wǒ lánqiú dǎ de hěn hǎo, zúqiú tī de búcuò, yóuyǒng yóu de yě hěn kuài. Wǒ yì yǒu shíjiān jiù qù yùndòng.",
+        "meaning": "Sở thích của tôi là chơi thể thao. Từ khi học tiểu học, tôi đều đi tập thể thao với bố mỗi ngày. Hiện tại tôi chơi bóng rổ rất giỏi, đá bóng không tệ, bơi cũng rất nhanh. Hễ có thời gian là tôi đi tập thể thao."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 8,
+        "title": "第8课 虽然你忘了，但是我记得",
+        "title_pinyin": "Suīrán nǐ wàng le, dànshì wǒ jìde",
+        "title_meaning": "Tuy bạn quên, nhưng tôi vẫn nhớ",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "你看，这两块手表怎么样？",
+        "pinyin": "Nǐ kàn, zhè liǎng kuài shǒubiǎo zěnmeyàng?",
+        "meaning": "Anh xem, hai chiếc đồng hồ này thế nào?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "都不错！",
+        "pinyin": "Dōu búcuò!",
+        "meaning": "Đều không tệ!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "我喜欢左边这个。",
+        "pinyin": "Wǒ xǐhuān zuǒbiān zhège.",
+        "meaning": "Em thích cái bên trái này."
+      },
+      {
+        "speaker": "刘明",
+        "text": "我也觉得左边的比右边的好看。",
+        "pinyin": "Wǒ yě juéde zuǒbiān de bǐ yòubiān de hǎokàn.",
+        "meaning": "Anh cũng thấy cái bên trái đẹp hơn cái bên phải."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "你看要多少钱！",
+        "pinyin": "Nǐ kàn yào duōshao qián!",
+        "meaning": "Anh xem giá bao nhiêu tiền kìa!"
+      },
+      {
+        "speaker": "刘明",
+        "text": "真不便宜！八千八！",
+        "pinyin": "Zhēn bù piányi! Bā qiān bā!",
+        "meaning": "Đúng là không rẻ! Tám nghìn tám!"
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "刘明",
+        "text": "今天有不少电影，我们看个电影吧。",
+        "pinyin": "Jīntiān yǒu bù shǎo diànyǐng, wǒmen kàn gè diànyǐng ba.",
+        "meaning": "Hôm nay có khá nhiều phim, chúng ta xem một bộ phim đi."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好啊！我们看哪个？",
+        "pinyin": "Hǎo a! Wǒmen kàn nǎge?",
+        "meaning": "Được thôi! Chúng ta xem bộ nào?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "我记得你喜欢看爱情片，我们看那个爱情片，怎么样？",
+        "pinyin": "Wǒ jìde nǐ xǐhuān kàn àiqíngpiàn, wǒmen kàn nàge àiqíngpiàn, zěnmeyàng?",
+        "meaning": "Anh nhớ em thích xem phim tình cảm, chúng ta xem phim tình cảm kia nhé, thế nào?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "还是看这个吧，我看网上说这个电影比那个爱情片更有意思。",
+        "pinyin": "Háishi kàn zhège ba, wǒ kàn wǎngshang shuō zhège diànyǐng bǐ nàge àiqíngpiàn gèng yǒu yìsi.",
+        "meaning": "Hay xem cái này đi, em thấy trên mạng nói bộ phim này hay hơn phim tình cảm kia."
+      },
+      {
+        "speaker": "刘明",
+        "text": "好。我去买票。",
+        "pinyin": "Hǎo. Wǒ qù mǎi piào.",
+        "meaning": "Được. Anh đi mua vé."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "到网上买吧，网上买比在这里买便宜。",
+        "pinyin": "Dào wǎngshang mǎi ba, wǎngshang mǎi bǐ zài zhèli mǎi piányi.",
+        "meaning": "Mua trên mạng đi, mua trên mạng rẻ hơn mua ở đây."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "刘明",
+        "text": "您好！就要这几个菜吧，谢谢！",
+        "pinyin": "Nín hǎo! Jiù yào zhè jǐ ge cài ba, xièxie!",
+        "meaning": "Chào cô! Lấy mấy món này thôi ạ, cảm ơn cô!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "怎么点这么多菜？",
+        "pinyin": "Zěnme diǎn zhème duō cài?",
+        "meaning": "Sao anh gọi nhiều thế?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "你想想，今天是几月几号？",
+        "pinyin": "Nǐ xiǎngxiang, jīntiān shì jǐ yuè jǐ hào?",
+        "meaning": "Em nghĩ xem, hôm nay là ngày mấy tháng mấy nào?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "8月27号。啊！我的生日！",
+        "pinyin": "Bā yuè èrshíqī hào. A! Wǒ de shēngrì!",
+        "meaning": "Ngày 27 tháng 8. A! Sinh nhật của em!"
+      },
+      {
+        "speaker": "刘明",
+        "text": "生日快乐！虽然你忘了，但是我记得。看看这是什么？",
+        "pinyin": "Shēngrì kuàilè! Suīrán nǐ wàng le, dànshì wǒ jìde. Kànkan zhè shì shénme?",
+        "meaning": "Sinh nhật vui vẻ! Tuy em quên, nhưng anh nhớ. Xem đây là gì nào?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "手表！吃饭、看电影、买手表，今天花了不少钱吧？",
+        "pinyin": "Shǒubiǎo! Chī fàn, kàn diànyǐng, mǎi shǒubiǎo, jīntiān huā le bù shǎo qián ba?",
+        "meaning": "Đồng hồ! Ăn cơm, xem phim, mua đồng hồ, hôm nay tốn không ít tiền phải không?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "虽然花了一些钱，但是我们过了一个快乐的生日。",
+        "pinyin": "Suīrán huā le yīxiē qián, dànshì wǒmen guò le yí gè kuàilè de shēngrì.",
+        "meaning": "Tuy tốn một ít tiền, nhưng chúng ta đã có một sinh nhật vui vẻ."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "虽然妻子忘了今天是自己的生日，但是丈夫记得。丈夫请妻子去饭馆吃饭、去电影院看电影，还给妻子买了一块非常漂亮的手表。妻子觉得今天很快乐。",
+        "pinyin": "Suīrán qīzi wàng le jīntiān shì zìjǐ de shēngrì, dànshì zhàngfu jìde. Zhàngfu qǐng qīzi qù fànguǎn chī fàn, qù diànyǐngyuàn kàn diànyǐng, hái gěi qīzi mǎi le yí kuài fēicháng piàoliang de shǒubiǎo. Qīzi juéde jīntiān hěn kuàilè.",
+        "meaning": "Tuy vợ quên mất hôm nay là sinh nhật của mình, nhưng chồng thì vẫn nhớ. Chồng mời vợ đến nhà hàng ăn tối, đến rạp xem phim, và còn mua tặng vợ một chiếc đồng hồ rất đẹp. Vợ cảm thấy hôm nay thật vui vẻ."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 9,
+        "title": "第9课 我去买杯奶茶",
+        "title_pinyin": "Wǒ qù mǎi bēi nǎichá",
+        "title_meaning": "Tôi đi mua cốc trà sữa",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "儿子的裤子坏了，我们给他买条新的吧。",
+        "pinyin": "Érzi de kùzi huài le, wǒmen gěi tā mǎi tiáo xīn de ba.",
+        "meaning": "Quần của con trai hỏng rồi, chúng ta mua cho con một cái mới nhé."
+      },
+      {
+        "speaker": "刘明",
+        "text": "好啊。",
+        "pinyin": "Hǎo a.",
+        "meaning": "Được thôi."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "你看这条黑色的怎么样？",
+        "pinyin": "Nǐ kàn zhè tiáo hēisè de zěnmeyàng?",
+        "meaning": "Anh xem cái màu đen này thế nào?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "没有你上次买的那条好看。",
+        "pinyin": "Méiyǒu nǐ shàng cì mǎi de nà tiáo hǎokàn.",
+        "meaning": "Không đẹp bằng cái lần trước em mua."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "旁边那个男孩儿就穿了这样的裤子，我觉得很好看啊！",
+        "pinyin": "Pángbiān nàge nánháir jiù chuān le zhèyàng de kùzi, wǒ juéde hěn hǎokàn a!",
+        "meaning": "Thằng bé bên cạnh kia mặc quần kiểu này, em thấy rất đẹp mà!"
+      },
+      {
+        "speaker": "刘明",
+        "text": "儿子的个子没有他那么高，穿上就不会太好看。",
+        "pinyin": "Érzi de gèzi méiyǒu tā nàme gāo, chuān shang jiù bú huì tài hǎokàn.",
+        "meaning": "Con trai mình không cao bằng nó, mặc vào sẽ không được đẹp lắm."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好吧，我们再去那边看看。",
+        "pinyin": "Hǎo ba, wǒmen zài qù nà biān kànkan.",
+        "meaning": "Thôi được, chúng ta qua bên kia xem thử."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "门口有家奶茶店。你想喝杯奶茶吗？",
+        "pinyin": "Ménkǒu yǒu jiā nǎichá diàn. Nǐ xiǎng hē bēi nǎichá ma?",
+        "meaning": "Trước cửa có một tiệm trà sữa. Anh có muốn uống một cốc không?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "我想喝咖啡，还是去咖啡店吧。",
+        "pinyin": "Wǒ xiǎng hē kāfēi, háishì qù kāfēi diàn ba.",
+        "meaning": "Anh muốn uống cà phê, hay là đến quán cà phê đi."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "咖啡店离这儿有点儿远。",
+        "pinyin": "Kāfēi diàn lí zhèr yǒudiǎnr yuǎn.",
+        "meaning": "Quán cà phê hơi xa chỗ này một chút."
+      },
+      {
+        "speaker": "刘明",
+        "text": "没关系，那家店的咖啡很好喝。",
+        "pinyin": "Méi guānxi, nà jiā diàn de kāfēi hěn hǎo hē.",
+        "meaning": "Không sao, cà phê quán đó rất ngon."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "那你等一下，我去买杯奶茶。",
+        "pinyin": "Nà nǐ děng yīxià, wǒ qù mǎi bēi nǎichá.",
+        "meaning": "Vậy anh đợi một lát, em mua một cốc trà sữa."
+      },
+      {
+        "speaker": "刘明",
+        "text": "你不想喝咖啡吗？",
+        "pinyin": "Nǐ bù xiǎng hē kāfēi ma?",
+        "meaning": "Em không muốn uống cà phê à?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "喝了咖啡，晚上就别想睡觉了。",
+        "pinyin": "Hē le kāfēi, wǎnshang jiù bié xiǎng shuìjiào le.",
+        "meaning": "Uống cà phê vào thì tối khỏi nghĩ đến chuyện ngủ."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "刘明",
+        "text": "我们打车回去吧。",
+        "pinyin": "Wǒmen dǎchē huíqù ba.",
+        "meaning": "Chúng ta bắt taxi về nhé."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "这里离家很近，还是走路吧。",
+        "pinyin": "Zhèli lí jiā hěn jìn, háishì zǒulù ba.",
+        "meaning": "Chỗ này gần nhà, vẫn là đi bộ đi."
+      },
+      {
+        "speaker": "刘明",
+        "text": "要走多长时间？",
+        "pinyin": "Yào zǒu duō cháng shíjiān?",
+        "meaning": "Đi bộ mất bao lâu?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "走半个多小时就到了。",
+        "pinyin": "Zǒu bàn gè duō xiǎoshí jiù dào le.",
+        "meaning": "Đi bộ hơn nửa tiếng là đến."
+      },
+      {
+        "speaker": "刘明",
+        "text": "好的。每天上下班都坐车，今天运动运动吧。",
+        "pinyin": "Hǎo de. Měi tiān shàng xià bān dōu zuò chē, jīntiān yùndòng yùndòng ba.",
+        "meaning": "Được. Ngày nào đi làm về cũng đi xe, hôm nay vận động một chút nhé."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "这周刘明休息，我下班后跟他去了一家商店。商店里边的衣服没有大商场里的好看。我们没有买到喜欢的衣服，从商店出来就到咖啡店坐了坐。因为想运动运动，所以喝完东西，我们就走回家了。",
+        "pinyin": "Zhè zhōu Liú Míng xiūxi, wǒ xiàbān hòu gēn tā qùle yī jiā shāngdiàn. Shāngdiàn lǐbian de yīfu méiyǒu dà shāngchǎng lǐ de hǎokàn. Wǒmen méiyǒu mǎidào xǐhuān de yīfu, cóng shāngdiàn chūlái jiù dào kāfēi diàn zuòle zuò. Yīnwèi xiǎng yùndòng yùndòng, suǒyǐ hēwán dōngxi, wǒmen jiù zǒu huí jiā le.",
+        "meaning": "Tuần này Lưu Minh nghỉ, tan làm tôi đi cùng anh ấy đến một cửa hàng. Quần áo bên trong cửa hàng không đẹp bằng trong trung tâm thương mại lớn. Chúng tôi không mua được bộ quần áo nào ưng ý, từ cửa hàng đi ra thì đến quán cà phê ngồi một lúc. Vì muốn vận động một chút, nên sau khi uống xong, chúng tôi đi bộ về nhà."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 10,
+        "title": "第10课 就要考试了",
+        "title_pinyin": "Jiù yào kǎoshì le",
+        "title_meaning": "Sắp thi rồi",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "刘明",
+        "text": "小明，你们明天开学，你准备好了吗？",
+        "pinyin": "Xiǎomíng, nǐmen míngtiān kāixué, nǐ zhǔnbèi hǎo le ma?",
+        "meaning": "Tiểu Minh, ngày mai các con khai giảng rồi, con chuẩn bị xong chưa?"
+      },
+      {
+        "speaker": "刘小明",
+        "text": "明天就开学啊？爸爸，我的书包你看见了吗？",
+        "pinyin": "Míngtiān jiù kāixué a? Bàba, wǒ de shūbāo nǐ kànjiàn le ma?",
+        "meaning": "Ngày mai khai giảng rồi á? Bố ơi, bố có nhìn thấy cặp sách của con không?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "书包在门后面。",
+        "pinyin": "Shūbāo zài mén hòumiàn.",
+        "meaning": "Cặp sách ở sau cửa."
+      },
+      {
+        "speaker": "刘小明",
+        "text": "书在哪儿呢？笔呢？",
+        "pinyin": "Shū zài nǎr ne? Bǐ ne?",
+        "meaning": "Sách ở đâu vậy? Bút thì sao?"
+      },
+      {
+        "speaker": "刘明",
+        "text": "书在床上，笔在桌子上。",
+        "pinyin": "Shū zài chuáng shang, bǐ zài zhuōzi shang.",
+        "meaning": "Sách ở trên giường, bút ở trên bàn."
+      },
+      {
+        "speaker": "刘小明",
+        "text": "太好了！现在都准备好了。",
+        "pinyin": "Tài hǎo le! Xiànzài dōu zhǔnbèi hǎo le.",
+        "meaning": "Tuyệt quá! Bây giờ đều chuẩn bị xong rồi."
+      },
+      {
+        "speaker": "刘明",
+        "text": "这次爸爸帮你，下次你自己准备，好不好？",
+        "pinyin": "Zhè cì bàba bāng nǐ, xià cì nǐ zìjǐ zhǔnbèi, hǎo bu hǎo?",
+        "meaning": "Lần này bố giúp con, lần sau con tự chuẩn bị nhé, được không?"
+      },
+      {
+        "speaker": "刘小明",
+        "text": "好！",
+        "pinyin": "Hǎo!",
+        "meaning": "Vâng ạ!"
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "小雪，你在做什么呢？",
+        "pinyin": "Xiǎoxuě, nǐ zài zuò shénme ne?",
+        "meaning": "Tiểu Tuyết, con đang làm gì đấy?"
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "明天考试，我在看书呢。",
+        "pinyin": "Míngtiān kǎoshì, wǒ zài kàn shū ne.",
+        "meaning": "Ngày mai thi ạ, con đang xem sách."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "这些词要好好看看。",
+        "pinyin": "Zhèxiē cí yào hǎohǎo kànkan.",
+        "meaning": "Những từ này cần xem kỹ nhé."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "我看过了，意思也都懂了。",
+        "pinyin": "Wǒ kànguò le, yìsi yě dōu dǒng le.",
+        "meaning": "Con xem rồi, nghĩa đều hiểu rồi ạ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "你的本子呢？本子上做错的题也要看一看。",
+        "pinyin": "Nǐ de běnzi ne? Běnzi shàng zuòcuò de tí yě yào kàn yī kàn.",
+        "meaning": "Vở của con đâu? Các bài làm sai trong vở cũng phải xem lại nhé."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "妈妈，是您准备考试还是我准备考试？",
+        "pinyin": "Māma, shì nín zhǔnbèi kǎoshì háishì wǒ zhǔnbèi kǎoshì?",
+        "meaning": "Mẹ ơi, mẹ chuẩn bị thi hay là con chuẩn bị thi ạ?"
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "刘小雪",
+        "text": "妈妈，我回来了！",
+        "pinyin": "Māma, wǒ huílái le!",
+        "meaning": "Mẹ ơi, con về rồi đây!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "我买了奶茶，就在桌子上，自己去拿吧。",
+        "pinyin": "Wǒ mǎi le nǎichá, jiù zài zhuōzi shang, zìjǐ qù ná ba.",
+        "meaning": "Mẹ mua trà sữa rồi, ngay trên bàn đấy, con tự đi lấy nhé."
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "谢谢妈妈！",
+        "pinyin": "Xièxie māma!",
+        "meaning": "Cảm ơn mẹ!"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "今天考试考得怎么样？",
+        "pinyin": "Jīntiān kǎoshì kǎo de zěnmeyàng?",
+        "meaning": "Hôm nay thi thế nào?"
+      },
+      {
+        "speaker": "刘小雪",
+        "text": "我觉得比上次好。",
+        "pinyin": "Wǒ juéde bǐ shàng cì hǎo.",
+        "meaning": "Con thấy tốt hơn lần trước ạ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "真不错！饭菜快要做好了，你叫弟弟一起去洗手吧。",
+        "pinyin": "Zhēn búcuò! Fàn cài kuài yào zuò hǎo le, nǐ jiào dìdi yīqǐ qù xǐshǒu ba.",
+        "meaning": "Tốt quá! Cơm canh sắp xong rồi, con gọi em trai cùng đi rửa tay nhé."
+      },
+      {
+        "speaker": "刘小明",
+        "text": "妈妈，我是第一名，姐姐还没洗完呢。",
+        "pinyin": "Māma, wǒ shì dì-yī míng, jiějie hái méi xǐ wán ne.",
+        "meaning": "Mẹ ơi, con là người đầu tiên, chị gái vẫn chưa rửa xong ạ."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "你洗得真快啊！",
+        "pinyin": "Nǐ xǐ de zhēn kuài a!",
+        "meaning": "Con rửa nhanh thật đấy!"
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "快要开学了，爸爸帮弟弟准备书包、本子和笔。我就要考试了，妈妈让我看书看做错的题。我们上学，爸爸、妈妈比我们还忙。我问他们：\"是我和弟弟上学还是你们上学？\"我问完，他们都笑了。",
+        "pinyin": "Kuài yào kāixué le, bàba bāng dìdi zhǔnbèi shūbāo, běnzi hé bǐ. Wǒ jiù yào kǎoshì le, māma ràng wǒ kàn shū kàn zuòcuò de tí. Wǒmen shàngxué, bàba, māma bǐ wǒmen hái máng. Wǒ wèn tāmen: \"Shì wǒ hé dìdi shàngxué háishì nǐmen shàngxué?\" Wǒ wèn wán, tāmen dōu xiào le.",
+        "meaning": "Sắp khai giảng rồi, bố giúp em trai chuẩn bị cặp sách, vở và bút. Con thì sắp thi rồi, mẹ bắt con đọc sách và xem lại các bài làm sai. Chúng con đi học, bố mẹ còn bận hơn cả chúng con. Con hỏi họ: \"Là con và em trai đi học hay bố mẹ đi học ạ?\" Con hỏi xong, cả hai đều cười."
+      }
+    ]
+          }
+        ]
+      },
+      {
+        "lesson": 11,
+        "title": "第11课 我最喜欢吃中国菜",
+        "title_pinyin": "Wǒ zuì xǐhuān chī Zhōngguó cài",
+        "title_meaning": "Tôi thích ăn món Trung Quốc nhất",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "王一飞",
+        "text": "家月，都下课了，你怎么还不回家？",
+        "pinyin": "Jiāyuè, dōu xià kè le, nǐ zěnme hái bù huí jiā?",
+        "meaning": "Gia Nguyệt, tan học rồi, sao em chưa về nhà?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "我头疼，不太舒服。",
+        "pinyin": "Wǒ tóu téng, bù tài shūfu.",
+        "meaning": "Em bị đau đầu, không được thoải mái lắm."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "你这几天经常头疼，去医院看看吧。",
+        "pinyin": "Nǐ zhè jǐ tiān jīngcháng tóu téng, qù yīyuàn kànkan ba.",
+        "meaning": "Mấy hôm nay em thường bị đau đầu, đi bệnh viện khám đi."
+      },
+      {
+        "speaker": "白家月",
+        "text": "我想休息一下，现在不能动，一动就疼。",
+        "pinyin": "Wǒ xiǎng xiūxi yíxià, xiànzài bù néng dòng, yī dòng jiù téng.",
+        "meaning": "Em muốn nghỉ một chút, bây giờ không thể cử động được, cử động là đau."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "那你在这儿坐着，我去开车，一会儿送你去医院。",
+        "pinyin": "Nà nǐ zài zhèr zuòzhe, wǒ qù kāichē, yīhuìr sòng nǐ qù yīyuàn.",
+        "meaning": "Vậy em ngồi đây, tôi đi lấy xe, lát nữa đưa em đến bệnh viện."
+      },
+      {
+        "speaker": "白家月",
+        "text": "谢谢王老师。",
+        "pinyin": "Xièxie Wáng lǎoshī.",
+        "meaning": "Cảm ơn cô Vương."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "王一飞",
+        "text": "现在路上车多，还下着雪，我开慢一点儿。",
+        "pinyin": "Xiànzài lùshang chē duō, hái xiàzhe xuě, wǒ kāi màn yīdiǎnr.",
+        "meaning": "Bây giờ đường đông xe, lại còn có tuyết, cô đi chậm một chút."
+      },
+      {
+        "speaker": "白家月",
+        "text": "没问题，现在头没那么疼了。",
+        "pinyin": "Méi wèntí, xiànzài tóu méi nàme téng le.",
+        "meaning": "Không sao ạ, bây giờ đầu đã đỡ đau hơn rồi."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "好。李文来电话了，你帮我接一下。",
+        "pinyin": "Hǎo. Lǐ Wén lái diànhuà le, nǐ bāng wǒ jiē yīxià.",
+        "meaning": "Tốt. Lý Văn gọi điện đến kìa, em giúp cô nghe máy nhé."
+      },
+      {
+        "speaker": "白家月",
+        "text": "喂，李文。王老师开着车呢，你找她有事吗？",
+        "pinyin": "Wèi, Lǐ Wén. Wáng lǎoshī kāizhe chē ne, nǐ zhǎo tā yǒu shì ma?",
+        "meaning": "Alo, Lý Văn. Cô Vương đang lái xe, bạn tìm cô có việc à?"
+      },
+      {
+        "speaker": "李文",
+        "text": "没什么事。今天雪这么大，你们开车去哪儿啊？",
+        "pinyin": "Méi shénme shì. Jīntiān xuě zhème dà, nǐmen kāichē qù nǎr a?",
+        "meaning": "Không có việc gì đâu. Hôm nay tuyết to thế, các bạn lái xe đi đâu vậy?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "去医院，我头有点儿疼。",
+        "pinyin": "Qù yīyuàn, wǒ tóu yǒudiǎnr téng.",
+        "meaning": "Đi bệnh viện, tôi hơi bị đau đầu."
+      },
+      {
+        "speaker": "李文",
+        "text": "那我一会儿去看看你。",
+        "pinyin": "Nà wǒ yíhuìr qù kànkan nǐ.",
+        "meaning": "Vậy lát nữa tôi đến thăm bạn nhé."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "白家月",
+        "text": "李文，快请进！",
+        "pinyin": "Lǐ Wén, kuài qǐng jìn!",
+        "meaning": "Lý Văn, nhanh vào!"
+      },
+      {
+        "speaker": "李文",
+        "text": "家月，你怎么样了？头还疼吗？",
+        "pinyin": "Jiāyuè, nǐ zěnmeyàng le? Tóu hái téng ma?",
+        "meaning": "Gia Nguyệt, bạn thế nào rồi? Đầu còn đau không?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "不那么疼了。医生开了一些药，吃完就好多了。",
+        "pinyin": "Bú nàme téng le. Yīshēng kāi le yìxiē yào, chī wán jiù hǎo duō le.",
+        "meaning": "Không đau nhiều nữa. Bác sĩ kê một ít thuốc, uống vào thấy đỡ hơn nhiều."
+      },
+      {
+        "speaker": "李文",
+        "text": "那就好！",
+        "pinyin": "Nà jiù hǎo!",
+        "meaning": "Vậy thì tốt quá!"
+      },
+      {
+        "speaker": "王一飞",
+        "text": "家月，你想不想吃点儿东西？",
+        "pinyin": "Jiāyuè, nǐ xiǎng bu xiǎng chī diǎnr dōngxi?",
+        "meaning": "Gia Nguyệt, bạn có muốn ăn chút gì không?"
+      },
+      {
+        "speaker": "李文",
+        "text": "吃点儿吧，身体不舒服时更要好好吃饭。",
+        "pinyin": "Chī diǎnr ba, shēntǐ bù shūfu shí gèng yào hǎohǎo chī fàn.",
+        "meaning": "Ăn một chút đi, lúc cơ thể không khỏe càng phải ăn uống đầy đủ."
+      },
+      {
+        "speaker": "白家月",
+        "text": "吃点儿什么呢？",
+        "pinyin": "Chī diǎnr shénme ne?",
+        "meaning": "Ăn gì bây giờ?"
+      },
+      {
+        "speaker": "王一飞",
+        "text": "你最喜欢吃中国菜，我做几个中国菜吧。",
+        "pinyin": "Nǐ zuì xǐhuān chī Zhōngguó cài, wǒ zuò jǐ gè Zhōngguó cài ba.",
+        "meaning": "Em thích ăn đồ Trung Quốc nhất, cô làm vài món Trung Quốc nhé."
+      },
+      {
+        "speaker": "白家月",
+        "text": "好的，谢谢王老师。",
+        "pinyin": "Hǎo de, xièxie Wáng lǎoshī.",
+        "meaning": "Vâng, cảm ơn cô Vương."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "我这几天经常头疼，从药店买了点儿药，没去医院。今天下课后，王老师看我不舒服，就送我去医院了。从医院回来，李文也来看我了。现在他们都回去了，我也要睡觉了。",
+        "pinyin": "Wǒ zhè jǐ tiān jīngcháng tóu téng, cóng yàodiàn mǎi le diǎnr yào, méi qù yīyuàn. Jīntiān xià kè hòu, Wáng lǎoshī kàn wǒ bù shūfu, jiù sòng wǒ qù yīyuàn le. Cóng yīyuàn huílái, Lǐ Wén yě lái kàn wǒ le. Xiànzài tāmen dōu huíqù le, wǒ yě yào shuìjiào le.",
+        "meaning": "Mấy hôm nay tôi thường bị đau đầu, có mua một ít thuốc ở hiệu thuốc nhưng không đi bệnh viện. Hôm nay sau khi tan học, cô Vương thấy tôi không khỏe nên đã đưa tôi đến bệnh viện. Từ bệnh viện về, Lý Văn cũng đến thăm tôi. Bây giờ họ đã về rồi, tôi cũng phải đi ngủ."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 12,
+        "title": "第12课 这里比北京冷多了",
+        "title_pinyin": "Zhèlǐ bǐ Běijīng lěng duō le",
+        "title_meaning": "Ở đây lạnh hơn Bắc Kinh nhiều",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "喂，家月，是你啊！有什么事情吗？",
+        "pinyin": "Wèi, Jiāyuè, shì nǐ a! Yǒu shénme shìqing ma?",
+        "meaning": "Alo, Gia Nguyệt, là em đấy à! Có việc gì không?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "没什么事，就想跟您说说话。",
+        "pinyin": "Méi shénme shì, jiù xiǎng gēn nín shuōshuo huà.",
+        "meaning": "Không có việc gì đâu, chỉ muốn nói chuyện với chị một lát."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "好啊。你今天没课吗？",
+        "pinyin": "Hǎo a. Nǐ jīntiān méi kè ma?",
+        "meaning": "Ừ, hôm nay em không có tiết à?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "下午有课。您那里天气怎么样？",
+        "pinyin": "Xiàwǔ yǒu kè. Nín nàli tiānqì zěnmeyàng?",
+        "meaning": "Chiều có tiết ạ. Ở chỗ chị thời tiết thế nào?"
+      },
+      {
+        "speaker": "王一雪",
+        "text": "北京这几天虽然是晴天，但是有点儿冷。",
+        "pinyin": "Běijīng zhè jǐ tiān suīrán shì qíngtiān, dànshì yǒudiǎnr lěng.",
+        "meaning": "Mấy ngày nay Bắc Kinh tuy là trời nắng, nhưng hơi lạnh."
+      },
+      {
+        "speaker": "白家月",
+        "text": "我这里比北京冷多了，外边还正下着雪呢！",
+        "pinyin": "Wǒ zhèli bǐ Běijīng lěng duō le, wàibian hái zhèng xiàzhe xuě ne!",
+        "meaning": "Chỗ em lạnh hơn Bắc Kinh nhiều, bên ngoài vẫn còn đang có tuyết!"
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "王一雪",
+        "text": "喂，一飞，听家月说你那边下雪了，下得大不大？",
+        "pinyin": "Wèi, Yīfēi, tīng Jiāyuè shuō nǐ nàbiān xià xuě le, xià de dà bu dà?",
+        "meaning": "Alo, Nhất Phi, nghe Gia Nguyệt nói bên em có tuyết, tuyết to không?"
+      },
+      {
+        "speaker": "王一飞",
+        "text": "今天不大，昨天比今天下得大。",
+        "pinyin": "Jīntiān bú dà, zuótiān bǐ jīntiān xià de dà.",
+        "meaning": "Hôm nay không to, hôm qua tuyết rơi to hơn hôm nay."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "天气不好，你去外面的时候多穿点儿衣服。",
+        "pinyin": "Tiānqì bù hǎo, nǐ qù wàimiàn de shíhou duō chuān diǎnr yīfu.",
+        "meaning": "Thời tiết không tốt, khi ra ngoài em nhớ mặc thêm quần áo ấm nhé."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "这几天我在网上上课，没出去过。",
+        "pinyin": "Zhè jǐ tiān wǒ zài wǎngshàng shàngkè, méi chūqù guò.",
+        "meaning": "Mấy ngày nay em học trên mạng, chưa ra ngoài."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "那就好，有事记得给我打电话。",
+        "pinyin": "Nà jiù hǎo, yǒu shì jìde gěi wǒ dǎ diànhuà.",
+        "meaning": "Vậy thì tốt, có việc nhớ gọi cho chị nhé."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "好的。现在不下雪了，我出去买点儿吃的。",
+        "pinyin": "Hǎo de. Xiànzài bù xià xuě le, wǒ chūqù mǎi diǎnr chī de.",
+        "meaning": "Vâng. Bây giờ không có tuyết nữa, em ra ngoài mua chút đồ ăn."
+      },
+      {
+        "speaker": "王一雪",
+        "text": "一次多买点儿，阴天下雪什么的就少出去吧。",
+        "pinyin": "Yí cì duō mǎi diǎnr, yīn tiān xià xuě shénme de jiù shǎo chūqù ba.",
+        "meaning": "Mua một lần nhiều một chút, khi trời âm u, có tuyết thì hạn chế ra ngoài nhé."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "李文",
+        "text": "喂，家月，今天天气不错，我们去跑步吧！",
+        "pinyin": "Wèi, Jiāyuè, jīntiān tiānqì búcuò, wǒmen qù pǎobù ba!",
+        "meaning": "Alo, Gia Nguyệt, hôm nay thời tiết đẹp, chúng ta đi chạy bộ đi!"
+      },
+      {
+        "speaker": "白家月",
+        "text": "你跑步跑得比我快，我们能一起跑吗？",
+        "pinyin": "Nǐ pǎobù pǎo de bǐ wǒ kuài, wǒmen néng yìqǐ pǎo ma?",
+        "meaning": "Bạn chạy bộ nhanh hơn tôi, chúng ta có thể chạy cùng nhau được không?"
+      },
+      {
+        "speaker": "李文",
+        "text": "可以的，我慢慢跑，等着你。",
+        "pinyin": "Kěyǐ de, wǒ mànmàn pǎo, děngzhe nǐ.",
+        "meaning": "Được chứ, tôi chạy chậm thôi, đợi bạn."
+      },
+      {
+        "speaker": "白家月",
+        "text": "好吧。你真爱跑步啊！",
+        "pinyin": "Hǎo ba. Nǐ zhēn ài pǎobù a!",
+        "meaning": "Thôi được. Bạn thực sự thích chạy bộ nhỉ!"
+      },
+      {
+        "speaker": "李文",
+        "text": "我从小就经常跟爸爸跑步，跑步能让人快乐！",
+        "pinyin": "Wǒ cóngxiǎo jiù jīngcháng gēn bàba pǎobù, pǎobù néng ràng rén kuàilè!",
+        "meaning": "Tôi từ nhỏ đã thường chạy bộ với bố, chạy bộ có thể khiến người ta vui vẻ!"
+      },
+      {
+        "speaker": "白家月",
+        "text": "好，那我准备一下。",
+        "pinyin": "Hǎo, nà wǒ zhǔnbèi yíxià.",
+        "meaning": "Được, vậy tôi chuẩn bị một chút."
+      },
+      {
+        "speaker": "李文",
+        "text": "我现在坐地铁去找你，一会儿楼下见。",
+        "pinyin": "Wǒ xiànzài zuò dìtiě qù zhǎo nǐ, yíhuìr lóuxià jiàn.",
+        "meaning": "Tôi bây giờ đi tàu điện ngầm đến tìm bạn, lát nữa gặp ở dưới lầu nhé."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "前几天天气不好，我没走路，每天坐两站地铁去学校。今天是个大晴天，李文让我跟他去外面跑步。他小时候经常跑步，跑得比我快，但是他会等我。跟李文一起跑步，我好高兴啊！",
+        "pinyin": "Qián jǐ tiān tiānqì bù hǎo, wǒ méi zǒulù, měi tiān zuò liǎng zhàn dìtiě qù xuéxiào. Jīntiān shì gè dà qíngtiān, Lǐ Wén ràng wǒ gēn tā qù wàimiàn pǎobù. Tā xiǎoshíhou jīngcháng pǎobù, pǎo de bǐ wǒ kuài, dànshì tā huì děng wǒ. Gēn Lǐ Wén yīqǐ pǎobù, wǒ hǎo gāoxìng a!",
+        "meaning": "Mấy hôm trước thời tiết không tốt, tôi không đi bộ, mỗi ngày ngồi 2 trạm tàu điện ngầm để đến trường. Hôm nay trời quang đãng, Lý Văn rủ tôi ra ngoài chạy bộ. Anh ấy hồi nhỏ thường chạy bộ, chạy nhanh hơn tôi, nhưng anh ấy sẽ đợi tôi. Chạy bộ cùng Lý Văn, tôi vui quá đi!"
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 13,
+        "title": "第13课 我们爱上中文课",
+        "title_pinyin": "Wǒmen ài shàng Zhōngwén kè",
+        "title_meaning": "Chúng tôi thích học tiếng Trung",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "白家月",
+        "text": "时间过得真快啊！新年就要到了。",
+        "pinyin": "Shíjiān guò de zhēn kuài a! Xīnnián jiù yào dào le.",
+        "meaning": "Thời gian trôi nhanh thật đấy! Năm mới sắp đến rồi."
+      },
+      {
+        "speaker": "安妮",
+        "text": "这一年王老师教我们中文，每天工作都很累。",
+        "pinyin": "Zhè yī nián Wáng lǎoshī jiāo wǒmen Zhōngwén, měi tiān gōngzuò dōu hěn lèi.",
+        "meaning": "Năm nay cô Vương dạy chúng ta tiếng Trung, ngày nào cũng làm việc rất mệt."
+      },
+      {
+        "speaker": "白家月",
+        "text": "是啊，她教得很好。因为她，我们都非常爱上中文课。",
+        "pinyin": "Shì a, tā jiāo de hěn hǎo. Yīnwèi tā, wǒmen dōu fēicháng ài shàng Zhōngwén kè.",
+        "meaning": "Ừ, cô dạy rất hay. Vì có cô, chúng ta đều rất thích học tiếng Trung."
+      },
+      {
+        "speaker": "安妮",
+        "text": "我们给她准备个新年礼物吧。你觉得送给她什么好呢？",
+        "pinyin": "Wǒmen gěi tā zhǔnbèi ge xīnnián lǐwù ba. Nǐ juéde sòng gěi tā shénme hǎo ne?",
+        "meaning": "Chúng ta chuẩn bị một món quà năm mới cho cô đi. Cậu thấy tặng gì cho cô thì tốt đây?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "王老师喜欢花，就送给她花吧。",
+        "pinyin": "Wáng lǎoshī xǐhuān huā, jiù sòng gěi tā huā ba.",
+        "meaning": "Cô Vương thích hoa, tặng hoa cho cô đi."
+      },
+      {
+        "speaker": "安妮",
+        "text": "那我们花店去看看，现在买花的人多，希望花店还有漂亮的花。",
+        "pinyin": "Nà wǒmen huādiàn qù kànkan, xiànzài mǎi huā de rén duō, xīwàng huādiàn hái yǒu piàoliang de huā.",
+        "meaning": "Vậy chúng ta đến tiệm hoa xem sao, bây giờ nhiều người mua hoa, hy vọng tiệm hoa vẫn còn hoa đẹp."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "学生",
+        "text": "王老师，今天的词比昨天多了十个。",
+        "pinyin": "Wáng lǎoshī, jīntiān de cí bǐ zuótiān duōle shí gè.",
+        "meaning": "Cô Vương, từ hôm nay nhiều hơn hôm qua mười từ ạ."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "是啊！你们都学会了吗？",
+        "pinyin": "Shì a! Nǐmen dōu xuéhuì le ma?",
+        "meaning": "Đúng vậy! Các em đều đã học thuộc hết chưa?"
+      },
+      {
+        "speaker": "学生",
+        "text": "学会了，没有问题。",
+        "pinyin": "Xuéhuì le, méiyǒu wèntí.",
+        "meaning": "Học thuộc rồi ạ, không có vấn đề gì."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "好。现在我来说，你们在本子上面写。",
+        "pinyin": "Hǎo. Xiànzài wǒ lái shuō, nǐmen zài běnzi shàngmiàn xiě.",
+        "meaning": "Tốt. Bây giờ cô đọc, các em viết vào vở nhé."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "同学们，“洗手间”的“间”字写错了，它的里面是“日”，不是“口”。",
+        "pinyin": "Tóngxuémen, “xǐshǒujiān” de “jiān” zì xiěcuò le, tā de lǐmiàn shì “rì”, bú shì “kǒu”.",
+        "meaning": "Các em, chữ \"jiān\" trong từ \"xǐshǒujiān\" viết sai rồi, bên trong nó là chữ \"rì\" chứ không phải chữ \"kǒu\"."
+      },
+      {
+        "speaker": "白家月",
+        "text": "“日”比“口”多一笔，写“口”就是“问题”的“问”了。",
+        "pinyin": "“Rì” bǐ “kǒu” duō yī bǐ, xiě “kǒu” jiù shì “wèntí” de “wèn” le.",
+        "meaning": "Chữ \"rì\" nhiều hơn chữ \"kǒu\" một nét, viết thành \"kǒu\" thì sẽ thành chữ \"wèn\" trong từ \"wèntí\" ạ."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "没错，你说得很对。",
+        "pinyin": "Méi cuò, nǐ shuō de hěn duì.",
+        "meaning": "Đúng rồi, em nói rất đúng."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "安妮",
+        "text": "家月，你觉得这个本子怎么样？",
+        "pinyin": "Jiāyuè, nǐ juéde zhège běnzi zěnmeyàng?",
+        "meaning": "Gia Nguyệt, cậu thấy quyển vở này thế nào?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "很漂亮，多少钱一个？",
+        "pinyin": "Hěn piàoliang, duōshao qián yí gè?",
+        "meaning": "Đẹp quá, một quyển giá bao nhiêu vậy?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "比我们一起买的那个本子贵一点儿。",
+        "pinyin": "Bǐ wǒmen yìqǐ mǎi de nàge běnzi guì yìdiǎnr.",
+        "meaning": "Đắt hơn quyển vở chúng mình cùng mua một chút."
+      },
+      {
+        "speaker": "白家月",
+        "text": "这么漂亮的本子，不可能贵一点儿吧？",
+        "pinyin": "Zhème piàoliang de běnzi, bù kěnéng guì yìdiǎnr ba?",
+        "meaning": "Quyển vở đẹp thế này, không thể chỉ đắt hơn một chút được nhỉ?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "我是上网买的，真没那么贵。我买了两个，送你一个。",
+        "pinyin": "Wǒ shì shàngwǎng mǎi de, zhēn méi nàme guì. Wǒ mǎi le liǎng gè, sòng nǐ yí gè.",
+        "meaning": "Tớ mua trên mạng đấy, thực sự không mắc thế. Tớ mua hai quyển, tặng cậu một quyển."
+      },
+      {
+        "speaker": "白家月",
+        "text": "谢谢！那我送给你什么呢？",
+        "pinyin": "Xièxie! Nà wǒ sòng gěi nǐ shénme ne?",
+        "meaning": "Cảm ơn! Thế tớ tặng lại cậu cái gì bây giờ?"
+      },
+      {
+        "speaker": "安妮",
+        "text": "咖啡杯吧，我最喜欢喝咖啡了。",
+        "pinyin": "Kāfēibēi ba, wǒ zuì xǐhuān hē kāfēi le.",
+        "meaning": "Tặng cốc cà phê đi, tớ thích nhất là uống cà phê."
+      },
+      {
+        "speaker": "白家月",
+        "text": "好，那样我们就都有新年礼物了！",
+        "pinyin": "Hǎo, nàyàng wǒmen jiù dōu yǒu xīnnián lǐwù le!",
+        "meaning": "Được, vậy là cả hai chúng mình đều có quà năm mới rồi!"
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "新年就要到了，安妮送给我一个新本子。她告诉我是在网上买的，比我的本子贵一点儿。我们班同学也送了王老师漂亮的花，希望她高高兴兴地过个新年。",
+        "pinyin": "Xīnnián jiù yào dào le, Ānnī sòng gěi wǒ yí gè xīn běnzi. Tā gàosu wǒ shì zài wǎngshang mǎi de, bǐ wǒ de běnzi guì yìdiǎnr. Wǒmen bān tóngxué yě sòngle Wáng lǎoshī piàoliang de huā, xīwàng tā gāogāoxìngxìng de guò gè xīnnián.",
+        "meaning": "Năm mới sắp đến, Annie tặng tôi một quyển vở mới. Bạn ấy nói mua trên mạng, đắt hơn vở của tôi một chút. Các bạn trong lớp cũng tặng cô Vương những bông hoa đẹp, mong cô vui vẻ đón năm mới."
+      }
+            ]
+          }
+        ]
+      },
+      {
+        "lesson": 14,
+        "title": "第14课 一个人过年多没意思啊",
+        "title_pinyin": "Yí gè rén guònián duō méi yìsi a",
+        "title_meaning": "Một mình đón Tết thật nhàm chán",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "李文",
+        "text": "王老师，你家楼下站着一个人。",
+        "pinyin": "Wáng lǎoshī, nǐ jiā lóu xià zhànzhe yí gè rén.",
+        "meaning": "Cô Vương, dưới nhà bạn có một người đang đứng."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "我家楼下？我看看。",
+        "pinyin": "Wǒ jiā lóu xià? Wǒ kànkan.",
+        "meaning": "Dưới nhà tôi á? Để tôi xem."
+      },
+      {
+        "speaker": "李文",
+        "text": "那个人穿着黑色的裤子，手里还拿着一个黑色的包。",
+        "pinyin": "Nàge rén chuānzhe hēisè de kùzi, shǒuli hái názhe yí gè hēisè de bāo.",
+        "meaning": "Người đó mặc quần đen, trên tay còn cầm một cái túi màu đen."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "我看见那个人了，他是我的男朋友。",
+        "pinyin": "Wǒ kànjiàn nàge rén le, tā shì wǒ nánpéngyou.",
+        "meaning": "Tôi thấy người đó rồi, anh ấy là bạn trai của tôi."
+      },
+      {
+        "speaker": "李文",
+        "text": "那我们快过去吧。",
+        "pinyin": "Nà wǒmen kuài guòqu ba.",
+        "meaning": "Vậy chúng ta mau qua đó đi."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "王一飞",
+        "text": "同乐，真是你啊！上次打电话，你说有时间过来看我，没想到这么快就来了！",
+        "pinyin": "Tónglè, zhēn shì nǐ a! Shàng cì dǎ diànhuà, nǐ shuō yǒu shíjiān guòlái kàn wǒ, méi xiǎngdào zhème kuài jiù lái le!",
+        "meaning": "Đồng Lạc, đúng là anh rồi! Lần trước gọi điện, anh nói có thời gian sẽ qua thăm em, không ngờ lại đến nhanh thế!"
+      },
+      {
+        "speaker": "杨同乐",
+        "text": "就要过年了，你一个人在这儿多没意思啊，所以我就早早过来了。",
+        "pinyin": "Jiù yào guònián le, nǐ yī gè rén zài zhèr duō méi yìsi a, suǒyǐ wǒ jiù zǎozǎo guòlái le.",
+        "meaning": "Sắp đến Tết rồi, em một mình ở đây buồn quá, nên anh đã đến sớm."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "你能来，我太高兴了！",
+        "pinyin": "Nǐ néng lái, wǒ tài gāoxìng le!",
+        "meaning": "Anh đến được, em vui quá!"
+      },
+      {
+        "speaker": "杨同乐",
+        "text": "一飞，你旁边这位是？",
+        "pinyin": "Yīfēi, nǐ pángbiān zhè wèi shì?",
+        "meaning": "Nhất Phi, người bên cạnh em là ai vậy?"
+      },
+      {
+        "speaker": "王一飞",
+        "text": "同乐，这是李文，他在我们学校学医。李文，这是我男朋友杨同乐。",
+        "pinyin": "Tónglè, zhè shì Lǐ Wén, tā zài wǒmen xuéxiào xué yī. Lǐ Wén, zhè shì wǒ nánpéngyou Yáng Tónglè.",
+        "meaning": "Đồng Lạc, đây là Lý Văn, anh ấy học y ở trường em. Lý Văn, đây là bạn trai của tôi, Dương Đồng Lạc."
+      },
+      {
+        "speaker": "杨同乐",
+        "text": "李文，很高兴认识你！",
+        "pinyin": "Lǐ Wén, hěn gāoxìng rènshi nǐ!",
+        "meaning": "Lý Văn, rất vui được gặp cậu!"
+      },
+      {
+        "speaker": "李文",
+        "text": "认识你我也很高兴！我家就在前面那个楼，有时间来玩。",
+        "pinyin": "Rènshi nǐ wǒ yě hěn gāoxìng! Wǒ jiā jiù zài qiánmiàn nàge lóu, yǒu shíjiān lái wán.",
+        "meaning": "Tôi cũng rất vui được gặp anh! Nhà tôi ở ngay tòa nhà đằng kia, có thời gian sang chơi nhé."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "杨同乐",
+        "text": "一飞，你住的房子真不错，很大，离学校也不远。",
+        "pinyin": "Yīfēi, nǐ zhù de fángzi zhēn búcuò, hěn dà, lí xuéxiào yě bù yuǎn.",
+        "meaning": "Nhất Phi, căn nhà em ở thật tuyệt, rất rộng, cũng không xa trường."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "是啊！我楼下还住着一家中国人，他们人很好。",
+        "pinyin": "Shì a! Wǒ lóu xià hái zhùzhe yī jiā Zhōngguó rén, tāmen rén hěn hǎo.",
+        "meaning": "Vâng! Dưới nhà em còn ở một gia đình người Trung Quốc, họ rất tốt."
+      },
+      {
+        "speaker": "杨同乐",
+        "text": "这样你有事情就可以找他们帮忙。",
+        "pinyin": "Zhèyàng nǐ yǒu shìqing jiù kěyǐ zhǎo tāmen bāngmáng.",
+        "meaning": "Thế thì khi có việc em có thể nhờ họ giúp đỡ."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "对，我也帮他们家的小孩儿学中文。",
+        "pinyin": "Duì, wǒ yě bāng tāmen jiā de xiǎoháir xué Zhōngwén.",
+        "meaning": "Đúng, em cũng giúp con nhỏ nhà họ học tiếng Trung."
+      },
+      {
+        "speaker": "杨同乐",
+        "text": "我记得你跟我说过，是个女孩儿，学得也很好。",
+        "pinyin": "Wǒ jìde nǐ gēn wǒ shuōguo, shì gè nǚháir, xué de yě hěn hǎo.",
+        "meaning": "Anh nhớ em đã nói với anh, là một bé gái, học cũng rất tốt."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "没错，她经常跑上来找我玩。",
+        "pinyin": "Méi cuò, tā jīngcháng pǎo shànglái zhǎo wǒ wán.",
+        "meaning": "Đúng vậy, bé thường chạy lên đây chơi với em."
+      },
+      {
+        "speaker": "杨同乐",
+        "text": "你问问他们什么时候有时间，我请他们吃个饭。",
+        "pinyin": "Nǐ wènwen tāmen shénme shíhou yǒu shíjiān, wǒ qǐng tāmen chī gè fàn.",
+        "meaning": "Em hỏi họ khi nào rảnh, anh mời họ ăn một bữa nhé."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "我男朋友姓杨，叫杨同乐。他高个子、大眼睛，唱歌唱得很好，跳舞跳得也不错。他和我姐姐一起工作，是姐姐介绍我们认识的。他告诉我，从见到我的第一天开始，他就喜欢上我了。",
+        "pinyin": "Wǒ nánpéngyou xìng Yáng, jiào Yáng Tónglè. Tā gāo gèzi, dà yǎnjīng, chànggē chàng de hěn hǎo, tiàowǔ tiào de yě búcuò. Tā hé wǒ jiějie yīqǐ gōngzuò, shì jiějie jièshào wǒmen rènshi de. Tā gàosu wǒ, cóng jiàndào wǒ de dì-yī tiān kāishǐ, tā jiù xǐhuān shàng wǒ le.",
+        "meaning": "Bạn trai của tôi họ Dương, tên là Dương Đồng Lạc. Anh ấy cao, mắt to, hát rất hay, nhảy múa cũng rất tốt. Anh ấy làm cùng chị gái tôi, chị ấy đã giới thiệu cho chúng tôi gặp nhau. Anh ấy nói với tôi, từ ngày đầu tiên gặp tôi, anh ấy đã thích tôi rồi."
+      }
+    ]
+          }
+        ]
+      },
+      {
+        "lesson": 15,
+        "title": "第15课 我想再去一次中国",
+        "title_pinyin": "Wǒ xiǎng zài qù yí cì Zhōngguó",
+        "title_meaning": "Tôi muốn đi Trung Quốc thêm một lần nữa",
+        "texts": [
+          {
+    "text_number": 1,
+    "title": "Bài khóa 1",
+    "dialogue": [
+      {
+        "speaker": "王一飞",
+        "text": "考试就要开始了，请大家写上姓名，写好后就可以做题了。",
+        "pinyin": "Kǎoshì jiù yào kāishǐ le, qǐng dàjiā xiě shang xìngmíng, xiě hǎo hòu jiù kěyǐ zuò tí le.",
+        "meaning": "Kỳ thi sắp bắt đầu, mời các em ghi tên vào, sau khi viết xong thì có thể bắt đầu làm bài."
+      },
+      {
+        "speaker": "白家月",
+        "text": "老师，我做完了。",
+        "pinyin": "Lǎoshī, wǒ zuò wán le.",
+        "meaning": "Cô ơi, em làm xong rồi."
+      },
+      {
+        "speaker": "陈天中",
+        "text": "老师，我也做完了。",
+        "pinyin": "Lǎoshī, wǒ yě zuò wán le.",
+        "meaning": "Cô ơi, em cũng làm xong rồi."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "对了，你们考完试想做什么？",
+        "pinyin": "Duìle, nǐmen kǎo wán shì xiǎng zuò shénme?",
+        "meaning": "À đúng rồi, sau khi thi xong các em muốn làm gì?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "我很想去中国，虽然去过一次，但是很想去再 去一次。",
+        "pinyin": "Wǒ hěn xiǎng qù Zhōngguó, suīrán qùguo yí cì, dànshì hěn xiǎng zài qù yí cì.",
+        "meaning": "Em rất muốn đi Trung Quốc, tuy đã đi một lần, nhưng rất muốn đi thêm một lần nữa."
+      },
+      {
+        "speaker": "王一飞",
+        "text": "不错，到中国后你就可以经常说中文了。",
+        "pinyin": "Búcuò, dào Zhōngguó hòu nǐ jiù kěyǐ jīngcháng shuō Zhōngwén le.",
+        "meaning": "Tốt đấy, đến Trung Quốc rồi em có thể thường xuyên nói tiếng Trung."
+      }
+    ]
+  },
+  {
+    "text_number": 2,
+    "title": "Bài khóa 2",
+    "dialogue": [
+      {
+        "speaker": "白家月",
+        "text": "考完试了，我现在可以出国旅游了。",
+        "pinyin": "Kǎo wán shì le, wǒ xiànzài kěyǐ chūguó lǚyóu le.",
+        "meaning": "Thi xong rồi, bây giờ mình có thể đi du lịch nước ngoài rồi."
+      },
+      {
+        "speaker": "李文",
+        "text": "你要去哪儿？",
+        "pinyin": "Nǐ yào qù nǎr?",
+        "meaning": "Cậu định đi đâu?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "我要再去一次北京。",
+        "pinyin": "Wǒ yào zài qù yí cì Běijīng.",
+        "meaning": "Mình muốn đi Bắc Kinh thêm một lần nữa."
+      },
+      {
+        "speaker": "李文",
+        "text": "为什么还去北京？",
+        "pinyin": "Wèi shénme hái qù Běijīng?",
+        "meaning": "Tại sao lại đi Bắc Kinh nữa?"
+      },
+      {
+        "speaker": "白家月",
+        "text": "因为我想再吃一次烤鸭，再喝一次奶茶，再去北京大学看一次电影……",
+        "pinyin": "Yīnwèi wǒ xiǎng zài chī yí cì kǎoyā, zài hē yí cì nǎichá, zài qù Běijīng Dàxué kàn yí cì diànyǐng…",
+        "meaning": "Vì mình muốn ăn vịt quay thêm một lần, uống trà sữa thêm một lần, lại đến Đại học Bắc Kinh xem phim một lần nữa..."
+      },
+      {
+        "speaker": "李文",
+        "text": "你想做的事情很多啊！",
+        "pinyin": "Nǐ xiǎng zuò de shìqing hěn duō a!",
+        "meaning": "Cậu muốn làm nhiều việc thế nhỉ!"
+      },
+      {
+        "speaker": "白家月",
+        "text": "是啊，你看，我还在网上买好颐和园的门票了呢。",
+        "pinyin": "Shì a, nǐ kàn, wǒ hái zài wǎngshang mǎi hǎo Yíhéyuán de ménpiào le ne.",
+        "meaning": "Ừ, cậu xem, mình còn mua vé Cung điện Mùa hè trên mạng rồi này."
+      },
+      {
+        "speaker": "李文",
+        "text": "我的高中同学就在颐和园上班，可以让他给你好好介绍介绍。",
+        "pinyin": "Wǒ de gāozhōng tóngxué jiù zài Yíhéyuán shàngbān, kěyǐ ràng tā gěi nǐ hǎohǎo jièshào jièshào.",
+        "meaning": "Bạn cấp ba của mình làm việc ở Cung điện Mùa hè đấy, có thể nhờ bạn ấy giới thiệu kỹ cho cậu."
+      },
+      {
+        "speaker": "白家月",
+        "text": "太好了！出门旅游，多个朋友多条路。",
+        "pinyin": "Tài hǎo le! Chūmén lǚyóu, duō gè péngyou duō tiáo lù.",
+        "meaning": "Tuyệt quá! Đi du lịch, nhiều bạn bè là nhiều đường đi."
+      }
+    ]
+  },
+  {
+    "text_number": 3,
+    "title": "Bài khóa 3",
+    "dialogue": [
+      {
+        "speaker": "白家月",
+        "text": "李文，你有一年没回国了吧？",
+        "pinyin": "Lǐ Wén, nǐ yǒu yī nián méi huí guó le ba?",
+        "meaning": "Lý Văn, cậu đã một năm chưa về nước rồi nhỉ?"
+      },
+      {
+        "speaker": "李文",
+        "text": "不到一年。我六月的时候回去了一次。",
+        "pinyin": "Bú dào yī nián. Wǒ liùyuè de shíhou huíqù le yí cì.",
+        "meaning": "Chưa đầy một năm. Mình đã về một lần vào tháng sáu."
+      },
+      {
+        "speaker": "白家月",
+        "text": "我怎么忘了？还是我送你去的机场呢。",
+        "pinyin": "Wǒ zěnme wàng le? Háishì wǒ sòng nǐ qù de jīchǎng ne.",
+        "meaning": "Sao mình lại quên nhỉ? Đúng là mình đã tiễn cậu ra sân bay mà."
+      },
+      {
+        "speaker": "李文",
+        "text": "是啊。",
+        "pinyin": "Shì a.",
+        "meaning": "Ừ nhỉ."
+      },
+      {
+        "speaker": "白家月",
+        "text": "我记得你那次的机票很便宜。",
+        "pinyin": "Wǒ jìde nǐ nà cì de jīpiào hěn piányi.",
+        "meaning": "Mình nhớ vé máy bay lần đó của cậu rất rẻ."
+      },
+      {
+        "speaker": "李文",
+        "text": "没错，可能因为那个时候去北京的人不多吧。",
+        "pinyin": "Méi cuò, kěnéng yīnwèi nàge shíhou qù Běijīng de rén bù duō ba.",
+        "meaning": "Đúng vậy, có lẽ vì lúc đó ít người đi Bắc Kinh."
+      },
+      {
+        "speaker": "白家月",
+        "text": "这次的机票虽然有点儿贵，但想到就要飞北京了，我还是很高兴的。",
+        "pinyin": "Zhè cì de jīpiào suīrán yǒudiǎnr guì, dàn xiǎngdào jiù yào fēi Běijīng le, wǒ háishì hěn gāoxìng de.",
+        "meaning": "Vé máy bay lần này tuy hơi đắt, nhưng nghĩ đến sắp bay đến Bắc Kinh, mình vẫn rất vui."
+      }
+    ]
+  },
+  {
+    "text_number": 4,
+    "title": "Bài khóa 4",
+    "dialogue": [
+      {
+        "text": "我六月的时候回过一次北京，现在有半年多没回去了，我有点儿想家。就要过年了，我要回家过年。家月这次也要去北京，我们都是星期五的飞机。家月说我们好像小鸟，一起飞到北京，再一起飞回这里。",
+        "pinyin": "Wǒ liùyuè de shíhou huíguo yí cì Běijīng, xiànzài yǒu bàn nián duō méi huíqù le, wǒ yǒudiǎnr xiǎng jiā. Jiù yào guònián le, wǒ yào huí jiā guònián. Jiāyuè zhè cì yě yào qù Běijīng, wǒmen dōu shì Xīngqīwǔ de fēijī. Jiāyuè shuō wǒmen hǎoxiàng xiǎoniǎo, yīqǐ fēidào Běijīng, zài yīqǐ fēihuí zhèlǐ.",
+        "meaning": "Tôi đã về Bắc Kinh một lần vào tháng sáu, bây giờ đã hơn nửa năm chưa về, tôi hơi nhớ nhà. Sắp đến Tết rồi, tôi muốn về nhà ăn Tết. Gia Nguyệt lần này cũng sẽ đi Bắc Kinh, chúng tôi đều đi máy bay vào thứ Sáu. Gia Nguyệt nói chúng tôi như những chú chim nhỏ, cùng bay đến Bắc Kinh, rồi cùng bay trở về đây."
+      }
+            ]
+          }
+        ]
+      }
+    ]
+  }

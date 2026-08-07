@@ -1,0 +1,339 @@
+{
+  "initials": [
+    { "py": "b", "vi": "pua"},
+    { "py": "p", "vi": "pua (bật hơi)"},
+    { "py": "m", "vi": "mua"},
+    { "py": "f", "vi": "phua"},
+    { "py": "d", "vi": "tưa"},
+    { "py": "t", "vi": "thưa (bật hơi)"},
+    { "py": "n", "vi": "nưa"},
+    { "py": "l", "vi": "lưa"},
+    { "py": "g", "vi": "cưa"},
+    { "py": "k", "vi": "khưa (bật hơi)"},
+    { "py": "h", "vi": "hưa/khưa (nhẹ)"},
+    { "py": "j", "vi": "chi"},
+    { "py": "q", "vi": "chi (bật hơi)"},
+    { "py": "x", "vi": "xi"},
+    { "py": "zh", "vi": "trư (uốn lưỡi)"},
+    { "py": "ch", "vi": "trư (uốn lưỡi bật hơi)"},
+    { "py": "sh", "vi": "shư (uốn lưỡi)"},
+    { "py": "r", "vi": "rư (uốn lưỡi)"},
+    { "py": "z", "vi": "chư (rút lưỡi, đầu lưỡi phẳng)"},
+    { "py": "c", "vi": "xư (rút lưỡi, đầu lưỡi phẳng, bật hơi)"},
+    { "py": "s", "vi": "sư (đầu lưỡi phẳng)"}
+  ],
+  "simpleFinals": [
+    { "py": "a", "vi": "a (há rộng miệng)"},
+    { "py": "o", "vi": "ô/ua"},
+    { "py": "e", "vi": "ơ/ưa"},
+    { "py": "i", "vi": "i"},
+    { "py": "u", "vi": "u"},
+    { "py": "ü", "vi": "uy (tròn môi phát âm i)"}
+  ],
+  "compoundFinals": [
+    { "py": "ai", "vi": "ai"},
+    { "py": "ei", "vi": "ây"},
+    { "py": "ao", "vi": "ao"},
+    { "py": "ou", "vi": "âu"},
+    { "py": "ia", "vi": "i-a"},
+    { "py": "ie", "vi": "i-ê"},
+    { "py": "ua", "vi": "oa"},
+    { "py": "uo", "vi": "ua"},
+    { "py": "üe", "vi": "uê"},
+    { "py": "iao", "vi": "i-ao"},
+    { "py": "iu", "vi": "i-âu"},
+    { "py": "uai", "vi": "oai"},
+    { "py": "ui", "vi": "uây"}
+  ],
+  "nasalFinals": [
+    { "py": "an", "vi": "an"},
+    { "py": "en", "vi": "ân"},
+    { "py": "in", "vi": "in"},
+    { "py": "un", "vi": "uân"},
+    { "py": "ün", "vi": "uyn"},
+    { "py": "ang", "vi": "ang"},
+    { "py": "eng", "vi": "âng"},
+    { "py": "ing", "vi": "ing/iêng"},
+    { "py": "ong", "vi": "ông/ung"},
+    { "py": "iang", "vi": "i-ang"},
+    { "py": "iong", "vi": "i-ông"},
+    { "py": "uang", "vi": "oang"},
+    { "py": "ueng", "vi": "oâng"}
+  ],
+  "sandhiRules": [
+    {
+      "title": "1. Hai thanh 3 đi liền nhau (3 + 3 ➔ 2 + 3; 3 + 3 + 3 ➔ 3 + 2 + 3 hoặc 2 + 2 + 3)",
+      "desc": "Khi hai âm tiết mang thanh 3 đi liền nhau, âm tiết thứ nhất sẽ biến đổi phát âm thành <strong>thanh 2</strong>.\nKhi ba âm tiết mang thanh 3 đi liền nhau, có thể biến điệu là 3-2-3 hoặc 2-2-3.\n• Ví dụ: <strong>Nǐ hǎo</strong> (你好) ➔ Đọc là <strong>Ní hǎo</strong>\n• Ví dụ: <strong>Kěyǐ</strong> (可以) ➔ Đọc là <strong>Kéyǐ</strong>\n• Ví dụ: <strong>Wǒ hěn hǎo</strong> (我很好) ➔ Đọc là <strong>Wǒ hén hǎo</strong> hoặc <strong>wó hén hǎo</strong>",
+      "bgColor": "#fdf2f8",
+      "borderColor": "#ec4899",
+      "titleColor": "#be185d"
+    },
+    {
+      "title": "2. Biến điệu của chữ 不 (Bù)",
+      "desc": "Chữ <strong>不 (bù)</strong> nguyên thể mang thanh 4. Khi đứng trước một âm tiết mang thanh 4 khác, <strong>bù</strong> chuyển sang đọc thành thanh 2 (<strong>bú</strong>).\n• Ví dụ: <strong>bù shì</strong> ➔ <strong>bú shì</strong>\n• Ví dụ: <strong>bù duì</strong> ➔ <strong>bú duì</strong>",
+      "bgColor": "#f0f9ff",
+      "borderColor": "#0284c7",
+      "titleColor": "#0369a1"
+    },
+    {
+      "title": "3. Biến điệu của chữ 一 (Yī)",
+      "desc": "• Đứng độc lập hoặc cuối từ: đọc nguyên thanh 1 <strong>Yī</strong>.\n• Đứng trước thanh 4: chuyển sang đọc thanh 2 <strong>Yí</strong>.\n• Đứng trước thanh 1, 2, 3: chuyển sang đọc thanh 4 <strong>Yì</strong>.\n• Ví dụ: <strong>chū yī</strong>; <strong>xīngqī yī</strong>\n• Ví dụ: <strong>yī gè</strong> ➔ <strong>yí gè</strong>\n• Ví dụ: <strong>yī tiān</strong> ➔ <strong>yì tiān</strong>",
+      "bgColor": "#fef3c7",
+      "borderColor": "#d97706",
+      "titleColor": "#b45309"
+    },
+    {
+      "title": "4. Thanh Nhẹ",
+      "desc": "Âm tiết mang thanh nhẹ không ghi dấu thanh điệu, được phát âm ngắn, nhẹ nhàng và tự nhiên.\n• Ví dụ: <strong>māma</strong> (妈妈 - Mẹ), <strong>xièxie</strong> (谢谢 - Cảm ơn)",
+      "bgColor": "#faf5ff",
+      "borderColor": "#9333ea",
+      "titleColor": "#6b21a8"
+    }
+  ],
+  "yW_Rules": {
+    "note": "y và w là bán vận mẫu (thanh mẫu không chính thức), KHÔNG phải thanh mẫu thực thụ. Chúng dùng để viết cho các vần bắt đầu bằng i, u, ü khi đứng một mình.\n\"y\"đọc là \"d\" (trừ \"yi\"), \"w\"đọc là \"qu\" (trừ \"wu\")",
+    "rules": [
+      {
+        "final": "i",
+        "alone": "yi",
+        "example": "一 (yī)",
+        "rule": "Thêm y trước i"
+      },
+      {
+        "final": "in",
+        "alone": "yin",
+        "example": "音 (yīn)",
+        "rule": "Thêm y trước in"
+      },
+      {
+        "final": "ing",
+        "alone": "ying",
+        "example": "英 (yīng)",
+        "rule": "Thêm y trước ing"
+      },
+      {
+        "final": "ia",
+        "alone": "ya",
+        "example": "鸭 (yā)",
+        "rule": "Đổi i thành y"
+      },
+      {
+        "final": "ie",
+        "alone": "ye",
+        "example": "也 (yě)",
+        "rule": "Đổi i thành y"
+      },
+      {
+        "final": "iao",
+        "alone": "yao",
+        "example": "要 (yào)",
+        "rule": "Đổi i thành y"
+      },
+      {
+        "final": "iu(iou)",
+        "alone": "you",
+        "example": "有 (yǒu)",
+        "rule": "Đổi i thành y (bản chất của \"iu\" là \"iou\")"
+      },
+      {
+        "final": "ian",
+        "alone": "yan",
+        "example": "眼 (yǎn)",
+        "rule": "Đổi i thành y"
+      },
+      {
+        "final": "iang",
+        "alone": "yang",
+        "example": "羊 (yáng)",
+        "rule": "Đổi i thành y"
+      },
+      {
+        "final": "iong",
+        "alone": "yong",
+        "example": "用 (yòng)",
+        "rule": "Đổi i thành y"
+      },
+      {
+        "final": "u",
+        "alone": "wu",
+        "example": "五 (wǔ)",
+        "rule": "Thêm w trước u"
+      },
+      {
+        "final": "ua",
+        "alone": "wa",
+        "example": "瓦 (wǎ)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "uo",
+        "alone": "wo",
+        "example": "我 (wǒ)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "uai",
+        "alone": "wai",
+        "example": "外 (wài)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "ui",
+        "alone": "wei",
+        "example": "为 (wèi)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "uan",
+        "alone": "wan",
+        "example": "万 (wàn)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "uang",
+        "alone": "wang",
+        "example": "王 (wáng)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "uen",
+        "alone": "wen",
+        "example": "问 (wèn)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "ueng",
+        "alone": "weng",
+        "example": "翁 (wēng)",
+        "rule": "Đổi u thành w"
+      },
+      {
+        "final": "ü",
+        "alone": "yu",
+        "example": "鱼 (yú)",
+        "rule": "Thêm y, bỏ dấu hai chấm"
+      },
+      {
+        "final": "üe",
+        "alone": "yue",
+        "example": "月 (yuè)",
+        "rule": "Thêm y, bỏ dấu hai chấm"
+      },
+      {
+        "final": "üan",
+        "alone": "yuan",
+        "example": "元 (yuán)",
+        "rule": "Thêm y, bỏ dấu hai chấm"
+      },
+      {
+        "final": "ün",
+        "alone": "yun",
+        "example": "云 (yún)",
+        "rule": "Thêm y, bỏ dấu hai chấm"
+      }
+    ]
+  },
+  "pronunciationNotes": {
+    "vowel_i_variations": {
+      "note": "Cách đọc vần 'i' thay đổi theo phụ âm đầu đi kèm",
+      "rules": [
+        {
+          "initials": ["z", "c", "s", "zh", "ch", "sh", "r"],
+          "pronunciation": "ư"
+        },
+        {
+          "initials": ["j", "q", "x", "b", "p", "m", "d", "t", "n", "l"],
+          "pronunciation": "i"
+        }
+      ]
+    },
+    "vowel_u_umlaut_notes": {
+      "note": "Quy tắc dành cho vần 'ü'",
+      "rules": [
+        "Vần 'ü' CHỈ đi với 5 phụ âm: j, q, x, n, l",
+        "Khi viết với j, q, x → bỏ dấu hai chấm (viết là 'u') nhưng vẫn đọc là 'uy'. Ví dụ: ju (đọc là jǖ)",
+        "Khi viết với n, l → giữ nguyên dấu hai chấm (nü, lü) để phân biệt với nu, lu"
+      ]
+    },
+    "tone_mark_rules": {
+      "note": "Quy tắc đặt dấu thanh trên nguyên âm chính",
+      "priority": "a > o > e > i > u > ü",
+      "examples": [
+        "ao → đặt trên a (ǎo)",
+        "uo → đặt trên o (uǒ)",
+        "ie → đặt trên e (iě)"
+      ],
+      "exceptions": [
+        "iu → dấu đặt trên u (iù)",
+        "ui → dấu đặt trên i (uì)"
+      ]
+    }
+  },
+  "strokeBasics": [
+    { "id": 1, "nameVi": "Nét ngang", "nameZh": "横 (Héng)", "shape": "一", "note": "Kẻ ngang từ trái sang phải"},
+    { "id": 2, "nameVi": "Nét sổ", "nameZh": "竖 (Shù)", "shape": "丨", "note": "Kẻ dọc từ trên xuống dưới"},
+    { "id": 3, "nameVi": "Nét phẩy", "nameZh": "撇 (Piě)", "shape": "丿", "note": "Từ trên phải xuống dưới trái, nhấc nhanh"},
+    { "id": 4, "nameVi": "Nét mác", "nameZh": "捺 (Nà)", "shape": "乀", "note": "Từ trên trái xuống dưới phải, ấn mạnh rồi nhấc"},
+    { "id": 5, "nameVi": "Nét hất", "nameZh": "提 (Tí)", "shape": "㇀", "note": "Từ dưới trái lên trên phải, nét ngắn"},
+    { "id": 6, "nameVi": "Nét gấp khúc", "nameZh": "折 (Zhé)", "shape": "乛, 乙", "note": "Kết hợp ngang + sổ"},
+    { "id": 7, "nameVi": "Nét móc", "nameZh": "钩 (Gōu)", "shape": "亅, 乚", "note": "Thêm móc vào cuối nét sổ hoặc ngang"},
+    { "id": 8, "nameVi": "Nét chấm", "nameZh": "点 (Diǎn)", "shape": "丶", "note": "Chấm nhẹ từ trên xuống dưới"}
+  ],
+  "strokeRules": [
+    { "num": "1", "rule": "Từ trên xuống dưới", "ex": "一, 二, 三 (1, 2, 3)", "hanzi": "三"},
+    { "num": "2", "rule": "Từ trái sang phải", "ex": "川, 人 (Sông, Người)", "hanzi": "人"},
+    { "num": "3", "rule": "Ngang trước sổ sau", "ex": "十, 土 (Mười, Đất)", "hanzi": "十"},
+    { "num": "4", "rule": "Phẩy trước mác sau", "ex": "八, 木 (Tám, Cây)", "hanzi": "八"},
+    { "num": "5", "rule": "Ngoài trước trong sau", "ex": "月, 同 (Trăng, Cùng)", "hanzi": "月"},
+    { "num": "6", "rule": "Vào trước đóng sau", "ex": "口, 国 (Miệng, Nước)", "hanzi": "口"},
+    { "num": "7", "rule": "Giữa trước hai bên sau", "ex": "水, 小 (Nước, Nhỏ)", "hanzi": "水"}
+  ],
+  "hanziFormation": [
+    {
+      "title": "1. Tượng Hình (象形)",
+      "desc": "Vẽ mô phỏng lại hình dáng thực tế của sự vật. Ví dụ: 日 (Mặt trời), 月 (Mặt trăng), 山 (Núi), 木 (Cây).",
+      "bgColor": "#fdf2f8",
+      "borderColor": "#fbcfe8",
+      "titleColor": "#be185d",
+      "img": "images/xiangxingzi.png"
+    },
+    {
+      "title": "2. Chỉ Sự (指事)",
+      "desc": "Dùng ký hiệu tượng trưng biểu thị khái niệm trừu tượng. Ví dụ: 上 (Trên), 下 (Dưới), 本 (Gốc cây).",
+      "bgColor": "#f0f9ff",
+      "borderColor": "#7dd3fc",
+      "titleColor": "#0369a1",
+      "img": "images/zhishizi.png"
+    },
+    {
+      "title": "3. Hội Ý (会意)",
+      "desc": "Ghép hai hay nhiều chữ tượng hình lại để tạo nghĩa mới. Ví dụ: 林 (Hai cái cây = Khu rừng), 明 (Mặt trời + Mặt trăng = Sáng).",
+      "bgColor": "#fef3c7",
+      "borderColor": "#fde68a",
+      "titleColor": "#b45309",
+      "img": "images/huiyizi.png"
+    },
+    {
+      "title": "4. Hình Thanh (形声 - Chiếm 80%+)",
+      "desc": "Gồm bộ thủ biểu nghĩa (Hình) + bộ phận biểu âm đọc (Thanh). Ví dụ: 妈 (Bộ Nữ 女 biểu nghĩa + chữ Mã 马 biểu âm).",
+      "bgColor": "#faf5ff",
+      "borderColor": "#d8b4fe",
+      "titleColor": "#6b21a8",
+      "img": "images/xingshengzi.png"
+    },
+    {
+      "title": "5. Chuyển Chú (转注)",
+      "desc": "Các chữ có cùng nguồn gốc bộ thủ, cùng nghĩa tương đương và có thể chú thích giải nghĩa cho nhau. Ví dụ: 考 (kǎo) và 老 (lǎo).",
+      "bgColor": "#fdf2f8",
+      "borderColor": "#fbcfe8",
+      "titleColor": "#be185d"
+    },
+    {
+      "title": "6. Giả Tá (假借)",
+      "desc": "Mượn chữ có âm đọc giống hoặc gần giống để biểu thị từ mới chưa có chữ viết riêng. Ví dụ: 自 (zì - ban đầu nghĩa là cái mũi, sau mượn làm từ chỉ bản thân).",
+      "bgColor": "#f0f9ff",
+      "borderColor": "#7dd3fc",
+      "titleColor": "#0369a1"
+    }
+  ]
+}
