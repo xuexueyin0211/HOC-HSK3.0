@@ -12750,14 +12750,6 @@ window.renderGuidedPathSidebar = function(level, activeLessonId = 1) {
                 <span>➔</span>
             </div>
         </div>
-
-        <!-- Accordion Group 6: Giải Trí -->
-        <div class="sidebar-accordion-group">
-            <div onclick="window.showContent('entertainment', '${level}')" style="font-size:13.5px; font-weight:800; color:#15803d; padding:8px 10px; background:#f0fdf4; border-radius:10px; cursor:pointer; display:flex; justify-content:space-between; align-items:center;">
-                <span>🎭 Giải Trí & Nhạc Hoa</span>
-                <span>➔</span>
-            </div>
-        </div>
     `;
 };
 
