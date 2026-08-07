@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学赢中文 | XueYing Zhongwen</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Quicksand:wght@500;700&family=Noto+Sans+SC:wght@400;700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K08ZHZ6QG6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-K08ZHZ6QG6');
+    </script>
+</head>
+<body>
+    <div class="bg-decoration"></div>
+    <div class="bg-decoration-2"></div>
+
+
+    <header class="header">
+        <div class="logo-area">
+            <img src="images/avatar.png" alt="Cô Tuyết Ngân" class="avatar" />
+            <h1>学赢中文 | XueYing Zhongwen            </h1>
+        </div>
+        <div class="header-actions">
+            <button id="headerAdminBtn" onclick="window.openAdminModal()" class="admin-header-btn" style="display:none;padding:8px 16px;background:linear-gradient(135deg,#9333ea,#7e22ce);color:white;border:none;border-radius:20px;font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 2px 8px rgba(147,51,234,0.3);align-items:center;gap:6px;transition:all 0.2s;white-space:nowrap;">
+                👑 Quản lý Học viên (Admin)
+            </button>
+            <button id="headerProfileBtn" onclick="openPersonalProfileModal()" class="profile-header-btn" style="display:none;padding:8px 16px;background:linear-gradient(135deg,#ec4899,#db2777);color:white;border:none;border-radius:20px;font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 2px 8px rgba(236,72,153,0.3);align-items:center;gap:6px;transition:all 0.2s;white-space:nowrap;">
+                👤 Trang cá nhân
+            </button>
+            <button id="headerLogoutBtn" onclick="window.logout()" class="logout-header-btn" style="display:none;padding:8px 14px;background:#ffffff;color:#be185d;border:1.5px solid #fbcfe8;border-radius:20px;font-weight:600;font-size:13px;cursor:pointer;transition:all 0.2s;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+                Đăng xuất
+            </button>
+            <div class="search-box">
+                <input type="text" placeholder="🔍 Tìm kiếm tổng quát..." id="globalGrammarSearch" oninput="universalSearch()" onfocus="window.preloadSearchData()" onkeydown="if(event.key==='Enter'){event.preventDefault();const firstItem=document.querySelector('.search-item-result');if(firstItem){firstItem.click();}else{universalSearch();}}" />
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-avatar">
+                <img src="images/avatar.png" alt="Cô Tuyết Ngân" />
+            </div>
+            <div class="hero-info">
+                <div class="badge">🌟 Người sáng lập</div>
+                <h2>NCS. Đặng Thị Tuyết Ngân 邓氏雪银</h2>
+                <p class="desc">
+Chào bạn, mình là Tuyết Ngân! Với hơn 4 năm gắn bó với nghề dạy học và tình yêu dành cho tiếng Trung, mình xây dựng không gian này để giúp hành trình chinh phục tiếng Trung của bạn trở nên đơn giản, thú vị và dễ dàng hơn mỗi ngày.                </p>
+                <div class="achievements">
+                    <div class="achievement-item"><span class="icon">🎓</span> <strong>NCS Tiến sĩ</strong> - Đại học Tây Nam (học bổng toàn phần CIS)</div>
+                    <div class="achievement-item"><span class="icon">🎓</span> <strong>Thạc sĩ</strong> - Đại học Sư phạm Chiết Giang (học bổng toàn phần CIS)</div>
+                    <div class="achievement-item"><span class="icon">🎓</span> <strong>Cử nhân</strong> - Đại học Ngoại ngữ Đà Nẵng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="featuresSection">
+        <div class="section-title">
+            📚 Danh mục học tập
+            <small style="font-size:13.5px;color:#64748b;font-weight:500;margin-top:4px;">Chọn Bậc HSK mục tiêu để truy cập 4 Khối nội dung rèn luyện tương ứng</small>
+        </div>
+
+        <!-- Admin Control Panel (Visible for Admin Users) -->
+        <div id="adminPanelWidget" style="display:none; margin-bottom: 24px; background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); color: white; border-radius: 20px; padding: 18px 24px; box-shadow: 0 10px 25px rgba(49,46,129,0.3); border: 1.5px solid #6366f1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="font-size: 28px; background: rgba(255,255,255,0.1); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">👑</div>
+                    <div>
+                        <div style="font-size: 16px; font-weight: 800; color: white; margin-top: 2px;">Quản Trị Viên</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                    <!-- CSV Export Button -->
+                    <button id="adminCsvExportBtn" onclick="if(typeof window.exportAdminDataCSV==='function') window.exportAdminDataCSV();" style="padding: 10px 18px; background: linear-gradient(135deg, #4f46e5, #4338ca); color: white; border: none; border-radius: 12px; font-size: 13.5px; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(79,70,229,0.4); transition: transform 0.2s;">
+                        <span>📊 Xuất Dữ Liệu CSV</span>
+                    </button>
+
+                    <!-- Baseline vs Intervention Mode Switch -->
+                    <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); padding: 8px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+                        <span style="font-size: 12.5px; font-weight: 700; color: #e0e7ff;">Gợi Ý Cá Nhân Hóa:</span>
+                        <label style="position: relative; display: inline-block; width: 46px; height: 24px; margin: 0;">
+                            <input type="checkbox" id="adminRecommendationToggle" checked onchange="if(typeof window.toggleAdminRecommendationMode==='function') window.toggleAdminRecommendationMode(this.checked);" style="opacity: 0; width: 0; height: 0;">
+                            <span id="adminToggleSlider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #10b981; transition: .3s; border-radius: 24px;">
+                                <span id="adminToggleKnob" style="position: absolute; content: ''; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; transform: translateX(22px);"></span>
+                            </span>
+                        </label>
+                        <span id="adminRecommendationModeLabel" style="font-size: 12.5px; font-weight: 800; color: #22c55e; min-width: 145px;">Bật (Cá nhân hóa AI)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic User Streak & Progress Bar Widget -->
+        <div id="userStreakProgressWidget" style="margin-bottom: 24px; background: linear-gradient(135deg, #ffffff 0%, #fff5f8 100%); border: 1.5px solid #fbcfe8; border-radius: 20px; padding: 18px 24px; box-shadow: 0 4px 20px rgba(225, 29, 72, 0.07); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+            <!-- Left: Streak & Net Active Time -->
+            <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="font-size: 32px; filter: drop-shadow(0 2px 6px rgba(239, 68, 68, 0.3));">🔥</div>
+                    <div>
+                        <div style="font-size: 11.5px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Chuỗi Học Liên Tục</div>
+                        <div id="widgetStreakText" style="font-size: 18px; font-weight: 800; color: #e11d48; margin-top: 1px;">1 Ngày</div>
+                    </div>
+                </div>
+
+                <div style="height: 36px; width: 1.5px; background: #f472b6; opacity: 0.3;"></div>
+
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="font-size: 28px;">⏱️</div>
+                    <div>
+                        <div style="font-size: 11.5px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Thời Gian Học Thực Tế (Net)</div>
+                        <div id="widgetActiveTimerText" style="font-size: 16px; font-weight: 800; color: #1e293b; margin-top: 1px;">0 phút 0 giây</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: HSK Level Completion Progress Bar & Mistakes Quick Review -->
+            <div style="flex: 1; min-width: 280px; max-width: 450px; display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span id="widgetProgressLabel" style="font-size: 13.5px; font-weight: 800; color: #be185d;">📊 Tiến độ HSK 1</span>
+                    <span id="widgetProgressPercent" style="font-size: 14px; font-weight: 800; color: #e11d48;">0%</span>
+                </div>
+                <div style="width: 100%; height: 12px; background: #e2e8f0; border-radius: 10px; overflow: hidden; border: 1px solid #cbd5e1; box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);">
+                    <div id="widgetProgressBarInner" style="width: 0%; height: 100%; background: linear-gradient(90deg, #ec4899 0%, #be185d 100%); border-radius: 10px; transition: width 0.5s ease;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: #64748b; margin-top: 2px;">
+                    <span id="widgetProgressDetailText">Đã học: 0 bài</span>
+                    <button id="widgetMistakesReviewBtn" onclick="if(typeof window.openPersonalProfileModal==='function') window.openPersonalProfileModal();" style="background: none; border: none; color: #be185d; font-weight: 700; cursor: pointer; text-decoration: underline; padding: 0; font-size: 11.5px;">
+                        📝 Danh sách lỗi sai (0)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personalized Recommendation Banner Container -->
+        <div id="personalizedRecommendationContainer" style="display:none; margin-bottom: 24px;"></div>
+
+        <!-- Tab Ưu Tiên: Lộ trình của tôi -->
+        <div class="priority-roadmap-wrapper" style="margin-bottom: 24px; margin-top: 8px;">
+            <div class="feature-card priority-card" data-module="roadmap" data-category="roadmap" data-skill-tag="SKILL_ROADMAP" onclick="if(typeof window.openPersonalProfileModal==='function') window.openPersonalProfileModal();">
+                <div class="priority-badge">✨ DÀNH RIÊNG CHO BẠN</div>
+                <div class="priority-content" style="display:flex;align-items:center;gap:16px;width:100%;padding-top:10px;flex-wrap:wrap;">
+                    <div class="icon" style="font-size:36px;margin:0;">🎯</div>
+                    <div style="text-align:left;flex:1;">
+                        <h3 style="font-size:18px;font-weight:800;color:#be185d;margin:0 0 4px 0;display:flex;align-items:center;gap:8px;">
+                            <span>Lộ trình của tôi</span>
+                            <span style="font-size:11px;background:#fce7f3;color:#be185d;padding:2px 8px;border-radius:10px;font-weight:700;">Dashboard cá nhân hóa</span>
+                        </h3>
+                        <p style="margin:0;color:#475569;font-size:13.5px;line-height:1.4;">Theo dõi tiến độ bài đã học, thống kê điểm số, danh sách Flashcard & làm lại bài tập sai</p>
+                    </div>
+                    <div style="font-size:20px;color:#be185d;font-weight:700;">➔</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CẤU TRÚC PHÂN CẤP MỚI: BẬC HSK LEVEL SELECTOR TOP BAR -->
+        <div class="hsk-level-selector-wrapper" style="margin-bottom: 20px; background: white; border-radius: 20px; padding: 20px; border: 2px solid #fbcfe8; box-shadow: 0 4px 15px rgba(225, 29, 72, 0.06);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                <div>
+                    <div style="font-size: 12px; font-weight: 800; color: #be185d; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">
+                        🎓 CHỌN BẬC HSK MỤC TIÊU
+                    </div>
+                    <h2 style="font-size: 18px; font-weight: 800; color: #1e293b; margin: 0;">
+                        Không Gian Học Tập Theo Trình Độ
+                    </h2>
+                </div>
+                <div id="hskLevelActiveBadge" style="background: linear-gradient(135deg, #be185d, #9d174d); color: white; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; box-shadow: 0 4px 12px rgba(190, 24, 93, 0.25);">
+                    🎯 ĐANG CHỌN: HSK 1
+                </div>
+            </div>
+
+            <!-- Grid 6 Bậc HSK Card Buttons -->
+            <div class="dashboard-hsk-grid">
+                <button class="dashboard-hsk-btn active" data-hsk="hsk1" onclick="if(typeof window.requestHskLevelSwitch==='function') window.requestHskLevelSwitch('hsk1'); else if(typeof window.selectDashboardHskLevel==='function') window.selectDashboardHskLevel('hsk1');">
+                    <span class="hsk-badge-num">1</span>
+                    <span class="hsk-title">HSK 1</span>
+                </button>
+                <button class="dashboard-hsk-btn" data-hsk="hsk2" onclick="if(typeof window.requestHskLevelSwitch==='function') window.requestHskLevelSwitch('hsk2'); else if(typeof window.selectDashboardHskLevel==='function') window.selectDashboardHskLevel('hsk2');">
+                    <span class="hsk-badge-num">2</span>
+                    <span class="hsk-title">HSK 2</span>
+                </button>
+                <button class="dashboard-hsk-btn" data-hsk="hsk3" onclick="if(typeof window.requestHskLevelSwitch==='function') window.requestHskLevelSwitch('hsk3'); else if(typeof window.selectDashboardHskLevel==='function') window.selectDashboardHskLevel('hsk3');">
+                    <span class="hsk-badge-num">3</span>
+                    <span class="hsk-title">HSK 3</span>
+                </button>
+                <button class="dashboard-hsk-btn" data-hsk="hsk4" onclick="if(typeof window.requestHskLevelSwitch==='function') window.requestHskLevelSwitch('hsk4'); else if(typeof window.selectDashboardHskLevel==='function') window.selectDashboardHskLevel('hsk4');">
+                    <span class="hsk-badge-num">4</span>
+                    <span class="hsk-title">HSK 4</span>
+                </button>
+                <button class="dashboard-hsk-btn" data-hsk="hsk5" onclick="if(typeof window.requestHskLevelSwitch==='function') window.requestHskLevelSwitch('hsk5'); else if(typeof window.selectDashboardHskLevel==='function') window.selectDashboardHskLevel('hsk5');">
+                    <span class="hsk-badge-num">5</span>
+                    <span class="hsk-title">HSK 5</span>
+                </button>
+                <button class="dashboard-hsk-btn" data-hsk="hsk6" onclick="if(typeof window.requestHskLevelSwitch==='function') window.requestHskLevelSwitch('hsk6'); else if(typeof window.selectDashboardHskLevel==='function') window.selectDashboardHskLevel('hsk6');">
+                    <span class="hsk-badge-num">6</span>
+                    <span class="hsk-title">HSK 6</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Banner thông báo 4 khối thuộc bậc HSK đã chọn -->
+        <div class="dashboard-hsk-banner" style="background: linear-gradient(135deg, #fdf2f8, #fbcfe8); border: 1.5px solid #f472b6; padding: 14px 20px; border-radius: 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 24px;">🏷️</span>
+                <div>
+                    <div style="font-size: 14.5px; font-weight: 800; color: #831843;">
+                        4 KHỐI NỘI DUNG RÈN LUYỆN DÀNH CHO <span id="currentHskLevelDisplaySpan" style="color: #be185d; text-decoration: underline;">BẬC HSK 1</span>
+                    </div>
+                    <div style="font-size: 12.5px; color: #475569; margin-top: 2px;">
+                        Bấm vào từng danh mục bên dưới để thực hành theo đúng độ khó của bậc học này.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 Khối Nội Dung Chính -->
+        <div class="category-groups-container" id="featuresGrid">
+
+            <!-- Khối 1: Kiến thức nền tảng -->
+            <div class="category-group expanded" data-category="foundation">
+                <div class="category-header" onclick="window.toggleCategoryGroup(this)">
+                    <div class="category-title-wrap">
+                        <span class="group-icon">📘</span>
+                        <h3>Khối 1: Kiến thức nền tảng</h3>
+                        <span class="group-count">5 danh mục</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-submenu">
+                    <div class="features-grid">
+                        <div class="feature-card" data-module="hanzi" data-category="foundation" data-skill-tag="SKILL_HANZI">
+                            <div class="icon">🀄</div>
+                            <h3>Chữ Hán</h3>
+                            <p>Luyện viết và ghi nhớ mặt chữ Hán</p>
+                        </div>
+                        <div class="feature-card" data-module="vocab" data-category="foundation" data-skill-tag="SKILL_VOCAB">
+                            <div class="icon">📚</div>
+                            <h3>Từ vựng</h3>
+                            <p>Học từ vựng theo chủ đề và cấp độ</p>
+                        </div>
+                        <div class="feature-card active" data-module="grammar" data-category="foundation" data-skill-tag="SKILL_GRAMMAR">
+                            <div class="icon">📝</div>
+                            <h3>Ngữ pháp</h3>
+                            <p>Cấu trúc ngữ pháp chi tiết</p>
+                        </div>
+                        <div class="feature-card" data-module="comparison" data-category="foundation" data-skill-tag="SKILL_COMPARISON">
+                            <div class="icon">⚖️</div>
+                            <h3>Lưu ý lỗi sai thường gặp</h3>
+                            <p>Phân biệt cặp từ/ ngữ pháp dễ nhầm lẫn</p>
+                        </div>
+                        <div class="feature-card" data-module="textbook" data-category="foundation">
+                            <div class="icon">📖</div>
+                            <h3>Bài khóa</h3>
+                            <p>Đọc hiểu và luyện dịch các bài khóa thực tế</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khối 2: Luyện tập kỹ năng -->
+            <div class="category-group expanded" data-category="skills">
+                <div class="category-header" onclick="window.toggleCategoryGroup(this)">
+                    <div class="category-title-wrap">
+                        <span class="group-icon">🎯</span>
+                        <h3>Khối 2: Luyện tập kỹ năng</h3>
+                        <span class="group-count">5 danh mục</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-submenu">
+                    <div class="features-grid">
+                        <div class="feature-card" data-module="dictation" data-category="skills" data-skill-tag="SKILL_DICTATION">
+                            <div class="icon">🎧</div>
+                            <h3>Nghe chép</h3>
+                            <p>Luyện nghe và chép chính tả</p>
+                        </div>
+                        <div class="feature-card" data-module="shadowing" data-category="skills" data-skill-tag="SKILL_SHADOWING">
+                            <div class="icon">🗣️</div>
+                            <h3>Shadowing</h3>
+                            <p>Luyện nói bắt chước giọng đọc chuẩn</p>
+                        </div>
+                        <div class="feature-card" data-module="translation" data-category="skills" data-skill-tag="SKILL_TRANSLATION">
+                            <div class="icon">🔤</div>
+                            <h3>Luyện dịch</h3>
+                            <p>Thực hành dịch Trung - Việt & Việt - Trung theo cấp độ</p>
+                        </div>
+                        <div class="feature-card" data-module="writing_ai" data-category="skills" data-skill-tag="SKILL_WRITING_AI">
+                            <div class="icon">✍️</div>
+                            <h3>Luyện viết với AI</h3>
+                            <p>AI chấm sửa bài viết, kiểm tra ngữ pháp & sửa từ vựng</p>
+                        </div>
+                        <div class="feature-card" data-module="speaking_ai" data-category="skills" data-skill-tag="SKILL_SPEAKING_AI">
+                            <div class="icon">🎙️</div>
+                            <h3>Luyện nói với AI</h3>
+                            <p>Nhận diện phát âm, phản hồi giao tiếp & chấm điểm AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khối 3: Kiểm định & Đánh giá -->
+            <div class="category-group expanded" data-category="assessment">
+                <div class="category-header" onclick="window.toggleCategoryGroup(this)">
+                    <div class="category-title-wrap">
+                        <span class="group-icon">📊</span>
+                        <h3>Khối 3: Kiểm định & Đánh giá</h3>
+                        <span class="group-count">1 danh mục</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-submenu">
+                    <div class="features-grid">
+                        <div class="feature-card" data-module="practice" data-category="assessment" data-skill-tag="SKILL_PRACTICE">
+                            <div class="icon">📖</div>
+                            <h3>Luyện đề HSK</h3>
+                            <p>Thực hành với đề thi HSK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <div class="hsk-nav-wrapper" id="hskNavWrapper">
+        <div class="hsk-nav" id="hskNav">
+            <div class="hsk-item active" data-level="hsk1">HSK 1</div>
+            <div class="hsk-item" data-level="hsk2">HSK 2</div>
+            <div class="hsk-item" data-level="hsk3">HSK 3</div>
+            <div class="hsk-item" data-level="hsk4">HSK 4</div>
+            <div class="hsk-item" data-level="hsk5">HSK 5</div>
+            <div class="hsk-item" data-level="hsk6">HSK 6</div>
+        </div>
+    </div>
+
+    <div class="search-results-dropdown" id="searchDropdown"></div>
+
+    <div class="content-area show" id="contentArea">
+        <button class="back-home" id="backHomeBtn">← Quay lại danh mục</button>
+        <div id="contentInner">
+            <div id="loading">
+                <div class="spinner"></div>
+                <p style="color: #a0526a;">Đang tải dữ liệu...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 20px 20px 14px; color: #a0526a; border-top: 1px solid #fce7f3; font-size: 12px; background: #fff9f9; margin-top: auto;">
+        <p style="font-weight: 500;">学赢中文 · Xueying Zhongwen</p>
+        <p style="font-size: 11px; margin-top: 4px; color: #c0a0a0;">
+            <strong>学得快乐，赢得轻松</strong> - Học trong mê say, Bứt phá mỗi ngày
+        </p>
+    </footer>
+
+
+
+    <audio id="app-global-audio-player" style="display:none;"></audio>
+    <script src="modals.js"></script>
+    <script src="notebook-core.js"></script>
+    <script src="app.js"></script>
+    <script type="module" src="firebase-auth.js"></script>
+</body>
+</html>

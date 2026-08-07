@@ -1,0 +1,12 @@
+const fs = require('fs');
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const dom = new JSDOM(`<!DOCTYPE html><html><body><div id="contentArea"></div><div id="contentInner"></div></body></html>`, { url: 'http://localhost' });
+global.window = dom.window;
+global.document = dom.window.document;
+global.localStorage = { getItem: () => null, setItem: () => {} };
+dom.window.localStorage = global.localStorage;
+global.fetch = async () => ({ ok: true, json: async () => JSON.parse(fs.readFileSync('data/lesson0.json')) });
+const code = fs.readFileSync('app.js', 'utf8');
+const script = new dom.window.document.defaultView.Function(code + '\nreturn window.renderLessonZero("hsk1");');
+script().then(() => console.log('Success')).catch(e => console.error(e));
