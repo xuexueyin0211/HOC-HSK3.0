@@ -132,7 +132,7 @@
                     <div style="font-size: 48px; margin-bottom: 12px; animation: pulse 2s infinite;">✍️</div>
                     <h3 style="font-size: 22px; font-weight: 800; color: #be185d; margin: 0 0 10px 0; font-family:'Lexend',sans-serif;">Vở Luyện Viết Chữ Hán Điện Tử</h3>
                     <p style="font-size: 14.5px; color: #475569; max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">
-                        Không gian luyện viết chữ Hán ngập tràn màn hình giả lập tỉ lệ khổ giấy A4 (Dọc/Ngang). Hỗ trợ viết liền mạch đa ô mễ bằng ngón tay hoặc chuột, tích hợp mô phỏng bút thuận HanziWriter chuyên nghiệp và tải xuống thành phẩm của bạn!
+                        Không gian luyện viết chữ Hán tỉ lệ khổ giấy A4 (Dọc/Ngang). Hỗ trợ viết bằng ngón tay hoặc chuột, tích hợp mô phỏng bút thuận chuyên nghiệp và tải xuống thành phẩm của bạn!
                     </p>
                     <button onclick="window.openFullScreenNotebook()" style="padding: 14px 32px; background: linear-gradient(135deg, #be185d, #db2777); color: white; border: none; border-radius: 14px; font-size: 15.5px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(190, 24, 93, 0.2); transition: all 0.2s; outline: none; font-family:'Lexend',sans-serif;">
                         <span>🚀 Mở Vở Tập Viết Toàn Màn Hình</span>
