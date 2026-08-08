@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-import { getFirestore, doc, setDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, updateDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCo-0u_rd_bpsQU3BIU7-mlQbGtZXmWqZ4",
@@ -72,12 +72,51 @@ window.saveUserProgressToCloud = async function(userData) {
     }
 };
 
+// New Sync functions
+window.syncAllDataToFirestore = async function() {
+    if (!auth.currentUser || !db) return;
+    const uid = auth.currentUser.uid;
+    
+    // Identify keys to sync
+    const keysToSync = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.includes('xueying') || key.includes('hsk') || key.includes('flashcard') || key === 'appState' || key === 'undefinedWords') {
+            keysToSync.push(key);
+        }
+    }
+
+    for (const key of keysToSync) {
+        const val = localStorage.getItem(key);
+        try {
+            await setDoc(doc(db, "users", uid, "localStorageData", key), { value: val }, { merge: true });
+        } catch(e) { console.error("Error syncing key", key, e); }
+    }
+    console.log("☁️ Synced all relevant localStorage data to Firestore");
+};
+
+window.loadAllDataFromFirestore = async function() {
+    if (!auth.currentUser || !db) return;
+    const uid = auth.currentUser.uid;
+    
+    try {
+        const snapshot = await getDocs(collection(db, "users", uid, "localStorageData"));
+        snapshot.forEach((doc) => {
+            localStorage.setItem(doc.id, doc.data().value);
+        });
+        console.log("📥 Loaded all relevant data from Firestore to localStorage");
+    } catch(e) { console.error("Error loading data from Firestore", e); }
+};
+
 // 6. Theo dõi trạng thái đăng nhập người dùng (Auth State Listener)
 onAuthStateChanged(auth, async (user) => {
     if (user) {
         console.log("👤 Đã đăng nhập:", user.displayName || user.email);
         
-        // Tải tiến độ từ Cloud Firestore về máy khi người dùng mới vào web
+        // 1. Load all data from Firestore to localStorage first
+        await window.loadAllDataFromFirestore();
+        
+        // 2. Sync progress (Existing)
         if (db) {
             try {
                 const userRef = doc(db, "users_progress", user.uid);
@@ -86,15 +125,21 @@ onAuthStateChanged(auth, async (user) => {
                     const cloudData = docSnap.data();
                     localStorage.setItem('xueying_user_progress', JSON.stringify(cloudData));
                     console.log("📥 Đã tải tiến độ học tập từ Cloud Firestore về máy!");
-                    // Trigger reload UI nếu có hàm render
-                    if (typeof window.renderGuidedPathSidebar === 'function') {
-                        window.renderGuidedPathSidebar();
-                    }
                 }
             } catch (e) {
                 console.warn("⚠️ Không thể tải tiến độ từ Cloud, dùng LocalStorage tạm thời:", e.message);
             }
         }
+        
+        // 3. Trigger sync to ensure cloud has latest (e.g. if localStorage had more recent changes)
+        await window.syncAllDataToFirestore();
+        
+        // Trigger reload UI nếu có hàm render
+        if (typeof window.renderGuidedPathSidebar === 'function') {
+            window.renderGuidedPathSidebar();
+        }
+        
+        // Suggest refresh to user if data was loaded? Maybe not necessary for now.
     } else {
         console.log("👤 Chưa đăng nhập (Guest Mode)");
     }
