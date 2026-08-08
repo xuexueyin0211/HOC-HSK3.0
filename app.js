@@ -341,7 +341,7 @@ if (typeof window.isLessonLearned !== 'function') {
                             // Merge exercises.json for vocab and grammar if available
                             if ((module === 'vocab' || module === 'grammar') && innerData && Array.isArray(innerData.lessons)) {
                                 try {
-                                    const exPath = (MODULES[module] ? MODULES[module].path : `data/${module}/`) + 'exercises.json';
+                                    const exPath = `data/exercises/${level}.json`;
                                     const exRes = await fetch(exPath);
                                     if (exRes.ok) {
                                         let exText = await exRes.text();
@@ -4122,7 +4122,7 @@ sidebar.appendChild(lessonItem);
                     grammarDiv.className = 'grammar';
 
                     const h3 = document.createElement('h3');
-                    h3.textContent = tab.title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
+                    h3.textContent = (tab.title || 'Bài học').replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, '');
                     grammarDiv.appendChild(h3);
 
                     const rawExamples = tab.examples || [];
@@ -4215,7 +4215,7 @@ sidebar.appendChild(lessonItem);
                                             <div class="grammar-example-card" style="margin-top:10px;padding:12px 14px;background:#f8fafc;border:1px solid #cbd5e1;border-radius:12px;">
                                                 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
                                                     <span style="font-size:11.5px;font-weight:700;color:${badgeColor};background:${badgeBg};padding:2px 8px;border-radius:6px;">Ví dụ</span>
-                                                    <button class="audio-btn" onclick="event.stopPropagation();playAudio('${matchedEx.cn.replace(/'/g, "\\'")}')" style="background:#fce7f3;border:none;padding:4px 12px;border-radius:12px;font-size:12.5px;font-weight:700;color:#be185d;cursor:pointer;display:inline-flex;align-items:center;gap:4px;" title="Nghe">🔊</button>
+                                                    <button class="audio-btn" onclick="event.stopPropagation();playAudio('${(matchedEx.cn || '').replace(/'/g, "\\'")}')" style="background:#fce7f3;border:none;padding:4px 12px;border-radius:12px;font-size:12.5px;font-weight:700;color:#be185d;cursor:pointer;display:inline-flex;align-items:center;gap:4px;" title="Nghe">🔊</button>
                                                 </div>
                                                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;">
                                                     <span style="font-size:17px;font-weight:800;color:#0f172a;">${matchedEx.cn}</span>
@@ -4298,7 +4298,7 @@ sidebar.appendChild(lessonItem);
                             exCard.innerHTML = `
                                 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
                                     <span style="font-size:12px;font-weight:700;color:#be185d;background:#fdf2f8;padding:2px 8px;border-radius:8px;">Ví dụ ${exIdx + 1}</span>
-                                    <button class="audio-btn" onclick="event.stopPropagation();playAudio('${ex.cn.replace(/'/g, "\\'")}')" style="background:#fce7f3;border:none;padding:4px 12px;border-radius:12px;font-size:12.5px;font-weight:700;color:#be185d;cursor:pointer;display:inline-flex;align-items:center;gap:4px;" title="Nghe">🔊</button>
+                                    <button class="audio-btn" onclick="event.stopPropagation();playAudio('${(ex.cn || '').replace(/'/g, "\\'")}')" style="background:#fce7f3;border:none;padding:4px 12px;border-radius:12px;font-size:12.5px;font-weight:700;color:#be185d;cursor:pointer;display:inline-flex;align-items:center;gap:4px;" title="Nghe">🔊</button>
                                 </div>
                                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;">
                                     <span style="font-size:17px;font-weight:800;color:#0f172a;">${ex.cn}</span>
@@ -9977,7 +9977,7 @@ window.switchPronLevel = function(level) {
                         <div style="background:white;border:1px solid #e9d5ff;border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.02);">
                             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
                                 <span style="background:#7e22ce;color:white;font-size:11px;font-weight:800;padding:2px 8px;border-radius:6px;">MẪU CÂU ${item.id}</span>
-                                <button onclick="playAudio('${item.cn.replace(/'/g, "\\'")}')" style="padding:6px 14px;background:#f3e8ff;border:none;color:#6b21a8;border-radius:10px;font-weight:700;font-size:12.5px;cursor:pointer;">🔊 Nghe & Luyện đọc</button>
+                                <button onclick="playAudio('${(item.cn || '').replace(/'/g, "\\'")}')" style="padding:6px 14px;background:#f3e8ff;border:none;color:#6b21a8;border-radius:10px;font-weight:700;font-size:12.5px;cursor:pointer;">🔊 Nghe & Luyện đọc</button>
                             </div>
                             <div style="font-size:22px;font-weight:800;color:#1e293b;margin-bottom:4px;font-family:'Kaiti','SimSun',serif,sans-serif;">${item.cn}</div>
                             <div style="font-size:14px;color:#7e22ce;font-weight:600;margin-bottom:6px;">${item.py}</div>
@@ -10014,7 +10014,7 @@ window.switchPronLevel = function(level) {
                         <div style="background:white;border:1px solid #e9d5ff;border-radius:16px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.02);">
                             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;border-bottom:1px dashed #e9d5ff;padding-bottom:10px;">
                                 <h4 style="font-size:16px;font-weight:800;color:#581c87;margin:0;">${p.title}</h4>
-                                <button onclick="playAudio('${p.cn.replace(/'/g, "\\'")}')" style="padding:6px 14px;background:#7e22ce;color:white;border:none;border-radius:10px;font-weight:700;font-size:12.5px;cursor:pointer;box-shadow:0 2px 8px rgba(126,34,206,0.25);">🔊 Nghe toàn đoạn</button>
+                                <button onclick="playAudio('${(p.cn || '').replace(/'/g, "\\'")}')" style="padding:6px 14px;background:#7e22ce;color:white;border:none;border-radius:10px;font-weight:700;font-size:12.5px;cursor:pointer;box-shadow:0 2px 8px rgba(126,34,206,0.25);">🔊 Nghe toàn đoạn</button>
                             </div>
                             <div style="font-size:18px;font-weight:700;color:#1e293b;line-height:1.7;margin-bottom:12px;font-family:'Kaiti','SimSun',serif,sans-serif;">${p.cn}</div>
                             
@@ -10060,7 +10060,7 @@ window.switchPronLevel = function(level) {
                         <div style="background:white;border:1px solid #e9d5ff;border-radius:16px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,0.02);">
                             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;border-bottom:1px dashed #e9d5ff;padding-bottom:10px;">
                                 <h4 style="font-size:16.5px;font-weight:800;color:#581c87;margin:0;">${p.title}</h4>
-                                <button onclick="playAudio('${p.cn.replace(/'/g, "\\'")}')" style="padding:6px 14px;background:#7e22ce;color:white;border:none;border-radius:10px;font-weight:700;font-size:12.5px;cursor:pointer;box-shadow:0 2px 8px rgba(126,34,206,0.25);">🔊 Nghe đọc diễn cảm</button>
+                                <button onclick="playAudio('${(p.cn || '').replace(/'/g, "\\'")}')" style="padding:6px 14px;background:#7e22ce;color:white;border:none;border-radius:10px;font-weight:700;font-size:12.5px;cursor:pointer;box-shadow:0 2px 8px rgba(126,34,206,0.25);">🔊 Nghe đọc diễn cảm</button>
                             </div>
                             <div style="font-size:18px;font-weight:700;color:#1e293b;line-height:1.8;margin-bottom:14px;font-family:'Kaiti','SimSun',serif,sans-serif;">${p.cn}</div>
                             
@@ -11975,7 +11975,7 @@ window.renderGuidedLessonPipeline = async function(level, lessonId, activeCompon
                                                     <button class="btn-toggle-nghia ${window.globalShowMeaning !== false ? 'active' : ''}" onclick="window.toggleSingleLineMeaning(this)">
                                                         ${window.globalShowMeaning !== false ? 'Ẩn nghĩa' : 'Hiện nghĩa'}
                                                     </button>
-                                                    <button onclick="playAudio('${hanziText.replace(/'/g, "\\'")}')" style="padding:5px 10px; border:none; border-radius:8px; background:#fce7f3; color:#be185d; font-weight:700; font-size:12px; cursor:pointer;">🔊 Nghe</button>
+                                                    <button onclick="playAudio('${(hanziText || '').replace(/'/g, "\\'")}')" style="padding:5px 10px; border:none; border-radius:8px; background:#fce7f3; color:#be185d; font-weight:700; font-size:12px; cursor:pointer;">🔊 Nghe</button>
                                                 </div>
                                             </div>
                                             <div class="vocab-meaning-text" style="color:#334155; font-size:14.5px; font-weight:600; margin-top:8px; display:${window.globalShowMeaning !== false ? 'block' : 'none'};">Nghĩa: ${w.meaning || w.vi || ''}</div>
@@ -12060,7 +12060,7 @@ window.renderGuidedLessonPipeline = async function(level, lessonId, activeCompon
                                                             <button class="btn-toggle-nghia ${window.globalShowMeaning !== false ? 'active' : ''}" onclick="window.toggleSingleLineMeaning(this)">
                                                                 ${window.globalShowMeaning !== false ? 'Ẩn nghĩa' : 'Hiện nghĩa'}
                                                             </button>
-                                                            <button onclick="playAudio('${ex.cn.replace(/'/g, "\\'")}')" style="background:#fce7f3; color:#be185d; border:none; border-radius:50%; width:28px; height:28px; font-size:12px; cursor:pointer;">🔊</button>
+                                                            <button onclick="playAudio('${(ex.cn || '').replace(/'/g, "\\'")}')" style="background:#fce7f3; color:#be185d; border:none; border-radius:50%; width:28px; height:28px; font-size:12px; cursor:pointer;">🔊</button>
                                                         </div>
                                                     </div>
                                                 `).join('')}
@@ -12130,14 +12130,14 @@ window.renderGuidedLessonPipeline = async function(level, lessonId, activeCompon
                                                 <div class="vocab-meaning-text" style="font-size:13px; color:#475569; margin-top:2px; display:${window.globalShowMeaning !== false ? 'block' : 'none'};">${viText}</div>
                                             </div>
                                             <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">
-                                                <button onclick="playAudio('${cnText.replace(/'/g, "\\'")}')" title="Nghe câu" style="padding:5px 10px; background:#fce7f3; color:#be185d; border:none; border-radius:8px; font-size:12px; font-weight:700; cursor:pointer;">🔊 Nghe</button>
+                                                <button onclick="playAudio('${(cnText || '').replace(/'/g, "\\'")}')" title="Nghe câu" style="padding:5px 10px; background:#fce7f3; color:#be185d; border:none; border-radius:8px; font-size:12px; font-weight:700; cursor:pointer;">🔊 Nghe</button>
                                                 <button class="btn-toggle-pinyin ${window.globalShowPinyin !== false ? 'active' : ''}" onclick="window.toggleSingleLinePinyin(this)">
                                                     ${window.globalShowPinyin !== false ? 'Ẩn phiên âm' : 'Hiện phiên âm'}
                                                 </button>
                                                 <button class="btn-toggle-nghia ${window.globalShowMeaning !== false ? 'active' : ''}" onclick="window.toggleSingleLineMeaning(this)">
                                                     ${window.globalShowMeaning !== false ? 'Ẩn nghĩa' : 'Hiện nghĩa'}
                                                 </button>
-                                                <button onclick="window.startLineShadowing('${cnText.replace(/'/g, "\\'")}', '${pyText.replace(/'/g, "\\'")}')" title="Luyện Shadowing" style="padding:5px 10px; background:#f0f9ff; color:#0284c7; border:1px solid #bae6fd; border-radius:8px; font-size:11px; font-weight:700; cursor:pointer;">🎙️ Đọc theo</button>
+                                                <button onclick="window.startLineShadowing('${(cnText || '').replace(/'/g, "\\'")}', '${(pyText || '').replace(/'/g, "\\'")}')" title="Luyện Shadowing" style="padding:5px 10px; background:#f0f9ff; color:#0284c7; border:1px solid #bae6fd; border-radius:8px; font-size:11px; font-weight:700; cursor:pointer;">🎙️ Đọc theo</button>
                                             </div>
                                         </div>
                                     `;
@@ -12870,7 +12870,3 @@ window.submitWordChain = function() {
     alert(`🎉 CHÍNH XÁC! Chúc mừng bạn nối thành công từ '${userWord}' và nhận ngay +10 XP!`);
     window.renderWordChainGame();
 };
-
-
-
-
