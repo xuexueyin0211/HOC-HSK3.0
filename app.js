@@ -3711,11 +3711,17 @@ window.renderComparisonPracticeTab = function(lvl, targetFilter, allComparisonDa
             });
         }
 
-        let correctData = [];
-        if (ex.type === 'multiple_choice') correctData = ex.correct;
-        else if (ex.type === 'fill_blank') correctData = ex.items;
-        else if (ex.type === 'drag_drop') correctData = ex.answer;
-        else if (ex.type === 'select_position') correctData = ex.correct;
+        let correctAnsDisplayStr = '';
+        if (ex.type === 'multiple_choice') {
+            correctAnsDisplayStr = ex.options ? (ex.options[ex.correct] || `Lựa chọn ${ex.correct + 1}`) : '';
+        } else if (ex.type === 'fill_blank') {
+            correctAnsDisplayStr = (ex.items || []).map(i => i.answer).join(', ');
+        } else if (ex.type === 'drag_drop') {
+            correctAnsDisplayStr = Array.isArray(ex.answer) ? ex.answer.join('') : String(ex.answer || ex.correct || '');
+        } else if (ex.type === 'select_position') {
+            correctAnsDisplayStr = ex.positions ? (ex.positions[ex.correct] || `Vị trí ${ex.correct + 1}`) : `Vị trí ${ex.correct + 1}`;
+        }
+        correctAnsDisplayStr = String(correctAnsDisplayStr || '').replace(/^"+|"+$/g, '').replace(/^'+|'+$/g, '').trim();
 
         let feedbackStyle = 'display:none;';
         let feedbackHtmlContent = '';
@@ -3729,6 +3735,7 @@ window.renderComparisonPracticeTab = function(lvl, targetFilter, allComparisonDa
                 <div style="font-weight:800;font-size:14px;color:${isCorr ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
                     ${isCorr ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
                 </div>
+                ${correctAnsDisplayStr ? `<div style="font-size:13.5px;color:#1e293b;margin-bottom:4px;">🎯 <b>Đáp án chuẩn:</b> <span style="color:#0284c7;font-weight:700;">${correctAnsDisplayStr}</span></div>` : ''}
                 <div style="font-size:13px;color:#334155;line-height:1.5;">
                     💡 <b>Giải thích:</b> ${ex.explanation || ''}
                 </div>
@@ -3738,7 +3745,7 @@ window.renderComparisonPracticeTab = function(lvl, targetFilter, allComparisonDa
         }
 
         qHtml += `
-            <div class="practice-q-card" id="practice_card_${ex.id}" data-qid="${ex.id}" data-type="${ex.type}" data-words='${(JSON.stringify(ex.words || []) || "").replace(/'/g, "&apos;")}' data-correct='${(JSON.stringify(correctData || "") || "").replace(/'/g, "&apos;")}' data-explanation='${(ex.explanation || "").replace(/'/g, "&apos;")}' style="background:white;border:1.5px solid #bae6fd;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,0.02);">
+            <div class="practice-q-card" id="practice_card_${ex.id}" data-qid="${ex.id}" data-type="${ex.type}" data-words='${(JSON.stringify(ex.words || []) || "").replace(/'/g, "&apos;")}' data-correct='${(JSON.stringify(correctAnsDisplayStr || "") || "").replace(/'/g, "&apos;")}' data-explanation='${(ex.explanation || "").replace(/'/g, "&apos;")}' style="background:white;border:1.5px solid #bae6fd;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,0.02);">
                 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
                     <span class="practice-tag" style="font-size:12px;font-weight:800;color:#0284c7;background:#e0f2fe;padding:3px 10px;border-radius:10px;">Câu ${qIdx + 1} • ${ex.title || targetFilter.toUpperCase()}</span>
                 </div>
@@ -3909,6 +3916,7 @@ window.gradeComparisonPracticeTab = function() {
             <div style="font-weight:800;font-size:14px;color:${isCorrect ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
                 ${isCorrect ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
             </div>
+            ${correctAnsText ? `<div style="font-size:13.5px;color:#1e293b;margin-bottom:4px;">🎯 <b>Đáp án chuẩn:</b> <span style="color:#0284c7;font-weight:700;">${correctAnsText}</span></div>` : ''}
             <div style="font-size:13px;color:#334155;line-height:1.5;">
                 💡 <b>Giải thích:</b> ${explanation}
             </div>
