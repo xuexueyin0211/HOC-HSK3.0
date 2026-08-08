@@ -3231,10 +3231,11 @@ window.recordErrorAnalysisProgress = function(qId, isCorrect, userAnsText, corre
         if (!profile.wrongExercises) profile.wrongExercises = [];
         
         if (!isCorrect) {
+            const activeLevel = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
             const wrongRecord = {
                 id: qId,
                 module: 'error_analysis',
-                level: 'HSK',
+                level: activeLevel,
                 lessonTitle: exTitle || 'Lưu Ý Lỗi Sai Thường Gặp',
                 lessonId: 'error_analysis',
                 question: qQuestion || 'Câu hỏi bài tập',
@@ -3355,10 +3356,15 @@ window.selectComparisonAnswer = function(qId, selectedIdx, correctIdx) {
     }
 };
 
-window.addToDragInput = function(qId, word) {
+window.addToDragInput = function(qId, word, btn) {
     const input = document.getElementById(`drag_${qId}`);
     if (input) {
         input.value += word;
+        if (btn) {
+            btn.disabled = true;
+            btn.style.opacity = '0.4';
+            btn.style.pointerEvents = 'none';
+        }
         window.gradeDragDropItem(qId);
     }
 };
@@ -3462,44 +3468,37 @@ window.gradeDragDropItem = function(qId) {
     try {
         const decodedCorrectAttr = correctAttr.replace(/&apos;/g, "'").trim();
         let parsed = decodedCorrectAttr;
-        if ((decodedCorrectAttr.startsWith('"') && decodedCorrectAttr.endsWith('"')) || (decodedCorrectAttr.startsWith("'") && decodedCorrectAttr.endsWith("'"))) {
-            try {
-                parsed = JSON.parse(decodedCorrectAttr);
-            } catch(e) {
-                parsed = decodedCorrectAttr.substring(1, decodedCorrectAttr.length - 1);
-            }
-        } else {
-            try {
-                parsed = JSON.parse(decodedCorrectAttr);
-            } catch(e) {
-                parsed = decodedCorrectAttr;
-            }
+        try {
+            parsed = JSON.parse(decodedCorrectAttr);
+        } catch(e) {
+            parsed = decodedCorrectAttr;
         }
         correctAnswer = Array.isArray(parsed) ? parsed.join('') : String(parsed);
     } catch(e) {
-        correctAnswer = correctAttr;
+        correctAnswer = String(correctAttr);
     }
-
-    // Clean leading/trailing quotes and spaces from correctAnswer
     correctAnswer = correctAnswer.replace(/^["']|["']$/g, '').trim();
     
     const cleanForComp = function(s) {
         if (!s) return '';
-        return s.replace(/[\s\.,\/#!$%\^&\*;:{}=\-_`~()?"'。，？！、；：]/g, '');
+        return String(s)
+            .replace(/[\s\.,\/#!$%\^&\*;:{}=\-_`~()?"'。，？！、；：“”‘’]/g, '')
+            .toLowerCase()
+            .trim();
     };
 
     const cleanCorrect = cleanForComp(correctAnswer);
     const userVal = input.value.trim();
     const userValClean = cleanForComp(userVal);
     
-    const totalPromptChars = (Array.isArray(wordsArr) && wordsArr.length > 0)
-        ? cleanForComp(wordsArr.join('')).length
-        : cleanCorrect.length;
+    const allButtons = card.querySelectorAll(`.drag-word-btn-${qId}`);
+    const disabledButtons = card.querySelectorAll(`.drag-word-btn-${qId}[disabled]`);
+    const totalRequiredCount = (Array.isArray(wordsArr) && wordsArr.length > 0) ? wordsArr.length : allButtons.length;
     
     const feedbackDiv = card.querySelector('.practice-feedback');
     
-    if (userValClean.length < totalPromptChars) {
-        // Student has NOT completed selecting/typing all words given in prompt
+    // Yêu cầu: Chỉ khi nào học sinh xếp hết tất cả các từ đề cho thì mới hiện nhận xét đúng/sai
+    if (disabledButtons.length < totalRequiredCount && userValClean.length < cleanCorrect.length) {
         input.style.borderColor = '#cbd5e1';
         input.style.background = 'white';
         if (feedbackDiv) {
@@ -3509,7 +3508,7 @@ window.gradeDragDropItem = function(qId) {
         return;
     }
 
-    // STUDENT HAS COMPLETED ARRANGING ALL WORDS
+    // ĐÃ XẾP HẾT TẤT CẢ CÁC TỪ
     const isCorrect = (userValClean === cleanCorrect);
 
     if (isCorrect) {
@@ -3527,6 +3526,9 @@ window.gradeDragDropItem = function(qId) {
         feedbackDiv.innerHTML = `
             <div style="font-weight:800;font-size:14px;color:${isCorrect ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
                 ${isCorrect ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
+            </div>
+            <div style="font-size:13.5px;color:#1e293b;margin-bottom:4px;">
+                🎯 <b>Đáp án chuẩn:</b> <span style="color:#0284c7;font-weight:700;">${correctAnswer}</span>
             </div>
             <div style="font-size:13px;color:#334155;line-height:1.5;">
                 💡 <b>Giải thích:</b> ${explanation}
@@ -3585,13 +3587,20 @@ window.redoExerciseItem = function(qId, type) {
         input.style.background = 'white';
     });
 
-    // 5. Reset drag_drop input
+    // 5. Reset drag_drop input & word buttons
     const dragInput = document.getElementById(`drag_${qId}`);
     if (dragInput) {
         dragInput.value = '';
         dragInput.style.borderColor = '#cbd5e1';
         dragInput.style.background = 'white';
     }
+    const wordBtns = card.querySelectorAll(`.drag-word-btn-${qId}`);
+    wordBtns.forEach(btn => {
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.style.pointerEvents = 'auto';
+        btn.style.cursor = 'pointer';
+    });
 
     // 6. Hide feedback element
     const feedbackDiv = card.querySelector('.practice-feedback');
@@ -3681,10 +3690,10 @@ window.renderComparisonPracticeTab = function(lvl, targetFilter, allComparisonDa
                 inputStyle = saved.isCorrect ? 'border:1px solid #86efac;background:#f0fdf4;' : 'border:1px solid #fca5a5;background:#fef2f2;';
             }
             optsHtml = `
-                <div style="margin-bottom:10px;">
-                    ${(ex.words || []).map(w => `<button onclick="addToDragInput('${ex.id}', '${w}')" style="margin:2px;padding:5px 10px;background:#e2e8f0;border:none;border-radius:6px;cursor:pointer;">${w}</button>`).join('')}
+                <div style="margin-bottom:10px;display:flex;flex-wrap:wrap;gap:6px;">
+                    ${(ex.words || []).map(w => `<button class="drag-word-btn-${ex.id}" onclick="addToDragInput('${ex.id}', this.innerText.trim(), this)" style="padding:6px 12px;background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;">${w}</button>`).join('')}
                 </div>
-                <input type="text" id="drag_${ex.id}" value="${val.replace(/"/g, '&quot;')}" oninput="gradeDragDropItem('${ex.id}')" style="width:100%;padding:8px;border-radius:8px;${inputStyle}">
+                <input type="text" id="drag_${ex.id}" value="${val.replace(/"/g, '&quot;')}" oninput="gradeDragDropItem('${ex.id}')" placeholder="Nhấp vào các từ ở trên để sắp xếp..." style="width:100%;padding:10px 14px;border-radius:10px;box-sizing:border-box;font-size:14px;outline:none;${inputStyle}">
             `;
         } else if (ex.type === 'select_position') {
             ex.positions.forEach((pos, posIdx) => {
@@ -3828,21 +3837,27 @@ window.gradeComparisonPracticeTab = function() {
             
             let targetAns = '';
             try {
-                const parsedVal = (typeof correct === 'string') ? correct : JSON.stringify(correct);
-                targetAns = parsedVal.replace(/^["']|["']$/g, '').trim();
+                const decoded = String(correct).replace(/&apos;/g, "'").trim();
+                let parsed = decoded;
+                try { parsed = JSON.parse(decoded); } catch(e) { parsed = decoded; }
+                targetAns = Array.isArray(parsed) ? parsed.join('') : String(parsed);
             } catch(e) {
                 targetAns = String(correct);
             }
+            targetAns = targetAns.replace(/^["']|["']$/g, '').trim();
 
             const cleanForComp = function(s) {
                 if (!s) return '';
-                return s.replace(/[\s\.,\/#!$%\^&\*;:{}=\-_`~()?"'。，？！、；：]/g, '');
+                return String(s)
+                    .replace(/[\s\.,\/#!$%\^&\*;:{}=\-_`~()?"'。，？！、；：“”‘’]/g, '')
+                    .toLowerCase()
+                    .trim();
             };
 
             const valClean = cleanForComp(val);
             const targetClean = cleanForComp(targetAns);
 
-            isCorrect = (valClean === targetClean);
+            isCorrect = (valClean === targetClean && valClean.length > 0);
             userAnsText = val || 'Chưa nhập';
             correctAnsText = targetAns;
         } else if (type === 'select_position') {
@@ -3866,11 +3881,14 @@ window.gradeComparisonPracticeTab = function() {
             const exTitle = card.querySelector('span') ? card.querySelector('span').innerText : 'Bẫy Lỗi Sai';
             const qQuestion = card.querySelector('div:nth-child(2)') ? card.querySelector('div:nth-child(2)').innerText : 'Câu hỏi';
             
+            const activeLevel = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
             const existingIdx = profile.wrongExercises.findIndex(w => w.id === qId);
             const wrongRecord = {
                 id: qId,
                 module: 'error_analysis',
+                level: activeLevel,
                 lessonTitle: exTitle,
+                lessonId: 'error_analysis',
                 question: qQuestion,
                 userAnswer: userAnsText,
                 correctAnswer: correctAnsText,
@@ -10784,7 +10802,7 @@ window.retryLessonMistakesDirectly = async function(level, lessonId, moduleName,
         cleanId = parts[parts.length - 1];
     }
 
-    const targetLvl = (level || 'hsk1').toLowerCase();
+    let targetLvl = (level || 'hsk1').toLowerCase();
     
     let mistakeData = null;
     const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
@@ -10797,8 +10815,8 @@ window.retryLessonMistakesDirectly = async function(level, lessonId, moduleName,
         }
         if (!mistakeData) {
             mistakeData = profile.wrongExercises.find(item => 
-                (String(item.lessonId).replace(/.*_/, '') === cleanId || String(item.id) === String(mistakeId)) &&
-                (item.level || '').toLowerCase() === targetLvl
+                (String(item.lessonId).replace(/.*_/, '') === cleanId || String(item.id) === String(mistakeId)) ||
+                (item.module === 'error_analysis' && String(item.id) === String(mistakeId))
             ) || null;
         }
     }
@@ -10808,6 +10826,14 @@ window.retryLessonMistakesDirectly = async function(level, lessonId, moduleName,
         preferredModule = 'error_analysis';
     } else {
         preferredModule = (preferredModule === 'vocab') ? 'vocab' : 'grammar';
+    }
+
+    if (!/^hsk\d+$/i.test(targetLvl)) {
+        if (mistakeData && mistakeData.level && /^hsk\d+$/i.test(mistakeData.level)) {
+            targetLvl = mistakeData.level.toLowerCase();
+        } else {
+            targetLvl = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
+        }
     }
 
     window.openAndHighlight(preferredModule, targetLvl, cleanId, mistakeData);
@@ -10825,7 +10851,10 @@ window.retryMistake = function(id) {
     }
 
     const preferredModule = mistakeData.module || 'grammar';
-    const targetLvl = (mistakeData.level || 'hsk1').toLowerCase();
+    let targetLvl = (mistakeData.level || 'hsk1').toLowerCase();
+    if (!/^hsk\d+$/i.test(targetLvl)) {
+        targetLvl = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
+    }
     const cleanId = String(mistakeData.lessonId || mistakeData.lesson || 1).replace(/^0+/, '').replace(/.*_/, '') || '1';
 
     window.openAndHighlight(preferredModule, targetLvl, cleanId, mistakeData);
@@ -10842,14 +10871,20 @@ window.openAndHighlight = async function(preferredModule, targetLvl, cleanId, mi
 };
 
 async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData, isPrimaryAttempt) {
+    let normLvl = (targetLvl && /^hsk\d+$/i.test(targetLvl))
+        ? targetLvl.toLowerCase()
+        : ((mistakeData && mistakeData.level && /^hsk\d+$/i.test(mistakeData.level))
+            ? mistakeData.level.toLowerCase()
+            : (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase());
+
     if (mod === 'error_analysis' || mod === 'comparison' || cleanId === 'error_analysis') {
         if (typeof window.showContent === 'function') {
-            await window.showContent('comparison', targetLvl);
+            await window.showContent('comparison', normLvl);
         }
         if (typeof window.renderGrammarComparisonModule === 'function') {
-            await window.renderGrammarComparisonModule(targetLvl, targetLvl, 'practice');
+            await window.renderGrammarComparisonModule(normLvl, normLvl, 'practice');
         }
-        await new Promise(r => setTimeout(r, 350));
+        await new Promise(r => setTimeout(r, 450));
 
         const containerEl = document.getElementById('contentInner') || document.body;
         let candidates = Array.from(containerEl.querySelectorAll('.practice-q-card, .exercise-item, .guided-exercise-item, .exercise-card'));
