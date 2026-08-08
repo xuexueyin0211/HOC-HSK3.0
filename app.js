@@ -12688,8 +12688,8 @@ Bài ${i} (HSK ${(level || '').replace('hsk', '').toUpperCase()})
         <div style="background:linear-gradient(135deg, #fdf2f8, #fbcfe8); border-radius:14px; padding:12px 16px; margin-bottom:16px; border:1px solid #fbcfe8; display:flex; align-items:center; justify-content:space-between;">
             <div>
                 <div style="font-size:11px; font-weight:800; color:#be185d;">LỘ TRÌNH CHUẨN</div>
-                <div style="font-size:16px; font-weight:800; color:#831843;">HSK ${level.replace('hsk', '')}</div>
-            </div>
+<div style="font-size:16px; font-weight:800; color:#831843;">HSK ${(level || '').replace('hsk', '').toUpperCase()}</div>
+</div>
             <select onchange="window.showContent('grammar', this.value)" style="padding:6px 10px; border-radius:10px; border:1px solid #f472b6; font-size:12px; font-weight:700; color:#be185d; background:white; outline:none; cursor:pointer;">
                 <option value="hsk1" ${level==='hsk1'?'selected':''}>HSK 1</option>
                 <option value="hsk2" ${level==='hsk2'?'selected':''}>HSK 2</option>
