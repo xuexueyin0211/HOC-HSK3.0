@@ -2999,7 +2999,7 @@ window.comparisonPracticeExercises = null;
 window.loadComparisonExercises = async function() {
     if (!window.comparisonPracticeExercises) {
         try {
-            const res = await fetch('data/comparison/exercises.json');
+            const res = await fetch('./data/error analysis/exercises.json');
             if (res.ok) {
                 const contentType = res.headers.get('content-type');
                 if (contentType && contentType.includes('application/json')) {
@@ -4908,7 +4908,7 @@ sidebar.appendChild(lessonItem);
             try {
                 const isVocabCat = catStr.includes('từ vựng') || catStr.includes('vocab');
                 const modName = isVocabCat ? 'vocab' : 'grammar';
-                const exResp = await fetch(`/data/${modName}/exercises.json`);
+                const exResp = await fetch(`./data/${modName}/exercises.json`);
                 if (exResp.ok) {
                     const exData = await exResp.json();
                     if (exData && exData[normLvl]) {
@@ -10762,7 +10762,7 @@ window.getLessonExercises = async function(module, level, lessonId) {
     if (!window.cachedExercises) window.cachedExercises = {};
     if (!window.cachedExercises[normMod]) {
         try {
-            const resp = await fetch(`/data/${normMod}/exercises.json`);
+            const resp = await fetch(`./data/${normMod}/exercises.json`);
             if (resp.ok) {
                 window.cachedExercises[normMod] = await resp.json();
             }
