@@ -11,17 +11,15 @@
   "lessons": [
     {
       "id": 1,
-      "title": "旅游去哪里？",
-      "title_en": "Where to travel?",
-      "topics": ["travel", "season", "preference"],
+      "title": "TẠM CHƯA CÓ",
       "questions": [
         {
           "id": "L1_Q01",
           "type": "listening_choose_word",
           "audio": "luyou",
           "audioUrl": "/audio/HSK2/L1/luyou.mp3",
-          "question": "Bạn nghe thấy từ gì?",
-          "options": ["旅游", "运动", "眼睛", "足球"],
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
           "correct": 0,
           "hanzi": "旅游",
           "pinyin": "lǚyóu",
@@ -32,8 +30,8 @@
           "type": "listening_choose_word",
           "audio": "yundong",
           "audioUrl": "/audio/HSK2/L1/yundong.mp3",
-          "question": "Bạn nghe thấy từ gì?",
-          "options": ["旅游", "运动", "眼睛", "足球"],
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
           "correct": 1,
           "hanzi": "运动",
           "pinyin": "yùndòng",
@@ -42,8 +40,8 @@
         {
           "id": "L1_Q03",
           "type": "multiple_choice",
-          "question": "Điền từ thích hợp: 九月去北京旅游___ (Chín tháng du lịch Bắc Kinh là tốt nhất).",
-          "options": ["最好", "最坏", "最高", "最远"],
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
           "correct": 0,
           "explanation": "最好 (zuì hǎo) có nghĩa là tốt nhất."
         }
@@ -51,23 +49,21 @@
     },
     {
       "id": 2,
-      "title": "我每天六点起床",
-      "title_en": "I get up at six every day",
-      "topics": ["daily_routine", "time", "health"],
+      "title": "TẠM CHƯA CÓ",
       "questions": [
         {
           "id": "L2_Q01",
           "type": "multiple_choice",
-          "question": "Chọn nghĩa đúng của từ 起床 (qǐchuáng):",
-          "options": ["Thức dậy", "Đi ngủ", "Tắm rửa", "Ăn sáng"],
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
           "correct": 0,
           "explanation": "起床 (qǐchuáng) có nghĩa là thức dậy."
         },
         {
           "id": "L2_Q02",
           "type": "multiple_choice",
-          "question": "Điền từ thích hợp: 身体___ (Thân thể/Sức khỏe thế nào?)",
-          "options": ["怎么样", "什么", "多少", "谁"],
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
           "correct": 0,
           "explanation": "怎么样 (zěnmeyàng) dùng để hỏi tình trạng, thế nào."
         }
