@@ -2367,7 +2367,7 @@ window.logoutGoogle = () => {
 
         window.loadPlacementQuestions = async function() {
             try {
-                const res = await fetch('/data/placement_test.json');
+                const res = await fetch('./data/placement_test.json');
                 if (res.ok) {
                     const data = await res.json();
                     if (data && typeof data === 'object') {
@@ -2375,7 +2375,7 @@ window.logoutGoogle = () => {
                     }
                 }
             } catch (e) {
-                console.warn('Could not load /data/placement_test.json, using fallback placementTestQuestions:', e);
+                console.warn('Could not load ./data/placement_test.json, using fallback placementTestQuestions:', e);
             }
         };
 

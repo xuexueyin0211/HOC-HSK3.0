@@ -5475,13 +5475,13 @@ sidebar.appendChild(lessonItem);
             const normLvl = (level || 'hsk1').toLowerCase();
             const catStr = String(category || '').toLowerCase();
 
-            // Load additional questions from data/progress test/hsk1.json if we are on HSK1
+            // Load additional questions from data/progress-test/hsk1.json if we are on HSK1
             let hsk1JsonQuestions = [];
             if (normLvl === 'hsk1') {
                 try {
-                    let resp = await fetch(`/data/progress test/hsk1.json`);
+                    let resp = await fetch(`./data/progress-test/hsk1.json`);
                     if (!resp.ok) {
-                        resp = await fetch(`/data/progress%20test/hsk1.json`);
+                        resp = await fetch(`./data/progress-test/hsk1.json`);
                     }
                     if (resp.ok) {
                         const data = await resp.json();
@@ -5552,7 +5552,7 @@ sidebar.appendChild(lessonItem);
             // 1. If Grammar Category ("Ngữ pháp")
             if (catStr.includes('ngữ pháp') || catStr.includes('grammar')) {
                 try {
-                    let resp = await fetch(`/data/grammar/${normLvl}.json`);
+                    let resp = await fetch(`./data/grammar/${normLvl}.json`);
                     if (resp.ok) {
                         const raw = await resp.json();
                         const lvlObj = raw[normLvl] || raw;
@@ -5608,7 +5608,7 @@ sidebar.appendChild(lessonItem);
             // 2. If Vocabulary Category ("Từ vựng")
             if (catStr.includes('từ vựng') || catStr.includes('vocab')) {
                 try {
-                    let resp = await fetch(`/data/vocab/${normLvl}.json`);
+                    let resp = await fetch(`./data/vocab/${normLvl}.json`);
                     if (resp.ok) {
                         const raw = await resp.json();
                         const lvlObj = raw[normLvl] || raw;
@@ -5725,11 +5725,11 @@ sidebar.appendChild(lessonItem);
                 }
             }
 
-            // 3. General Progress Test from data/progress test/hsk1.json
+            // 3. General Progress Test from data/progress-test/hsk1.json
             try {
-                let resp = await fetch(`/data/progress test/${normLvl}.json`);
+                let resp = await fetch(`./data/progress-test/${normLvl}.json`);
                 if (!resp.ok) {
-                    resp = await fetch(`/data/progress%20test/${normLvl}.json`);
+                    resp = await fetch(`./data/progress-test/${normLvl}.json`);
                 }
                 if (resp.ok) {
                     const data = await resp.json();
@@ -12325,14 +12325,20 @@ window.loadStitchedLesson = async function(level, lessonId) {
             return null;
         }
     };
-const safeLvl = (typeof lvl !== 'undefined' && lvl) ? lvl.toLowerCase() : (typeof level !== 'undefined' && level ? level.toLowerCase() : 'hsk1');
+    let safeLvl = (typeof lvl !== 'undefined' && lvl) ? lvl.toLowerCase().trim() : 'hsk1';
+    if (!/^hsk\d+$/i.test(safeLvl)) {
+        safeLvl = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
+    }
+    if (!/^hsk\d+$/i.test(safeLvl)) {
+        safeLvl = 'hsk1';
+    }
     // 1. Fetch 5 separate JSON files in parallel using Promise.all()
     const [vocabRaw, grammarRaw, textsRaw, exercisesRaw, progressRaw] = await Promise.all([
 fetchJson(`./data/vocab/${safeLvl}.json`),
     fetchJson(`./data/grammar/${safeLvl}.json`),
     fetchJson(`./data/texts/${safeLvl}.json`),
     fetchJson(`./data/exercises/${safeLvl}.json`),
-    fetchJson(`./data/progress%20test/${safeLvl}.json`)
+    fetchJson(`./data/progress-test/${safeLvl}.json`)
     ]);
 
     // Helper to find item matching lesson_id / lesson / id
@@ -12617,9 +12623,12 @@ window.renderGuidedLessonPipeline = async function(level, lessonId, activeCompon
         </div>
     `;
 // 💡 1. Khai báo safeLvl: Lấy level, nếu bị undefined/null thì lấy từ localStorage hoặc mặc định 'hsk1'
-    const safeLvl = (level && level !== 'undefined') 
-        ? level.toLowerCase() 
-        : (localStorage.getItem('selected_hsk_level') || 'hsk1');
+    let safeLvl = (level && level !== 'undefined' && /^hsk\d+$/i.test(level)) 
+        ? level.toLowerCase().trim() 
+        : (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
+    if (!/^hsk\d+$/i.test(safeLvl)) {
+        safeLvl = 'hsk1';
+    }
 
     // Fetch and stitch data using Promise.all() parallel loader
     const [stitched] = await Promise.all([
