@@ -5472,268 +5472,40 @@ sidebar.appendChild(lessonItem);
         };
 
         window.loadProgressTestQuestionsData = async function(level, startId, endId, category) {
-            const normLvl = (level || 'hsk1').toLowerCase();
-            const catStr = String(category || '').toLowerCase();
-
-            // Load additional questions from data/progress-test/hsk1.json if we are on HSK1
-            let hsk1JsonQuestions = [];
-            if (normLvl === 'hsk1') {
-                try {
-                    let resp = await fetch(`./data/progress-test/hsk1.json`);
-                    if (!resp.ok) {
-                        resp = await fetch(`./data/progress-test/hsk1.json`);
-                    }
-                    if (resp.ok) {
-                        const data = await resp.json();
-                        let rawQuestions = [];
-                        if (data && Array.isArray(data.lessons)) {
-                            const targetLessons = data.lessons.filter(l => l.id >= startId && l.id <= endId);
-                            targetLessons.forEach(l => {
-                                if (Array.isArray(l.questions)) {
-                                    rawQuestions.push(...l.questions);
-                                }
-                            });
-                        } else if (data && Array.isArray(data.tests)) {
-                            data.tests.forEach(t => {
-                                if (Array.isArray(t.questions)) rawQuestions.push(...t.questions);
-                            });
-                        }
-
-                        if (rawQuestions.length > 0) {
-                            hsk1JsonQuestions = rawQuestions.map((q, qidx) => {
-                                let ansIdx = 0;
-                                if (typeof q.correct === 'number') ansIdx = q.correct;
-                                else if (typeof q.answer === 'number') ansIdx = q.answer;
-                                else if (q.answer !== undefined) {
-                                    const u = String(q.answer).trim().toUpperCase();
-                                    if (u >= 'A' && u <= 'Z') ansIdx = u.charCodeAt(0) - 65;
-                                    else if (/^\d+$/.test(u)) ansIdx = parseInt(u, 10);
-                                }
-                                const letter = String.fromCharCode(65 + ansIdx);
-                                let promptText = q.question || q.prompt || '';
-                                if (!promptText && q.hanzi) promptText = `Chọn đáp án đúng cho "${q.hanzi}" (${q.pinyin || ''}):`;
-                                return {
-                                    id: q.id || `hsk1_json_${startId}_${endId}_${qidx + 1}`,
-                                    type: q.type || 'mcq',
-                                    prompt: promptText || `Câu hỏi kiểm tra HSK1 bài ${startId}-${endId}`,
-                                    options: q.options || (q.answer ? [String(q.answer)] : ['Đáp án A', 'Đáp án B', 'Đáp án C', 'Đáp án D']),
-                                    answer: letter,
-                                    correct: ansIdx,
-                                    explanation: q.explanation || (q.meaning ? `Nghĩa: ${q.meaning}` : 'Đáp án chính xác.')
-                                };
-                            });
-                        }
-                    }
-                } catch(e) {
-                    console.warn('Could not load HSK1 progress test questions for blending:', e);
-                }
+            let normLvl = (level || 'hsk1').toLowerCase().trim();
+            if (!/^hsk\d+$/i.test(normLvl)) {
+                normLvl = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
+            }
+            if (!/^hsk\d+$/i.test(normLvl)) {
+                normLvl = 'hsk1';
             }
 
-            // Also load exercises from exercises.json if available
-            let externalExList = [];
-            try {
-                const isVocabCat = catStr.includes('từ vựng') || catStr.includes('vocab');
-                const modName = isVocabCat ? 'vocab' : 'grammar';
-                const exResp = await fetch(`./data/${modName}/exercises.json`);
-                if (exResp.ok) {
-                    const exData = await exResp.json();
-                    if (exData && exData[normLvl]) {
-                        for (let lId = startId; lId <= endId; lId++) {
-                            if (Array.isArray(exData[normLvl][lId])) {
-                                externalExList.push(...exData[normLvl][lId]);
-                            }
-                        }
-                    }
-                }
-            } catch(e) {
-                console.warn('Could not load external exercises json:', e);
-            }
+            const TARGET_COUNT = 20;
+            let rawQuestions = [];
 
-            // 1. If Grammar Category ("Ngữ pháp")
-            if (catStr.includes('ngữ pháp') || catStr.includes('grammar')) {
-                try {
-                    let resp = await fetch(`./data/grammar/${normLvl}.json`);
-                    if (resp.ok) {
-                        const raw = await resp.json();
-                        const lvlObj = raw[normLvl] || raw;
-                        if (lvlObj && Array.isArray(lvlObj.lessons)) {
-                            const lessons = lvlObj.lessons.filter(l => l.id >= startId && l.id <= endId);
-                            let exList = [...externalExList];
-                            lessons.forEach(l => {
-                                if (Array.isArray(l.exercises)) exList.push(...l.exercises);
-                                if (Array.isArray(l.tabs)) {
-                                    l.tabs.forEach(t => { if (Array.isArray(t.exercises)) exList.push(...t.exercises); });
-                                }
-                            });
-                            if (exList.length > 0 || hsk1JsonQuestions.length > 0) {
-                                let questions = exList.map((ex, idx) => {
-                                    let ansIdx = 0;
-                                    if (typeof ex.answer === 'number') ansIdx = ex.answer;
-                                    else if (ex.answer !== undefined) {
-                                        const u = String(ex.answer).trim().toUpperCase();
-                                        if (u >= 'A' && u <= 'Z') ansIdx = u.charCodeAt(0) - 65;
-                                        else if (/^\d+$/.test(u)) ansIdx = parseInt(u, 10);
-                                    }
-                                    const letter = String.fromCharCode(65 + ansIdx);
-                                    return {
-                                        id: `gr_${startId}_${endId}_${idx + 1}`,
-                                        type: ex.type || 'mcq',
-                                        prompt: ex.question || ex.title || `Câu hỏi ngữ pháp mốc bài ${startId}-${endId}`,
-                                        options: ex.options || ['Đáp án A', 'Đáp án B', 'Đáp án C', 'Đáp án D'],
-                                        answer: letter,
-                                        correct: ansIdx,
-                                        explanation: ex.explanation || 'Đáp án đúng theo cấu trúc ngữ pháp đã học.'
-                                    };
-                                });
-                                if (hsk1JsonQuestions.length > 0) {
-                                    questions = [...questions, ...hsk1JsonQuestions];
-                                }
-                                if (questions.length > 20) {
-                                    const step = questions.length / 20;
-                                    let picked = [];
-                                    for (let i = 0; i < 20; i++) {
-                                        picked.push(questions[Math.floor(i * step)]);
-                                    }
-                                    questions = picked;
-                                }
-                                if (questions.length > 0) return questions;
-                            }
-                        }
-                    }
-                } catch(e) {
-                    console.warn('Could not load grammar JSON, falling back:', e);
-                }
-            }
-
-            // 2. If Vocabulary Category ("Từ vựng")
-            if (catStr.includes('từ vựng') || catStr.includes('vocab')) {
-                try {
-                    let resp = await fetch(`./data/vocab/${normLvl}.json`);
-                    if (resp.ok) {
-                        const raw = await resp.json();
-                        const lvlObj = raw[normLvl] || raw;
-                        if (lvlObj && Array.isArray(lvlObj.lessons)) {
-                            const lessons = lvlObj.lessons.filter(l => l.id >= startId && l.id <= endId);
-                            let words = [];
-                            let exList = [];
-                            lessons.forEach(l => {
-                                if (Array.isArray(l.words)) words.push(...l.words);
-                                if (Array.isArray(l.exercises)) exList.push(...l.exercises);
-                                if (Array.isArray(l.tabs)) {
-                                    l.tabs.forEach(t => {
-                                        if (Array.isArray(t.exercises)) exList.push(...t.exercises);
-                                        if (Array.isArray(t.subcards)) {
-                                            t.subcards.forEach(sc => {
-                                                if (Array.isArray(sc.words)) words.push(...sc.words);
-                                            });
-                                        }
-                                    });
-                                }
-                            });
-
-                            let questions = [];
-
-                            // Convert vocabulary exercises
-                            exList.forEach((ex, idx) => {
-                                if (ex.type === 'mcq' || ex.type === 'fill') {
-                                    let ansIdx = 0;
-                                    if (typeof ex.answer === 'number') ansIdx = ex.answer;
-                                    else if (ex.answer !== undefined) {
-                                        const u = String(ex.answer).trim().toUpperCase();
-                                        if (u >= 'A' && u <= 'Z') ansIdx = u.charCodeAt(0) - 65;
-                                        else if (/^\d+$/.test(u)) ansIdx = parseInt(u, 10);
-                                    }
-                                    questions.push({
-                                        id: `vo_ex_${startId}_${endId}_${idx + 1}`,
-                                        type: ex.type || 'mcq',
-                                        prompt: ex.question || ex.title || `Câu hỏi từ vựng mốc bài ${startId}-${endId}`,
-                                        options: ex.options || ['Đáp án A', 'Đáp án B', 'Đáp án C', 'Đáp án D'],
-                                        answer: String.fromCharCode(65 + ansIdx),
-                                        correct: ansIdx,
-                                        explanation: ex.explanation || 'Đáp án chính xác theo từ vựng đã học.'
-                                    });
-                                }
-                            });
-
-                            // Convert word definitions and Pinyins
-                            words.forEach((w, idx) => {
-                                if (!w.hanzi || !w.meaning) return;
-                                const hanzi = w.hanzi;
-                                const meaning = w.meaning;
-                                const pinyin = w.pinyin || w.py || '';
-
-                                const otherWords = words.filter(o => o.hanzi !== hanzi && o.meaning);
-                                const wrongMeanings = otherWords
-                                    .map(o => o.meaning)
-                                    .filter((m, i, self) => self.indexOf(m) === i)
-                                    .sort(() => Math.random() - 0.5)
-                                    .slice(0, 3);
-                                while (wrongMeanings.length < 3) {
-                                    wrongMeanings.push('người bạn', 'trường học', 'bệnh viện', 'cảm ơn')[wrongMeanings.length];
-                                }
-
-                                const meanOpts = [meaning, ...wrongMeanings].sort(() => Math.random() - 0.5);
-                                const meanCorrectIdx = meanOpts.indexOf(meaning);
-
-                                questions.push({
-                                    id: `vo_m_${startId}_${endId}_${idx + 1}`,
-                                    type: 'mcq',
-                                    prompt: `Từ Hán tự "${hanzi}" ${pinyin ? `(${pinyin})` : ''} có nghĩa là gì?`,
-                                    options: meanOpts,
-                                    answer: String.fromCharCode(65 + meanCorrectIdx),
-                                    correct: meanCorrectIdx,
-                                    explanation: `Từ "${hanzi}" (${pinyin}) có nghĩa tiếng Việt là: ${meaning}.`
-                                });
-
-                                if (pinyin) {
-                                    const wrongPy = words
-                                        .filter(o => o.hanzi !== hanzi && (o.pinyin || o.py))
-                                        .map(o => o.pinyin || o.py)
-                                        .filter((p, i, self) => self.indexOf(p) === i && p !== pinyin)
-                                        .sort(() => Math.random() - 0.5)
-                                        .slice(0, 3);
-                                    while (wrongPy.length < 3) {
-                                        wrongPy.push('nǐ hǎo', 'xièxie', 'zàijiàn', 'hěn hǎo')[wrongPy.length];
-                                    }
-                                    const pyOpts = [pinyin, ...wrongPy].sort(() => Math.random() - 0.5);
-                                    const pyCorrectIdx = pyOpts.indexOf(pinyin);
-
-                                    questions.push({
-                                        id: `vo_p_${startId}_${endId}_${idx + 1}`,
-                                        type: 'mcq',
-                                        prompt: `Phiên âm Pinyin chính xác của từ "${hanzi}" là gì?`,
-                                        options: pyOpts,
-                                        answer: String.fromCharCode(65 + pyCorrectIdx),
-                                        correct: pyCorrectIdx,
-                                        explanation: `Phiên âm Pinyin của "${hanzi}" là "${pinyin}".`
-                                    });
-                                }
-                            });
-
-                            if (hsk1JsonQuestions.length > 0) {
-                                questions = [...questions, ...hsk1JsonQuestions];
-                            }
-
-                            if (questions.length > 0) {
-                                questions = questions.sort(() => Math.random() - 0.5).slice(0, 20);
-                                return questions;
-                            }
-                        }
-                    }
-                } catch(e) {
-                    console.warn('Could not load vocab JSON, falling back:', e);
-                }
-            }
-
-            // 3. General Progress Test from data/progress-test/hsk1.json
             try {
                 let resp = await fetch(`./data/progress-test/${normLvl}.json`);
-                if (!resp.ok) {
-                    resp = await fetch(`./data/progress-test/${normLvl}.json`);
+                if (!resp.ok && normLvl !== 'hsk1') {
+                    resp = await fetch(`./data/progress-test/hsk1.json`);
                 }
                 if (resp.ok) {
                     const data = await resp.json();
-                    if (data && Array.isArray(data.tests)) {
+
+                    // 1. Check data.lessons structure
+                    if (data && Array.isArray(data.lessons)) {
+                        let targetLessons = data.lessons.filter(l => l.id >= startId && l.id <= endId);
+                        if (targetLessons.length === 0) {
+                            targetLessons = data.lessons;
+                        }
+                        targetLessons.forEach(l => {
+                            if (Array.isArray(l.questions)) {
+                                rawQuestions.push(...l.questions);
+                            }
+                        });
+                    }
+
+                    // 2. Check data.tests structure
+                    if (rawQuestions.length === 0 && data && Array.isArray(data.tests)) {
                         const rangeStr = `${startId}-${endId}`;
                         let matchedTest = data.tests.find(x => 
                             String(x.lessonsCovered) === rangeStr ||
@@ -5747,15 +5519,82 @@ sidebar.appendChild(lessonItem);
                             else if (startId === 6) matchedTest = data.tests[1];
                             else matchedTest = data.tests[2] || data.tests[0];
                         }
-                        if (matchedTest && Array.isArray(matchedTest.questions) && matchedTest.questions.length > 0) {
-                            return matchedTest.questions;
+                        if (matchedTest && Array.isArray(matchedTest.questions)) {
+                            rawQuestions.push(...matchedTest.questions);
+                        }
+                        if (rawQuestions.length === 0) {
+                            data.tests.forEach(t => {
+                                if (Array.isArray(t.questions)) rawQuestions.push(...t.questions);
+                            });
                         }
                     }
                 }
-            } catch(e) {
-                console.warn('Could not load progress test JSON, falling back to generator:', e);
+            } catch (e) {
+                console.warn(`Lỗi khi tải dữ liệu progress-test cho ${normLvl}:`, e);
             }
-            return null;
+
+            // Fallback load from progress-test/hsk1.json if current level file yielded no questions
+            if (rawQuestions.length === 0 && normLvl !== 'hsk1') {
+                try {
+                    let fallbackResp = await fetch(`./data/progress-test/hsk1.json`);
+                    if (fallbackResp.ok) {
+                        const fallbackData = await fallbackResp.json();
+                        if (fallbackData && Array.isArray(fallbackData.lessons)) {
+                            fallbackData.lessons.forEach(l => {
+                                if (Array.isArray(l.questions)) rawQuestions.push(...l.questions);
+                            });
+                        }
+                    }
+                } catch(err) {
+                    console.warn('Lỗi fallback hsk1 progress-test:', err);
+                }
+            }
+
+            if (rawQuestions.length === 0) {
+                return null;
+            }
+
+            // Format raw questions
+            let formattedQuestions = rawQuestions.map((q, qidx) => {
+                let ansIdx = 0;
+                if (typeof q.correct === 'number') ansIdx = q.correct;
+                else if (typeof q.answer === 'number') ansIdx = q.answer;
+                else if (q.answer !== undefined) {
+                    const u = String(q.answer).trim().toUpperCase();
+                    if (u >= 'A' && u <= 'Z') ansIdx = u.charCodeAt(0) - 65;
+                    else if (/^\d+$/.test(u)) ansIdx = parseInt(u, 10);
+                }
+                const letter = String.fromCharCode(65 + ansIdx);
+                let promptText = q.question || q.prompt || '';
+                if (!promptText && q.hanzi) promptText = `Chọn đáp án đúng cho "${q.hanzi}" (${q.pinyin || ''}):`;
+                return {
+                    id: q.id || `pt_${normLvl}_${startId}_${endId}_${qidx + 1}`,
+                    type: q.type || 'mcq',
+                    prompt: promptText || `Câu hỏi kiểm tra định kỳ ${normLvl.toUpperCase()} mốc bài ${startId}-${endId}`,
+                    options: q.options || (q.answer ? [String(q.answer)] : ['Đáp án A', 'Đáp án B', 'Đáp án C', 'Đáp án D']),
+                    answer: letter,
+                    correct: ansIdx,
+                    explanation: q.explanation || (q.meaning ? `Nghĩa: ${q.meaning}` : 'Đáp án chính xác.')
+                };
+            });
+
+            // Re-use existing questions if fewer than target count
+            if (formattedQuestions.length < TARGET_COUNT) {
+                let repeated = [];
+                while (repeated.length < TARGET_COUNT) {
+                    const baseQ = formattedQuestions[repeated.length % formattedQuestions.length];
+                    const clonedQ = {
+                        ...baseQ,
+                        id: `${baseQ.id || 'pt_q'}_rep_${repeated.length + 1}`
+                    };
+                    repeated.push(clonedQ);
+                }
+                return repeated;
+            } else if (formattedQuestions.length > TARGET_COUNT) {
+                return formattedQuestions.slice(0, TARGET_COUNT);
+            }
+
+            return formattedQuestions;
         };
 
         // Helper to save milestone test result
@@ -6221,7 +6060,7 @@ sidebar.appendChild(lessonItem);
 
             let questions = await window.loadProgressTestQuestionsData(level, startId, endId, category);
             if (!questions || !questions.length) {
-                questions = window.generateMilestoneQuizQuestions(category, level, startId, endId, lessonIds);
+                questions = await window.loadProgressTestQuestionsData('hsk1', 1, 5, category);
             }
 
             // Standardize options if missing
