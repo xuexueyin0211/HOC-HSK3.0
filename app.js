@@ -10799,49 +10799,65 @@ window.openLessonDirectly = async function(module, level, lessonId, tabId) {
     }, 450);
 };
 
+function getExactHskLevelForMistake(level, mistakeData, mistakeId) {
+    if (level && /^hsk[1-6]$/i.test(level)) {
+        return level.toLowerCase();
+    }
+    if (mistakeData && mistakeData.level && /^hsk[1-6]$/i.test(mistakeData.level)) {
+        return mistakeData.level.toLowerCase();
+    }
+    const mId = mistakeId || (mistakeData ? mistakeData.id : '');
+    if (mId) {
+        const m = String(mId).match(/hsk[1-6]/i);
+        if (m) return m[0].toLowerCase();
+    }
+    if (mistakeData) {
+        const text = (mistakeData.lessonTitle || '') + ' ' + (mistakeData.question || '') + ' ' + (mistakeData.type || '');
+        const m = text.match(/hsk\s*([1-6])/i);
+        if (m) return 'hsk' + m[1];
+    }
+    const stored = localStorage.getItem('selected_hsk_level');
+    if (stored && /^hsk[1-6]$/i.test(stored)) {
+        return stored.toLowerCase();
+    }
+    return 'hsk1';
+}
+
 window.retryLessonMistakesDirectly = async function(level, lessonId, moduleName, mistakeId) {
     if (typeof window.closePersonalProfileModal === 'function') {
         window.closePersonalProfileModal();
     }
 
-    let cleanId = String(lessonId || '1');
-    if (cleanId.includes('_')) {
-        const parts = cleanId.split('_');
-        cleanId = parts[parts.length - 1];
-    }
-
-    let targetLvl = (level || 'hsk1').toLowerCase();
-    
-    let mistakeData = null;
     const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
     const uid = user ? user.uid : 'guest';
     const profile = (typeof window.getUserProfile === 'function') ? window.getUserProfile(uid) : null;
 
+    let mistakeData = null;
     if (profile && Array.isArray(profile.wrongExercises)) {
         if (mistakeId) {
             mistakeData = profile.wrongExercises.find(item => String(item.id) === String(mistakeId)) || null;
         }
-        if (!mistakeData) {
+        if (!mistakeData && lessonId) {
+            const cleanLId = String(lessonId).replace(/.*_/, '');
             mistakeData = profile.wrongExercises.find(item => 
-                (String(item.lessonId).replace(/.*_/, '') === cleanId || String(item.id) === String(mistakeId)) ||
-                (item.module === 'error_analysis' && String(item.id) === String(mistakeId))
+                String(item.lessonId || '').replace(/.*_/, '') === cleanLId ||
+                String(item.id) === String(mistakeId)
             ) || null;
         }
     }
 
     let preferredModule = (mistakeData && mistakeData.module) ? mistakeData.module : (moduleName || 'grammar');
-    if (preferredModule === 'error_analysis' || preferredModule === 'comparison' || cleanId === 'error_analysis' || lessonId === 'error_analysis') {
+    if (preferredModule === 'error_analysis' || preferredModule === 'comparison' || lessonId === 'error_analysis' || (mistakeId && String(mistakeId).includes('err'))) {
         preferredModule = 'error_analysis';
     } else {
         preferredModule = (preferredModule === 'vocab') ? 'vocab' : 'grammar';
     }
 
-    if (!/^hsk\d+$/i.test(targetLvl)) {
-        if (mistakeData && mistakeData.level && /^hsk\d+$/i.test(mistakeData.level)) {
-            targetLvl = mistakeData.level.toLowerCase();
-        } else {
-            targetLvl = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
-        }
+    const targetLvl = getExactHskLevelForMistake(level, mistakeData, mistakeId);
+    let cleanId = String(lessonId || '1');
+    if (cleanId.includes('_')) {
+        const parts = cleanId.split('_');
+        cleanId = parts[parts.length - 1];
     }
 
     window.openAndHighlight(preferredModule, targetLvl, cleanId, mistakeData);
@@ -10858,11 +10874,13 @@ window.retryMistake = function(id) {
         return;
     }
 
-    const preferredModule = mistakeData.module || 'grammar';
-    let targetLvl = (mistakeData.level || 'hsk1').toLowerCase();
-    if (!/^hsk\d+$/i.test(targetLvl)) {
-        targetLvl = (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase();
+    let preferredModule = mistakeData.module || 'grammar';
+    const lessonIdStr = String(mistakeData.lessonId || mistakeData.lesson || '');
+    if (preferredModule === 'error_analysis' || preferredModule === 'comparison' || lessonIdStr === 'error_analysis' || String(id).includes('err')) {
+        preferredModule = 'error_analysis';
     }
+
+    const targetLvl = getExactHskLevelForMistake(mistakeData.level, mistakeData, id);
     const cleanId = String(mistakeData.lessonId || mistakeData.lesson || 1).replace(/^0+/, '').replace(/.*_/, '') || '1';
 
     window.openAndHighlight(preferredModule, targetLvl, cleanId, mistakeData);
@@ -10879,62 +10897,75 @@ window.openAndHighlight = async function(preferredModule, targetLvl, cleanId, mi
 };
 
 async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData, isPrimaryAttempt) {
-    let normLvl = (targetLvl && /^hsk\d+$/i.test(targetLvl))
-        ? targetLvl.toLowerCase()
-        : ((mistakeData && mistakeData.level && /^hsk\d+$/i.test(mistakeData.level))
-            ? mistakeData.level.toLowerCase()
-            : (localStorage.getItem('selected_hsk_level') || 'hsk1').toLowerCase());
+    const normLvl = getExactHskLevelForMistake(targetLvl, mistakeData, mistakeData ? mistakeData.id : null);
 
     if (mod === 'error_analysis' || mod === 'comparison' || cleanId === 'error_analysis') {
+        localStorage.setItem('selected_hsk_level', normLvl);
+        if (typeof window.selectDashboardHskLevel === 'function') {
+            window.selectDashboardHskLevel(normLvl);
+        }
+
         if (typeof window.showContent === 'function') {
-            await window.showContent('comparison', normLvl);
+            await window.showContent('comparison', normLvl, true);
         }
         if (typeof window.renderGrammarComparisonModule === 'function') {
             await window.renderGrammarComparisonModule(normLvl, normLvl, 'practice');
         }
-        await new Promise(r => setTimeout(r, 450));
 
         const containerEl = document.getElementById('contentInner') || document.body;
-        let candidates = Array.from(containerEl.querySelectorAll('.practice-q-card, .exercise-item, .guided-exercise-item, .exercise-card'));
+        let candidates = [];
+        for (let attempt = 0; attempt < 20; attempt++) {
+            candidates = Array.from(containerEl.querySelectorAll('.practice-q-card, .exercise-item, .guided-exercise-item, .exercise-card'));
+            if (candidates.length > 0) break;
+            await new Promise(r => setTimeout(r, 150));
+        }
+
         if (candidates.length === 0) return false;
 
         let targetQuestion = null;
-        const normalize = (str) => String(str || '')
+        const normStr = (s) => String(s || '')
             .toLowerCase()
-            .replace(/^\d+[\.\:\s\-]+/, '')
-            .replace(/[^\w\s\u4e00-\u9fa5]/g, '')
+            .replace(/[\s\.,\/#!$%\^&\*;:{}=\-_`~()?"'。，？！、；：“”‘’]/g, '')
             .trim();
 
         if (mistakeData) {
             if (mistakeData.id) {
-                targetQuestion = candidates.find(item => 
-                    item.id === ('practice_card_' + mistakeData.id) ||
-                    String(item.getAttribute('data-qid')) === String(mistakeData.id) ||
-                    String(item.dataset.qid) === String(mistakeData.id)
-                );
+                const mId = String(mistakeData.id).trim();
+                targetQuestion = candidates.find(item => {
+                    const cardId = String(item.id || '');
+                    const qId = String(item.getAttribute('data-qid') || item.dataset.qid || '');
+                    return cardId === ('practice_card_' + mId) ||
+                           qId === mId ||
+                           (cardId && cardId.includes(mId)) ||
+                           (mId && qId && mId.includes(qId));
+                });
             }
             if (!targetQuestion && (mistakeData.question || mistakeData.questionKey)) {
-                const needle = normalize(mistakeData.question || mistakeData.questionKey);
+                const needle = normStr(mistakeData.question || mistakeData.questionKey);
                 if (needle.length > 2) {
                     targetQuestion = candidates.find(item => {
-                        const itemText = normalize(item.dataset.questionText || item.textContent);
+                        const qEl = item.querySelector('.practice-question-text') || item;
+                        const itemText = normStr(qEl.innerText || qEl.textContent);
                         return itemText.includes(needle) || needle.includes(itemText);
                     });
                 }
             }
             if (!targetQuestion && (mistakeData.userAnswer || mistakeData.correctAnswer)) {
-                const ansNeedle = normalize(mistakeData.userAnswer || mistakeData.correctAnswer);
+                const ansNeedle = normStr(mistakeData.correctAnswer || mistakeData.userAnswer);
                 if (ansNeedle.length > 2) {
-                    targetQuestion = candidates.find(item => 
-                        normalize(item.textContent).includes(ansNeedle)
-                    );
+                    targetQuestion = candidates.find(item => {
+                        const itemText = normStr(item.innerText || item.textContent);
+                        return itemText.includes(ansNeedle);
+                    });
                 }
             }
         }
 
-        if (!targetQuestion) {
+        if (!targetQuestion && candidates.length > 0) {
             targetQuestion = candidates[0];
         }
+
+        if (!targetQuestion) return false;
 
         containerEl.querySelectorAll('.practice-q-card, .exercise-item').forEach(el => {
             el.classList.remove('highlight-error-question');
@@ -10944,25 +10975,26 @@ async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData,
 
         targetQuestion.classList.add('highlight-error-question');
 
-        const HEADER_HEIGHT = 90;
-        const targetPos = targetQuestion.getBoundingClientRect().top + window.scrollY;
+        const HEADER_HEIGHT = 100;
+        const rect = targetQuestion.getBoundingClientRect();
+        const absoluteTop = rect.top + window.scrollY;
 
         window.scrollTo({
-            top: Math.max(0, targetPos - HEADER_HEIGHT),
+            top: Math.max(0, absoluteTop - HEADER_HEIGHT),
             behavior: 'smooth'
         });
 
-        targetQuestion.style.transition = 'all 0.3s ease';
+        targetQuestion.style.transition = 'all 0.4s ease';
         targetQuestion.style.outline = '4px solid #ec4899';
         targetQuestion.style.outlineOffset = '6px';
         targetQuestion.style.borderColor = '#ec4899';
         targetQuestion.style.boxShadow = '0 0 30px rgba(236,72,153,0.7)';
-        targetQuestion.style.borderRadius = '14px';
+        targetQuestion.style.borderRadius = '16px';
 
         if (typeof targetQuestion.animate === 'function') {
             targetQuestion.animate([
                 { transform: 'scale(1)', boxShadow: '0 0 10px rgba(236,72,153,0.3)' },
-                { transform: 'scale(1.03)', boxShadow: '0 0 35px rgba(236,72,153,0.9)' },
+                { transform: 'scale(1.04)', boxShadow: '0 0 35px rgba(236,72,153,0.9)' },
                 { transform: 'scale(1)', boxShadow: '0 0 10px rgba(236,72,153,0.3)' }
             ], {
                 duration: 650,
@@ -10971,12 +11003,14 @@ async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData,
         }
 
         setTimeout(() => {
-            targetQuestion.classList.remove('highlight-error-question');
-            targetQuestion.style.outline = 'none';
-            targetQuestion.style.outlineOffset = '0px';
-            targetQuestion.style.boxShadow = 'none';
-            targetQuestion.style.borderColor = '#bae6fd';
-        }, 10000);
+            if (targetQuestion) {
+                targetQuestion.classList.remove('highlight-error-question');
+                targetQuestion.style.outline = 'none';
+                targetQuestion.style.outlineOffset = '0px';
+                targetQuestion.style.boxShadow = 'none';
+                targetQuestion.style.borderColor = '#bae6fd';
+            }
+        }, 8000);
 
         let toast = document.getElementById('retry-mistake-toast');
         if (!toast) {
