@@ -12153,7 +12153,7 @@ window.switchLessonZeroTab = function(tabName) {
 };
 
 // 3. DATA STITCHING ENGINE - FETCH 5 JSON FILES IN PARALLEL VIA PROMISE.ALL
-window.loadStitchedLesson = async function(level, lessonId) {
+window. = async function(level, lessonId) {
     const lvl = (level || 'hsk1').toLowerCase();
     const numId = parseInt(lessonId, 10);
 
@@ -12460,24 +12460,30 @@ window.renderGuidedLessonPipeline = async function(level, lessonId, activeCompon
             <p style="color: #a0526a;">Đang tải dữ liệu cho Bài ${numId}...</p>
         </div>
     `;
+// 💡 1. Khai báo safeLvl: Lấy level, nếu bị undefined/null thì lấy từ localStorage hoặc mặc định 'hsk1'
+    const safeLvl = (level && level !== 'undefined') 
+        ? level.toLowerCase() 
+        : (localStorage.getItem('selected_hsk_level') || 'hsk1');
 
     // Fetch and stitch data using Promise.all() parallel loader
     const [stitched] = await Promise.all([
-        window.loadStitchedLesson(level, numId),
-        level === 'hsk2' ? window.loadHsk2ErrorAnalysis() : Promise.resolve(null)
+        window.loadStitchedLesson(safeLvl, numId), // <-- Dùng safeLvl ở đây!
+        safeLvl === 'hsk2' ? window.loadHsk2ErrorAnalysis() : Promise.resolve(null)
     ]);
 
-    const sections = stitched.sections || [];
-    const exercises = stitched.exercises || [];
+    // Kiểm tra an toàn nếu stitched bị null
+    const safeStitched = stitched || {};
+    const sections = safeStitched.sections || [];
+    const exercises = safeStitched.exercises || [];
 
-    const lessonTitle = stitched.title || `Bài ${numId}`;
-    const cleanTitle = lessonTitle.replace(/<br\s*\/?>/gi, " ");
-    const isLearned = window.isLessonLearned(level, numId);
+    const lessonTitle = safeStitched.title || `Bài ${numId}`;
+    const cleanTitle = (lessonTitle || '').replace(/<br\s*\/?>/gi, " ");
+    const isLearned = window.isLessonLearned(safeLvl, numId);
 
     const wrapper = document.createElement("div");
-    wrapper.className = `guided-pipeline-container ${level}`;
-    wrapper.id = `lesson-${level}-${numId}`;
-    wrapper.setAttribute('data-vocab-id', `vocab-lesson-${level}-${numId}`);
+    wrapper.className = `guided-pipeline-container ${safeLvl}`;
+    wrapper.id = `lesson-${safeLvl}-${numId}`;
+    wrapper.setAttribute('data-vocab-id', `vocab-lesson-${safeLvl}-${numId}`);
     wrapper.style.cssText = "max-width:1150px; margin:0 auto; padding:10px;";
 
     // 5 Component Filter Pills
