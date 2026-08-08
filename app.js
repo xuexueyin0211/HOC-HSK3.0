@@ -308,6 +308,8 @@ if (typeof window.isLessonLearned !== 'function') {
                             const data = JSON.parse(trimmed);
                             let innerData = data;
                             if (data[level]) innerData = data[level];
+                            else if (data[level + '_error_analysis']) innerData = data[level + '_error_analysis'];
+                            else if (data[level + '_error_exercises']) innerData = data[level + '_error_exercises'];
                             if (!Array.isArray(innerData) && !innerData.lessons && !innerData.items && !innerData.chars) {
                                 const keys = Object.keys(data);
                                 for (const k of keys) {
@@ -10956,14 +10958,18 @@ window.retryLessonMistakesDirectly = async function(level, lessonId, moduleName,
         }
         if (!mistakeData) {
             mistakeData = profile.wrongExercises.find(item => 
-                String(item.lessonId).replace(/.*_/, '') === cleanId &&
+                (String(item.lessonId).replace(/.*_/, '') === cleanId || String(item.id) === String(mistakeId)) &&
                 (item.level || '').toLowerCase() === targetLvl
             ) || null;
         }
     }
 
     let preferredModule = (mistakeData && mistakeData.module) ? mistakeData.module : (moduleName || 'grammar');
-    preferredModule = (preferredModule === 'vocab') ? 'vocab' : 'grammar';
+    if (preferredModule === 'error_analysis' || preferredModule === 'comparison' || cleanId === 'error_analysis' || lessonId === 'error_analysis') {
+        preferredModule = 'error_analysis';
+    } else {
+        preferredModule = (preferredModule === 'vocab') ? 'vocab' : 'grammar';
+    }
 
     window.openAndHighlight(preferredModule, targetLvl, cleanId, mistakeData);
 };
@@ -10989,7 +10995,7 @@ window.retryMistake = function(id) {
 window.openAndHighlight = async function(preferredModule, targetLvl, cleanId, mistakeData) {
     let found = await tryOpenAndHighlightInModule(preferredModule, targetLvl, cleanId, mistakeData, true);
 
-    if (!found && mistakeData) {
+    if (!found && mistakeData && preferredModule !== 'error_analysis') {
         const altModule = (preferredModule === 'vocab') ? 'grammar' : 'vocab';
         console.log(`⚠️ Question not matched in ${preferredModule}, attempting fallback to ${altModule}...`);
         await tryOpenAndHighlightInModule(altModule, targetLvl, cleanId, mistakeData, false);
@@ -10997,6 +11003,135 @@ window.openAndHighlight = async function(preferredModule, targetLvl, cleanId, mi
 };
 
 async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData, isPrimaryAttempt) {
+    if (mod === 'error_analysis' || mod === 'comparison' || cleanId === 'error_analysis') {
+        if (typeof window.showContent === 'function') {
+            await window.showContent('comparison', targetLvl);
+        }
+        if (typeof window.renderGrammarComparisonModule === 'function') {
+            await window.renderGrammarComparisonModule(targetLvl, targetLvl, 'practice');
+        }
+        await new Promise(r => setTimeout(r, 350));
+
+        const containerEl = document.getElementById('contentInner') || document.body;
+        let candidates = Array.from(containerEl.querySelectorAll('.practice-q-card, .exercise-item, .guided-exercise-item, .exercise-card'));
+        if (candidates.length === 0) return false;
+
+        let targetQuestion = null;
+        const normalize = (str) => String(str || '')
+            .toLowerCase()
+            .replace(/^\d+[\.\:\s\-]+/, '')
+            .replace(/[^\w\s\u4e00-\u9fa5]/g, '')
+            .trim();
+
+        if (mistakeData) {
+            if (mistakeData.id) {
+                targetQuestion = candidates.find(item => 
+                    item.id === ('practice_card_' + mistakeData.id) ||
+                    String(item.getAttribute('data-qid')) === String(mistakeData.id) ||
+                    String(item.dataset.qid) === String(mistakeData.id)
+                );
+            }
+            if (!targetQuestion && (mistakeData.question || mistakeData.questionKey)) {
+                const needle = normalize(mistakeData.question || mistakeData.questionKey);
+                if (needle.length > 2) {
+                    targetQuestion = candidates.find(item => {
+                        const itemText = normalize(item.dataset.questionText || item.textContent);
+                        return itemText.includes(needle) || needle.includes(itemText);
+                    });
+                }
+            }
+            if (!targetQuestion && (mistakeData.userAnswer || mistakeData.correctAnswer)) {
+                const ansNeedle = normalize(mistakeData.userAnswer || mistakeData.correctAnswer);
+                if (ansNeedle.length > 2) {
+                    targetQuestion = candidates.find(item => 
+                        normalize(item.textContent).includes(ansNeedle)
+                    );
+                }
+            }
+        }
+
+        if (!targetQuestion) {
+            targetQuestion = candidates[0];
+        }
+
+        containerEl.querySelectorAll('.practice-q-card, .exercise-item').forEach(el => {
+            el.classList.remove('highlight-error-question');
+            el.style.outline = 'none';
+            el.style.boxShadow = 'none';
+        });
+
+        targetQuestion.classList.add('highlight-error-question');
+
+        const HEADER_HEIGHT = 90;
+        const targetPos = targetQuestion.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+            top: Math.max(0, targetPos - HEADER_HEIGHT),
+            behavior: 'smooth'
+        });
+
+        targetQuestion.style.transition = 'all 0.3s ease';
+        targetQuestion.style.outline = '4px solid #ec4899';
+        targetQuestion.style.outlineOffset = '6px';
+        targetQuestion.style.borderColor = '#ec4899';
+        targetQuestion.style.boxShadow = '0 0 30px rgba(236,72,153,0.7)';
+        targetQuestion.style.borderRadius = '14px';
+
+        if (typeof targetQuestion.animate === 'function') {
+            targetQuestion.animate([
+                { transform: 'scale(1)', boxShadow: '0 0 10px rgba(236,72,153,0.3)' },
+                { transform: 'scale(1.03)', boxShadow: '0 0 35px rgba(236,72,153,0.9)' },
+                { transform: 'scale(1)', boxShadow: '0 0 10px rgba(236,72,153,0.3)' }
+            ], {
+                duration: 650,
+                iterations: 3
+            });
+        }
+
+        setTimeout(() => {
+            targetQuestion.classList.remove('highlight-error-question');
+            targetQuestion.style.outline = 'none';
+            targetQuestion.style.outlineOffset = '0px';
+            targetQuestion.style.boxShadow = 'none';
+            targetQuestion.style.borderColor = '#bae6fd';
+        }, 10000);
+
+        let toast = document.getElementById('retry-mistake-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'retry-mistake-toast';
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                background: linear-gradient(135deg, #ec4899, #be185d);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 14px;
+                font-weight: 700;
+                font-size: 13.5px;
+                box-shadow: 0 8px 24px rgba(236, 72, 153, 0.4);
+                z-index: 999999;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            `;
+            document.body.appendChild(toast);
+        }
+        toast.innerHTML = `🎯 Dẫn đến câu bài tập bạn đã làm sai để luyện lại!`;
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
+        setTimeout(() => {
+            if (toast) {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(10px)';
+            }
+        }, 4000);
+
+        return true;
+    }
+
     if (typeof window.showContent === 'function') {
         await window.showContent(mod, targetLvl);
     }
@@ -11045,9 +11180,9 @@ async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData,
         window.resetLessonExercises(activeTabPane, { skipScroll: true });
     }
 
-    let candidates = Array.from(activeTabPane.querySelectorAll('.exercise-item'));
+    let candidates = Array.from(activeTabPane.querySelectorAll('.exercise-item, .guided-exercise-item, .exercise-card, .practice-q-card'));
     if (candidates.length === 0) {
-        candidates = Array.from(lessonEl.querySelectorAll('.exercise-item'));
+        candidates = Array.from(lessonEl.querySelectorAll('.exercise-item, .guided-exercise-item, .exercise-card, .practice-q-card'));
     }
 
     if (candidates.length === 0) return false;
@@ -11112,7 +11247,7 @@ async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData,
 
     if (!targetQuestion) return false;
 
-    lessonEl.querySelectorAll('.exercise-item').forEach(el => {
+    lessonEl.querySelectorAll('.exercise-item, .guided-exercise-item, .exercise-card').forEach(el => {
         el.classList.remove('highlight-error-question');
         el.style.outline = 'none';
         el.style.boxShadow = 'none';
@@ -11158,15 +11293,37 @@ async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData,
     if (!toast) {
         toast = document.createElement('div');
         toast.id = 'retry-mistake-toast';
-        toast.style.cssText = 'position:fixed;top:80px;right:20px;z-index:9999;background:linear-gradient(135deg,#be185d,#ec4899);color:white;padding:12px 20px;border-radius:12px;font-weight:700;font-size:13.5px;box-shadow:0 6px 20px rgba(0,0,0,0.2);';
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #ec4899, #be185d);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 13.5px;
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.4);
+            z-index: 999999;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        `;
         document.body.appendChild(toast);
     }
-    const moduleLabel = (mod === 'vocab') ? 'Từ vựng' : 'Ngữ pháp';
-    toast.innerHTML = `🎯 Đã chuyển tới bài học, mở tab Bài tập và viền nổi bật câu bài tập (${moduleLabel}) của Bài ${cleanId} (${targetLvl.toUpperCase()})!`;
-    toast.style.display = 'block';
-    setTimeout(() => { toast.style.display = 'none'; }, 4500);
+    toast.innerHTML = `🎯 Dẫn đến câu bài tập bạn đã làm sai để luyện lại!`;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateY(0)';
+    setTimeout(() => {
+        if (toast) {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(10px)';
+        }
+    }, 4000);
 
     return true;
+};
 }
 
 window.resetLessonExercises = function(containerEl, opts = {}) {
@@ -12153,7 +12310,7 @@ window.switchLessonZeroTab = function(tabName) {
 };
 
 // 3. DATA STITCHING ENGINE - FETCH 5 JSON FILES IN PARALLEL VIA PROMISE.ALL
-window. = async function(level, lessonId) {
+window.loadStitchedLesson = async function(level, lessonId) {
     const lvl = (level || 'hsk1').toLowerCase();
     const numId = parseInt(lessonId, 10);
 

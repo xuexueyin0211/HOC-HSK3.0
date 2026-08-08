@@ -889,7 +889,7 @@ window.logoutGoogle = () => {
                                 <div style="font-size:18px;font-weight:800;color:#0f172a;">${item.score}/${item.total} câu</div>
                                 <span style="background:${badgeBg};color:${badgeColor};font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;">${badgeText} (${pct}%)</span>
                             </div>
-                            <button onclick="window.retryLessonMistakesDirectly('${item.level || 'hsk1'}', '${item.lessonId || ''}')" style="padding:8px 14px;background:linear-gradient(135deg,#ec4899,#db2777);color:white;border:none;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(236,72,153,0.3);">🔄 Làm lại bài sai</button>
+                            <button onclick="window.retryLessonMistakesDirectly('${item.level || 'hsk1'}', '${item.lessonId || ''}', '${item.module || ''}', '${item.id || ''}')" style="padding:8px 14px;background:linear-gradient(135deg,#ec4899,#db2777);color:white;border:none;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(236,72,153,0.3);">🔄 Làm lại bài sai</button>
                         </div>
                     </div>
                 `;
