@@ -507,7 +507,7 @@
                 <!-- Right Action Controls -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <button onclick="window.toggleFsSidebar()" style="padding: 8px 14px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; font-size: 12.5px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s; outline: none;">
-                        📋 <span id="fs-sidebar-toggle-text">Ẩn Thanh Trái</span>
+                        📋 <span id="fs-sidebar-toggle-text">Ẩn Thanh Bên Trái</span>
                     </button>
                     <button onclick="window.toggleNotebookOrientation()" style="padding: 8px 14px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; font-size: 12.5px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s; outline: none;">
                         <span id="fs-orientation-icon">↔️</span> <span id="fs-orientation-text">Khổ Ngang</span>
@@ -608,9 +608,6 @@
                                 <div style="display: grid; grid-template-columns: 1fr; gap: 4px; margin-top: 2px;">
                                     <button id="nb-fs-play-btn" onclick="window.toggleFsStrokeAnimation()" style="padding: 5px 10px; background: linear-gradient(135deg, #be185d, #db2777); color: white; border: none; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px; outline:none;">
                                         ▶️ Xem Bút Thuận
-                                    </button>
-                                    <button id="nb-fs-restart-btn" onclick="window.restartFsStrokeAnimation()" style="padding: 5px 10px; background: white; color: #be185d; border: 1px solid #fbcfe8; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px; outline:none;">
-                                        🔄 Chạy lại
                                     </button>
                                 </div>
                             </div>
