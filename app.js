@@ -11323,7 +11323,6 @@ async function tryOpenAndHighlightInModule(mod, targetLvl, cleanId, mistakeData,
     }, 4000);
 
     return true;
-};
 }
 
 window.resetLessonExercises = function(containerEl, opts = {}) {
