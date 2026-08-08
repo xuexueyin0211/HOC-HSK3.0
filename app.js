@@ -341,7 +341,7 @@ if (typeof window.isLessonLearned !== 'function') {
                             // Merge exercises.json for vocab and grammar if available
                             if ((module === 'vocab' || module === 'grammar') && innerData && Array.isArray(innerData.lessons)) {
                                 try {
-                                    const exPath = `data/exercises/${level}.json`;
+                                    const exPath = `./data/exercises/${level}.json`;
                                     const exRes = await fetch(exPath);
                                     if (exRes.ok) {
                                         let exText = await exRes.text();
@@ -11548,11 +11548,11 @@ window.loadStitchedLesson = async function(level, lessonId) {
 
     // 1. Fetch 5 separate JSON files in parallel using Promise.all()
     const [vocabRaw, grammarRaw, textsRaw, exercisesRaw, progressRaw] = await Promise.all([
-        fetchJson(`data/vocab/${lvl}.json`),
-        fetchJson(`data/grammar/${lvl}.json`),
-        fetchJson(`data/texts/${lvl}.json`),
-        fetchJson(`data/exercises/${lvl}.json`),
-        fetchJson(`data/progress test/${lvl}.json`)
+fetchJson(`./data/vocab/${safeLvl}.json`),
+    fetchJson(`./data/grammar/${safeLvl}.json`),
+    fetchJson(`./data/texts/${safeLvl}.json`),
+    fetchJson(`./data/exercises/${safeLvl}.json`),
+    fetchJson(`./data/progress_test/${safeLvl}.json`)
     ]);
 
     // Helper to find item matching lesson_id / lesson / id
