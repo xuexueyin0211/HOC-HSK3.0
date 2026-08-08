@@ -130,7 +130,7 @@
                 <!-- Launch Banner -->
                 <div style="background: linear-gradient(135deg, #fdf2f8, #fce7f3); border: 1.5px solid #fbcfe8; border-radius: 20px; padding: 32px 24px; text-align: center; box-shadow: 0 4px 15px rgba(219, 39, 119, 0.04);">
                     <div style="font-size: 48px; margin-bottom: 12px; animation: pulse 2s infinite;">✍️</div>
-                    <h3 style="font-size: 22px; font-weight: 800; color: #be185d; margin: 0 0 10px 0; font-family:'Lexend',sans-serif;">Vở Luyện Viết Chữ Hán Điện Tử (Toàn Màn Hình)</h3>
+                    <h3 style="font-size: 22px; font-weight: 800; color: #be185d; margin: 0 0 10px 0; font-family:'Lexend',sans-serif;">Vở Luyện Viết Chữ Hán Điện Tử</h3>
                     <p style="font-size: 14.5px; color: #475569; max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">
                         Không gian luyện viết chữ Hán ngập tràn màn hình giả lập tỉ lệ khổ giấy A4 (Dọc/Ngang). Hỗ trợ viết liền mạch đa ô mễ bằng ngón tay hoặc chuột, tích hợp mô phỏng bút thuận HanziWriter chuyên nghiệp và tải xuống thành phẩm của bạn!
                     </p>
@@ -491,7 +491,6 @@
                     </div>
                     <div>
                         <h2 style="font-size: 16px; font-weight: 800; margin: 0; color: white;">Vở Luyện Viết Chữ Hán Khổ A4</h2>
-                        <p style="font-size: 11px; margin: 2px 0 0 0; opacity: 0.85;">Khung tập viết điện tử chuyên nghiệp tràn màn hình</p>
                     </div>
                 </div>
                 
@@ -985,7 +984,7 @@
         gridCtx.fillText("学赢中文 XueYing Zhongwen", 40, 42);
         gridCtx.font = "12px 'Lexend', sans-serif";
         gridCtx.fillStyle = '#64748b';
-        gridCtx.fillText("Vở Tập Viết Chữ Hán Điện Tử (A4)", 40, 60);
+        gridCtx.fillText("Vở Luyện Viết Chữ Hán Điện Tử", 40, 60);
         
         gridCtx.textAlign = 'right';
         gridCtx.fillStyle = '#1e293b';
