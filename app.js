@@ -10880,8 +10880,9 @@ window.retryMistake = function(id) {
         preferredModule = 'error_analysis';
     }
 
-    const targetLvl = getExactHskLevelForMistake(mistakeData.level, mistakeData, id);
-    const cleanId = String(mistakeData.lessonId || mistakeData.lesson || 1).replace(/^0+/, '').replace(/.*_/, '') || '1';
+let targetLvl = mistakeData.level && /^hsk[1-6]$/i.test(mistakeData.level) 
+    ? mistakeData.level.toLowerCase() 
+    : getExactHskLevelForMistake(mistakeData.level, mistakeData, id);    const cleanId = String(mistakeData.lessonId || mistakeData.lesson || 1).replace(/^0+/, '').replace(/.*_/, '') || '1';
 
     window.openAndHighlight(preferredModule, targetLvl, cleanId, mistakeData);
 };
