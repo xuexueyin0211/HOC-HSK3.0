@@ -11545,7 +11545,7 @@ window.loadStitchedLesson = async function(level, lessonId) {
             return null;
         }
     };
-
+const safeLvl = (typeof lvl !== 'undefined' && lvl) ? lvl.toLowerCase() : (typeof level !== 'undefined' && level ? level.toLowerCase() : 'hsk1');
     // 1. Fetch 5 separate JSON files in parallel using Promise.all()
     const [vocabRaw, grammarRaw, textsRaw, exercisesRaw, progressRaw] = await Promise.all([
 fetchJson(`./data/vocab/${safeLvl}.json`),
@@ -12657,8 +12657,8 @@ window.renderGuidedPathSidebar = function(level, activeLessonId = 1) {
                         Bài ${i}
                     </span>
                     <span style="font-size:13.5px; font-weight:700; color:${textColor};">
-                        Bài ${i} (HSK ${level.replace('hsk', '')})
-                    </span>
+Bài ${i} (HSK ${(level || '').replace('hsk', '').toUpperCase()})
+</span>
                 </div>
                 <span style="font-size:14px;">${icon}</span>
             </div>
