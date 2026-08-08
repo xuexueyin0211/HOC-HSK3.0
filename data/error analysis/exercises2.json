@@ -1,0 +1,429 @@
+{
+  "hsk2_error_exercises": {
+    "1": [
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 我们是来旅游。",
+          "B. 我们是来旅游的。",
+          "C. 我们是来旅游了。",
+          "D. 我们是来旅游过。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thiếu 的 trong cấu trúc 是...的. Câu nhấn mạnh với 是...的 nhất định phải có 的 ở cuối."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 这本书是我买。",
+          "B. 这本书是我买的。",
+          "C. 这本书是我买了。",
+          "D. 这本书是我买过。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thiếu 的 trong cấu trúc 是...的. Có thể lược bỏ 是 nhưng không được bỏ 的."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 他是坐飞机来北京。",
+          "B. 他是坐飞机来北京了。",
+          "C. 他是坐飞机来北京的。",
+          "D. 他是坐飞机来北京过。"
+        ],
+        "answer": 2,
+        "explanation": "Lỗi thiếu 的 trong cấu trúc 是...的. Câu nhấn mạnh với 是...的 cần có 的 ở cuối."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 我去旅游中国。",
+          "B. 我去中国旅游。",
+          "C. 我旅游中国去。",
+          "D. 我中国旅游去。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thêm tân ngữ sau từ 旅游. 旅游 không mang tân ngữ, dùng cấu trúc 去 + nơi chốn + 旅游."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 我们旅游北京了。",
+          "B. 我们在北京旅游了。",
+          "C. 我们北京旅游了。",
+          "D. 我们旅游了北京。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thêm tân ngữ sau từ 旅游. Dùng 在 + nơi chốn + 旅游."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 他帮忙我很多。",
+          "B. 他帮我很多忙。",
+          "C. 他帮忙我很多忙。",
+          "D. 他帮我很多。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thêm tân ngữ sau từ 帮忙. 帮忙 là động từ ly hợp, dùng cấu trúc 帮 + tân ngữ + 忙."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 你能帮忙我吗？",
+          "B. 你能帮我个忙吗？",
+          "C. 你能帮忙我个忙吗？",
+          "D. 你能帮我吗？"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thêm tân ngữ sau từ 帮忙. Cấu trúc đúng: 帮我个忙."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 她帮忙我学中文。",
+          "B. 她帮我学中文。",
+          "C. 她帮忙学中文。",
+          "D. 她帮我忙学中文。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thêm tân ngữ sau từ 帮忙. Dùng 帮 + tân ngữ + động từ."
+      }
+    ],
+    "4": [
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "我去___北京两次。", "answer": "过"},
+          {"sentence": "你吃___饭了没有？", "answer": "了"},
+          {"sentence": "我以前学___中文。", "answer": "过"}
+        ],
+        "explanation": "Lỗi nhầm 过 với 了. '过' nhấn mạnh trải nghiệm, '了' nhấn mạnh hành động đã hoàn thành."
+      }
+    ],
+    "5": [
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "去", "上楼"],
+        "answer": "我上楼去",
+        "explanation": "Lỗi sai vị trí tân ngữ nơi chốn với BNXH đơn. Cấu trúc V + O nơi chốn + 来/去."
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["他", "来", "下车", "。"],
+        "answer": "他下车来。",
+        "explanation": "Lỗi sai vị trí tân ngữ nơi chốn với BNXH đơn. Tân ngữ nơi chốn (车) + 来."
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我们", "去", "进教室", "。"],
+        "answer": "我们进教室去。",
+        "explanation": "Lỗi sai vị trí tân ngữ nơi chốn với BNXH đơn. V + O nơi chốn + 去."
+      }
+    ],
+    "7": [
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 我打篮球得很好。",
+          "B. 我篮球打得很好。",
+          "C. 我打得篮球很好。",
+          "D. 我打得好篮球。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí tân ngữ với bổ ngữ trạng thái. Tân ngữ đưa lên trước động từ: S + O + V + 得 + Adj."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 他说中文得很流利。",
+          "B. 他说得中文很流利。",
+          "C. 他中文说得很好。",
+          "D. 他中文说得很好。"
+        ],
+        "answer": 2,
+        "explanation": "Lỗi sai vị trí tân ngữ với bổ ngữ trạng thái. Có thể đưa tân ngữ lên trước hoặc lặp lại động từ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 我开车得很好。",
+          "B. 我车开得很好。",
+          "C. 我很好开车。",
+          "D. 我开得很好车。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí tân ngữ với bổ ngữ trạng thái. Tân ngữ đưa lên trước động từ."
+      }
+    ],
+    "8": [
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống (có thể để trống):",
+        "items": [
+          {"sentence": "左边比右边___好看。", "answer": ""},
+          {"sentence": "他比我___高。", "answer": ""},
+          {"sentence": "今天比昨天___热。", "answer": ""}
+        ],
+        "explanation": "Lỗi dùng 很/非常 sau 比. Không dùng 很/非常 sau 比 để miêu tả mức độ cao."
+      }
+    ],
+    "9": [
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho từ [离] trong câu:",
+        "sentence": "学校①医院②很③近④。",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 0,
+        "explanation": "Lỗi không dùng 离 khi nói khoảng cách. Cấu trúc A 离 B + khoảng cách."
+      },
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho từ [离] trong câu:",
+        "sentence": "家①很②远③公司④。",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 2,
+        "explanation": "Lỗi không dùng 离 khi nói khoảng cách. Cần có 离 để nối hai đối tượng: 家离公司很远."
+      },
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho từ [离] trong câu:",
+        "sentence": "超市①很②近③我家④。",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 2,
+        "explanation": "Lỗi không dùng 离 khi nói khoảng cách. Dùng 离 để chỉ khoảng cách: 超市离我家很近."
+      }
+    ],
+    "11": [
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho từ [最] trong câu:",
+        "sentence": "他①喜欢②吃③苹果④。",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 0,
+        "explanation": "Lỗi sai vị trí của 最. 最 phải đứng trước tính từ/động từ tâm lý."
+      },
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho từ [最] trong câu:",
+        "sentence": "她①是②漂亮③的④。",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí của 最. 最 đứng trước tính từ: 她是最漂亮的."
+      },
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho từ [最] trong câu:",
+        "sentence": "我①学习②努力③的④。",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí của 最. 最 đứng trước động từ/tính từ: 我学习最努力."
+      }
+    ],
+    "12": [
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["他", "快", "比我", "跑得", "。"],
+        "answer": "他比我跑得快。",
+        "explanation": "Lỗi sai vị trí bổ ngữ trạng thái trong câu so sánh. A 比 B + V + 得 + Adj."
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["她", "好听", "比我", "唱得", "。"],
+        "answer": "她比我唱得好听。",
+        "explanation": "Lỗi sai vị trí bổ ngữ trạng thái trong câu so sánh. A 比 B + V + 得 + Adj."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 他踢足球比我得好。",
+          "B. 他踢足球比我踢得好。",
+          "C. 他足球踢比我得好。",
+          "D. 他踢得足球比我好。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí tân ngữ khi có bổ ngữ trạng thái. Cần lặp lại động từ khi có tân ngữ."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 她说中文比我得好。",
+          "B. 她中文说比我得好。",
+          "C. 她说中文比我说得好。",
+          "D. 她中文比我说得好。"
+        ],
+        "answer": 2,
+        "explanation": "Lỗi sai vị trí tân ngữ khi có bổ ngữ trạng thái. Lặp lại động từ hoặc đưa tân ngữ lên trước."
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "妈妈比我睡___晚。", "answer": "得"},
+          {"sentence": "他比我跑___快。", "answer": "得"},
+          {"sentence": "妹妹比我唱___好听。", "answer": "得"}
+        ],
+        "explanation": "Lỗi thiếu 得 trong bổ ngữ trạng thái. Bổ ngữ trạng thái cần có 得."
+      }
+    ],
+    "13": [
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 我送一本书给他。",
+          "B. 我送给他一本书。",
+          "C. 我送一本给他书。",
+          "D. 我送给他书一本。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí tân ngữ trong câu hai tân ngữ. S + V + O1 (người) + O2 (vật)."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 老师给一本书我。",
+          "B. 老师给我一本书。",
+          "C. 老师给本一书我。",
+          "D. 老师给我书一本。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí tân ngữ trong câu hai tân ngữ. O người luôn đứng trước O vật."
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["我", "三岁", "比他", "大", "。"],
+        "answer": "我比他大三岁。",
+        "explanation": "Lỗi sai vị trí số lượng trong so sánh. A 比 B + Adj + số lượng."
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["这件衣服", "一百块", "比那件", "便宜", "。"],
+        "answer": "这件衣服比那件便宜一百块。",
+        "explanation": "Lỗi sai vị trí số lượng trong so sánh. A 比 B + Adj + số lượng."
+      }
+    ],
+    "14": [
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 多没意思！",
+          "B. 多没意思啊！",
+          "C. 多没意思了！",
+          "D. 多没意思吗！"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi thiếu 啊 trong câu cảm thán với 多. Câu cảm thán với 多 thường có 啊."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 多漂亮！",
+          "B. 多漂亮了！",
+          "C. 多漂亮啊！",
+          "D. 多漂亮吗！"
+        ],
+        "answer": 2,
+        "explanation": "Lỗi thiếu 啊 trong câu cảm thán với 多. Thêm 啊 để tăng cảm xúc."
+      },
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho từ [多] trong câu:",
+        "sentence": "①没②意思③啊④！",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 0,
+        "explanation": "Lỗi sai vị trí của 多 trong câu cảm thán. 多 đứng trước tính từ: 多没意思啊！"
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["一个人", "站着", "楼下", "。"],
+        "answer": "楼下站着一个人。",
+        "explanation": "Lỗi sai cấu trúc câu tồn hiện. Nơi chốn + V + 着 + N người/vật."
+      },
+      {
+        "type": "drag_drop",
+        "question": "Sắp xếp các từ để tạo thành câu hoàn chỉnh:",
+        "words": ["一本书", "放着", "桌子上", "。"],
+        "answer": "桌子上放着一本书。",
+        "explanation": "Lỗi sai cấu trúc câu tồn hiện. Nơi chốn + V + 着 + danh từ."
+      }
+    ],
+    "15": [
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho [一次] trong câu:",
+        "sentence": "我去①过②北京③。④",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 1,
+        "explanation": "Lỗi sai vị trí bổ ngữ động lượng. Bổ ngữ động lượng có thể đặt trước hoặc sau tân ngữ."
+      },
+      {
+        "type": "select_position",
+        "question": "Chọn vị trí đúng cho [两次] trong câu:",
+        "sentence": "我看①过②这本③书④。",
+        "positions": ["①", "②", "③", "④"],
+        "answer": 3,
+        "explanation": "Lỗi sai vị trí bổ ngữ động lượng. Bổ ngữ động lượng đặt sau tân ngữ."
+      },
+      {
+        "type": "fill_blank",
+        "question": "Điền từ thích hợp vào chỗ trống:",
+        "items": [
+          {"sentence": "___一年没回国了。", "answer": "有"},
+          {"sentence": "___三个月没见到他了。", "answer": "有"},
+          {"sentence": "___两天没吃饭了。", "answer": "有"}
+        ],
+        "explanation": "Lỗi thiếu 有 trong cấu trúc 有...没... Cấu trúc: 有 + số lượng + 没 + V + 了."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng:",
+        "options": [
+          "A. 我看过一次这本书。",
+          "B. 我看过一遍这本书。",
+          "C. 我看了次一遍这本书。",
+          "D. 我看了这本书一遍。"
+        ],
+        "answer": 0,
+        "explanation": "Lỗi nhầm 次 với 遍. 次 cho số lần, 遍 cho lượt đọc/xem."
+      },
+      {
+        "type": "multiple_choice",
+        "question": "Chọn câu đúng khi nói về việc đi du lịch:",
+        "options": [
+          "A. 我去过中国一遍。",
+          "B. 我去过中国一次。",
+          "C. 我去过中国一趟。",
+          "D. 我去过中国一回。"
+        ],
+        "answer": 1,
+        "explanation": "Lỗi nhầm 次 với 遍. Đi du lịch dùng 次 (HSK2 chủ yếu dùng 次)."
+      }
+    ]
+  }
+}
