@@ -4,32 +4,67 @@
     "level": "HSK3",
     "book": "新HSK教程3 学练手册",
     "totalLessons": 15,
-    "difficulty": "intermediate",
     "createdAt": "2026-08-05",
     "structure": "organized_by_lesson"
   },
   "lessons": [
     {
       "id": 1,
-      "title": "周末你有什么打算？",
-      "title_en": "What's your plan for the weekend?",
-      "topics": ["weekend", "plans", "entertainment"],
+      "title": "TẠM CHƯA CÓ",
       "questions": [
         {
           "id": "L1_Q01",
-          "type": "multiple_choice",
-          "question": "Chọn từ đúng điền vào chỗ trống: 周末你有什么___？(Cuối tuần bạn có dự định gì?)",
-          "options": ["打算", "决定", "关系", "影响"],
+          "type": "listening_choose_word",
+          "audio": "luyou",
+          "audioUrl": "/audio/HSK2/L1/luyou.mp3",
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
           "correct": 0,
-          "explanation": "打算 (dǎsuàn) có nghĩa là dự định, kế hoạch."
+          "hanzi": "旅游",
+          "pinyin": "lǚyóu",
+          "meaning": "du lịch"
         },
         {
           "id": "L1_Q02",
+          "type": "listening_choose_word",
+          "audio": "yundong",
+          "audioUrl": "/audio/HSK2/L1/yundong.mp3",
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
+          "correct": 1,
+          "hanzi": "运动",
+          "pinyin": "yùndòng",
+          "meaning": "thể thao / vận động"
+        },
+        {
+          "id": "L1_Q03",
           "type": "multiple_choice",
-          "question": "Điền bổ ngữ kết quả: 我已经写___作业了。(Tôi đã viết xong bài tập rồi).",
-          "options": ["完", "见", "懂", "开"],
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
           "correct": 0,
-          "explanation": "写完 (xiě wán) có nghĩa là viết xong."
+          "explanation": "最好 (zuì hǎo) có nghĩa là tốt nhất."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "TẠM CHƯA CÓ",
+      "questions": [
+        {
+          "id": "L2_Q01",
+          "type": "multiple_choice",
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
+          "correct": 0,
+          "explanation": "起床 (qǐchuáng) có nghĩa là thức dậy."
+        },
+        {
+          "id": "L2_Q02",
+          "type": "multiple_choice",
+          "question": "CHỌN A ĐỂ QUA CÂU",
+          "options": ["A", "B", "C", "D"],
+          "correct": 0,
+          "explanation": "怎么样 (zěnmeyàng) dùng để hỏi tình trạng, thế nào."
         }
       ]
     }
