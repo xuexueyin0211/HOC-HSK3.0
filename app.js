@@ -2,7 +2,7 @@
         const MODULES = {
             vocab: { label: 'Từ vựng', icon: '📚', path: 'data/vocab/' },
             grammar: { label: 'Ngữ pháp', icon: '📝', path: 'data/grammar/' },
-            comparison: { label: 'So sánh và lưu ý lỗi sai thường gặp', icon: '⚖️', path: 'data/comparison/' },
+            error_analysis: { label: 'So sánh và lưu ý lỗi sai thường gặp', icon: '⚖️', path: 'data/error analysis/' },
             writing_ai: { label: 'Luyện viết AI', icon: '✍️', path: 'data/writing_ai/' },
             speaking_ai: { label: 'Luyện nói AI', icon: '🎙️', path: 'data/speaking_ai/' },
             hanzi: { label: 'Chữ Hán', icon: '🀄', path: 'data/hanzi/' },
