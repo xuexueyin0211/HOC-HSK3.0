@@ -2993,42 +2993,44 @@ window.renderErrorComparisonBox = function(sc) {
     `;
 };
 
-window.grammarComparisonData = [];
-window.comparisonPracticeExercises = null;
+window.grammarErrorAnalysisData = [];
+window.errorAnalysisPracticeExercises = null;
 
-window.loadComparisonExercises = async function() {
-    if (!window.comparisonPracticeExercises) {
-        try {
-            const res = await fetch('./data/error analysis/exercises.json');
-            if (res.ok) {
-                const contentType = res.headers.get('content-type');
-                if (contentType && contentType.includes('application/json')) {
-                    window.comparisonPracticeExercises = await res.json();
+window.loadErrorAnalysisExercises = async function(level) {
+    if (!window.errorAnalysisPracticeExercises) window.errorAnalysisPracticeExercises = {};
+    const levelsToLoad = (level === 'all') ? ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'] : [level || 'hsk2'];
+    for (const l of levelsToLoad) {
+        if (!window.errorAnalysisPracticeExercises[l]) {
+            try {
+                const res = await fetch(`./data/error analysis/exercises${l.replace('hsk', '')}.json`);
+                if (res.ok) {
+                    const data = await res.json();
+                    window.errorAnalysisPracticeExercises[l] = data;
                 }
+            } catch (e) {
+                console.error('Error loading exercises for', l, e);
             }
-        } catch (e) {
-            console.error('Error loading comparison exercises:', e);
         }
     }
-    return window.comparisonPracticeExercises;
+    return window.errorAnalysisPracticeExercises;
 };
 
-window.openGrammarComparisonModal = async function() {
-    const existing = document.getElementById('grammar-comparison-modal');
+window.openGrammarErrorAnalysisModal = async function() {
+    const existing = document.getElementById('grammar-error_analysis-modal');
     if (existing) existing.remove();
 
-    if (!window.grammarComparisonData || window.grammarComparisonData.length === 0) {
-        window.grammarComparisonData = [];
+    if (!window.grammarErrorAnalysisData || window.grammarErrorAnalysisData.length === 0) {
+        window.grammarErrorAnalysisData = [];
         const levels = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'];
         for (const lvl of levels) {
             try {
-                const res = await fetch(`data/comparison/${lvl}.json`);
+                const res = await fetch(`data/error analysis/${lvl}.json`);
                 if (res.ok) {
                     const contentType = res.headers.get('content-type');
                     if (contentType && contentType.includes('application/json')) {
                         const data = await res.json();
                         if (Array.isArray(data)) {
-                            window.grammarComparisonData.push(...data);
+                            window.grammarErrorAnalysisData.push(...data);
                         }
                     }
                 }
@@ -3040,7 +3042,7 @@ window.openGrammarComparisonModal = async function() {
                                 const lessonTitle = lesson.title || `Bài ${lesson.id}`;
                                 if (lesson.errors) {
                                     lesson.errors.forEach(err => {
-                                        window.grammarComparisonData.push({
+                                        window.grammarErrorAnalysisData.push({
                                             level: 'HSK2 (Lỗi)',
                                             title: err.error_type || `Lỗi sai Bài ${lesson.id}`,
                                             type: `Lỗi Sai Thường Gặp (${lessonTitle})`,
@@ -3053,7 +3055,7 @@ window.openGrammarComparisonModal = async function() {
                                 }
                                 if (lesson.word_distinctions) {
                                     lesson.word_distinctions.forEach(wd => {
-                                        window.grammarComparisonData.push({
+                                        window.grammarErrorAnalysisData.push({
                                             level: 'HSK2 (Phân biệt)',
                                             title: wd.word_pair || `Phân biệt từ Bài ${lesson.id}`,
                                             type: `Phân Biệt Từ (${lessonTitle})`,
@@ -3081,7 +3083,7 @@ window.openGrammarComparisonModal = async function() {
     modal.className = 'grammar-comparison-modal';
 
     let listHtml = '';
-    window.grammarComparisonData.forEach((item) => {
+    window.grammarErrorAnalysisData.forEach((item) => {
         let tableRows = '';
         if (item.table && Array.isArray(item.table)) {
             item.table.forEach(r => {
@@ -3155,17 +3157,170 @@ window.openGrammarComparisonModal = async function() {
 
 window.comparisonUserAnswers = {};
 
-window.selectComparisonAnswer = function(qId, selectedIdx, correctIdx, explanation) {
-    window.comparisonUserAnswers[qId] = { selected: selectedIdx, correct: correctIdx, explanation: explanation };
-    
+// --- PERSISTENT ANSWERS ENGINE FOR ERROR ANALYSIS / COMPARISON PRACTICE ---
+window.getSavedErrorAnalysisAnswers = function() {
+    try {
+        const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
+        const uid = user ? user.uid : 'guest';
+        if (typeof window.getUserProfile === 'function') {
+            const profile = window.getUserProfile(uid);
+            if (profile && profile.errorAnalysisAnswers) {
+                return profile.errorAnalysisAnswers;
+            }
+        }
+        const local = localStorage.getItem('error_analysis_answers_' + uid);
+        if (local) return JSON.parse(local);
+    } catch(e) { console.error('Error getting saved error analysis answers:', e); }
+    return {};
+};
+
+window.saveErrorAnalysisAnswer = function(qId, answerData) {
+    try {
+        const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
+        const uid = user ? user.uid : 'guest';
+        
+        window.comparisonUserAnswers[qId] = answerData;
+
+        if (typeof window.getUserProfile === 'function' && typeof window.saveUserProfile === 'function') {
+            const profile = window.getUserProfile(uid);
+            if (!profile.errorAnalysisAnswers) profile.errorAnalysisAnswers = {};
+            profile.errorAnalysisAnswers[qId] = answerData;
+            window.saveUserProfile(profile);
+        }
+        
+        const saved = window.getSavedErrorAnalysisAnswers();
+        saved[qId] = answerData;
+        localStorage.setItem('error_analysis_answers_' + uid, JSON.stringify(saved));
+    } catch(e) { console.error('Error saving error analysis answer:', e); }
+};
+
+window.removeSavedErrorAnalysisAnswer = function(qId) {
+    try {
+        delete window.comparisonUserAnswers[qId];
+        const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
+        const uid = user ? user.uid : 'guest';
+        
+        if (typeof window.getUserProfile === 'function' && typeof window.saveUserProfile === 'function') {
+            const profile = window.getUserProfile(uid);
+            if (profile && profile.errorAnalysisAnswers) {
+                delete profile.errorAnalysisAnswers[qId];
+                window.saveUserProfile(profile);
+            }
+        }
+        
+        const saved = window.getSavedErrorAnalysisAnswers();
+        delete saved[qId];
+        localStorage.setItem('error_analysis_answers_' + uid, JSON.stringify(saved));
+    } catch(e) { console.error('Error removing saved error analysis answer:', e); }
+};
+
+window.recordErrorAnalysisProgress = function(qId, isCorrect, userAnsText, correctAnsText, explanation, qQuestion, exTitle) {
+    try {
+        const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
+        const uid = user ? user.uid : 'guest';
+        
+        let profile = null;
+        if (typeof window.getUserProfile === 'function') {
+            profile = window.getUserProfile(uid);
+        }
+        if (!profile) return;
+
+        // 1. wrongExercises
+        if (!profile.wrongExercises) profile.wrongExercises = [];
+        
+        if (!isCorrect) {
+            const wrongRecord = {
+                id: qId,
+                module: 'error_analysis',
+                level: 'HSK',
+                lessonTitle: exTitle || 'Lưu Ý Lỗi Sai Thường Gặp',
+                lessonId: 'error_analysis',
+                question: qQuestion || 'Câu hỏi bài tập',
+                userAnswer: userAnsText || 'Chưa đúng',
+                correctAnswer: correctAnsText || '',
+                explanation: explanation || '',
+                date: new Date().toISOString()
+            };
+            const existingIdx = profile.wrongExercises.findIndex(w => String(w.id) === String(qId));
+            if (existingIdx !== -1) {
+                profile.wrongExercises[existingIdx] = wrongRecord;
+            } else {
+                profile.wrongExercises.unshift(wrongRecord);
+            }
+        } else {
+            profile.wrongExercises = profile.wrongExercises.filter(w => String(w.id) !== String(qId));
+        }
+
+        // 2. lessonScores
+        if (!profile.lessonScores) profile.lessonScores = [];
+
+        const allExercises = window.allExercises || [];
+        const savedAnswers = window.getSavedErrorAnalysisAnswers();
+        
+        let total = allExercises.length > 0 ? allExercises.length : 1;
+        let correctCount = 0;
+
+        allExercises.forEach(ex => {
+            const ans = savedAnswers[ex.id];
+            if (ans && ans.isCorrect) {
+                correctCount++;
+            }
+        });
+
+        const scorePct = Math.round((correctCount / total) * 100);
+
+        const scoreEntryId = 'error_analysis_progress';
+        const existingScoreIdx = profile.lessonScores.findIndex(s => s.id === scoreEntryId || s.lessonId === 'error_analysis');
+
+        const scoreRecord = {
+            id: scoreEntryId,
+            lessonId: 'error_analysis',
+            lessonTitle: 'Lưu Ý Lỗi Sai Thường Gặp',
+            level: 'HSK',
+            score: correctCount,
+            total: total,
+            percentage: scorePct,
+            date: new Date().toISOString()
+        };
+
+        if (existingScoreIdx !== -1) {
+            profile.lessonScores[existingScoreIdx] = scoreRecord;
+        } else {
+            profile.lessonScores.unshift(scoreRecord);
+        }
+
+        if (typeof window.saveUserProfile === 'function') {
+            window.saveUserProfile(profile);
+        }
+    } catch(e) {
+        console.error('Error recording error analysis progress:', e);
+    }
+};
+
+window.selectComparisonAnswer = function(qId, selectedIdx, correctIdx) {
     const card = document.getElementById(`practice_card_${qId}`);
+    const explanation = card ? card.getAttribute('data-explanation') : 'Kiểm tra lại đáp án.';
+    const isCorrect = selectedIdx === correctIdx;
+    
+    const answerData = {
+        type: 'multiple_choice',
+        selected: selectedIdx,
+        correct: correctIdx,
+        explanation: explanation,
+        isCorrect: isCorrect
+    };
+    
+    window.saveErrorAnalysisAnswer(qId, answerData);
+
     if (card) {
         const btns = card.querySelectorAll('.practice-opt-btn');
+        const feedbackDiv = card.querySelector('.practice-feedback');
+
         btns.forEach((btn, idx) => {
             if (idx === selectedIdx) {
-                btn.style.background = '#0284c7';
+                btn.style.background = isCorrect ? '#0284c7' : '#ef4444';
                 btn.style.color = 'white';
-                btn.style.borderColor = '#0284c7';
+                btn.style.borderColor = isCorrect ? '#0284c7' : '#ef4444';
                 btn.style.boxShadow = '0 2px 8px rgba(2,132,199,0.3)';
             } else {
                 btn.style.background = 'white';
@@ -3174,48 +3329,590 @@ window.selectComparisonAnswer = function(qId, selectedIdx, correctIdx, explanati
                 btn.style.boxShadow = 'none';
             }
         });
+
+        if (feedbackDiv) {
+            feedbackDiv.style.display = 'block';
+            feedbackDiv.style.background = isCorrect ? '#f0fdf4' : '#fef2f2';
+            feedbackDiv.style.borderColor = isCorrect ? '#86efac' : '#fca5a5';
+            feedbackDiv.innerHTML = `
+                <div style="font-weight:800;font-size:14px;color:${isCorrect ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
+                    ${isCorrect ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
+                </div>
+                <div style="font-size:13px;color:#334155;line-height:1.5;">
+                    💡 <b>Giải thích:</b> ${explanation}
+                </div>
+            `;
+        }
+
+        const qQuestion = card.querySelector('.practice-question-text') ? card.querySelector('.practice-question-text').innerText : 'Chọn đáp án đúng';
+        const exTitle = card.querySelector('.practice-tag') ? card.querySelector('.practice-tag').innerText : 'Bẫy Lỗi Sai';
+        const userAnsText = btns[selectedIdx] ? btns[selectedIdx].innerText.trim() : `Lựa chọn ${selectedIdx + 1}`;
+        const correctAnsText = btns[correctIdx] ? btns[correctIdx].innerText.trim() : `Lựa chọn ${correctIdx + 1}`;
+
+        window.recordErrorAnalysisProgress(qId, isCorrect, userAnsText, correctAnsText, explanation, qQuestion, exTitle);
     }
 };
 
-window.gradeComparisonPractice = function() {
+window.addToDragInput = function(qId, word) {
+    const input = document.getElementById(`drag_${qId}`);
+    if (input) {
+        input.value += word;
+        window.gradeDragDropItem(qId);
+    }
+};
+
+window.gradeFillBlankItem = function(qId, itemIdx) {
+    const input = document.getElementById(`blank_${qId}_${itemIdx}`);
+    if (!input) return;
+    const card = input.closest('.practice-q-card');
+    if (!card) return;
+    
+    const correctAttr = card.getAttribute('data-correct') || '[]';
+    const explanation = card.getAttribute('data-explanation') || 'Kiểm tra lại đáp án.';
+    const correctItems = JSON.parse(correctAttr.replace(/&apos;/g, "'"));
+    
+    const allInputs = card.querySelectorAll('input[id^="blank_"]');
+    let answersArr = [];
+    let allFilled = true;
+    let cardIsCorrect = true;
+    let userVals = [];
+    let correctVals = [];
+
+    allInputs.forEach((inp, idx) => {
+        const val = inp.value.trim();
+        answersArr.push(val);
+        userVals.push(val || 'Chưa điền');
+        const itemAns = correctItems[idx] ? correctItems[idx].answer : '';
+        correctVals.push(itemAns);
+
+        if (!val) allFilled = false;
+        if (val === itemAns) {
+            inp.style.borderColor = '#86efac';
+            inp.style.background = '#f0fdf4';
+        } else if (val) {
+            inp.style.borderColor = '#fca5a5';
+            inp.style.background = '#fef2f2';
+            cardIsCorrect = false;
+        } else {
+            inp.style.borderColor = '#cbd5e1';
+            inp.style.background = 'white';
+            cardIsCorrect = false;
+        }
+    });
+
+    const isCorrect = cardIsCorrect && allFilled;
+
+    const answerData = {
+        type: 'fill_blank',
+        answers: answersArr,
+        explanation: explanation,
+        isCorrect: isCorrect
+    };
+    window.saveErrorAnalysisAnswer(qId, answerData);
+
+    const feedbackDiv = card.querySelector('.practice-feedback');
+    if (!allFilled) {
+        if (feedbackDiv) {
+            feedbackDiv.style.display = 'none';
+            feedbackDiv.innerHTML = '';
+        }
+        return;
+    }
+
+    if (feedbackDiv) {
+        feedbackDiv.style.display = 'block';
+        feedbackDiv.style.background = isCorrect ? '#f0fdf4' : '#fef2f2';
+        feedbackDiv.style.borderColor = isCorrect ? '#86efac' : '#fca5a5';
+        feedbackDiv.innerHTML = `
+            <div style="font-weight:800;font-size:14px;color:${isCorrect ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
+                ${isCorrect ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
+            </div>
+            <div style="font-size:13px;color:#334155;line-height:1.5;">
+                💡 <b>Giải thích:</b> ${explanation}
+            </div>
+        `;
+    }
+
+    const qQuestion = card.querySelector('.practice-question-text') ? card.querySelector('.practice-question-text').innerText : 'Điền từ thích hợp';
+    const exTitle = card.querySelector('.practice-tag') ? card.querySelector('.practice-tag').innerText : 'Bẫy Lỗi Sai';
+
+    window.recordErrorAnalysisProgress(qId, isCorrect, userVals.join(', '), correctVals.join(', '), explanation, qQuestion, exTitle);
+};
+
+window.gradeDragDropItem = function(qId) {
+    const input = document.getElementById(`drag_${qId}`);
+    if (!input) return;
+    const card = input.closest('.practice-q-card');
+    if (!card) return;
+    
+    const correctAttr = card.getAttribute('data-correct') || '';
+    const explanation = card.getAttribute('data-explanation') || 'Kiểm tra lại đáp án.';
+    const wordsAttr = card.getAttribute('data-words') || '[]';
+    
+    let wordsArr = [];
+    try { 
+        wordsArr = JSON.parse(wordsAttr.replace(/&apos;/g, "'")); 
+    } catch(e) {
+        console.error('Error parsing wordsAttr:', e);
+    }
+    
+    let correctAnswer = '';
+    try {
+        const decodedCorrectAttr = correctAttr.replace(/&apos;/g, "'").trim();
+        let parsed = decodedCorrectAttr;
+        if ((decodedCorrectAttr.startsWith('"') && decodedCorrectAttr.endsWith('"')) || (decodedCorrectAttr.startsWith("'") && decodedCorrectAttr.endsWith("'"))) {
+            try {
+                parsed = JSON.parse(decodedCorrectAttr);
+            } catch(e) {
+                parsed = decodedCorrectAttr.substring(1, decodedCorrectAttr.length - 1);
+            }
+        } else {
+            try {
+                parsed = JSON.parse(decodedCorrectAttr);
+            } catch(e) {
+                parsed = decodedCorrectAttr;
+            }
+        }
+        correctAnswer = Array.isArray(parsed) ? parsed.join('') : String(parsed);
+    } catch(e) {
+        correctAnswer = correctAttr;
+    }
+
+    // Clean leading/trailing quotes and spaces from correctAnswer
+    correctAnswer = correctAnswer.replace(/^["']|["']$/g, '').trim();
+    
+    const cleanForComp = function(s) {
+        if (!s) return '';
+        return s.replace(/[\s\.,\/#!$%\^&\*;:{}=\-_`~()?"'。，？！、；：]/g, '');
+    };
+
+    const cleanCorrect = cleanForComp(correctAnswer);
+    const userVal = input.value.trim();
+    const userValClean = cleanForComp(userVal);
+    
+    const totalPromptChars = (Array.isArray(wordsArr) && wordsArr.length > 0)
+        ? cleanForComp(wordsArr.join('')).length
+        : cleanCorrect.length;
+    
+    const feedbackDiv = card.querySelector('.practice-feedback');
+    
+    if (userValClean.length < totalPromptChars) {
+        // Student has NOT completed selecting/typing all words given in prompt
+        input.style.borderColor = '#cbd5e1';
+        input.style.background = 'white';
+        if (feedbackDiv) {
+            feedbackDiv.style.display = 'none';
+            feedbackDiv.innerHTML = '';
+        }
+        return;
+    }
+
+    // STUDENT HAS COMPLETED ARRANGING ALL WORDS
+    const isCorrect = (userValClean === cleanCorrect);
+
+    if (isCorrect) {
+        input.style.borderColor = '#86efac';
+        input.style.background = '#f0fdf4';
+    } else {
+        input.style.borderColor = '#fca5a5';
+        input.style.background = '#fef2f2';
+    }
+
+    if (feedbackDiv) {
+        feedbackDiv.style.display = 'block';
+        feedbackDiv.style.background = isCorrect ? '#f0fdf4' : '#fef2f2';
+        feedbackDiv.style.borderColor = isCorrect ? '#86efac' : '#fca5a5';
+        feedbackDiv.innerHTML = `
+            <div style="font-weight:800;font-size:14px;color:${isCorrect ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
+                ${isCorrect ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
+            </div>
+            <div style="font-size:13px;color:#334155;line-height:1.5;">
+                💡 <b>Giải thích:</b> ${explanation}
+            </div>
+        `;
+    }
+
+    const answerData = {
+        type: 'drag_drop',
+        answer: userVal,
+        correct: correctAnswer,
+        explanation: explanation,
+        isCorrect: isCorrect
+    };
+    window.saveErrorAnalysisAnswer(qId, answerData);
+
+    const qQuestion = card.querySelector('.practice-question-text') ? card.querySelector('.practice-question-text').innerText : 'Sắp xếp các từ thành câu';
+    const exTitle = card.querySelector('.practice-tag') ? card.querySelector('.practice-tag').innerText : 'Bẫy Lỗi Sai';
+
+    window.recordErrorAnalysisProgress(qId, isCorrect, userVal, correctAnswer, explanation, qQuestion, exTitle);
+};
+
+window.redoExerciseItem = function(qId, type) {
+    const card = document.getElementById(`practice_card_${qId}`);
+    if (!card) return;
+    
+    // 1. Delete saved answer for this exercise
+    window.removeSavedErrorAnalysisAnswer(qId);
+
+    // 2. Remove from wrongExercises in profile if present
+    const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
+    const uid = user ? user.uid : 'guest';
+    if (typeof window.getUserProfile === 'function' && typeof window.saveUserProfile === 'function') {
+        const profile = window.getUserProfile(uid);
+        if (profile && profile.wrongExercises) {
+            profile.wrongExercises = profile.wrongExercises.filter(w => String(w.id) !== String(qId));
+            window.saveUserProfile(profile);
+        }
+    }
+    
+    // 3. Reset options / buttons for multiple choice and position selection
+    const btns = card.querySelectorAll('.practice-opt-btn');
+    btns.forEach(btn => {
+        btn.style.background = 'white';
+        btn.style.color = '#334155';
+        btn.style.borderColor = '#cbd5e1';
+        btn.style.boxShadow = 'none';
+        btn.disabled = false;
+    });
+
+    // 4. Reset text inputs for fill_blank
+    const blankInputs = card.querySelectorAll('input[id^="blank_"]');
+    blankInputs.forEach(input => {
+        input.value = '';
+        input.style.borderColor = '#cbd5e1';
+        input.style.background = 'white';
+    });
+
+    // 5. Reset drag_drop input
+    const dragInput = document.getElementById(`drag_${qId}`);
+    if (dragInput) {
+        dragInput.value = '';
+        dragInput.style.borderColor = '#cbd5e1';
+        dragInput.style.background = 'white';
+    }
+
+    // 6. Hide feedback element
+    const feedbackDiv = card.querySelector('.practice-feedback');
+    if (feedbackDiv) {
+        feedbackDiv.style.display = 'none';
+        feedbackDiv.innerHTML = '';
+    }
+};
+
+window.resetAllComparisonPractice = function() {
+    const cards = document.querySelectorAll('.practice-q-card');
+    cards.forEach(card => {
+        const qId = card.getAttribute('data-qid');
+        const type = card.getAttribute('data-type');
+        if (qId) window.redoExerciseItem(qId, type);
+    });
+    const scoreResultDiv = document.getElementById('comparison-score-result');
+    if (scoreResultDiv) {
+        scoreResultDiv.style.display = 'none';
+        scoreResultDiv.innerHTML = '';
+    }
+};
+
+window.renderComparisonPracticeTab = function(lvl, targetFilter, allComparisonData) {
+    const savedAnswers = window.getSavedErrorAnalysisAnswers();
+    window.comparisonUserAnswers = Object.assign({}, savedAnswers);
+    
+    const exercises = [];
+    const data = window.errorAnalysisPracticeExercises && window.errorAnalysisPracticeExercises[targetFilter];
+    if (data && data.hsk2_error_exercises) {
+        Object.keys(data.hsk2_error_exercises).forEach(lessonId => {
+            const exercisesInLesson = data.hsk2_error_exercises[lessonId];
+            if (Array.isArray(exercisesInLesson)) {
+                exercisesInLesson.forEach((ex, idx) => {
+                    exercises.push({
+                        id: `ex_${targetFilter}_${lessonId}_${idx}`,
+                        title: `Bài tập Lesson ${lessonId}`,
+                        question: ex.question,
+                        options: ex.options || [],
+                        correct: ex.answer,
+                        explanation: ex.explanation,
+                        type: ex.type,
+                        words: ex.words,
+                        items: ex.items,
+                        sentence: ex.sentence,
+                        positions: ex.positions
+                    });
+                });
+            }
+        });
+    }
+    window.allExercises = exercises;
+    let qHtml = '';
+    exercises.forEach((ex, qIdx) => {
+        const saved = savedAnswers[ex.id];
+        let optsHtml = '';
+        
+        if (ex.type === 'multiple_choice') {
+            ex.options.forEach((opt, optIdx) => {
+                const isSelected = saved && saved.selected === optIdx;
+                let btnStyle = 'background:white;color:#334155;border:1.5px solid #cbd5e1;';
+                if (isSelected) {
+                    const isCorr = saved.isCorrect;
+                    btnStyle = isCorr ? 'background:#0284c7;color:white;border:1.5px solid #0284c7;box-shadow:0 2px 8px rgba(2,132,199,0.3);' : 'background:#ef4444;color:white;border:1.5px solid #ef4444;';
+                }
+                optsHtml += `
+                    <button class="practice-opt-btn" onclick="selectComparisonAnswer('${ex.id}', ${optIdx}, ${ex.correct})" style="width:100%;text-align:left;padding:11px 16px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s ease;margin-bottom:8px;${btnStyle}">
+                        ${opt}
+                    </button>
+                `;
+            });
+        } else if (ex.type === 'fill_blank') {
+            if (ex.items) {
+                ex.items.forEach((item, itemIdx) => {
+                    const val = (saved && saved.answers && saved.answers[itemIdx]) ? saved.answers[itemIdx] : '';
+                    let inputStyle = 'border:1px solid #cbd5e1;background:white;';
+                    if (val) {
+                        inputStyle = (val === item.answer) ? 'border:1px solid #86efac;background:#f0fdf4;' : 'border:1px solid #fca5a5;background:#fef2f2;';
+                    }
+                    optsHtml += `<div style="margin-bottom: 10px;">${(item.sentence || "").replace('___', `<input type="text" value="${val.replace(/"/g, '&quot;')}" oninput="gradeFillBlankItem('${ex.id}', ${itemIdx})" id="blank_${ex.id}_${itemIdx}" style="border-radius:4px;padding:2px 5px;width:60px;${inputStyle}">`)}</div>`;
+                });
+            }
+        } else if (ex.type === 'drag_drop') {
+            const val = (saved && saved.answer) ? saved.answer : '';
+            let inputStyle = 'border:1px solid #cbd5e1;background:white;';
+            if (val) {
+                inputStyle = saved.isCorrect ? 'border:1px solid #86efac;background:#f0fdf4;' : 'border:1px solid #fca5a5;background:#fef2f2;';
+            }
+            optsHtml = `
+                <div style="margin-bottom:10px;">
+                    ${(ex.words || []).map(w => `<button onclick="addToDragInput('${ex.id}', '${w}')" style="margin:2px;padding:5px 10px;background:#e2e8f0;border:none;border-radius:6px;cursor:pointer;">${w}</button>`).join('')}
+                </div>
+                <input type="text" id="drag_${ex.id}" value="${val.replace(/"/g, '&quot;')}" oninput="gradeDragDropItem('${ex.id}')" style="width:100%;padding:8px;border-radius:8px;${inputStyle}">
+            `;
+        } else if (ex.type === 'select_position') {
+            ex.positions.forEach((pos, posIdx) => {
+                const isSelected = saved && saved.selected === posIdx;
+                let btnStyle = 'background:white;color:#334155;border:1.5px solid #cbd5e1;';
+                if (isSelected) {
+                    const isCorr = saved.isCorrect;
+                    btnStyle = isCorr ? 'background:#0284c7;color:white;border:1.5px solid #0284c7;box-shadow:0 2px 8px rgba(2,132,199,0.3);' : 'background:#ef4444;color:white;border:1.5px solid #ef4444;';
+                }
+                optsHtml += `
+                    <button class="practice-opt-btn" onclick="selectComparisonAnswer('${ex.id}', ${posIdx}, ${ex.correct})" style="width:100%;text-align:left;padding:11px 16px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s ease;margin-bottom:8px;${btnStyle}">
+                        ${pos}
+                    </button>
+                `;
+            });
+        }
+
+        let correctData = [];
+        if (ex.type === 'multiple_choice') correctData = ex.correct;
+        else if (ex.type === 'fill_blank') correctData = ex.items;
+        else if (ex.type === 'drag_drop') correctData = ex.answer;
+        else if (ex.type === 'select_position') correctData = ex.correct;
+
+        let feedbackStyle = 'display:none;';
+        let feedbackHtmlContent = '';
+        if (saved) {
+            feedbackStyle = 'display:block;';
+            const isCorr = saved.isCorrect;
+            const fbBg = isCorr ? '#f0fdf4' : '#fef2f2';
+            const fbBorder = isCorr ? '#86efac' : '#fca5a5';
+            feedbackStyle += `background:${fbBg};border:1px solid ${fbBorder};padding:12px 14px;border-radius:12px;margin-top:10px;`;
+            feedbackHtmlContent = `
+                <div style="font-weight:800;font-size:14px;color:${isCorr ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
+                    ${isCorr ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
+                </div>
+                <div style="font-size:13px;color:#334155;line-height:1.5;">
+                    💡 <b>Giải thích:</b> ${ex.explanation || ''}
+                </div>
+            `;
+        } else {
+            feedbackStyle += 'padding:12px 14px;border-radius:12px;border:1px solid #cbd5e1;margin-top:10px;';
+        }
+
+        qHtml += `
+            <div class="practice-q-card" id="practice_card_${ex.id}" data-qid="${ex.id}" data-type="${ex.type}" data-words='${(JSON.stringify(ex.words || []) || "").replace(/'/g, "&apos;")}' data-correct='${(JSON.stringify(correctData || "") || "").replace(/'/g, "&apos;")}' data-explanation='${(ex.explanation || "").replace(/'/g, "&apos;")}' style="background:white;border:1.5px solid #bae6fd;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,0.02);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                    <span class="practice-tag" style="font-size:12px;font-weight:800;color:#0284c7;background:#e0f2fe;padding:3px 10px;border-radius:10px;">Câu ${qIdx + 1} • ${ex.title || targetFilter.toUpperCase()}</span>
+                </div>
+                <div class="practice-question-text" style="font-size:15px;font-weight:700;color:#0f172a;margin-bottom:12px;line-height:1.5;">${ex.question}${ex.type === 'select_position' ? `<br><br>${ex.sentence}` : ''}</div>
+                <div style="margin-bottom:10px;">
+                    ${optsHtml}
+                </div>
+                <div style="margin-top:10px;">
+                    <button onclick="redoExerciseItem('${ex.id}', '${ex.type}')" style="background:#f1f5f9;color:#475569;border:1px solid #cbd5e1;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s;">🔄 Làm lại câu này</button>
+                </div>
+                <div class="practice-feedback" style="${feedbackStyle}">${feedbackHtmlContent}</div>
+            </div>
+        `;
+    });
+
+    return `
+        <div>
+            <div style="margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;background:white;padding:14px 18px;border-radius:14px;border:1.5px solid #bae6fd;">
+                <div>
+                    <span style="font-size:15px;font-weight:800;color:#0284c7;">📝 Luyện Tập Bẫy Lỗi Sai Thường Gặp</span>
+                    <p style="font-size:12.5px;color:#475569;margin:2px 0 0 0;">Chọn đáp án đúng cho mỗi câu. Đáp án được tự động lưu lại cho tới khi bạn nhấn "Làm lại".</p>
+                </div>
+                <div style="display:flex;gap:8px;">
+                    <button onclick="resetAllComparisonPractice()" style="padding:10px 16px;background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;">
+                        🔄 Làm lại tất cả
+                    </button>
+                    <button onclick="gradeComparisonPracticeTab()" style="padding:10px 22px;background:linear-gradient(135deg, #0284c7, #0369a1);color:white;border:none;border-radius:12px;font-weight:800;font-size:14px;cursor:pointer;box-shadow:0 4px 12px rgba(2,132,199,0.25);">
+                        📊 Nộp Bài & Chấm Điểm
+                    </button>
+                </div>
+            </div>
+            ${qHtml}
+            <div id="comparison-score-result" style="display:none;margin-top:20px;"></div>
+        </div>
+    `;
+};
+
+window.gradeComparisonPracticeTab = function() {
     const cards = document.querySelectorAll('.practice-q-card');
     let total = cards.length;
     if (total === 0) return;
 
     let correctCount = 0;
+    const user = (window.auth && window.auth.currentUser) ? window.auth.currentUser : null;
+    const uid = user ? user.uid : 'guest';
+    const profile = (typeof window.getUserProfile === 'function') ? window.getUserProfile(uid) : null;
 
     cards.forEach(card => {
         const qId = card.getAttribute('data-qid');
-        const userAns = window.comparisonUserAnswers[qId];
+        const type = card.getAttribute('data-type');
+        const correctAttr = card.getAttribute('data-correct') || '[]';
+        let correct = '';
+        try {
+            correct = JSON.parse(correctAttr.replace(/&apos;/g, "'"));
+        } catch(e) {
+            correct = correctAttr.replace(/&apos;/g, "'");
+        }
         const feedbackDiv = card.querySelector('.practice-feedback');
-        
         if (!feedbackDiv) return;
 
-        if (!userAns) {
-            feedbackDiv.style.display = 'block';
-            feedbackDiv.style.background = '#fff7ed';
-            feedbackDiv.style.borderColor = '#fdba74';
-            feedbackDiv.innerHTML = `<span style="color:#c2410c;font-weight:700;">⚠️ Bạn chưa chọn đáp án cho câu này!</span>`;
-            return;
+        let isCorrect = false;
+        let explanation = card.getAttribute('data-explanation') || 'Kiểm tra lại đáp án.';
+        let userAnsText = '';
+        let correctAnsText = '';
+
+        if (type === 'multiple_choice') {
+            const userAns = window.comparisonUserAnswers[qId];
+            if (!userAns || userAns.selected === undefined) {
+                feedbackDiv.style.display = 'block';
+                feedbackDiv.style.background = '#fff7ed';
+                feedbackDiv.style.borderColor = '#fdba74';
+                feedbackDiv.innerHTML = `<span style="color:#c2410c;font-weight:700;">⚠️ Bạn chưa chọn đáp án!</span>`;
+                return;
+            }
+            isCorrect = (userAns.selected === correct);
+            userAnsText = `Lựa chọn ${userAns.selected + 1}`;
+            correctAnsText = `Lựa chọn ${correct + 1}`;
+        } else if (type === 'fill_blank') {
+            isCorrect = true;
+            let userVals = [];
+            let correctVals = [];
+            if (Array.isArray(correct)) {
+                correct.forEach((item, idx) => {
+                    const inp = document.getElementById(`blank_${qId}_${idx}`);
+                    const val = inp ? inp.value.trim() : '';
+                    userVals.push(val);
+                    correctVals.push(item.answer);
+                    if (val !== item.answer) isCorrect = false;
+                });
+            }
+            userAnsText = userVals.join(', ');
+            correctAnsText = correctVals.join(', ');
+        } else if (type === 'drag_drop') {
+            const inp = document.getElementById(`drag_${qId}`);
+            const val = inp ? inp.value.trim() : '';
+            
+            let targetAns = '';
+            try {
+                const parsedVal = (typeof correct === 'string') ? correct : JSON.stringify(correct);
+                targetAns = parsedVal.replace(/^["']|["']$/g, '').trim();
+            } catch(e) {
+                targetAns = String(correct);
+            }
+
+            const cleanForComp = function(s) {
+                if (!s) return '';
+                return s.replace(/[\s\.,\/#!$%\^&\*;:{}=\-_`~()?"'。，？！、；：]/g, '');
+            };
+
+            const valClean = cleanForComp(val);
+            const targetClean = cleanForComp(targetAns);
+
+            isCorrect = (valClean === targetClean);
+            userAnsText = val || 'Chưa nhập';
+            correctAnsText = targetAns;
+        } else if (type === 'select_position') {
+            const userAns = window.comparisonUserAnswers[qId];
+            if (!userAns || userAns.selected === undefined) {
+                feedbackDiv.style.display = 'block';
+                feedbackDiv.style.background = '#fff7ed';
+                feedbackDiv.style.borderColor = '#fdba74';
+                feedbackDiv.innerHTML = `<span style="color:#c2410c;font-weight:700;">⚠️ Bạn chưa chọn đáp án!</span>`;
+                return;
+            }
+            isCorrect = (userAns.selected === correct);
+            userAnsText = `Vị trí ${userAns.selected + 1}`;
+            correctAnsText = `Vị trí ${correct + 1}`;
         }
 
-        const isCorrect = userAns.selected === userAns.correct;
-        if (isCorrect) correctCount++;
+        if (isCorrect) {
+            correctCount++;
+        } else if (profile) {
+            if (!profile.wrongExercises) profile.wrongExercises = [];
+            const exTitle = card.querySelector('span') ? card.querySelector('span').innerText : 'Bẫy Lỗi Sai';
+            const qQuestion = card.querySelector('div:nth-child(2)') ? card.querySelector('div:nth-child(2)').innerText : 'Câu hỏi';
+            
+            const existingIdx = profile.wrongExercises.findIndex(w => w.id === qId);
+            const wrongRecord = {
+                id: qId,
+                module: 'error_analysis',
+                lessonTitle: exTitle,
+                question: qQuestion,
+                userAnswer: userAnsText,
+                correctAnswer: correctAnsText,
+                explanation: explanation,
+                date: new Date().toISOString()
+            };
+            if (existingIdx !== -1) {
+                profile.wrongExercises[existingIdx] = wrongRecord;
+            } else {
+                profile.wrongExercises.unshift(wrongRecord);
+            }
+        }
 
         feedbackDiv.style.display = 'block';
         feedbackDiv.style.background = isCorrect ? '#f0fdf4' : '#fef2f2';
         feedbackDiv.style.borderColor = isCorrect ? '#86efac' : '#fca5a5';
         feedbackDiv.innerHTML = `
             <div style="font-weight:800;font-size:14px;color:${isCorrect ? '#16a34a' : '#dc2626'};margin-bottom:4px;">
-                ${isCorrect ? '✅ Chính xác! Bạn làm rất tốt.' : '❌ Chưa chính xác! Bẫy lỗi sai cần lưu ý:'}
+                ${isCorrect ? '✅ Chính xác!' : '❌ Chưa chính xác!'}
             </div>
             <div style="font-size:13px;color:#334155;line-height:1.5;">
-                💡 <b>Giải thích chi tiết:</b> ${userAns.explanation}
+                💡 <b>Giải thích:</b> ${explanation}
             </div>
         `;
     });
 
     const scorePct = Math.round((correctCount / total) * 100);
+
+    if (profile) {
+        if (!profile.lessonScores) profile.lessonScores = [];
+        const scoreEntry = {
+            id: 'error_analysis_' + Date.now(),
+            lessonId: 'error_analysis',
+            lessonTitle: 'Lưu Ý Lỗi Sai Thường Gặp',
+            level: 'HSK',
+            score: correctCount,
+            total: total,
+            percentage: scorePct,
+            date: new Date().toISOString()
+        };
+        profile.lessonScores.unshift(scoreEntry);
+        window.saveUserProfile(profile);
+    }
+
     const scoreResultDiv = document.getElementById('comparison-score-result');
     if (scoreResultDiv) {
         scoreResultDiv.style.display = 'block';
@@ -3228,88 +3925,15 @@ window.gradeComparisonPractice = function() {
                 <div style="font-size:13px;font-weight:800;color:#0369a1;text-transform:uppercase;letter-spacing:0.5px;">KẾT QUẢ CHẤM ĐIỂM BÀI TẬP BẪY LỖI SAI (${scorePct}/100 ĐIỂM)</div>
                 <div style="font-size:38px;font-weight:900;color:#0284c7;margin:8px 0;font-family:'Lexend',sans-serif;">${scorePct} / 100 Điểm</div>
                 <div style="font-size:16px;font-weight:700;color:#0369a1;margin-bottom:12px;">Đúng ${correctCount} / ${total} câu • ${gradeBadge}</div>
-                <p style="font-size:13px;color:#475569;margin:0 0 14px 0;">Đã ghi nhận kết quả làm bài tập phân biệt ngữ pháp & bẫy lỗi sai vào tài khoản học tập.</p>
-                <button onclick="window.gradeComparisonPractice()" style="padding:9px 22px;background:#0284c7;color:white;border:none;border-radius:10px;font-weight:700;font-size:13.5px;cursor:pointer;box-shadow:0 2px 8px rgba(2,132,199,0.3);">🔄 Nộp bài / Chấm lại</button>
+                <p style="font-size:13px;color:#475569;margin:0 0 14px 0;">🎉 Đã lưu kết quả bài tập & đáp án đã chọn vào hồ sơ cá nhân của bạn.</p>
+                <div style="display:flex;justify-content:center;gap:10px;">
+                    <button onclick="window.gradeComparisonPracticeTab()" style="padding:9px 22px;background:#0284c7;color:white;border:none;border-radius:10px;font-weight:700;font-size:13.5px;cursor:pointer;box-shadow:0 2px 8px rgba(2,132,199,0.3);">📊 Chấm lại</button>
+                    <button onclick="window.resetAllComparisonPractice()" style="padding:9px 22px;background:#f1f5f9;color:#475569;border:1px solid #cbd5e1;border-radius:10px;font-weight:700;font-size:13.5px;cursor:pointer;">🔄 Làm lại tất cả</button>
+                </div>
             </div>
         `;
         scoreResultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
-};
-
-window.renderComparisonPracticeTab = function(lvl, targetFilter, allComparisonData) {
-    window.comparisonUserAnswers = {};
-    const exercises = [];
-
-    const curated = (window.comparisonPracticeExercises && window.comparisonPracticeExercises[targetFilter]) || [];
-    curated.forEach(ex => exercises.push(ex));
-
-    if (allComparisonData && Array.isArray(allComparisonData)) {
-        allComparisonData.forEach((item, idx) => {
-            if (item.wrong && item.correct) {
-                const cleanWrong = item.wrong.replace(/❌|Sai:|Lỗi sai:/g, '').trim();
-                const cleanCorrect = item.correct.replace(/✅|Đúng:|Chuẩn:/g, '').trim();
-                exercises.push({
-                    id: `dyn_${targetFilter}_${idx}`,
-                    title: item.title,
-                    question: `Trắc nghiệm bẫy lỗi sai: Trong hai câu dưới đây về <b>"${item.title}"</b>, câu nào dùng ĐÚNG ngữ pháp?`,
-                    options: [`❌ ${cleanWrong}`, `✅ ${cleanCorrect}`],
-                    correct: 1,
-                    explanation: item.tip ? `${item.tip}` : `Câu đúng là "${cleanCorrect}". Lỗi sai cần tránh: "${cleanWrong}".`
-                });
-            }
-        });
-    }
-
-    if (exercises.length === 0) {
-        return `
-            <div style="background:white;padding:30px;border-radius:16px;border:1px solid #bae6fd;text-align:center;color:#475569;">
-                <span style="font-size:32px;">📝</span>
-                <h3 style="font-size:18px;font-weight:800;color:#0284c7;margin:10px 0 6px 0;">Đang cập nhật bài tập cho ${targetFilter.toUpperCase()}</h3>
-                <p style="font-size:13.5px;margin:0;">Dữ liệu bài tập thực hành bẫy lỗi sai đang được cập nhật thêm.</p>
-            </div>
-        `;
-    }
-
-    let qHtml = '';
-    exercises.forEach((ex, qIdx) => {
-        let optsHtml = '';
-        ex.options.forEach((opt, optIdx) => {
-            optsHtml += `
-                <button class="practice-opt-btn" onclick="selectComparisonAnswer('${ex.id}', ${optIdx}, ${ex.correct}, '${(ex.explanation || '').replace(/'/g, "\\'").replace(/\n/g, ' ')}')" style="width:100%;text-align:left;padding:11px 16px;border:1.5px solid #cbd5e1;border-radius:12px;background:white;color:#334155;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s ease;margin-bottom:8px;">
-                    ${opt}
-                </button>
-            `;
-        });
-
-        qHtml += `
-            <div class="practice-q-card" id="practice_card_${ex.id}" data-qid="${ex.id}" style="background:white;border:1.5px solid #bae6fd;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,0.02);">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-                    <span style="font-size:12px;font-weight:800;color:#0284c7;background:#e0f2fe;padding:3px 10px;border-radius:10px;">Câu ${qIdx + 1} • ${ex.title || targetFilter.toUpperCase()}</span>
-                </div>
-                <div style="font-size:15px;font-weight:700;color:#0f172a;margin-bottom:12px;line-height:1.5;">${ex.question}</div>
-                <div style="margin-bottom:10px;">
-                    ${optsHtml}
-                </div>
-                <div class="practice-feedback" style="display:none;padding:12px 14px;border-radius:12px;border:1px solid #cbd5e1;margin-top:10px;"></div>
-            </div>
-        `;
-    });
-
-    return `
-        <div>
-            <div style="margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;background:white;padding:14px 18px;border-radius:14px;border:1.5px solid #bae6fd;">
-                <div>
-                    <span style="font-size:15px;font-weight:800;color:#0284c7;">📝 Luyện Tập</span>
-                    <p style="font-size:12.5px;color:#475569;margin:2px 0 0 0;">Chọn đáp án đúng cho mỗi câu và nhấn "Nộp Bài & Chấm Điểm" để kiểm tra kết quả</p>
-                </div>
-                <button onclick="gradeComparisonPractice()" style="padding:10px 22px;background:linear-gradient(135deg, #0284c7, #0369a1);color:white;border:none;border-radius:12px;font-weight:800;font-size:14px;cursor:pointer;box-shadow:0 4px 12px rgba(2,132,199,0.25);">
-                    📊 Nộp Bài & Chấm Điểm
-                </button>
-            </div>
-            ${qHtml}
-            <div id="comparison-score-result" style="display:none;margin-top:20px;"></div>
-        </div>
-    `;
 };
 
 window.renderGrammarComparisonModule = async function(lvl, filterLevel, activeTab) {
@@ -3326,7 +3950,7 @@ window.renderGrammarComparisonModule = async function(lvl, filterLevel, activeTa
         </div>
     `;
 
-    await window.loadComparisonExercises();
+    await window.loadErrorAnalysisExercises(targetFilter);
 
     let allComparisonData = [];
     const levelsToLoad = (targetFilter === 'all') 
@@ -3335,7 +3959,7 @@ window.renderGrammarComparisonModule = async function(lvl, filterLevel, activeTa
 
     for (const l of levelsToLoad) {
         try {
-            const res = await fetch(`data/comparison/${l}.json`);
+            const res = await fetch(`data/error analysis/${l}.json`);
             if (res.ok) {
                 const contentType = res.headers.get('content-type');
                 if (contentType && contentType.includes('application/json')) {
@@ -4276,7 +4900,7 @@ sidebar.appendChild(lessonItem);
                                 subcard.innerHTML = `
                                     <div style="padding:12px 16px;background:#fff8fa;border:1px solid #fbcfe8;border-radius:12px;">
                                         <span class="label" style="font-weight:700;color:#be185d;font-size:13.5px;display:block;margin-bottom:4px;">${sc.label}</span>
-                                        <p style="font-size:14px;color:#334155;line-height:1.6;margin:0;">${mainText.replace(/\n/g, '<br>')}</p>
+                                        <p style="font-size:14px;color:#334155;line-height:1.6;margin:0;">${(mainText || "").replace(/\n/g, '<br>')}</p>
                                     </div>
                                 `;
                             }
