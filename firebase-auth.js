@@ -3352,7 +3352,7 @@ window.logoutGoogle = () => {
             }
             window.cachedHanziData = window.cachedHanziData || {};
             try {
-                const response = await fetch(`/data/hanzi/${level}.json`);
+                const response = await fetch(`./data/hanzi/${level}.json`);
                 const data = await response.json();
                 window.cachedHanziData[level] = data;
                 return data;
