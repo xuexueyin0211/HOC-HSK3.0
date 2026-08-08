@@ -11552,7 +11552,7 @@ fetchJson(`./data/vocab/${safeLvl}.json`),
     fetchJson(`./data/grammar/${safeLvl}.json`),
     fetchJson(`./data/texts/${safeLvl}.json`),
     fetchJson(`./data/exercises/${safeLvl}.json`),
-    fetchJson(`./data/progress_test/${safeLvl}.json`)
+    fetchJson(`./data/progress test/${safeLvl}.json`)
     ]);
 
     // Helper to find item matching lesson_id / lesson / id
