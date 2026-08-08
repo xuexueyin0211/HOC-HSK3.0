@@ -172,6 +172,22 @@ window.showUnauthorizedDomainModal = () => {
     if (modal) modal.style.display = 'flex';
 };
 
+// Auto-sync localStorage to Firestore
+const originalSetItem = localStorage.setItem;
+localStorage.setItem = function(key, value) {
+    originalSetItem.apply(this, arguments);
+    
+    // Sync to Firestore if Firebase is initialized and user is logged in
+    if (window.auth && window.auth.currentUser && window.db && 
+        (key.includes('xueying') || key.includes('hsk') || key.includes('flashcard') || key === 'appState' || key === 'undefinedWords')) {
+        
+        const uid = window.auth.currentUser.uid;
+        // Use a background call to sync, do not await to avoid performance issues
+        setDoc(doc(window.db, "users", uid, "localStorageData", key), { value: value }, { merge: true })
+            .catch(e => console.error("Error syncing key", key, e));
+    }
+};
+
 window.closeUnauthorizedDomainModal = () => {
     const modal = document.getElementById('unauthorizedDomainModal');
     if (modal) modal.style.display = 'none';
