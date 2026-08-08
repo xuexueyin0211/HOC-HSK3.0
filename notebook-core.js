@@ -372,6 +372,24 @@
             const style = document.createElement('style');
             style.id = 'fs-notebook-styles';
             style.innerHTML = `
+                @media (min-width: 1024px) {
+                    #fs-notebook-sidebar {
+                        width: 450px !important; /* Increase sidebar width on desktop */
+                    }
+                    #fs-notebook-sidebar.collapsed {
+                        width: 0px !important;
+                        border-right-width: 0px !important;
+                        overflow: hidden !important;
+                        opacity: 0 !important;
+                        pointer-events: none !important;
+                    }
+                    #fs-lesson-select {
+                        display: none !important; /* Hide standard select dropdown on desktop */
+                    }
+                    #fs-lesson-chips {
+                        display: flex !important; /* Show spread-out chips on desktop */
+                    }
+                }
                 @media (max-width: 1023px) {
                     #fs-notebook-sidebar {
                         position: absolute;
@@ -387,14 +405,38 @@
                     #fs-sidebar-toggle-btn {
                         display: flex !important;
                     }
+                    #fs-lesson-select {
+                        display: block !important;
+                    }
+                    #fs-lesson-chips {
+                        display: none !important;
+                    }
+                }
+                .fs-lesson-chip-btn {
+                    padding: 3px 8px;
+                    border: 1.5px solid #cbd5e1;
+                    border-radius: 12px;
+                    font-size: 9px;
+                    font-weight: 700;
+                    color: #475569;
+                    background: white;
+                    cursor: pointer;
+                    transition: all 0.15s ease;
+                    outline: none;
+                    white-space: nowrap;
+                }
+                .fs-lesson-chip-btn:hover {
+                    border-color: #be185d;
+                    color: #be185d;
+                    background: #fff5f8;
                 }
                 .fs-char-btn {
-                    width: 44px;
-                    height: 44px;
+                    width: 52px;
+                    height: 52px;
                     border: 1.5px solid #e2e8f0;
                     background: white;
-                    border-radius: 10px;
-                    font-size: 18px;
+                    border-radius: 12px;
+                    font-size: 24px;
                     font-weight: bold;
                     color: #334155;
                     cursor: pointer;
@@ -464,6 +506,9 @@
                 
                 <!-- Right Action Controls -->
                 <div style="display: flex; align-items: center; gap: 10px;">
+                    <button onclick="window.toggleFsSidebar()" style="padding: 8px 14px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; font-size: 12.5px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s; outline: none;">
+                        📋 <span id="fs-sidebar-toggle-text">Ẩn Thanh Trái</span>
+                    </button>
                     <button onclick="window.toggleNotebookOrientation()" style="padding: 8px 14px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; font-size: 12.5px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s; outline: none;">
                         <span id="fs-orientation-icon">↔️</span> <span id="fs-orientation-text">Khổ Ngang</span>
                     </button>
@@ -487,7 +532,7 @@
                         <div style="display: flex; flex-direction: column; gap: 8px;">
                             <div>
                                 <label style="display:block; font-size:10.5px; font-weight:700; color:#64748b; text-transform:uppercase; margin-bottom:4px;">Nguồn chữ:</label>
-                                <select id="fs-source-select" onchange="window.loadFsNotebookSource(this.value)" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:12.5px; font-weight:700; color:#334155; background:white; cursor:pointer; outline:none;">
+                                <select id="fs-source-select" onchange="window.loadFsNotebookSource(this.value)" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:11.5px; font-weight:700; color:#334155; background:white; cursor:pointer; outline:none;">
                                     <option value="hsk1">Chữ Hán HSK 1</option>
                                     <option value="hsk2">Chữ Hán HSK 2</option>
                                     <option value="mistakes">Từ làm sai & Flashcard</option>
@@ -497,14 +542,16 @@
                             
                             <div id="fs-lesson-container">
                                 <label style="display:block; font-size:10.5px; font-weight:700; color:#64748b; text-transform:uppercase; margin-bottom:4px;">Bài học:</label>
-                                <select id="fs-lesson-select" onchange="window.filterFsCharactersByLesson(this.value)" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:12.5px; font-weight:700; color:#334155; background:white; cursor:pointer; outline:none;">
+                                <select id="fs-lesson-select" onchange="window.filterFsCharactersByLesson(this.value)" style="width:100%; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:11.5px; font-weight:700; color:#334155; background:white; cursor:pointer; outline:none;">
                                 </select>
+                                <div id="fs-lesson-chips" style="display: none; flex-wrap: wrap; gap: 6px; max-height: 120px; overflow-y: auto; padding: 2px;">
+                                </div>
                             </div>
                             
                             <div id="fs-custom-container" style="display:none;">
                                 <label style="display:block; font-size:10.5px; font-weight:700; color:#64748b; text-transform:uppercase; margin-bottom:4px;">Nhập chữ Hán tự chọn:</label>
                                 <div style="display:flex; gap:6px;">
-                                    <input type="text" id="fs-custom-input" placeholder="Ví dụ: 学" maxlength="10" style="flex:1; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:12.5px; font-weight:700; color:#334155; outline:none;" />
+                                    <input type="text" id="fs-custom-input" placeholder="Ví dụ: 学" maxlength="10" style="flex:1; padding:8px; border:1.5px solid #cbd5e1; border-radius:8px; font-size:11.5px; font-weight:700; color:#334155; outline:none;" />
                                     <button onclick="window.applyFsCustomInput()" style="padding:8px 14px; background:#be185d; color:white; border:none; border-radius:8px; font-size:12.5px; font-weight:700; cursor:pointer; outline:none;">Dùng</button>
                                 </div>
                             </div>
@@ -528,7 +575,7 @@
                             <div style="font-size:12px; font-weight:600;">Không tìm thấy chữ</div>
                         </div>
                         
-                        <div id="fs-grid-chars" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap:6px;">
+                        <div id="fs-grid-chars" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap:6px;">
                         </div>
                     </div>
                     
@@ -569,8 +616,8 @@
                             </div>
                         </div>
                         
-                        <!-- Stroke order details list -->
-                        <div style="max-height: 85px; overflow-y: auto; padding-right: 2px;">
+                        <!-- Stroke order details list (hidden to lower the model cell and prioritize character selection) -->
+                        <div style="display: none; max-height: 85px; overflow-y: auto; padding-right: 2px;">
                             <div id="nb-fs-stroke-badges-container" style="display: flex; flex-wrap: wrap; gap: 4px;">
                             </div>
                         </div>
@@ -657,6 +704,17 @@
     window.initFsNotebookState = function(studentName, studentLvl, dateStr) {
         // Reset toolbar to expanded state
         window.toggleFsToolbar(false);
+
+        // Reset sidebar state to default expanded
+        const sidebar = document.getElementById('fs-notebook-sidebar');
+        if (sidebar) {
+            sidebar.classList.remove('collapsed');
+            sidebar.classList.remove('open');
+        }
+        const toggleBtnText = document.getElementById('fs-sidebar-toggle-text');
+        if (toggleBtnText) {
+            toggleBtnText.textContent = 'Ẩn Thanh Trái';
+        }
 
         const nameLbl = document.getElementById('fs-student-name');
         if (nameLbl) nameLbl.textContent = studentName;
@@ -1040,9 +1098,42 @@
                     lessonSelect.appendChild(option);
                 });
                 
+                // Also populate the desktop spread-out lesson chips
+                const lessonChips = document.getElementById('fs-lesson-chips');
+                if (lessonChips) {
+                    lessonChips.innerHTML = '';
+                    sortedLessons.forEach(l => {
+                        const chip = document.createElement('button');
+                        chip.type = 'button';
+                        chip.className = 'fs-lesson-chip-btn';
+                        chip.textContent = `Bài ${l}`;
+                        chip.onclick = () => {
+                            document.querySelectorAll('.fs-lesson-chip-btn').forEach(btn => {
+                                btn.style.background = 'white';
+                                btn.style.color = '#475569';
+                                btn.style.borderColor = '#cbd5e1';
+                                btn.style.boxShadow = 'none';
+                            });
+                            chip.style.background = '#be185d';
+                            chip.style.color = 'white';
+                            chip.style.borderColor = '#be185d';
+                            chip.style.boxShadow = '0 2px 6px rgba(190, 24, 93, 0.2)';
+                            
+                            lessonSelect.value = l;
+                            window.filterFsCharactersByLesson(l);
+                        };
+                        lessonChips.appendChild(chip);
+                    });
+                }
+                
                 if (sortedLessons.length > 0) {
                     lessonSelect.value = sortedLessons[0];
-                    window.filterFsCharactersByLesson(sortedLessons[0]);
+                    // Trigger the first lesson chip click on desktop if it exists
+                    if (lessonChips && lessonChips.firstChild) {
+                        lessonChips.firstChild.click();
+                    } else {
+                        window.filterFsCharactersByLesson(sortedLessons[0]);
+                    }
                 } else {
                     if (gridLoading) gridLoading.style.display = 'none';
                     if (gridEmpty) gridEmpty.style.display = 'block';
@@ -1467,8 +1558,23 @@
 
     window.toggleFsSidebar = function() {
         const sidebar = document.getElementById('fs-notebook-sidebar');
+        const toggleBtnText = document.getElementById('fs-sidebar-toggle-text');
         if (sidebar) {
-            sidebar.classList.toggle('open');
+            if (window.innerWidth >= 1024) {
+                // Desktop
+                sidebar.classList.toggle('collapsed');
+                const isCollapsed = sidebar.classList.contains('collapsed');
+                if (toggleBtnText) {
+                    toggleBtnText.textContent = isCollapsed ? 'Hiện Thanh Trái' : 'Ẩn Thanh Trái';
+                }
+            } else {
+                // Mobile
+                sidebar.classList.toggle('open');
+                const isOpen = sidebar.classList.contains('open');
+                if (toggleBtnText) {
+                    toggleBtnText.textContent = isOpen ? 'Đóng Thanh Trái' : 'Hiện Thanh Trái';
+                }
+            }
         }
     };
 
