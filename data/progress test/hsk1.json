@@ -31,7 +31,7 @@
           "audioUrl": "/audio/HSK2/L1/yundong.mp3",
           "question": "CHỌN A ĐỂ QUA CÂU",
           "options": ["A", "B", "C", "D"],
-          "correct": 1,
+          "correct": 0,
           "hanzi": "运动",
           "pinyin": "yùndòng",
           "meaning": "thể thao / vận động"
